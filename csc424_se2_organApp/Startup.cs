@@ -54,9 +54,10 @@ namespace csc424_se2_organApp
             {
                 spa.Options.SourcePath = "ClientApp";
 
-                if (env.IsDevelopment())
+               if (env.IsDevelopment())
                 {
-                    spa.UseReactDevelopmentServer(npmScript: "start");
+                    //spa.UseReactDevelopmentServer(npmScript: "start");
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:3000");
                 }
             });
         }
