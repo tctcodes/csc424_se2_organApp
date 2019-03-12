@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace csc424_se2_organApp
+namespace csc424_se2_organApp.Models
 {
     public partial class StathistLiin
     {

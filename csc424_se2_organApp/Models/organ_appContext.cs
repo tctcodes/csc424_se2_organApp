@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace csc424_se2_organApp
+namespace csc424_se2_organApp.Models
 {
     public partial class organ_appContext : DbContext
     {
@@ -37,6 +37,7 @@ namespace csc424_se2_organApp
         public virtual DbSet<Treatment> Treatment { get; set; }
         public virtual DbSet<TxLi> TxLi { get; set; }
         public virtual DbSet<TxfLi> TxfLi { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -4751,6 +4752,23 @@ namespace csc424_se2_organApp
                     .HasPrincipalKey(p => p.TxId)
                     .HasForeignKey(d => d.TxId)
                     .HasConstraintName("txf_li_tx_id_fkey");
+            });
+
+            modelBuilder.Entity<Users>(entity =>
+            {
+                entity.HasKey(e => e.Email)
+                    .HasName("users_pkey");
+
+                entity.ToTable("users", "login");
+
+                entity.Property(e => e.Email)
+                    .HasColumnName("email")
+                    .HasColumnType("character varying(32)")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Password).HasColumnName("password");
             });
         }
     }
