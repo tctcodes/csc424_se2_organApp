@@ -1,0 +1,122 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace csc424_se2_organApp
+{
+    public partial class RecHisto
+    {
+        public int? BCellDone { get; set; }
+        public int? BCellDoneXmatAhg { get; set; }
+        public int? BCellDoneXmatFlowCytometry { get; set; }
+        public int? BCellDoneXmatNoAhg { get; set; }
+        public int? BCellDoneXmatSolidPhase { get; set; }
+        public int? DonA1 { get; set; }
+        public int? DonA2 { get; set; }
+        public int? DonB1 { get; set; }
+        public int? DonB2 { get; set; }
+        public int? DonBw4 { get; set; }
+        public int? DonBw6 { get; set; }
+        public int? DonCw1 { get; set; }
+        public int? DonCw2 { get; set; }
+        public int? DonDpw1 { get; set; }
+        public int? DonDpw2 { get; set; }
+        public int? DonDqw1 { get; set; }
+        public int? DonDqw2 { get; set; }
+        public int? DonDr1 { get; set; }
+        public int? DonDr2 { get; set; }
+        public int? DonDrw51 { get; set; }
+        public int? DonDrw52 { get; set; }
+        public int? DonDrw53 { get; set; }
+        public int? DonRetypCellSourceI { get; set; }
+        public int? DonRetypCellSourceIi { get; set; }
+        public int? DonRetypDtI { get; set; }
+        public int? DonRetypDtIi { get; set; }
+        public string DonRetypI { get; set; }
+        public string DonRetypIi { get; set; }
+        public int? DonRetypMethI { get; set; }
+        public int? DonRetypMethIi { get; set; }
+        public int? HCellDone { get; set; }
+        public int? HCellDoneXmatAhg { get; set; }
+        public int? HCellDoneXmatFlowCytometry { get; set; }
+        public int? HCellDoneXmatNoAhg { get; set; }
+        public int? HCellDoneXmatSolidPhase { get; set; }
+        public int? RecA1 { get; set; }
+        public int? RecA2 { get; set; }
+        public int? RecB1 { get; set; }
+        public int? RecB2 { get; set; }
+        public int? RecBw4 { get; set; }
+        public int? RecBw6 { get; set; }
+        public int? RecCpra { get; set; }
+        public int? RecCpraPeak { get; set; }
+        public string RecCpraPeakStat { get; set; }
+        public string RecCpraStat { get; set; }
+        public int? RecCw1 { get; set; }
+        public int? RecCw2 { get; set; }
+        public string RecDonRetyp { get; set; }
+        public int? RecDpw1 { get; set; }
+        public int? RecDpw2 { get; set; }
+        public int? RecDqw1 { get; set; }
+        public int? RecDqw2 { get; set; }
+        public int? RecDr1 { get; set; }
+        public int? RecDr2 { get; set; }
+        public int? RecDrw51 { get; set; }
+        public int? RecDrw52 { get; set; }
+        public int? RecDrw53 { get; set; }
+        public int RecHistoTxId { get; set; }
+        public int? RecHlaDtI { get; set; }
+        public int? RecHlaDtIi { get; set; }
+        public int? RecHlaInterpretI { get; set; }
+        public int? RecHlaInterpretIi { get; set; }
+        public int? RecHlaInterpretPeakI { get; set; }
+        public int? RecHlaInterpretPeakIi { get; set; }
+        public string RecHlaTypDone { get; set; }
+        public string RecLabCtrCd { get; set; }
+        public string RecLabCtrCdOrig { get; set; }
+        public string RecLabCtrTy { get; set; }
+        public string RecLabCtrTyOrig { get; set; }
+        public string RecOrigProv { get; set; }
+        public string RecPosAutoXmatch { get; set; }
+        public int? RecPosAutoXmatchDt { get; set; }
+        public int? RecPraDtMostRecentI { get; set; }
+        public int? RecPraDtMostRecentIi { get; set; }
+        public int? RecPraDtPeakI { get; set; }
+        public int? RecPraDtPeakIi { get; set; }
+        public int? RecPraMeasureMostRecentI { get; set; }
+        public int? RecPraMeasureMostRecentIi { get; set; }
+        public int? RecPraMeasurePeakI { get; set; }
+        public int? RecPraMeasurePeakIi { get; set; }
+        public int? RecPraMostRecent { get; set; }
+        public int? RecPraMostRecentI { get; set; }
+        public int? RecPraMostRecentIi { get; set; }
+        public int? RecPraPeak { get; set; }
+        public int? RecPraPeakI { get; set; }
+        public int? RecPraPeakIi { get; set; }
+        public int? RecPraTargetMostRecentI { get; set; }
+        public int? RecPraTargetMostRecentIi { get; set; }
+        public int? RecPraTargetPeakI { get; set; }
+        public int? RecPraTargetPeakIi { get; set; }
+        public int? RecPraTechMostRecentI { get; set; }
+        public int? RecPraTechMostRecentIi { get; set; }
+        public int? RecPraTechPeakI { get; set; }
+        public int? RecPraTechPeakIi { get; set; }
+        public string RecPraTestDone { get; set; }
+        public string RecSeraTestedI { get; set; }
+        public string RecSeraTestedIi { get; set; }
+        public string RecSerumScreen { get; set; }
+        public int? RecTxDt { get; set; }
+        public int? RecTypMethI { get; set; }
+        public int? RecTypMethIi { get; set; }
+        public string RecXmatchDone { get; set; }
+        public string RecXmatchDonePeriod { get; set; }
+        public string RecXmatchOtherSera { get; set; }
+        public int? RecXmatchSerumDtMostRecent { get; set; }
+        public int? RecXmatchSerumDtOrig { get; set; }
+        public int? TCellDone { get; set; }
+        public int? TCellDoneXmatAhg { get; set; }
+        public int? TCellDoneXmatFlowCytometry { get; set; }
+        public int? TCellDoneXmatNoAhg { get; set; }
+        public int? TCellDoneXmatSolidPhase { get; set; }
+
+        public virtual TxLi RecHistoTx { get; set; }
+    }
+}
