@@ -1,0 +1,52 @@
+﻿CANHX_3_CRIT_MET,num,3,,Meets at least 3 of the 5 following criteria?
+CANHX_AGE_GROUP,char,1,,Age Group (A - adult P - pediatric)
+CANHX_ALBUMIN,num,8,,albumin (used for MELD)
+CANHX_ALBUMIN_DT,num,8,MMDDYY,Albumin (g/dl) - Date
+CANHX_ALBUMIN_LT3,num,3,,Albumin < 3 g/dl?
+CANHX_ASCITES,num,8,,ascites (used for MELD)
+CANHX_ASCITES_DT,num,8,MMDDYY,Ascites - Date
+CANHX_ASCITES_REQUIRE_DIURETICS,num,3,,Ascites requiring diuretic therapy ?
+CANHX_BILI,num,8,,bilirubin (used for MELD)
+CANHX_BILI_DT,num,8,MMDDYY,Bilirubin (mg/dl) - Date
+CANHX_BILI_GT4,num,3,,Bilirubin > 4 mg/dl?
+CANHX_CHG_DT,num,8,MMDDYY,Date Status Justification record as created
+CANHX_CRIT_NOT_MET,num,3,,Criteria Not Met?
+CANHX_CTP_SCORE,num,8,,CTP Score
+CANHX_DGN,char,55,,Diagnosis
+CANHX_ENCEPH,num,8,,encephalopathy (used for MELD)
+CANHX_ENCEPH_DT,num,8,MMDDYY,Encephalopathy - Date
+CANHX_FORM_STAT,num,8,STJSFRST,Status JustificationForm Status
+CANHX_GROWTH_FAIL,num,3,,Patient is experiencing growth failure
+CANHX_HCC_DGN,char,55,,Hepatocellular Carcinoma (HCC) - Diagnosis
+CANHX_HCC_MED_CRIT1,num,3,,Hepatocellular Carcinoma (HCC) - Medical Criteria 1 met?
+CANHX_HCC_MED_CRIT2,num,3,,Hepatocellular Carcinoma (HCC) - Medical Criteria 2 met?
+CANHX_HCC_MED_CRIT3,num,3,,Hepatocellular Carcinoma (HCC) - Medical Criteria 3 met?
+CANHX_HEPREN,num,3,,Hepatorenal syndrome?
+CANHX_INIT_FORM,num,3,,Is this the initial form?
+CANHX_INR,num,8,,International Normalized Ratio (how fast the patients blood clots relative to the control)(used for MELD)
+CANHX_INR_DT,num,8,MMDDYY,INR - Date
+CANHX_INR_GT1,num,3,,INR > 1.7?
+CANHX_MALNUTR,num,3,,Malnutrition defined as loss of 1 standard deviation of expected growth ?
+CANHX_OTC,num,3,,Ornithine Transcarbamylase Deficiency (OTC) or Crigler-Najjar Disease Type I?
+CANHX_OTHER_DISEASE,num,8,,"For primary biliary cirrhosis, primary Sclerosing cholangitis, or other Cholestatic liver diseases: Bilirubin (mg/dl)* - Value"
+CANHX_OTHER_DISEASE_DT,num,8,MMDDYY,"For primary biliary cirrhosis, primary Sclerosing cholangitis, or other Cholestatic liver diseases: Bilirubin (mg/dl)* - Date"
+CANHX_PROTHROM,num,8,,Prothrombin time (secs. Prolonged) over control - Value
+CANHX_PROTHROM_DT,num,8,MMDDYY,Prothrombin time (secs. Prolonged) over control - Date
+CANHX_RAHH,num,3,,Refractory Ascites/Hepato-Hydrothorax?
+CANHX_RAHH_PARACENT,num,3,,Refractory Ascites/Hepato-Hydrothorax - Require Paracentesis
+CANHX_RAHH_PAR_NUTR,num,3,,Refractory Ascites/Hepato-Hydrothorax - requiring parenteral nutrition
+CANHX_RAHH_UNRESPON_DIURETICS,num,3,,Refractory Ascites/Hepato-Hydrothorax - unresponsive to diuretic and salt restriction therapy leading to respiratory distress or requiring supplemental tube feeding
+CANHX_RECUR_CHOLANGITIS,num,3,,Recurrent cholangitis defined as 2 or more episodes in 6 months requiring hospitalization and intravenous antibiotics?
+CANHX_SBP,num,3,,Spontaneous bacterial peritonitis?
+CANHX_SBP_POS_BACTERIA,num,3,,Spontaneous bacterial peritonitis - a gram stain of ascitic fluid positive for the presence of bacteria
+CANHX_SBP_POS_CULT,num,3,,Spontaneous bacterial peritonitis - a positive culture of ascitic fluid for bacteria
+CANHX_SBP_WHITE_BLOOD,num,3,,"Spontaneous bacterial peritonitis - an ascitic fluid white blood cell count with greater than 300 polymorphonuclear cells per milliliter, or a total of 500 white blood cells per milliliter"
+CANHX_STAT_CD,num,8,CANDSTAT,Candidate Status Code for Justification form
+CANHX_STAT_TY,num,8,STTJSTTY,Type of Status Justification Form
+CANHX_UNRESPON,num,3,,Documented unresponsive active variceal hemorrhage or gastro-intestinal bleeding requiring transfusion of at least 10 cc/kg of red blood cells?
+CANHX_URINE_OSMOL,num,3,,Hepatorenal syndrome - urine osmolality >plasma
+CANHX_URINE_SODIUM,num,3,,Hepatorenal syndrome - urine sodium <10 mEq/ml
+CANHX_URINE_VOL,num,3,,Hepatorenal syndrome - urine volume < 500 ml/d
+CAN_LISTING_CTR_ID,num,4,,CAN_LISTING_ Center ID
+PX_ID,num,8,,"Patient Identifier - from WL for A & R Cands,TCR for L Cands"
+WL_ORG,char,4,$WLORG,Organ of this waitlisted record

@@ -1,0 +1,62 @@
+﻿CANHX_ALBUMIN,num,8,,albumin (used for MELD)
+CANHX_ALBUMIN_BOUND,num,8,,albumin lower bound 1 (used for MELD) (wlreg_audit_liin)
+CANHX_ASCITES,num,8,ASCITES,ascites (used for MELD)
+CANHX_BEGIN_DT,num,8,DATE,Date WLR record was last changed
+CANHX_BEGIN_DT_TM,num,8,DATETIME,WL Status Period Begin Date/Time
+CANHX_BILI,num,8,,bilirubin (used for MELD)
+CANHX_BILI_BOUND,num,8,,bilirubin lower bound 1 (used for MELD) (wlreg_audit_liin)
+CANHX_BILI_PPC,num,8,,Bilirubin(PBC/PSC/Other Cholestatic) (used for MELD)
+CANHX_CREAT_BOUND,num,8,,serum creatinine lower bound 1 upper 4 (used for MELD) (wlreg_audit_liin)
+CANHX_DIAL_PRIOR_WEEK,char,1,,Did the patient have dialysis within the week prior to the serum creatinine test (used for MELD)
+CANHX_ENCEPH,num,8,ENCEPH,encephalopathy (used for MELD)
+CANHX_END_DT,num,8,DATE,WL Status Period End Date
+CANHX_END_DT_TM,num,8,DATETIME,WL Status Period End Date/Time
+CANHX_EXC_DIAG_HCC1,num,8,,Exception MELD/PELD Score for HCC1
+CANHX_EXC_DIAG_HCC2,num,8,,Exception MELD/PELD Score for HCC2
+CANHX_EXC_DIAG_HCC_NOPOLICY,num,8,,Exception MELD/PELD score for HCC not by policy
+CANHX_EXC_DIAG_OTHER,num,8,,Other diagnosis MELD/PELD score exception
+CANHX_EXC_FLG,num,8,,Exception MELD/PELD
+CANHX_EXC_SCORE,num,8,CANDSTAT,Exception Score
+CANHX_GROWTH_FAIL,num,8,,Patient is experiencing growth failure
+CANHX_HGT_CM,num,8,,Candidate/s Height (stored in cm)
+CANHX_INR,num,8,,International Normalized Ratio (how fast the patients blood clots relative to the control)(used for MELD)
+CANHX_INR_BOUND,num,8,,International Normalized Ratio lower bound 1
+CANHX_KEEP_PED_STAT_FLG,num,8,,Maintain Pediatric Status for Candidate after the candidate turns 18
+CANHX_MELD_DIFF_REASON_CD,num,8,MELDDIFF,Reason Match and Laboratory MELD/PELD score are different
+CANHX_OPTN_LAB_MELD,num,8,CANDSTAT,OPTN MELD/PELD given
+CANHX_OPTN_LAB_MELD_TY,char,4,,OPTN score MELD or PELD
+CANHX_PREV_LOWER_MELD_SCORE,num,8,CANDSTAT,Previous lower MELD score
+CANHX_REASON_STAT_INACT,num,8,INACTRSN,Reason Candidate Status made inactive
+CANHX_SCORE_MISSING,num,8,,Missing MELD/PELD flag
+CANHX_SERUM_CREAT,num,8,,serum creatinine (used for MELD)
+CANHX_SERUM_SODIUM,num,8,,serum sodium (used for MELD)
+CANHX_SRTR_LAB_MELD,num,8,CANDSTAT,SRTR MELD/PELD given
+CANHX_SRTR_LAB_MELD_TY,char,1,,SRTR score MELD or PELD
+CANHX_STAT_CD,num,8,CANDSTAT,WL Status During Given Period
+CANHX_WGT_KG,num,8,,Candidate/s Weight in kilograms
+CAN_GENDER,char,1,,Patient/s Gender
+CAN_INIT_ACT_STAT_CD,num,8,CANDSTAT,First Active Status
+CAN_INIT_ACT_STAT_DT,num,8,MMDDYY,Date of First Active Status
+CAN_INIT_INACT_STAT_DT,num,8,MMDDYY,Date of First Inactive Status
+CAN_INIT_SRTR_LAB_MELD,num,8,CANDSTAT,First SRTR MELD/PELD given
+CAN_INIT_SRTR_LAB_MELD_TY,char,1,,First SRTR MELD/PELD type given
+CAN_INIT_STAT,num,8,CANDSTAT,Initial Status of Patient
+CAN_LAST_ACT_STAT_DT,num,8,MMDDYY,Last Date of Active Status
+CAN_LAST_ALBUMIN,num,8,,Candidate Last Albumin (used for MELD)
+CAN_LAST_ASCITES,num,8,ASCITES,Candidate Last Ascites (used for MELD)
+CAN_LAST_BILI,num,8,,Candidate Last Bilirubin (used for MELD)
+CAN_LAST_DIAL_PRIOR_WEEK,char,1,,Last non-blank val. of dialysis within prior week
+CAN_LAST_ENCEPH,num,8,ENCEPH,Candidate Last Encephalopathy (used for MELD)
+CAN_LAST_INACT_STAT_DT,num,8,MMDDYY,Last Date of Inactive Status
+CAN_LAST_INR,num,8,,Candidate Last INR (used for MELD)
+CAN_LAST_SERUM_CREAT,num,8,,Candidate Last Serum Creatinine mg/dl (used for MELD)
+CAN_LAST_SERUM_SODIUM,num,8,,Candidate Last Serum Sodium (used for MELD)
+CAN_LAST_SRTR_LAB_MELD,num,8,CANDSTAT,Last SRTR MELD/PELD given
+CAN_LAST_SRTR_LAB_MELD_TY,char,1,,Last SRTR MELD/PELD type given
+CAN_LAST_STAT,num,8,CANDSTAT,Last Status of Patient (with 2 day rule)
+CAN_LISTING_DT,num,8,MMDDYY,Listing Date - date/time candidate was physically added to the waiting list - this date/time does not change for transfers
+CAN_REM_CD,num,8,REMCD,Reason why candidate was removed
+CAN_REM_DT,num,8,MMDDYY,"rem_dt /remreg, censored by CAN_DEATH_DT, tx_dt"
+CAN_SOURCE,char,1,,"Source of Candidate Data A =Active WL,R= Removed,L=Living Don"
+PX_ID,num,8,,"Patient Identifier - from WL for A & R Cands,TCR for L Cands"
+WL_ORG,char,4,$WLORG,Organ of this waitlisted record

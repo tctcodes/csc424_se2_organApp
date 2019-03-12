@@ -1,0 +1,18 @@
+﻿MALIG_ID,num,8,,Unique identifier for malig - unique key
+MAL_POSTX_BESTRESP,char,2,$BSTRESP,Best Treatment Response
+MAL_POSTX_CHEMO,num,3,,Other Treatment:Chemotherapy
+MAL_POSTX_CHEMO_TY,num,8,CHEMOTY,Other Treatment:Chemotherapy Type
+MAL_POSTX_CRYO,num,3,,Other Treatment:Cryotherapy(skin cancer)
+MAL_POSTX_DGN_DT,num,8,MMDDYY,Date of Diagnosis
+MAL_POSTX_IMMUNO,num,3,,Other Treatment:Immunotherapy
+MAL_POSTX_IMMUNO_STAT,num,8,IMMNSTTS,Immunosuppression
+MAL_POSTX_IMMUNO_TY,num,8,IMMUNOTY,Other Treatment:Immunotherapy Type
+MAL_POSTX_RADIAT,num,3,,Other Treatment:Radiation
+MAL_POSTX_SITE_ADJ_ORG,num,3,,Site(s)affected:Adjacent organs
+MAL_POSTX_SITE_DIST_METAST,num,3,,Site(s)affected:Distant metastases
+MAL_POSTX_SITE_LYMPH,num,3,,Site(s)affected:Regional lymph nodes
+MAL_POSTX_SITE_PRIME_ORG,num,3,,Site(s)affected:Primary organ
+MAL_POSTX_SURG,num,3,,Other Treatment:Surgery
+MAL_POSTX_SURG_TY,num,8,SURGTY,Other Treatment:Surgery Type
+MAL_POSTX_TUMOR_TY,num,8,MALTMRTY,FOREIGN KEY
+TRR_FOL_ID,num,8,,Unique identifier for TRR Follow-up - foreign key to TRR Follow-up

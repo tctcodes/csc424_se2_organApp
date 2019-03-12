@@ -1,0 +1,3 @@
+﻿CANHX_MPXCPT_FORM_ID,num,8,,Uniquely identifies a MELD/PELD exception form
+CANHX_MPXCPT_ORIG_HCC_TUMOR_ID,num,8,,Order in which the tumor size was entered on the M/P exception form
+CANHX_MPXCPT_ORIG_HCC_TUMOR_SIZE,num,8,,Size of tumor in centimeters
