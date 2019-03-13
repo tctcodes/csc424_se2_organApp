@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using csc424_se2_organApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace csc424_se2_organApp
 {
@@ -19,6 +21,10 @@ namespace csc424_se2_organApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //var connection = "server=192.168.2.111;port=5432;Database=organ_app;Username=pi;Password=almost";
+            services.AddDbContext<organ_appContext>(options =>
+            options.UseNpgsql("server=192.168.2.111;port=5432;Database=organ_app;Username=pi;Password=almost"));
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // In production, the React files will be served from this directory
