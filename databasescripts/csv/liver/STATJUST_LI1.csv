@@ -1,0 +1,57 @@
+﻿CANHX_AGE_GROUP,char,1,,Age Group (A - adult P - pediatric)
+CANHX_ALBUMIN,num,8,,albumin (used for MELD)
+CANHX_ALBUMIN_DT,num,8,MMDDYY,Albumin Test Date
+CANHX_ASCITES,num,8,,ascites (used for MELD)
+CANHX_ASCITES_DT,num,8,MMDDYY,ascites lab date
+CANHX_BILI,num,8,,bilirubin (used for MELD)
+CANHX_BILIARY_SEPSIS,num,3,,Biliary sepsis requiring pressor support of 5 mcg/kg/min of dopamine or greater?
+CANHX_BILI_DT,num,8,MMDDYY,Bilirubin Test Date
+CANHX_BILI_PPC,num,8,,Bilirubin(PBC/PSC/Other Cholestatic) (used for MELD)
+CANHX_BILI_PPC_DT,num,8,MMDDYY,test date of Bilirubin(PBC/PSC/Other Cholestatic) (used for MELD)
+CANHX_CHG_DT,num,8,MMDDYY,Date Status Justification record as created
+CANHX_CRIT_NOT_MET,num,3,,Criteria Not Met?
+CANHX_DGN,char,100,,Diagnosis
+CANHX_DIAL_PRIOR_WEEK,char,1,,Did the patient have dialysis within the week prior to the serum creatinine test (used for MELD)
+CANHX_ENCEPH,num,8,,encephalopathy (used for MELD)
+CANHX_ENCEPH_DT,num,8,MMDDYY,encephalopathy lab date
+CANHX_ENCEPH_ONSET,num,3,,Stage III or IV Encephalopathy?
+CANHX_FORM_STAT,num,8,STJSFRST,Status JustificationForm Status
+CANHX_FULMINANT_FAIL,num,3,,Fulminant Hepatic Failure?
+CANHX_GI_BLEEDING,num,3,,Upper Gastro-intestinal Bleeding?
+CANHX_HEPREN,num,3,,Hepatorenal syndrome?
+CANHX_HGT_CM,num,8,,Candidate/s Height (stored in cm)
+CANHX_HOSP_NAME,char,35,,Hospital Location
+CANHX_ICU,num,3,,In ICU?
+CANHX_INIT_FORM,num,3,,Is this the initial form?
+CANHX_INR,num,8,,International Normalized Ratio (how fast the patients blood clots relative to the control)(used for MELD)
+CANHX_INR_DT,num,8,MMDDYY,INR Test Date
+CANHX_NON_METAST_HEPBLAST,num,3,,This is a pediatric patient wth non-metastatic hepatoblastoma who is otherwise a suitable candidate for liver transplantation.
+CANHX_OTC,num,3,,Hospitalized with OTC or Crigler-Najjar Disease Type I?
+CANHX_OTC_NOHOSP,num,3,,Non-hospitalized Transplant Candidate with Ornithine Transcarbarmylase Deficiency (OTC) or Crigler-Najjar Disease Type I
+CANHX_PELD_HGT_DT,num,8,MMDDYY,peld hgt dt lab date
+CANHX_PELD_WGT_DT,num,8,MMDDYY,peld wgt dt lab date
+CANHX_PRIME_NONFUNCTN,num,3,,Primary non-function or hepatic artery thrombosis of a transplanted liver within 7 days of implantation?
+CANHX_PROTHROM,num,8,,Prothrombin Time (seconds prolonged)
+CANHX_PROTHROM_DT,num,8,MMDDYY,Prothrombin Test Date
+CANHX_PX_TX_CTR,num,3,,Patient in TX Center
+CANHX_RAHH,num,3,,Refractory Ascites/Hepato-Hydrothorax?
+CANHX_RAHH_PARACENT,num,3,,Refractory Ascites/Hepato-Hydrothorax - Require Paracentesis
+CANHX_RAHH_PAR_NUTR,num,3,,Refractory Ascites/Hepato-Hydrothorax - requiring parenteral nutrition
+CANHX_RAHH_SUPL_O2,num,3,,Refractory Ascites/Hepato-Hydrothorax - Require Supplement Oxygen?
+CANHX_RAHH_TUBE_FEED,num,3,,Refractory Ascites/Hepato-Hydrothorax - Require Supplement Tube Feeding?
+CANHX_RAHH_UNRESPON_DIURETICS,num,3,,Refractory Ascites/Hepato-Hydrothorax - Unresponsive to diuretic and salt restriction therapy to respiratory distress?
+CANHX_SERUM_CREAT,num,8,,serum creatinine (used for MELD)
+CANHX_SERUM_CREAT_DT,num,8,MMDDYY,Serum Creatinine lab date
+CANHX_STAT_CD,num,8,CANDSTAT,Candidate Status Code for Justification form
+CANHX_STAT_TY,num,8,STTJSTTY,Type of Status Justification Form
+CANHX_URINE_OSMOL,num,3,,Hepatorenal syndrome - Urine osmolality > Plasma osmolality (U/P ratio > 1.0)?
+CANHX_URINE_SODIUM,num,3,,Hepatorenal syndrome - Urine sodium <10 mEq/ml?
+CANHX_URINE_VOL,num,3,,Hepatorenal syndrome - Urine volume <10 ml/kg/d in patients less than 18 years of age?
+CANHX_VENTILATOR,num,3,,On Mechanical Ventilator?
+CANHX_WGT_KG,num,8,,Candidate/s Weight in kilograms
+CANHX_WILSONS,num,3,,Acute Decompensated Wilson/s Disease
+CAN_LISTING_CTR_ID,num,4,,Listing Center ID for WL Patients/TCR Center ID for Liv-don Recipient
+CAN_REG2_LAST_TX_DT,num,8,MMDDYY,Contains the last tx dt for this candidate at this center.
+PX_ID,num,8,,"Patient Identifier - from WL for A & R Cands,TCR for L Cands"
+REC_TX_DT,num,8,MMDDYY,Transplant Date
+WL_ORG,char,4,$WLORG,Organ of this waitlisted record

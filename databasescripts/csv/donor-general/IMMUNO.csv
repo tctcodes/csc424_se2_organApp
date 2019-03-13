@@ -1,0 +1,6 @@
+﻿REC_DRUG_ANTI_REJ,num,3,,Anti-Rejection
+REC_DRUG_CD,num,8,DRUG,Drug Code
+REC_DRUG_DAYS,num,8,,Number of Days
+REC_DRUG_INDUCTION,num,3,,Induction
+REC_DRUG_MAINT,num,3,,Maintenance
+TRR_ID,num,8,,Unique identifier for TRR - foreign key to TRR

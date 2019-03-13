@@ -1,0 +1,15 @@
+﻿CTR_CD,char,4,,center code
+CTR_ID,num,8,,Unique identifier for ctr_cd/ctr_ty combination
+CTR_TY,char,3,$CTRTY,center type
+ENTIRE_NAME,char,75,,center/s entire name
+ESRD_REGION,num,8,,ESRD REGION NUMBER
+NAME_PART1,char,37,,first 38 characters of institution/s Name
+NAME_PART2,char,37,,second 38 character/s of center/s Name
+OPTN_MBR,num,3,,OPTN member flag
+PRIMARY_CITY,char,20,,address city
+PRIMARY_CTRY,char,3,,address foriegn country
+PRIMARY_PROVINCE,char,3,,address foreign province
+PRIMARY_STATE,char,3,,l address state
+PRIMARY_ZIP,char,10,,address zip
+PROVIDER_NUM,char,10,,Donor Hospital Provider Number
+REGION,num,8,,OPTN Region number

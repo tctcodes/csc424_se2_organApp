@@ -1,0 +1,8 @@
+﻿CANHX_MPXCPT_CHRONIC_LI_AFP500,num,3,,Does the patient have chronic liver disease and an alpha-fetoprotein >= 500 nanograms
+CANHX_MPXCPT_FORM_ID,num,8,,Unique identified of a M/P Exception form
+CANHX_MPXCPT_HCC_CT_ABDOMEN_DT,num,8,MMDDYY,Date CT completed
+CANHX_MPXCPT_HCC_MRI_ABDOMEN_DT,num,8,MMDDYY,Date MRI completed
+CANHX_MPXCPT_HCC_TUMOR_BLUSH,char,1,,Was a blush seen on tumor imaging study corresponding to area of suspicion
+CANHX_MPXCPT_HCC_TUMOR_ID,num,8,,Order in which the tumor size was entered on the M/P Exception form
+CANHX_MPXCPT_HCC_TUMOR_SIZE_CM,num,8,,Size of tumor in centimeters
+CANHX_MPXCPT_HCC_ULTRASOUND_DT,num,8,MMDDYY,Date Ultrasound of liver completed

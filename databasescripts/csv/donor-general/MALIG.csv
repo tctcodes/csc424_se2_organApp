@@ -1,0 +1,146 @@
+﻿MALIG_ID,num,8,,Unique identifier for malig - unique key
+MAL_DON_CHEMO,num,3,,Specify treatment: Chemotherapy
+MAL_DON_CHEMO_TY,num,8,CHEMOTY,Specify treatment: Chemotherapy type
+MAL_DON_DGN_DT,num,8,MMDDYY,Date of Diagnosis
+MAL_DON_IMMUNO,num,3,,Specify treatment: Immunotherapy
+MAL_DON_IMMUNO_STAT,num,8,IMMNSTTS,Immunosuppression
+MAL_DON_IMMUNO_TY,num,8,IMMUNOTY,Immunotherapy type
+MAL_DON_OUTCOME,num,8,OUTCOME,Specify treatment: Outcome
+MAL_DON_RADIAT,num,3,,Specify treatment: Radiation
+MAL_DON_SURG,num,3,,Specify treatment: Surgical Resection Tumor
+MAL_DON_TUMOR_TY,char,1,,Type of Tumor
+MAL_NAT_ORG_KI,num,3,,Kidney
+MAL_NAT_ORG_LI,num,3,,Liver
+MAL_NAT_ORG_LU,num,3,,Lung
+MAL_POSTX_BAS_NUM,num,8,,Basal Cell:Number of Occurrences
+MAL_POSTX_BAS_SITE_EXTREM,num,3,,Basal Cell: Site: //Extremities
+MAL_POSTX_BAS_SITE_LIPHEADNECK,num,3,,Basal Cell: Site: //Lips/Head/Neck
+MAL_POSTX_BAS_SITE_TRUNK,num,3,,Basal Cell: Site: //Trunk
+MAL_POSTX_BAS_SKIN_SITES,char,1,,Basal Cell: Sites: Single/Multiple
+MAL_POSTX_BAS_SPREAD_NODES,num,3,,Basal Cell Spread:Nodes
+MAL_POSTX_BAS_SPREAD_NONE,num,3,,Basal Cell Spread:None
+MAL_POSTX_BAS_SPREAD_OTHER,num,3,,Basal Cell Spread:Other
+MAL_POSTX_BRAIN_TUMOR_TY,num,8,BRNTMR,Type of Brain Tumor
+MAL_POSTX_COLORECTAL_DUKES,num,8,DKSCLS,Colo-rectal:Duke/s classification
+MAL_POSTX_KAPOSI_CUTANEOUS,num,3,,Tumor Types: Kaposis/s Sarcoma: Cutaneous
+MAL_POSTX_KAPOSI_VISC,num,3,,Tumor Types: Kaposis/s Sarcoma: Visceral
+MAL_POSTX_LEUK_TY,num,8,LEUKTY,Leukemia:Type
+MAL_POSTX_LU_CELL_TY,char,1,,Lung: Small Cell/Non-small Cell
+MAL_POSTX_MEL_NUM,num,8,,Melanoma Spread:Number of Occurrences
+MAL_POSTX_MEL_SITE_EXTREM,num,3,,Melanoma: Sites: //Extremities
+MAL_POSTX_MEL_SITE_LIPHEADNECK,num,3,,Melanoma: Sites: //Lips/Head/Neck
+MAL_POSTX_MEL_SITE_TRUNK,num,3,,Melanoma: Sites: //Trunk
+MAL_POSTX_MEL_SKIN_SITES,char,1,,Melanoma: Sites: Single/Multiple
+MAL_POSTX_MEL_SPREAD_NODES,num,3,,Melanoma Spread:Nodes
+MAL_POSTX_MEL_SPREAD_NONE,num,3,,Melanoma Spread:None
+MAL_POSTX_MEL_SPREAD_OTHER,num,3,,Melanoma Spread:Other
+MAL_POSTX_METAST_LI_TY,num,8,METLIVER,Metastatic Liver Tumor:Specify Type
+MAL_POSTX_OTHER_CANCER_SITES,char,50,,Other Cancers:Site(s)
+MAL_POSTX_OUTCOME,num,8,OUTCOME,Tumor Types: Outcome
+MAL_POSTX_PRIME_HEPAT_TY,num,8,PRMHPTC,Primary Hepatic Tumor:Specify Type
+MAL_POSTX_RENAL_SITES,char,50,,Renal carcinoma:Site(s)
+MAL_POSTX_SARCOMA_SITES,char,50,,Sarcomas:Sites
+MAL_POSTX_SARCOMA_TY,num,8,SARCOMAS,Sarcomas:Specify type
+MAL_POSTX_SQU_NUM,num,8,,Squamous Cell:Number of Occurrences
+MAL_POSTX_SQU_SITE_EXTREM,num,3,,Squamous Cell Site: //Extremities
+MAL_POSTX_SQU_SITE_LIPHEADNECK,num,3,,Squamous Cell Site: //Lips/Head/Neck
+MAL_POSTX_SQU_SITE_TRUNK,num,3,,Squamous Cell Site: //Trunk
+MAL_POSTX_SQU_SKIN_SITES,char,1,,Squamous Cell: Sites: Single/Multiple
+MAL_POSTX_SQU_SPREAD_NODES,num,3,,Squamous Cell Spread:Nodes
+MAL_POSTX_SQU_SPREAD_NONE,num,3,,Squamous Cell Spread:None
+MAL_POSTX_SQU_SPREAD_OTHER,num,3,,Squamous Cell Spread:Other
+MAL_POSTX_TUMOR_BAS_SKIN,num,3,,Tumor Type:Skin:Basal Cell
+MAL_POSTX_TUMOR_BLADDER,num,3,,Tumor Type: Bladder
+MAL_POSTX_TUMOR_BRAIN,num,8,BRNTMR,Tumor Type: Brain
+MAL_POSTX_TUMOR_BREAST,num,3,,Tumor Type: Breast
+MAL_POSTX_TUMOR_COLORECTAL,num,3,,Tumor Type: Colo-rectal
+MAL_POSTX_TUMOR_ESOPHAGUS,num,3,,Tumor Type: Esophagus
+MAL_POSTX_TUMOR_LARYNX,num,3,,Tumor Type: Larynx
+MAL_POSTX_TUMOR_LEUK,num,3,,Tumor Types: Leukemia
+MAL_POSTX_TUMOR_LU,num,3,,Tumor Type: Lung
+MAL_POSTX_TUMOR_MEL_SKIN,num,3,,Tumor Type:Skin: Melanoma
+MAL_POSTX_TUMOR_METAST_LI,num,3,,Metastatic Liver Tumor-Orig Site
+MAL_POSTX_TUMOR_OTHER_CANCER,num,3,,Tumor Types: Other Cancers
+MAL_POSTX_TUMOR_OVARIAN,num,3,,Tumor Type: Ovarian
+MAL_POSTX_TUMOR_PA,num,3,,Tumor Type: Pancreas
+MAL_POSTX_TUMOR_PRIME_HEPAT,num,3,,Primary Hepatic Tumor
+MAL_POSTX_TUMOR_PRIME_UNK,num,3,,Tumor Types: Primary Unknown
+MAL_POSTX_TUMOR_PROSTATE,num,3,,Tumor Type: Prostate
+MAL_POSTX_TUMOR_RENAL,num,3,,Tumor Type: Renal Carcinoma
+MAL_POSTX_TUMOR_SARCOMA,num,3,,Tumor Types: Sarcomas (excluding Kaposi/s)
+MAL_POSTX_TUMOR_SM_IN,num,3,,Tumor Type: Small Intestine
+MAL_POSTX_TUMOR_SQU_SKIN,num,3,,Tumor Type:Skin:Squamous Cell
+MAL_POSTX_TUMOR_STOMACH,num,3,,Tumor Type: Stomach
+MAL_POSTX_TUMOR_TESTICULAR,num,3,,Tumor Type: Testicular
+MAL_POSTX_TUMOR_THYROID,num,3,,Tumor Type: Thyroid
+MAL_POSTX_TUMOR_TONGUE_THROAT,num,3,,"Tumor Type: Tongue, Throat"
+MAL_POSTX_TUMOR_UTERUS,num,3,,Tumor Types: Carcinoma of the Uterus
+MAL_POSTX_TUMOR_VULVA_PENIS,num,3,,"Tumor Types: Carcinoma of Vulva, Perineum or Penis, Scrotum"
+MAL_POSTX_UTERUS_TY,num,8,CRUTRS,Carcinoma of the Uterus:Select
+MAL_PRETX_CHEMO,num,3,,Treatments of pre-existing tumor: Chemotherapy
+MAL_PRETX_CHEMO_TY,num,8,CHEMOTY,Treatments of pre-existing tumor: Chemotherapy Type
+MAL_PRETX_DT,num,8,MMDDYY,Treatments of pre-existing tumor: Date of Treatment
+MAL_PRETX_DUKES,num,8,DKSCLS,"If Color-rectal, Duke/s Classificiation"
+MAL_PRETX_LEUK_TY,num,8,LEUKTY,If Leukemia
+MAL_PRETX_RADIAT,num,3,,Treatments of pre-existing tumor: Radiation
+MAL_PRETX_SKIN_NUM,num,8,,If skin # of occurrences in follow-up period
+MAL_PRETX_SURG,num,3,,Treatments of pre-existing tumor: Surgery
+MAL_PRETX_SURG_TY,num,8,SURGTY,Treatments of pre-existing tumor: Surgery Type
+MAL_PRETX_TUMOR_TY,num,8,TUMORTY,Type of Pre-Existing Tumor
+MAL_PTLD_AA_STAGE,char,1,,PTLD: Ann Arbor Stage
+MAL_PTLD_ANATOMY_NODES,char,1,,PTLD: Anatomy: Nodes
+MAL_PTLD_ANATOMY_SITE,char,1,,PTLD: Anatomy: Single Site/Multiple Sites
+MAL_PTLD_ANTIVRL,char,1,,"PTLD Treatment: Anti-Viral Therapy (if yes, list drugs)"
+MAL_PTLD_ANTIVRL1_BESTRESP,char,2,$BSTRESP,PTLD Treatment: Anti-Viral Therapy: Drug 1: Best Response
+MAL_PTLD_ANTIVRL1_TY,num,8,ANTVRL,PTLD Treatment: Anti-Viral Therapy: Drug 1
+MAL_PTLD_ANTIVRL2_BESTRESP,char,2,$BSTRESP,PTLD Treatment: Anti-Viral Therapy: Drug 2: Best Response
+MAL_PTLD_ANTIVRL2_TY,num,8,ANTVRL,PTLD Treatment: Anti-Viral Therapy: Drug 2
+MAL_PTLD_CHEMO,char,1,,PTLD Treatment: Chemotherapy
+MAL_PTLD_CHEMO1_BESTRESP,char,2,$BSTRESP,PTLD Treatment: Chemotherapy: Drug/Regimen 1: Best Response
+MAL_PTLD_CHEMO1_TY,num,8,CHEMOTY,PTLD Treatment: Chemotherapy: Drug/Regimen 1
+MAL_PTLD_CHEMO2_BESTRESP,char,2,$BSTRESP,PTLD Treatment: Chemotherapy: Drug/Regimen 2: Best Response
+MAL_PTLD_CHEMO2_TY,num,8,CHEMOTY,PTLD Treatment: Chemotherapy: Drug/Regimen 2
+MAL_PTLD_CLONALITY_TY,num,8,CLNLTY,PTLD: Clonality
+MAL_PTLD_DGN_DT,num,8,MMDDYY,PTLD: Date of Diagnosis
+MAL_PTLD_EBV_STAT,char,1,,PTLD: Epstein-Barr Virus (EBV) Status of Tumor
+MAL_PTLD_EXNODAL_ALLOGRAFT,num,3,,PTLD: Anatomy: Extranodal Sites if applicable: Allograft
+MAL_PTLD_EXNODAL_BONE_MARROW,num,3,,PTLD: Anatomy: Extranodal Sites if applicable: Bone Marrow
+MAL_PTLD_EXNODAL_CNS,num,3,,PTLD: Anatomy: Extranodal Sites if applicable: CNS
+MAL_PTLD_EXNODAL_COLON,num,3,,PTLD: Anatomy: Extranodal Sites if applicable: Colon
+MAL_PTLD_EXNODAL_LI,num,3,,PTLD: Anatomy: Extranodal Sites if applicable: Liver
+MAL_PTLD_EXNODAL_LU,num,3,,PTLD: Anatomy: Extranodal Sites if applicable: Lung
+MAL_PTLD_EXNODAL_SM_IN,num,3,,PTLD: Anatomy: Extranodal Sites if applicable: Small Intestine
+MAL_PTLD_EXNODAL_STOMACH,num,3,,PTLD: Anatomy: Extranodal Sites if applicable: Stomach
+MAL_PTLD_IMMUNO,char,1,,PTLD Treatment: Immunotherapy
+MAL_PTLD_IMMUNO_BESTRESP,char,2,$BSTRESP,PTLD Treatment: Immunotherapy: Best Response
+MAL_PTLD_IMMUNO_TY,num,8,IMMUNOTY,PTLD Treatment:Immunotherapy Type
+MAL_PTLD_PATHOLOGY_TY,num,8,PTHLGY,PTLD: Pathology
+MAL_PTLD_PREDOM_CELL_TY,num,8,PTLCLLTY,PTLD: Predominant Cell Type
+MAL_PTLD_RADIAT,char,1,,PTLD Treatment: Radiation Therapy
+MAL_PTLD_RADIAT_BESTRESP,char,2,$BSTRESP,PTLD Treatment: Radiation Therapy: Best Response
+MAL_PTLD_REDUC_IMMUNO,char,1,,PTLD Treatment: Reduction/Cessation of Immunosuppression
+MAL_PTLD_REDUC_IMMUNO_BESTRESP,char,2,$BSTRESP,PTLD Treatment: Reduction/Cessation of Immunosuppression Best Response
+MAL_PTLD_SURG_BESTRESP,char,2,$BSTRESP,PTLD Treatment: Surgery: Best Response
+MAL_PTLD_SURG_TY,num,8,SURGPTLD,PTLD Treatment: Surgery Type
+MAL_RECUR_CHEMO,num,3,,Treatments of recurrent tumor: Chemotherapy
+MAL_RECUR_CHEMO_TY,num,8,CHEMOTY,Treatments of recurrent tumor: Chemotherapy Type
+MAL_RECUR_DT,num,8,MMDDYY,Date of recurrence (post tx)
+MAL_RECUR_IMMUNO,num,3,,Treatments of recurrent tumor: Immunotherapy
+MAL_RECUR_IMMUNO_STAT,num,8,IMMNSTTS,Immunosuppression
+MAL_RECUR_IMMUNO_TY,num,8,IMMUNOTY,Treatments of recurrent tumor: Immunotherapy Type
+MAL_RECUR_OUTCOME,num,8,OUTCOME,Treatments of recurrent tumor: Outcome
+MAL_RECUR_RADIAT,num,3,,Treatments of recurrent tumor: Radiation
+MAL_RECUR_SITE_ADJ_ORG,num,3,,Site(s) affected: Adjacent organs
+MAL_RECUR_SITE_LYMPH,num,3,,Site(s) affected: Regional lymph nodes
+MAL_RECUR_SITE_METAST,num,3,,Site(s) affected: Distant metastases
+MAL_RECUR_SITE_PRIME_ORG,num,3,,Site(s) affected: Primary organ
+MAL_RECUR_SURG,num,3,,Treatments of recurrent tumor: Surgery
+MAL_RECUR_SURG_TY,num,8,SURGTY,Treatments of recurrent tumor: Surgery Type
+TFL_NAT_ORG_KI_TY,char,50,,"Kidney, type specify"
+TFL_NAT_ORG_LI_TY,char,50,,"Liver, type specify"
+TFL_NAT_ORG_LU_TY,char,50,,"Lung, type specify"
+TFL_PREV_TUMOR_LYMPH_TY,char,50,,If Lymphoma specify type
+TFL_PTLD_ANTIVRL_DRUG1,char,50,,PTLD Treatment: Anti-Viral Therapy: Drug 1: Other Specify
+TFL_PTLD_ANTIVRL_DRUG2,char,50,,PTLD Treatment: Anti-Viral Therapy: Drug 2: Other Specify
+TFL_TUM_OTH_CANCER_TY,char,50,,Other Cancers:Specify type
+TRR_FOL_ID,num,8,,Unique identifier for TRR Follow-up - foreign key to TRR Follow-up

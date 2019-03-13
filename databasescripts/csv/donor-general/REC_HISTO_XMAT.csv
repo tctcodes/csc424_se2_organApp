@@ -1,0 +1,8 @@
+﻿REC_CELL_SOURCE_XMATCH,num,8,TGTCLSRM,Target Source
+REC_CELL_TY_XMATCH,num,8,CELLTY,Cell Type
+REC_HISTO_TX_ID,num,8,,Unique identifier for Transplant - foreign key to rec_histo
+REC_MEASURE_XMATCH,num,8,PRAMESUR,Most Recent row 4//Measures:
+REC_RESULT_AUTO_XMATCH,num,8,AUXMRSLT,Most Recent row 4//AutoXM Result Using This Target
+REC_RESULT_XMATCH,num,8,CRSSMTCH,Most Recent row 4/Result:
+REC_ROW_NUM_XMATCH,num,8,,Indicator for Most Recent(1) or Positive Xmatch(2)
+REC_TECH_XMATCH,num,8,HSTTECXM,Most Recent row 4//Technique:
