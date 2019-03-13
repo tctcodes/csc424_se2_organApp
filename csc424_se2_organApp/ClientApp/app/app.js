@@ -43,7 +43,7 @@ const render = messages => {
     <Provider store={store}>
       <LanguageProvider messages={messages}>
         <ConnectedRouter history={history}>
-          <h1>HELLO DICKHEADS</h1>
+          <App/>
         </ConnectedRouter>
       </LanguageProvider>
     </Provider>,
