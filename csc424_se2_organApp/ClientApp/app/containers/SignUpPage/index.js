@@ -39,10 +39,19 @@ export class SignUpPage extends React.Component {
   }
 
   handleClick() {
+    if(this.email == "" || this.email == null){
+      alert("Email field cannot be blank");
+      return;
+    }
     if(!isEmail(this.email)){
       alert("Email not valid");
       return;
     }
+    if(this.pass == "" || this.pass == null){
+      alert("Password field cannot be blank");
+      return;
+    }
+    
     this.email = normalizeEmail(this.email);
     this.props.onSetEmail(this.email);
     this.props.onSetPass(this.pass);
