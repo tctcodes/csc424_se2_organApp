@@ -14,7 +14,7 @@ export function* addUser() {
     let headers = {
       'Content-Type': 'application/json',
     }
-    axios.post("localhost:5001/api/AddUser",body,headers)
+    axios.post("http://localhost:5000/api/AddUser",body,headers)
     .then(res => console.log(res));
   } catch (err) {
     alert(err);

@@ -20,13 +20,14 @@ namespace csc424_se2_organApp.Controllers
         {             
             _context = context;       
         }
+        
+        
         [HttpPost]
-        //x[EnableCors("CORSpolicy")]
         public JsonResult NewUser([FromBody]Users user){
             
             user.Password = BCrypt.HashPassword(user.Password);
-           // _context.Users.Add(user);
-            //_context.SaveChanges();
+            _context.Users.Add(user);
+            _context.SaveChanges();
             return Json(user);
         
         }
