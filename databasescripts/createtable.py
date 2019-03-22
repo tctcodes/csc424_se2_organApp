@@ -7,12 +7,16 @@
 import os
 import csv
 import sys
+import re
 
-
+# paths
 csvPath ="./csv/phase3"
 sqlPath ="./sql/phase3"
 formatpath ="./format/phase3"
 
+# _id regular expression
+idre= r'_ID\b'
+research = re.compile(idre,re.I)
 ### close file arrays
 def closeFiles(filesArray):
     for fi in filesArray:
@@ -105,8 +109,16 @@ for fi, openFile in enumerate(o) : # index, filename
         # name      type    size    format  description
         
         # set datatype
-        if(line[1]=='num'):
-            varType = 'NUMERIC('+line[2]+'),'          
+        if( line[1] =='num' and research.search(line[0]) != None):  # for all ID's
+            varType = 'NUMERIC('+line[2]+'),' 
+        elif(line[1]=='num' and line[3] == 'MMDDYY'):
+            varType = 'DATE,'
+        elif(line[1]=='num' and line[3] == 'TIME'):
+            varType = 'TIME,'
+        elif(line[1]=='num' and line[3] != ''):                     # end of nums
+            varType = 'NUMERIC('+line[2]+'),' 
+        elif(line[1]=='num'):
+            varType = 'REAL,'
         elif(line[1]=='char'):
             varType = 'VARCHAR('+line[2]+'),'
         else:

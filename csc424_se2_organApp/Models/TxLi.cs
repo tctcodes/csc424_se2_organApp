@@ -5,213 +5,206 @@ namespace csc424_se2_organApp.Models
 {
     public partial class TxLi
     {
-        public TxLi()
-        {
-            FolImmuno = new HashSet<FolImmuno>();
-            TxfLiTrr = new HashSet<TxfLi>();
-            TxfLiTx = new HashSet<TxfLi>();
-        }
-
-        public int? CanhxMpxcptHccApplyInd { get; set; }
-        public int? CanhxMpxcptHccApproveInd { get; set; }
+        public float? CanhxMpxcptHccApplyInd { get; set; }
+        public float? CanhxMpxcptHccApproveInd { get; set; }
         public string CanAbo { get; set; }
-        public int? CanAgeAtListing { get; set; }
-        public int? CanAgeInMonthsAtListing { get; set; }
-        public int? CanAngina { get; set; }
-        public int? CanAnginaCad { get; set; }
+        public decimal? CanAgeAtListing { get; set; }
+        public float? CanAgeInMonthsAtListing { get; set; }
+        public decimal? CanAngina { get; set; }
+        public decimal? CanAnginaCad { get; set; }
         public string CanBacteriaPerit { get; set; }
         public string CanCerebVasc { get; set; }
-        public int? CanCitizenship { get; set; }
-        public int? CanDgn { get; set; }
-        public int? CanDgn2 { get; set; }
-        public int? CanDiab { get; set; }
-        public int? CanDiabTy { get; set; }
+        public decimal? CanCitizenship { get; set; }
+        public decimal? CanDgn { get; set; }
+        public decimal? CanDgn2 { get; set; }
+        public decimal? CanDiab { get; set; }
+        public decimal? CanDiabTy { get; set; }
         public string CanDrugTreatCopd { get; set; }
         public string CanDrugTreatHyperten { get; set; }
-        public int? CanEducation { get; set; }
+        public decimal? CanEducation { get; set; }
         public string CanEthnicitySrtr { get; set; }
         public string CanGender { get; set; }
-        public int? CanHgtCm { get; set; }
-        public int? CanInitActStatCd { get; set; }
-        public int? CanInitActStatDt { get; set; }
-        public int? CanInitInactStatDt { get; set; }
-        public int? CanInitSrtrLabMeld { get; set; }
+        public float? CanHgtCm { get; set; }
+        public decimal? CanInitActStatCd { get; set; }
+        public DateTime? CanInitActStatDt { get; set; }
+        public DateTime? CanInitInactStatDt { get; set; }
+        public decimal? CanInitSrtrLabMeld { get; set; }
         public string CanInitSrtrLabMeldTy { get; set; }
-        public int? CanInitStat { get; set; }
-        public int? CanLastActStatDt { get; set; }
-        public int? CanLastAlbumin { get; set; }
-        public int? CanLastAscites { get; set; }
-        public int? CanLastBili { get; set; }
+        public decimal? CanInitStat { get; set; }
+        public DateTime? CanLastActStatDt { get; set; }
+        public float? CanLastAlbumin { get; set; }
+        public decimal? CanLastAscites { get; set; }
+        public float? CanLastBili { get; set; }
         public string CanLastDialPriorWeek { get; set; }
-        public int? CanLastEnceph { get; set; }
-        public int? CanLastInactStatDt { get; set; }
-        public int? CanLastInr { get; set; }
-        public int? CanLastSerumCreat { get; set; }
-        public int? CanLastSerumSodium { get; set; }
-        public int? CanLastSrtrLabMeld { get; set; }
+        public decimal? CanLastEnceph { get; set; }
+        public DateTime? CanLastInactStatDt { get; set; }
+        public float? CanLastInr { get; set; }
+        public float? CanLastSerumCreat { get; set; }
+        public float? CanLastSerumSodium { get; set; }
+        public decimal? CanLastSrtrLabMeld { get; set; }
         public string CanLastSrtrLabMeldTy { get; set; }
-        public int? CanLastStat { get; set; }
-        public int? CanListingDt { get; set; }
+        public decimal? CanLastStat { get; set; }
+        public DateTime? CanListingDt { get; set; }
         public string CanMalig { get; set; }
-        public int? CanPepticUlcer { get; set; }
+        public decimal? CanPepticUlcer { get; set; }
         public string CanPeriphVasc { get; set; }
         public string CanPortalVein { get; set; }
         public string CanPrevAbdomSurg { get; set; }
-        public int? CanPrevHl { get; set; }
-        public int? CanPrevHr { get; set; }
-        public int? CanPrevIn { get; set; }
-        public int? CanPrevKi { get; set; }
-        public int? CanPrevKp { get; set; }
-        public int? CanPrevLi { get; set; }
-        public int? CanPrevLu { get; set; }
-        public int? CanPrevPa { get; set; }
-        public int? CanPrevTx { get; set; }
+        public float? CanPrevHl { get; set; }
+        public float? CanPrevHr { get; set; }
+        public float? CanPrevIn { get; set; }
+        public float? CanPrevKi { get; set; }
+        public float? CanPrevKp { get; set; }
+        public float? CanPrevLi { get; set; }
+        public float? CanPrevLu { get; set; }
+        public float? CanPrevPa { get; set; }
+        public float? CanPrevTx { get; set; }
         public string CanPrevTxfus { get; set; }
         public string CanPulmEmbol { get; set; }
-        public int? CanRace { get; set; }
+        public decimal? CanRace { get; set; }
         public string CanRaceSrtr { get; set; }
-        public int? CanRemCd { get; set; }
+        public decimal? CanRemCd { get; set; }
         public string CanSource { get; set; }
         public string CanTipss { get; set; }
-        public int? CanTotAlbumin { get; set; }
-        public int? CanWgtKg { get; set; }
-        public int? DonorId { get; set; }
-        public int? DonorIdVessel { get; set; }
-        public int? DonA1 { get; set; }
-        public int? DonA2 { get; set; }
+        public float? CanTotAlbumin { get; set; }
+        public float? CanWgtKg { get; set; }
+        public decimal? DonorId { get; set; }
+        public float? DonorIdVessel { get; set; }
+        public decimal? DonA1 { get; set; }
+        public decimal? DonA2 { get; set; }
         public string DonAbo { get; set; }
-        public int? DonAge { get; set; }
-        public int? DonAgeInMonths { get; set; }
+        public float? DonAge { get; set; }
+        public float? DonAgeInMonths { get; set; }
         public string DonAntiCmv { get; set; }
         public string DonAntiHcv { get; set; }
-        public int? DonB1 { get; set; }
-        public int? DonB2 { get; set; }
-        public int? DonCadDonCod { get; set; }
+        public decimal? DonB1 { get; set; }
+        public decimal? DonB2 { get; set; }
+        public decimal? DonCadDonCod { get; set; }
         public string DonCardiacArrestAfterDeath { get; set; }
-        public int? DonCitizenship { get; set; }
+        public decimal? DonCitizenship { get; set; }
         public string DonCmvIgg { get; set; }
-        public int? DonCodDonStroke { get; set; }
+        public float? DonCodDonStroke { get; set; }
         public string DonContCigarette { get; set; }
         public string DonContCocaine { get; set; }
         public string DonContIvDrug { get; set; }
         public string DonContOtherDrug { get; set; }
-        public int? DonCreat { get; set; }
+        public float? DonCreat { get; set; }
         public string DonDdavp { get; set; }
-        public int? DonDeathCircum { get; set; }
-        public int? DonDeathMech { get; set; }
+        public decimal? DonDeathCircum { get; set; }
+        public decimal? DonDeathMech { get; set; }
         public string DonDobutamine { get; set; }
         public string DonDopamine { get; set; }
-        public int? DonDr1 { get; set; }
-        public int? DonDr2 { get; set; }
+        public decimal? DonDr1 { get; set; }
+        public decimal? DonDr2 { get; set; }
         public string DonEthnicitySrtr { get; set; }
-        public int? DonExpandDonKi { get; set; }
+        public float? DonExpandDonKi { get; set; }
         public string DonGender { get; set; }
-        public int? DonHaploTyMatch { get; set; }
-        public int? DonHgtCm { get; set; }
-        public int? DonHighCreat { get; set; }
-        public int? DonHistCancer { get; set; }
+        public decimal? DonHaploTyMatch { get; set; }
+        public float? DonHgtCm { get; set; }
+        public float? DonHighCreat { get; set; }
+        public decimal? DonHistCancer { get; set; }
         public string DonHistCigaretteGt20Pkyr { get; set; }
         public string DonHistCocaine { get; set; }
-        public int? DonHistDiab { get; set; }
-        public int? DonHistHyperten { get; set; }
+        public decimal? DonHistDiab { get; set; }
+        public decimal? DonHistHyperten { get; set; }
         public string DonHistIvDrug { get; set; }
         public string DonHistOtherDrug { get; set; }
-        public int? DonHtn { get; set; }
+        public float? DonHtn { get; set; }
         public string DonInotropAgentGe3 { get; set; }
         public string DonInotropSupport { get; set; }
         public string DonInsulin { get; set; }
-        public int? DonLivingDonCod { get; set; }
+        public decimal? DonLivingDonCod { get; set; }
         public string DonLiBiopsy { get; set; }
         public string DonMeetCdcHighRisk { get; set; }
         public string DonNonHrBeat { get; set; }
-        public int? DonOpoCtrId { get; set; }
-        public int? DonOrgShared { get; set; }
-        public int? DonPh { get; set; }
+        public decimal? DonOpoCtrId { get; set; }
+        public float? DonOrgShared { get; set; }
+        public float? DonPh { get; set; }
         public string DonPrerecovDiuretics { get; set; }
-        public int? DonRace { get; set; }
+        public decimal? DonRace { get; set; }
         public string DonRaceSrtr { get; set; }
-        public int? DonRecovDt { get; set; }
-        public int? DonRelationshipTy { get; set; }
-        public int? DonSgot { get; set; }
-        public int? DonSgotPreop { get; set; }
-        public int? DonSgptPreop { get; set; }
+        public DateTime? DonRecovDt { get; set; }
+        public decimal? DonRelationshipTy { get; set; }
+        public float? DonSgot { get; set; }
+        public float? DonSgotPreop { get; set; }
+        public float? DonSgptPreop { get; set; }
         public string DonTy { get; set; }
-        public int? DonWarmIschTmMins { get; set; }
-        public int? DonWgtKg { get; set; }
+        public float? DonWarmIschTmMins { get; set; }
+        public float? DonWgtKg { get; set; }
         public string OrgAr { get; set; }
         public string OrgTy { get; set; }
-        public int? PersId { get; set; }
-        public int? PersOptnCod { get; set; }
-        public int? PersOptnDeathDt { get; set; }
-        public int? PersRelist { get; set; }
-        public int? PersRestrictDeathDt { get; set; }
+        public decimal? PersId { get; set; }
+        public decimal? PersOptnCod { get; set; }
+        public DateTime? PersOptnDeathDt { get; set; }
+        public DateTime? PersRelist { get; set; }
+        public DateTime? PersRestrictDeathDt { get; set; }
         public string PersRestrictDeathVrfy { get; set; }
-        public int? PersRetx { get; set; }
-        public int? PersRetxTrrId { get; set; }
-        public int? PersSsaDeathDt { get; set; }
-        public int? PxId { get; set; }
-        public int? RecA1 { get; set; }
-        public int? RecA2 { get; set; }
-        public int? RecAcademicLevel { get; set; }
-        public int? RecAcademicProgress { get; set; }
-        public int? RecAcuteRejBiopsyConfirmed { get; set; }
-        public int? RecAcuteRejEpisode { get; set; }
-        public int? RecAdmissionDt { get; set; }
-        public int? RecAgeAtTx { get; set; }
-        public int? RecAgeInMonthsAtTx { get; set; }
+        public DateTime? PersRetx { get; set; }
+        public decimal? PersRetxTrrId { get; set; }
+        public DateTime? PersSsaDeathDt { get; set; }
+        public decimal? PxId { get; set; }
+        public decimal? RecA1 { get; set; }
+        public decimal? RecA2 { get; set; }
+        public decimal? RecAcademicLevel { get; set; }
+        public decimal? RecAcademicProgress { get; set; }
+        public decimal? RecAcuteRejBiopsyConfirmed { get; set; }
+        public decimal? RecAcuteRejEpisode { get; set; }
+        public DateTime? RecAdmissionDt { get; set; }
+        public decimal? RecAgeAtTx { get; set; }
+        public float? RecAgeInMonthsAtTx { get; set; }
         public string RecAntivrlTherapy { get; set; }
-        public int? RecAntivrlTherapyTy { get; set; }
-        public int? RecAntivrlTherapyTyAcyclovir { get; set; }
-        public int? RecAntivrlTherapyTyCytogam { get; set; }
-        public int? RecAntivrlTherapyTyCytovene { get; set; }
-        public int? RecAntivrlTherapyTyEpivir { get; set; }
-        public int? RecAntivrlTherapyTyFluVac { get; set; }
-        public int? RecAntivrlTherapyTyGamimune { get; set; }
-        public int? RecAntivrlTherapyTyGammagard { get; set; }
-        public int? RecAntivrlTherapyTyHbig { get; set; }
-        public int? RecAntivrlTherapyTyOther { get; set; }
-        public int? RecAntivrlTherapyTyValcyte { get; set; }
-        public int? RecAntivrlTherapyTyValtrex { get; set; }
-        public int? RecArtificialLi { get; set; }
+        public decimal? RecAntivrlTherapyTy { get; set; }
+        public float? RecAntivrlTherapyTyAcyclovir { get; set; }
+        public float? RecAntivrlTherapyTyCytogam { get; set; }
+        public float? RecAntivrlTherapyTyCytovene { get; set; }
+        public float? RecAntivrlTherapyTyEpivir { get; set; }
+        public float? RecAntivrlTherapyTyFluVac { get; set; }
+        public float? RecAntivrlTherapyTyGamimune { get; set; }
+        public float? RecAntivrlTherapyTyGammagard { get; set; }
+        public float? RecAntivrlTherapyTyHbig { get; set; }
+        public float? RecAntivrlTherapyTyOther { get; set; }
+        public float? RecAntivrlTherapyTyValcyte { get; set; }
+        public float? RecAntivrlTherapyTyValtrex { get; set; }
+        public float? RecArtificialLi { get; set; }
         public string RecAscites { get; set; }
-        public int? RecAMmEquivCur { get; set; }
-        public int? RecAMmEquivTx { get; set; }
-        public int? RecB1 { get; set; }
-        public int? RecB2 { get; set; }
+        public float? RecAMmEquivCur { get; set; }
+        public float? RecAMmEquivTx { get; set; }
+        public decimal? RecB1 { get; set; }
+        public decimal? RecB2 { get; set; }
         public string RecBacteriaPerit { get; set; }
-        public int? RecBmi { get; set; }
-        public int? RecBMmEquivCur { get; set; }
-        public int? RecBMmEquivTx { get; set; }
+        public float? RecBmi { get; set; }
+        public float? RecBMmEquivCur { get; set; }
+        public float? RecBMmEquivTx { get; set; }
         public string RecCmvIgg { get; set; }
         public string RecCmvIgm { get; set; }
         public string RecCmvStat { get; set; }
-        public int? RecCod { get; set; }
-        public int? RecCod2 { get; set; }
-        public int? RecCod3 { get; set; }
-        public int? RecCognitiveDevelop { get; set; }
-        public int? RecColdIschTm { get; set; }
-        public int? RecCtrId { get; set; }
-        public int? RecCurCtrId { get; set; }
+        public decimal? RecCod { get; set; }
+        public decimal? RecCod2 { get; set; }
+        public decimal? RecCod3 { get; set; }
+        public decimal? RecCognitiveDevelop { get; set; }
+        public float? RecColdIschTm { get; set; }
+        public decimal? RecCtrId { get; set; }
+        public decimal? RecCurCtrId { get; set; }
         public string RecCurPxStat { get; set; }
-        public int? RecDgn { get; set; }
-        public int? RecDgn2 { get; set; }
+        public decimal? RecDgn { get; set; }
+        public decimal? RecDgn2 { get; set; }
         public string RecDgnOstxt { get; set; }
-        public int? RecDischrgAlbumin { get; set; }
-        public int? RecDischrgAlkphos { get; set; }
-        public int? RecDischrgCreat { get; set; }
-        public int? RecDischrgDt { get; set; }
-        public int? RecDischrgInr { get; set; }
-        public int? RecDischrgLabDt { get; set; }
-        public int? RecDischrgSgot { get; set; }
-        public int? RecDischrgSgpt { get; set; }
-        public int? RecDr1 { get; set; }
-        public int? RecDr2 { get; set; }
-        public int? RecDrMmEquivCur { get; set; }
-        public int? RecDrMmEquivTx { get; set; }
+        public float? RecDischrgAlbumin { get; set; }
+        public float? RecDischrgAlkphos { get; set; }
+        public float? RecDischrgCreat { get; set; }
+        public DateTime? RecDischrgDt { get; set; }
+        public float? RecDischrgInr { get; set; }
+        public DateTime? RecDischrgLabDt { get; set; }
+        public float? RecDischrgSgot { get; set; }
+        public float? RecDischrgSgpt { get; set; }
+        public decimal? RecDr1 { get; set; }
+        public decimal? RecDr2 { get; set; }
+        public float? RecDrMmEquivCur { get; set; }
+        public float? RecDrMmEquivTx { get; set; }
         public string RecEbvStat { get; set; }
-        public int? RecEmplStatPre04 { get; set; }
+        public decimal? RecEmplStatPre04 { get; set; }
         public string RecFailBiliary { get; set; }
-        public int? RecFailDt { get; set; }
+        public DateTime? RecFailDt { get; set; }
         public string RecFailHepDenovo { get; set; }
         public string RecFailHepRecur { get; set; }
         public string RecFailInfect { get; set; }
@@ -219,120 +212,107 @@ namespace csc424_se2_organApp.Models
         public string RecFailRecurDisease { get; set; }
         public string RecFailRejAcute { get; set; }
         public string RecFailVascThromb { get; set; }
-        public int? RecFunctnStat { get; set; }
+        public decimal? RecFunctnStat { get; set; }
         public string RecGraftStat { get; set; }
         public string RecHbvAntibody { get; set; }
         public string RecHbvSurfAntigen { get; set; }
         public string RecHcvStat { get; set; }
         public string RecHepaticArterThromb { get; set; }
         public string RecHepaticOutflowObstruct { get; set; }
-        public int? RecHgtCm { get; set; }
-        public int? RecHgtWgtDt { get; set; }
-        public int? RecHistoTxId { get; set; }
+        public float? RecHgtCm { get; set; }
+        public DateTime? RecHgtWgtDt { get; set; }
+        public decimal? RecHistoTxId { get; set; }
         public string RecHivStat { get; set; }
         public string RecHosp90Days { get; set; }
         public string RecImmunoMaintMeds { get; set; }
         public string RecInotropBpSupport { get; set; }
         public string RecLifeSupport { get; set; }
-        public int? RecLifeSupportOther { get; set; }
-        public int? RecLiTy { get; set; }
+        public float? RecLifeSupportOther { get; set; }
+        public decimal? RecLiTy { get; set; }
         public string RecMalig { get; set; }
-        public int? RecMaligTy { get; set; }
-        public int? RecMaligTyBreast { get; set; }
-        public int? RecMaligTyCnsTumor { get; set; }
-        public int? RecMaligTyGenitourinary { get; set; }
-        public int? RecMaligTyHepblast { get; set; }
-        public int? RecMaligTyHepcarcinoma { get; set; }
-        public int? RecMaligTyLeukLymph { get; set; }
-        public int? RecMaligTyLiver { get; set; }
-        public int? RecMaligTyLu { get; set; }
-        public int? RecMaligTyOther { get; set; }
-        public int? RecMaligTySkinMel { get; set; }
-        public int? RecMaligTySkinNonMel { get; set; }
-        public int? RecMaligTyThroat { get; set; }
-        public int? RecMaligTyThyroid { get; set; }
-        public int? RecMaligTyUnk { get; set; }
-        public int? RecMedCond { get; set; }
-        public int? RecMmEquivCur { get; set; }
-        public int? RecMmEquivTx { get; set; }
-        public int? RecMotorDevelop { get; set; }
+        public decimal? RecMaligTy { get; set; }
+        public float? RecMaligTyBreast { get; set; }
+        public float? RecMaligTyCnsTumor { get; set; }
+        public float? RecMaligTyGenitourinary { get; set; }
+        public float? RecMaligTyHepblast { get; set; }
+        public float? RecMaligTyHepcarcinoma { get; set; }
+        public float? RecMaligTyLeukLymph { get; set; }
+        public float? RecMaligTyLiver { get; set; }
+        public float? RecMaligTyLu { get; set; }
+        public float? RecMaligTyOther { get; set; }
+        public float? RecMaligTySkinMel { get; set; }
+        public float? RecMaligTySkinNonMel { get; set; }
+        public float? RecMaligTyThroat { get; set; }
+        public float? RecMaligTyThyroid { get; set; }
+        public float? RecMaligTyUnk { get; set; }
+        public decimal? RecMedCond { get; set; }
+        public float? RecMmEquivCur { get; set; }
+        public float? RecMmEquivTx { get; set; }
+        public decimal? RecMotorDevelop { get; set; }
         public string RecOnVentilator { get; set; }
-        public int? RecOpoId { get; set; }
+        public decimal? RecOpoId { get; set; }
         public string RecOtherTherapy { get; set; }
-        public int? RecOtherTherapyTy { get; set; }
-        public int? RecOtherTherapyTyPhotoph { get; set; }
-        public int? RecOtherTherapyTyPlasmaph { get; set; }
-        public int? RecOtherTherapyTyTli { get; set; }
+        public decimal? RecOtherTherapyTy { get; set; }
+        public float? RecOtherTherapyTyPhotoph { get; set; }
+        public float? RecOtherTherapyTyPlasmaph { get; set; }
+        public float? RecOtherTherapyTyTli { get; set; }
         public string RecPbCredit { get; set; }
         public string RecPbDebt { get; set; }
-        public int? RecPbShareTy { get; set; }
+        public decimal? RecPbShareTy { get; set; }
         public string RecPermState { get; set; }
-        public int? RecPhyscCapacity { get; set; }
+        public decimal? RecPhyscCapacity { get; set; }
         public string RecPortalHypertenBleed { get; set; }
         public string RecPortalVein { get; set; }
         public string RecPortalVeinThromb { get; set; }
-        public int? RecPostxLos { get; set; }
-        public int? RecPretxAlbumin { get; set; }
-        public int? RecPretxCreat { get; set; }
-        public int? RecPretxInr { get; set; }
-        public int? RecPretxLabDt { get; set; }
-        public int? RecPretxTotBili { get; set; }
+        public float? RecPostxLos { get; set; }
+        public float? RecPretxAlbumin { get; set; }
+        public float? RecPretxCreat { get; set; }
+        public float? RecPretxInr { get; set; }
+        public DateTime? RecPretxLabDt { get; set; }
+        public float? RecPretxTotBili { get; set; }
         public string RecPrevAbdomSurg { get; set; }
-        public int? RecPrevHl { get; set; }
-        public int? RecPrevHr { get; set; }
-        public int? RecPrevIn { get; set; }
-        public int? RecPrevKi { get; set; }
-        public int? RecPrevKp { get; set; }
-        public int? RecPrevLi { get; set; }
-        public int? RecPrevLu { get; set; }
+        public float? RecPrevHl { get; set; }
+        public float? RecPrevHr { get; set; }
+        public float? RecPrevIn { get; set; }
+        public float? RecPrevKi { get; set; }
+        public float? RecPrevKp { get; set; }
+        public float? RecPrevLi { get; set; }
+        public float? RecPrevLu { get; set; }
         public string RecPrevNonfunctnTx { get; set; }
-        public int? RecPrevPa { get; set; }
-        public int? RecPrimaryPay { get; set; }
+        public float? RecPrevPa { get; set; }
+        public decimal? RecPrimaryPay { get; set; }
         public string RecProcedureTyLi { get; set; }
         public string RecPxResearch { get; set; }
         public string RecPxStat { get; set; }
-        public int? RecPxStatDt { get; set; }
-        public int? RecSecondaryPay { get; set; }
-        public int? RecSgpt { get; set; }
+        public DateTime? RecPxStatDt { get; set; }
+        public decimal? RecSecondaryPay { get; set; }
+        public float? RecSgpt { get; set; }
         public string RecTipss { get; set; }
         public string RecToleranceInductionTech { get; set; }
         public string RecTumor { get; set; }
-        public int? RecTumorTy { get; set; }
-        public int? RecTxferCtrId { get; set; }
-        public int? RecTxferDt { get; set; }
-        public int? RecTxDt { get; set; }
+        public decimal? RecTumorTy { get; set; }
+        public decimal? RecTxferCtrId { get; set; }
+        public DateTime? RecTxferDt { get; set; }
+        public DateTime? RecTxDt { get; set; }
         public string RecTxExtraVessel { get; set; }
         public string RecTxOrgTy { get; set; }
-        public int? RecTxProcedureTy { get; set; }
-        public int? RecTxTy { get; set; }
+        public decimal? RecTxProcedureTy { get; set; }
+        public decimal? RecTxTy { get; set; }
         public string RecValcyte { get; set; }
         public string RecVaricealBleeding { get; set; }
-        public int? RecVentilator { get; set; }
-        public int? RecWarmIschTm { get; set; }
-        public int? RecWgtKg { get; set; }
+        public float? RecVentilator { get; set; }
+        public float? RecWarmIschTm { get; set; }
+        public float? RecWgtKg { get; set; }
         public string RecWorkIncome { get; set; }
-        public int? RecWorkNoStat { get; set; }
-        public int? RecWorkYesStat { get; set; }
-        public int? TflCod { get; set; }
-        public int? TflDeathDt { get; set; }
-        public int? TflEndtxfu { get; set; }
-        public int? TflGraftDt { get; set; }
-        public int? TflLafudate { get; set; }
+        public decimal? RecWorkNoStat { get; set; }
+        public decimal? RecWorkYesStat { get; set; }
+        public decimal? TflCod { get; set; }
+        public DateTime? TflDeathDt { get; set; }
+        public DateTime? TflEndtxfu { get; set; }
+        public DateTime? TflGraftDt { get; set; }
+        public DateTime? TflLafudate { get; set; }
         public string TflLastatus { get; set; }
-        public int TrrId { get; set; }
-        public int TxId { get; set; }
-
-        public virtual Institution DonOpoCtr { get; set; }
-        public virtual Donor Donor { get; set; }
-        public virtual CandLiin Px { get; set; }
-        public virtual Institution RecCtr { get; set; }
-        public virtual Institution RecCurCtr { get; set; }
-        public virtual Institution RecTxferCtr { get; set; }
-        public virtual Immuno Immuno { get; set; }
-        public virtual RecHisto RecHisto { get; set; }
-        public virtual RecHistoXmat RecHistoXmat { get; set; }
-        public virtual ICollection<FolImmuno> FolImmuno { get; set; }
-        public virtual ICollection<TxfLi> TxfLiTrr { get; set; }
-        public virtual ICollection<TxfLi> TxfLiTx { get; set; }
+        public decimal TrrId { get; set; }
+        public decimal TxId { get; set; }
     }
 }
