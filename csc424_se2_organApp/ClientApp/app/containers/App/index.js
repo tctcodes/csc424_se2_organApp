@@ -15,12 +15,14 @@ import SignUpPage from "containers/SignUpPage/Loadable";
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 import GlobalStyle from '../../global-styles';
+import LoginPage from 'containers/LoginPage/Loadable';
 
 export default function App() {
   return <div>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/signup" component={SignUpPage} />
+        <Route path="/login" component={LoginPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
