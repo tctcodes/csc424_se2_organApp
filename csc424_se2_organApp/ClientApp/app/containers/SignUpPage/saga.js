@@ -16,6 +16,7 @@ export function* addUser() {
     }
     axios.post("http://localhost:5000/api/AddUser",body,headers)
     .then(res => console.log(res))
+    .then(yield put(push('/login')))
     .catch(err=>alert(err.response.data.error));
   } catch (err) {
     alert(err);
