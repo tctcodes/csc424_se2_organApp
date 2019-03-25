@@ -11,7 +11,7 @@ namespace csc424_se2_organApp.Controllers
 {
     using BCrypt = BCrypt.Net.BCrypt;
     
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : Controller{
 
@@ -22,7 +22,6 @@ namespace csc424_se2_organApp.Controllers
         {             
             context = _context;       
         }
-        
         
         [HttpPost]
         public JsonResult NewUser([FromBody]Users user){
@@ -43,10 +42,6 @@ namespace csc424_se2_organApp.Controllers
         public JsonResult AuthUser([FromBody]Users user){
             
             var isInDb = context.Users.Find(user.Email);
-            if(isInDb != null){
-                Response.StatusCode = 422;
-                return Json(new {error="User Already Exists"}); 
-            }
             user.Password = BCrypt.HashPassword(user.Password);
             context.Users.Add(user);
             context.SaveChanges(); 
