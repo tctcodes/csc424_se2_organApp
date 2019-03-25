@@ -16,8 +16,9 @@ export function* login() {
   let headers = {
     'Content-Type': 'application/json',
   }
-  //axios.post("http://localhost:5000/api/Login",body,headers)
-  console.log(body)
+  axios.post("http://localhost:5000/api/User/AuthUser",body,headers)
+  .then(res => console.log(res))
+  
 }
 
 /**
