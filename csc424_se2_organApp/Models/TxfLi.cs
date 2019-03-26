@@ -18,22 +18,22 @@ namespace csc424_se2_organApp.Models
         public decimal? TflAcademicProgress { get; set; }
         public decimal? TflAcuteRejBiopsyConfirmed { get; set; }
         public decimal? TflAcuteRejEpisode { get; set; }
-        public float? TflAlbumin { get; set; }
-        public float? TflAlkphos { get; set; }
+        public double? TflAlbumin { get; set; }
+        public double? TflAlkphos { get; set; }
         public string TflAntivrlTherapy { get; set; }
         public decimal? TflAntivrlTherapyTy { get; set; }
-        public float? TflAntivrlTherapyTyAcyclovir { get; set; }
-        public float? TflAntivrlTherapyTyCytogam { get; set; }
-        public float? TflAntivrlTherapyTyCytovene { get; set; }
-        public float? TflAntivrlTherapyTyEpivir { get; set; }
-        public float? TflAntivrlTherapyTyFluVac { get; set; }
-        public float? TflAntivrlTherapyTyGamimune { get; set; }
-        public float? TflAntivrlTherapyTyGammagard { get; set; }
-        public float? TflAntivrlTherapyTyHbig { get; set; }
-        public float? TflAntivrlTherapyTyOther { get; set; }
-        public float? TflAntivrlTherapyTyValcyte { get; set; }
-        public float? TflAntivrlTherapyTyValtrex { get; set; }
-        public float? TflBmi { get; set; }
+        public decimal? TflAntivrlTherapyTyAcyclovir { get; set; }
+        public decimal? TflAntivrlTherapyTyCytogam { get; set; }
+        public decimal? TflAntivrlTherapyTyCytovene { get; set; }
+        public decimal? TflAntivrlTherapyTyEpivir { get; set; }
+        public decimal? TflAntivrlTherapyTyFluVac { get; set; }
+        public decimal? TflAntivrlTherapyTyGamimune { get; set; }
+        public decimal? TflAntivrlTherapyTyGammagard { get; set; }
+        public decimal? TflAntivrlTherapyTyHbig { get; set; }
+        public decimal? TflAntivrlTherapyTyOther { get; set; }
+        public decimal? TflAntivrlTherapyTyValcyte { get; set; }
+        public decimal? TflAntivrlTherapyTyValtrex { get; set; }
+        public double? TflBmi { get; set; }
         public string TflCad { get; set; }
         public decimal? TflCareProvBy { get; set; }
         public string TflCmvIgg { get; set; }
@@ -42,7 +42,7 @@ namespace csc424_se2_organApp.Models
         public decimal? TflCod2 { get; set; }
         public decimal? TflCod3 { get; set; }
         public decimal? TflCognitiveDevelop { get; set; }
-        public float? TflCreat { get; set; }
+        public double? TflCreat { get; set; }
         public string TflDiabDuringFol { get; set; }
         public decimal? TflEmplStatPre04 { get; set; }
         public string TflFailBiliary { get; set; }
@@ -61,13 +61,13 @@ namespace csc424_se2_organApp.Models
         public string TflGraftStat { get; set; }
         public string TflHepaticArterThromb { get; set; }
         public string TflHepaticOutflowObstruct { get; set; }
-        public float? TflHgtCm { get; set; }
+        public double? TflHgtCm { get; set; }
         public DateTime? TflHgtWgtDt { get; set; }
         public string TflHosp { get; set; }
-        public float? TflHospNum { get; set; }
+        public double? TflHospNum { get; set; }
         public string TflImmunoDiscont { get; set; }
         public decimal? TflImmunoMaintMeds { get; set; }
-        public float? TflInr { get; set; }
+        public double? TflInr { get; set; }
         public string TflInsulinDepnd { get; set; }
         public DateTime? TflLabDt { get; set; }
         public string TflMalig { get; set; }
@@ -78,9 +78,9 @@ namespace csc424_se2_organApp.Models
         public decimal? TflMotorDevelop { get; set; }
         public string TflOtherTherapy { get; set; }
         public decimal? TflOtherTherapyTy { get; set; }
-        public float? TflOtherTherapyTyPhotoph { get; set; }
-        public float? TflOtherTherapyTyPlasmaph { get; set; }
-        public float? TflOtherTherapyTyTli { get; set; }
+        public decimal? TflOtherTherapyTyPhotoph { get; set; }
+        public decimal? TflOtherTherapyTyPlasmaph { get; set; }
+        public decimal? TflOtherTherapyTyTli { get; set; }
         public string TflPermState { get; set; }
         public decimal? TflPhyscCapacity { get; set; }
         public string TflPortalVeinThromb { get; set; }
@@ -89,13 +89,13 @@ namespace csc424_se2_organApp.Models
         public string TflPxResearch { get; set; }
         public string TflPxStat { get; set; }
         public DateTime? TflPxStatDt { get; set; }
-        public float? TflRejEventNum { get; set; }
+        public double? TflRejEventNum { get; set; }
         public string TflRejTreat { get; set; }
-        public float? TflSgot { get; set; }
-        public float? TflSgpt { get; set; }
-        public float? TflTotBili { get; set; }
+        public double? TflSgot { get; set; }
+        public double? TflSgpt { get; set; }
+        public double? TflTotBili { get; set; }
         public DateTime? TflTxferDt { get; set; }
-        public float? TflWgtKg { get; set; }
+        public double? TflWgtKg { get; set; }
         public string TflWorkIncome { get; set; }
         public decimal? TflWorkNoStat { get; set; }
         public decimal? TflWorkYesStat { get; set; }

@@ -5,11 +5,11 @@ namespace csc424_se2_organApp.Models
 {
     public partial class TxLi
     {
-        public float? CanhxMpxcptHccApplyInd { get; set; }
-        public float? CanhxMpxcptHccApproveInd { get; set; }
+        public double? CanhxMpxcptHccApplyInd { get; set; }
+        public double? CanhxMpxcptHccApproveInd { get; set; }
         public string CanAbo { get; set; }
         public decimal? CanAgeAtListing { get; set; }
-        public float? CanAgeInMonthsAtListing { get; set; }
+        public double? CanAgeInMonthsAtListing { get; set; }
         public decimal? CanAngina { get; set; }
         public decimal? CanAnginaCad { get; set; }
         public string CanBacteriaPerit { get; set; }
@@ -24,7 +24,7 @@ namespace csc424_se2_organApp.Models
         public decimal? CanEducation { get; set; }
         public string CanEthnicitySrtr { get; set; }
         public string CanGender { get; set; }
-        public float? CanHgtCm { get; set; }
+        public double? CanHgtCm { get; set; }
         public decimal? CanInitActStatCd { get; set; }
         public DateTime? CanInitActStatDt { get; set; }
         public DateTime? CanInitInactStatDt { get; set; }
@@ -32,15 +32,15 @@ namespace csc424_se2_organApp.Models
         public string CanInitSrtrLabMeldTy { get; set; }
         public decimal? CanInitStat { get; set; }
         public DateTime? CanLastActStatDt { get; set; }
-        public float? CanLastAlbumin { get; set; }
+        public double? CanLastAlbumin { get; set; }
         public decimal? CanLastAscites { get; set; }
-        public float? CanLastBili { get; set; }
+        public double? CanLastBili { get; set; }
         public string CanLastDialPriorWeek { get; set; }
         public decimal? CanLastEnceph { get; set; }
         public DateTime? CanLastInactStatDt { get; set; }
-        public float? CanLastInr { get; set; }
-        public float? CanLastSerumCreat { get; set; }
-        public float? CanLastSerumSodium { get; set; }
+        public double? CanLastInr { get; set; }
+        public double? CanLastSerumCreat { get; set; }
+        public double? CanLastSerumSodium { get; set; }
         public decimal? CanLastSrtrLabMeld { get; set; }
         public string CanLastSrtrLabMeldTy { get; set; }
         public decimal? CanLastStat { get; set; }
@@ -50,15 +50,15 @@ namespace csc424_se2_organApp.Models
         public string CanPeriphVasc { get; set; }
         public string CanPortalVein { get; set; }
         public string CanPrevAbdomSurg { get; set; }
-        public float? CanPrevHl { get; set; }
-        public float? CanPrevHr { get; set; }
-        public float? CanPrevIn { get; set; }
-        public float? CanPrevKi { get; set; }
-        public float? CanPrevKp { get; set; }
-        public float? CanPrevLi { get; set; }
-        public float? CanPrevLu { get; set; }
-        public float? CanPrevPa { get; set; }
-        public float? CanPrevTx { get; set; }
+        public double? CanPrevHl { get; set; }
+        public double? CanPrevHr { get; set; }
+        public double? CanPrevIn { get; set; }
+        public double? CanPrevKi { get; set; }
+        public double? CanPrevKp { get; set; }
+        public double? CanPrevLi { get; set; }
+        public double? CanPrevLu { get; set; }
+        public double? CanPrevPa { get; set; }
+        public double? CanPrevTx { get; set; }
         public string CanPrevTxfus { get; set; }
         public string CanPulmEmbol { get; set; }
         public decimal? CanRace { get; set; }
@@ -66,15 +66,15 @@ namespace csc424_se2_organApp.Models
         public decimal? CanRemCd { get; set; }
         public string CanSource { get; set; }
         public string CanTipss { get; set; }
-        public float? CanTotAlbumin { get; set; }
-        public float? CanWgtKg { get; set; }
+        public double? CanTotAlbumin { get; set; }
+        public double? CanWgtKg { get; set; }
         public decimal? DonorId { get; set; }
-        public float? DonorIdVessel { get; set; }
+        public double? DonorIdVessel { get; set; }
         public decimal? DonA1 { get; set; }
         public decimal? DonA2 { get; set; }
         public string DonAbo { get; set; }
-        public float? DonAge { get; set; }
-        public float? DonAgeInMonths { get; set; }
+        public double? DonAge { get; set; }
+        public double? DonAgeInMonths { get; set; }
         public string DonAntiCmv { get; set; }
         public string DonAntiHcv { get; set; }
         public decimal? DonB1 { get; set; }
@@ -83,12 +83,12 @@ namespace csc424_se2_organApp.Models
         public string DonCardiacArrestAfterDeath { get; set; }
         public decimal? DonCitizenship { get; set; }
         public string DonCmvIgg { get; set; }
-        public float? DonCodDonStroke { get; set; }
+        public decimal? DonCodDonStroke { get; set; }
         public string DonContCigarette { get; set; }
         public string DonContCocaine { get; set; }
         public string DonContIvDrug { get; set; }
         public string DonContOtherDrug { get; set; }
-        public float? DonCreat { get; set; }
+        public double? DonCreat { get; set; }
         public string DonDdavp { get; set; }
         public decimal? DonDeathCircum { get; set; }
         public decimal? DonDeathMech { get; set; }
@@ -97,11 +97,11 @@ namespace csc424_se2_organApp.Models
         public decimal? DonDr1 { get; set; }
         public decimal? DonDr2 { get; set; }
         public string DonEthnicitySrtr { get; set; }
-        public float? DonExpandDonKi { get; set; }
+        public decimal? DonExpandDonKi { get; set; }
         public string DonGender { get; set; }
         public decimal? DonHaploTyMatch { get; set; }
-        public float? DonHgtCm { get; set; }
-        public float? DonHighCreat { get; set; }
+        public double? DonHgtCm { get; set; }
+        public decimal? DonHighCreat { get; set; }
         public decimal? DonHistCancer { get; set; }
         public string DonHistCigaretteGt20Pkyr { get; set; }
         public string DonHistCocaine { get; set; }
@@ -109,7 +109,7 @@ namespace csc424_se2_organApp.Models
         public decimal? DonHistHyperten { get; set; }
         public string DonHistIvDrug { get; set; }
         public string DonHistOtherDrug { get; set; }
-        public float? DonHtn { get; set; }
+        public decimal? DonHtn { get; set; }
         public string DonInotropAgentGe3 { get; set; }
         public string DonInotropSupport { get; set; }
         public string DonInsulin { get; set; }
@@ -118,19 +118,19 @@ namespace csc424_se2_organApp.Models
         public string DonMeetCdcHighRisk { get; set; }
         public string DonNonHrBeat { get; set; }
         public decimal? DonOpoCtrId { get; set; }
-        public float? DonOrgShared { get; set; }
-        public float? DonPh { get; set; }
+        public double? DonOrgShared { get; set; }
+        public double? DonPh { get; set; }
         public string DonPrerecovDiuretics { get; set; }
         public decimal? DonRace { get; set; }
         public string DonRaceSrtr { get; set; }
         public DateTime? DonRecovDt { get; set; }
         public decimal? DonRelationshipTy { get; set; }
-        public float? DonSgot { get; set; }
-        public float? DonSgotPreop { get; set; }
-        public float? DonSgptPreop { get; set; }
+        public double? DonSgot { get; set; }
+        public double? DonSgotPreop { get; set; }
+        public double? DonSgptPreop { get; set; }
         public string DonTy { get; set; }
-        public float? DonWarmIschTmMins { get; set; }
-        public float? DonWgtKg { get; set; }
+        public double? DonWarmIschTmMins { get; set; }
+        public double? DonWgtKg { get; set; }
         public string OrgAr { get; set; }
         public string OrgTy { get; set; }
         public decimal? PersId { get; set; }
@@ -151,30 +151,30 @@ namespace csc424_se2_organApp.Models
         public decimal? RecAcuteRejEpisode { get; set; }
         public DateTime? RecAdmissionDt { get; set; }
         public decimal? RecAgeAtTx { get; set; }
-        public float? RecAgeInMonthsAtTx { get; set; }
+        public double? RecAgeInMonthsAtTx { get; set; }
         public string RecAntivrlTherapy { get; set; }
         public decimal? RecAntivrlTherapyTy { get; set; }
-        public float? RecAntivrlTherapyTyAcyclovir { get; set; }
-        public float? RecAntivrlTherapyTyCytogam { get; set; }
-        public float? RecAntivrlTherapyTyCytovene { get; set; }
-        public float? RecAntivrlTherapyTyEpivir { get; set; }
-        public float? RecAntivrlTherapyTyFluVac { get; set; }
-        public float? RecAntivrlTherapyTyGamimune { get; set; }
-        public float? RecAntivrlTherapyTyGammagard { get; set; }
-        public float? RecAntivrlTherapyTyHbig { get; set; }
-        public float? RecAntivrlTherapyTyOther { get; set; }
-        public float? RecAntivrlTherapyTyValcyte { get; set; }
-        public float? RecAntivrlTherapyTyValtrex { get; set; }
-        public float? RecArtificialLi { get; set; }
+        public decimal? RecAntivrlTherapyTyAcyclovir { get; set; }
+        public decimal? RecAntivrlTherapyTyCytogam { get; set; }
+        public decimal? RecAntivrlTherapyTyCytovene { get; set; }
+        public decimal? RecAntivrlTherapyTyEpivir { get; set; }
+        public decimal? RecAntivrlTherapyTyFluVac { get; set; }
+        public decimal? RecAntivrlTherapyTyGamimune { get; set; }
+        public decimal? RecAntivrlTherapyTyGammagard { get; set; }
+        public decimal? RecAntivrlTherapyTyHbig { get; set; }
+        public decimal? RecAntivrlTherapyTyOther { get; set; }
+        public decimal? RecAntivrlTherapyTyValcyte { get; set; }
+        public decimal? RecAntivrlTherapyTyValtrex { get; set; }
+        public decimal? RecArtificialLi { get; set; }
         public string RecAscites { get; set; }
-        public float? RecAMmEquivCur { get; set; }
-        public float? RecAMmEquivTx { get; set; }
+        public double? RecAMmEquivCur { get; set; }
+        public double? RecAMmEquivTx { get; set; }
         public decimal? RecB1 { get; set; }
         public decimal? RecB2 { get; set; }
         public string RecBacteriaPerit { get; set; }
-        public float? RecBmi { get; set; }
-        public float? RecBMmEquivCur { get; set; }
-        public float? RecBMmEquivTx { get; set; }
+        public double? RecBmi { get; set; }
+        public double? RecBMmEquivCur { get; set; }
+        public double? RecBMmEquivTx { get; set; }
         public string RecCmvIgg { get; set; }
         public string RecCmvIgm { get; set; }
         public string RecCmvStat { get; set; }
@@ -182,25 +182,25 @@ namespace csc424_se2_organApp.Models
         public decimal? RecCod2 { get; set; }
         public decimal? RecCod3 { get; set; }
         public decimal? RecCognitiveDevelop { get; set; }
-        public float? RecColdIschTm { get; set; }
+        public double? RecColdIschTm { get; set; }
         public decimal? RecCtrId { get; set; }
         public decimal? RecCurCtrId { get; set; }
         public string RecCurPxStat { get; set; }
         public decimal? RecDgn { get; set; }
         public decimal? RecDgn2 { get; set; }
         public string RecDgnOstxt { get; set; }
-        public float? RecDischrgAlbumin { get; set; }
-        public float? RecDischrgAlkphos { get; set; }
-        public float? RecDischrgCreat { get; set; }
+        public double? RecDischrgAlbumin { get; set; }
+        public double? RecDischrgAlkphos { get; set; }
+        public double? RecDischrgCreat { get; set; }
         public DateTime? RecDischrgDt { get; set; }
-        public float? RecDischrgInr { get; set; }
+        public double? RecDischrgInr { get; set; }
         public DateTime? RecDischrgLabDt { get; set; }
-        public float? RecDischrgSgot { get; set; }
-        public float? RecDischrgSgpt { get; set; }
+        public double? RecDischrgSgot { get; set; }
+        public double? RecDischrgSgpt { get; set; }
         public decimal? RecDr1 { get; set; }
         public decimal? RecDr2 { get; set; }
-        public float? RecDrMmEquivCur { get; set; }
-        public float? RecDrMmEquivTx { get; set; }
+        public double? RecDrMmEquivCur { get; set; }
+        public double? RecDrMmEquivTx { get; set; }
         public string RecEbvStat { get; set; }
         public decimal? RecEmplStatPre04 { get; set; }
         public string RecFailBiliary { get; set; }
@@ -219,7 +219,7 @@ namespace csc424_se2_organApp.Models
         public string RecHcvStat { get; set; }
         public string RecHepaticArterThromb { get; set; }
         public string RecHepaticOutflowObstruct { get; set; }
-        public float? RecHgtCm { get; set; }
+        public double? RecHgtCm { get; set; }
         public DateTime? RecHgtWgtDt { get; set; }
         public decimal? RecHistoTxId { get; set; }
         public string RecHivStat { get; set; }
@@ -227,35 +227,35 @@ namespace csc424_se2_organApp.Models
         public string RecImmunoMaintMeds { get; set; }
         public string RecInotropBpSupport { get; set; }
         public string RecLifeSupport { get; set; }
-        public float? RecLifeSupportOther { get; set; }
+        public decimal? RecLifeSupportOther { get; set; }
         public decimal? RecLiTy { get; set; }
         public string RecMalig { get; set; }
         public decimal? RecMaligTy { get; set; }
-        public float? RecMaligTyBreast { get; set; }
-        public float? RecMaligTyCnsTumor { get; set; }
-        public float? RecMaligTyGenitourinary { get; set; }
-        public float? RecMaligTyHepblast { get; set; }
-        public float? RecMaligTyHepcarcinoma { get; set; }
-        public float? RecMaligTyLeukLymph { get; set; }
-        public float? RecMaligTyLiver { get; set; }
-        public float? RecMaligTyLu { get; set; }
-        public float? RecMaligTyOther { get; set; }
-        public float? RecMaligTySkinMel { get; set; }
-        public float? RecMaligTySkinNonMel { get; set; }
-        public float? RecMaligTyThroat { get; set; }
-        public float? RecMaligTyThyroid { get; set; }
-        public float? RecMaligTyUnk { get; set; }
+        public decimal? RecMaligTyBreast { get; set; }
+        public decimal? RecMaligTyCnsTumor { get; set; }
+        public decimal? RecMaligTyGenitourinary { get; set; }
+        public decimal? RecMaligTyHepblast { get; set; }
+        public decimal? RecMaligTyHepcarcinoma { get; set; }
+        public decimal? RecMaligTyLeukLymph { get; set; }
+        public decimal? RecMaligTyLiver { get; set; }
+        public decimal? RecMaligTyLu { get; set; }
+        public decimal? RecMaligTyOther { get; set; }
+        public decimal? RecMaligTySkinMel { get; set; }
+        public decimal? RecMaligTySkinNonMel { get; set; }
+        public decimal? RecMaligTyThroat { get; set; }
+        public decimal? RecMaligTyThyroid { get; set; }
+        public decimal? RecMaligTyUnk { get; set; }
         public decimal? RecMedCond { get; set; }
-        public float? RecMmEquivCur { get; set; }
-        public float? RecMmEquivTx { get; set; }
+        public double? RecMmEquivCur { get; set; }
+        public double? RecMmEquivTx { get; set; }
         public decimal? RecMotorDevelop { get; set; }
         public string RecOnVentilator { get; set; }
         public decimal? RecOpoId { get; set; }
         public string RecOtherTherapy { get; set; }
         public decimal? RecOtherTherapyTy { get; set; }
-        public float? RecOtherTherapyTyPhotoph { get; set; }
-        public float? RecOtherTherapyTyPlasmaph { get; set; }
-        public float? RecOtherTherapyTyTli { get; set; }
+        public decimal? RecOtherTherapyTyPhotoph { get; set; }
+        public decimal? RecOtherTherapyTyPlasmaph { get; set; }
+        public decimal? RecOtherTherapyTyTli { get; set; }
         public string RecPbCredit { get; set; }
         public string RecPbDebt { get; set; }
         public decimal? RecPbShareTy { get; set; }
@@ -264,29 +264,29 @@ namespace csc424_se2_organApp.Models
         public string RecPortalHypertenBleed { get; set; }
         public string RecPortalVein { get; set; }
         public string RecPortalVeinThromb { get; set; }
-        public float? RecPostxLos { get; set; }
-        public float? RecPretxAlbumin { get; set; }
-        public float? RecPretxCreat { get; set; }
-        public float? RecPretxInr { get; set; }
+        public double? RecPostxLos { get; set; }
+        public double? RecPretxAlbumin { get; set; }
+        public double? RecPretxCreat { get; set; }
+        public double? RecPretxInr { get; set; }
         public DateTime? RecPretxLabDt { get; set; }
-        public float? RecPretxTotBili { get; set; }
+        public double? RecPretxTotBili { get; set; }
         public string RecPrevAbdomSurg { get; set; }
-        public float? RecPrevHl { get; set; }
-        public float? RecPrevHr { get; set; }
-        public float? RecPrevIn { get; set; }
-        public float? RecPrevKi { get; set; }
-        public float? RecPrevKp { get; set; }
-        public float? RecPrevLi { get; set; }
-        public float? RecPrevLu { get; set; }
+        public double? RecPrevHl { get; set; }
+        public double? RecPrevHr { get; set; }
+        public double? RecPrevIn { get; set; }
+        public double? RecPrevKi { get; set; }
+        public double? RecPrevKp { get; set; }
+        public double? RecPrevLi { get; set; }
+        public double? RecPrevLu { get; set; }
         public string RecPrevNonfunctnTx { get; set; }
-        public float? RecPrevPa { get; set; }
+        public double? RecPrevPa { get; set; }
         public decimal? RecPrimaryPay { get; set; }
         public string RecProcedureTyLi { get; set; }
         public string RecPxResearch { get; set; }
         public string RecPxStat { get; set; }
         public DateTime? RecPxStatDt { get; set; }
         public decimal? RecSecondaryPay { get; set; }
-        public float? RecSgpt { get; set; }
+        public double? RecSgpt { get; set; }
         public string RecTipss { get; set; }
         public string RecToleranceInductionTech { get; set; }
         public string RecTumor { get; set; }
@@ -300,9 +300,9 @@ namespace csc424_se2_organApp.Models
         public decimal? RecTxTy { get; set; }
         public string RecValcyte { get; set; }
         public string RecVaricealBleeding { get; set; }
-        public float? RecVentilator { get; set; }
-        public float? RecWarmIschTm { get; set; }
-        public float? RecWgtKg { get; set; }
+        public decimal? RecVentilator { get; set; }
+        public double? RecWarmIschTm { get; set; }
+        public double? RecWgtKg { get; set; }
         public string RecWorkIncome { get; set; }
         public decimal? RecWorkNoStat { get; set; }
         public decimal? RecWorkYesStat { get; set; }

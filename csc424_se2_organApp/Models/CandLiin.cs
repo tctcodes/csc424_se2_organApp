@@ -20,19 +20,19 @@ namespace csc424_se2_organApp.Models
         public string CanAcptProcurPa { get; set; }
         public DateTime? CanActivateDt { get; set; }
         public decimal? CanAgeAtListing { get; set; }
-        public float? CanAgeInMonthsAtListing { get; set; }
-        public float? CanAnastomosis { get; set; }
-        public float? CanAnesthPriorDeath { get; set; }
+        public double? CanAgeInMonthsAtListing { get; set; }
+        public decimal? CanAnastomosis { get; set; }
+        public decimal? CanAnesthPriorDeath { get; set; }
         public decimal? CanAngina { get; set; }
         public decimal? CanAnginaCad { get; set; }
-        public float? CanArtificialLi { get; set; }
+        public decimal? CanArtificialLi { get; set; }
         public string CanAscites { get; set; }
         public string CanBacteriaPerit { get; set; }
-        public float? CanBmi { get; set; }
+        public double? CanBmi { get; set; }
         public string CanCerebVasc { get; set; }
         public decimal? CanCitizenship { get; set; }
         public decimal? CanCognitiveDevelop { get; set; }
-        public float? CanCtpScore { get; set; }
+        public double? CanCtpScore { get; set; }
         public DateTime? CanDeathDt { get; set; }
         public decimal? CanDgn { get; set; }
         public decimal? CanDgn2 { get; set; }
@@ -42,7 +42,7 @@ namespace csc424_se2_organApp.Models
         public decimal? CanDial { get; set; }
         public string CanDrugTreatCopd { get; set; }
         public string CanDrugTreatHyperten { get; set; }
-        public float? CanEcmo { get; set; }
+        public decimal? CanEcmo { get; set; }
         public decimal? CanEducation { get; set; }
         public string CanElectrolyte { get; set; }
         public decimal? CanEmplStat { get; set; }
@@ -50,66 +50,66 @@ namespace csc424_se2_organApp.Models
         public DateTime? CanEndwlfu { get; set; }
         public string CanEthnicitySrtr { get; set; }
         public string CanExhaustVascAccess { get; set; }
-        public float? CanFollowsOpoAlloc { get; set; }
+        public decimal? CanFollowsOpoAlloc { get; set; }
         public decimal? CanFunctnStat { get; set; }
         public string CanFungalSepsis { get; set; }
         public string CanGender { get; set; }
-        public float? CanHgtCm { get; set; }
+        public double? CanHgtCm { get; set; }
         public DateTime? CanHgtWgtDt { get; set; }
-        public float? CanIabp { get; set; }
+        public decimal? CanIabp { get; set; }
         public decimal? CanInitActStatCd { get; set; }
         public DateTime? CanInitActStatDt { get; set; }
         public DateTime? CanInitInactStatDt { get; set; }
         public decimal? CanInitSrtrLabMeld { get; set; }
         public string CanInitSrtrLabMeldTy { get; set; }
         public decimal? CanInitStat { get; set; }
-        public float? CanIvInotrop { get; set; }
+        public decimal? CanIvInotrop { get; set; }
         public DateTime? CanLastActStatDt { get; set; }
-        public float? CanLastAlbumin { get; set; }
+        public double? CanLastAlbumin { get; set; }
         public decimal? CanLastAscites { get; set; }
-        public float? CanLastBili { get; set; }
+        public double? CanLastBili { get; set; }
         public string CanLastDialPriorWeek { get; set; }
         public decimal? CanLastEnceph { get; set; }
         public DateTime? CanLastInactStatDt { get; set; }
-        public float? CanLastInr { get; set; }
-        public float? CanLastSerumCreat { get; set; }
-        public float? CanLastSerumSodium { get; set; }
+        public double? CanLastInr { get; set; }
+        public double? CanLastSerumCreat { get; set; }
+        public double? CanLastSerumSodium { get; set; }
         public decimal? CanLastSrtrLabMeld { get; set; }
         public string CanLastSrtrLabMeldTy { get; set; }
         public decimal? CanLastStat { get; set; }
         public string CanLifeSupport { get; set; }
-        public float? CanLifeSupportOther { get; set; }
+        public decimal? CanLifeSupportOther { get; set; }
         public decimal? CanListingCtrId { get; set; }
         public DateTime? CanListingDt { get; set; }
         public decimal? CanListingOpoId { get; set; }
-        public float? CanLivingDonTx { get; set; }
+        public decimal? CanLivingDonTx { get; set; }
         public string CanLiDysfunctn { get; set; }
         public string CanLossVascAccess { get; set; }
         public string CanMalig { get; set; }
         public decimal? CanMaligTy { get; set; }
-        public float? CanMaligTyBreast { get; set; }
-        public float? CanMaligTyCnsTumor { get; set; }
-        public float? CanMaligTyGenitourinary { get; set; }
-        public float? CanMaligTyHepblast { get; set; }
-        public float? CanMaligTyHepcarcinoma { get; set; }
-        public float? CanMaligTyLeukLymph { get; set; }
-        public float? CanMaligTyLiver { get; set; }
-        public float? CanMaligTyLu { get; set; }
-        public float? CanMaligTyOther { get; set; }
-        public float? CanMaligTySkinMel { get; set; }
-        public float? CanMaligTySkinNonMel { get; set; }
-        public float? CanMaligTyThroat { get; set; }
-        public float? CanMaligTyThyroid { get; set; }
-        public float? CanMaligTyUnk { get; set; }
-        public float? CanMaxAge { get; set; }
-        public float? CanMaxMile { get; set; }
-        public float? CanMaxWgt { get; set; }
+        public double? CanMaligTyBreast { get; set; }
+        public double? CanMaligTyCnsTumor { get; set; }
+        public double? CanMaligTyGenitourinary { get; set; }
+        public double? CanMaligTyHepblast { get; set; }
+        public double? CanMaligTyHepcarcinoma { get; set; }
+        public double? CanMaligTyLeukLymph { get; set; }
+        public double? CanMaligTyLiver { get; set; }
+        public double? CanMaligTyLu { get; set; }
+        public double? CanMaligTyOther { get; set; }
+        public double? CanMaligTySkinMel { get; set; }
+        public double? CanMaligTySkinNonMel { get; set; }
+        public double? CanMaligTyThroat { get; set; }
+        public double? CanMaligTyThyroid { get; set; }
+        public double? CanMaligTyUnk { get; set; }
+        public double? CanMaxAge { get; set; }
+        public double? CanMaxMile { get; set; }
+        public double? CanMaxWgt { get; set; }
         public decimal? CanMedCond { get; set; }
-        public float? CanMinAge { get; set; }
-        public float? CanMinWgt { get; set; }
-        public float? CanMostRecentCreat { get; set; }
-        public float? CanMostRecentHgtCm { get; set; }
-        public float? CanMostRecentWgtKg { get; set; }
+        public double? CanMinAge { get; set; }
+        public double? CanMinWgt { get; set; }
+        public double? CanMostRecentCreat { get; set; }
+        public double? CanMostRecentHgtCm { get; set; }
+        public double? CanMostRecentWgtKg { get; set; }
         public decimal? CanMotorDevelop { get; set; }
         public string CanMuscleWasting { get; set; }
         public string CanNeoplasm { get; set; }
@@ -118,22 +118,22 @@ namespace csc424_se2_organApp.Models
         public decimal? CanPepticUlcer { get; set; }
         public string CanPeriphVasc { get; set; }
         public string CanPermState { get; set; }
-        public float? CanPge { get; set; }
+        public decimal? CanPge { get; set; }
         public decimal? CanPhyscCapacity { get; set; }
         public string CanPortalVein { get; set; }
         public string CanPrelimXmatchRequest { get; set; }
         public string CanPrevAbdomSurg { get; set; }
         public DateTime? CanPrevBoneMarrowDt { get; set; }
-        public float? CanPrevBoneMarrowTx { get; set; }
-        public float? CanPrevHl { get; set; }
-        public float? CanPrevHr { get; set; }
-        public float? CanPrevIn { get; set; }
-        public float? CanPrevKi { get; set; }
-        public float? CanPrevKp { get; set; }
-        public float? CanPrevLi { get; set; }
-        public float? CanPrevLu { get; set; }
-        public float? CanPrevPa { get; set; }
-        public float? CanPrevTx { get; set; }
+        public double? CanPrevBoneMarrowTx { get; set; }
+        public double? CanPrevHl { get; set; }
+        public double? CanPrevHr { get; set; }
+        public double? CanPrevIn { get; set; }
+        public double? CanPrevKi { get; set; }
+        public double? CanPrevKp { get; set; }
+        public double? CanPrevLi { get; set; }
+        public double? CanPrevLu { get; set; }
+        public double? CanPrevPa { get; set; }
+        public double? CanPrevTx { get; set; }
         public string CanPrevTxfus { get; set; }
         public decimal? CanPrimaryPay { get; set; }
         public string CanPulmEmbol { get; set; }
@@ -145,21 +145,21 @@ namespace csc424_se2_organApp.Models
         public DateTime? CanRemDt { get; set; }
         public decimal? CanSecondaryPay { get; set; }
         public string CanSource { get; set; }
-        public float? CanStatExtendFlg { get; set; }
+        public decimal? CanStatExtendFlg { get; set; }
         public DateTime? CanTiebreakerDt { get; set; }
         public string CanTipss { get; set; }
-        public float? CanTotAlbumin { get; set; }
-        public float? CanTotBili { get; set; }
-        public float? CanTrrExists { get; set; }
+        public double? CanTotAlbumin { get; set; }
+        public double? CanTotBili { get; set; }
+        public double? CanTrrExists { get; set; }
         public decimal? CanTxCountry { get; set; }
         public decimal? CanVadTah { get; set; }
         public string CanVaricealBleeding { get; set; }
-        public float? CanVentilator { get; set; }
-        public float? CanWgtKg { get; set; }
+        public decimal? CanVentilator { get; set; }
+        public double? CanWgtKg { get; set; }
         public string CanWorkIncome { get; set; }
         public decimal? CanWorkNoStat { get; set; }
         public decimal? CanWorkYesStat { get; set; }
-        public float? CanYearEntryUs { get; set; }
+        public double? CanYearEntryUs { get; set; }
         public decimal? DonorId { get; set; }
         public string DonTy { get; set; }
         public string OrgAr { get; set; }
