@@ -7,11 +7,11 @@ import { LOGIN } from './constants';
  * Github repos request/response handler
  */
 export function* login() {
-  const user = yield select(makeSelectEmail());
-  const pass = yield select(makeSelectPassword());
+  const email = yield select(makeSelectEmail());
+  const password = yield select(makeSelectPassword());
   const body = {
-    user,
-    pass
+    email,
+    password
   }
   let headers = {
     'Content-Type': 'application/json',
