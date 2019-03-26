@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using BCrypt.Net;
 using csc424_se2_organApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace csc424_se2_organApp.Controllers
 {
@@ -43,6 +44,7 @@ namespace csc424_se2_organApp.Controllers
             return Json(new {message = $"{user.Email} created"});
         
         }
+
         [HttpPost]
         public JsonResult AuthUser([FromBody]Users user){
             
@@ -61,23 +63,28 @@ namespace csc424_se2_organApp.Controllers
                 
                 Response.StatusCode = 200;
                 var tokenHandler = new JwtSecurityTokenHandler();
-                var key = Encoding.ASCII.GetBytes("THIS IS MY RIFLE THIS IS MY GUN, THIS ONE'S FOR FIGHTING THIS ONE'S FOR FUN");
-                var tokenDescriptor = new SecurityTokenDescriptor
+                var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("THIS IS MY RIFLE THIS IS MY GUN, THIS ONE'S FOR FIGHTING THIS ONE'S FOR FUN"));
+                var claims = new[]
                 {
-                    Subject = new ClaimsIdentity(new Claim[] 
-                    {
-                          new Claim( ClaimTypes.UserData,
-                            "IsValid", ClaimValueTypes.String, "(local)" )
-                    }),
-                    Expires = DateTime.UtcNow.AddDays(7),
-                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                    new Claim(ClaimTypes.Name, user.Email)
                 };
-                var token = tokenHandler.CreateToken(tokenDescriptor);
-                return Json(new {message = $"{foundUser.Email} signed in", token = token});
+                var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
+                var token = new JwtSecurityToken(
+                    claims: claims,
+                    expires: DateTime.Now.AddMinutes(30),
+                    signingCredentials: creds
+                );
+                return Json(new {message = $"{foundUser.Email} signed in", token = new JwtSecurityTokenHandler().WriteToken(token)});
             }
             
         
         }
+        [Authorize]
+        [HttpGet]
+        public JsonResult test(){
+            return Json (new {message="Authorized"});
+        }
+
     }
 
 }
