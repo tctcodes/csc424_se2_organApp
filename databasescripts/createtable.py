@@ -109,17 +109,19 @@ for fi, openFile in enumerate(o) : # index, filename
         # name      type    size    format  description
         
         # set datatype
-        if( line[1] =='num' and research.search(line[0]) != None):  # for all ID's
+        if( line[1] =='num' and research.search(line[0]) != None):  # for all ID's with regx
             varType = 'NUMERIC('+line[2]+'),' 
         elif(line[1]=='num' and line[3] == 'MMDDYY'):
             varType = 'DATE,'
         elif(line[1]=='num' and line[3] == 'TIME'):
             varType = 'TIME,'
-        elif(line[1]=='num' and line[3] != ''):                     # end of nums
+        elif(line[1]=='num' and line[3] != ''):                     #has a catigorical type           
+            varType = 'NUMERIC('+line[2]+'),' 
+        elif(line[1]=='num' and line[2] < '8'):                     #most likely true or false type NUMERIC(3)         
             varType = 'NUMERIC('+line[2]+'),' 
         elif(line[1]=='num'):
-            varType = 'REAL,'
-        elif(line[1]=='char'):
+            varType = 'DOUBLE PRECISION,'
+        elif(line[1]=='char'):                                      # end of nums
             varType = 'VARCHAR('+line[2]+'),'
         else:
             #error of csv input (e.g. ',,,,')
