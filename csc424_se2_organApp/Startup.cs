@@ -7,6 +7,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using csc424_se2_organApp.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Microsoft.AspNetCore.Authorization;
 
 namespace csc424_se2_organApp
 {
@@ -35,14 +40,31 @@ namespace csc424_se2_organApp
                     .AllowAnyMethod()
                    );
             });
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-            // In production, the React files will be served from this directory
-            services.AddSpaStaticFiles(configuration =>
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
             {
-                configuration.RootPath = "ClientApp/build";
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    //ValidateIssuer = true,
+                    //ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    //ValidIssuer = "yourdomain.com",
+                    //ValidAudience = "yourdomain.com",
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                        Encoding.ASCII.GetBytes("THIS IS MY RIFLE THIS IS MY GUN, THIS ONE'S FOR FIGHTING THIS ONE'S FOR FUN")
+                        )
+                };
             });
-        }
+
+                services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+                // In production, the React files will be served from this directory
+                services.AddSpaStaticFiles(configuration =>
+                {
+                    configuration.RootPath = "ClientApp/build";
+                });
+            }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -56,10 +78,11 @@ namespace csc424_se2_organApp
                 app.UseExceptionHandler("/Error");
             }
             
+            app.UseAuthentication();
             app.UseCors(MyAllowSpecificOrigins);
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
-
+           
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
