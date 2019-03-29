@@ -8,8 +8,8 @@ import { fromJS } from "immutable";
 import { SET_TOKEN } from "./constants";
 
 export const initialState = fromJS({
-  token = '',
-  isAuth = false
+  token: '',
+  isAuth: false,
 });
 
 function authWrapperReducer(state = initialState, action) {

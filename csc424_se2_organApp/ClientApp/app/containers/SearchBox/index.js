@@ -11,6 +11,7 @@ import { Helmet } from "react-helmet";
 import { createStructuredSelector } from "reselect";
 import { compose } from "redux";
 import { Form, Button} from "react-bootstrap";
+import { makeSelectToken } from './selectors';
 
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
@@ -21,6 +22,7 @@ import saga from "./saga";
 /* eslint-disable react/prefer-stateless-function */
 export class SearchBox extends React.Component {
   render() {
+    console.log(`searchbox token ${this.props.token}`);
     return (
       <div>
         <Helmet>
@@ -48,7 +50,8 @@ SearchBox.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
-  searchBox: makeSelectSearchBox()
+  searchBox: makeSelectSearchBox(),
+  token: makeSelectToken(),
 });
 
 function mapDispatchToProps(dispatch) {

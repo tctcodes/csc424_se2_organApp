@@ -18,5 +18,8 @@ const selectSearchBoxDomain = state => state.get("searchBox", initialState);
 const makeSelectSearchBox = () =>
   createSelector(selectSearchBoxDomain, substate => substate.toJS());
 
+const makeSelectToken = () =>
+  createSelector(selectSearchBoxDomain, substate => substate.get('token'));
+
 export default makeSelectSearchBox;
-export { selectSearchBoxDomain };
+export { selectSearchBoxDomain, makeSelectToken };

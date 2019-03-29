@@ -2,7 +2,8 @@ const axios = require('axios');
 import {makeSelectEmail,makeSelectPassword} from './selectors';
 import { call, put, select, takeLatest } from 'redux-saga/effects';
 import { LOGIN } from './constants';
-import {setToken} from '../AuthWrapper/actions'
+import {setToken} from '../SearchBox/actions'
+import { push } from 'connected-react-router';
 
 /**
  * Github repos request/response handler
@@ -20,11 +21,11 @@ export function* login() {
   try{
     const response = yield axios.post("http://localhost:5000/api/User/AuthUser",body,headers);
     yield put(setToken(response.data.token));
+    yield put(push('/searchbox'));
   }
   catch(err){
     console.log(err)
   }
-  
 }
 
 /**
