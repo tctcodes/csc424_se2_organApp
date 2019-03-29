@@ -5,19 +5,19 @@ namespace csc424_se2_organApp.Models
 {
     public partial class DonorDeceased
     {
-        public int DonorId { get; set; }
-        public int? DonA1 { get; set; }
-        public int? DonA2 { get; set; }
+        public decimal DonorId { get; set; }
+        public decimal? DonA1 { get; set; }
+        public decimal? DonA2 { get; set; }
         public string DonAbnormCongen { get; set; }
         public string DonAbnormLvh { get; set; }
         public string DonAbnormValves { get; set; }
         public string DonAbo { get; set; }
-        public int? DonAge { get; set; }
-        public int? DonAgeInMonths { get; set; }
-        public int? DonAllocEcdCva { get; set; }
-        public int? DonAllocEcdHyperten { get; set; }
-        public int? DonAllocEcdSerumCreat { get; set; }
-        public int? DonAllocEcdSerumCreatDt { get; set; }
+        public double? DonAge { get; set; }
+        public double? DonAgeInMonths { get; set; }
+        public decimal? DonAllocEcdCva { get; set; }
+        public decimal? DonAllocEcdHyperten { get; set; }
+        public double? DonAllocEcdSerumCreat { get; set; }
+        public DateTime? DonAllocEcdSerumCreatDt { get; set; }
         public string DonAllocRemainLiSeg { get; set; }
         public string DonAntiCmv { get; set; }
         public string DonAntiConvuls { get; set; }
@@ -27,170 +27,170 @@ namespace csc424_se2_organApp.Models
         public string DonAntiHtlv { get; set; }
         public string DonAntiHyperten { get; set; }
         public string DonArginine { get; set; }
-        public int? DonB1 { get; set; }
-        public int? DonB2 { get; set; }
-        public int? DonBiopsyDgn { get; set; }
-        public int? DonBrainDeathTm { get; set; }
-        public int? DonBun { get; set; }
-        public int? DonBw4 { get; set; }
-        public int? DonBw6 { get; set; }
-        public int? DonC1 { get; set; }
-        public int? DonC2 { get; set; }
-        public int? DonCadDonCod { get; set; }
-        public int? DonCancerFreeInterval { get; set; }
+        public decimal? DonB1 { get; set; }
+        public decimal? DonB2 { get; set; }
+        public decimal? DonBiopsyDgn { get; set; }
+        public TimeSpan? DonBrainDeathTm { get; set; }
+        public double? DonBun { get; set; }
+        public decimal? DonBw4 { get; set; }
+        public decimal? DonBw6 { get; set; }
+        public decimal? DonC1 { get; set; }
+        public decimal? DonC2 { get; set; }
+        public decimal? DonCadDonCod { get; set; }
+        public double? DonCancerFreeInterval { get; set; }
         public string DonCancerOtherOstxt { get; set; }
         public string DonCardiacArrestAfterDeath { get; set; }
         public string DonChagasNat { get; set; }
-        public int? DonChestXray { get; set; }
-        public int? DonCitizenship { get; set; }
-        public int? DonCiFinal { get; set; }
-        public int? DonCiInit { get; set; }
-        public int? DonClampDt { get; set; }
-        public int? DonClampTm { get; set; }
-        public int? DonClampTmZone { get; set; }
+        public decimal? DonChestXray { get; set; }
+        public decimal? DonCitizenship { get; set; }
+        public double? DonCiFinal { get; set; }
+        public double? DonCiInit { get; set; }
+        public DateTime? DonClampDt { get; set; }
+        public TimeSpan? DonClampTm { get; set; }
+        public decimal? DonClampTmZone { get; set; }
         public string DonClinicalInfect { get; set; }
-        public int? DonCodDonStroke { get; set; }
-        public int? DonColdIschTmArrivKi { get; set; }
-        public int? DonConsentAttorney { get; set; }
-        public int? DonConsentDonCard { get; set; }
-        public int? DonConsentDonRegis { get; set; }
-        public int? DonConsentDriverLicense { get; set; }
+        public decimal? DonCodDonStroke { get; set; }
+        public double? DonColdIschTmArrivKi { get; set; }
+        public decimal? DonConsentAttorney { get; set; }
+        public decimal? DonConsentDonCard { get; set; }
+        public decimal? DonConsentDonRegis { get; set; }
+        public decimal? DonConsentDriverLicense { get; set; }
         public string DonConsentPxWritDoc { get; set; }
-        public int? DonConsentTm { get; set; }
+        public TimeSpan? DonConsentTm { get; set; }
         public string DonConsentWritDocIntent { get; set; }
         public string DonContAlcohol { get; set; }
         public string DonContCigarette { get; set; }
         public string DonContCocaine { get; set; }
         public string DonContIvDrug { get; set; }
         public string DonContOtherDrug { get; set; }
-        public int? DonCoronaryAngio { get; set; }
-        public int? DonCoFinal { get; set; }
-        public int? DonCoInit { get; set; }
-        public int? DonCreat { get; set; }
-        public int? DonCregDonFlg { get; set; }
-        public int? DonCvpFinal { get; set; }
-        public int? DonCvpInit { get; set; }
-        public int? DonDcdAbdomAortaCannulDt { get; set; }
-        public int? DonDcdAbdomAortaCannulTm { get; set; }
-        public int? DonDcdAgonalBeginDt { get; set; }
-        public int? DonDcdAgonalBeginTm { get; set; }
-        public int? DonDcdPortalVeinCannulDt { get; set; }
-        public int? DonDcdPortalVeinCannulTm { get; set; }
+        public decimal? DonCoronaryAngio { get; set; }
+        public double? DonCoFinal { get; set; }
+        public double? DonCoInit { get; set; }
+        public double? DonCreat { get; set; }
+        public decimal? DonCregDonFlg { get; set; }
+        public double? DonCvpFinal { get; set; }
+        public double? DonCvpInit { get; set; }
+        public DateTime? DonDcdAbdomAortaCannulDt { get; set; }
+        public TimeSpan? DonDcdAbdomAortaCannulTm { get; set; }
+        public DateTime? DonDcdAgonalBeginDt { get; set; }
+        public TimeSpan? DonDcdAgonalBeginTm { get; set; }
+        public DateTime? DonDcdPortalVeinCannulDt { get; set; }
+        public TimeSpan? DonDcdPortalVeinCannulTm { get; set; }
         public string DonDcdProgressToBrainDeath { get; set; }
-        public int? DonDcdPulmArtCannulDt { get; set; }
-        public int? DonDcdPulmArtCannulTm { get; set; }
-        public int? DonDcdSupportWithdrawDt { get; set; }
-        public int? DonDcdSupportWithdrawTm { get; set; }
-        public int? DonDcdThorAortaCannulDt { get; set; }
-        public int? DonDcdThorAortaCannulTm { get; set; }
-        public int? DonDcdTotUrineOutput { get; set; }
+        public DateTime? DonDcdPulmArtCannulDt { get; set; }
+        public TimeSpan? DonDcdPulmArtCannulTm { get; set; }
+        public DateTime? DonDcdSupportWithdrawDt { get; set; }
+        public TimeSpan? DonDcdSupportWithdrawTm { get; set; }
+        public DateTime? DonDcdThorAortaCannulDt { get; set; }
+        public TimeSpan? DonDcdThorAortaCannulTm { get; set; }
+        public double? DonDcdTotUrineOutput { get; set; }
         public string DonDdavp { get; set; }
-        public int? DonDeathCircum { get; set; }
-        public int? DonDeathMech { get; set; }
+        public decimal? DonDeathCircum { get; set; }
+        public decimal? DonDeathMech { get; set; }
         public string DonDobutamine { get; set; }
         public string DonDopamine { get; set; }
-        public int? DonDp1 { get; set; }
-        public int? DonDp2 { get; set; }
-        public int? DonDq1 { get; set; }
-        public int? DonDq2 { get; set; }
-        public int? DonDr1 { get; set; }
-        public int? DonDr2 { get; set; }
-        public int? DonDr51 { get; set; }
-        public int? DonDr52 { get; set; }
-        public int? DonDr53 { get; set; }
+        public decimal? DonDp1 { get; set; }
+        public decimal? DonDp2 { get; set; }
+        public decimal? DonDq1 { get; set; }
+        public decimal? DonDq2 { get; set; }
+        public decimal? DonDr1 { get; set; }
+        public decimal? DonDr2 { get; set; }
+        public decimal? DonDr51 { get; set; }
+        public decimal? DonDr52 { get; set; }
+        public decimal? DonDr53 { get; set; }
         public string DonEbna { get; set; }
         public string DonEbvIgg { get; set; }
         public string DonEbvIgm { get; set; }
-        public int? DonEjectFract { get; set; }
-        public int? DonEjectFractMeth { get; set; }
+        public double? DonEjectFract { get; set; }
+        public decimal? DonEjectFractMeth { get; set; }
         public string DonEthnicitySrtr { get; set; }
-        public int? DonExpandDonFlgOptn { get; set; }
-        public int? DonExpandDonKi { get; set; }
+        public decimal? DonExpandDonFlgOptn { get; set; }
+        public decimal? DonExpandDonKi { get; set; }
         public string DonExpressFamily { get; set; }
         public string DonExtracranialCancer { get; set; }
-        public int? DonFeedbackDone { get; set; }
-        public int? DonFinalSerumCreat { get; set; }
+        public decimal? DonFeedbackDone { get; set; }
+        public double? DonFinalSerumCreat { get; set; }
         public string DonGender { get; set; }
-        public int? DonHbcStat { get; set; }
+        public decimal? DonHbcStat { get; set; }
         public string DonHbvNat { get; set; }
         public string DonHbvSurfAntibody { get; set; }
         public string DonHbvSurfAntigen { get; set; }
         public string DonHcvNat { get; set; }
-        public int? DonHcvStat { get; set; }
+        public decimal? DonHcvStat { get; set; }
         public string DonHeavyAlcohol { get; set; }
-        public int? DonHematocrit { get; set; }
+        public double? DonHematocrit { get; set; }
         public string DonHeparin { get; set; }
-        public int? DonHgtCm { get; set; }
-        public int? DonHighCreat { get; set; }
+        public double? DonHgtCm { get; set; }
+        public decimal? DonHighCreat { get; set; }
         public string DonHistAlcohol { get; set; }
-        public int? DonHistCancer { get; set; }
+        public decimal? DonHistCancer { get; set; }
         public string DonHistCigaretteGt20Pkyr { get; set; }
         public string DonHistCocaine { get; set; }
-        public int? DonHistDiab { get; set; }
-        public int? DonHistHyperten { get; set; }
-        public int? DonHistInsulinDepnd { get; set; }
+        public decimal? DonHistDiab { get; set; }
+        public decimal? DonHistHyperten { get; set; }
+        public decimal? DonHistInsulinDepnd { get; set; }
         public string DonHistIvDrug { get; set; }
         public string DonHistOtherDrug { get; set; }
         public string DonHistPrevMi { get; set; }
         public string DonHivNat { get; set; }
         public string DonHlaTyp { get; set; }
-        public int? DonHlaTypNotDone { get; set; }
+        public decimal? DonHlaTypNotDone { get; set; }
         public string DonHomeState { get; set; }
         public string DonHtlvNat { get; set; }
-        public int? DonHtn { get; set; }
+        public decimal? DonHtn { get; set; }
         public string DonHypertenDiet { get; set; }
         public string DonHypertenDiuretics { get; set; }
         public string DonHypertenOtherMeds { get; set; }
-        public int? DonInfectBlood { get; set; }
+        public decimal? DonInfectBlood { get; set; }
         public string DonInfectBloodConfirm { get; set; }
-        public int? DonInfectLu { get; set; }
+        public decimal? DonInfectLu { get; set; }
         public string DonInfectLuConfirm { get; set; }
-        public int? DonInfectOther { get; set; }
+        public decimal? DonInfectOther { get; set; }
         public string DonInfectOtherConfirm { get; set; }
-        public int? DonInfectUrine { get; set; }
+        public decimal? DonInfectUrine { get; set; }
         public string DonInfectUrineConfirm { get; set; }
         public string DonInotropAgentGe3 { get; set; }
         public string DonInotropSupport { get; set; }
-        public int? DonInr { get; set; }
+        public double? DonInr { get; set; }
         public string DonInsulin { get; set; }
         public string DonIntracranialCancer { get; set; }
-        public int? DonKiGlomerObserved { get; set; }
-        public int? DonKiGlomerSclerPct { get; set; }
+        public double? DonKiGlomerObserved { get; set; }
+        public double? DonKiGlomerSclerPct { get; set; }
         public string DonLfKiBiopsy { get; set; }
-        public int? DonLfKiGlomerSclerPct { get; set; }
+        public decimal? DonLfKiGlomerSclerPct { get; set; }
         public string DonLfKiPump { get; set; }
-        public int? DonLfKiResistPriorShip { get; set; }
+        public double? DonLfKiResistPriorShip { get; set; }
         public string DonLfKiTxferPump { get; set; }
-        public int? DonLfLuBroncho { get; set; }
-        public int? DonLipase { get; set; }
+        public decimal? DonLfLuBroncho { get; set; }
+        public double? DonLipase { get; set; }
         public string DonLiBiopsy { get; set; }
-        public int? DonLiBiopsyMacroFat { get; set; }
-        public int? DonLiBiopsyMicroFat { get; set; }
-        public int? DonLiOthHistologyGranulomas { get; set; }
-        public int? DonLiOthHistologyHemosidera { get; set; }
-        public int? DonLiOthHistologyOther { get; set; }
-        public int? DonMapFinal { get; set; }
-        public int? DonMapInit { get; set; }
-        public int? DonMaxCreat { get; set; }
-        public int? DonMedExaminer { get; set; }
+        public double? DonLiBiopsyMacroFat { get; set; }
+        public double? DonLiBiopsyMicroFat { get; set; }
+        public decimal? DonLiOthHistologyGranulomas { get; set; }
+        public decimal? DonLiOthHistologyHemosidera { get; set; }
+        public decimal? DonLiOthHistologyOther { get; set; }
+        public double? DonMapFinal { get; set; }
+        public double? DonMapInit { get; set; }
+        public double? DonMaxCreat { get; set; }
+        public decimal? DonMedExaminer { get; set; }
         public string DonMeetCdcHighRisk { get; set; }
-        public int? DonMeetDoubleKiCrit { get; set; }
+        public decimal? DonMeetDoubleKiCrit { get; set; }
         public string DonNonHrBeat { get; set; }
         public string DonNonHrBeatCntl { get; set; }
         public string DonNonHrBeatCoreCool { get; set; }
-        public int? DonOpoCtrId { get; set; }
-        public int? DonPaDiastFinal { get; set; }
-        public int? DonPaDiastInit { get; set; }
-        public int? DonPaSystFinal { get; set; }
-        public int? DonPaSystInit { get; set; }
-        public int? DonPco2 { get; set; }
-        public int? DonPcwpFinal { get; set; }
-        public int? DonPcwpInit { get; set; }
-        public int? DonPeakSerumCreat { get; set; }
-        public int? DonPh { get; set; }
-        public int? DonPo2 { get; set; }
+        public decimal? DonOpoCtrId { get; set; }
+        public double? DonPaDiastFinal { get; set; }
+        public double? DonPaDiastInit { get; set; }
+        public double? DonPaSystFinal { get; set; }
+        public double? DonPaSystInit { get; set; }
+        public double? DonPco2 { get; set; }
+        public double? DonPcwpFinal { get; set; }
+        public double? DonPcwpInit { get; set; }
+        public double? DonPeakSerumCreat { get; set; }
+        public double? DonPh { get; set; }
+        public double? DonPo2 { get; set; }
         public string DonPo2Done { get; set; }
-        public int? DonPo2Fio2 { get; set; }
+        public double? DonPo2Fio2 { get; set; }
         public string DonPrerecovDiuretics { get; set; }
         public string DonPrerecovMeds { get; set; }
         public string DonPrerecovSteroids { get; set; }
@@ -199,50 +199,47 @@ namespace csc424_se2_organApp.Models
         public string DonPrevGastroDisease { get; set; }
         public string DonProteinUrine { get; set; }
         public string DonPulmCath { get; set; }
-        public int? DonRace { get; set; }
+        public decimal? DonRace { get; set; }
         public string DonRaceSrtr { get; set; }
-        public int? DonRecovDt { get; set; }
+        public DateTime? DonRecovDt { get; set; }
         public string DonRecovOutUs { get; set; }
-        public int? DonRefDt { get; set; }
+        public DateTime? DonRefDt { get; set; }
         public string DonRefFlg { get; set; }
-        public int? DonResuscitDuration { get; set; }
+        public double? DonResuscitDuration { get; set; }
         public string DonRprVdrl { get; set; }
         public string DonRtKiBiopsy { get; set; }
-        public int? DonRtKiGlomerSclerPct { get; set; }
+        public decimal? DonRtKiGlomerSclerPct { get; set; }
         public string DonRtKiPump { get; set; }
-        public int? DonRtKiResistPriorShip { get; set; }
+        public double? DonRtKiResistPriorShip { get; set; }
         public string DonRtKiTxferPump { get; set; }
-        public int? DonRtLuBroncho { get; set; }
-        public int? DonSerumAmylase { get; set; }
-        public int? DonSgot { get; set; }
-        public int? DonSgpt { get; set; }
+        public decimal? DonRtLuBroncho { get; set; }
+        public double? DonSerumAmylase { get; set; }
+        public double? DonSgot { get; set; }
+        public double? DonSgpt { get; set; }
         public string DonSkinCancer { get; set; }
-        public int? DonSodium { get; set; }
-        public int? DonSvrFinal { get; set; }
-        public int? DonSvrInit { get; set; }
-        public int? DonTargetSource1 { get; set; }
-        public int? DonTargetSource2 { get; set; }
+        public double? DonSodium { get; set; }
+        public double? DonSvrFinal { get; set; }
+        public double? DonSvrInit { get; set; }
+        public decimal? DonTargetSource1 { get; set; }
+        public decimal? DonTargetSource2 { get; set; }
         public string DonTattoos { get; set; }
         public string DonTmForXmatch { get; set; }
-        public int? DonTotBili { get; set; }
-        public int? DonTx { get; set; }
-        public int? DonTxfusTerminalHospNum { get; set; }
+        public double? DonTotBili { get; set; }
+        public double? DonTx { get; set; }
+        public decimal? DonTxfusTerminalHospNum { get; set; }
         public string DonTy { get; set; }
-        public int? DonTypMethclass1 { get; set; }
-        public int? DonTypMethclass1Dt { get; set; }
-        public int? DonTypMethclass2 { get; set; }
-        public int? DonTypMethclass2Dt { get; set; }
+        public decimal? DonTypMethclass1 { get; set; }
+        public DateTime? DonTypMethclass1Dt { get; set; }
+        public decimal? DonTypMethclass2 { get; set; }
+        public DateTime? DonTypMethclass2Dt { get; set; }
         public string DonUseDoubleKi { get; set; }
         public string DonVasodil { get; set; }
-        public int? DonVesselsGt50Stenosis { get; set; }
+        public double? DonVesselsGt50Stenosis { get; set; }
         public string DonWallAbnormGlob { get; set; }
         public string DonWallAbnormSeg { get; set; }
-        public int? DonWarmIschTmMins { get; set; }
+        public double? DonWarmIschTmMins { get; set; }
         public string DonWestNileNat { get; set; }
-        public int? DonWgtKg { get; set; }
-        public int PersId { get; set; }
-
-        public virtual Institution DonOpoCtr { get; set; }
-        public virtual Donor Donor { get; set; }
+        public double? DonWgtKg { get; set; }
+        public decimal PersId { get; set; }
     }
 }
