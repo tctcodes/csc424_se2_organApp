@@ -48,7 +48,7 @@ namespace csc424_se2_organApp.Controllers
         [HttpPost]
         public JsonResult AuthUser([FromBody]Users user){
             
-            Console.Write(user.Email);
+            //Console.Write(user.Email);
             Users foundUser = context.Users.Find(user.Email);
             if(foundUser == null){
                 Response.StatusCode = 404;
@@ -66,7 +66,8 @@ namespace csc424_se2_organApp.Controllers
                 var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("THIS IS MY RIFLE THIS IS MY GUN, THIS ONE'S FOR FIGHTING THIS ONE'S FOR FUN"));
                 var claims = new[]
                 {
-                    new Claim(ClaimTypes.Name, user.Email)
+                    new Claim(ClaimTypes.Name, user.Email),
+                    new Claim(ClaimTypes.Role, "staff")
                 };
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
                 var token = new JwtSecurityToken(
@@ -79,9 +80,11 @@ namespace csc424_se2_organApp.Controllers
             
         
         }
-        [Authorize]
+        [Authorize(Roles = "staff")]
         [HttpGet]
         public JsonResult test(){
+            Console.WriteLine(User.Identity.Name);
+            Console.WriteLine(User.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).SingleOrDefault());
             return Json (new {message="Authorized"});
         }
 
