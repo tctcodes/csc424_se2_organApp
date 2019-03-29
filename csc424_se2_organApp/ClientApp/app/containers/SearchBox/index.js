@@ -10,6 +10,7 @@ import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import { createStructuredSelector } from "reselect";
 import { compose } from "redux";
+import { Form, Button} from "react-bootstrap";
 
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
@@ -26,6 +27,17 @@ export class SearchBox extends React.Component {
           <title>SearchBox</title>
           <meta name="description" content="Description of SearchBox" />
         </Helmet>
+        <div>
+          <h1>SearchBox</h1>
+          <Form>
+            <Form.Group controlId="formBasicSearch">
+              <Form.Control type="text" placeholder="Search" />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+              Search
+            </Button>
+          </Form>
+        </div>
       </div>
     );
   }
