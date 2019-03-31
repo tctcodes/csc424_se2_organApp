@@ -1,4 +1,4 @@
-﻿CAN_ABO,char,3,$ABO,Patient/s Blood Type
+CAN_ABO,char,3,$ABO,Patient/s Blood Type
 CAN_ACADEMIC_LEVEL,num,8,ACDMACTV,Academic Activity Level:
 CAN_ACADEMIC_PROGRESS,num,8,ACDMPRG,Academic Progress:
 CAN_ACPT_A2_DON,char,1,,Accept A2 donor?

@@ -1,0 +1,11 @@
+CAN_INIT_SRTR_LAB_MELD,num,8,CANDSTAT,First SRTR MELD/PELD given,meld
+CAN_INIT_SRTR_LAB_MELD_TY,char,1,,First SRTR MELD/PELD type given,meld
+CAN_LAST_ALBUMIN,num,8,,Candidate Last Albumin (used for MELD),meld
+CAN_LAST_ASCITES,num,8,ASCITES,Candidate Last Ascites (used for MELD),meld
+CAN_LAST_BILI,num,8,,Candidate Last Bilirubin (used for MELD),meld
+CAN_LAST_ENCEPH,num,8,ENCEPH,Candidate Last Encephalopathy (used for MELD),meld
+CAN_LAST_INR,num,8,,Candidate Last INR (used for MELD),meld
+CAN_LAST_SERUM_CREAT,num,8,,Candidate Last Serum Creatinine mg/dl (used for MELD),meld
+CAN_LAST_SERUM_SODIUM,num,8,,Candidate Last Serum Sodium (used for MELD),meld
+CAN_LAST_SRTR_LAB_MELD,num,8,CANDSTAT,Last SRTR MELD/PELD given,meld
+CAN_LAST_SRTR_LAB_MELD_TY,char,1,,Last SRTR MELD/PELD type given,meld

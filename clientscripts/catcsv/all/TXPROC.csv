@@ -1,0 +1,44 @@
+101,101: LEFT KIDNEY
+102,102: RIGHT KIDNEY
+103,103: EN-BLOC
+104,104: Sequential Kidney
+105,105: Hemi-Renal
+201,201: Pancreas Segment
+202,202: Whole Pancreas with Duodenum
+203,203: Whole Pancreas with Duodenal Patch
+204,204: Whole Pancreas
+301,301: Pancreas segment / Kidney Right
+302,302: Pancreas segment / Kidney Left
+303,303: Pancreas segment / En-bloc Kidney
+304,304: Pancreas Segment/Sequential Kidney
+305,305: Pancreas segment / Hemi-Renal
+306,306: Whole pancreas with duodenum / left kidney
+307,307: Whole pancreas with duodenum / right kidney
+308,308: Whole pancreas with duodenum / en-bloc kidneys
+309,309: Pancreas with duodenum/sequential kidney
+311,311: Whole pancreas with duodenal patch / left kidney
+312,312: Whole pancreas with duodenal patch / right kidney
+313,313: Whole pancreas with duodenal patch / en-bloc kidneys
+314,314: Pancreas with duodenal patch/sequential kidney
+316,316: Whole pancreas / left kidney
+317,317: Whole pancreas / right kidney
+318,318: Whole pancreas / en-bloc kidneys
+319,319: Whole pancreas/sequential kidney
+401,401: Whole Intestine
+402,402: Intestine Segment
+403,403: Whole Intestine with Pancreas (Technical Reasons)
+404,404: Intestine Segment with Pancreas (Technical Reasons)
+501,501: Heart
+502,502: Heart Lung
+601,601: SINGLE LEFT LUNG
+602,602: SINGLE RIGHT LUNG
+603,603: BILATERAL SEQUENTIAL LUNG
+604,604: EN-BLOC DOUBLE LUNG
+605,"605: LOBE, RIGHT"
+606,"606: LOBE, LEFT"
+701,701: Whole Liver
+702,"702: Partial Liver, remainder not Tx or Living Transplant"
+703,703: Split Liver
+704,704: Whole Liver with Pancreas (Technical Reasons)
+705,705: Partial Liver with Pancreas (Technical Reasons)
+706,706: Split Liver with Pancreas (Technical Reasons)

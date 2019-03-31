@@ -1,0 +1,19 @@
+CAN_ACTIVATE_DT,num,8,MMDDYY,Activation Date - date/time waiting time clock started,stat
+CAN_ANESTH_PRIOR_DEATH,num,3,,Did the patient go to the operating room and receive anesthesia for transplant prior to death?,stat
+CAN_DEATH_DT,num,8,MMDDYY,If removed due to Death, date of death,stat
+CAN_ENDWLFU,num,8,MMDDYY,Candidate cohort censoring date,stat
+CAN_FOLLOWS_OPO_ALLOC,num,3,,Does candidate follow the OPO/s current allocation,stat
+CAN_INIT_ACT_STAT_CD,num,8,CANDSTAT,First Active Status,stat
+CAN_INIT_ACT_STAT_DT,num,8,MMDDYY,Date of First Active Status,stat
+CAN_INIT_INACT_STAT_DT,num,8,MMDDYY,Date of First Inactive Status,stat
+CAN_INIT_STAT,num,8,CANDSTAT,Initial Status of Patient,stat
+CAN_LAST_ACT_STAT_DT,num,8,MMDDYY,Last Date of Active Status,stat
+CAN_LAST_INACT_STAT_DT,num,8,MMDDYY,Last Date of Inactive Status,stat
+CAN_LAST_STAT,num,8,CANDSTAT,Last Status of Patient (with 2 day rule),stat
+CAN_LISTING_CTR_ID,num,4,,CAN_LISTING_ Center ID,stat
+CAN_LISTING_DT,num,8,MMDDYY,Listing Date - date/time candidate was physically added to the waiting list - this date/time does not change for transfers,stat
+CAN_LISTING_OPO_ID,num,4,,OPO Serving Listing Center,stat
+CAN_REM_CD,num,8,REMCD,Reason why candidate was removed (removal code),stat
+CAN_REM_COD,num,8,COD,Cause of Death,stat
+CAN_REM_DT,num,8,MMDDYY,rem_dt /remreg, censored by CAN_DEATH_DT, tx_dt,stat
+CAN_STAT_EXTEND_FLG,num,3,,Status Extension granted for Liver candidate,stat
