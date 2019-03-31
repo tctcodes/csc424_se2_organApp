@@ -113,7 +113,7 @@ for fi, inputFile in enumerate(o) : # index, filename
             closeFiles(c)
             sys.exit("need new type")
         varType = varType+'value={{this.props.{0:}}} onChange={{this.props.onChange{0:}}}'.format(var) 
-        w[fi].write(varType+' >\n')
+        w[fi].write(varType+' />\n')
 
         #add line to the file    
         w[fi].write("\t</Form.Group>\n")

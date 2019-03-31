@@ -16,6 +16,7 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 import GlobalStyle from '../../global-styles';
 import LoginPage from 'containers/LoginPage/Loadable';
+import  CanForm  from 'containers/CanForm/Loadable';
 
 export default function App() {
   return <div>
@@ -23,6 +24,7 @@ export default function App() {
         <Route exact path="/" component={HomePage} />
         <Route path="/signup" component={SignUpPage} />
         <Route path="/login" component={LoginPage} />
+        <Route path="/canform" component={CanForm}/>
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
