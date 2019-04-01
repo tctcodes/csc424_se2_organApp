@@ -1,0 +1,25 @@
+1,1: Performs activities of daily living with NO assistance.
+2,2: Performs activities of daily living with SOME assistance.
+3,3: Performs activities of daily living with TOTAL assistance.
+996,996: Not Applicable (patient < 1 year old)
+998,998: Unknown
+2010,"2010: 10% - Moribund, fatal processes progressing rapidly"
+2020,"2020: 20% - Very sick, hospitalization necessary: active treatment necessary"
+2030,"2030: 30% - Severely disabled: hospitalization is indicated, death not imminent"
+2040,2040: 40% - Disabled: requires special care and assistance
+2050,2050: 50% - Requires considerable assistance and frequent medical care
+2060,2060: 60% - Requires occasional assistance but is able to care for needs
+2070,2070: 70% - Cares for self: unable to carry on normal activity or active work
+2080,2080: 80% - Normal activity with effort: some symptoms of disease
+2090,2090: 90% - Able to carry on normal activity: minor symptoms of disease
+2100,"2100: 100% - Normal, no complaints, no evidence of disease"
+4010,4010: 10% - No play; does not get out of bed
+4020,4020: 20% - Often sleeping; play entirely limited to very passive activities
+4030,4030: 30% - In bed; needs assistance even for quiet play
+4040,4040: 40% - Mostly in bed; participates in quiet activities
+4050,4050: 50% - Can dress but lies around much of day; no active play; can take part in quiet play/activities
+4060,"4060: 60% - Up and around, but minimal active play; keeps busy with quieter activities"
+4070,4070: 70% - Both greater restriction of and less time spent in play activity
+4080,"4080: 80% - Active, but tires more quickly"
+4090,4090: 90% - Minor restrictions in physically strenuous activity
+4100,"4100: 100% - Fully active, normal"

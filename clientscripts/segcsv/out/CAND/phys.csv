@@ -1,0 +1,33 @@
+CAN_ABO,char,3,$ABO,Patient/s Blood Type,phys
+CAN_AGE_AT_LISTING,num,8,AGE9A,Calculated Candidate Age at Listing,phys
+CAN_AGE_IN_MONTHS_AT_LISTING,num,8,,Calculated Candidate Age in Months at Listing,phys
+CAN_ARTIFICIAL_LI,num,3,,Life Support://Artifical Liver,phys
+CAN_BMI,num,8,,BMI:,phys
+CAN_DGN,num,8,DGN,Primary Diagnosis,phys
+CAN_DGN2,num,8,DGN,Secondary Diagnosis,phys
+CAN_DGN_OSTXT,char,50,,Primary Diagnosis/Specify,phys
+CAN_ECMO,num,3,,Life Support: ECMO,phys
+CAN_ELECTROLYTE,char,1,,Unmanageable fluid-electrolyte losses (IN Pediatric Only),phys
+CAN_EXHAUST_VASC_ACCESS,char,1,,Exhausted Vascular Access,phys
+CAN_FUNCTN_STAT,num,8,FUNCSTAT,Patient/s Functional Status,phys
+CAN_HGT_CM,num,8,,Candidate/s Height (stored in cm),phys
+CAN_HGT_WGT_DT,num,8,MMDDYY,Date of Height & Weight Measurement (Ped Only),phys
+CAN_IABP,num,3,,Life Support: IABP,phys
+CAN_IV_INOTROP,num,3,,Life Support: IV Inotropes,phys
+CAN_LAST_DIAL_PRIOR_WEEK,char,1,,Last non-blank val. of dialysis within prior week,phys
+CAN_LIFE_SUPPORT,char,1,,Patient on Life Support,phys
+CAN_LIFE_SUPPORT_OTHER,num,3,,Life Support: Other Mechanism,phys
+CAN_MOST_RECENT_CREAT,num,8,,Most Recent Absolute Creatinine,phys
+CAN_MOST_RECENT_HGT_CM,num,8,,Candidate/s most recent Waitlist Height in centimeter,phys
+CAN_MOST_RECENT_WGT_KG,num,8,,Candidate/s most recent Waitlist Weight in kilograms,phys
+CAN_MOTOR_DEVELOP,num,8,MOTDEV,Motor Development (Ped Only),phys
+CAN_MUSCLE_WASTING,char,1,,Marked Muscle Wasting,phys
+CAN_NEOPLASM,char,1,,Neoplasm,phys
+CAN_PGE,num,3,,Life Support: PGE,phys
+CAN_PHYSC_CAPACITY,num,8,PHYSCP,Physical Capacity:,phys
+CAN_TOT_ALBUMIN,num,8,,Total Serum Albumin,phys
+CAN_TOT_BILI,num,8,,Total Bilirubin (IN Pediatric Only),phys
+CAN_VAD_TAH,num,8,VADTAH,Life Support: VAD/TAH,phys
+CAN_VARICEAL_BLEEDING,char,1,,Variceal Bleeding within Last Two Weeks,phys
+CAN_VENTILATOR,num,3,,Life Support: Ventilator,phys
+CAN_WGT_KG,num,8,,Candidate/s Weight in kilograms,phys

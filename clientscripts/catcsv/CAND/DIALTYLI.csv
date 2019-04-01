@@ -1,0 +1,7 @@
+1,1: No dialysis
+2,2: Hemodialysis
+3,3: Peritoneal Dialysis
+4,4: CAVH: Continuous Arteriovenous Hemofiltration
+5,5: CV VH: Continuous Venous/Venous Hemofiltration
+998,998: Dialysis Status Unknown
+999,999: Dialysis-Unknown Type was performed

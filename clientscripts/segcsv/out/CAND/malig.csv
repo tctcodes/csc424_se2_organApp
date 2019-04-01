@@ -1,0 +1,16 @@
+CAN_MALIG,char,1,,Any previous Malignancy,malig
+CAN_MALIG_TY,num,8,MALIG,Previous Malignancy Type(s),malig
+CAN_MALIG_TY_BREAST,num,8,,Previous Malignancy - Breast (14),malig
+CAN_MALIG_TY_CNS_TUMOR,num,8,,Previous Malignancy - CNS Tumor (14),malig
+CAN_MALIG_TY_GENITOURINARY,num,8,,Previous Malignancy - Genitourinary (14),malig
+CAN_MALIG_TY_HEPBLAST,num,8,,Previous Malignancy - Hepatoblastoma (14),malig
+CAN_MALIG_TY_HEPCARCINOMA,num,8,,Previous Malignancy - Hepatocellular Carcinoma (14),malig
+CAN_MALIG_TY_LEUK_LYMPH,num,8,,Previous Malignancy - Leukemia/Lymphoma (14),malig
+CAN_MALIG_TY_LIVER,num,8,,Previous Malignancy - Liver (14),malig
+CAN_MALIG_TY_LU,num,8,,Previous Malignancy - Lung (14),malig
+CAN_MALIG_TY_OTHER,num,8,,Previous Malignancy - Other, specify (14),malig
+CAN_MALIG_TY_SKIN_MEL,num,8,,Previous Malignancy - Skin Melanoma (14),malig
+CAN_MALIG_TY_SKIN_NON_MEL,num,8,,Previous Malignancy - Skin Non-Melanoma (14),malig
+CAN_MALIG_TY_THROAT,num,8,,Previous Malignancy - Tongue/Throat/Larynx (14),malig
+CAN_MALIG_TY_THYROID,num,8,,Previous Malignancy - Thyroid (14),malig
+CAN_MALIG_TY_UNK,num,8,,Previous Malignancy - Type Unknown (14),malig

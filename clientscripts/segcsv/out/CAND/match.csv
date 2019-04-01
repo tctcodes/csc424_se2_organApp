@@ -1,0 +1,20 @@
+CAN_ACPT_A2_DON,char,1,,Accept A2 donor?,match
+CAN_ACPT_ABO_INCOMP,char,1,,Accept an incompatible blood type?,match
+CAN_ACPT_EXTRACORP_LI,char,1,,Accept an Extra-corporeal Liver?,match
+CAN_ACPT_HBC_POS,char,1,,Accept an Hepatitis B Core Antibody Positive Donor?,match
+CAN_ACPT_HCV_POS,char,1,,Accept an HCV Antibody Positive Donor?,match
+CAN_ACPT_LI_SEG,char,1,,Accept LI segment,match
+CAN_ACPT_ORG_OTHER_TEAM,char,1,,Accept Intestine if Intestine removed by another procurement team?,match
+CAN_ACPT_PROCUR_KI,char,1,,Accept Intestine if Kidney procured?,match
+CAN_ACPT_PROCUR_LI,char,1,,Accept Intestine if Liver procured?,match
+CAN_ACPT_PROCUR_PA,char,1,,Accept Intestine if Pancreas procured?,match
+CAN_CTP_SCORE,num,8,,Candidate/s CTP score (used for MAOB Liver Variance,match
+CAN_MAX_AGE,num,8,,Maximum acceptable Donor age,match
+CAN_MAX_MILE,num,8,,Maximum miles the implant team will travel,match
+CAN_MAX_WGT,num,8,,Maximum acceptable Donor Weight,match
+CAN_MED_COND,num,8,MEDCOND,Medical Condition,match
+CAN_MIN_AGE,num,8,,Minimum acceptable Donor Age,match
+CAN_MIN_WGT,num,8,,Minimum acceptable Donor Weight,match
+CAN_PRELIM_XMATCH_REQUEST,char,1,,Preliminary Crossmatch Required,match
+CAN_TIEBREAKER_DT,num,8,MMDDYY,Tiebreaker Date - used as the ultimate tiebreaker,match
+WL_ORG,char,4,$WLORG,Organ of this waitlisted record,match

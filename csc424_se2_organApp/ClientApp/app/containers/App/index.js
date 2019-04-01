@@ -84,6 +84,8 @@ export default function App() {
           <PrivateRoute path="/nurse" component={Nurse} />
           <PrivateRoute path="/physician" component={Physician} />
          <PrivateRoute path="/admin" component={Admin} />
+         <Route path="/canform" component={CanForm}/>
+
           <Route component={NotFoundPage} />
         </Switch>
       </BrowserRouter>

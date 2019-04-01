@@ -1,0 +1,21 @@
+4,"4: Deceased Donor tx, removed by transplanting center"
+5,5: Medically Unsuitable
+6,6: Refused transplant
+7,7: Transferred to another center
+8,8: Died
+9,9: Other
+10,10: Candidate listed in error
+11,11: Candidate listed for unacceptable antigens only
+12,"12: Candidate condition improved, tx not needed"
+13,"13: Candidate condition deteriorated , too sick for tx"
+14,14: Transplant at another center (multi-listed)
+15,"15: Living Donor tx, removed by transplanting center"
+16,16: Candidate Removed in Error
+17,17: Changed to KP ( by system )
+18,18: Deceased Donor Emergency Tx
+19,19: Deceased Donor Multi-Organ Tx
+20,20: Program inactive for 2+ years
+21,21: Patient died during TX procedure
+22,22: Transplanted in another country
+23,23: Patient died during Living Donor TX procedure
+24,24: Unable to contact candidate

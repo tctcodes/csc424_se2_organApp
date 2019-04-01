@@ -1,0 +1,15 @@
+,Missing
+1,1: Skin Melanoma
+2,2: Skin Non-Melanoma
+4,4: CNS Tumor
+8,8: Genitourinary
+16,16: Breast
+32,32: Thyroid
+64,64: Tongue/Throat/Larynx
+128,128: Lung
+256,256: Leukemia/Lymphoma
+512,512: Type Unknown
+1024,"1024: Other, specify"
+2048,2048: Liver
+4096,4096: Hepatocellular Carcinoma
+8192,8192: Hepatoblastoma

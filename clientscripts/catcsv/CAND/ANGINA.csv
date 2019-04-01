@@ -1,0 +1,9 @@
+1,1: No angina
+2,2: Stable angina - strenuous activity results in angina
+3,3: Stable angina - ordinary physical activity results in angina
+4,4: Stable angina - no rest angina; does have angina with less than ordinary activity
+5,5: Stable angina - angina with any physical activity or at rest
+6,6: Unstable angina
+7,"7: Angina, stability unknown"
+30,30: Stable angina - activity level resulting in angina is unspecified - old code 3
+998,998: Unknown if angina present
