@@ -16,7 +16,6 @@ using Microsoft.AspNetCore.Authorization;
 namespace csc424_se2_organApp.Controllers
 {
     using BCrypt = BCrypt.Net.BCrypt;
-    
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : Controller{
@@ -67,7 +66,7 @@ namespace csc424_se2_organApp.Controllers
                 var claims = new[]
                 {
                     new Claim(ClaimTypes.Name, user.Email),
-                    new Claim(ClaimTypes.Role, "staff")
+                    new Claim(ClaimTypes.Role, user.Role)
                 };
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
                 var token = new JwtSecurityToken(
@@ -77,9 +76,18 @@ namespace csc424_se2_organApp.Controllers
                 );
                 return Json(new {message = $"{foundUser.Email} signed in", token = new JwtSecurityTokenHandler().WriteToken(token)});
             }
-            
-        
         }
+
+        // [Authorize]
+        [HttpGet]
+        public JsonResult AuthToken(){
+            Console.WriteLine(User.Identity.Name);
+            Console.WriteLine(User.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).SingleOrDefault());
+            return Json (
+                new {message="Authorized", name=$"{User.Identity.Name}", role=$"{User.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).SingleOrDefault()}"}
+            );
+        }
+
         [Authorize(Roles = "staff")]
         [HttpGet]
         public JsonResult test(){

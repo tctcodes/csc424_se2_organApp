@@ -1,8 +1,8 @@
 const axios = require('axios');
-import {makeSelectEmail,makeSelectPassword} from './selectors';
+import {makeSelectEmail,makeSelectPassword, makeSelectRole} from './selectors';
 import { call, put, select, takeLatest } from 'redux-saga/effects';
 import { LOGIN } from './constants';
-import {setToken} from '../AuthWrapper/actions'
+import {setToken} from './actions';
 
 /**
  * Github repos request/response handler
@@ -10,16 +10,22 @@ import {setToken} from '../AuthWrapper/actions'
 export function* login() {
   const email = yield select(makeSelectEmail());
   const password = yield select(makeSelectPassword());
+  const role = yield select(makeSelectRole());
   const body = {
     email,
-    password
+    password,
+    role
   }
   let headers = {
     'Content-Type': 'application/json',
   }
   try{
     const response = yield axios.post("http://localhost:5000/api/User/AuthUser",body,headers);
-    yield put(setToken(response.data.token));
+    if (response.data.token) {
+      localStorage.setItem('token', response.data.token);
+      yield put(setToken(response.data.token));
+    }
+    console.log(localStorage.getItem('token'));
   }
   catch(err){
     console.log(err)

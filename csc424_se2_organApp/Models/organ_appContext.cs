@@ -3788,6 +3788,8 @@ namespace csc424_se2_organApp.Models
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Password).HasColumnName("password");
+
+                entity.Property(e => e.Role).HasColumnName("role");
             });
         }
     }
