@@ -12,6 +12,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import SignUpPage from "containers/SignUpPage/Loadable";
+import CanForm from "containers/CanForm/Loadable";
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 import GlobalStyle from '../../global-styles';
@@ -19,24 +20,30 @@ import LoginPage from 'containers/LoginPage/Loadable';
 import decode from "jwt-decode";
 
 const checkAuth = () => {
+  console.log('im here');
   const token = localStorage.getItem("token");
+  console.log(token);
   const ext = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role";
-  const decoded = decode(token);
+  let decoded;
+  if (token != null){
+    decoded = decode(token);
+  }
   try {
     if (decoded.exp < new Date().getTime() / 1000) {
-      return false;
+      return { success: false};
     }
   } catch (e) {
     console.log(e);
-    return false;
+    return { success: false};
   }
   console.log(decoded[ext]);
+  // return true;
   return { success: true, role: decoded[ext] };
 };
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
-    checkAuth().success
+    checkAuth().success == true
       ? <Component {...props} />
       : <Redirect to={{
         pathname: '/login',
@@ -83,7 +90,7 @@ export default function App() {
           <PrivateRoute path='/protected' component={Protected} />
           <PrivateRoute path="/nurse" component={Nurse} />
           <PrivateRoute path="/physician" component={Physician} />
-         <PrivateRoute path="/admin" component={Admin} />
+          <PrivateRoute path="/admin" component={Admin} />
          <Route path="/canform" component={CanForm}/>
 
           <Route component={NotFoundPage} />
