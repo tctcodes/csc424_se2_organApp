@@ -12,11 +12,20 @@ catPath  ="./catcsv/CAND"
 idre= r'_ID\b'
 research = re.compile(idre,re.I)
 
-###cSharpName()
-def cSharpName(name):
+###capitalCase()
+def capitalCase(name):
     n = name.lower()
     sn = n.split('_')
     cn = list(map(lambda x: x.capitalize(), sn))
+    return ''.join(cn) 
+###
+
+###camelCase()
+def camelCase(name):
+    n = name.lower()
+    sn = n.split('_')
+    cn = list(map(lambda x: x.capitalize(), sn))
+    cn[0] = cn[0].lower()
     return ''.join(cn) 
 ###
 
@@ -80,8 +89,10 @@ for fi, inputFile in enumerate(o) : # index, filename
         # line[0]   line[1] line[2] line[3] line[4] line[5]
         # name      type    size    format  desc    group
         w[fi].write('\t<Form.Group controlId="{0:}{1:}">\n'.format(line[1],line[2]))
-        w[fi].write('\t\t<Form.Label>{0:}</Form.Label>\n'.format(' '.join(line[0].split('_'))))
-        var = cSharpName(line[0])
+        #w[fi].write('\t\t<Form.Label>{0:}</Form.Label>\n'.format(' '.join(line[0].split('_'))))
+        w[fi].write('\t\t<Form.Label>{0:}</Form.Label>\n'.format(line[3]))        
+        capC = capitalCase(line[0])
+        camC = camelCase(line[0])
         # set Form.Control Attributes
         w[fi].write('\t\t<Form.Control ')
         if( line[1] =='num' and research.search(line[0]) != None):  # for all ID's with regx
@@ -112,7 +123,7 @@ for fi, inputFile in enumerate(o) : # index, filename
             closeFiles(w)
             closeFiles(c)
             sys.exit("need new type")
-        varType = varType+'value={{this.props.{0:}}} onChange={{this.props.onChange{0:}}}'.format(var) 
+        varType = varType+' value={{this.props.{0:}}} onChange={{this.props.onChange{1:}}}'.format(camC,capC) 
         w[fi].write(varType+' />\n')
 
         #add line to the file    

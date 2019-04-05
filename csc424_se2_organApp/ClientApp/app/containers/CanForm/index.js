@@ -13,14 +13,16 @@ import { compose } from 'redux';
 import { Tabs, Tab, Form } from 'react-bootstrap';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
-import * as selectors from './selectors';
+import * as selects from './selectors';
 import * as actions from './actions';
 import reducer from './reducer';
 import saga from './saga';
 
 
 export class CanForm extends React.Component {
-    
+    componentDidMount(){
+        this.props.onGetRecordPersId();
+    }
     render(){
         return (<div>
              <Helmet>
@@ -30,712 +32,720 @@ export class CanForm extends React.Component {
             </Helmet>
             <Tabs defaultActiveKey="Personal" id="uncontrolled-tab-example">
             <Tab eventKey="Personal" title="Personal">
-                    <Form>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN ACADEMIC LEVEL</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAcademicLevel} onChange={this.props.onChangeCanAcademicLevel} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN ACADEMIC PROGRESS</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAcademicProgress} onChange={this.props.onChangeCanAcademicProgress} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN CITIZENSHIP</Form.Label>
-                            <Form.Control type="text"value={this.props.CanCitizenship} onChange={this.props.onChangeCanCitizenship} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN EDUCATION</Form.Label>
-                            <Form.Control type="text"value={this.props.CanEducation} onChange={this.props.onChangeCanEducation} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN EMPL STAT</Form.Label>
-                            <Form.Control type="text"value={this.props.CanEmplStat} onChange={this.props.onChangeCanEmplStat} />
-                        </Form.Group>
-                        <Form.Group controlId="char10">
-                            <Form.Label>CAN ETHNICITY SRTR</Form.Label>
-                            <Form.Control type="text"value={this.props.CanEthnicitySrtr} onChange={this.props.onChangeCanEthnicitySrtr} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN GENDER</Form.Label>
-                            <Form.Control type="text"value={this.props.CanGender} onChange={this.props.onChangeCanGender} />
-                        </Form.Group>
-                        <Form.Group controlId="char2">
-                            <Form.Label>CAN PERM STATE</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPermState} onChange={this.props.onChangeCanPermState} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PRIMARY PAY</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrimaryPay} onChange={this.props.onChangeCanPrimaryPay} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN RACE</Form.Label>
-                            <Form.Control type="text"value={this.props.CanRace} onChange={this.props.onChangeCanRace} />
-                        </Form.Group>
-                        <Form.Group controlId="char10">
-                            <Form.Label>CAN RACE SRTR</Form.Label>
-                            <Form.Control type="text"value={this.props.CanRaceSrtr} onChange={this.props.onChangeCanRaceSrtr} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN SECONDARY PAY</Form.Label>
-                            <Form.Control type="text"value={this.props.CanSecondaryPay} onChange={this.props.onChangeCanSecondaryPay} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN WORK INCOME</Form.Label>
-                            <Form.Control type="text"value={this.props.CanWorkIncome} onChange={this.props.onChangeCanWorkIncome} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN WORK NO STAT</Form.Label>
-                            <Form.Control type="text"value={this.props.CanWorkNoStat} onChange={this.props.onChangeCanWorkNoStat} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN WORK YES STAT</Form.Label>
-                            <Form.Control type="text"value={this.props.CanWorkYesStat} onChange={this.props.onChangeCanWorkYesStat} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN YEAR ENTRY US</Form.Label>
-                            <Form.Control type="text"value={this.props.CanYearEntryUs} onChange={this.props.onChangeCanYearEntryUs} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>PERS ID</Form.Label>
-                            <Form.Control type="text" readonlyvalue={this.props.PersId} onChange={this.props.onChangePersId} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>PX ID</Form.Label>
-                            <Form.Control type="text" readonlyvalue={this.props.PxId} onChange={this.props.onChangePxId} />
-                        </Form.Group>
-                    </Form>
+            <Form>
+                <Form.Group controlId="num8">
+                    <Form.Label>ACDMACTV</Form.Label>
+                    <Form.Control type="text" value={this.props.canAcademicLevel} onChange={this.props.onChangeCanAcademicLevel} />
+                </Form.Group>
+                <Form.Group controlId="num8">
+                    <Form.Label>ACDMPRG</Form.Label>
+                    <Form.Control type="text" value={this.props.canAcademicProgress} onChange={this.props.onChangeCanAcademicProgress} />
+                </Form.Group>
+                <Form.Group controlId="num8">
+                    <Form.Label>CTZNLDTC</Form.Label>
+                    <Form.Control type="text" value={this.props.canCitizenship} onChange={this.props.onChangeCanCitizenship} />
+                </Form.Group>
+                <Form.Group controlId="num8">
+                    <Form.Label>EDLEVEL</Form.Label>
+                    <Form.Control type="text" value={this.props.canEducation} onChange={this.props.onChangeCanEducation} />
+                </Form.Group>
+                <Form.Group controlId="num8">
+                    <Form.Label>EMPLSTAT</Form.Label>
+                    <Form.Control type="text" value={this.props.canEmplStat} onChange={this.props.onChangeCanEmplStat} />
+                </Form.Group>
+                <Form.Group controlId="char10">
+                    <Form.Label>$ETHSR</Form.Label>
+                    <Form.Control type="text" value={this.props.canEthnicitySrtr} onChange={this.props.onChangeCanEthnicitySrtr} />
+                </Form.Group>
+                <Form.Group controlId="char1">
+                    <Form.Label></Form.Label>
+                    <Form.Control type="text" value={this.props.canGender} onChange={this.props.onChangeCanGender} />
+                </Form.Group>
+                <Form.Group controlId="char2">
+                    <Form.Label>$STATE</Form.Label>
+                    <Form.Control type="text" value={this.props.canPermState} onChange={this.props.onChangeCanPermState} />
+                </Form.Group>
+                <Form.Group controlId="num8">
+                    <Form.Label>PRMSRCPY</Form.Label>
+                    <Form.Control type="text" value={this.props.canPrimaryPay} onChange={this.props.onChangeCanPrimaryPay} />
+                </Form.Group>
+                <Form.Group controlId="num8">
+                    <Form.Label>RACE</Form.Label>
+                    <Form.Control type="text" value={this.props.canRace} onChange={this.props.onChangeCanRace} />
+                </Form.Group>
+                <Form.Group controlId="char10">
+                    <Form.Label>$RACEBSR</Form.Label>
+                    <Form.Control type="text" value={this.props.canRaceSrtr} onChange={this.props.onChangeCanRaceSrtr} />
+                </Form.Group>
+                <Form.Group controlId="num8">
+                    <Form.Label>SNDSRCPY</Form.Label>
+                    <Form.Control type="text" value={this.props.canSecondaryPay} onChange={this.props.onChangeCanSecondaryPay} />
+                </Form.Group>
+                <Form.Group controlId="char1">
+                    <Form.Label></Form.Label>
+                    <Form.Control type="text" value={this.props.canWorkIncome} onChange={this.props.onChangeCanWorkIncome} />
+                </Form.Group>
+                <Form.Group controlId="num8">
+                    <Form.Label>NOTWRK</Form.Label>
+                    <Form.Control type="text" value={this.props.canWorkNoStat} onChange={this.props.onChangeCanWorkNoStat} />
+                </Form.Group>
+                <Form.Group controlId="num8">
+                    <Form.Label>WRKNCM</Form.Label>
+                    <Form.Control type="text" value={this.props.canWorkYesStat} onChange={this.props.onChangeCanWorkYesStat} />
+                </Form.Group>
+                <Form.Group controlId="num8">
+                    <Form.Label></Form.Label>
+                    <Form.Control type="text" value={this.props.canYearEntryUs} onChange={this.props.onChangeCanYearEntryUs} />
+                </Form.Group>
+                <Form.Group controlId="num8">
+                    <Form.Label></Form.Label>
+                    <Form.Control type="text" readonly value={this.props.persId} onChange={this.props.onChangePersId} />
+                </Form.Group>
+                <Form.Group controlId="num8">
+                    <Form.Label></Form.Label>
+                    <Form.Control type="text" readonly value={this.props.pxId} onChange={this.props.onChangePxId} />
+                </Form.Group>
+            </Form>
+
                 </Tab>
                 <Tab eventKey="History" title="History">
-                    <Form>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN ANGINA</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAngina} onChange={this.props.onChangeCanAngina} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN ANGINA CAD</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAnginaCad} onChange={this.props.onChangeCanAnginaCad} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN ASCITES</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAscites} onChange={this.props.onChangeCanAscites} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN BACTERIA PERIT</Form.Label>
-                            <Form.Control type="text"value={this.props.CanBacteriaPerit} onChange={this.props.onChangeCanBacteriaPerit} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN CEREB VASC</Form.Label>
-                            <Form.Control type="text"value={this.props.CanCerebVasc} onChange={this.props.onChangeCanCerebVasc} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN COGNITIVE DEVELOP</Form.Label>
-                            <Form.Control type="text"value={this.props.CanCognitiveDevelop} onChange={this.props.onChangeCanCognitiveDevelop} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN DIAB</Form.Label>
-                            <Form.Control type="text"value={this.props.CanDiab} onChange={this.props.onChangeCanDiab} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN DIAB TY</Form.Label>
-                            <Form.Control type="text"value={this.props.CanDiabTy} onChange={this.props.onChangeCanDiabTy} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN DIAL</Form.Label>
-                            <Form.Control type="text"value={this.props.CanDial} onChange={this.props.onChangeCanDial} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN DRUG TREAT COPD</Form.Label>
-                            <Form.Control type="text"value={this.props.CanDrugTreatCopd} onChange={this.props.onChangeCanDrugTreatCopd} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN DRUG TREAT HYPERTEN</Form.Label>
-                            <Form.Control type="text"value={this.props.CanDrugTreatHyperten} onChange={this.props.onChangeCanDrugTreatHyperten} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN ENCEPH</Form.Label>
-                            <Form.Control type="text"value={this.props.CanEnceph} onChange={this.props.onChangeCanEnceph} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN FUNGAL SEPSIS</Form.Label>
-                            <Form.Control type="text"value={this.props.CanFungalSepsis} onChange={this.props.onChangeCanFungalSepsis} />
-                        </Form.Group>
-                        <Form.Group controlId="num3">
-                            <Form.Label>CAN LIVING DON TX</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLivingDonTx} onChange={this.props.onChangeCanLivingDonTx} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN LI DYSFUNCTN</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLiDysfunctn} onChange={this.props.onChangeCanLiDysfunctn} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN LOSS VASC ACCESS</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLossVascAccess} onChange={this.props.onChangeCanLossVascAccess} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN NEW PREV PI TX</Form.Label>
-                            <Form.Control type="text"value={this.props.CanNewPrevPiTx} onChange={this.props.onChangeCanNewPrevPiTx} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN NON RECON GI</Form.Label>
-                            <Form.Control type="text"value={this.props.CanNonReconGi} onChange={this.props.onChangeCanNonReconGi} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PEPTIC ULCER</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPepticUlcer} onChange={this.props.onChangeCanPepticUlcer} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN PERIPH VASC</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPeriphVasc} onChange={this.props.onChangeCanPeriphVasc} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN PORTAL VEIN</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPortalVein} onChange={this.props.onChangeCanPortalVein} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN PREV ABDOM SURG</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrevAbdomSurg} onChange={this.props.onChangeCanPrevAbdomSurg} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PREV BONE MARROW DT</Form.Label>
-                            <Form.Control type="date"value={this.props.CanPrevBoneMarrowDt} onChange={this.props.onChangeCanPrevBoneMarrowDt} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PREV BONE MARROW TX</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrevBoneMarrowTx} onChange={this.props.onChangeCanPrevBoneMarrowTx} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PREV HL</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrevHl} onChange={this.props.onChangeCanPrevHl} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PREV HR</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrevHr} onChange={this.props.onChangeCanPrevHr} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PREV IN</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrevIn} onChange={this.props.onChangeCanPrevIn} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PREV KI</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrevKi} onChange={this.props.onChangeCanPrevKi} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PREV KP</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrevKp} onChange={this.props.onChangeCanPrevKp} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PREV LI</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrevLi} onChange={this.props.onChangeCanPrevLi} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PREV LU</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrevLu} onChange={this.props.onChangeCanPrevLu} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PREV PA</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrevPa} onChange={this.props.onChangeCanPrevPa} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PREV TX</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrevTx} onChange={this.props.onChangeCanPrevTx} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN PREV TXFUS</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrevTxfus} onChange={this.props.onChangeCanPrevTxfus} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN PULM EMBOL</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPulmEmbol} onChange={this.props.onChangeCanPulmEmbol} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN RECUR SEPSIS</Form.Label>
-                            <Form.Control type="text"value={this.props.CanRecurSepsis} onChange={this.props.onChangeCanRecurSepsis} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN TIPSS</Form.Label>
-                            <Form.Control type="text"value={this.props.CanTipss} onChange={this.props.onChangeCanTipss} />
-                        </Form.Group>
-                    </Form>
+                <Form>
+                    <Form.Group controlId="num8">
+                        <Form.Label>ANGINA</Form.Label>
+                        <Form.Control type="text" value={this.props.canAngina} onChange={this.props.onChangeCanAngina} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>ANGNACAD</Form.Label>
+                        <Form.Control type="text" value={this.props.canAnginaCad} onChange={this.props.onChangeCanAnginaCad} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canAscites} onChange={this.props.onChangeCanAscites} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canBacteriaPerit} onChange={this.props.onChangeCanBacteriaPerit} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canCerebVasc} onChange={this.props.onChangeCanCerebVasc} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>COGDEV</Form.Label>
+                        <Form.Control type="text" value={this.props.canCognitiveDevelop} onChange={this.props.onChangeCanCognitiveDevelop} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>DBINSLDP</Form.Label>
+                        <Form.Control type="text" value={this.props.canDiab} onChange={this.props.onChangeCanDiab} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>DIABTY</Form.Label>
+                        <Form.Control type="text" value={this.props.canDiabTy} onChange={this.props.onChangeCanDiabTy} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>DIALTYLI</Form.Label>
+                        <Form.Control type="text" value={this.props.canDial} onChange={this.props.onChangeCanDial} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canDrugTreatCopd} onChange={this.props.onChangeCanDrugTreatCopd} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canDrugTreatHyperten} onChange={this.props.onChangeCanDrugTreatHyperten} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canEnceph} onChange={this.props.onChangeCanEnceph} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canFungalSepsis} onChange={this.props.onChangeCanFungalSepsis} />
+                    </Form.Group>
+                    <Form.Group controlId="num3">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canLivingDonTx} onChange={this.props.onChangeCanLivingDonTx} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canLiDysfunctn} onChange={this.props.onChangeCanLiDysfunctn} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canLossVascAccess} onChange={this.props.onChangeCanLossVascAccess} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canNewPrevPiTx} onChange={this.props.onChangeCanNewPrevPiTx} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canNonReconGi} onChange={this.props.onChangeCanNonReconGi} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>PEPULCER</Form.Label>
+                        <Form.Control type="text" value={this.props.canPepticUlcer} onChange={this.props.onChangeCanPepticUlcer} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPeriphVasc} onChange={this.props.onChangeCanPeriphVasc} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPortalVein} onChange={this.props.onChangeCanPortalVein} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPrevAbdomSurg} onChange={this.props.onChangeCanPrevAbdomSurg} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>MMDDYY</Form.Label>
+                        <Form.Control type="date" value={this.props.canPrevBoneMarrowDt} onChange={this.props.onChangeCanPrevBoneMarrowDt} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPrevBoneMarrowTx} onChange={this.props.onChangeCanPrevBoneMarrowTx} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPrevHl} onChange={this.props.onChangeCanPrevHl} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPrevHr} onChange={this.props.onChangeCanPrevHr} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPrevIn} onChange={this.props.onChangeCanPrevIn} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPrevKi} onChange={this.props.onChangeCanPrevKi} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPrevKp} onChange={this.props.onChangeCanPrevKp} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPrevLi} onChange={this.props.onChangeCanPrevLi} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPrevLu} onChange={this.props.onChangeCanPrevLu} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPrevPa} onChange={this.props.onChangeCanPrevPa} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPrevTx} onChange={this.props.onChangeCanPrevTx} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPrevTxfus} onChange={this.props.onChangeCanPrevTxfus} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPulmEmbol} onChange={this.props.onChangeCanPulmEmbol} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canRecurSepsis} onChange={this.props.onChangeCanRecurSepsis} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canTipss} onChange={this.props.onChangeCanTipss} />
+                    </Form.Group>
+                </Form>
+
                 </Tab>
                 <Tab eventKey="Physiology" title="Physiology">
-                    <Form>
-                        <Form.Group controlId="char3">
-                            <Form.Label>CAN ABO</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAbo} onChange={this.props.onChangeCanAbo} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN AGE AT LISTING</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAgeAtListing} onChange={this.props.onChangeCanAgeAtListing} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN AGE IN MONTHS AT LISTING</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAgeInMonthsAtListing} onChange={this.props.onChangeCanAgeInMonthsAtListing} />
-                        </Form.Group>
-                        <Form.Group controlId="num3">
-                            <Form.Label>CAN ARTIFICIAL LI</Form.Label>
-                            <Form.Control type="text"value={this.props.CanArtificialLi} onChange={this.props.onChangeCanArtificialLi} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN BMI</Form.Label>
-                            <Form.Control type="text"value={this.props.CanBmi} onChange={this.props.onChangeCanBmi} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN DGN</Form.Label>
-                            <Form.Control type="text"value={this.props.CanDgn} onChange={this.props.onChangeCanDgn} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN DGN2</Form.Label>
-                            <Form.Control type="text"value={this.props.CanDgn2} onChange={this.props.onChangeCanDgn2} />
-                        </Form.Group>
-                        <Form.Group controlId="char50">
-                            <Form.Label>CAN DGN OSTXT</Form.Label>
-                            <Form.Control as="textarea" rows="3"value={this.props.CanDgnOstxt} onChange={this.props.onChangeCanDgnOstxt} />
-                        </Form.Group>
-                        <Form.Group controlId="num3">
-                            <Form.Label>CAN ECMO</Form.Label>
-                            <Form.Control type="text"value={this.props.CanEcmo} onChange={this.props.onChangeCanEcmo} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN ELECTROLYTE</Form.Label>
-                            <Form.Control type="text"value={this.props.CanElectrolyte} onChange={this.props.onChangeCanElectrolyte} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN EXHAUST VASC ACCESS</Form.Label>
-                            <Form.Control type="text"value={this.props.CanExhaustVascAccess} onChange={this.props.onChangeCanExhaustVascAccess} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN FUNCTN STAT</Form.Label>
-                            <Form.Control type="text"value={this.props.CanFunctnStat} onChange={this.props.onChangeCanFunctnStat} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN HGT CM</Form.Label>
-                            <Form.Control type="text"value={this.props.CanHgtCm} onChange={this.props.onChangeCanHgtCm} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN HGT WGT DT</Form.Label>
-                            <Form.Control type="date"value={this.props.CanHgtWgtDt} onChange={this.props.onChangeCanHgtWgtDt} />
-                        </Form.Group>
-                        <Form.Group controlId="num3">
-                            <Form.Label>CAN IABP</Form.Label>
-                            <Form.Control type="text"value={this.props.CanIabp} onChange={this.props.onChangeCanIabp} />
-                        </Form.Group>
-                        <Form.Group controlId="num3">
-                            <Form.Label>CAN IV INOTROP</Form.Label>
-                            <Form.Control type="text"value={this.props.CanIvInotrop} onChange={this.props.onChangeCanIvInotrop} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN LAST DIAL PRIOR WEEK</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLastDialPriorWeek} onChange={this.props.onChangeCanLastDialPriorWeek} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN LIFE SUPPORT</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLifeSupport} onChange={this.props.onChangeCanLifeSupport} />
-                        </Form.Group>
-                        <Form.Group controlId="num3">
-                            <Form.Label>CAN LIFE SUPPORT OTHER</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLifeSupportOther} onChange={this.props.onChangeCanLifeSupportOther} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MOST RECENT CREAT</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMostRecentCreat} onChange={this.props.onChangeCanMostRecentCreat} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MOST RECENT HGT CM</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMostRecentHgtCm} onChange={this.props.onChangeCanMostRecentHgtCm} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MOST RECENT WGT KG</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMostRecentWgtKg} onChange={this.props.onChangeCanMostRecentWgtKg} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MOTOR DEVELOP</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMotorDevelop} onChange={this.props.onChangeCanMotorDevelop} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN MUSCLE WASTING</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMuscleWasting} onChange={this.props.onChangeCanMuscleWasting} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN NEOPLASM</Form.Label>
-                            <Form.Control type="text"value={this.props.CanNeoplasm} onChange={this.props.onChangeCanNeoplasm} />
-                        </Form.Group>
-                        <Form.Group controlId="num3">
-                            <Form.Label>CAN PGE</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPge} onChange={this.props.onChangeCanPge} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN PHYSC CAPACITY</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPhyscCapacity} onChange={this.props.onChangeCanPhyscCapacity} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN TOT ALBUMIN</Form.Label>
-                            <Form.Control type="text"value={this.props.CanTotAlbumin} onChange={this.props.onChangeCanTotAlbumin} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN TOT BILI</Form.Label>
-                            <Form.Control type="text"value={this.props.CanTotBili} onChange={this.props.onChangeCanTotBili} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN VAD TAH</Form.Label>
-                            <Form.Control type="text"value={this.props.CanVadTah} onChange={this.props.onChangeCanVadTah} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN VARICEAL BLEEDING</Form.Label>
-                            <Form.Control type="text"value={this.props.CanVaricealBleeding} onChange={this.props.onChangeCanVaricealBleeding} />
-                        </Form.Group>
-                        <Form.Group controlId="num3">
-                            <Form.Label>CAN VENTILATOR</Form.Label>
-                            <Form.Control type="text"value={this.props.CanVentilator} onChange={this.props.onChangeCanVentilator} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN WGT KG</Form.Label>
-                            <Form.Control type="text"value={this.props.CanWgtKg} onChange={this.props.onChangeCanWgtKg} />
-                        </Form.Group>
-                    </Form>
+                <Form>
+                    <Form.Group controlId="char3">
+                        <Form.Label>$ABO</Form.Label>
+                        <Form.Control type="text" value={this.props.canAbo} onChange={this.props.onChangeCanAbo} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>AGE9A</Form.Label>
+                        <Form.Control type="text" value={this.props.canAgeAtListing} onChange={this.props.onChangeCanAgeAtListing} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canAgeInMonthsAtListing} onChange={this.props.onChangeCanAgeInMonthsAtListing} />
+                    </Form.Group>
+                    <Form.Group controlId="num3">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canArtificialLi} onChange={this.props.onChangeCanArtificialLi} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canBmi} onChange={this.props.onChangeCanBmi} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>DGN</Form.Label>
+                        <Form.Control type="text" value={this.props.canDgn} onChange={this.props.onChangeCanDgn} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>DGN</Form.Label>
+                        <Form.Control type="text" value={this.props.canDgn2} onChange={this.props.onChangeCanDgn2} />
+                    </Form.Group>
+                    <Form.Group controlId="char50">
+                        <Form.Label></Form.Label>
+                        <Form.Control as="textarea" rows="3" value={this.props.canDgnOstxt} onChange={this.props.onChangeCanDgnOstxt} />
+                    </Form.Group>
+                    <Form.Group controlId="num3">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canEcmo} onChange={this.props.onChangeCanEcmo} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canElectrolyte} onChange={this.props.onChangeCanElectrolyte} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canExhaustVascAccess} onChange={this.props.onChangeCanExhaustVascAccess} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>FUNCSTAT</Form.Label>
+                        <Form.Control type="text" value={this.props.canFunctnStat} onChange={this.props.onChangeCanFunctnStat} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canHgtCm} onChange={this.props.onChangeCanHgtCm} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>MMDDYY</Form.Label>
+                        <Form.Control type="date" value={this.props.canHgtWgtDt} onChange={this.props.onChangeCanHgtWgtDt} />
+                    </Form.Group>
+                    <Form.Group controlId="num3">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canIabp} onChange={this.props.onChangeCanIabp} />
+                    </Form.Group>
+                    <Form.Group controlId="num3">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canIvInotrop} onChange={this.props.onChangeCanIvInotrop} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canLastDialPriorWeek} onChange={this.props.onChangeCanLastDialPriorWeek} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canLifeSupport} onChange={this.props.onChangeCanLifeSupport} />
+                    </Form.Group>
+                    <Form.Group controlId="num3">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canLifeSupportOther} onChange={this.props.onChangeCanLifeSupportOther} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMostRecentCreat} onChange={this.props.onChangeCanMostRecentCreat} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMostRecentHgtCm} onChange={this.props.onChangeCanMostRecentHgtCm} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMostRecentWgtKg} onChange={this.props.onChangeCanMostRecentWgtKg} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>MOTDEV</Form.Label>
+                        <Form.Control type="text" value={this.props.canMotorDevelop} onChange={this.props.onChangeCanMotorDevelop} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMuscleWasting} onChange={this.props.onChangeCanMuscleWasting} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canNeoplasm} onChange={this.props.onChangeCanNeoplasm} />
+                    </Form.Group>
+                    <Form.Group controlId="num3">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canPge} onChange={this.props.onChangeCanPge} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>PHYSCP</Form.Label>
+                        <Form.Control type="text" value={this.props.canPhyscCapacity} onChange={this.props.onChangeCanPhyscCapacity} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canTotAlbumin} onChange={this.props.onChangeCanTotAlbumin} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canTotBili} onChange={this.props.onChangeCanTotBili} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>VADTAH</Form.Label>
+                        <Form.Control type="text" value={this.props.canVadTah} onChange={this.props.onChangeCanVadTah} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canVaricealBleeding} onChange={this.props.onChangeCanVaricealBleeding} />
+                    </Form.Group>
+                    <Form.Group controlId="num3">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canVentilator} onChange={this.props.onChangeCanVentilator} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canWgtKg} onChange={this.props.onChangeCanWgtKg} />
+                    </Form.Group>
+                </Form>
+
                 </Tab>
                 <Tab eventKey="MELD/PLED" title="MELD/PLED">
-                    <Form>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN INIT SRTR LAB MELD</Form.Label>
-                            <Form.Control type="text"value={this.props.CanInitSrtrLabMeld} onChange={this.props.onChangeCanInitSrtrLabMeld} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN INIT SRTR LAB MELD TY</Form.Label>
-                            <Form.Control type="text"value={this.props.CanInitSrtrLabMeldTy} onChange={this.props.onChangeCanInitSrtrLabMeldTy} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN LAST ALBUMIN</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLastAlbumin} onChange={this.props.onChangeCanLastAlbumin} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN LAST ASCITES</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLastAscites} onChange={this.props.onChangeCanLastAscites} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN LAST BILI</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLastBili} onChange={this.props.onChangeCanLastBili} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN LAST ENCEPH</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLastEnceph} onChange={this.props.onChangeCanLastEnceph} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN LAST INR</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLastInr} onChange={this.props.onChangeCanLastInr} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN LAST SERUM CREAT</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLastSerumCreat} onChange={this.props.onChangeCanLastSerumCreat} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN LAST SERUM SODIUM</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLastSerumSodium} onChange={this.props.onChangeCanLastSerumSodium} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN LAST SRTR LAB MELD</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLastSrtrLabMeld} onChange={this.props.onChangeCanLastSrtrLabMeld} />
-                        </Form.Group>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN LAST SRTR LAB MELD TY</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLastSrtrLabMeldTy} onChange={this.props.onChangeCanLastSrtrLabMeldTy} />
-                        </Form.Group>
-                    </Form>
+                <Form>
+                    <Form.Group controlId="num8">
+                        <Form.Label>CANDSTAT</Form.Label>
+                        <Form.Control type="text" value={this.props.canInitSrtrLabMeld} onChange={this.props.onChangeCanInitSrtrLabMeld} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canInitSrtrLabMeldTy} onChange={this.props.onChangeCanInitSrtrLabMeldTy} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canLastAlbumin} onChange={this.props.onChangeCanLastAlbumin} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>ASCITES</Form.Label>
+                        <Form.Control type="text" value={this.props.canLastAscites} onChange={this.props.onChangeCanLastAscites} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canLastBili} onChange={this.props.onChangeCanLastBili} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>ENCEPH</Form.Label>
+                        <Form.Control type="text" value={this.props.canLastEnceph} onChange={this.props.onChangeCanLastEnceph} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canLastInr} onChange={this.props.onChangeCanLastInr} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canLastSerumCreat} onChange={this.props.onChangeCanLastSerumCreat} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canLastSerumSodium} onChange={this.props.onChangeCanLastSerumSodium} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>CANDSTAT</Form.Label>
+                        <Form.Control type="text" value={this.props.canLastSrtrLabMeld} onChange={this.props.onChangeCanLastSrtrLabMeld} />
+                    </Form.Group>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canLastSrtrLabMeldTy} onChange={this.props.onChangeCanLastSrtrLabMeldTy} />
+                    </Form.Group>
+                </Form>
+
                 </Tab>
                 <Tab eventKey="Match" title="Match">
                     <Form>
                         <Form.Group controlId="char1">
-                            <Form.Label>CAN ACPT A2 DON</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAcptA2Don} onChange={this.props.onChangeCanAcptA2Don} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canAcptA2Don} onChange={this.props.onChangeCanAcptA2Don} />
                         </Form.Group>
                         <Form.Group controlId="char1">
-                            <Form.Label>CAN ACPT ABO INCOMP</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAcptAboIncomp} onChange={this.props.onChangeCanAcptAboIncomp} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canAcptAboIncomp} onChange={this.props.onChangeCanAcptAboIncomp} />
                         </Form.Group>
                         <Form.Group controlId="char1">
-                            <Form.Label>CAN ACPT EXTRACORP LI</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAcptExtracorpLi} onChange={this.props.onChangeCanAcptExtracorpLi} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canAcptExtracorpLi} onChange={this.props.onChangeCanAcptExtracorpLi} />
                         </Form.Group>
                         <Form.Group controlId="char1">
-                            <Form.Label>CAN ACPT HBC POS</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAcptHbcPos} onChange={this.props.onChangeCanAcptHbcPos} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canAcptHbcPos} onChange={this.props.onChangeCanAcptHbcPos} />
                         </Form.Group>
                         <Form.Group controlId="char1">
-                            <Form.Label>CAN ACPT HCV POS</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAcptHcvPos} onChange={this.props.onChangeCanAcptHcvPos} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canAcptHcvPos} onChange={this.props.onChangeCanAcptHcvPos} />
                         </Form.Group>
                         <Form.Group controlId="char1">
-                            <Form.Label>CAN ACPT LI SEG</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAcptLiSeg} onChange={this.props.onChangeCanAcptLiSeg} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canAcptLiSeg} onChange={this.props.onChangeCanAcptLiSeg} />
                         </Form.Group>
                         <Form.Group controlId="char1">
-                            <Form.Label>CAN ACPT ORG OTHER TEAM</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAcptOrgOtherTeam} onChange={this.props.onChangeCanAcptOrgOtherTeam} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canAcptOrgOtherTeam} onChange={this.props.onChangeCanAcptOrgOtherTeam} />
                         </Form.Group>
                         <Form.Group controlId="char1">
-                            <Form.Label>CAN ACPT PROCUR KI</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAcptProcurKi} onChange={this.props.onChangeCanAcptProcurKi} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canAcptProcurKi} onChange={this.props.onChangeCanAcptProcurKi} />
                         </Form.Group>
                         <Form.Group controlId="char1">
-                            <Form.Label>CAN ACPT PROCUR LI</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAcptProcurLi} onChange={this.props.onChangeCanAcptProcurLi} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canAcptProcurLi} onChange={this.props.onChangeCanAcptProcurLi} />
                         </Form.Group>
                         <Form.Group controlId="char1">
-                            <Form.Label>CAN ACPT PROCUR PA</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAcptProcurPa} onChange={this.props.onChangeCanAcptProcurPa} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canAcptProcurPa} onChange={this.props.onChangeCanAcptProcurPa} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>CAN CTP SCORE</Form.Label>
-                            <Form.Control type="text"value={this.props.CanCtpScore} onChange={this.props.onChangeCanCtpScore} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canCtpScore} onChange={this.props.onChangeCanCtpScore} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>CAN MAX AGE</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaxAge} onChange={this.props.onChangeCanMaxAge} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canMaxAge} onChange={this.props.onChangeCanMaxAge} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>CAN MAX MILE</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaxMile} onChange={this.props.onChangeCanMaxMile} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canMaxMile} onChange={this.props.onChangeCanMaxMile} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>CAN MAX WGT</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaxWgt} onChange={this.props.onChangeCanMaxWgt} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canMaxWgt} onChange={this.props.onChangeCanMaxWgt} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>CAN MED COND</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMedCond} onChange={this.props.onChangeCanMedCond} />
+                            <Form.Label>MEDCOND</Form.Label>
+                            <Form.Control type="text" value={this.props.canMedCond} onChange={this.props.onChangeCanMedCond} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>CAN MIN AGE</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMinAge} onChange={this.props.onChangeCanMinAge} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canMinAge} onChange={this.props.onChangeCanMinAge} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>CAN MIN WGT</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMinWgt} onChange={this.props.onChangeCanMinWgt} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canMinWgt} onChange={this.props.onChangeCanMinWgt} />
                         </Form.Group>
                         <Form.Group controlId="char1">
-                            <Form.Label>CAN PRELIM XMATCH REQUEST</Form.Label>
-                            <Form.Control type="text"value={this.props.CanPrelimXmatchRequest} onChange={this.props.onChangeCanPrelimXmatchRequest} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canPrelimXmatchRequest} onChange={this.props.onChangeCanPrelimXmatchRequest} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>CAN TIEBREAKER DT</Form.Label>
-                            <Form.Control type="date"value={this.props.CanTiebreakerDt} onChange={this.props.onChangeCanTiebreakerDt} />
+                            <Form.Label>MMDDYY</Form.Label>
+                            <Form.Control type="date" value={this.props.canTiebreakerDt} onChange={this.props.onChangeCanTiebreakerDt} />
                         </Form.Group>
                         <Form.Group controlId="char4">
-                            <Form.Label>WL ORG</Form.Label>
-                            <Form.Control type="text"value={this.props.WlOrg} onChange={this.props.onChangeWlOrg} />
+                            <Form.Label>$WLORG</Form.Label>
+                            <Form.Control type="text" value={this.props.wlOrg} onChange={this.props.onChangeWlOrg} />
                         </Form.Group>
                     </Form>
+
                 </Tab>
                 <Tab eventKey="Status" title="Status">
-                    <Form>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN ACTIVATE DT</Form.Label>
-                            <Form.Control type="date"value={this.props.CanActivateDt} onChange={this.props.onChangeCanActivateDt} />
-                        </Form.Group>
-                        <Form.Group controlId="num3">
-                            <Form.Label>CAN ANESTH PRIOR DEATH</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAnesthPriorDeath} onChange={this.props.onChangeCanAnesthPriorDeath} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN DEATH DT</Form.Label>
-                            <Form.Control type="date"value={this.props.CanDeathDt} onChange={this.props.onChangeCanDeathDt} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN ENDWLFU</Form.Label>
-                            <Form.Control type="date"value={this.props.CanEndwlfu} onChange={this.props.onChangeCanEndwlfu} />
-                        </Form.Group>
-                        <Form.Group controlId="num3">
-                            <Form.Label>CAN FOLLOWS OPO ALLOC</Form.Label>
-                            <Form.Control type="text"value={this.props.CanFollowsOpoAlloc} onChange={this.props.onChangeCanFollowsOpoAlloc} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN INIT ACT STAT CD</Form.Label>
-                            <Form.Control type="text"value={this.props.CanInitActStatCd} onChange={this.props.onChangeCanInitActStatCd} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN INIT ACT STAT DT</Form.Label>
-                            <Form.Control type="date"value={this.props.CanInitActStatDt} onChange={this.props.onChangeCanInitActStatDt} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN INIT INACT STAT DT</Form.Label>
-                            <Form.Control type="date"value={this.props.CanInitInactStatDt} onChange={this.props.onChangeCanInitInactStatDt} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN INIT STAT</Form.Label>
-                            <Form.Control type="text"value={this.props.CanInitStat} onChange={this.props.onChangeCanInitStat} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN LAST ACT STAT DT</Form.Label>
-                            <Form.Control type="date"value={this.props.CanLastActStatDt} onChange={this.props.onChangeCanLastActStatDt} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN LAST INACT STAT DT</Form.Label>
-                            <Form.Control type="date"value={this.props.CanLastInactStatDt} onChange={this.props.onChangeCanLastInactStatDt} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN LAST STAT</Form.Label>
-                            <Form.Control type="text"value={this.props.CanLastStat} onChange={this.props.onChangeCanLastStat} />
-                        </Form.Group>
-                        <Form.Group controlId="num4">
-                            <Form.Label>CAN LISTING CTR ID</Form.Label>
-                            <Form.Control type="text" readonlyvalue={this.props.CanListingCtrId} onChange={this.props.onChangeCanListingCtrId} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN LISTING DT</Form.Label>
-                            <Form.Control type="date"value={this.props.CanListingDt} onChange={this.props.onChangeCanListingDt} />
-                        </Form.Group>
-                        <Form.Group controlId="num4">
-                            <Form.Label>CAN LISTING OPO ID</Form.Label>
-                            <Form.Control type="text" readonlyvalue={this.props.CanListingOpoId} onChange={this.props.onChangeCanListingOpoId} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN REM CD</Form.Label>
-                            <Form.Control type="text"value={this.props.CanRemCd} onChange={this.props.onChangeCanRemCd} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN REM COD</Form.Label>
-                            <Form.Control type="text"value={this.props.CanRemCod} onChange={this.props.onChangeCanRemCod} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN REM DT</Form.Label>
-                            <Form.Control type="date"value={this.props.CanRemDt} onChange={this.props.onChangeCanRemDt} />
-                        </Form.Group>
-                        <Form.Group controlId="num3">
-                            <Form.Label>CAN STAT EXTEND FLG</Form.Label>
-                            <Form.Control type="text"value={this.props.CanStatExtendFlg} onChange={this.props.onChangeCanStatExtendFlg} />
-                        </Form.Group>
-                    </Form>
+                <Form>
+                    <Form.Group controlId="num8">
+                        <Form.Label>MMDDYY</Form.Label>
+                        <Form.Control type="date" value={this.props.canActivateDt} onChange={this.props.onChangeCanActivateDt} />
+                    </Form.Group>
+                    <Form.Group controlId="num3">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canAnesthPriorDeath} onChange={this.props.onChangeCanAnesthPriorDeath} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>MMDDYY</Form.Label>
+                        <Form.Control type="date" value={this.props.canDeathDt} onChange={this.props.onChangeCanDeathDt} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>MMDDYY</Form.Label>
+                        <Form.Control type="date" value={this.props.canEndwlfu} onChange={this.props.onChangeCanEndwlfu} />
+                    </Form.Group>
+                    <Form.Group controlId="num3">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canFollowsOpoAlloc} onChange={this.props.onChangeCanFollowsOpoAlloc} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>CANDSTAT</Form.Label>
+                        <Form.Control type="text" value={this.props.canInitActStatCd} onChange={this.props.onChangeCanInitActStatCd} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>MMDDYY</Form.Label>
+                        <Form.Control type="date" value={this.props.canInitActStatDt} onChange={this.props.onChangeCanInitActStatDt} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>MMDDYY</Form.Label>
+                        <Form.Control type="date" value={this.props.canInitInactStatDt} onChange={this.props.onChangeCanInitInactStatDt} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>CANDSTAT</Form.Label>
+                        <Form.Control type="text" value={this.props.canInitStat} onChange={this.props.onChangeCanInitStat} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>MMDDYY</Form.Label>
+                        <Form.Control type="date" value={this.props.canLastActStatDt} onChange={this.props.onChangeCanLastActStatDt} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>MMDDYY</Form.Label>
+                        <Form.Control type="date" value={this.props.canLastInactStatDt} onChange={this.props.onChangeCanLastInactStatDt} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>CANDSTAT</Form.Label>
+                        <Form.Control type="text" value={this.props.canLastStat} onChange={this.props.onChangeCanLastStat} />
+                    </Form.Group>
+                    <Form.Group controlId="num4">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" readonly value={this.props.canListingCtrId} onChange={this.props.onChangeCanListingCtrId} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>MMDDYY</Form.Label>
+                        <Form.Control type="date" value={this.props.canListingDt} onChange={this.props.onChangeCanListingDt} />
+                    </Form.Group>
+                    <Form.Group controlId="num4">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" readonly value={this.props.canListingOpoId} onChange={this.props.onChangeCanListingOpoId} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>REMCD</Form.Label>
+                        <Form.Control type="text" value={this.props.canRemCd} onChange={this.props.onChangeCanRemCd} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>COD</Form.Label>
+                        <Form.Control type="text" value={this.props.canRemCod} onChange={this.props.onChangeCanRemCod} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>MMDDYY</Form.Label>
+                        <Form.Control type="date" value={this.props.canRemDt} onChange={this.props.onChangeCanRemDt} />
+                    </Form.Group>
+                    <Form.Group controlId="num3">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canStatExtendFlg} onChange={this.props.onChangeCanStatExtendFlg} />
+                    </Form.Group>
+                </Form>
+
                 </Tab>
                 <Tab eventKey="Transplant" title="Transplant">
                     <Form>
                         <Form.Group controlId="num3">
-                            <Form.Label>CAN ANASTOMOSIS</Form.Label>
-                            <Form.Control type="text"value={this.props.CanAnastomosis} onChange={this.props.onChangeCanAnastomosis} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canAnastomosis} onChange={this.props.onChangeCanAnastomosis} />
                         </Form.Group>
                         <Form.Group controlId="char1">
-                            <Form.Label>CAN SOURCE</Form.Label>
-                            <Form.Control type="text"value={this.props.CanSource} onChange={this.props.onChangeCanSource} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canSource} onChange={this.props.onChangeCanSource} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>CAN TRR EXISTS</Form.Label>
-                            <Form.Control type="text"value={this.props.CanTrrExists} onChange={this.props.onChangeCanTrrExists} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.canTrrExists} onChange={this.props.onChangeCanTrrExists} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>CAN TX COUNTRY</Form.Label>
-                            <Form.Control type="text"value={this.props.CanTxCountry} onChange={this.props.onChangeCanTxCountry} />
+                            <Form.Label>CTRYID</Form.Label>
+                            <Form.Control type="text" value={this.props.canTxCountry} onChange={this.props.onChangeCanTxCountry} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>DONOR ID</Form.Label>
-                            <Form.Control type="text" readonlyvalue={this.props.DonorId} onChange={this.props.onChangeDonorId} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" readonly value={this.props.donorId} onChange={this.props.onChangeDonorId} />
                         </Form.Group>
                         <Form.Group controlId="char3">
-                            <Form.Label>DON TY</Form.Label>
-                            <Form.Control type="text"value={this.props.DonTy} onChange={this.props.onChangeDonTy} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.donTy} onChange={this.props.onChangeDonTy} />
                         </Form.Group>
                         <Form.Group controlId="char3">
-                            <Form.Label>ORG AR</Form.Label>
-                            <Form.Control type="text"value={this.props.OrgAr} onChange={this.props.onChangeOrgAr} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" value={this.props.orgAr} onChange={this.props.onChangeOrgAr} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>PERS NEXTTX</Form.Label>
-                            <Form.Control type="date"value={this.props.PersNexttx} onChange={this.props.onChangePersNexttx} />
+                            <Form.Label>MMDDYY</Form.Label>
+                            <Form.Control type="date" value={this.props.persNexttx} onChange={this.props.onChangePersNexttx} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>PERS NEXTTX TRR ID</Form.Label>
-                            <Form.Control type="text" readonlyvalue={this.props.PersNexttxTrrId} onChange={this.props.onChangePersNexttxTrrId} />
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" readonly value={this.props.persNexttxTrrId} onChange={this.props.onChangePersNexttxTrrId} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>PERS OPTN DEATH DT</Form.Label>
-                            <Form.Control type="date"value={this.props.PersOptnDeathDt} onChange={this.props.onChangePersOptnDeathDt} />
+                            <Form.Label>MMDDYY</Form.Label>
+                            <Form.Control type="date" value={this.props.persOptnDeathDt} onChange={this.props.onChangePersOptnDeathDt} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>PERS RESTRICT DEATH DT</Form.Label>
-                            <Form.Control type="date"value={this.props.PersRestrictDeathDt} onChange={this.props.onChangePersRestrictDeathDt} />
+                            <Form.Label>MMDDYY</Form.Label>
+                            <Form.Control type="date" value={this.props.persRestrictDeathDt} onChange={this.props.onChangePersRestrictDeathDt} />
                         </Form.Group>
                         <Form.Group controlId="char1">
-                            <Form.Label>PERS RESTRICT DEATH VRFY</Form.Label>
-                            <Form.Control type="text"value={this.props.PersRestrictDeathVrfy} onChange={this.props.onChangePersRestrictDeathVrfy} />
+                            <Form.Label>$DTHVRFY</Form.Label>
+                            <Form.Control type="text" value={this.props.persRestrictDeathVrfy} onChange={this.props.onChangePersRestrictDeathVrfy} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>PERS SSA DEATH DT</Form.Label>
-                            <Form.Control type="date"value={this.props.PersSsaDeathDt} onChange={this.props.onChangePersSsaDeathDt} />
+                            <Form.Label>MMDDYY</Form.Label>
+                            <Form.Control type="date" value={this.props.persSsaDeathDt} onChange={this.props.onChangePersSsaDeathDt} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>REC TX DT</Form.Label>
-                            <Form.Control type="date"value={this.props.RecTxDt} onChange={this.props.onChangeRecTxDt} />
+                            <Form.Label>MMDDYY</Form.Label>
+                            <Form.Control type="date" value={this.props.recTxDt} onChange={this.props.onChangeRecTxDt} />
                         </Form.Group>
                         <Form.Group controlId="num8">
-                            <Form.Label>REC TX PROCEDURE TY</Form.Label>
-                            <Form.Control type="text"value={this.props.RecTxProcedureTy} onChange={this.props.onChangeRecTxProcedureTy} />
+                            <Form.Label>TXPROC</Form.Label>
+                            <Form.Control type="text" value={this.props.recTxProcedureTy} onChange={this.props.onChangeRecTxProcedureTy} />
                         </Form.Group>
                     </Form>
+
                 </Tab>
                 <Tab eventKey="Malignant" title="Malignant">
-                    <Form>
-                        <Form.Group controlId="char1">
-                            <Form.Label>CAN MALIG</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMalig} onChange={this.props.onChangeCanMalig} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTy} onChange={this.props.onChangeCanMaligTy} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY BREAST</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTyBreast} onChange={this.props.onChangeCanMaligTyBreast} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY CNS TUMOR</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTyCnsTumor} onChange={this.props.onChangeCanMaligTyCnsTumor} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY GENITOURINARY</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTyGenitourinary} onChange={this.props.onChangeCanMaligTyGenitourinary} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY HEPBLAST</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTyHepblast} onChange={this.props.onChangeCanMaligTyHepblast} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY HEPCARCINOMA</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTyHepcarcinoma} onChange={this.props.onChangeCanMaligTyHepcarcinoma} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY LEUK LYMPH</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTyLeukLymph} onChange={this.props.onChangeCanMaligTyLeukLymph} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY LIVER</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTyLiver} onChange={this.props.onChangeCanMaligTyLiver} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY LU</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTyLu} onChange={this.props.onChangeCanMaligTyLu} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY OTHER</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTyOther} onChange={this.props.onChangeCanMaligTyOther} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY SKIN MEL</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTySkinMel} onChange={this.props.onChangeCanMaligTySkinMel} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY SKIN NON MEL</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTySkinNonMel} onChange={this.props.onChangeCanMaligTySkinNonMel} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY THROAT</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTyThroat} onChange={this.props.onChangeCanMaligTyThroat} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY THYROID</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTyThyroid} onChange={this.props.onChangeCanMaligTyThyroid} />
-                        </Form.Group>
-                        <Form.Group controlId="num8">
-                            <Form.Label>CAN MALIG TY UNK</Form.Label>
-                            <Form.Control type="text"value={this.props.CanMaligTyUnk} onChange={this.props.onChangeCanMaligTyUnk} />
-                        </Form.Group>
-                    </Form>
+                <Form>
+                    <Form.Group controlId="char1">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMalig} onChange={this.props.onChangeCanMalig} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label>MALIG</Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTy} onChange={this.props.onChangeCanMaligTy} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTyBreast} onChange={this.props.onChangeCanMaligTyBreast} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTyCnsTumor} onChange={this.props.onChangeCanMaligTyCnsTumor} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTyGenitourinary} onChange={this.props.onChangeCanMaligTyGenitourinary} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTyHepblast} onChange={this.props.onChangeCanMaligTyHepblast} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTyHepcarcinoma} onChange={this.props.onChangeCanMaligTyHepcarcinoma} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTyLeukLymph} onChange={this.props.onChangeCanMaligTyLeukLymph} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTyLiver} onChange={this.props.onChangeCanMaligTyLiver} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTyLu} onChange={this.props.onChangeCanMaligTyLu} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTyOther} onChange={this.props.onChangeCanMaligTyOther} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTySkinMel} onChange={this.props.onChangeCanMaligTySkinMel} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTySkinNonMel} onChange={this.props.onChangeCanMaligTySkinNonMel} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTyThroat} onChange={this.props.onChangeCanMaligTyThroat} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTyThyroid} onChange={this.props.onChangeCanMaligTyThyroid} />
+                    </Form.Group>
+                    <Form.Group controlId="num8">
+                        <Form.Label></Form.Label>
+                        <Form.Control type="text" value={this.props.canMaligTyUnk} onChange={this.props.onChangeCanMaligTyUnk} />
+                    </Form.Group>
+                </Form>
+
                 </Tab>
             </Tabs>
         </div>)
@@ -743,179 +753,180 @@ export class CanForm extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-	CanAbo: selectors.makeSelectCanAbo(),
-	CanAcademicLevel: selectors.makeSelectCanAcademicLevel(),
-	CanAcademicProgress: selectors.makeSelectCanAcademicProgress(),
-	CanAcptA2Don: selectors.makeSelectCanAcptA2Don(),
-	CanAcptAboIncomp: selectors.makeSelectCanAcptAboIncomp(),
-	CanAcptExtracorpLi: selectors.makeSelectCanAcptExtracorpLi(),
-	CanAcptHbcPos: selectors.makeSelectCanAcptHbcPos(),
-	CanAcptHcvPos: selectors.makeSelectCanAcptHcvPos(),
-	CanAcptLiSeg: selectors.makeSelectCanAcptLiSeg(),
-	CanAcptOrgOtherTeam: selectors.makeSelectCanAcptOrgOtherTeam(),
-	CanAcptProcurKi: selectors.makeSelectCanAcptProcurKi(),
-	CanAcptProcurLi: selectors.makeSelectCanAcptProcurLi(),
-	CanAcptProcurPa: selectors.makeSelectCanAcptProcurPa(),
-	CanActivateDt: selectors.makeSelectCanActivateDt(),
-	CanAgeAtListing: selectors.makeSelectCanAgeAtListing(),
-	CanAgeInMonthsAtListing: selectors.makeSelectCanAgeInMonthsAtListing(),
-	CanAnastomosis: selectors.makeSelectCanAnastomosis(),
-	CanAnesthPriorDeath: selectors.makeSelectCanAnesthPriorDeath(),
-	CanAngina: selectors.makeSelectCanAngina(),
-	CanAnginaCad: selectors.makeSelectCanAnginaCad(),
-	CanArtificialLi: selectors.makeSelectCanArtificialLi(),
-	CanAscites: selectors.makeSelectCanAscites(),
-	CanBacteriaPerit: selectors.makeSelectCanBacteriaPerit(),
-	CanBmi: selectors.makeSelectCanBmi(),
-	CanCerebVasc: selectors.makeSelectCanCerebVasc(),
-	CanCitizenship: selectors.makeSelectCanCitizenship(),
-	CanCognitiveDevelop: selectors.makeSelectCanCognitiveDevelop(),
-	CanCtpScore: selectors.makeSelectCanCtpScore(),
-	CanDeathDt: selectors.makeSelectCanDeathDt(),
-	CanDgn: selectors.makeSelectCanDgn(),
-	CanDgn2: selectors.makeSelectCanDgn2(),
-	CanDgnOstxt: selectors.makeSelectCanDgnOstxt(),
-	CanDiab: selectors.makeSelectCanDiab(),
-	CanDiabTy: selectors.makeSelectCanDiabTy(),
-	CanDial: selectors.makeSelectCanDial(),
-	CanDrugTreatCopd: selectors.makeSelectCanDrugTreatCopd(),
-	CanDrugTreatHyperten: selectors.makeSelectCanDrugTreatHyperten(),
-	CanEcmo: selectors.makeSelectCanEcmo(),
-	CanEducation: selectors.makeSelectCanEducation(),
-	CanElectrolyte: selectors.makeSelectCanElectrolyte(),
-	CanEmplStat: selectors.makeSelectCanEmplStat(),
-	CanEnceph: selectors.makeSelectCanEnceph(),
-	CanEndwlfu: selectors.makeSelectCanEndwlfu(),
-	CanEthnicitySrtr: selectors.makeSelectCanEthnicitySrtr(),
-	CanExhaustVascAccess: selectors.makeSelectCanExhaustVascAccess(),
-	CanFollowsOpoAlloc: selectors.makeSelectCanFollowsOpoAlloc(),
-	CanFunctnStat: selectors.makeSelectCanFunctnStat(),
-	CanFungalSepsis: selectors.makeSelectCanFungalSepsis(),
-	CanGender: selectors.makeSelectCanGender(),
-	CanHgtCm: selectors.makeSelectCanHgtCm(),
-	CanHgtWgtDt: selectors.makeSelectCanHgtWgtDt(),
-	CanIabp: selectors.makeSelectCanIabp(),
-	CanInitActStatCd: selectors.makeSelectCanInitActStatCd(),
-	CanInitActStatDt: selectors.makeSelectCanInitActStatDt(),
-	CanInitInactStatDt: selectors.makeSelectCanInitInactStatDt(),
-	CanInitSrtrLabMeld: selectors.makeSelectCanInitSrtrLabMeld(),
-	CanInitSrtrLabMeldTy: selectors.makeSelectCanInitSrtrLabMeldTy(),
-	CanInitStat: selectors.makeSelectCanInitStat(),
-	CanIvInotrop: selectors.makeSelectCanIvInotrop(),
-	CanLastActStatDt: selectors.makeSelectCanLastActStatDt(),
-	CanLastAlbumin: selectors.makeSelectCanLastAlbumin(),
-	CanLastAscites: selectors.makeSelectCanLastAscites(),
-	CanLastBili: selectors.makeSelectCanLastBili(),
-	CanLastDialPriorWeek: selectors.makeSelectCanLastDialPriorWeek(),
-	CanLastEnceph: selectors.makeSelectCanLastEnceph(),
-	CanLastInactStatDt: selectors.makeSelectCanLastInactStatDt(),
-	CanLastInr: selectors.makeSelectCanLastInr(),
-	CanLastSerumCreat: selectors.makeSelectCanLastSerumCreat(),
-	CanLastSerumSodium: selectors.makeSelectCanLastSerumSodium(),
-	CanLastSrtrLabMeld: selectors.makeSelectCanLastSrtrLabMeld(),
-	CanLastSrtrLabMeldTy: selectors.makeSelectCanLastSrtrLabMeldTy(),
-	CanLastStat: selectors.makeSelectCanLastStat(),
-	CanLifeSupport: selectors.makeSelectCanLifeSupport(),
-	CanLifeSupportOther: selectors.makeSelectCanLifeSupportOther(),
-	CanListingCtrId: selectors.makeSelectCanListingCtrId(),
-	CanListingDt: selectors.makeSelectCanListingDt(),
-	CanListingOpoId: selectors.makeSelectCanListingOpoId(),
-	CanLivingDonTx: selectors.makeSelectCanLivingDonTx(),
-	CanLiDysfunctn: selectors.makeSelectCanLiDysfunctn(),
-	CanLossVascAccess: selectors.makeSelectCanLossVascAccess(),
-	CanMalig: selectors.makeSelectCanMalig(),
-	CanMaligTy: selectors.makeSelectCanMaligTy(),
-	CanMaligTyBreast: selectors.makeSelectCanMaligTyBreast(),
-	CanMaligTyCnsTumor: selectors.makeSelectCanMaligTyCnsTumor(),
-	CanMaligTyGenitourinary: selectors.makeSelectCanMaligTyGenitourinary(),
-	CanMaligTyHepblast: selectors.makeSelectCanMaligTyHepblast(),
-	CanMaligTyHepcarcinoma: selectors.makeSelectCanMaligTyHepcarcinoma(),
-	CanMaligTyLeukLymph: selectors.makeSelectCanMaligTyLeukLymph(),
-	CanMaligTyLiver: selectors.makeSelectCanMaligTyLiver(),
-	CanMaligTyLu: selectors.makeSelectCanMaligTyLu(),
-	CanMaligTyOther: selectors.makeSelectCanMaligTyOther(),
-	CanMaligTySkinMel: selectors.makeSelectCanMaligTySkinMel(),
-	CanMaligTySkinNonMel: selectors.makeSelectCanMaligTySkinNonMel(),
-	CanMaligTyThroat: selectors.makeSelectCanMaligTyThroat(),
-	CanMaligTyThyroid: selectors.makeSelectCanMaligTyThyroid(),
-	CanMaligTyUnk: selectors.makeSelectCanMaligTyUnk(),
-	CanMaxAge: selectors.makeSelectCanMaxAge(),
-	CanMaxMile: selectors.makeSelectCanMaxMile(),
-	CanMaxWgt: selectors.makeSelectCanMaxWgt(),
-	CanMedCond: selectors.makeSelectCanMedCond(),
-	CanMinAge: selectors.makeSelectCanMinAge(),
-	CanMinWgt: selectors.makeSelectCanMinWgt(),
-	CanMostRecentCreat: selectors.makeSelectCanMostRecentCreat(),
-	CanMostRecentHgtCm: selectors.makeSelectCanMostRecentHgtCm(),
-	CanMostRecentWgtKg: selectors.makeSelectCanMostRecentWgtKg(),
-	CanMotorDevelop: selectors.makeSelectCanMotorDevelop(),
-	CanMuscleWasting: selectors.makeSelectCanMuscleWasting(),
-	CanNeoplasm: selectors.makeSelectCanNeoplasm(),
-	CanNewPrevPiTx: selectors.makeSelectCanNewPrevPiTx(),
-	CanNonReconGi: selectors.makeSelectCanNonReconGi(),
-	CanPepticUlcer: selectors.makeSelectCanPepticUlcer(),
-	CanPeriphVasc: selectors.makeSelectCanPeriphVasc(),
-	CanPermState: selectors.makeSelectCanPermState(),
-	CanPge: selectors.makeSelectCanPge(),
-	CanPhyscCapacity: selectors.makeSelectCanPhyscCapacity(),
-	CanPortalVein: selectors.makeSelectCanPortalVein(),
-	CanPrelimXmatchRequest: selectors.makeSelectCanPrelimXmatchRequest(),
-	CanPrevAbdomSurg: selectors.makeSelectCanPrevAbdomSurg(),
-	CanPrevBoneMarrowDt: selectors.makeSelectCanPrevBoneMarrowDt(),
-	CanPrevBoneMarrowTx: selectors.makeSelectCanPrevBoneMarrowTx(),
-	CanPrevHl: selectors.makeSelectCanPrevHl(),
-	CanPrevHr: selectors.makeSelectCanPrevHr(),
-	CanPrevIn: selectors.makeSelectCanPrevIn(),
-	CanPrevKi: selectors.makeSelectCanPrevKi(),
-	CanPrevKp: selectors.makeSelectCanPrevKp(),
-	CanPrevLi: selectors.makeSelectCanPrevLi(),
-	CanPrevLu: selectors.makeSelectCanPrevLu(),
-	CanPrevPa: selectors.makeSelectCanPrevPa(),
-	CanPrevTx: selectors.makeSelectCanPrevTx(),
-	CanPrevTxfus: selectors.makeSelectCanPrevTxfus(),
-	CanPrimaryPay: selectors.makeSelectCanPrimaryPay(),
-	CanPulmEmbol: selectors.makeSelectCanPulmEmbol(),
-	CanRace: selectors.makeSelectCanRace(),
-	CanRaceSrtr: selectors.makeSelectCanRaceSrtr(),
-	CanRecurSepsis: selectors.makeSelectCanRecurSepsis(),
-	CanRemCd: selectors.makeSelectCanRemCd(),
-	CanRemCod: selectors.makeSelectCanRemCod(),
-	CanRemDt: selectors.makeSelectCanRemDt(),
-	CanSecondaryPay: selectors.makeSelectCanSecondaryPay(),
-	CanSource: selectors.makeSelectCanSource(),
-	CanStatExtendFlg: selectors.makeSelectCanStatExtendFlg(),
-	CanTiebreakerDt: selectors.makeSelectCanTiebreakerDt(),
-	CanTipss: selectors.makeSelectCanTipss(),
-	CanTotAlbumin: selectors.makeSelectCanTotAlbumin(),
-	CanTotBili: selectors.makeSelectCanTotBili(),
-	CanTrrExists: selectors.makeSelectCanTrrExists(),
-	CanTxCountry: selectors.makeSelectCanTxCountry(),
-	CanVadTah: selectors.makeSelectCanVadTah(),
-	CanVaricealBleeding: selectors.makeSelectCanVaricealBleeding(),
-	CanVentilator: selectors.makeSelectCanVentilator(),
-	CanWgtKg: selectors.makeSelectCanWgtKg(),
-	CanWorkIncome: selectors.makeSelectCanWorkIncome(),
-	CanWorkNoStat: selectors.makeSelectCanWorkNoStat(),
-	CanWorkYesStat: selectors.makeSelectCanWorkYesStat(),
-	CanYearEntryUs: selectors.makeSelectCanYearEntryUs(),
-	DonorId: selectors.makeSelectDonorId(),
-	DonTy: selectors.makeSelectDonTy(),
-	OrgAr: selectors.makeSelectOrgAr(),
-	PersId: selectors.makeSelectPersId(),
-	PersNexttx: selectors.makeSelectPersNexttx(),
-	PersNexttxTrrId: selectors.makeSelectPersNexttxTrrId(),
-	PersOptnDeathDt: selectors.makeSelectPersOptnDeathDt(),
-	PersRestrictDeathDt: selectors.makeSelectPersRestrictDeathDt(),
-	PersRestrictDeathVrfy: selectors.makeSelectPersRestrictDeathVrfy(),
-	PersSsaDeathDt: selectors.makeSelectPersSsaDeathDt(),
-	PxId: selectors.makeSelectPxId(),
-	RecTxDt: selectors.makeSelectRecTxDt(),
-	RecTxProcedureTy: selectors.makeSelectRecTxProcedureTy(),
-	WlOrg: selectors.makeSelectWlOrg(),
+	canAbo: selects.makeSelectCanAbo(),
+	canAcademicLevel: selects.makeSelectCanAcademicLevel(),
+	canAcademicProgress: selects.makeSelectCanAcademicProgress(),
+	canAcptA2Don: selects.makeSelectCanAcptA2Don(),
+	canAcptAboIncomp: selects.makeSelectCanAcptAboIncomp(),
+	canAcptExtracorpLi: selects.makeSelectCanAcptExtracorpLi(),
+	canAcptHbcPos: selects.makeSelectCanAcptHbcPos(),
+	canAcptHcvPos: selects.makeSelectCanAcptHcvPos(),
+	canAcptLiSeg: selects.makeSelectCanAcptLiSeg(),
+	canAcptOrgOtherTeam: selects.makeSelectCanAcptOrgOtherTeam(),
+	canAcptProcurKi: selects.makeSelectCanAcptProcurKi(),
+	canAcptProcurLi: selects.makeSelectCanAcptProcurLi(),
+	canAcptProcurPa: selects.makeSelectCanAcptProcurPa(),
+	canActivateDt: selects.makeSelectCanActivateDt(),
+	canAgeAtListing: selects.makeSelectCanAgeAtListing(),
+	canAgeInMonthsAtListing: selects.makeSelectCanAgeInMonthsAtListing(),
+	canAnastomosis: selects.makeSelectCanAnastomosis(),
+	canAnesthPriorDeath: selects.makeSelectCanAnesthPriorDeath(),
+	canAngina: selects.makeSelectCanAngina(),
+	canAnginaCad: selects.makeSelectCanAnginaCad(),
+	canArtificialLi: selects.makeSelectCanArtificialLi(),
+	canAscites: selects.makeSelectCanAscites(),
+	canBacteriaPerit: selects.makeSelectCanBacteriaPerit(),
+	canBmi: selects.makeSelectCanBmi(),
+	canCerebVasc: selects.makeSelectCanCerebVasc(),
+	canCitizenship: selects.makeSelectCanCitizenship(),
+	canCognitiveDevelop: selects.makeSelectCanCognitiveDevelop(),
+	canCtpScore: selects.makeSelectCanCtpScore(),
+	canDeathDt: selects.makeSelectCanDeathDt(),
+	canDgn: selects.makeSelectCanDgn(),
+	canDgn2: selects.makeSelectCanDgn2(),
+	canDgnOstxt: selects.makeSelectCanDgnOstxt(),
+	canDiab: selects.makeSelectCanDiab(),
+	canDiabTy: selects.makeSelectCanDiabTy(),
+	canDial: selects.makeSelectCanDial(),
+	canDrugTreatCopd: selects.makeSelectCanDrugTreatCopd(),
+	canDrugTreatHyperten: selects.makeSelectCanDrugTreatHyperten(),
+	canEcmo: selects.makeSelectCanEcmo(),
+	canEducation: selects.makeSelectCanEducation(),
+	canElectrolyte: selects.makeSelectCanElectrolyte(),
+	canEmplStat: selects.makeSelectCanEmplStat(),
+	canEnceph: selects.makeSelectCanEnceph(),
+	canEndwlfu: selects.makeSelectCanEndwlfu(),
+	canEthnicitySrtr: selects.makeSelectCanEthnicitySrtr(),
+	canExhaustVascAccess: selects.makeSelectCanExhaustVascAccess(),
+	canFollowsOpoAlloc: selects.makeSelectCanFollowsOpoAlloc(),
+	canFunctnStat: selects.makeSelectCanFunctnStat(),
+	canFungalSepsis: selects.makeSelectCanFungalSepsis(),
+	canGender: selects.makeSelectCanGender(),
+	canHgtCm: selects.makeSelectCanHgtCm(),
+	canHgtWgtDt: selects.makeSelectCanHgtWgtDt(),
+	canIabp: selects.makeSelectCanIabp(),
+	canInitActStatCd: selects.makeSelectCanInitActStatCd(),
+	canInitActStatDt: selects.makeSelectCanInitActStatDt(),
+	canInitInactStatDt: selects.makeSelectCanInitInactStatDt(),
+	canInitSrtrLabMeld: selects.makeSelectCanInitSrtrLabMeld(),
+	canInitSrtrLabMeldTy: selects.makeSelectCanInitSrtrLabMeldTy(),
+	canInitStat: selects.makeSelectCanInitStat(),
+	canIvInotrop: selects.makeSelectCanIvInotrop(),
+	canLastActStatDt: selects.makeSelectCanLastActStatDt(),
+	canLastAlbumin: selects.makeSelectCanLastAlbumin(),
+	canLastAscites: selects.makeSelectCanLastAscites(),
+	canLastBili: selects.makeSelectCanLastBili(),
+	canLastDialPriorWeek: selects.makeSelectCanLastDialPriorWeek(),
+	canLastEnceph: selects.makeSelectCanLastEnceph(),
+	canLastInactStatDt: selects.makeSelectCanLastInactStatDt(),
+	canLastInr: selects.makeSelectCanLastInr(),
+	canLastSerumCreat: selects.makeSelectCanLastSerumCreat(),
+	canLastSerumSodium: selects.makeSelectCanLastSerumSodium(),
+	canLastSrtrLabMeld: selects.makeSelectCanLastSrtrLabMeld(),
+	canLastSrtrLabMeldTy: selects.makeSelectCanLastSrtrLabMeldTy(),
+	canLastStat: selects.makeSelectCanLastStat(),
+	canLifeSupport: selects.makeSelectCanLifeSupport(),
+	canLifeSupportOther: selects.makeSelectCanLifeSupportOther(),
+	canListingCtrId: selects.makeSelectCanListingCtrId(),
+	canListingDt: selects.makeSelectCanListingDt(),
+	canListingOpoId: selects.makeSelectCanListingOpoId(),
+	canLivingDonTx: selects.makeSelectCanLivingDonTx(),
+	canLiDysfunctn: selects.makeSelectCanLiDysfunctn(),
+	canLossVascAccess: selects.makeSelectCanLossVascAccess(),
+	canMalig: selects.makeSelectCanMalig(),
+	canMaligTy: selects.makeSelectCanMaligTy(),
+	canMaligTyBreast: selects.makeSelectCanMaligTyBreast(),
+	canMaligTyCnsTumor: selects.makeSelectCanMaligTyCnsTumor(),
+	canMaligTyGenitourinary: selects.makeSelectCanMaligTyGenitourinary(),
+	canMaligTyHepblast: selects.makeSelectCanMaligTyHepblast(),
+	canMaligTyHepcarcinoma: selects.makeSelectCanMaligTyHepcarcinoma(),
+	canMaligTyLeukLymph: selects.makeSelectCanMaligTyLeukLymph(),
+	canMaligTyLiver: selects.makeSelectCanMaligTyLiver(),
+	canMaligTyLu: selects.makeSelectCanMaligTyLu(),
+	canMaligTyOther: selects.makeSelectCanMaligTyOther(),
+	canMaligTySkinMel: selects.makeSelectCanMaligTySkinMel(),
+	canMaligTySkinNonMel: selects.makeSelectCanMaligTySkinNonMel(),
+	canMaligTyThroat: selects.makeSelectCanMaligTyThroat(),
+	canMaligTyThyroid: selects.makeSelectCanMaligTyThyroid(),
+	canMaligTyUnk: selects.makeSelectCanMaligTyUnk(),
+	canMaxAge: selects.makeSelectCanMaxAge(),
+	canMaxMile: selects.makeSelectCanMaxMile(),
+	canMaxWgt: selects.makeSelectCanMaxWgt(),
+	canMedCond: selects.makeSelectCanMedCond(),
+	canMinAge: selects.makeSelectCanMinAge(),
+	canMinWgt: selects.makeSelectCanMinWgt(),
+	canMostRecentCreat: selects.makeSelectCanMostRecentCreat(),
+	canMostRecentHgtCm: selects.makeSelectCanMostRecentHgtCm(),
+	canMostRecentWgtKg: selects.makeSelectCanMostRecentWgtKg(),
+	canMotorDevelop: selects.makeSelectCanMotorDevelop(),
+	canMuscleWasting: selects.makeSelectCanMuscleWasting(),
+	canNeoplasm: selects.makeSelectCanNeoplasm(),
+	canNewPrevPiTx: selects.makeSelectCanNewPrevPiTx(),
+	canNonReconGi: selects.makeSelectCanNonReconGi(),
+	canPepticUlcer: selects.makeSelectCanPepticUlcer(),
+	canPeriphVasc: selects.makeSelectCanPeriphVasc(),
+	canPermState: selects.makeSelectCanPermState(),
+	canPge: selects.makeSelectCanPge(),
+	canPhyscCapacity: selects.makeSelectCanPhyscCapacity(),
+	canPortalVein: selects.makeSelectCanPortalVein(),
+	canPrelimXmatchRequest: selects.makeSelectCanPrelimXmatchRequest(),
+	canPrevAbdomSurg: selects.makeSelectCanPrevAbdomSurg(),
+	canPrevBoneMarrowDt: selects.makeSelectCanPrevBoneMarrowDt(),
+	canPrevBoneMarrowTx: selects.makeSelectCanPrevBoneMarrowTx(),
+	canPrevHl: selects.makeSelectCanPrevHl(),
+	canPrevHr: selects.makeSelectCanPrevHr(),
+	canPrevIn: selects.makeSelectCanPrevIn(),
+	canPrevKi: selects.makeSelectCanPrevKi(),
+	canPrevKp: selects.makeSelectCanPrevKp(),
+	canPrevLi: selects.makeSelectCanPrevLi(),
+	canPrevLu: selects.makeSelectCanPrevLu(),
+	canPrevPa: selects.makeSelectCanPrevPa(),
+	canPrevTx: selects.makeSelectCanPrevTx(),
+	canPrevTxfus: selects.makeSelectCanPrevTxfus(),
+	canPrimaryPay: selects.makeSelectCanPrimaryPay(),
+	canPulmEmbol: selects.makeSelectCanPulmEmbol(),
+	canRace: selects.makeSelectCanRace(),
+	canRaceSrtr: selects.makeSelectCanRaceSrtr(),
+	canRecurSepsis: selects.makeSelectCanRecurSepsis(),
+	canRemCd: selects.makeSelectCanRemCd(),
+	canRemCod: selects.makeSelectCanRemCod(),
+	canRemDt: selects.makeSelectCanRemDt(),
+	canSecondaryPay: selects.makeSelectCanSecondaryPay(),
+	canSource: selects.makeSelectCanSource(),
+	canStatExtendFlg: selects.makeSelectCanStatExtendFlg(),
+	canTiebreakerDt: selects.makeSelectCanTiebreakerDt(),
+	canTipss: selects.makeSelectCanTipss(),
+	canTotAlbumin: selects.makeSelectCanTotAlbumin(),
+	canTotBili: selects.makeSelectCanTotBili(),
+	canTrrExists: selects.makeSelectCanTrrExists(),
+	canTxCountry: selects.makeSelectCanTxCountry(),
+	canVadTah: selects.makeSelectCanVadTah(),
+	canVaricealBleeding: selects.makeSelectCanVaricealBleeding(),
+	canVentilator: selects.makeSelectCanVentilator(),
+	canWgtKg: selects.makeSelectCanWgtKg(),
+	canWorkIncome: selects.makeSelectCanWorkIncome(),
+	canWorkNoStat: selects.makeSelectCanWorkNoStat(),
+	canWorkYesStat: selects.makeSelectCanWorkYesStat(),
+	canYearEntryUs: selects.makeSelectCanYearEntryUs(),
+	donorId: selects.makeSelectDonorId(),
+	donTy: selects.makeSelectDonTy(),
+	orgAr: selects.makeSelectOrgAr(),
+	persId: selects.makeSelectPersId(),
+	persNexttx: selects.makeSelectPersNexttx(),
+	persNexttxTrrId: selects.makeSelectPersNexttxTrrId(),
+	persOptnDeathDt: selects.makeSelectPersOptnDeathDt(),
+	persRestrictDeathDt: selects.makeSelectPersRestrictDeathDt(),
+	persRestrictDeathVrfy: selects.makeSelectPersRestrictDeathVrfy(),
+	persSsaDeathDt: selects.makeSelectPersSsaDeathDt(),
+	pxId: selects.makeSelectPxId(),
+	recTxDt: selects.makeSelectRecTxDt(),
+	recTxProcedureTy: selects.makeSelectRecTxProcedureTy(),
+	wlOrg: selects.makeSelectWlOrg(),
 });
   
 function mapDispatchToProps(dispatch) {
     return {
+        onGetRecordPersId: evt => dispatch(actions.getRecordPersId()),
         onChangeCanAbo: evt => dispatch(actions.changeCanAbo(evt.target.value)),
         onChangeCanAcademicLevel: evt => dispatch(actions.changeCanAcademicLevel(evt.target.value)),
         onChangeCanAcademicProgress: evt => dispatch(actions.changeCanAcademicProgress(evt.target.value)),

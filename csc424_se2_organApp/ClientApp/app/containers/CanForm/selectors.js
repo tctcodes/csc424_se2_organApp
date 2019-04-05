@@ -3,509 +3,509 @@ import { initialState } from "./reducer";
 export const selectCanFormDomain = state => state.get("CanForm", initialState);
 
 export const makeSelectCanAbo = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAbo"));
+createSelector(selectCanFormDomain, substate => substate.get("canAbo"));
 
 export const makeSelectCanAcademicLevel = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAcademicLevel"));
+createSelector(selectCanFormDomain, substate => substate.get("canAcademicLevel"));
 
 export const makeSelectCanAcademicProgress = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAcademicProgress"));
+createSelector(selectCanFormDomain, substate => substate.get("canAcademicProgress"));
 
 export const makeSelectCanAcptA2Don = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAcptA2Don"));
+createSelector(selectCanFormDomain, substate => substate.get("canAcptA2Don"));
 
 export const makeSelectCanAcptAboIncomp = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAcptAboIncomp"));
+createSelector(selectCanFormDomain, substate => substate.get("canAcptAboIncomp"));
 
 export const makeSelectCanAcptExtracorpLi = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAcptExtracorpLi"));
+createSelector(selectCanFormDomain, substate => substate.get("canAcptExtracorpLi"));
 
 export const makeSelectCanAcptHbcPos = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAcptHbcPos"));
+createSelector(selectCanFormDomain, substate => substate.get("canAcptHbcPos"));
 
 export const makeSelectCanAcptHcvPos = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAcptHcvPos"));
+createSelector(selectCanFormDomain, substate => substate.get("canAcptHcvPos"));
 
 export const makeSelectCanAcptLiSeg = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAcptLiSeg"));
+createSelector(selectCanFormDomain, substate => substate.get("canAcptLiSeg"));
 
 export const makeSelectCanAcptOrgOtherTeam = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAcptOrgOtherTeam"));
+createSelector(selectCanFormDomain, substate => substate.get("canAcptOrgOtherTeam"));
 
 export const makeSelectCanAcptProcurKi = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAcptProcurKi"));
+createSelector(selectCanFormDomain, substate => substate.get("canAcptProcurKi"));
 
 export const makeSelectCanAcptProcurLi = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAcptProcurLi"));
+createSelector(selectCanFormDomain, substate => substate.get("canAcptProcurLi"));
 
 export const makeSelectCanAcptProcurPa = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAcptProcurPa"));
+createSelector(selectCanFormDomain, substate => substate.get("canAcptProcurPa"));
 
 export const makeSelectCanActivateDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanActivateDt"));
+createSelector(selectCanFormDomain, substate => substate.get("canActivateDt"));
 
 export const makeSelectCanAgeAtListing = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAgeAtListing"));
+createSelector(selectCanFormDomain, substate => substate.get("canAgeAtListing"));
 
 export const makeSelectCanAgeInMonthsAtListing = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAgeInMonthsAtListing"));
+createSelector(selectCanFormDomain, substate => substate.get("canAgeInMonthsAtListing"));
 
 export const makeSelectCanAnastomosis = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAnastomosis"));
+createSelector(selectCanFormDomain, substate => substate.get("canAnastomosis"));
 
 export const makeSelectCanAnesthPriorDeath = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAnesthPriorDeath"));
+createSelector(selectCanFormDomain, substate => substate.get("canAnesthPriorDeath"));
 
 export const makeSelectCanAngina = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAngina"));
+createSelector(selectCanFormDomain, substate => substate.get("canAngina"));
 
 export const makeSelectCanAnginaCad = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAnginaCad"));
+createSelector(selectCanFormDomain, substate => substate.get("canAnginaCad"));
 
 export const makeSelectCanArtificialLi = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanArtificialLi"));
+createSelector(selectCanFormDomain, substate => substate.get("canArtificialLi"));
 
 export const makeSelectCanAscites = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanAscites"));
+createSelector(selectCanFormDomain, substate => substate.get("canAscites"));
 
 export const makeSelectCanBacteriaPerit = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanBacteriaPerit"));
+createSelector(selectCanFormDomain, substate => substate.get("canBacteriaPerit"));
 
 export const makeSelectCanBmi = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanBmi"));
+createSelector(selectCanFormDomain, substate => substate.get("canBmi"));
 
 export const makeSelectCanCerebVasc = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanCerebVasc"));
+createSelector(selectCanFormDomain, substate => substate.get("canCerebVasc"));
 
 export const makeSelectCanCitizenship = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanCitizenship"));
+createSelector(selectCanFormDomain, substate => substate.get("canCitizenship"));
 
 export const makeSelectCanCognitiveDevelop = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanCognitiveDevelop"));
+createSelector(selectCanFormDomain, substate => substate.get("canCognitiveDevelop"));
 
 export const makeSelectCanCtpScore = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanCtpScore"));
+createSelector(selectCanFormDomain, substate => substate.get("canCtpScore"));
 
 export const makeSelectCanDeathDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanDeathDt"));
+createSelector(selectCanFormDomain, substate => substate.get("canDeathDt"));
 
 export const makeSelectCanDgn = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanDgn"));
+createSelector(selectCanFormDomain, substate => substate.get("canDgn"));
 
 export const makeSelectCanDgn2 = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanDgn2"));
+createSelector(selectCanFormDomain, substate => substate.get("canDgn2"));
 
 export const makeSelectCanDgnOstxt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanDgnOstxt"));
+createSelector(selectCanFormDomain, substate => substate.get("canDgnOstxt"));
 
 export const makeSelectCanDiab = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanDiab"));
+createSelector(selectCanFormDomain, substate => substate.get("canDiab"));
 
 export const makeSelectCanDiabTy = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanDiabTy"));
+createSelector(selectCanFormDomain, substate => substate.get("canDiabTy"));
 
 export const makeSelectCanDial = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanDial"));
+createSelector(selectCanFormDomain, substate => substate.get("canDial"));
 
 export const makeSelectCanDrugTreatCopd = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanDrugTreatCopd"));
+createSelector(selectCanFormDomain, substate => substate.get("canDrugTreatCopd"));
 
 export const makeSelectCanDrugTreatHyperten = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanDrugTreatHyperten"));
+createSelector(selectCanFormDomain, substate => substate.get("canDrugTreatHyperten"));
 
 export const makeSelectCanEcmo = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanEcmo"));
+createSelector(selectCanFormDomain, substate => substate.get("canEcmo"));
 
 export const makeSelectCanEducation = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanEducation"));
+createSelector(selectCanFormDomain, substate => substate.get("canEducation"));
 
 export const makeSelectCanElectrolyte = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanElectrolyte"));
+createSelector(selectCanFormDomain, substate => substate.get("canElectrolyte"));
 
 export const makeSelectCanEmplStat = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanEmplStat"));
+createSelector(selectCanFormDomain, substate => substate.get("canEmplStat"));
 
 export const makeSelectCanEnceph = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanEnceph"));
+createSelector(selectCanFormDomain, substate => substate.get("canEnceph"));
 
 export const makeSelectCanEndwlfu = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanEndwlfu"));
+createSelector(selectCanFormDomain, substate => substate.get("canEndwlfu"));
 
 export const makeSelectCanEthnicitySrtr = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanEthnicitySrtr"));
+createSelector(selectCanFormDomain, substate => substate.get("canEthnicitySrtr"));
 
 export const makeSelectCanExhaustVascAccess = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanExhaustVascAccess"));
+createSelector(selectCanFormDomain, substate => substate.get("canExhaustVascAccess"));
 
 export const makeSelectCanFollowsOpoAlloc = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanFollowsOpoAlloc"));
+createSelector(selectCanFormDomain, substate => substate.get("canFollowsOpoAlloc"));
 
 export const makeSelectCanFunctnStat = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanFunctnStat"));
+createSelector(selectCanFormDomain, substate => substate.get("canFunctnStat"));
 
 export const makeSelectCanFungalSepsis = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanFungalSepsis"));
+createSelector(selectCanFormDomain, substate => substate.get("canFungalSepsis"));
 
 export const makeSelectCanGender = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanGender"));
+createSelector(selectCanFormDomain, substate => substate.get("canGender"));
 
 export const makeSelectCanHgtCm = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanHgtCm"));
+createSelector(selectCanFormDomain, substate => substate.get("canHgtCm"));
 
 export const makeSelectCanHgtWgtDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanHgtWgtDt"));
+createSelector(selectCanFormDomain, substate => substate.get("canHgtWgtDt"));
 
 export const makeSelectCanIabp = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanIabp"));
+createSelector(selectCanFormDomain, substate => substate.get("canIabp"));
 
 export const makeSelectCanInitActStatCd = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanInitActStatCd"));
+createSelector(selectCanFormDomain, substate => substate.get("canInitActStatCd"));
 
 export const makeSelectCanInitActStatDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanInitActStatDt"));
+createSelector(selectCanFormDomain, substate => substate.get("canInitActStatDt"));
 
 export const makeSelectCanInitInactStatDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanInitInactStatDt"));
+createSelector(selectCanFormDomain, substate => substate.get("canInitInactStatDt"));
 
 export const makeSelectCanInitSrtrLabMeld = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanInitSrtrLabMeld"));
+createSelector(selectCanFormDomain, substate => substate.get("canInitSrtrLabMeld"));
 
 export const makeSelectCanInitSrtrLabMeldTy = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanInitSrtrLabMeldTy"));
+createSelector(selectCanFormDomain, substate => substate.get("canInitSrtrLabMeldTy"));
 
 export const makeSelectCanInitStat = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanInitStat"));
+createSelector(selectCanFormDomain, substate => substate.get("canInitStat"));
 
 export const makeSelectCanIvInotrop = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanIvInotrop"));
+createSelector(selectCanFormDomain, substate => substate.get("canIvInotrop"));
 
 export const makeSelectCanLastActStatDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLastActStatDt"));
+createSelector(selectCanFormDomain, substate => substate.get("canLastActStatDt"));
 
 export const makeSelectCanLastAlbumin = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLastAlbumin"));
+createSelector(selectCanFormDomain, substate => substate.get("canLastAlbumin"));
 
 export const makeSelectCanLastAscites = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLastAscites"));
+createSelector(selectCanFormDomain, substate => substate.get("canLastAscites"));
 
 export const makeSelectCanLastBili = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLastBili"));
+createSelector(selectCanFormDomain, substate => substate.get("canLastBili"));
 
 export const makeSelectCanLastDialPriorWeek = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLastDialPriorWeek"));
+createSelector(selectCanFormDomain, substate => substate.get("canLastDialPriorWeek"));
 
 export const makeSelectCanLastEnceph = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLastEnceph"));
+createSelector(selectCanFormDomain, substate => substate.get("canLastEnceph"));
 
 export const makeSelectCanLastInactStatDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLastInactStatDt"));
+createSelector(selectCanFormDomain, substate => substate.get("canLastInactStatDt"));
 
 export const makeSelectCanLastInr = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLastInr"));
+createSelector(selectCanFormDomain, substate => substate.get("canLastInr"));
 
 export const makeSelectCanLastSerumCreat = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLastSerumCreat"));
+createSelector(selectCanFormDomain, substate => substate.get("canLastSerumCreat"));
 
 export const makeSelectCanLastSerumSodium = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLastSerumSodium"));
+createSelector(selectCanFormDomain, substate => substate.get("canLastSerumSodium"));
 
 export const makeSelectCanLastSrtrLabMeld = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLastSrtrLabMeld"));
+createSelector(selectCanFormDomain, substate => substate.get("canLastSrtrLabMeld"));
 
 export const makeSelectCanLastSrtrLabMeldTy = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLastSrtrLabMeldTy"));
+createSelector(selectCanFormDomain, substate => substate.get("canLastSrtrLabMeldTy"));
 
 export const makeSelectCanLastStat = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLastStat"));
+createSelector(selectCanFormDomain, substate => substate.get("canLastStat"));
 
 export const makeSelectCanLifeSupport = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLifeSupport"));
+createSelector(selectCanFormDomain, substate => substate.get("canLifeSupport"));
 
 export const makeSelectCanLifeSupportOther = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLifeSupportOther"));
+createSelector(selectCanFormDomain, substate => substate.get("canLifeSupportOther"));
 
 export const makeSelectCanListingCtrId = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanListingCtrId"));
+createSelector(selectCanFormDomain, substate => substate.get("canListingCtrId"));
 
 export const makeSelectCanListingDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanListingDt"));
+createSelector(selectCanFormDomain, substate => substate.get("canListingDt"));
 
 export const makeSelectCanListingOpoId = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanListingOpoId"));
+createSelector(selectCanFormDomain, substate => substate.get("canListingOpoId"));
 
 export const makeSelectCanLivingDonTx = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLivingDonTx"));
+createSelector(selectCanFormDomain, substate => substate.get("canLivingDonTx"));
 
 export const makeSelectCanLiDysfunctn = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLiDysfunctn"));
+createSelector(selectCanFormDomain, substate => substate.get("canLiDysfunctn"));
 
 export const makeSelectCanLossVascAccess = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanLossVascAccess"));
+createSelector(selectCanFormDomain, substate => substate.get("canLossVascAccess"));
 
 export const makeSelectCanMalig = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMalig"));
+createSelector(selectCanFormDomain, substate => substate.get("canMalig"));
 
 export const makeSelectCanMaligTy = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTy"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTy"));
 
 export const makeSelectCanMaligTyBreast = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTyBreast"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTyBreast"));
 
 export const makeSelectCanMaligTyCnsTumor = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTyCnsTumor"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTyCnsTumor"));
 
 export const makeSelectCanMaligTyGenitourinary = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTyGenitourinary"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTyGenitourinary"));
 
 export const makeSelectCanMaligTyHepblast = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTyHepblast"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTyHepblast"));
 
 export const makeSelectCanMaligTyHepcarcinoma = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTyHepcarcinoma"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTyHepcarcinoma"));
 
 export const makeSelectCanMaligTyLeukLymph = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTyLeukLymph"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTyLeukLymph"));
 
 export const makeSelectCanMaligTyLiver = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTyLiver"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTyLiver"));
 
 export const makeSelectCanMaligTyLu = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTyLu"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTyLu"));
 
 export const makeSelectCanMaligTyOther = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTyOther"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTyOther"));
 
 export const makeSelectCanMaligTySkinMel = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTySkinMel"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTySkinMel"));
 
 export const makeSelectCanMaligTySkinNonMel = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTySkinNonMel"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTySkinNonMel"));
 
 export const makeSelectCanMaligTyThroat = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTyThroat"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTyThroat"));
 
 export const makeSelectCanMaligTyThyroid = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTyThyroid"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTyThyroid"));
 
 export const makeSelectCanMaligTyUnk = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaligTyUnk"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaligTyUnk"));
 
 export const makeSelectCanMaxAge = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaxAge"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaxAge"));
 
 export const makeSelectCanMaxMile = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaxMile"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaxMile"));
 
 export const makeSelectCanMaxWgt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMaxWgt"));
+createSelector(selectCanFormDomain, substate => substate.get("canMaxWgt"));
 
 export const makeSelectCanMedCond = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMedCond"));
+createSelector(selectCanFormDomain, substate => substate.get("canMedCond"));
 
 export const makeSelectCanMinAge = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMinAge"));
+createSelector(selectCanFormDomain, substate => substate.get("canMinAge"));
 
 export const makeSelectCanMinWgt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMinWgt"));
+createSelector(selectCanFormDomain, substate => substate.get("canMinWgt"));
 
 export const makeSelectCanMostRecentCreat = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMostRecentCreat"));
+createSelector(selectCanFormDomain, substate => substate.get("canMostRecentCreat"));
 
 export const makeSelectCanMostRecentHgtCm = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMostRecentHgtCm"));
+createSelector(selectCanFormDomain, substate => substate.get("canMostRecentHgtCm"));
 
 export const makeSelectCanMostRecentWgtKg = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMostRecentWgtKg"));
+createSelector(selectCanFormDomain, substate => substate.get("canMostRecentWgtKg"));
 
 export const makeSelectCanMotorDevelop = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMotorDevelop"));
+createSelector(selectCanFormDomain, substate => substate.get("canMotorDevelop"));
 
 export const makeSelectCanMuscleWasting = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanMuscleWasting"));
+createSelector(selectCanFormDomain, substate => substate.get("canMuscleWasting"));
 
 export const makeSelectCanNeoplasm = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanNeoplasm"));
+createSelector(selectCanFormDomain, substate => substate.get("canNeoplasm"));
 
 export const makeSelectCanNewPrevPiTx = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanNewPrevPiTx"));
+createSelector(selectCanFormDomain, substate => substate.get("canNewPrevPiTx"));
 
 export const makeSelectCanNonReconGi = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanNonReconGi"));
+createSelector(selectCanFormDomain, substate => substate.get("canNonReconGi"));
 
 export const makeSelectCanPepticUlcer = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPepticUlcer"));
+createSelector(selectCanFormDomain, substate => substate.get("canPepticUlcer"));
 
 export const makeSelectCanPeriphVasc = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPeriphVasc"));
+createSelector(selectCanFormDomain, substate => substate.get("canPeriphVasc"));
 
 export const makeSelectCanPermState = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPermState"));
+createSelector(selectCanFormDomain, substate => substate.get("canPermState"));
 
 export const makeSelectCanPge = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPge"));
+createSelector(selectCanFormDomain, substate => substate.get("canPge"));
 
 export const makeSelectCanPhyscCapacity = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPhyscCapacity"));
+createSelector(selectCanFormDomain, substate => substate.get("canPhyscCapacity"));
 
 export const makeSelectCanPortalVein = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPortalVein"));
+createSelector(selectCanFormDomain, substate => substate.get("canPortalVein"));
 
 export const makeSelectCanPrelimXmatchRequest = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrelimXmatchRequest"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrelimXmatchRequest"));
 
 export const makeSelectCanPrevAbdomSurg = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrevAbdomSurg"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrevAbdomSurg"));
 
 export const makeSelectCanPrevBoneMarrowDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrevBoneMarrowDt"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrevBoneMarrowDt"));
 
 export const makeSelectCanPrevBoneMarrowTx = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrevBoneMarrowTx"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrevBoneMarrowTx"));
 
 export const makeSelectCanPrevHl = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrevHl"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrevHl"));
 
 export const makeSelectCanPrevHr = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrevHr"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrevHr"));
 
 export const makeSelectCanPrevIn = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrevIn"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrevIn"));
 
 export const makeSelectCanPrevKi = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrevKi"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrevKi"));
 
 export const makeSelectCanPrevKp = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrevKp"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrevKp"));
 
 export const makeSelectCanPrevLi = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrevLi"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrevLi"));
 
 export const makeSelectCanPrevLu = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrevLu"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrevLu"));
 
 export const makeSelectCanPrevPa = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrevPa"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrevPa"));
 
 export const makeSelectCanPrevTx = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrevTx"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrevTx"));
 
 export const makeSelectCanPrevTxfus = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrevTxfus"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrevTxfus"));
 
 export const makeSelectCanPrimaryPay = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPrimaryPay"));
+createSelector(selectCanFormDomain, substate => substate.get("canPrimaryPay"));
 
 export const makeSelectCanPulmEmbol = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanPulmEmbol"));
+createSelector(selectCanFormDomain, substate => substate.get("canPulmEmbol"));
 
 export const makeSelectCanRace = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanRace"));
+createSelector(selectCanFormDomain, substate => substate.get("canRace"));
 
 export const makeSelectCanRaceSrtr = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanRaceSrtr"));
+createSelector(selectCanFormDomain, substate => substate.get("canRaceSrtr"));
 
 export const makeSelectCanRecurSepsis = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanRecurSepsis"));
+createSelector(selectCanFormDomain, substate => substate.get("canRecurSepsis"));
 
 export const makeSelectCanRemCd = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanRemCd"));
+createSelector(selectCanFormDomain, substate => substate.get("canRemCd"));
 
 export const makeSelectCanRemCod = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanRemCod"));
+createSelector(selectCanFormDomain, substate => substate.get("canRemCod"));
 
 export const makeSelectCanRemDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanRemDt"));
+createSelector(selectCanFormDomain, substate => substate.get("canRemDt"));
 
 export const makeSelectCanSecondaryPay = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanSecondaryPay"));
+createSelector(selectCanFormDomain, substate => substate.get("canSecondaryPay"));
 
 export const makeSelectCanSource = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanSource"));
+createSelector(selectCanFormDomain, substate => substate.get("canSource"));
 
 export const makeSelectCanStatExtendFlg = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanStatExtendFlg"));
+createSelector(selectCanFormDomain, substate => substate.get("canStatExtendFlg"));
 
 export const makeSelectCanTiebreakerDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanTiebreakerDt"));
+createSelector(selectCanFormDomain, substate => substate.get("canTiebreakerDt"));
 
 export const makeSelectCanTipss = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanTipss"));
+createSelector(selectCanFormDomain, substate => substate.get("canTipss"));
 
 export const makeSelectCanTotAlbumin = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanTotAlbumin"));
+createSelector(selectCanFormDomain, substate => substate.get("canTotAlbumin"));
 
 export const makeSelectCanTotBili = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanTotBili"));
+createSelector(selectCanFormDomain, substate => substate.get("canTotBili"));
 
 export const makeSelectCanTrrExists = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanTrrExists"));
+createSelector(selectCanFormDomain, substate => substate.get("canTrrExists"));
 
 export const makeSelectCanTxCountry = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanTxCountry"));
+createSelector(selectCanFormDomain, substate => substate.get("canTxCountry"));
 
 export const makeSelectCanVadTah = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanVadTah"));
+createSelector(selectCanFormDomain, substate => substate.get("canVadTah"));
 
 export const makeSelectCanVaricealBleeding = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanVaricealBleeding"));
+createSelector(selectCanFormDomain, substate => substate.get("canVaricealBleeding"));
 
 export const makeSelectCanVentilator = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanVentilator"));
+createSelector(selectCanFormDomain, substate => substate.get("canVentilator"));
 
 export const makeSelectCanWgtKg = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanWgtKg"));
+createSelector(selectCanFormDomain, substate => substate.get("canWgtKg"));
 
 export const makeSelectCanWorkIncome = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanWorkIncome"));
+createSelector(selectCanFormDomain, substate => substate.get("canWorkIncome"));
 
 export const makeSelectCanWorkNoStat = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanWorkNoStat"));
+createSelector(selectCanFormDomain, substate => substate.get("canWorkNoStat"));
 
 export const makeSelectCanWorkYesStat = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanWorkYesStat"));
+createSelector(selectCanFormDomain, substate => substate.get("canWorkYesStat"));
 
 export const makeSelectCanYearEntryUs = () =>
-createSelector(selectCanFormDomain, substate => substate.get("CanYearEntryUs"));
+createSelector(selectCanFormDomain, substate => substate.get("canYearEntryUs"));
 
 export const makeSelectDonorId = () =>
-createSelector(selectCanFormDomain, substate => substate.get("DonorId"));
+createSelector(selectCanFormDomain, substate => substate.get("donorId"));
 
 export const makeSelectDonTy = () =>
-createSelector(selectCanFormDomain, substate => substate.get("DonTy"));
+createSelector(selectCanFormDomain, substate => substate.get("donTy"));
 
 export const makeSelectOrgAr = () =>
-createSelector(selectCanFormDomain, substate => substate.get("OrgAr"));
+createSelector(selectCanFormDomain, substate => substate.get("orgAr"));
 
 export const makeSelectPersId = () =>
-createSelector(selectCanFormDomain, substate => substate.get("PersId"));
+createSelector(selectCanFormDomain, substate => substate.get("persId"));
 
 export const makeSelectPersNexttx = () =>
-createSelector(selectCanFormDomain, substate => substate.get("PersNexttx"));
+createSelector(selectCanFormDomain, substate => substate.get("persNexttx"));
 
 export const makeSelectPersNexttxTrrId = () =>
-createSelector(selectCanFormDomain, substate => substate.get("PersNexttxTrrId"));
+createSelector(selectCanFormDomain, substate => substate.get("persNexttxTrrId"));
 
 export const makeSelectPersOptnDeathDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("PersOptnDeathDt"));
+createSelector(selectCanFormDomain, substate => substate.get("persOptnDeathDt"));
 
 export const makeSelectPersRestrictDeathDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("PersRestrictDeathDt"));
+createSelector(selectCanFormDomain, substate => substate.get("persRestrictDeathDt"));
 
 export const makeSelectPersRestrictDeathVrfy = () =>
-createSelector(selectCanFormDomain, substate => substate.get("PersRestrictDeathVrfy"));
+createSelector(selectCanFormDomain, substate => substate.get("persRestrictDeathVrfy"));
 
 export const makeSelectPersSsaDeathDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("PersSsaDeathDt"));
+createSelector(selectCanFormDomain, substate => substate.get("persSsaDeathDt"));
 
 export const makeSelectPxId = () =>
-createSelector(selectCanFormDomain, substate => substate.get("PxId"));
+createSelector(selectCanFormDomain, substate => substate.get("pxId"));
 
 export const makeSelectRecTxDt = () =>
-createSelector(selectCanFormDomain, substate => substate.get("RecTxDt"));
+createSelector(selectCanFormDomain, substate => substate.get("recTxDt"));
 
 export const makeSelectRecTxProcedureTy = () =>
-createSelector(selectCanFormDomain, substate => substate.get("RecTxProcedureTy"));
+createSelector(selectCanFormDomain, substate => substate.get("recTxProcedureTy"));
 
 export const makeSelectWlOrg = () =>
-createSelector(selectCanFormDomain, substate => substate.get("WlOrg"));
+createSelector(selectCanFormDomain, substate => substate.get("wlOrg"));
 

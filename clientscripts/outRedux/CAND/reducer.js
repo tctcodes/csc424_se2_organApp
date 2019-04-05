@@ -1,342 +1,342 @@
 switch (action.type) {
-	case CHANGE_CANABO:
-		return state.set('CanAbo', action.CanAbo);
-	case CHANGE_CANACADEMICLEVEL:
-		return state.set('CanAcademicLevel', action.CanAcademicLevel);
-	case CHANGE_CANACADEMICPROGRESS:
-		return state.set('CanAcademicProgress', action.CanAcademicProgress);
-	case CHANGE_CANACPTA2DON:
-		return state.set('CanAcptA2Don', action.CanAcptA2Don);
-	case CHANGE_CANACPTABOINCOMP:
-		return state.set('CanAcptAboIncomp', action.CanAcptAboIncomp);
-	case CHANGE_CANACPTEXTRACORPLI:
-		return state.set('CanAcptExtracorpLi', action.CanAcptExtracorpLi);
-	case CHANGE_CANACPTHBCPOS:
-		return state.set('CanAcptHbcPos', action.CanAcptHbcPos);
-	case CHANGE_CANACPTHCVPOS:
-		return state.set('CanAcptHcvPos', action.CanAcptHcvPos);
-	case CHANGE_CANACPTLISEG:
-		return state.set('CanAcptLiSeg', action.CanAcptLiSeg);
-	case CHANGE_CANACPTORGOTHERTEAM:
-		return state.set('CanAcptOrgOtherTeam', action.CanAcptOrgOtherTeam);
-	case CHANGE_CANACPTPROCURKI:
-		return state.set('CanAcptProcurKi', action.CanAcptProcurKi);
-	case CHANGE_CANACPTPROCURLI:
-		return state.set('CanAcptProcurLi', action.CanAcptProcurLi);
-	case CHANGE_CANACPTPROCURPA:
-		return state.set('CanAcptProcurPa', action.CanAcptProcurPa);
-	case CHANGE_CANACTIVATEDT:
-		return state.set('CanActivateDt', action.CanActivateDt);
-	case CHANGE_CANAGEATLISTING:
-		return state.set('CanAgeAtListing', action.CanAgeAtListing);
-	case CHANGE_CANAGEINMONTHSATLISTING:
-		return state.set('CanAgeInMonthsAtListing', action.CanAgeInMonthsAtListing);
-	case CHANGE_CANANASTOMOSIS:
-		return state.set('CanAnastomosis', action.CanAnastomosis);
-	case CHANGE_CANANESTHPRIORDEATH:
-		return state.set('CanAnesthPriorDeath', action.CanAnesthPriorDeath);
-	case CHANGE_CANANGINA:
-		return state.set('CanAngina', action.CanAngina);
-	case CHANGE_CANANGINACAD:
-		return state.set('CanAnginaCad', action.CanAnginaCad);
-	case CHANGE_CANARTIFICIALLI:
-		return state.set('CanArtificialLi', action.CanArtificialLi);
-	case CHANGE_CANASCITES:
-		return state.set('CanAscites', action.CanAscites);
-	case CHANGE_CANBACTERIAPERIT:
-		return state.set('CanBacteriaPerit', action.CanBacteriaPerit);
-	case CHANGE_CANBMI:
-		return state.set('CanBmi', action.CanBmi);
-	case CHANGE_CANCEREBVASC:
-		return state.set('CanCerebVasc', action.CanCerebVasc);
-	case CHANGE_CANCITIZENSHIP:
-		return state.set('CanCitizenship', action.CanCitizenship);
-	case CHANGE_CANCOGNITIVEDEVELOP:
-		return state.set('CanCognitiveDevelop', action.CanCognitiveDevelop);
-	case CHANGE_CANCTPSCORE:
-		return state.set('CanCtpScore', action.CanCtpScore);
-	case CHANGE_CANDEATHDT:
-		return state.set('CanDeathDt', action.CanDeathDt);
-	case CHANGE_CANDGN:
-		return state.set('CanDgn', action.CanDgn);
-	case CHANGE_CANDGN2:
-		return state.set('CanDgn2', action.CanDgn2);
-	case CHANGE_CANDGNOSTXT:
-		return state.set('CanDgnOstxt', action.CanDgnOstxt);
-	case CHANGE_CANDIAB:
-		return state.set('CanDiab', action.CanDiab);
-	case CHANGE_CANDIABTY:
-		return state.set('CanDiabTy', action.CanDiabTy);
-	case CHANGE_CANDIAL:
-		return state.set('CanDial', action.CanDial);
-	case CHANGE_CANDRUGTREATCOPD:
-		return state.set('CanDrugTreatCopd', action.CanDrugTreatCopd);
-	case CHANGE_CANDRUGTREATHYPERTEN:
-		return state.set('CanDrugTreatHyperten', action.CanDrugTreatHyperten);
-	case CHANGE_CANECMO:
-		return state.set('CanEcmo', action.CanEcmo);
-	case CHANGE_CANEDUCATION:
-		return state.set('CanEducation', action.CanEducation);
-	case CHANGE_CANELECTROLYTE:
-		return state.set('CanElectrolyte', action.CanElectrolyte);
-	case CHANGE_CANEMPLSTAT:
-		return state.set('CanEmplStat', action.CanEmplStat);
-	case CHANGE_CANENCEPH:
-		return state.set('CanEnceph', action.CanEnceph);
-	case CHANGE_CANENDWLFU:
-		return state.set('CanEndwlfu', action.CanEndwlfu);
-	case CHANGE_CANETHNICITYSRTR:
-		return state.set('CanEthnicitySrtr', action.CanEthnicitySrtr);
-	case CHANGE_CANEXHAUSTVASCACCESS:
-		return state.set('CanExhaustVascAccess', action.CanExhaustVascAccess);
-	case CHANGE_CANFOLLOWSOPOALLOC:
-		return state.set('CanFollowsOpoAlloc', action.CanFollowsOpoAlloc);
-	case CHANGE_CANFUNCTNSTAT:
-		return state.set('CanFunctnStat', action.CanFunctnStat);
-	case CHANGE_CANFUNGALSEPSIS:
-		return state.set('CanFungalSepsis', action.CanFungalSepsis);
-	case CHANGE_CANGENDER:
-		return state.set('CanGender', action.CanGender);
-	case CHANGE_CANHGTCM:
-		return state.set('CanHgtCm', action.CanHgtCm);
-	case CHANGE_CANHGTWGTDT:
-		return state.set('CanHgtWgtDt', action.CanHgtWgtDt);
-	case CHANGE_CANIABP:
-		return state.set('CanIabp', action.CanIabp);
-	case CHANGE_CANINITACTSTATCD:
-		return state.set('CanInitActStatCd', action.CanInitActStatCd);
-	case CHANGE_CANINITACTSTATDT:
-		return state.set('CanInitActStatDt', action.CanInitActStatDt);
-	case CHANGE_CANINITINACTSTATDT:
-		return state.set('CanInitInactStatDt', action.CanInitInactStatDt);
-	case CHANGE_CANINITSRTRLABMELD:
-		return state.set('CanInitSrtrLabMeld', action.CanInitSrtrLabMeld);
-	case CHANGE_CANINITSRTRLABMELDTY:
-		return state.set('CanInitSrtrLabMeldTy', action.CanInitSrtrLabMeldTy);
-	case CHANGE_CANINITSTAT:
-		return state.set('CanInitStat', action.CanInitStat);
-	case CHANGE_CANIVINOTROP:
-		return state.set('CanIvInotrop', action.CanIvInotrop);
-	case CHANGE_CANLASTACTSTATDT:
-		return state.set('CanLastActStatDt', action.CanLastActStatDt);
-	case CHANGE_CANLASTALBUMIN:
-		return state.set('CanLastAlbumin', action.CanLastAlbumin);
-	case CHANGE_CANLASTASCITES:
-		return state.set('CanLastAscites', action.CanLastAscites);
-	case CHANGE_CANLASTBILI:
-		return state.set('CanLastBili', action.CanLastBili);
-	case CHANGE_CANLASTDIALPRIORWEEK:
-		return state.set('CanLastDialPriorWeek', action.CanLastDialPriorWeek);
-	case CHANGE_CANLASTENCEPH:
-		return state.set('CanLastEnceph', action.CanLastEnceph);
-	case CHANGE_CANLASTINACTSTATDT:
-		return state.set('CanLastInactStatDt', action.CanLastInactStatDt);
-	case CHANGE_CANLASTINR:
-		return state.set('CanLastInr', action.CanLastInr);
-	case CHANGE_CANLASTSERUMCREAT:
-		return state.set('CanLastSerumCreat', action.CanLastSerumCreat);
-	case CHANGE_CANLASTSERUMSODIUM:
-		return state.set('CanLastSerumSodium', action.CanLastSerumSodium);
-	case CHANGE_CANLASTSRTRLABMELD:
-		return state.set('CanLastSrtrLabMeld', action.CanLastSrtrLabMeld);
-	case CHANGE_CANLASTSRTRLABMELDTY:
-		return state.set('CanLastSrtrLabMeldTy', action.CanLastSrtrLabMeldTy);
-	case CHANGE_CANLASTSTAT:
-		return state.set('CanLastStat', action.CanLastStat);
-	case CHANGE_CANLIFESUPPORT:
-		return state.set('CanLifeSupport', action.CanLifeSupport);
-	case CHANGE_CANLIFESUPPORTOTHER:
-		return state.set('CanLifeSupportOther', action.CanLifeSupportOther);
-	case CHANGE_CANLISTINGCTRID:
-		return state.set('CanListingCtrId', action.CanListingCtrId);
-	case CHANGE_CANLISTINGDT:
-		return state.set('CanListingDt', action.CanListingDt);
-	case CHANGE_CANLISTINGOPOID:
-		return state.set('CanListingOpoId', action.CanListingOpoId);
-	case CHANGE_CANLIVINGDONTX:
-		return state.set('CanLivingDonTx', action.CanLivingDonTx);
-	case CHANGE_CANLIDYSFUNCTN:
-		return state.set('CanLiDysfunctn', action.CanLiDysfunctn);
-	case CHANGE_CANLOSSVASCACCESS:
-		return state.set('CanLossVascAccess', action.CanLossVascAccess);
-	case CHANGE_CANMALIG:
-		return state.set('CanMalig', action.CanMalig);
-	case CHANGE_CANMALIGTY:
-		return state.set('CanMaligTy', action.CanMaligTy);
-	case CHANGE_CANMALIGTYBREAST:
-		return state.set('CanMaligTyBreast', action.CanMaligTyBreast);
-	case CHANGE_CANMALIGTYCNSTUMOR:
-		return state.set('CanMaligTyCnsTumor', action.CanMaligTyCnsTumor);
-	case CHANGE_CANMALIGTYGENITOURINARY:
-		return state.set('CanMaligTyGenitourinary', action.CanMaligTyGenitourinary);
-	case CHANGE_CANMALIGTYHEPBLAST:
-		return state.set('CanMaligTyHepblast', action.CanMaligTyHepblast);
-	case CHANGE_CANMALIGTYHEPCARCINOMA:
-		return state.set('CanMaligTyHepcarcinoma', action.CanMaligTyHepcarcinoma);
-	case CHANGE_CANMALIGTYLEUKLYMPH:
-		return state.set('CanMaligTyLeukLymph', action.CanMaligTyLeukLymph);
-	case CHANGE_CANMALIGTYLIVER:
-		return state.set('CanMaligTyLiver', action.CanMaligTyLiver);
-	case CHANGE_CANMALIGTYLU:
-		return state.set('CanMaligTyLu', action.CanMaligTyLu);
-	case CHANGE_CANMALIGTYOTHER:
-		return state.set('CanMaligTyOther', action.CanMaligTyOther);
-	case CHANGE_CANMALIGTYSKINMEL:
-		return state.set('CanMaligTySkinMel', action.CanMaligTySkinMel);
-	case CHANGE_CANMALIGTYSKINNONMEL:
-		return state.set('CanMaligTySkinNonMel', action.CanMaligTySkinNonMel);
-	case CHANGE_CANMALIGTYTHROAT:
-		return state.set('CanMaligTyThroat', action.CanMaligTyThroat);
-	case CHANGE_CANMALIGTYTHYROID:
-		return state.set('CanMaligTyThyroid', action.CanMaligTyThyroid);
-	case CHANGE_CANMALIGTYUNK:
-		return state.set('CanMaligTyUnk', action.CanMaligTyUnk);
-	case CHANGE_CANMAXAGE:
-		return state.set('CanMaxAge', action.CanMaxAge);
-	case CHANGE_CANMAXMILE:
-		return state.set('CanMaxMile', action.CanMaxMile);
-	case CHANGE_CANMAXWGT:
-		return state.set('CanMaxWgt', action.CanMaxWgt);
-	case CHANGE_CANMEDCOND:
-		return state.set('CanMedCond', action.CanMedCond);
-	case CHANGE_CANMINAGE:
-		return state.set('CanMinAge', action.CanMinAge);
-	case CHANGE_CANMINWGT:
-		return state.set('CanMinWgt', action.CanMinWgt);
-	case CHANGE_CANMOSTRECENTCREAT:
-		return state.set('CanMostRecentCreat', action.CanMostRecentCreat);
-	case CHANGE_CANMOSTRECENTHGTCM:
-		return state.set('CanMostRecentHgtCm', action.CanMostRecentHgtCm);
-	case CHANGE_CANMOSTRECENTWGTKG:
-		return state.set('CanMostRecentWgtKg', action.CanMostRecentWgtKg);
-	case CHANGE_CANMOTORDEVELOP:
-		return state.set('CanMotorDevelop', action.CanMotorDevelop);
-	case CHANGE_CANMUSCLEWASTING:
-		return state.set('CanMuscleWasting', action.CanMuscleWasting);
-	case CHANGE_CANNEOPLASM:
-		return state.set('CanNeoplasm', action.CanNeoplasm);
-	case CHANGE_CANNEWPREVPITX:
-		return state.set('CanNewPrevPiTx', action.CanNewPrevPiTx);
-	case CHANGE_CANNONRECONGI:
-		return state.set('CanNonReconGi', action.CanNonReconGi);
-	case CHANGE_CANPEPTICULCER:
-		return state.set('CanPepticUlcer', action.CanPepticUlcer);
-	case CHANGE_CANPERIPHVASC:
-		return state.set('CanPeriphVasc', action.CanPeriphVasc);
-	case CHANGE_CANPERMSTATE:
-		return state.set('CanPermState', action.CanPermState);
-	case CHANGE_CANPGE:
-		return state.set('CanPge', action.CanPge);
-	case CHANGE_CANPHYSCCAPACITY:
-		return state.set('CanPhyscCapacity', action.CanPhyscCapacity);
-	case CHANGE_CANPORTALVEIN:
-		return state.set('CanPortalVein', action.CanPortalVein);
-	case CHANGE_CANPRELIMXMATCHREQUEST:
-		return state.set('CanPrelimXmatchRequest', action.CanPrelimXmatchRequest);
-	case CHANGE_CANPREVABDOMSURG:
-		return state.set('CanPrevAbdomSurg', action.CanPrevAbdomSurg);
-	case CHANGE_CANPREVBONEMARROWDT:
-		return state.set('CanPrevBoneMarrowDt', action.CanPrevBoneMarrowDt);
-	case CHANGE_CANPREVBONEMARROWTX:
-		return state.set('CanPrevBoneMarrowTx', action.CanPrevBoneMarrowTx);
-	case CHANGE_CANPREVHL:
-		return state.set('CanPrevHl', action.CanPrevHl);
-	case CHANGE_CANPREVHR:
-		return state.set('CanPrevHr', action.CanPrevHr);
-	case CHANGE_CANPREVIN:
-		return state.set('CanPrevIn', action.CanPrevIn);
-	case CHANGE_CANPREVKI:
-		return state.set('CanPrevKi', action.CanPrevKi);
-	case CHANGE_CANPREVKP:
-		return state.set('CanPrevKp', action.CanPrevKp);
-	case CHANGE_CANPREVLI:
-		return state.set('CanPrevLi', action.CanPrevLi);
-	case CHANGE_CANPREVLU:
-		return state.set('CanPrevLu', action.CanPrevLu);
-	case CHANGE_CANPREVPA:
-		return state.set('CanPrevPa', action.CanPrevPa);
-	case CHANGE_CANPREVTX:
-		return state.set('CanPrevTx', action.CanPrevTx);
-	case CHANGE_CANPREVTXFUS:
-		return state.set('CanPrevTxfus', action.CanPrevTxfus);
-	case CHANGE_CANPRIMARYPAY:
-		return state.set('CanPrimaryPay', action.CanPrimaryPay);
-	case CHANGE_CANPULMEMBOL:
-		return state.set('CanPulmEmbol', action.CanPulmEmbol);
-	case CHANGE_CANRACE:
-		return state.set('CanRace', action.CanRace);
-	case CHANGE_CANRACESRTR:
-		return state.set('CanRaceSrtr', action.CanRaceSrtr);
-	case CHANGE_CANRECURSEPSIS:
-		return state.set('CanRecurSepsis', action.CanRecurSepsis);
-	case CHANGE_CANREMCD:
-		return state.set('CanRemCd', action.CanRemCd);
-	case CHANGE_CANREMCOD:
-		return state.set('CanRemCod', action.CanRemCod);
-	case CHANGE_CANREMDT:
-		return state.set('CanRemDt', action.CanRemDt);
-	case CHANGE_CANSECONDARYPAY:
-		return state.set('CanSecondaryPay', action.CanSecondaryPay);
-	case CHANGE_CANSOURCE:
-		return state.set('CanSource', action.CanSource);
-	case CHANGE_CANSTATEXTENDFLG:
-		return state.set('CanStatExtendFlg', action.CanStatExtendFlg);
-	case CHANGE_CANTIEBREAKERDT:
-		return state.set('CanTiebreakerDt', action.CanTiebreakerDt);
-	case CHANGE_CANTIPSS:
-		return state.set('CanTipss', action.CanTipss);
-	case CHANGE_CANTOTALBUMIN:
-		return state.set('CanTotAlbumin', action.CanTotAlbumin);
-	case CHANGE_CANTOTBILI:
-		return state.set('CanTotBili', action.CanTotBili);
-	case CHANGE_CANTRREXISTS:
-		return state.set('CanTrrExists', action.CanTrrExists);
-	case CHANGE_CANTXCOUNTRY:
-		return state.set('CanTxCountry', action.CanTxCountry);
-	case CHANGE_CANVADTAH:
-		return state.set('CanVadTah', action.CanVadTah);
-	case CHANGE_CANVARICEALBLEEDING:
-		return state.set('CanVaricealBleeding', action.CanVaricealBleeding);
-	case CHANGE_CANVENTILATOR:
-		return state.set('CanVentilator', action.CanVentilator);
-	case CHANGE_CANWGTKG:
-		return state.set('CanWgtKg', action.CanWgtKg);
-	case CHANGE_CANWORKINCOME:
-		return state.set('CanWorkIncome', action.CanWorkIncome);
-	case CHANGE_CANWORKNOSTAT:
-		return state.set('CanWorkNoStat', action.CanWorkNoStat);
-	case CHANGE_CANWORKYESSTAT:
-		return state.set('CanWorkYesStat', action.CanWorkYesStat);
-	case CHANGE_CANYEARENTRYUS:
-		return state.set('CanYearEntryUs', action.CanYearEntryUs);
-	case CHANGE_DONORID:
-		return state.set('DonorId', action.DonorId);
-	case CHANGE_DONTY:
-		return state.set('DonTy', action.DonTy);
-	case CHANGE_ORGAR:
-		return state.set('OrgAr', action.OrgAr);
-	case CHANGE_PERSID:
-		return state.set('PersId', action.PersId);
-	case CHANGE_PERSNEXTTX:
-		return state.set('PersNexttx', action.PersNexttx);
-	case CHANGE_PERSNEXTTXTRRID:
-		return state.set('PersNexttxTrrId', action.PersNexttxTrrId);
-	case CHANGE_PERSOPTNDEATHDT:
-		return state.set('PersOptnDeathDt', action.PersOptnDeathDt);
-	case CHANGE_PERSRESTRICTDEATHDT:
-		return state.set('PersRestrictDeathDt', action.PersRestrictDeathDt);
-	case CHANGE_PERSRESTRICTDEATHVRFY:
-		return state.set('PersRestrictDeathVrfy', action.PersRestrictDeathVrfy);
-	case CHANGE_PERSSSADEATHDT:
-		return state.set('PersSsaDeathDt', action.PersSsaDeathDt);
-	case CHANGE_PXID:
-		return state.set('PxId', action.PxId);
-	case CHANGE_RECTXDT:
-		return state.set('RecTxDt', action.RecTxDt);
-	case CHANGE_RECTXPROCEDURETY:
-		return state.set('RecTxProcedureTy', action.RecTxProcedureTy);
-	case CHANGE_WLORG:
-		return state.set('WlOrg', action.WlOrg);
+	case constant.CHANGE_CANABO:
+		return state.set('canAbo', action.canAbo);
+	case constant.CHANGE_CANACADEMICLEVEL:
+		return state.set('canAcademicLevel', action.canAcademicLevel);
+	case constant.CHANGE_CANACADEMICPROGRESS:
+		return state.set('canAcademicProgress', action.canAcademicProgress);
+	case constant.CHANGE_CANACPTA2DON:
+		return state.set('canAcptA2Don', action.canAcptA2Don);
+	case constant.CHANGE_CANACPTABOINCOMP:
+		return state.set('canAcptAboIncomp', action.canAcptAboIncomp);
+	case constant.CHANGE_CANACPTEXTRACORPLI:
+		return state.set('canAcptExtracorpLi', action.canAcptExtracorpLi);
+	case constant.CHANGE_CANACPTHBCPOS:
+		return state.set('canAcptHbcPos', action.canAcptHbcPos);
+	case constant.CHANGE_CANACPTHCVPOS:
+		return state.set('canAcptHcvPos', action.canAcptHcvPos);
+	case constant.CHANGE_CANACPTLISEG:
+		return state.set('canAcptLiSeg', action.canAcptLiSeg);
+	case constant.CHANGE_CANACPTORGOTHERTEAM:
+		return state.set('canAcptOrgOtherTeam', action.canAcptOrgOtherTeam);
+	case constant.CHANGE_CANACPTPROCURKI:
+		return state.set('canAcptProcurKi', action.canAcptProcurKi);
+	case constant.CHANGE_CANACPTPROCURLI:
+		return state.set('canAcptProcurLi', action.canAcptProcurLi);
+	case constant.CHANGE_CANACPTPROCURPA:
+		return state.set('canAcptProcurPa', action.canAcptProcurPa);
+	case constant.CHANGE_CANACTIVATEDT:
+		return state.set('canActivateDt', action.canActivateDt);
+	case constant.CHANGE_CANAGEATLISTING:
+		return state.set('canAgeAtListing', action.canAgeAtListing);
+	case constant.CHANGE_CANAGEINMONTHSATLISTING:
+		return state.set('canAgeInMonthsAtListing', action.canAgeInMonthsAtListing);
+	case constant.CHANGE_CANANASTOMOSIS:
+		return state.set('canAnastomosis', action.canAnastomosis);
+	case constant.CHANGE_CANANESTHPRIORDEATH:
+		return state.set('canAnesthPriorDeath', action.canAnesthPriorDeath);
+	case constant.CHANGE_CANANGINA:
+		return state.set('canAngina', action.canAngina);
+	case constant.CHANGE_CANANGINACAD:
+		return state.set('canAnginaCad', action.canAnginaCad);
+	case constant.CHANGE_CANARTIFICIALLI:
+		return state.set('canArtificialLi', action.canArtificialLi);
+	case constant.CHANGE_CANASCITES:
+		return state.set('canAscites', action.canAscites);
+	case constant.CHANGE_CANBACTERIAPERIT:
+		return state.set('canBacteriaPerit', action.canBacteriaPerit);
+	case constant.CHANGE_CANBMI:
+		return state.set('canBmi', action.canBmi);
+	case constant.CHANGE_CANCEREBVASC:
+		return state.set('canCerebVasc', action.canCerebVasc);
+	case constant.CHANGE_CANCITIZENSHIP:
+		return state.set('canCitizenship', action.canCitizenship);
+	case constant.CHANGE_CANCOGNITIVEDEVELOP:
+		return state.set('canCognitiveDevelop', action.canCognitiveDevelop);
+	case constant.CHANGE_CANCTPSCORE:
+		return state.set('canCtpScore', action.canCtpScore);
+	case constant.CHANGE_CANDEATHDT:
+		return state.set('canDeathDt', action.canDeathDt);
+	case constant.CHANGE_CANDGN:
+		return state.set('canDgn', action.canDgn);
+	case constant.CHANGE_CANDGN2:
+		return state.set('canDgn2', action.canDgn2);
+	case constant.CHANGE_CANDGNOSTXT:
+		return state.set('canDgnOstxt', action.canDgnOstxt);
+	case constant.CHANGE_CANDIAB:
+		return state.set('canDiab', action.canDiab);
+	case constant.CHANGE_CANDIABTY:
+		return state.set('canDiabTy', action.canDiabTy);
+	case constant.CHANGE_CANDIAL:
+		return state.set('canDial', action.canDial);
+	case constant.CHANGE_CANDRUGTREATCOPD:
+		return state.set('canDrugTreatCopd', action.canDrugTreatCopd);
+	case constant.CHANGE_CANDRUGTREATHYPERTEN:
+		return state.set('canDrugTreatHyperten', action.canDrugTreatHyperten);
+	case constant.CHANGE_CANECMO:
+		return state.set('canEcmo', action.canEcmo);
+	case constant.CHANGE_CANEDUCATION:
+		return state.set('canEducation', action.canEducation);
+	case constant.CHANGE_CANELECTROLYTE:
+		return state.set('canElectrolyte', action.canElectrolyte);
+	case constant.CHANGE_CANEMPLSTAT:
+		return state.set('canEmplStat', action.canEmplStat);
+	case constant.CHANGE_CANENCEPH:
+		return state.set('canEnceph', action.canEnceph);
+	case constant.CHANGE_CANENDWLFU:
+		return state.set('canEndwlfu', action.canEndwlfu);
+	case constant.CHANGE_CANETHNICITYSRTR:
+		return state.set('canEthnicitySrtr', action.canEthnicitySrtr);
+	case constant.CHANGE_CANEXHAUSTVASCACCESS:
+		return state.set('canExhaustVascAccess', action.canExhaustVascAccess);
+	case constant.CHANGE_CANFOLLOWSOPOALLOC:
+		return state.set('canFollowsOpoAlloc', action.canFollowsOpoAlloc);
+	case constant.CHANGE_CANFUNCTNSTAT:
+		return state.set('canFunctnStat', action.canFunctnStat);
+	case constant.CHANGE_CANFUNGALSEPSIS:
+		return state.set('canFungalSepsis', action.canFungalSepsis);
+	case constant.CHANGE_CANGENDER:
+		return state.set('canGender', action.canGender);
+	case constant.CHANGE_CANHGTCM:
+		return state.set('canHgtCm', action.canHgtCm);
+	case constant.CHANGE_CANHGTWGTDT:
+		return state.set('canHgtWgtDt', action.canHgtWgtDt);
+	case constant.CHANGE_CANIABP:
+		return state.set('canIabp', action.canIabp);
+	case constant.CHANGE_CANINITACTSTATCD:
+		return state.set('canInitActStatCd', action.canInitActStatCd);
+	case constant.CHANGE_CANINITACTSTATDT:
+		return state.set('canInitActStatDt', action.canInitActStatDt);
+	case constant.CHANGE_CANINITINACTSTATDT:
+		return state.set('canInitInactStatDt', action.canInitInactStatDt);
+	case constant.CHANGE_CANINITSRTRLABMELD:
+		return state.set('canInitSrtrLabMeld', action.canInitSrtrLabMeld);
+	case constant.CHANGE_CANINITSRTRLABMELDTY:
+		return state.set('canInitSrtrLabMeldTy', action.canInitSrtrLabMeldTy);
+	case constant.CHANGE_CANINITSTAT:
+		return state.set('canInitStat', action.canInitStat);
+	case constant.CHANGE_CANIVINOTROP:
+		return state.set('canIvInotrop', action.canIvInotrop);
+	case constant.CHANGE_CANLASTACTSTATDT:
+		return state.set('canLastActStatDt', action.canLastActStatDt);
+	case constant.CHANGE_CANLASTALBUMIN:
+		return state.set('canLastAlbumin', action.canLastAlbumin);
+	case constant.CHANGE_CANLASTASCITES:
+		return state.set('canLastAscites', action.canLastAscites);
+	case constant.CHANGE_CANLASTBILI:
+		return state.set('canLastBili', action.canLastBili);
+	case constant.CHANGE_CANLASTDIALPRIORWEEK:
+		return state.set('canLastDialPriorWeek', action.canLastDialPriorWeek);
+	case constant.CHANGE_CANLASTENCEPH:
+		return state.set('canLastEnceph', action.canLastEnceph);
+	case constant.CHANGE_CANLASTINACTSTATDT:
+		return state.set('canLastInactStatDt', action.canLastInactStatDt);
+	case constant.CHANGE_CANLASTINR:
+		return state.set('canLastInr', action.canLastInr);
+	case constant.CHANGE_CANLASTSERUMCREAT:
+		return state.set('canLastSerumCreat', action.canLastSerumCreat);
+	case constant.CHANGE_CANLASTSERUMSODIUM:
+		return state.set('canLastSerumSodium', action.canLastSerumSodium);
+	case constant.CHANGE_CANLASTSRTRLABMELD:
+		return state.set('canLastSrtrLabMeld', action.canLastSrtrLabMeld);
+	case constant.CHANGE_CANLASTSRTRLABMELDTY:
+		return state.set('canLastSrtrLabMeldTy', action.canLastSrtrLabMeldTy);
+	case constant.CHANGE_CANLASTSTAT:
+		return state.set('canLastStat', action.canLastStat);
+	case constant.CHANGE_CANLIFESUPPORT:
+		return state.set('canLifeSupport', action.canLifeSupport);
+	case constant.CHANGE_CANLIFESUPPORTOTHER:
+		return state.set('canLifeSupportOther', action.canLifeSupportOther);
+	case constant.CHANGE_CANLISTINGCTRID:
+		return state.set('canListingCtrId', action.canListingCtrId);
+	case constant.CHANGE_CANLISTINGDT:
+		return state.set('canListingDt', action.canListingDt);
+	case constant.CHANGE_CANLISTINGOPOID:
+		return state.set('canListingOpoId', action.canListingOpoId);
+	case constant.CHANGE_CANLIVINGDONTX:
+		return state.set('canLivingDonTx', action.canLivingDonTx);
+	case constant.CHANGE_CANLIDYSFUNCTN:
+		return state.set('canLiDysfunctn', action.canLiDysfunctn);
+	case constant.CHANGE_CANLOSSVASCACCESS:
+		return state.set('canLossVascAccess', action.canLossVascAccess);
+	case constant.CHANGE_CANMALIG:
+		return state.set('canMalig', action.canMalig);
+	case constant.CHANGE_CANMALIGTY:
+		return state.set('canMaligTy', action.canMaligTy);
+	case constant.CHANGE_CANMALIGTYBREAST:
+		return state.set('canMaligTyBreast', action.canMaligTyBreast);
+	case constant.CHANGE_CANMALIGTYCNSTUMOR:
+		return state.set('canMaligTyCnsTumor', action.canMaligTyCnsTumor);
+	case constant.CHANGE_CANMALIGTYGENITOURINARY:
+		return state.set('canMaligTyGenitourinary', action.canMaligTyGenitourinary);
+	case constant.CHANGE_CANMALIGTYHEPBLAST:
+		return state.set('canMaligTyHepblast', action.canMaligTyHepblast);
+	case constant.CHANGE_CANMALIGTYHEPCARCINOMA:
+		return state.set('canMaligTyHepcarcinoma', action.canMaligTyHepcarcinoma);
+	case constant.CHANGE_CANMALIGTYLEUKLYMPH:
+		return state.set('canMaligTyLeukLymph', action.canMaligTyLeukLymph);
+	case constant.CHANGE_CANMALIGTYLIVER:
+		return state.set('canMaligTyLiver', action.canMaligTyLiver);
+	case constant.CHANGE_CANMALIGTYLU:
+		return state.set('canMaligTyLu', action.canMaligTyLu);
+	case constant.CHANGE_CANMALIGTYOTHER:
+		return state.set('canMaligTyOther', action.canMaligTyOther);
+	case constant.CHANGE_CANMALIGTYSKINMEL:
+		return state.set('canMaligTySkinMel', action.canMaligTySkinMel);
+	case constant.CHANGE_CANMALIGTYSKINNONMEL:
+		return state.set('canMaligTySkinNonMel', action.canMaligTySkinNonMel);
+	case constant.CHANGE_CANMALIGTYTHROAT:
+		return state.set('canMaligTyThroat', action.canMaligTyThroat);
+	case constant.CHANGE_CANMALIGTYTHYROID:
+		return state.set('canMaligTyThyroid', action.canMaligTyThyroid);
+	case constant.CHANGE_CANMALIGTYUNK:
+		return state.set('canMaligTyUnk', action.canMaligTyUnk);
+	case constant.CHANGE_CANMAXAGE:
+		return state.set('canMaxAge', action.canMaxAge);
+	case constant.CHANGE_CANMAXMILE:
+		return state.set('canMaxMile', action.canMaxMile);
+	case constant.CHANGE_CANMAXWGT:
+		return state.set('canMaxWgt', action.canMaxWgt);
+	case constant.CHANGE_CANMEDCOND:
+		return state.set('canMedCond', action.canMedCond);
+	case constant.CHANGE_CANMINAGE:
+		return state.set('canMinAge', action.canMinAge);
+	case constant.CHANGE_CANMINWGT:
+		return state.set('canMinWgt', action.canMinWgt);
+	case constant.CHANGE_CANMOSTRECENTCREAT:
+		return state.set('canMostRecentCreat', action.canMostRecentCreat);
+	case constant.CHANGE_CANMOSTRECENTHGTCM:
+		return state.set('canMostRecentHgtCm', action.canMostRecentHgtCm);
+	case constant.CHANGE_CANMOSTRECENTWGTKG:
+		return state.set('canMostRecentWgtKg', action.canMostRecentWgtKg);
+	case constant.CHANGE_CANMOTORDEVELOP:
+		return state.set('canMotorDevelop', action.canMotorDevelop);
+	case constant.CHANGE_CANMUSCLEWASTING:
+		return state.set('canMuscleWasting', action.canMuscleWasting);
+	case constant.CHANGE_CANNEOPLASM:
+		return state.set('canNeoplasm', action.canNeoplasm);
+	case constant.CHANGE_CANNEWPREVPITX:
+		return state.set('canNewPrevPiTx', action.canNewPrevPiTx);
+	case constant.CHANGE_CANNONRECONGI:
+		return state.set('canNonReconGi', action.canNonReconGi);
+	case constant.CHANGE_CANPEPTICULCER:
+		return state.set('canPepticUlcer', action.canPepticUlcer);
+	case constant.CHANGE_CANPERIPHVASC:
+		return state.set('canPeriphVasc', action.canPeriphVasc);
+	case constant.CHANGE_CANPERMSTATE:
+		return state.set('canPermState', action.canPermState);
+	case constant.CHANGE_CANPGE:
+		return state.set('canPge', action.canPge);
+	case constant.CHANGE_CANPHYSCCAPACITY:
+		return state.set('canPhyscCapacity', action.canPhyscCapacity);
+	case constant.CHANGE_CANPORTALVEIN:
+		return state.set('canPortalVein', action.canPortalVein);
+	case constant.CHANGE_CANPRELIMXMATCHREQUEST:
+		return state.set('canPrelimXmatchRequest', action.canPrelimXmatchRequest);
+	case constant.CHANGE_CANPREVABDOMSURG:
+		return state.set('canPrevAbdomSurg', action.canPrevAbdomSurg);
+	case constant.CHANGE_CANPREVBONEMARROWDT:
+		return state.set('canPrevBoneMarrowDt', action.canPrevBoneMarrowDt);
+	case constant.CHANGE_CANPREVBONEMARROWTX:
+		return state.set('canPrevBoneMarrowTx', action.canPrevBoneMarrowTx);
+	case constant.CHANGE_CANPREVHL:
+		return state.set('canPrevHl', action.canPrevHl);
+	case constant.CHANGE_CANPREVHR:
+		return state.set('canPrevHr', action.canPrevHr);
+	case constant.CHANGE_CANPREVIN:
+		return state.set('canPrevIn', action.canPrevIn);
+	case constant.CHANGE_CANPREVKI:
+		return state.set('canPrevKi', action.canPrevKi);
+	case constant.CHANGE_CANPREVKP:
+		return state.set('canPrevKp', action.canPrevKp);
+	case constant.CHANGE_CANPREVLI:
+		return state.set('canPrevLi', action.canPrevLi);
+	case constant.CHANGE_CANPREVLU:
+		return state.set('canPrevLu', action.canPrevLu);
+	case constant.CHANGE_CANPREVPA:
+		return state.set('canPrevPa', action.canPrevPa);
+	case constant.CHANGE_CANPREVTX:
+		return state.set('canPrevTx', action.canPrevTx);
+	case constant.CHANGE_CANPREVTXFUS:
+		return state.set('canPrevTxfus', action.canPrevTxfus);
+	case constant.CHANGE_CANPRIMARYPAY:
+		return state.set('canPrimaryPay', action.canPrimaryPay);
+	case constant.CHANGE_CANPULMEMBOL:
+		return state.set('canPulmEmbol', action.canPulmEmbol);
+	case constant.CHANGE_CANRACE:
+		return state.set('canRace', action.canRace);
+	case constant.CHANGE_CANRACESRTR:
+		return state.set('canRaceSrtr', action.canRaceSrtr);
+	case constant.CHANGE_CANRECURSEPSIS:
+		return state.set('canRecurSepsis', action.canRecurSepsis);
+	case constant.CHANGE_CANREMCD:
+		return state.set('canRemCd', action.canRemCd);
+	case constant.CHANGE_CANREMCOD:
+		return state.set('canRemCod', action.canRemCod);
+	case constant.CHANGE_CANREMDT:
+		return state.set('canRemDt', action.canRemDt);
+	case constant.CHANGE_CANSECONDARYPAY:
+		return state.set('canSecondaryPay', action.canSecondaryPay);
+	case constant.CHANGE_CANSOURCE:
+		return state.set('canSource', action.canSource);
+	case constant.CHANGE_CANSTATEXTENDFLG:
+		return state.set('canStatExtendFlg', action.canStatExtendFlg);
+	case constant.CHANGE_CANTIEBREAKERDT:
+		return state.set('canTiebreakerDt', action.canTiebreakerDt);
+	case constant.CHANGE_CANTIPSS:
+		return state.set('canTipss', action.canTipss);
+	case constant.CHANGE_CANTOTALBUMIN:
+		return state.set('canTotAlbumin', action.canTotAlbumin);
+	case constant.CHANGE_CANTOTBILI:
+		return state.set('canTotBili', action.canTotBili);
+	case constant.CHANGE_CANTRREXISTS:
+		return state.set('canTrrExists', action.canTrrExists);
+	case constant.CHANGE_CANTXCOUNTRY:
+		return state.set('canTxCountry', action.canTxCountry);
+	case constant.CHANGE_CANVADTAH:
+		return state.set('canVadTah', action.canVadTah);
+	case constant.CHANGE_CANVARICEALBLEEDING:
+		return state.set('canVaricealBleeding', action.canVaricealBleeding);
+	case constant.CHANGE_CANVENTILATOR:
+		return state.set('canVentilator', action.canVentilator);
+	case constant.CHANGE_CANWGTKG:
+		return state.set('canWgtKg', action.canWgtKg);
+	case constant.CHANGE_CANWORKINCOME:
+		return state.set('canWorkIncome', action.canWorkIncome);
+	case constant.CHANGE_CANWORKNOSTAT:
+		return state.set('canWorkNoStat', action.canWorkNoStat);
+	case constant.CHANGE_CANWORKYESSTAT:
+		return state.set('canWorkYesStat', action.canWorkYesStat);
+	case constant.CHANGE_CANYEARENTRYUS:
+		return state.set('canYearEntryUs', action.canYearEntryUs);
+	case constant.CHANGE_DONORID:
+		return state.set('donorId', action.donorId);
+	case constant.CHANGE_DONTY:
+		return state.set('donTy', action.donTy);
+	case constant.CHANGE_ORGAR:
+		return state.set('orgAr', action.orgAr);
+	case constant.CHANGE_PERSID:
+		return state.set('persId', action.persId);
+	case constant.CHANGE_PERSNEXTTX:
+		return state.set('persNexttx', action.persNexttx);
+	case constant.CHANGE_PERSNEXTTXTRRID:
+		return state.set('persNexttxTrrId', action.persNexttxTrrId);
+	case constant.CHANGE_PERSOPTNDEATHDT:
+		return state.set('persOptnDeathDt', action.persOptnDeathDt);
+	case constant.CHANGE_PERSRESTRICTDEATHDT:
+		return state.set('persRestrictDeathDt', action.persRestrictDeathDt);
+	case constant.CHANGE_PERSRESTRICTDEATHVRFY:
+		return state.set('persRestrictDeathVrfy', action.persRestrictDeathVrfy);
+	case constant.CHANGE_PERSSSADEATHDT:
+		return state.set('persSsaDeathDt', action.persSsaDeathDt);
+	case constant.CHANGE_PXID:
+		return state.set('pxId', action.pxId);
+	case constant.CHANGE_RECTXDT:
+		return state.set('recTxDt', action.recTxDt);
+	case constant.CHANGE_RECTXPROCEDURETY:
+		return state.set('recTxProcedureTy', action.recTxProcedureTy);
+	case constant.CHANGE_WLORG:
+		return state.set('wlOrg', action.wlOrg);
 	default:
 		 return state;
 }
