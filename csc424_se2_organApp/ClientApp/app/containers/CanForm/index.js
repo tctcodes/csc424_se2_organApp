@@ -20,9 +20,18 @@ import saga from './saga';
 
 
 export class CanForm extends React.Component {
-    componentDidMount(){
+	constructor(props, context) {
+		super(props, context);
+		this.state = {
+		  key: 'meld',
+		};
+	  }
+	
+	componentDidMount(){
         this.props.onGetRecordPersId();
-    }
+	}
+	
+	
     render(){
         return (<div>
              <Helmet>
@@ -30,9 +39,10 @@ export class CanForm extends React.Component {
                 <meta name="description" content="Description of CanForm" />
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossOrigin="anonymous" />
             </Helmet>
-			<Tabs defaultActiveKey="phys">
+			<Tabs defaultActiveKey="phys"  activeKey={this.state.key}
+        		onSelect={key => this.setState({ key })} >
 	<Tab eventKey="meld" title="meld">
-		<div className="d-flex flex-wrap bg-light">
+		{ this.state.key == 'meld' && <div className="d-flex flex-wrap bg-light">
 			<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 				<label className="font-weight-bold" >CAN INIT SRTR LAB MELD</label>
 				<label className="text-secondary" >First SRTR MELD/PELD given:</label>
@@ -614,10 +624,11 @@ export class CanForm extends React.Component {
 				<label className="text-secondary" >Last SRTR MELD/PELD type given:</label>
 				<input className="form-control"type="text" value={this.props.canLastSrtrLabMeldTy} onChange={this.props.onChangeCanLastSrtrLabMeldTy} />
 			</div>
-		</div>
+		</div>}
 
 	</Tab>
 	<Tab eventKey="malig" title="malig">
+	{ this.state.key == 'malig' &&
 		<div className="d-flex flex-wrap bg-light">
 			<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 				<label className="font-weight-bold" >CAN MALIG</label>
@@ -716,11 +727,11 @@ export class CanForm extends React.Component {
 				<label className="text-secondary" >Previous Malignancy - Type Unknown (14):</label>
 				<input className="form-control"type="number" value={this.props.canMaligTyUnk} onChange={this.props.onChangeCanMaligTyUnk} />
 			</div>
-		</div>
+		</div>}
 
 	</Tab>
 	<Tab eventKey="match" title="match">
-		<div className="d-flex flex-wrap bg-light">
+	{ this.state.key == 'match' && <div className="d-flex flex-wrap bg-light">
 			<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 				<label className="font-weight-bold" >CAN ACPT A2 DON</label>
 				<label className="text-secondary" >Accept A2 donor?:</label>
@@ -838,11 +849,11 @@ export class CanForm extends React.Component {
 					<option value="PI">PI: Pancreas Islets</option>
 				</select>
 			</div>
-		</div>
+		</div>}
 
 	</Tab>
 	<Tab eventKey="stat" title="stat">
-		<div className="d-flex flex-wrap bg-light">
+	{ this.state.key == 'stat' &&<div className="d-flex flex-wrap bg-light">
 			<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 				<label className="font-weight-bold" >CAN ACTIVATE DT</label>
 				<label className="text-secondary" >Activation Date - date/time waiting time clock started:</label>
@@ -2067,10 +2078,11 @@ export class CanForm extends React.Component {
 				<label className="text-secondary" >Status Extension granted for Liver candidate:</label>
 				<input className="form-control"type="text" value={this.props.canStatExtendFlg} onChange={this.props.onChangeCanStatExtendFlg} />
 			</div>
-		</div>
+		</div>}
 
 	</Tab>
 	<Tab eventKey="tx" title="tx">
+	{ this.state.key == 'tx' &&
 		<div className="d-flex flex-wrap bg-light">
 			<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 				<label className="font-weight-bold" >CAN ANASTOMOSIS</label>
@@ -2445,10 +2457,11 @@ export class CanForm extends React.Component {
 					<option value="706">706: Split Liver with Pancreas (Technical Reasons)</option>
 				</select>
 			</div>
-		</div>
+		</div>}
 
 	</Tab>
 	<Tab eventKey="phys" title="phys">
+	{ this.state.key == 'phys' &&
 		<div className="d-flex flex-wrap bg-light">
 			<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 				<label className="font-weight-bold" >CAN ABO</label>
@@ -3364,10 +3377,11 @@ export class CanForm extends React.Component {
 				<label className="text-secondary" >Candidate/s Weight in kilograms:</label>
 				<input className="form-control"type="number" value={this.props.canWgtKg} onChange={this.props.onChangeCanWgtKg} />
 			</div>
-		</div>
+		</div>}
 
 	</Tab>
 	<Tab eventKey="hist" title="hist">
+	{ this.state.key == 'hist' &&
 		<div className="d-flex flex-wrap bg-light">
 			<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 				<label className="font-weight-bold" >CAN ANGINA</label>
@@ -3610,10 +3624,11 @@ export class CanForm extends React.Component {
 				<label className="text-secondary" >History of TIPSS:</label>
 				<input className="form-control"type="text" value={this.props.canTipss} onChange={this.props.onChangeCanTipss} />
 			</div>
-		</div>
+		</div>}
 
 	</Tab>
 	<Tab eventKey="personal" title="personal">
+	{ this.state.key == 'personal' &&
 		<div className="d-flex flex-wrap bg-light">
 			<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 				<label className="font-weight-bold" >CAN ACADEMIC LEVEL</label>
@@ -3889,7 +3904,7 @@ export class CanForm extends React.Component {
 				<label className="text-secondary" >Patient Identifier:</label>
 				<input className="form-control"type="number" readOnly value={this.props.pxId} onChange={this.props.onChangePxId} />
 			</div>
-		</div>
+		</div>}
 
 	</Tab>
 </Tabs>
