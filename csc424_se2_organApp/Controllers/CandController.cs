@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Threading;
 using csc424_se2_organApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,6 +27,7 @@ namespace csc424_se2_organApp.Controllers
                 Response.StatusCode = 404;
                 return Json(new {error="Not Found"}); 
             }
+            Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
             Response.StatusCode = 201;
             return Json(data: isInDb);
         
