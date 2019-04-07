@@ -5,7 +5,7 @@
  */
 
 import { fromJS } from "immutable";
-import { DEFAULT_ACTION, SET_TOKEN } from "./constants";
+import { SET_TOKEN } from "./constants";
 
 export const initialState = fromJS({
   token: '',
@@ -13,9 +13,8 @@ export const initialState = fromJS({
 
 function searchBoxReducer(state = initialState, action) {
   switch (action.type) {
-    case DEFAULT_ACTION:
-      return state;
     case SET_TOKEN:
+      console.log(action.token);
       return state.set('token', action.token);
     default:
       return state;

@@ -15,11 +15,8 @@ const selectSearchBoxDomain = state => state.get("searchBox", initialState);
  * Default selector used by SearchBox
  */
 
-const makeSelectSearchBox = () =>
-  createSelector(selectSearchBoxDomain, substate => substate.toJS());
 
 const makeSelectToken = () =>
   createSelector(selectSearchBoxDomain, substate => substate.get('token'));
 
-export default makeSelectSearchBox;
 export { selectSearchBoxDomain, makeSelectToken };

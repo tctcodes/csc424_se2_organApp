@@ -4,13 +4,7 @@
  *
  */
 
-import { DEFAULT_ACTION, SET_TOKEN } from "./constants";
-
-export function defaultAction() {
-  return {
-    type: DEFAULT_ACTION
-  };
-}
+import { SET_TOKEN } from "./constants";
 
 export function setToken(token) {
   return {

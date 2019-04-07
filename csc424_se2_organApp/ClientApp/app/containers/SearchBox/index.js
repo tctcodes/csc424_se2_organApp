@@ -10,12 +10,11 @@ import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import { createStructuredSelector } from "reselect";
 import { compose } from "redux";
-import { Form, Button} from "react-bootstrap";
+import { Form, Button, Dropdown} from "react-bootstrap";
 import { makeSelectToken } from './selectors';
 
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
-import makeSelectSearchBox from "./selectors";
 import reducer from "./reducer";
 import saga from "./saga";
 
@@ -39,6 +38,14 @@ export class SearchBox extends React.Component {
               Search
             </Button>
           </Form>
+          <Dropdown>
+            <Dropdown.Toggle>
+              Dropdown Button
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item>Action</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
       </div>
     );
@@ -50,7 +57,6 @@ SearchBox.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
-  searchBox: makeSelectSearchBox(),
   token: makeSelectToken(),
 });
 
