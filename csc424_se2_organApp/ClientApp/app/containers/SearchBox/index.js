@@ -10,7 +10,16 @@ import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 import { createStructuredSelector } from "reselect";
 import { compose } from "redux";
-import { Form, Button, Dropdown} from "react-bootstrap";
+import {
+  Form,
+  Button,
+  Dropdown,
+  ButtonGroup,
+  ToggleButton,
+  FormGroup,
+  DropdownMenu,
+  Navbar,
+} from "react-bootstrap";
 import { makeSelectToken } from './selectors';
 
 import injectSaga from "utils/injectSaga";
@@ -29,23 +38,45 @@ export class SearchBox extends React.Component {
           <meta name="description" content="Description of SearchBox" />
         </Helmet>
         <div>
-          <h1>SearchBox</h1>
-          <Form>
-            <Form.Group controlId="formBasicSearch">
-              <Form.Control type="text" placeholder="Search" />
+          <Navbar className="bg-dark" fixed="top">
+            {/* Text entry for patient-id */}
+            <Form inline>
+              <Form.Group controlId="formBasicSearch">
+                <Form.Control type="text" placeholder="Patient ID" />
+              </Form.Group>
+            </Form>
+            {/* Donor/Candidate Selection */}
+            <Form.Group className="mt-3">
+              <Form.Control as="select">
+                <option>Donor</option>
+                <option>Candidate</option>
+              </Form.Control>
             </Form.Group>
-            <Button variant="primary" type="submit">
+            {/* Dropdown filter for broad filter options */}
+            <Dropdown>
+              <Dropdown.Toggle>
+                Filter
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Form.Group>
+                  <Form.Label>Blood Group</Form.Label>
+                  <Form.Control as="select">
+                    <option>1. A+</option>
+                    <option>2. A-</option>
+                    <option>3. B+</option>
+                    <option>4. B-</option>
+                    <option>5. AB+</option>
+                    <option>6. AB-</option>
+                    <option>7. O+</option>
+                    <option>8. O-</option>
+                  </Form.Control>
+                </Form.Group>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Button variant="primary" type="button">
               Search
             </Button>
-          </Form>
-          <Dropdown>
-            <Dropdown.Toggle>
-              Dropdown Button
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item>Action</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+          </Navbar>
         </div>
       </div>
     );
