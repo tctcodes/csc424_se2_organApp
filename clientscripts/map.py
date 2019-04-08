@@ -5,13 +5,23 @@ import re
 #function defs
 ###############################################
 
-###cSharpName()
-def cSharpName(name):
+###capitalCase()
+def capitalCase(name):
     n = name.lower()
     sn = n.split('_')
     cn = list(map(lambda x: x.capitalize(), sn))
     return ''.join(cn) 
 ###
+
+###camelCase()
+def camelCase(name):
+    n = name.lower()
+    sn = n.split('_')
+    cn = list(map(lambda x: x.capitalize(), sn))
+    cn[0] = cn[0].lower()
+    return ''.join(cn) 
+###
+
 ### close file arrays
 def closeFiles(filesArray):
     for fi in filesArray:
@@ -22,15 +32,16 @@ def closeFiles(filesArray):
 def mapState(reader,outFile):
     outFile.write("{\n")
     for line in reader :
-        line[0] = cSharpName(line[0])
-        outFile.write("\t{0:}: makeSelect{0:}(),\n".format(line[0]))
+        capC = capitalCase(line[0])
+        camC = camelCase(line[0])
+        outFile.write("\t{0:}: makeSelect{1:}(),\n".format(camC,capC))
     outFile.write("};\n")
 ###
 ###createReducer()
 def mapDispatch(reader,outFile):
     outFile.write("return {\n")
     for line in reader :
-        line[0] = cSharpName(line[0])
+        line[0] = capitalCase(line[0])
         outFile.write("\tonChange{0:}: evt => dispatch(change{0:}(evt.target.value)),\n".format(line[0]))
     outFile.write("};\n")
 ###
@@ -38,9 +49,10 @@ def mapDispatch(reader,outFile):
 def propType(reader, outFile):
     outFile.write("{\n")
     for line in reader :
-        line[0] = cSharpName(line[0])
-        outFile.write("\t{0:}: Proptypes.string,\n".format(line[0]))
-        outFile.write("\tonChange{0:}: Proptypes.func,\n".format(line[0]))
+        capC = capitalCase(line[0])
+        camC = camelCase(line[0])
+        outFile.write("\t{0:}: Proptypes.string,\n".format(camC))
+        outFile.write("\tonChange{0:}: Proptypes.func,\n".format(capC))
     outFile.write("};\n")
 
 ###

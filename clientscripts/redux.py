@@ -5,13 +5,23 @@ import re
 #function defs
 ###############################################
 
-###cSharpName()
-def cSharpName(name):
+###capitalCase()
+def capitalCase(name):
     n = name.lower()
     sn = n.split('_')
     cn = list(map(lambda x: x.capitalize(), sn))
     return ''.join(cn) 
 ###
+
+###camelCase()
+def camelCase(name):
+    n = name.lower()
+    sn = n.split('_')
+    cn = list(map(lambda x: x.capitalize(), sn))
+    cn[0] = cn[0].lower()
+    return ''.join(cn) 
+###
+
 ### close file arrays
 def closeFiles(filesArray):
     for fi in filesArray:
@@ -23,20 +33,21 @@ def createState(reader,outFile):
     print("fromJS({")
     outFile.write("fromJS({\n")
     for line in reader :
-        line[0] = cSharpName(line[0])
+        line[0] = camelCase(line[0])
         #print(line[0]+":\t\t\t '',")
         #print("\t{0:30}{1:},".format(line[0]+":","''"))
-        outFile.write("\t{0:30}{1:},\n".format(line[0]+":","''"))
+        outFile.write("\t{0:30}{1:},\n".format(line[0]+":","null"))
     print("});")
     outFile.write("});")
 ###
+
 ###createReducer()
 def createReducer(reader,outFile):
     print("switch (action.type) {")
     outFile.write("switch (action.type) {\n")
     for line in reader :
-        line[0] = cSharpName(line[0])
-        caseName = "CHANGE_"+line[0].upper()
+        line[0] = camelCase(line[0])
+        caseName = "constant.CHANGE_"+line[0].upper()
         #print("\tcase {0:}:".format(caseName))
         outFile.write("\tcase {0:}:\n".format(caseName))
         #print("\t\treturn state.set('{0:}', action.{0:};".format(line[0]))
@@ -47,38 +58,41 @@ def createReducer(reader,outFile):
     print("}")
     outFile.write("}\n")
 ###
+
 ###createConstants()\
 def createConstants(reader, outFile, domain):
     for line in reader :
-        line[0] = cSharpName(line[0]).upper()
+        line[0] = capitalCase(line[0]).upper()
         #print(line[0]+":\t\t\t '',")
         #print("\t{0:30}{1:},".format(line[0]+":","''"))
         outFile.write('export const CHANGE_{0:} = "app/{1:}/CHANGE_{0:}";\n'.format(line[0],domain))
-
 ###
+
 ###createActions()
 def createActions(reader, outFile):
-    outFile.write('import * from "./constants";\n\n')
+    outFile.write('import * as constant from "./constants";\n\n')
     for line in reader :
-        line[0] = cSharpName(line[0])
+        capC = capitalCase(line[0])
+        camC = camelCase(line[0])
         #print(line[0]+":\t\t\t '',")
         #print("\t{0:30}{1:},".format(line[0]+":","''"))
-        outFile.write("export function change{0:}({0:}) {{ \n".format(line[0]))
+        outFile.write("export function change{0:}({1:}) {{ \n".format(capC, camC))
         outFile.write('\treturn{\n')
-        outFile.write('\t\ttype: CHANGE_{0:},\n\t\t{1:},\n\t}};\n'.format(line[0].upper(),line[0]))
+        outFile.write('\t\ttype: constant.CHANGE_{0:},\n\t\t{1:},\n\t}};\n'.format(capC.upper(),camC))
         outFile.write('}\n\n')
-
+###
 
 ###createSelectors()
 def createSelectors(reader, outFile, domain):
-    export=[]
+    #export=[]
     outFile.write('import {{ createSelector }} from "reselect";\nimport {{ initialState }} from "./reducer";\nexport const select{0:}Domain = state => state.get("{0:}", initialState);\n\n'.format(domain))
-    export.append('select{}Domain'.format(domain))
+    #export.append('select{}Domain'.format(domain))
     for line in reader:
-        line[0] = cSharpName(line[0])
-        outFile.write('export const makeSelect{} = () =>\n'.format(line[0]))
-        outFile.write('createSelector(select{0:}Domain, substate => substate.get("{1:}"));\n\n'.format(domain,line[0]))
-        export.append('makeSelect{}'.format(line[0]))
+        capC = capitalCase(line[0])
+        camC = camelCase(line[0])
+        outFile.write('export const makeSelect{} = () =>\n'.format(capC))
+        outFile.write('createSelector(select{0:}Domain, substate => substate.get("{1:}"));\n\n'.format(domain,camC))
+        #export.append('makeSelect{}'.format(capC))
     # outFile.write('export {\n')
     # for s in export:
     #     outfile.write(s+',\n')

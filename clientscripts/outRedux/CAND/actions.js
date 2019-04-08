@@ -1,1185 +1,1185 @@
-import * from "./constants";
+import * as constant from "./constants";
 
-export function changeCanAbo(CanAbo) { 
+export function changeCanAbo(canAbo) { 
 	return{
-		type: CHANGE_CANABO,
-		CanAbo,
+		type: constant.CHANGE_CANABO,
+		canAbo,
 	};
 }
 
-export function changeCanAcademicLevel(CanAcademicLevel) { 
+export function changeCanAcademicLevel(canAcademicLevel) { 
 	return{
-		type: CHANGE_CANACADEMICLEVEL,
-		CanAcademicLevel,
+		type: constant.CHANGE_CANACADEMICLEVEL,
+		canAcademicLevel,
 	};
 }
 
-export function changeCanAcademicProgress(CanAcademicProgress) { 
+export function changeCanAcademicProgress(canAcademicProgress) { 
 	return{
-		type: CHANGE_CANACADEMICPROGRESS,
-		CanAcademicProgress,
+		type: constant.CHANGE_CANACADEMICPROGRESS,
+		canAcademicProgress,
 	};
 }
 
-export function changeCanAcptA2Don(CanAcptA2Don) { 
+export function changeCanAcptA2Don(canAcptA2Don) { 
 	return{
-		type: CHANGE_CANACPTA2DON,
-		CanAcptA2Don,
+		type: constant.CHANGE_CANACPTA2DON,
+		canAcptA2Don,
 	};
 }
 
-export function changeCanAcptAboIncomp(CanAcptAboIncomp) { 
+export function changeCanAcptAboIncomp(canAcptAboIncomp) { 
 	return{
-		type: CHANGE_CANACPTABOINCOMP,
-		CanAcptAboIncomp,
+		type: constant.CHANGE_CANACPTABOINCOMP,
+		canAcptAboIncomp,
 	};
 }
 
-export function changeCanAcptExtracorpLi(CanAcptExtracorpLi) { 
+export function changeCanAcptExtracorpLi(canAcptExtracorpLi) { 
 	return{
-		type: CHANGE_CANACPTEXTRACORPLI,
-		CanAcptExtracorpLi,
+		type: constant.CHANGE_CANACPTEXTRACORPLI,
+		canAcptExtracorpLi,
 	};
 }
 
-export function changeCanAcptHbcPos(CanAcptHbcPos) { 
+export function changeCanAcptHbcPos(canAcptHbcPos) { 
 	return{
-		type: CHANGE_CANACPTHBCPOS,
-		CanAcptHbcPos,
+		type: constant.CHANGE_CANACPTHBCPOS,
+		canAcptHbcPos,
 	};
 }
 
-export function changeCanAcptHcvPos(CanAcptHcvPos) { 
+export function changeCanAcptHcvPos(canAcptHcvPos) { 
 	return{
-		type: CHANGE_CANACPTHCVPOS,
-		CanAcptHcvPos,
+		type: constant.CHANGE_CANACPTHCVPOS,
+		canAcptHcvPos,
 	};
 }
 
-export function changeCanAcptLiSeg(CanAcptLiSeg) { 
+export function changeCanAcptLiSeg(canAcptLiSeg) { 
 	return{
-		type: CHANGE_CANACPTLISEG,
-		CanAcptLiSeg,
+		type: constant.CHANGE_CANACPTLISEG,
+		canAcptLiSeg,
 	};
 }
 
-export function changeCanAcptOrgOtherTeam(CanAcptOrgOtherTeam) { 
+export function changeCanAcptOrgOtherTeam(canAcptOrgOtherTeam) { 
 	return{
-		type: CHANGE_CANACPTORGOTHERTEAM,
-		CanAcptOrgOtherTeam,
+		type: constant.CHANGE_CANACPTORGOTHERTEAM,
+		canAcptOrgOtherTeam,
 	};
 }
 
-export function changeCanAcptProcurKi(CanAcptProcurKi) { 
+export function changeCanAcptProcurKi(canAcptProcurKi) { 
 	return{
-		type: CHANGE_CANACPTPROCURKI,
-		CanAcptProcurKi,
+		type: constant.CHANGE_CANACPTPROCURKI,
+		canAcptProcurKi,
 	};
 }
 
-export function changeCanAcptProcurLi(CanAcptProcurLi) { 
+export function changeCanAcptProcurLi(canAcptProcurLi) { 
 	return{
-		type: CHANGE_CANACPTPROCURLI,
-		CanAcptProcurLi,
+		type: constant.CHANGE_CANACPTPROCURLI,
+		canAcptProcurLi,
 	};
 }
 
-export function changeCanAcptProcurPa(CanAcptProcurPa) { 
+export function changeCanAcptProcurPa(canAcptProcurPa) { 
 	return{
-		type: CHANGE_CANACPTPROCURPA,
-		CanAcptProcurPa,
+		type: constant.CHANGE_CANACPTPROCURPA,
+		canAcptProcurPa,
 	};
 }
 
-export function changeCanActivateDt(CanActivateDt) { 
+export function changeCanActivateDt(canActivateDt) { 
 	return{
-		type: CHANGE_CANACTIVATEDT,
-		CanActivateDt,
+		type: constant.CHANGE_CANACTIVATEDT,
+		canActivateDt,
 	};
 }
 
-export function changeCanAgeAtListing(CanAgeAtListing) { 
+export function changeCanAgeAtListing(canAgeAtListing) { 
 	return{
-		type: CHANGE_CANAGEATLISTING,
-		CanAgeAtListing,
+		type: constant.CHANGE_CANAGEATLISTING,
+		canAgeAtListing,
 	};
 }
 
-export function changeCanAgeInMonthsAtListing(CanAgeInMonthsAtListing) { 
+export function changeCanAgeInMonthsAtListing(canAgeInMonthsAtListing) { 
 	return{
-		type: CHANGE_CANAGEINMONTHSATLISTING,
-		CanAgeInMonthsAtListing,
+		type: constant.CHANGE_CANAGEINMONTHSATLISTING,
+		canAgeInMonthsAtListing,
 	};
 }
 
-export function changeCanAnastomosis(CanAnastomosis) { 
+export function changeCanAnastomosis(canAnastomosis) { 
 	return{
-		type: CHANGE_CANANASTOMOSIS,
-		CanAnastomosis,
+		type: constant.CHANGE_CANANASTOMOSIS,
+		canAnastomosis,
 	};
 }
 
-export function changeCanAnesthPriorDeath(CanAnesthPriorDeath) { 
+export function changeCanAnesthPriorDeath(canAnesthPriorDeath) { 
 	return{
-		type: CHANGE_CANANESTHPRIORDEATH,
-		CanAnesthPriorDeath,
+		type: constant.CHANGE_CANANESTHPRIORDEATH,
+		canAnesthPriorDeath,
 	};
 }
 
-export function changeCanAngina(CanAngina) { 
+export function changeCanAngina(canAngina) { 
 	return{
-		type: CHANGE_CANANGINA,
-		CanAngina,
+		type: constant.CHANGE_CANANGINA,
+		canAngina,
 	};
 }
 
-export function changeCanAnginaCad(CanAnginaCad) { 
+export function changeCanAnginaCad(canAnginaCad) { 
 	return{
-		type: CHANGE_CANANGINACAD,
-		CanAnginaCad,
+		type: constant.CHANGE_CANANGINACAD,
+		canAnginaCad,
 	};
 }
 
-export function changeCanArtificialLi(CanArtificialLi) { 
+export function changeCanArtificialLi(canArtificialLi) { 
 	return{
-		type: CHANGE_CANARTIFICIALLI,
-		CanArtificialLi,
+		type: constant.CHANGE_CANARTIFICIALLI,
+		canArtificialLi,
 	};
 }
 
-export function changeCanAscites(CanAscites) { 
+export function changeCanAscites(canAscites) { 
 	return{
-		type: CHANGE_CANASCITES,
-		CanAscites,
+		type: constant.CHANGE_CANASCITES,
+		canAscites,
 	};
 }
 
-export function changeCanBacteriaPerit(CanBacteriaPerit) { 
+export function changeCanBacteriaPerit(canBacteriaPerit) { 
 	return{
-		type: CHANGE_CANBACTERIAPERIT,
-		CanBacteriaPerit,
+		type: constant.CHANGE_CANBACTERIAPERIT,
+		canBacteriaPerit,
 	};
 }
 
-export function changeCanBmi(CanBmi) { 
+export function changeCanBmi(canBmi) { 
 	return{
-		type: CHANGE_CANBMI,
-		CanBmi,
+		type: constant.CHANGE_CANBMI,
+		canBmi,
 	};
 }
 
-export function changeCanCerebVasc(CanCerebVasc) { 
+export function changeCanCerebVasc(canCerebVasc) { 
 	return{
-		type: CHANGE_CANCEREBVASC,
-		CanCerebVasc,
+		type: constant.CHANGE_CANCEREBVASC,
+		canCerebVasc,
 	};
 }
 
-export function changeCanCitizenship(CanCitizenship) { 
+export function changeCanCitizenship(canCitizenship) { 
 	return{
-		type: CHANGE_CANCITIZENSHIP,
-		CanCitizenship,
+		type: constant.CHANGE_CANCITIZENSHIP,
+		canCitizenship,
 	};
 }
 
-export function changeCanCognitiveDevelop(CanCognitiveDevelop) { 
+export function changeCanCognitiveDevelop(canCognitiveDevelop) { 
 	return{
-		type: CHANGE_CANCOGNITIVEDEVELOP,
-		CanCognitiveDevelop,
+		type: constant.CHANGE_CANCOGNITIVEDEVELOP,
+		canCognitiveDevelop,
 	};
 }
 
-export function changeCanCtpScore(CanCtpScore) { 
+export function changeCanCtpScore(canCtpScore) { 
 	return{
-		type: CHANGE_CANCTPSCORE,
-		CanCtpScore,
+		type: constant.CHANGE_CANCTPSCORE,
+		canCtpScore,
 	};
 }
 
-export function changeCanDeathDt(CanDeathDt) { 
+export function changeCanDeathDt(canDeathDt) { 
 	return{
-		type: CHANGE_CANDEATHDT,
-		CanDeathDt,
+		type: constant.CHANGE_CANDEATHDT,
+		canDeathDt,
 	};
 }
 
-export function changeCanDgn(CanDgn) { 
+export function changeCanDgn(canDgn) { 
 	return{
-		type: CHANGE_CANDGN,
-		CanDgn,
+		type: constant.CHANGE_CANDGN,
+		canDgn,
 	};
 }
 
-export function changeCanDgn2(CanDgn2) { 
+export function changeCanDgn2(canDgn2) { 
 	return{
-		type: CHANGE_CANDGN2,
-		CanDgn2,
+		type: constant.CHANGE_CANDGN2,
+		canDgn2,
 	};
 }
 
-export function changeCanDgnOstxt(CanDgnOstxt) { 
+export function changeCanDgnOstxt(canDgnOstxt) { 
 	return{
-		type: CHANGE_CANDGNOSTXT,
-		CanDgnOstxt,
+		type: constant.CHANGE_CANDGNOSTXT,
+		canDgnOstxt,
 	};
 }
 
-export function changeCanDiab(CanDiab) { 
+export function changeCanDiab(canDiab) { 
 	return{
-		type: CHANGE_CANDIAB,
-		CanDiab,
+		type: constant.CHANGE_CANDIAB,
+		canDiab,
 	};
 }
 
-export function changeCanDiabTy(CanDiabTy) { 
+export function changeCanDiabTy(canDiabTy) { 
 	return{
-		type: CHANGE_CANDIABTY,
-		CanDiabTy,
+		type: constant.CHANGE_CANDIABTY,
+		canDiabTy,
 	};
 }
 
-export function changeCanDial(CanDial) { 
+export function changeCanDial(canDial) { 
 	return{
-		type: CHANGE_CANDIAL,
-		CanDial,
+		type: constant.CHANGE_CANDIAL,
+		canDial,
 	};
 }
 
-export function changeCanDrugTreatCopd(CanDrugTreatCopd) { 
+export function changeCanDrugTreatCopd(canDrugTreatCopd) { 
 	return{
-		type: CHANGE_CANDRUGTREATCOPD,
-		CanDrugTreatCopd,
+		type: constant.CHANGE_CANDRUGTREATCOPD,
+		canDrugTreatCopd,
 	};
 }
 
-export function changeCanDrugTreatHyperten(CanDrugTreatHyperten) { 
+export function changeCanDrugTreatHyperten(canDrugTreatHyperten) { 
 	return{
-		type: CHANGE_CANDRUGTREATHYPERTEN,
-		CanDrugTreatHyperten,
+		type: constant.CHANGE_CANDRUGTREATHYPERTEN,
+		canDrugTreatHyperten,
 	};
 }
 
-export function changeCanEcmo(CanEcmo) { 
+export function changeCanEcmo(canEcmo) { 
 	return{
-		type: CHANGE_CANECMO,
-		CanEcmo,
+		type: constant.CHANGE_CANECMO,
+		canEcmo,
 	};
 }
 
-export function changeCanEducation(CanEducation) { 
+export function changeCanEducation(canEducation) { 
 	return{
-		type: CHANGE_CANEDUCATION,
-		CanEducation,
+		type: constant.CHANGE_CANEDUCATION,
+		canEducation,
 	};
 }
 
-export function changeCanElectrolyte(CanElectrolyte) { 
+export function changeCanElectrolyte(canElectrolyte) { 
 	return{
-		type: CHANGE_CANELECTROLYTE,
-		CanElectrolyte,
+		type: constant.CHANGE_CANELECTROLYTE,
+		canElectrolyte,
 	};
 }
 
-export function changeCanEmplStat(CanEmplStat) { 
+export function changeCanEmplStat(canEmplStat) { 
 	return{
-		type: CHANGE_CANEMPLSTAT,
-		CanEmplStat,
+		type: constant.CHANGE_CANEMPLSTAT,
+		canEmplStat,
 	};
 }
 
-export function changeCanEnceph(CanEnceph) { 
+export function changeCanEnceph(canEnceph) { 
 	return{
-		type: CHANGE_CANENCEPH,
-		CanEnceph,
+		type: constant.CHANGE_CANENCEPH,
+		canEnceph,
 	};
 }
 
-export function changeCanEndwlfu(CanEndwlfu) { 
+export function changeCanEndwlfu(canEndwlfu) { 
 	return{
-		type: CHANGE_CANENDWLFU,
-		CanEndwlfu,
+		type: constant.CHANGE_CANENDWLFU,
+		canEndwlfu,
 	};
 }
 
-export function changeCanEthnicitySrtr(CanEthnicitySrtr) { 
+export function changeCanEthnicitySrtr(canEthnicitySrtr) { 
 	return{
-		type: CHANGE_CANETHNICITYSRTR,
-		CanEthnicitySrtr,
+		type: constant.CHANGE_CANETHNICITYSRTR,
+		canEthnicitySrtr,
 	};
 }
 
-export function changeCanExhaustVascAccess(CanExhaustVascAccess) { 
+export function changeCanExhaustVascAccess(canExhaustVascAccess) { 
 	return{
-		type: CHANGE_CANEXHAUSTVASCACCESS,
-		CanExhaustVascAccess,
+		type: constant.CHANGE_CANEXHAUSTVASCACCESS,
+		canExhaustVascAccess,
 	};
 }
 
-export function changeCanFollowsOpoAlloc(CanFollowsOpoAlloc) { 
+export function changeCanFollowsOpoAlloc(canFollowsOpoAlloc) { 
 	return{
-		type: CHANGE_CANFOLLOWSOPOALLOC,
-		CanFollowsOpoAlloc,
+		type: constant.CHANGE_CANFOLLOWSOPOALLOC,
+		canFollowsOpoAlloc,
 	};
 }
 
-export function changeCanFunctnStat(CanFunctnStat) { 
+export function changeCanFunctnStat(canFunctnStat) { 
 	return{
-		type: CHANGE_CANFUNCTNSTAT,
-		CanFunctnStat,
+		type: constant.CHANGE_CANFUNCTNSTAT,
+		canFunctnStat,
 	};
 }
 
-export function changeCanFungalSepsis(CanFungalSepsis) { 
+export function changeCanFungalSepsis(canFungalSepsis) { 
 	return{
-		type: CHANGE_CANFUNGALSEPSIS,
-		CanFungalSepsis,
+		type: constant.CHANGE_CANFUNGALSEPSIS,
+		canFungalSepsis,
 	};
 }
 
-export function changeCanGender(CanGender) { 
+export function changeCanGender(canGender) { 
 	return{
-		type: CHANGE_CANGENDER,
-		CanGender,
+		type: constant.CHANGE_CANGENDER,
+		canGender,
 	};
 }
 
-export function changeCanHgtCm(CanHgtCm) { 
+export function changeCanHgtCm(canHgtCm) { 
 	return{
-		type: CHANGE_CANHGTCM,
-		CanHgtCm,
+		type: constant.CHANGE_CANHGTCM,
+		canHgtCm,
 	};
 }
 
-export function changeCanHgtWgtDt(CanHgtWgtDt) { 
+export function changeCanHgtWgtDt(canHgtWgtDt) { 
 	return{
-		type: CHANGE_CANHGTWGTDT,
-		CanHgtWgtDt,
+		type: constant.CHANGE_CANHGTWGTDT,
+		canHgtWgtDt,
 	};
 }
 
-export function changeCanIabp(CanIabp) { 
+export function changeCanIabp(canIabp) { 
 	return{
-		type: CHANGE_CANIABP,
-		CanIabp,
+		type: constant.CHANGE_CANIABP,
+		canIabp,
 	};
 }
 
-export function changeCanInitActStatCd(CanInitActStatCd) { 
+export function changeCanInitActStatCd(canInitActStatCd) { 
 	return{
-		type: CHANGE_CANINITACTSTATCD,
-		CanInitActStatCd,
+		type: constant.CHANGE_CANINITACTSTATCD,
+		canInitActStatCd,
 	};
 }
 
-export function changeCanInitActStatDt(CanInitActStatDt) { 
+export function changeCanInitActStatDt(canInitActStatDt) { 
 	return{
-		type: CHANGE_CANINITACTSTATDT,
-		CanInitActStatDt,
+		type: constant.CHANGE_CANINITACTSTATDT,
+		canInitActStatDt,
 	};
 }
 
-export function changeCanInitInactStatDt(CanInitInactStatDt) { 
+export function changeCanInitInactStatDt(canInitInactStatDt) { 
 	return{
-		type: CHANGE_CANINITINACTSTATDT,
-		CanInitInactStatDt,
+		type: constant.CHANGE_CANINITINACTSTATDT,
+		canInitInactStatDt,
 	};
 }
 
-export function changeCanInitSrtrLabMeld(CanInitSrtrLabMeld) { 
+export function changeCanInitSrtrLabMeld(canInitSrtrLabMeld) { 
 	return{
-		type: CHANGE_CANINITSRTRLABMELD,
-		CanInitSrtrLabMeld,
+		type: constant.CHANGE_CANINITSRTRLABMELD,
+		canInitSrtrLabMeld,
 	};
 }
 
-export function changeCanInitSrtrLabMeldTy(CanInitSrtrLabMeldTy) { 
+export function changeCanInitSrtrLabMeldTy(canInitSrtrLabMeldTy) { 
 	return{
-		type: CHANGE_CANINITSRTRLABMELDTY,
-		CanInitSrtrLabMeldTy,
+		type: constant.CHANGE_CANINITSRTRLABMELDTY,
+		canInitSrtrLabMeldTy,
 	};
 }
 
-export function changeCanInitStat(CanInitStat) { 
+export function changeCanInitStat(canInitStat) { 
 	return{
-		type: CHANGE_CANINITSTAT,
-		CanInitStat,
+		type: constant.CHANGE_CANINITSTAT,
+		canInitStat,
 	};
 }
 
-export function changeCanIvInotrop(CanIvInotrop) { 
+export function changeCanIvInotrop(canIvInotrop) { 
 	return{
-		type: CHANGE_CANIVINOTROP,
-		CanIvInotrop,
+		type: constant.CHANGE_CANIVINOTROP,
+		canIvInotrop,
 	};
 }
 
-export function changeCanLastActStatDt(CanLastActStatDt) { 
+export function changeCanLastActStatDt(canLastActStatDt) { 
 	return{
-		type: CHANGE_CANLASTACTSTATDT,
-		CanLastActStatDt,
+		type: constant.CHANGE_CANLASTACTSTATDT,
+		canLastActStatDt,
 	};
 }
 
-export function changeCanLastAlbumin(CanLastAlbumin) { 
+export function changeCanLastAlbumin(canLastAlbumin) { 
 	return{
-		type: CHANGE_CANLASTALBUMIN,
-		CanLastAlbumin,
+		type: constant.CHANGE_CANLASTALBUMIN,
+		canLastAlbumin,
 	};
 }
 
-export function changeCanLastAscites(CanLastAscites) { 
+export function changeCanLastAscites(canLastAscites) { 
 	return{
-		type: CHANGE_CANLASTASCITES,
-		CanLastAscites,
+		type: constant.CHANGE_CANLASTASCITES,
+		canLastAscites,
 	};
 }
 
-export function changeCanLastBili(CanLastBili) { 
+export function changeCanLastBili(canLastBili) { 
 	return{
-		type: CHANGE_CANLASTBILI,
-		CanLastBili,
+		type: constant.CHANGE_CANLASTBILI,
+		canLastBili,
 	};
 }
 
-export function changeCanLastDialPriorWeek(CanLastDialPriorWeek) { 
+export function changeCanLastDialPriorWeek(canLastDialPriorWeek) { 
 	return{
-		type: CHANGE_CANLASTDIALPRIORWEEK,
-		CanLastDialPriorWeek,
+		type: constant.CHANGE_CANLASTDIALPRIORWEEK,
+		canLastDialPriorWeek,
 	};
 }
 
-export function changeCanLastEnceph(CanLastEnceph) { 
+export function changeCanLastEnceph(canLastEnceph) { 
 	return{
-		type: CHANGE_CANLASTENCEPH,
-		CanLastEnceph,
+		type: constant.CHANGE_CANLASTENCEPH,
+		canLastEnceph,
 	};
 }
 
-export function changeCanLastInactStatDt(CanLastInactStatDt) { 
+export function changeCanLastInactStatDt(canLastInactStatDt) { 
 	return{
-		type: CHANGE_CANLASTINACTSTATDT,
-		CanLastInactStatDt,
+		type: constant.CHANGE_CANLASTINACTSTATDT,
+		canLastInactStatDt,
 	};
 }
 
-export function changeCanLastInr(CanLastInr) { 
+export function changeCanLastInr(canLastInr) { 
 	return{
-		type: CHANGE_CANLASTINR,
-		CanLastInr,
+		type: constant.CHANGE_CANLASTINR,
+		canLastInr,
 	};
 }
 
-export function changeCanLastSerumCreat(CanLastSerumCreat) { 
+export function changeCanLastSerumCreat(canLastSerumCreat) { 
 	return{
-		type: CHANGE_CANLASTSERUMCREAT,
-		CanLastSerumCreat,
+		type: constant.CHANGE_CANLASTSERUMCREAT,
+		canLastSerumCreat,
 	};
 }
 
-export function changeCanLastSerumSodium(CanLastSerumSodium) { 
+export function changeCanLastSerumSodium(canLastSerumSodium) { 
 	return{
-		type: CHANGE_CANLASTSERUMSODIUM,
-		CanLastSerumSodium,
+		type: constant.CHANGE_CANLASTSERUMSODIUM,
+		canLastSerumSodium,
 	};
 }
 
-export function changeCanLastSrtrLabMeld(CanLastSrtrLabMeld) { 
+export function changeCanLastSrtrLabMeld(canLastSrtrLabMeld) { 
 	return{
-		type: CHANGE_CANLASTSRTRLABMELD,
-		CanLastSrtrLabMeld,
+		type: constant.CHANGE_CANLASTSRTRLABMELD,
+		canLastSrtrLabMeld,
 	};
 }
 
-export function changeCanLastSrtrLabMeldTy(CanLastSrtrLabMeldTy) { 
+export function changeCanLastSrtrLabMeldTy(canLastSrtrLabMeldTy) { 
 	return{
-		type: CHANGE_CANLASTSRTRLABMELDTY,
-		CanLastSrtrLabMeldTy,
+		type: constant.CHANGE_CANLASTSRTRLABMELDTY,
+		canLastSrtrLabMeldTy,
 	};
 }
 
-export function changeCanLastStat(CanLastStat) { 
+export function changeCanLastStat(canLastStat) { 
 	return{
-		type: CHANGE_CANLASTSTAT,
-		CanLastStat,
+		type: constant.CHANGE_CANLASTSTAT,
+		canLastStat,
 	};
 }
 
-export function changeCanLifeSupport(CanLifeSupport) { 
+export function changeCanLifeSupport(canLifeSupport) { 
 	return{
-		type: CHANGE_CANLIFESUPPORT,
-		CanLifeSupport,
+		type: constant.CHANGE_CANLIFESUPPORT,
+		canLifeSupport,
 	};
 }
 
-export function changeCanLifeSupportOther(CanLifeSupportOther) { 
+export function changeCanLifeSupportOther(canLifeSupportOther) { 
 	return{
-		type: CHANGE_CANLIFESUPPORTOTHER,
-		CanLifeSupportOther,
+		type: constant.CHANGE_CANLIFESUPPORTOTHER,
+		canLifeSupportOther,
 	};
 }
 
-export function changeCanListingCtrId(CanListingCtrId) { 
+export function changeCanListingCtrId(canListingCtrId) { 
 	return{
-		type: CHANGE_CANLISTINGCTRID,
-		CanListingCtrId,
+		type: constant.CHANGE_CANLISTINGCTRID,
+		canListingCtrId,
 	};
 }
 
-export function changeCanListingDt(CanListingDt) { 
+export function changeCanListingDt(canListingDt) { 
 	return{
-		type: CHANGE_CANLISTINGDT,
-		CanListingDt,
+		type: constant.CHANGE_CANLISTINGDT,
+		canListingDt,
 	};
 }
 
-export function changeCanListingOpoId(CanListingOpoId) { 
+export function changeCanListingOpoId(canListingOpoId) { 
 	return{
-		type: CHANGE_CANLISTINGOPOID,
-		CanListingOpoId,
+		type: constant.CHANGE_CANLISTINGOPOID,
+		canListingOpoId,
 	};
 }
 
-export function changeCanLivingDonTx(CanLivingDonTx) { 
+export function changeCanLivingDonTx(canLivingDonTx) { 
 	return{
-		type: CHANGE_CANLIVINGDONTX,
-		CanLivingDonTx,
+		type: constant.CHANGE_CANLIVINGDONTX,
+		canLivingDonTx,
 	};
 }
 
-export function changeCanLiDysfunctn(CanLiDysfunctn) { 
+export function changeCanLiDysfunctn(canLiDysfunctn) { 
 	return{
-		type: CHANGE_CANLIDYSFUNCTN,
-		CanLiDysfunctn,
+		type: constant.CHANGE_CANLIDYSFUNCTN,
+		canLiDysfunctn,
 	};
 }
 
-export function changeCanLossVascAccess(CanLossVascAccess) { 
+export function changeCanLossVascAccess(canLossVascAccess) { 
 	return{
-		type: CHANGE_CANLOSSVASCACCESS,
-		CanLossVascAccess,
+		type: constant.CHANGE_CANLOSSVASCACCESS,
+		canLossVascAccess,
 	};
 }
 
-export function changeCanMalig(CanMalig) { 
+export function changeCanMalig(canMalig) { 
 	return{
-		type: CHANGE_CANMALIG,
-		CanMalig,
+		type: constant.CHANGE_CANMALIG,
+		canMalig,
 	};
 }
 
-export function changeCanMaligTy(CanMaligTy) { 
+export function changeCanMaligTy(canMaligTy) { 
 	return{
-		type: CHANGE_CANMALIGTY,
-		CanMaligTy,
+		type: constant.CHANGE_CANMALIGTY,
+		canMaligTy,
 	};
 }
 
-export function changeCanMaligTyBreast(CanMaligTyBreast) { 
+export function changeCanMaligTyBreast(canMaligTyBreast) { 
 	return{
-		type: CHANGE_CANMALIGTYBREAST,
-		CanMaligTyBreast,
+		type: constant.CHANGE_CANMALIGTYBREAST,
+		canMaligTyBreast,
 	};
 }
 
-export function changeCanMaligTyCnsTumor(CanMaligTyCnsTumor) { 
+export function changeCanMaligTyCnsTumor(canMaligTyCnsTumor) { 
 	return{
-		type: CHANGE_CANMALIGTYCNSTUMOR,
-		CanMaligTyCnsTumor,
+		type: constant.CHANGE_CANMALIGTYCNSTUMOR,
+		canMaligTyCnsTumor,
 	};
 }
 
-export function changeCanMaligTyGenitourinary(CanMaligTyGenitourinary) { 
+export function changeCanMaligTyGenitourinary(canMaligTyGenitourinary) { 
 	return{
-		type: CHANGE_CANMALIGTYGENITOURINARY,
-		CanMaligTyGenitourinary,
+		type: constant.CHANGE_CANMALIGTYGENITOURINARY,
+		canMaligTyGenitourinary,
 	};
 }
 
-export function changeCanMaligTyHepblast(CanMaligTyHepblast) { 
+export function changeCanMaligTyHepblast(canMaligTyHepblast) { 
 	return{
-		type: CHANGE_CANMALIGTYHEPBLAST,
-		CanMaligTyHepblast,
+		type: constant.CHANGE_CANMALIGTYHEPBLAST,
+		canMaligTyHepblast,
 	};
 }
 
-export function changeCanMaligTyHepcarcinoma(CanMaligTyHepcarcinoma) { 
+export function changeCanMaligTyHepcarcinoma(canMaligTyHepcarcinoma) { 
 	return{
-		type: CHANGE_CANMALIGTYHEPCARCINOMA,
-		CanMaligTyHepcarcinoma,
+		type: constant.CHANGE_CANMALIGTYHEPCARCINOMA,
+		canMaligTyHepcarcinoma,
 	};
 }
 
-export function changeCanMaligTyLeukLymph(CanMaligTyLeukLymph) { 
+export function changeCanMaligTyLeukLymph(canMaligTyLeukLymph) { 
 	return{
-		type: CHANGE_CANMALIGTYLEUKLYMPH,
-		CanMaligTyLeukLymph,
+		type: constant.CHANGE_CANMALIGTYLEUKLYMPH,
+		canMaligTyLeukLymph,
 	};
 }
 
-export function changeCanMaligTyLiver(CanMaligTyLiver) { 
+export function changeCanMaligTyLiver(canMaligTyLiver) { 
 	return{
-		type: CHANGE_CANMALIGTYLIVER,
-		CanMaligTyLiver,
+		type: constant.CHANGE_CANMALIGTYLIVER,
+		canMaligTyLiver,
 	};
 }
 
-export function changeCanMaligTyLu(CanMaligTyLu) { 
+export function changeCanMaligTyLu(canMaligTyLu) { 
 	return{
-		type: CHANGE_CANMALIGTYLU,
-		CanMaligTyLu,
+		type: constant.CHANGE_CANMALIGTYLU,
+		canMaligTyLu,
 	};
 }
 
-export function changeCanMaligTyOther(CanMaligTyOther) { 
+export function changeCanMaligTyOther(canMaligTyOther) { 
 	return{
-		type: CHANGE_CANMALIGTYOTHER,
-		CanMaligTyOther,
+		type: constant.CHANGE_CANMALIGTYOTHER,
+		canMaligTyOther,
 	};
 }
 
-export function changeCanMaligTySkinMel(CanMaligTySkinMel) { 
+export function changeCanMaligTySkinMel(canMaligTySkinMel) { 
 	return{
-		type: CHANGE_CANMALIGTYSKINMEL,
-		CanMaligTySkinMel,
+		type: constant.CHANGE_CANMALIGTYSKINMEL,
+		canMaligTySkinMel,
 	};
 }
 
-export function changeCanMaligTySkinNonMel(CanMaligTySkinNonMel) { 
+export function changeCanMaligTySkinNonMel(canMaligTySkinNonMel) { 
 	return{
-		type: CHANGE_CANMALIGTYSKINNONMEL,
-		CanMaligTySkinNonMel,
+		type: constant.CHANGE_CANMALIGTYSKINNONMEL,
+		canMaligTySkinNonMel,
 	};
 }
 
-export function changeCanMaligTyThroat(CanMaligTyThroat) { 
+export function changeCanMaligTyThroat(canMaligTyThroat) { 
 	return{
-		type: CHANGE_CANMALIGTYTHROAT,
-		CanMaligTyThroat,
+		type: constant.CHANGE_CANMALIGTYTHROAT,
+		canMaligTyThroat,
 	};
 }
 
-export function changeCanMaligTyThyroid(CanMaligTyThyroid) { 
+export function changeCanMaligTyThyroid(canMaligTyThyroid) { 
 	return{
-		type: CHANGE_CANMALIGTYTHYROID,
-		CanMaligTyThyroid,
+		type: constant.CHANGE_CANMALIGTYTHYROID,
+		canMaligTyThyroid,
 	};
 }
 
-export function changeCanMaligTyUnk(CanMaligTyUnk) { 
+export function changeCanMaligTyUnk(canMaligTyUnk) { 
 	return{
-		type: CHANGE_CANMALIGTYUNK,
-		CanMaligTyUnk,
+		type: constant.CHANGE_CANMALIGTYUNK,
+		canMaligTyUnk,
 	};
 }
 
-export function changeCanMaxAge(CanMaxAge) { 
+export function changeCanMaxAge(canMaxAge) { 
 	return{
-		type: CHANGE_CANMAXAGE,
-		CanMaxAge,
+		type: constant.CHANGE_CANMAXAGE,
+		canMaxAge,
 	};
 }
 
-export function changeCanMaxMile(CanMaxMile) { 
+export function changeCanMaxMile(canMaxMile) { 
 	return{
-		type: CHANGE_CANMAXMILE,
-		CanMaxMile,
+		type: constant.CHANGE_CANMAXMILE,
+		canMaxMile,
 	};
 }
 
-export function changeCanMaxWgt(CanMaxWgt) { 
+export function changeCanMaxWgt(canMaxWgt) { 
 	return{
-		type: CHANGE_CANMAXWGT,
-		CanMaxWgt,
+		type: constant.CHANGE_CANMAXWGT,
+		canMaxWgt,
 	};
 }
 
-export function changeCanMedCond(CanMedCond) { 
+export function changeCanMedCond(canMedCond) { 
 	return{
-		type: CHANGE_CANMEDCOND,
-		CanMedCond,
+		type: constant.CHANGE_CANMEDCOND,
+		canMedCond,
 	};
 }
 
-export function changeCanMinAge(CanMinAge) { 
+export function changeCanMinAge(canMinAge) { 
 	return{
-		type: CHANGE_CANMINAGE,
-		CanMinAge,
+		type: constant.CHANGE_CANMINAGE,
+		canMinAge,
 	};
 }
 
-export function changeCanMinWgt(CanMinWgt) { 
+export function changeCanMinWgt(canMinWgt) { 
 	return{
-		type: CHANGE_CANMINWGT,
-		CanMinWgt,
+		type: constant.CHANGE_CANMINWGT,
+		canMinWgt,
 	};
 }
 
-export function changeCanMostRecentCreat(CanMostRecentCreat) { 
+export function changeCanMostRecentCreat(canMostRecentCreat) { 
 	return{
-		type: CHANGE_CANMOSTRECENTCREAT,
-		CanMostRecentCreat,
+		type: constant.CHANGE_CANMOSTRECENTCREAT,
+		canMostRecentCreat,
 	};
 }
 
-export function changeCanMostRecentHgtCm(CanMostRecentHgtCm) { 
+export function changeCanMostRecentHgtCm(canMostRecentHgtCm) { 
 	return{
-		type: CHANGE_CANMOSTRECENTHGTCM,
-		CanMostRecentHgtCm,
+		type: constant.CHANGE_CANMOSTRECENTHGTCM,
+		canMostRecentHgtCm,
 	};
 }
 
-export function changeCanMostRecentWgtKg(CanMostRecentWgtKg) { 
+export function changeCanMostRecentWgtKg(canMostRecentWgtKg) { 
 	return{
-		type: CHANGE_CANMOSTRECENTWGTKG,
-		CanMostRecentWgtKg,
+		type: constant.CHANGE_CANMOSTRECENTWGTKG,
+		canMostRecentWgtKg,
 	};
 }
 
-export function changeCanMotorDevelop(CanMotorDevelop) { 
+export function changeCanMotorDevelop(canMotorDevelop) { 
 	return{
-		type: CHANGE_CANMOTORDEVELOP,
-		CanMotorDevelop,
+		type: constant.CHANGE_CANMOTORDEVELOP,
+		canMotorDevelop,
 	};
 }
 
-export function changeCanMuscleWasting(CanMuscleWasting) { 
+export function changeCanMuscleWasting(canMuscleWasting) { 
 	return{
-		type: CHANGE_CANMUSCLEWASTING,
-		CanMuscleWasting,
+		type: constant.CHANGE_CANMUSCLEWASTING,
+		canMuscleWasting,
 	};
 }
 
-export function changeCanNeoplasm(CanNeoplasm) { 
+export function changeCanNeoplasm(canNeoplasm) { 
 	return{
-		type: CHANGE_CANNEOPLASM,
-		CanNeoplasm,
+		type: constant.CHANGE_CANNEOPLASM,
+		canNeoplasm,
 	};
 }
 
-export function changeCanNewPrevPiTx(CanNewPrevPiTx) { 
+export function changeCanNewPrevPiTx(canNewPrevPiTx) { 
 	return{
-		type: CHANGE_CANNEWPREVPITX,
-		CanNewPrevPiTx,
+		type: constant.CHANGE_CANNEWPREVPITX,
+		canNewPrevPiTx,
 	};
 }
 
-export function changeCanNonReconGi(CanNonReconGi) { 
+export function changeCanNonReconGi(canNonReconGi) { 
 	return{
-		type: CHANGE_CANNONRECONGI,
-		CanNonReconGi,
+		type: constant.CHANGE_CANNONRECONGI,
+		canNonReconGi,
 	};
 }
 
-export function changeCanPepticUlcer(CanPepticUlcer) { 
+export function changeCanPepticUlcer(canPepticUlcer) { 
 	return{
-		type: CHANGE_CANPEPTICULCER,
-		CanPepticUlcer,
+		type: constant.CHANGE_CANPEPTICULCER,
+		canPepticUlcer,
 	};
 }
 
-export function changeCanPeriphVasc(CanPeriphVasc) { 
+export function changeCanPeriphVasc(canPeriphVasc) { 
 	return{
-		type: CHANGE_CANPERIPHVASC,
-		CanPeriphVasc,
+		type: constant.CHANGE_CANPERIPHVASC,
+		canPeriphVasc,
 	};
 }
 
-export function changeCanPermState(CanPermState) { 
+export function changeCanPermState(canPermState) { 
 	return{
-		type: CHANGE_CANPERMSTATE,
-		CanPermState,
+		type: constant.CHANGE_CANPERMSTATE,
+		canPermState,
 	};
 }
 
-export function changeCanPge(CanPge) { 
+export function changeCanPge(canPge) { 
 	return{
-		type: CHANGE_CANPGE,
-		CanPge,
+		type: constant.CHANGE_CANPGE,
+		canPge,
 	};
 }
 
-export function changeCanPhyscCapacity(CanPhyscCapacity) { 
+export function changeCanPhyscCapacity(canPhyscCapacity) { 
 	return{
-		type: CHANGE_CANPHYSCCAPACITY,
-		CanPhyscCapacity,
+		type: constant.CHANGE_CANPHYSCCAPACITY,
+		canPhyscCapacity,
 	};
 }
 
-export function changeCanPortalVein(CanPortalVein) { 
+export function changeCanPortalVein(canPortalVein) { 
 	return{
-		type: CHANGE_CANPORTALVEIN,
-		CanPortalVein,
+		type: constant.CHANGE_CANPORTALVEIN,
+		canPortalVein,
 	};
 }
 
-export function changeCanPrelimXmatchRequest(CanPrelimXmatchRequest) { 
+export function changeCanPrelimXmatchRequest(canPrelimXmatchRequest) { 
 	return{
-		type: CHANGE_CANPRELIMXMATCHREQUEST,
-		CanPrelimXmatchRequest,
+		type: constant.CHANGE_CANPRELIMXMATCHREQUEST,
+		canPrelimXmatchRequest,
 	};
 }
 
-export function changeCanPrevAbdomSurg(CanPrevAbdomSurg) { 
+export function changeCanPrevAbdomSurg(canPrevAbdomSurg) { 
 	return{
-		type: CHANGE_CANPREVABDOMSURG,
-		CanPrevAbdomSurg,
+		type: constant.CHANGE_CANPREVABDOMSURG,
+		canPrevAbdomSurg,
 	};
 }
 
-export function changeCanPrevBoneMarrowDt(CanPrevBoneMarrowDt) { 
+export function changeCanPrevBoneMarrowDt(canPrevBoneMarrowDt) { 
 	return{
-		type: CHANGE_CANPREVBONEMARROWDT,
-		CanPrevBoneMarrowDt,
+		type: constant.CHANGE_CANPREVBONEMARROWDT,
+		canPrevBoneMarrowDt,
 	};
 }
 
-export function changeCanPrevBoneMarrowTx(CanPrevBoneMarrowTx) { 
+export function changeCanPrevBoneMarrowTx(canPrevBoneMarrowTx) { 
 	return{
-		type: CHANGE_CANPREVBONEMARROWTX,
-		CanPrevBoneMarrowTx,
+		type: constant.CHANGE_CANPREVBONEMARROWTX,
+		canPrevBoneMarrowTx,
 	};
 }
 
-export function changeCanPrevHl(CanPrevHl) { 
+export function changeCanPrevHl(canPrevHl) { 
 	return{
-		type: CHANGE_CANPREVHL,
-		CanPrevHl,
+		type: constant.CHANGE_CANPREVHL,
+		canPrevHl,
 	};
 }
 
-export function changeCanPrevHr(CanPrevHr) { 
+export function changeCanPrevHr(canPrevHr) { 
 	return{
-		type: CHANGE_CANPREVHR,
-		CanPrevHr,
+		type: constant.CHANGE_CANPREVHR,
+		canPrevHr,
 	};
 }
 
-export function changeCanPrevIn(CanPrevIn) { 
+export function changeCanPrevIn(canPrevIn) { 
 	return{
-		type: CHANGE_CANPREVIN,
-		CanPrevIn,
+		type: constant.CHANGE_CANPREVIN,
+		canPrevIn,
 	};
 }
 
-export function changeCanPrevKi(CanPrevKi) { 
+export function changeCanPrevKi(canPrevKi) { 
 	return{
-		type: CHANGE_CANPREVKI,
-		CanPrevKi,
+		type: constant.CHANGE_CANPREVKI,
+		canPrevKi,
 	};
 }
 
-export function changeCanPrevKp(CanPrevKp) { 
+export function changeCanPrevKp(canPrevKp) { 
 	return{
-		type: CHANGE_CANPREVKP,
-		CanPrevKp,
+		type: constant.CHANGE_CANPREVKP,
+		canPrevKp,
 	};
 }
 
-export function changeCanPrevLi(CanPrevLi) { 
+export function changeCanPrevLi(canPrevLi) { 
 	return{
-		type: CHANGE_CANPREVLI,
-		CanPrevLi,
+		type: constant.CHANGE_CANPREVLI,
+		canPrevLi,
 	};
 }
 
-export function changeCanPrevLu(CanPrevLu) { 
+export function changeCanPrevLu(canPrevLu) { 
 	return{
-		type: CHANGE_CANPREVLU,
-		CanPrevLu,
+		type: constant.CHANGE_CANPREVLU,
+		canPrevLu,
 	};
 }
 
-export function changeCanPrevPa(CanPrevPa) { 
+export function changeCanPrevPa(canPrevPa) { 
 	return{
-		type: CHANGE_CANPREVPA,
-		CanPrevPa,
+		type: constant.CHANGE_CANPREVPA,
+		canPrevPa,
 	};
 }
 
-export function changeCanPrevTx(CanPrevTx) { 
+export function changeCanPrevTx(canPrevTx) { 
 	return{
-		type: CHANGE_CANPREVTX,
-		CanPrevTx,
+		type: constant.CHANGE_CANPREVTX,
+		canPrevTx,
 	};
 }
 
-export function changeCanPrevTxfus(CanPrevTxfus) { 
+export function changeCanPrevTxfus(canPrevTxfus) { 
 	return{
-		type: CHANGE_CANPREVTXFUS,
-		CanPrevTxfus,
+		type: constant.CHANGE_CANPREVTXFUS,
+		canPrevTxfus,
 	};
 }
 
-export function changeCanPrimaryPay(CanPrimaryPay) { 
+export function changeCanPrimaryPay(canPrimaryPay) { 
 	return{
-		type: CHANGE_CANPRIMARYPAY,
-		CanPrimaryPay,
+		type: constant.CHANGE_CANPRIMARYPAY,
+		canPrimaryPay,
 	};
 }
 
-export function changeCanPulmEmbol(CanPulmEmbol) { 
+export function changeCanPulmEmbol(canPulmEmbol) { 
 	return{
-		type: CHANGE_CANPULMEMBOL,
-		CanPulmEmbol,
+		type: constant.CHANGE_CANPULMEMBOL,
+		canPulmEmbol,
 	};
 }
 
-export function changeCanRace(CanRace) { 
+export function changeCanRace(canRace) { 
 	return{
-		type: CHANGE_CANRACE,
-		CanRace,
+		type: constant.CHANGE_CANRACE,
+		canRace,
 	};
 }
 
-export function changeCanRaceSrtr(CanRaceSrtr) { 
+export function changeCanRaceSrtr(canRaceSrtr) { 
 	return{
-		type: CHANGE_CANRACESRTR,
-		CanRaceSrtr,
+		type: constant.CHANGE_CANRACESRTR,
+		canRaceSrtr,
 	};
 }
 
-export function changeCanRecurSepsis(CanRecurSepsis) { 
+export function changeCanRecurSepsis(canRecurSepsis) { 
 	return{
-		type: CHANGE_CANRECURSEPSIS,
-		CanRecurSepsis,
+		type: constant.CHANGE_CANRECURSEPSIS,
+		canRecurSepsis,
 	};
 }
 
-export function changeCanRemCd(CanRemCd) { 
+export function changeCanRemCd(canRemCd) { 
 	return{
-		type: CHANGE_CANREMCD,
-		CanRemCd,
+		type: constant.CHANGE_CANREMCD,
+		canRemCd,
 	};
 }
 
-export function changeCanRemCod(CanRemCod) { 
+export function changeCanRemCod(canRemCod) { 
 	return{
-		type: CHANGE_CANREMCOD,
-		CanRemCod,
+		type: constant.CHANGE_CANREMCOD,
+		canRemCod,
 	};
 }
 
-export function changeCanRemDt(CanRemDt) { 
+export function changeCanRemDt(canRemDt) { 
 	return{
-		type: CHANGE_CANREMDT,
-		CanRemDt,
+		type: constant.CHANGE_CANREMDT,
+		canRemDt,
 	};
 }
 
-export function changeCanSecondaryPay(CanSecondaryPay) { 
+export function changeCanSecondaryPay(canSecondaryPay) { 
 	return{
-		type: CHANGE_CANSECONDARYPAY,
-		CanSecondaryPay,
+		type: constant.CHANGE_CANSECONDARYPAY,
+		canSecondaryPay,
 	};
 }
 
-export function changeCanSource(CanSource) { 
+export function changeCanSource(canSource) { 
 	return{
-		type: CHANGE_CANSOURCE,
-		CanSource,
+		type: constant.CHANGE_CANSOURCE,
+		canSource,
 	};
 }
 
-export function changeCanStatExtendFlg(CanStatExtendFlg) { 
+export function changeCanStatExtendFlg(canStatExtendFlg) { 
 	return{
-		type: CHANGE_CANSTATEXTENDFLG,
-		CanStatExtendFlg,
+		type: constant.CHANGE_CANSTATEXTENDFLG,
+		canStatExtendFlg,
 	};
 }
 
-export function changeCanTiebreakerDt(CanTiebreakerDt) { 
+export function changeCanTiebreakerDt(canTiebreakerDt) { 
 	return{
-		type: CHANGE_CANTIEBREAKERDT,
-		CanTiebreakerDt,
+		type: constant.CHANGE_CANTIEBREAKERDT,
+		canTiebreakerDt,
 	};
 }
 
-export function changeCanTipss(CanTipss) { 
+export function changeCanTipss(canTipss) { 
 	return{
-		type: CHANGE_CANTIPSS,
-		CanTipss,
+		type: constant.CHANGE_CANTIPSS,
+		canTipss,
 	};
 }
 
-export function changeCanTotAlbumin(CanTotAlbumin) { 
+export function changeCanTotAlbumin(canTotAlbumin) { 
 	return{
-		type: CHANGE_CANTOTALBUMIN,
-		CanTotAlbumin,
+		type: constant.CHANGE_CANTOTALBUMIN,
+		canTotAlbumin,
 	};
 }
 
-export function changeCanTotBili(CanTotBili) { 
+export function changeCanTotBili(canTotBili) { 
 	return{
-		type: CHANGE_CANTOTBILI,
-		CanTotBili,
+		type: constant.CHANGE_CANTOTBILI,
+		canTotBili,
 	};
 }
 
-export function changeCanTrrExists(CanTrrExists) { 
+export function changeCanTrrExists(canTrrExists) { 
 	return{
-		type: CHANGE_CANTRREXISTS,
-		CanTrrExists,
+		type: constant.CHANGE_CANTRREXISTS,
+		canTrrExists,
 	};
 }
 
-export function changeCanTxCountry(CanTxCountry) { 
+export function changeCanTxCountry(canTxCountry) { 
 	return{
-		type: CHANGE_CANTXCOUNTRY,
-		CanTxCountry,
+		type: constant.CHANGE_CANTXCOUNTRY,
+		canTxCountry,
 	};
 }
 
-export function changeCanVadTah(CanVadTah) { 
+export function changeCanVadTah(canVadTah) { 
 	return{
-		type: CHANGE_CANVADTAH,
-		CanVadTah,
+		type: constant.CHANGE_CANVADTAH,
+		canVadTah,
 	};
 }
 
-export function changeCanVaricealBleeding(CanVaricealBleeding) { 
+export function changeCanVaricealBleeding(canVaricealBleeding) { 
 	return{
-		type: CHANGE_CANVARICEALBLEEDING,
-		CanVaricealBleeding,
+		type: constant.CHANGE_CANVARICEALBLEEDING,
+		canVaricealBleeding,
 	};
 }
 
-export function changeCanVentilator(CanVentilator) { 
+export function changeCanVentilator(canVentilator) { 
 	return{
-		type: CHANGE_CANVENTILATOR,
-		CanVentilator,
+		type: constant.CHANGE_CANVENTILATOR,
+		canVentilator,
 	};
 }
 
-export function changeCanWgtKg(CanWgtKg) { 
+export function changeCanWgtKg(canWgtKg) { 
 	return{
-		type: CHANGE_CANWGTKG,
-		CanWgtKg,
+		type: constant.CHANGE_CANWGTKG,
+		canWgtKg,
 	};
 }
 
-export function changeCanWorkIncome(CanWorkIncome) { 
+export function changeCanWorkIncome(canWorkIncome) { 
 	return{
-		type: CHANGE_CANWORKINCOME,
-		CanWorkIncome,
+		type: constant.CHANGE_CANWORKINCOME,
+		canWorkIncome,
 	};
 }
 
-export function changeCanWorkNoStat(CanWorkNoStat) { 
+export function changeCanWorkNoStat(canWorkNoStat) { 
 	return{
-		type: CHANGE_CANWORKNOSTAT,
-		CanWorkNoStat,
+		type: constant.CHANGE_CANWORKNOSTAT,
+		canWorkNoStat,
 	};
 }
 
-export function changeCanWorkYesStat(CanWorkYesStat) { 
+export function changeCanWorkYesStat(canWorkYesStat) { 
 	return{
-		type: CHANGE_CANWORKYESSTAT,
-		CanWorkYesStat,
+		type: constant.CHANGE_CANWORKYESSTAT,
+		canWorkYesStat,
 	};
 }
 
-export function changeCanYearEntryUs(CanYearEntryUs) { 
+export function changeCanYearEntryUs(canYearEntryUs) { 
 	return{
-		type: CHANGE_CANYEARENTRYUS,
-		CanYearEntryUs,
+		type: constant.CHANGE_CANYEARENTRYUS,
+		canYearEntryUs,
 	};
 }
 
-export function changeDonorId(DonorId) { 
+export function changeDonorId(donorId) { 
 	return{
-		type: CHANGE_DONORID,
-		DonorId,
+		type: constant.CHANGE_DONORID,
+		donorId,
 	};
 }
 
-export function changeDonTy(DonTy) { 
+export function changeDonTy(donTy) { 
 	return{
-		type: CHANGE_DONTY,
-		DonTy,
+		type: constant.CHANGE_DONTY,
+		donTy,
 	};
 }
 
-export function changeOrgAr(OrgAr) { 
+export function changeOrgAr(orgAr) { 
 	return{
-		type: CHANGE_ORGAR,
-		OrgAr,
+		type: constant.CHANGE_ORGAR,
+		orgAr,
 	};
 }
 
-export function changePersId(PersId) { 
+export function changePersId(persId) { 
 	return{
-		type: CHANGE_PERSID,
-		PersId,
+		type: constant.CHANGE_PERSID,
+		persId,
 	};
 }
 
-export function changePersNexttx(PersNexttx) { 
+export function changePersNexttx(persNexttx) { 
 	return{
-		type: CHANGE_PERSNEXTTX,
-		PersNexttx,
+		type: constant.CHANGE_PERSNEXTTX,
+		persNexttx,
 	};
 }
 
-export function changePersNexttxTrrId(PersNexttxTrrId) { 
+export function changePersNexttxTrrId(persNexttxTrrId) { 
 	return{
-		type: CHANGE_PERSNEXTTXTRRID,
-		PersNexttxTrrId,
+		type: constant.CHANGE_PERSNEXTTXTRRID,
+		persNexttxTrrId,
 	};
 }
 
-export function changePersOptnDeathDt(PersOptnDeathDt) { 
+export function changePersOptnDeathDt(persOptnDeathDt) { 
 	return{
-		type: CHANGE_PERSOPTNDEATHDT,
-		PersOptnDeathDt,
+		type: constant.CHANGE_PERSOPTNDEATHDT,
+		persOptnDeathDt,
 	};
 }
 
-export function changePersRestrictDeathDt(PersRestrictDeathDt) { 
+export function changePersRestrictDeathDt(persRestrictDeathDt) { 
 	return{
-		type: CHANGE_PERSRESTRICTDEATHDT,
-		PersRestrictDeathDt,
+		type: constant.CHANGE_PERSRESTRICTDEATHDT,
+		persRestrictDeathDt,
 	};
 }
 
-export function changePersRestrictDeathVrfy(PersRestrictDeathVrfy) { 
+export function changePersRestrictDeathVrfy(persRestrictDeathVrfy) { 
 	return{
-		type: CHANGE_PERSRESTRICTDEATHVRFY,
-		PersRestrictDeathVrfy,
+		type: constant.CHANGE_PERSRESTRICTDEATHVRFY,
+		persRestrictDeathVrfy,
 	};
 }
 
-export function changePersSsaDeathDt(PersSsaDeathDt) { 
+export function changePersSsaDeathDt(persSsaDeathDt) { 
 	return{
-		type: CHANGE_PERSSSADEATHDT,
-		PersSsaDeathDt,
+		type: constant.CHANGE_PERSSSADEATHDT,
+		persSsaDeathDt,
 	};
 }
 
-export function changePxId(PxId) { 
+export function changePxId(pxId) { 
 	return{
-		type: CHANGE_PXID,
-		PxId,
+		type: constant.CHANGE_PXID,
+		pxId,
 	};
 }
 
-export function changeRecTxDt(RecTxDt) { 
+export function changeRecTxDt(recTxDt) { 
 	return{
-		type: CHANGE_RECTXDT,
-		RecTxDt,
+		type: constant.CHANGE_RECTXDT,
+		recTxDt,
 	};
 }
 
-export function changeRecTxProcedureTy(RecTxProcedureTy) { 
+export function changeRecTxProcedureTy(recTxProcedureTy) { 
 	return{
-		type: CHANGE_RECTXPROCEDURETY,
-		RecTxProcedureTy,
+		type: constant.CHANGE_RECTXPROCEDURETY,
+		recTxProcedureTy,
 	};
 }
 
-export function changeWlOrg(WlOrg) { 
+export function changeWlOrg(wlOrg) { 
 	return{
-		type: CHANGE_WLORG,
-		WlOrg,
+		type: constant.CHANGE_WLORG,
+		wlOrg,
 	};
 }
 

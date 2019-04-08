@@ -1,46 +1,57 @@
-<Form>
-	<Form.Group controlId="num8">
-		<Form.Label>CAN INIT SRTR LAB MELD</Form.Label>
-		<Form.Control type="text"value={this.props.CanInitSrtrLabMeld} onChange={this.props.onChangeCanInitSrtrLabMeld} />
-	</Form.Group>
-	<Form.Group controlId="char1">
-		<Form.Label>CAN INIT SRTR LAB MELD TY</Form.Label>
-		<Form.Control type="text"value={this.props.CanInitSrtrLabMeldTy} onChange={this.props.onChangeCanInitSrtrLabMeldTy} />
-	</Form.Group>
-	<Form.Group controlId="num8">
-		<Form.Label>CAN LAST ALBUMIN</Form.Label>
-		<Form.Control type="text"value={this.props.CanLastAlbumin} onChange={this.props.onChangeCanLastAlbumin} />
-	</Form.Group>
-	<Form.Group controlId="num8">
-		<Form.Label>CAN LAST ASCITES</Form.Label>
-		<Form.Control type="text"value={this.props.CanLastAscites} onChange={this.props.onChangeCanLastAscites} />
-	</Form.Group>
-	<Form.Group controlId="num8">
-		<Form.Label>CAN LAST BILI</Form.Label>
-		<Form.Control type="text"value={this.props.CanLastBili} onChange={this.props.onChangeCanLastBili} />
-	</Form.Group>
-	<Form.Group controlId="num8">
-		<Form.Label>CAN LAST ENCEPH</Form.Label>
-		<Form.Control type="text"value={this.props.CanLastEnceph} onChange={this.props.onChangeCanLastEnceph} />
-	</Form.Group>
-	<Form.Group controlId="num8">
-		<Form.Label>CAN LAST INR</Form.Label>
-		<Form.Control type="text"value={this.props.CanLastInr} onChange={this.props.onChangeCanLastInr} />
-	</Form.Group>
-	<Form.Group controlId="num8">
-		<Form.Label>CAN LAST SERUM CREAT</Form.Label>
-		<Form.Control type="text"value={this.props.CanLastSerumCreat} onChange={this.props.onChangeCanLastSerumCreat} />
-	</Form.Group>
-	<Form.Group controlId="num8">
-		<Form.Label>CAN LAST SERUM SODIUM</Form.Label>
-		<Form.Control type="text"value={this.props.CanLastSerumSodium} onChange={this.props.onChangeCanLastSerumSodium} />
-	</Form.Group>
-	<Form.Group controlId="num8">
-		<Form.Label>CAN LAST SRTR LAB MELD</Form.Label>
-		<Form.Control type="text"value={this.props.CanLastSrtrLabMeld} onChange={this.props.onChangeCanLastSrtrLabMeld} />
-	</Form.Group>
-	<Form.Group controlId="char1">
-		<Form.Label>CAN LAST SRTR LAB MELD TY</Form.Label>
-		<Form.Control type="text"value={this.props.CanLastSrtrLabMeldTy} onChange={this.props.onChangeCanLastSrtrLabMeldTy} />
-	</Form.Group>
-</Form>
+<div className="d-flex flex-wrap bg-light">
+	<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
+		<label className="font-weight-bold" >CAN INIT SRTR LAB MELD</label>
+		<label className="text-secondary" >First SRTR MELD/PELD given:</label>
+		<input className="form-control"type="text" value={this.props.canInitSrtrLabMeld} onChange={this.props.onChangeCanInitSrtrLabMeld} />
+	</div>
+	<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
+		<label className="font-weight-bold" >CAN INIT SRTR LAB MELD TY</label>
+		<label className="text-secondary" >First SRTR MELD/PELD type given:</label>
+		<input className="form-control"type="text" value={this.props.canInitSrtrLabMeldTy} onChange={this.props.onChangeCanInitSrtrLabMeldTy} />
+	</div>
+	<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
+		<label className="font-weight-bold" >CAN LAST ALBUMIN</label>
+		<label className="text-secondary" >Candidate Last Albumin (used for MELD):</label>
+		<input className="form-control"type="number" value={this.props.canLastAlbumin} onChange={this.props.onChangeCanLastAlbumin} />
+	</div>
+	<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
+		<label className="font-weight-bold" >CAN LAST ASCITES</label>
+		<label className="text-secondary" >Candidate Last Ascites (used for MELD):</label>
+		<input className="form-control"type="text" value={this.props.canLastAscites} onChange={this.props.onChangeCanLastAscites} />
+	</div>
+	<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
+		<label className="font-weight-bold" >CAN LAST BILI</label>
+		<label className="text-secondary" >Candidate Last Bilirubin (used for MELD):</label>
+		<input className="form-control"type="number" value={this.props.canLastBili} onChange={this.props.onChangeCanLastBili} />
+	</div>
+	<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
+		<label className="font-weight-bold" >CAN LAST ENCEPH</label>
+		<label className="text-secondary" >Candidate Last Encephalopathy (used for MELD):</label>
+		<input className="form-control"type="text" value={this.props.canLastEnceph} onChange={this.props.onChangeCanLastEnceph} />
+	</div>
+	<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
+		<label className="font-weight-bold" >CAN LAST INR</label>
+		<label className="text-secondary" >Candidate Last INR (used for MELD):</label>
+		<input className="form-control"type="number" value={this.props.canLastInr} onChange={this.props.onChangeCanLastInr} />
+	</div>
+	<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
+		<label className="font-weight-bold" >CAN LAST SERUM CREAT</label>
+		<label className="text-secondary" >Candidate Last Serum Creatinine mg/dl (used for MELD):</label>
+		<input className="form-control"type="number" value={this.props.canLastSerumCreat} onChange={this.props.onChangeCanLastSerumCreat} />
+	</div>
+	<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
+		<label className="font-weight-bold" >CAN LAST SERUM SODIUM</label>
+		<label className="text-secondary" >Candidate Last Serum Sodium (used for MELD):</label>
+		<input className="form-control"type="number" value={this.props.canLastSerumSodium} onChange={this.props.onChangeCanLastSerumSodium} />
+	</div>
+	<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
+		<label className="font-weight-bold" >CAN LAST SRTR LAB MELD</label>
+		<label className="text-secondary" >Last SRTR MELD/PELD given:</label>
+		<input className="form-control"type="text" value={this.props.canLastSrtrLabMeld} onChange={this.props.onChangeCanLastSrtrLabMeld} />
+	</div>
+	<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
+		<label className="font-weight-bold" >CAN LAST SRTR LAB MELD TY</label>
+		<label className="text-secondary" >Last SRTR MELD/PELD type given:</label>
+		<input className="form-control"type="text" value={this.props.canLastSrtrLabMeldTy} onChange={this.props.onChangeCanLastSrtrLabMeldTy} />
+	</div>
+</div>
