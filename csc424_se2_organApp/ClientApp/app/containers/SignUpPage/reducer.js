@@ -5,11 +5,12 @@
  */
 
 import { fromJS } from 'immutable';
-import { SET_EMAIL, SET_PASSWORD } from './constants';
+import { SET_EMAIL, SET_PASSWORD, SET_ROLE } from './constants';
 
 export const initialState = fromJS({
   email: '',
   password: '',
+  role: '',
 });
 
 function signUpPageReducer(state = initialState, action) {
@@ -18,6 +19,8 @@ function signUpPageReducer(state = initialState, action) {
       return state.set('email', action.email);
     case SET_PASSWORD:
       return state.set('password', action.password);
+    case SET_ROLE:
+      return state.set('role', action.role);
     default:
       return state;
   }
