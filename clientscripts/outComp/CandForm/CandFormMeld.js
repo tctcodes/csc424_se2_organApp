@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
-import injectSaga from 'utils/injectSaga';
-import injectReducer from 'utils/injectReducer';
 import * as select from './selectors';
 import * as action from './actions';
-import reducer from './reducer';
-import saga from './saga';
 
 export class CandFormMeld extends React.Component {
 	render(){ 
@@ -599,6 +595,7 @@ export class CandFormMeld extends React.Component {
 		)
 	}
 }
+
 const mapStateToProps = createStructuredSelector({
 	canInitSrtrLabMeld: select.makeSelectCanInitSrtrLabMeld(),
 	canInitSrtrLabMeldTy: select.makeSelectCanInitSrtrLabMeldTy(),
@@ -633,6 +630,5 @@ const withConnect = connect(
 	mapStateToProps,
 	mapDispatchToProps,
 );
-const withReducer = injectReducer({ key: 'CandFormMeld', reducer });
-const withSaga = injectSaga({ key: 'CandFormMeld', saga });
-export default compose( withReducer, withSaga, withConnect)(CandFormMeld);
+
+export default compose( withConnect )( CandFormMeld );

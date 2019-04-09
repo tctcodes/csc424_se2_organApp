@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
-import injectSaga from 'utils/injectSaga';
-import injectReducer from 'utils/injectReducer';
 import * as select from './selectors';
 import * as action from './actions';
-import reducer from './reducer';
-import saga from './saga';
 
 export class CandFormTx extends React.Component {
 	render(){ 
@@ -391,6 +387,7 @@ export class CandFormTx extends React.Component {
 		)
 	}
 }
+
 const mapStateToProps = createStructuredSelector({
 	canAnastomosis: select.makeSelectCanAnastomosis(),
 	canSource: select.makeSelectCanSource(),
@@ -433,6 +430,5 @@ const withConnect = connect(
 	mapStateToProps,
 	mapDispatchToProps,
 );
-const withReducer = injectReducer({ key: 'CandFormTx', reducer });
-const withSaga = injectSaga({ key: 'CandFormTx', saga });
-export default compose( withReducer, withSaga, withConnect)(CandFormTx);
+
+export default compose( withConnect )( CandFormTx );

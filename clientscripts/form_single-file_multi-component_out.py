@@ -131,12 +131,12 @@ for t in types :
             formDict[t][p].append("import { connect } from 'react-redux';\n")
             formDict[t][p].append("import { createStructuredSelector } from 'reselect';\n")
             formDict[t][p].append("import { compose } from 'redux';\n")
-            formDict[t][p].append("import injectSaga from 'utils/injectSaga';\n")
-            formDict[t][p].append("import injectReducer from 'utils/injectReducer';\n")
+            #formDict[t][p].append("import injectSaga from 'utils/injectSaga';\n")
+            #formDict[t][p].append("import injectReducer from 'utils/injectReducer';\n")
             formDict[t][p].append("import * as select from './selectors';\n")
-            formDict[t][p].append("import * as action from './actions';\n")
-            formDict[t][p].append("import reducer from './reducer';\n")
-            formDict[t][p].append("import saga from './saga';\n\n")
+            formDict[t][p].append("import * as action from './actions';\n\n")
+            #formDict[t][p].append("import reducer from './reducer';\n")
+            #formDict[t][p].append("import saga from './saga';\n\n")
             formDict[t][p].append("export class "+domain+t.capitalize()+" extends React.Component {\n")
             formDict[t][p].append("\trender(){ \n\t\treturn(\n")
             formDict[t][p].append('\t\t\t<div className="d-flex flex-wrap bg-light">\n')
@@ -219,7 +219,7 @@ for t in types :
     for p in parts:
         if (p == 'component') :
             formDict[t][p].append('\t\t\t</div>\n')
-            formDict[t][p].append("\t\t)\n\t}\n}\n")
+            formDict[t][p].append("\t\t)\n\t}\n}\n\n")
         elif (p == 'mapStateToProps') :
             formDict[t][p].append("});\n\n")
         elif (p == 'mapDispatchToProps') :
@@ -228,10 +228,10 @@ for t in types :
             formDict[t][p].append("const withConnect = connect(\n")
             formDict[t][p].append("\tmapStateToProps,\n")
             formDict[t][p].append("\tmapDispatchToProps,\n")
-            formDict[t][p].append(");\n")
-            formDict[t][p].append("const withReducer = injectReducer({ key: '"+domain+t.capitalize()+"', reducer });\n")
-            formDict[t][p].append("const withSaga = injectSaga({ key: '"+domain+t.capitalize()+"', saga });\n")
-            formDict[t][p].append("export default compose( withReducer, withSaga, withConnect)("+domain+t.capitalize()+");\n")
+            formDict[t][p].append(");\n\n")
+            #formDict[t][p].append("const withReducer = injectReducer({ key: '"+domain+t.capitalize()+"', reducer });\n")
+            #formDict[t][p].append("const withSaga = injectSaga({ key: '"+domain+t.capitalize()+"', saga });\n")
+            formDict[t][p].append("export default compose( withConnect )( "+domain+t.capitalize()+" );\n")
         
 outFiles = []
 for t in types :
