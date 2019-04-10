@@ -27,10 +27,71 @@ import injectReducer from "utils/injectReducer";
 import reducer from "./reducer";
 import saga from "./saga";
 
+const US_STATES = {
+  Alabama: 'AL',
+  Alaska: 'AK',
+  Arizona: 'AZ',
+  Arkansas: 'AR',
+  California: 'CA',
+  Colorado: 'CO',
+  Connecticut: 'CT',
+  Delaware: 'DE',
+  Florida: 'FL',
+  Georgia: 'GA',
+  Hawaii: 'HI',
+  Idaho: 'ID',
+  Illinois: 'IL',
+  Indiana: 'IN',
+  Iowa: 'IA',
+  Kansas: 'KS',
+  Kentucky: 'KY',
+  Louisiana: 'LA',
+  Maine: 'ME',
+  Maryland: 'MD',
+  Massachusetts: 'MA',
+  Michigan: 'MI',
+  Minnesota: 'MN',
+  Mississippi: 'MS',
+  Missouri: 'MO',
+  Montana: 'MT',
+  Nebraska: 'NE',
+  Nevada: 'NV',
+  'New Hampshire': 'NH',
+  'New Jersey': 'NJ',
+  'New Mexico': 'NM',
+  'New York': 'NY',
+  'North Carolina': 'NC',
+  'North Dakota': 'ND',
+  Ohio: 'OH',
+  Oklahoma: 'OK',
+  Oregon: 'OR',
+  Pennsylvania: 'PA',
+  'Rhode Island': 'RI',
+  'South Carolina': 'SC',
+  'South Dakota': 'SD',
+  Tennessee: 'TN',
+  Texas: 'TX',
+  Utah: 'UT',
+  Vermont: 'VT',
+  Virginia: 'VA',
+  Washington: 'WA',
+  'West Virginia': 'WV',
+  Wisconsin: 'WI',
+  Wyoming: 'WY',
+};
+
+const USStatesList = (props) => {
+  stateNames = Object.keys(props);
+  const stateList = stateNames.map((state) => {
+    <option>state</option>
+  });
+  return stateList;
+};
+
+
 /* eslint-disable react/prefer-stateless-function */
 export class SearchBox extends React.Component {
   render() {
-    console.log(`searchbox token ${this.props.token}`);
     return (
       <div>
         <Helmet>
@@ -38,7 +99,7 @@ export class SearchBox extends React.Component {
           <meta name="description" content="Description of SearchBox" />
         </Helmet>
         <div>
-          <Navbar className="bg-dark" fixed="top">
+          <Navbar className="bg-dark" sticky="top">
             {/* Text entry for patient-id */}
             <Form inline>
               <Form.Group controlId="formBasicSearch">
@@ -61,22 +122,31 @@ export class SearchBox extends React.Component {
                 <Form.Group>
                   <Form.Label>Blood Group</Form.Label>
                   <Form.Control as="select">
-                    <option>1. A+</option>
-                    <option>2. A-</option>
-                    <option>3. B+</option>
-                    <option>4. B-</option>
-                    <option>5. AB+</option>
-                    <option>6. AB-</option>
-                    <option>7. O+</option>
-                    <option>8. O-</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                  </Form.Control>
+                  <Form.Label>State</Form.Label>
+                  <Form.Control as="select">
+                    <USStatesList states={US_STATES}/>
                   </Form.Control>
                 </Form.Group>
               </Dropdown.Menu>
             </Dropdown>
+            {/* Button to submit query */}
             <Button variant="primary" type="button">
               Search
             </Button>
           </Navbar>
+        </div>
+        {/* Display patient informatio */}
+        <div>
+          <h2>Search for a patient to display information</h2>
         </div>
       </div>
     );
