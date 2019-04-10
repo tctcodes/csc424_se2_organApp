@@ -14,6 +14,7 @@ import HomePage from 'containers/HomePage/Loadable';
 import SignUpPage from "containers/SignUpPage/Loadable";
 import CanForm from "containers/CanForm/Loadable";
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import RegForm from 'containers/RegForm/Loadable';
 
 import GlobalStyle from '../../global-styles';
 import LoginPage from 'containers/LoginPage/Loadable';
@@ -91,7 +92,8 @@ export default function App() {
           <PrivateRoute path="/nurse" component={Nurse} />
           <PrivateRoute path="/physician" component={Physician} />
           <PrivateRoute path="/admin" component={Admin} />
-         <Route path="/canform" component={CanForm}/>
+          <Route path="/canform" component={CanForm}/>
+          <Route path="/register" component={RegForm}/>
 
           <Route component={NotFoundPage} />
         </Switch>
