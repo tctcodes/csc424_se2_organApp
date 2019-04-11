@@ -20,77 +20,52 @@ import {
   DropdownMenu,
   Navbar,
 } from "react-bootstrap";
-import { makeSelectToken } from './selectors';
+import { setPID } from './actions';
+import { makeSelectPID } from './selectors';
 
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
 import reducer from "./reducer";
 import saga from "./saga";
 
-const US_STATES = {
-  Alabama: 'AL',
-  Alaska: 'AK',
-  Arizona: 'AZ',
-  Arkansas: 'AR',
-  California: 'CA',
-  Colorado: 'CO',
-  Connecticut: 'CT',
-  Delaware: 'DE',
-  Florida: 'FL',
-  Georgia: 'GA',
-  Hawaii: 'HI',
-  Idaho: 'ID',
-  Illinois: 'IL',
-  Indiana: 'IN',
-  Iowa: 'IA',
-  Kansas: 'KS',
-  Kentucky: 'KY',
-  Louisiana: 'LA',
-  Maine: 'ME',
-  Maryland: 'MD',
-  Massachusetts: 'MA',
-  Michigan: 'MI',
-  Minnesota: 'MN',
-  Mississippi: 'MS',
-  Missouri: 'MO',
-  Montana: 'MT',
-  Nebraska: 'NE',
-  Nevada: 'NV',
-  'New Hampshire': 'NH',
-  'New Jersey': 'NJ',
-  'New Mexico': 'NM',
-  'New York': 'NY',
-  'North Carolina': 'NC',
-  'North Dakota': 'ND',
-  Ohio: 'OH',
-  Oklahoma: 'OK',
-  Oregon: 'OR',
-  Pennsylvania: 'PA',
-  'Rhode Island': 'RI',
-  'South Carolina': 'SC',
-  'South Dakota': 'SD',
-  Tennessee: 'TN',
-  Texas: 'TX',
-  Utah: 'UT',
-  Vermont: 'VT',
-  Virginia: 'VA',
-  Washington: 'WA',
-  'West Virginia': 'WV',
-  Wisconsin: 'WI',
-  Wyoming: 'WY',
-};
+const BLOOD_GROUPS = [
+  'A+',
+  'A-',
+  'B+',
+  'B-',
+  'AB+',
+  'AB-',
+  'O+',
+  'O-',
+];
 
-const USStatesList = (props) => {
-  stateNames = Object.keys(props);
-  const stateList = stateNames.map((state) => {
-    <option>state</option>
-  });
-  return stateList;
-};
-
+const US_STATE = [
+  'AL',
+  'AK',
+  'AZ',
+  'AR',
+];
 
 /* eslint-disable react/prefer-stateless-function */
 export class SearchBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
+    this.handlePIDChange = this.handlePIDChange.bind(this);
+  }
+
+  handleSearchSubmit() {
+    console.log('Clicked Search button!');
+    console.log(this.props.pid);
+  }
+
+  handlePIDChange(e) {
+    e.preventDefault();
+    console.log('Something Changed!');
+    console.log(e.target.value);
+    this.props.setPID(e.target.value);
+  }
+
   render() {
     return (
       <div>
@@ -103,7 +78,11 @@ export class SearchBox extends React.Component {
             {/* Text entry for patient-id */}
             <Form inline>
               <Form.Group controlId="formBasicSearch">
-                <Form.Control type="text" placeholder="Patient ID" />
+                <Form.Control
+                  type="text"
+                  placeholder="Patient ID"
+                  onChange={this.props.onSetPID}
+                />
               </Form.Group>
             </Form>
             {/* Donor/Candidate Selection */}
@@ -133,13 +112,20 @@ export class SearchBox extends React.Component {
                   </Form.Control>
                   <Form.Label>State</Form.Label>
                   <Form.Control as="select">
-                    <USStatesList states={US_STATES}/>
+                    <option>Alabama</option>
+                    <option>Alaska</option>
+                    <option>Arizona</option>
+                    <option>Arkansas</option>
                   </Form.Control>
                 </Form.Group>
               </Dropdown.Menu>
             </Dropdown>
             {/* Button to submit query */}
-            <Button variant="primary" type="button">
+            <Button
+              variant="primary"
+              type="button"
+              onClick = {this.handleSearchSubmit}
+            >
               Search
             </Button>
           </Navbar>
@@ -154,16 +140,17 @@ export class SearchBox extends React.Component {
 }
 
 SearchBox.propTypes = {
-  dispatch: PropTypes.func.isRequired
+  pid: PropTypes.string,
+  onSetPID: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
-  token: makeSelectToken(),
+  pid: makeSelectPID(),
 });
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch
+    onSetPID: evt => dispatch(setPID(evt.target.value)),
   };
 }
 
