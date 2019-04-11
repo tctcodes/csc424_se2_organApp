@@ -7,6 +7,64 @@ import * as select from './selectors';
 import * as action from './actions';
 
 export class CandFormMalig extends React.Component {
+	state = {
+		maligTy: []
+	}
+
+	componentWillMount(){
+		this.setState({maligTy:this.valToChoice(this.props.canMaligTy)})
+	}
+
+	valToChoice = (value = 0) => {
+		let v = value;
+		let choice = [];
+		let power = 0;
+		while (v > 0){
+			if (v & 1){
+				choice.push(2<<power)
+			}
+			power++;
+			v = v >> 1;
+		}
+		return choice;
+	}
+
+	modifyChoice = (e) => {
+		var options = e.target.options;
+		var value = [];
+		for (var i = 0, l = options.length; i < l; i++) {
+			if (options[i].selected) {
+				value.push(options[i].value);
+			}
+		}
+		console.log("value",value);
+		this.setState({maligTy:value})
+		this.choiceToVal(e, value)
+	}
+
+	choiceToVal = (e) => {
+		let options = e.target.options;
+		let { name } = e.target;
+		let value = [];
+		for (var i = 0, l = options.length; i < l; i++) {
+			if (options[i].selected) {
+				value.push(options[i].value);
+			}
+		}
+		let v = 0
+		for (let i = 0, l = value.length; i < l; i++){
+			v=v+parseInt(value[i]);
+		}
+		
+		
+		let z={target:{value:v}}
+		console.log(z.target)
+		
+		this.props[name](z)
+	}
+
+	onMultiChange(){}
+
 	render(){ 
 		return(
 			<div className="d-flex flex-wrap bg-light">
@@ -18,7 +76,7 @@ export class CandFormMalig extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN MALIG TY</label>
 					<label className="text-secondary" >Previous Malignancy Type(s):</label>
-					<select className="form-control" value={this.props.canMaligTy} onChange={this.props.onChangeCanMaligTy}>
+					<select name="onChangeCanMaligTy" multiple className="form-control" defaultValue={this.valToChoice(this.props.canMaligTy)} value={this.state.maligTy} onChange={this.modifyChoice}>
 						<option value="" hidden disabled selected/>
 						<option value="">Missing</option>
 						<option value="1">1: Skin Melanoma</option>

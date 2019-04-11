@@ -8,10 +8,8 @@ import {setState} from './actions';
  */
 export function* getRecordPersId() {
   //const PersID = yield select(makeSelectPersId());
-  const PersId = yield "5320821"
-  const PxId = yield "1242923"
+  const PxId = yield "1230200"
   const body = {
-    PersId,
     PxId
   }
   let headers = {'Content-Type': 'application/json'}
