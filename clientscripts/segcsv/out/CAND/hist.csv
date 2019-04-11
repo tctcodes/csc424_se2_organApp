@@ -1,0 +1,37 @@
+CAN_ANGINA,num,8,ANGINA,Angina/Coronary Artery Disease,hist
+CAN_ANGINA_CAD,num,8,ANGNACAD,Angina:,hist
+CAN_ASCITES,char,1,,Ascites (from liver disease ),hist
+CAN_BACTERIA_PERIT,char,1,,Spontaneous Bacterial Peritonitis (ascitis infection),hist
+CAN_CEREB_VASC,char,1,,Symptomatic Cerebrovascular Disease,hist
+CAN_COGNITIVE_DEVELOP,num,8,COGDEV,Cognitive Development (Ped Only),hist
+CAN_DIAB,num,8,DBINSLDP,Diabetes,hist
+CAN_DIAB_TY,num,8,DIABTY,Diabetes,hist
+CAN_DIAL,num,8,DIALTYLI,Dialysis,hist
+CAN_DRUG_TREAT_COPD,char,1,,Drug Treated COPD,hist
+CAN_DRUG_TREAT_HYPERTEN,char,1,,Drug Treated Systemic Hypertension,hist
+CAN_ENCEPH,char,1,,Encephalopathy,hist
+CAN_FUNGAL_SEPSIS,char,1,,Fungal sepsis (IN Pediatric Only),hist
+CAN_LIVING_DON_TX,num,3,,Has Candidate received a Living Donor transplant? (used for Liver Candidates),hist
+CAN_LI_DYSFUNCTN,char,1,,Liver Dysfunction,hist
+CAN_LOSS_VASC_ACCESS,char,1,,Loss of two or more vascular access sites (IN Pediatric Only),hist
+CAN_NEW_PREV_PI_TX,char,1,,Previous Pancreas Islet Transplantation:,hist
+CAN_NON_RECON_GI,char,1,,Non-Reconstructible GI tract (IN Pediatric Only),hist
+CAN_PEPTIC_ULCER,num,8,PEPULCER,Peptic Ulcer Disease,hist
+CAN_PERIPH_VASC,char,1,,Symptomatic Peripheral Vascular Disease,hist
+CAN_PORTAL_VEIN,char,1,,History of Portal Vein Thrombosis,hist
+CAN_PREV_ABDOM_SURG,char,1,,Previous Upper Abdominal Surgery,hist
+CAN_PREV_BONE_MARROW_DT,num,8,MMDDYY,Date of Latest Bone Marrow Transplant,hist
+CAN_PREV_BONE_MARROW_TX,num,8,,Number Bone Marrow Transplants,hist
+CAN_PREV_HL,num,8,,Prev Heart-Lung Tx,hist
+CAN_PREV_HR,num,8,,Prev Heart Tx,hist
+CAN_PREV_IN,num,8,,Prev Intestine Tx,hist
+CAN_PREV_KI,num,8,,Prev Kidney Tx,hist
+CAN_PREV_KP,num,8,,Prev Kidney-Pancreas Tx,hist
+CAN_PREV_LI,num,8,,Prev Liver Tx,hist
+CAN_PREV_LU,num,8,,Prev Lung Tx,hist
+CAN_PREV_PA,num,8,,Prev Pancreas Tx,hist
+CAN_PREV_TX,num,8,,Previous Transplants,hist
+CAN_PREV_TXFUS,char,1,,Any Previous Transfusions,hist
+CAN_PULM_EMBOL,char,1,,Pulmonary Embolism,hist
+CAN_RECUR_SEPSIS,char,1,,Recurrent sepsis (IN Pediatric Only),hist
+CAN_TIPSS,char,1,,History of TIPSS,hist

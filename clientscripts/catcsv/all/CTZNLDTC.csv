@@ -1,0 +1,5 @@
+1,1: US Citizen
+2,2: RESIDENT ALIEN
+3,"3: NON-RESIDENT ALIEN, Year Entered US"
+4,4: Non-US Citizen/US Resident
+5,"5: Non-US Citizen/Non-US Resident, Traveled to US for Reason Other Than Transplant"

@@ -18,6 +18,7 @@ namespace csc424_se2_organApp.Models
         public virtual DbSet<CandLiin> CandLiin { get; set; }
         public virtual DbSet<DonorDeceased> DonorDeceased { get; set; }
         public virtual DbSet<DonorLive> DonorLive { get; set; }
+        public virtual DbSet<Info> Info { get; set; }
         public virtual DbSet<TxLi> TxLi { get; set; }
         public virtual DbSet<TxfLi> TxfLi { get; set; }
         public virtual DbSet<Users> Users { get; set; }
@@ -2289,6 +2290,98 @@ namespace csc424_se2_organApp.Models
                     .HasColumnType("date");
             });
 
+            modelBuilder.Entity<Info>(entity =>
+            {
+                entity.HasKey(e => new { e.PersId, e.Email })
+                    .HasName("info_pk");
+
+                entity.ToTable("info", "users");
+
+                entity.Property(e => e.PersId)
+                    .HasColumnName("pers_id")
+                    .HasColumnType("numeric");
+
+                entity.Property(e => e.Email)
+                    .HasColumnName("email")
+                    .HasColumnType("character varying(32)");
+
+                entity.Property(e => e.Address).HasColumnName("address");
+
+                entity.Property(e => e.CanAcademicLevel)
+                    .HasColumnName("can_academic_level")
+                    .HasColumnType("numeric");
+
+                entity.Property(e => e.CanAcademicProgress)
+                    .HasColumnName("can_academic_progress")
+                    .HasColumnType("numeric");
+
+                entity.Property(e => e.CanCitizenship)
+                    .HasColumnName("can_citizenship")
+                    .HasColumnType("numeric");
+
+                entity.Property(e => e.CanEducation)
+                    .HasColumnName("can_education")
+                    .HasColumnType("numeric");
+
+                entity.Property(e => e.CanEmplStat)
+                    .HasColumnName("can_empl_stat")
+                    .HasColumnType("numeric");
+
+                entity.Property(e => e.CanEthnicitySrtr)
+                    .HasColumnName("can_ethnicity_srtr")
+                    .HasColumnType("character(10)");
+
+                entity.Property(e => e.CanGender).HasColumnName("can_gender");
+
+                entity.Property(e => e.CanPermState)
+                    .HasColumnName("can_perm_state")
+                    .HasColumnType("character(2)");
+
+                entity.Property(e => e.CanPrimaryPay)
+                    .HasColumnName("can_primary_pay")
+                    .HasColumnType("numeric");
+
+                entity.Property(e => e.CanRace)
+                    .HasColumnName("can_race")
+                    .HasColumnType("numeric");
+
+                entity.Property(e => e.CanRaceSrtr)
+                    .HasColumnName("can_race_srtr")
+                    .HasColumnType("numeric");
+
+                entity.Property(e => e.CanSecondaryPay)
+                    .HasColumnName("can_secondary_pay")
+                    .HasColumnType("numeric");
+
+                entity.Property(e => e.CanWorkIncome).HasColumnName("can_work_income");
+
+                entity.Property(e => e.CanWorkNoStat)
+                    .HasColumnName("can_work_no_stat")
+                    .HasColumnType("numeric");
+
+                entity.Property(e => e.CanWorkYesStat)
+                    .HasColumnName("can_work_yes_stat")
+                    .HasColumnType("numeric");
+
+                entity.Property(e => e.CanYearEntryUs)
+                    .HasColumnName("can_year_entry_us")
+                    .HasColumnType("numeric");
+
+                entity.Property(e => e.Fullname)
+                    .HasColumnName("fullname")
+                    .HasColumnType("character varying");
+
+                entity.Property(e => e.Ssn)
+                    .HasColumnName("ssn")
+                    .HasColumnType("numeric");
+
+                entity.HasOne(d => d.EmailNavigation)
+                    .WithMany(p => p.Info)
+                    .HasForeignKey(d => d.Email)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("info_users_fk");
+            });
+
             modelBuilder.Entity<TxLi>(entity =>
             {
                 entity.HasKey(e => new { e.TxId, e.TrrId })
@@ -3778,16 +3871,18 @@ namespace csc424_se2_organApp.Models
                 entity.HasKey(e => e.Email)
                     .HasName("users_pkey");
 
-                entity.ToTable("users", "login");
+                entity.ToTable("users", "users");
 
                 entity.Property(e => e.Email)
                     .HasColumnName("email")
                     .HasColumnType("character varying(32)")
                     .ValueGeneratedNever();
 
-                entity.Property(e => e.Id).HasColumnName("id");
-
                 entity.Property(e => e.Password).HasColumnName("password");
+
+                entity.Property(e => e.Role)
+                    .HasColumnName("role")
+                    .HasColumnType("character varying(16)");
             });
         }
     }

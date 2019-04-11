@@ -1,0 +1,15 @@
+CAN_ANASTOMOSIS,num,3,,Was anastomosis initiated?,tx
+CAN_SOURCE,char,1,,Source of Candidate Data: A =Active Waitlist,R= Removed from Waitlist,L=Live Don Organ Recipient never on waitlist,tx
+CAN_TRR_EXISTS,num,8,,TRR found for this PX_ID-org_ty,tx
+CAN_TX_COUNTRY,num,8,CTRYID,Country of transplant, if outside the US,tx
+DONOR_ID,num,8,,Encrypted Unique Donor ID (all donors) - foreign key,tx
+DON_TY,char,3,,Donor Type (C-deceased, L-living),tx
+ORG_AR,char,3,,Organ type with pancreas expanded to PTA and PAK,tx
+PERS_NEXTTX,num,8,MMDDYY,Transplant Date,tx
+PERS_NEXTTX_TRR_ID,num,8,,Unique identifier for TRR - unique key,tx
+PERS_OPTN_DEATH_DT,num,8,MMDDYY,OPTN Death date by unique person,tx
+PERS_RESTRICT_DEATH_DT,num,8,MMDDYY,Restricted death date,tx
+PERS_RESTRICT_DEATH_VRFY,char,1,$DTHVRFY,Restricted death verification level,tx
+PERS_SSA_DEATH_DT,num,8,MMDDYY,Death date determined from SSA database,tx
+REC_TX_DT,num,8,MMDDYY,Transplant Date,tx
+REC_TX_PROCEDURE_TY,num,8,TXPROC,Transplant Procedure Type,tx

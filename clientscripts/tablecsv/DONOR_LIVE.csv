@@ -1,0 +1,225 @@
+﻿DONOR_ID,num,8,,Encrypted Unique Donor ID (all donors) - foreign key
+DON_A1,num,8,ALOCUS,Donor/s HLA - A (1) antigen
+DON_A2,num,8,ALOCUS,Donor/s HLA - A (2) antigen
+DON_ABO,char,3,$ABO,Donor/s Blood Type
+DON_AGE,num,8,,Calculated Donor Age in Years at Organ Recovery or Referral Date
+DON_AGE_IN_MONTHS,num,8,,Donor/s Age in Months
+DON_ALBUMIN_POSTOP,num,8,,Serum Albumin:
+DON_ALBUMIN_PREOP,num,8,,Serum Albumin:
+DON_ALKPHOS_POSTOP,num,8,,Alkaline Phosphatase:
+DON_ALKPHOS_PREOP,num,8,,Alkaline Phosphatase:
+DON_ANASTH_COMPL,char,50,,Anesthetic Complication Specify:
+DON_ARRHYTHM,num,8,ARYTHM,Arrhythmia requiring therapy:
+DON_B1,num,8,BLOCUS,Donor/s HLA - B (1) antigen
+DON_B2,num,8,BLOCUS,Donor/s HLA - B (2) antigen
+DON_BILI_POSTOP,num,8,,Total Bilirubin:
+DON_BILI_PREOP,num,8,,Total Bilirubin:
+DON_BP_DISCHRG_DIAST,num,8,,At Discharge Diastolic
+DON_BP_DISCHRG_SYST,num,8,,At Discharge Systolic
+DON_BP_POSTOP_DIAST,num,8,,Post-Op Blood Pressure Diastolic:
+DON_BP_POSTOP_SYST,num,8,,Post-Op Blood Pressure Systolic:
+DON_BP_PREOP_DIAST,num,8,,Preoperative Diastolic
+DON_BP_PREOP_SYST,num,8,,Preoperative Systolic
+DON_BW4,num,8,WKGRPHLA,Donor/s HLA - Bw4 locus
+DON_BW6,num,8,WKGRPHLA,Donor/s HLA - Bw6 locus
+DON_C1,num,8,CWHLA,Donor/s HLA - Cw (1) locus
+DON_C2,num,8,CWHLA,Donor/s HLA - Cw (2) locus
+DON_CANCER_FREE_INTERVAL,num,3,,Cancer Free Interval:
+DON_CITIZENSHIP,num,8,CTZNLDTC,Donor/s Citizenship
+DON_CMV,char,2,,{CMV pre-UNet data}//CMV:
+DON_CMV_CLINICAL,char,2,,CMV//Was there clinical disease:
+DON_CMV_CULT,char,2,,CMV//Culture:
+DON_CMV_IGG,char,2,$SRLSTT,CMV IgG
+DON_CMV_IGM,char,2,$SRLSTT,CMV IgM
+DON_CMV_NUCLEIC,char,2,,CMV//Nucleic Acid Testing:
+DON_CMV_TESTED,char,1,,( pre Unet CMV value )
+DON_DIAB,char,1,,Diabetes:
+DON_DIAB_TREAT,num,8,DIABTRET,Diabetes Treatment//Treatment:
+DON_DONATION,char,1,,Secondary source of payment: Donation
+DON_DP1,num,8,DPHLA,Donor/s HLA - DPw (1) locus
+DON_DP2,num,8,DPHLA,Donor/s HLA - DPw (2) locus
+DON_DQ1,num,8,DQHLA,Donor/s HLA - DQ (1) locus
+DON_DQ2,num,8,DQHLA,Donor/s HLA - DQ (2) locus
+DON_DR1,num,8,DRLOCUS,Donor/s HLA - DR (1) antigen
+DON_DR2,num,8,DRLOCUS,Donor/s HLA - DR (2) antigen
+DON_DR51,num,8,WKGRPHLA,Donor/s HLA - DR51 locus
+DON_DR52,num,8,WKGRPHLA,Donor/s HLA - DR52 locus
+DON_DR53,num,8,WKGRPHLA,Donor/s HLA - DR53 locus
+DON_DURATION_ABSTINENCE,num,8,CGDURABS,Duration of Abstinence:
+DON_EBV_CLINICAL,char,2,,EBV//Was there clinical disease:
+DON_EBV_DNA,char,2,,EBV//EBV DNA:
+DON_EBV_IGG,char,2,,EBV//IgG:
+DON_EBV_IGM,char,2,,EBV//IgM:
+DON_EBV_TESTED,char,1,,EBV
+DON_EDUCATION,num,8,EDLEVEL,Highest Education Level
+DON_ETHNICITY_SRTR,char,10,$ETHSR,SRTR Donor Ethnicity
+DON_FEF_AFTER_PREOP,num,8,,FEF (25-75%) % predicted after//FEF (25-75%) % predicted:
+DON_FEF_BEFORE_PREOP,num,8,,FEF (25-75%) % predicted before//FEF (25-75%) % predicted:
+DON_FEV1_AFTER_PREOP,num,8,,FEV1 % predicted after//FEV1 % predicted:
+DON_FEV1_BEFORE_PREOP,num,8,,FEV1 % predicted before//FEV1 % predicted:
+DON_FFP_UNITS,num,8,,"FF Units//If Yes, Number of Units:"
+DON_FREE,char,1,,Secondary source of payment: Free
+DON_FUNCTN_STAT,num,8,FUNCSTAT,Functional Status:
+DON_FVC_AFTER_PREOP,num,8,,FVC % predicted after//FVC % predicted:
+DON_FVC_BEFORE_PREOP,num,8,,FVC % predicted before//FVC % predicted:
+DON_GENDER,char,1,,Donor/s Gender
+DON_HAPLO_TY_MATCH,num,8,HAPLOTY,Haplotype Match Between Live Donor & Recipient
+DON_HBV_ANTIBODY,char,2,,HBV//Core Antibody:
+DON_HBV_CLINICAL,char,2,,HBV//Was there clinical disease:
+DON_HBV_DNA,char,2,,HBV//HBV DNA:
+DON_HBV_HDV,char,2,,HBV//HDV (Delta Virus):
+DON_HBV_LI_HISTOLOGY,char,2,,HBV//Liver Histology:
+DON_HBV_SURF_ANTIGEN,char,2,,HBV//Surface Antigen:
+DON_HBV_TESTED,char,1,,HBV
+DON_HCV_ANTIBODY,char,2,,HCV//Antibody:
+DON_HCV_CLINICAL,char,2,,HCV//Was there clinical disease:
+DON_HCV_LI_HISTOLOGY,char,2,,HCV//Liver Histology:
+DON_HCV_RIBA,char,2,,HCV//RIBA:
+DON_HCV_RNA,char,2,,HCV//HCV RNA:
+DON_HCV_TESTED,char,1,,HCV
+DON_HEALTH_INSUR,char,1,,Did the donor have health insurance:
+DON_HGT_CM,num,8,,Height:
+DON_HIST_CANCER,num,8,HSTSTST,History of Cancer:
+DON_HIST_CIGARETTE,char,1,,History of Cigarette Use:
+DON_HIST_HYPERTEN,num,8,HSTHYPDR,History of Hypertension:
+DON_HIV_ANTIBODY,char,2,,HIV//Antibody:
+DON_HIV_CLINICAL,char,2,,"HIV//Was there clinical disease (ARC, AIDS):"
+DON_HIV_CONFIRM,char,2,,HIV: Confirmation//Confirmation:
+DON_HIV_RNA,char,2,,HIV//RNA:
+DON_HIV_SCREEN,char,2,,HIV: Screening//Screening:
+DON_HIV_TESTED,char,1,,HIV
+DON_HLA_TYP,char,1,,Was Donor HLA Typed
+DON_HLA_TYP_NOT_DONE,num,3,,HLA Typing not done for donor
+DON_HMO_PPO,char,1,,Secondary source of payment: HMO/PPO
+DON_HOME_STATE,char,2,$STATE,Donor/s Home State
+DON_HYPERTEN_DIET,char,1,,History of Hypertension Diet//Diet:
+DON_HYPERTEN_DIURETICS,char,1,,History of Hypertension Diuretics//Diuretics:
+DON_HYPERTEN_OTHER_MEDS,char,1,,History of Hypertension Other Hypertensive Medication//Other Hypertensive Medication:
+DON_HYPERTEN_POSTOP,char,1,,Donor Developed Hypertension Requiring Medication:
+DON_INIT_DISCHRG_DT,num,8,MMDDYY,Date of Initial Discharge:
+DON_INR_POSTOP,num,8,,INR:
+DON_INR_PREOP,num,8,,INR:
+DON_INTRAOP_COMPL,char,1,,Intra-operative Complications:
+DON_INTRAOP_COMPL_REASON,num,8,COMPITRP,"Intra-operative Complications Specify//If Yes, Specify:"
+DON_KI_BIOPSY,char,1,,Kidney Biopsy:
+DON_KI_CREAT_DISCHRG,num,8,,Kidney Creatinine At Discharge
+DON_KI_CREAT_POSTOP,num,8,,Kidney Serum Creatinine//Serum Creatinine:
+DON_KI_CREAT_PREOP,num,8,,Kidney Preoperative Creatinine
+DON_KI_OTHER_COMPL,char,1,,Kidney Other Complications Requiring Intervention//Other Complications Requiring Intervention:
+DON_KI_OTHER_COMPL_INTERVENTION,num,8,COMPOTHR,"Kidney Other Complications//If Yes, Specify:"
+DON_KI_OTHER_INTERVENTION,char,1,,Kidney Other Interventional Procedures//Other Interventional Procedures:
+DON_KI_OTHER_INTERVENTION_DT,num,8,MMDDYY,Kidney Other Interventional Procedures Date//Date of Procedure:
+DON_KI_PCT_GS,num,8,KGLMR,Glomerulosclerosis:
+DON_KI_PROCEDURE_CONVERT,char,1,,Conversion from Laparoscopic to Open:
+DON_KI_PROCEDURE_TY,num,8,KIPROCTY,Kidney Procedure Type
+DON_KI_READMIT,char,1,,Kidney Readmission//Any Readmission After Initial Discharge:
+DON_KI_READMIT_DT,num,8,MMDDYY,"Kidney Readmission Date//If Yes, Date of First Readmission:"
+DON_KI_READMIT_REASON,num,8,READMT,"Kidney Readmission Reason//If yes, specify reason for readmission (during first six weeks):"
+DON_KI_REOP,char,1,,Kidney Reoperation//Reoperation:
+DON_KI_REOP_BLEEN,num,3,,Kidney Reoperation Bleeding//Bleeding
+DON_KI_REOP_BLEEN_DT,num,8,MMDDYY,Kidney Reoperation Bleeding Date//Date:
+DON_KI_REOP_BOWEL,num,3,,Kidney Reoperation Bowel Obstruction//Bowel Obstruction
+DON_KI_REOP_BOWEL_DT,num,8,MMDDYY,Kidney Reoperation Bowel Obstruction Date//Date:
+DON_KI_REOP_HERNIA,num,3,,Kidney Reoperation Hernia Repair//Hernia Repair
+DON_KI_REOP_HERNIA_DT,num,8,MMDDYY,Kidney Reoperation Hernia Repair Date//Date:
+DON_KI_REOP_OTHER,num,3,,Kidney Reoperation Other//Other Specify
+DON_KI_REOP_OTHER_DT,num,8,MMDDYY,Kidney Reoperation Other Date//Date:
+DON_KI_REOP_VASC,num,3,,Kidney Reoperation Vascular//Vascular
+DON_KI_REOP_VASC_DT,num,8,MMDDYY,Kidney Reoperation Vascular Date//Date:
+DON_KI_VASC_COMPL,char,1,,Kidney Vascular Complications Requiring Intervention//Vascular Complications Requiring Intervention:
+DON_KI_VASC_COMPL_INTERVENTION,num,8,VSCOMPKI,"Kidney Vascular Complications//If Yes, Specify:"
+DON_LENGTH_HOSP_STAY,num,8,,Length of Hospital Stay
+DON_LIVING_DON_COD,num,8,LVDNCD,Donor/s Cause of Death
+DON_LI_BILIARY_COMPL,char,1,,Biliary Complications:
+DON_LI_BILIARY_COMPL_GRADE,num,8,BILICOMP,"Biliary Complications//If Yes, Specify:"
+DON_LI_BIOPSY,char,1,,Liver Biopsy:
+DON_LI_BIOPSY_MACRO_FAT,num,8,,% Macro vesicular fat:
+DON_LI_BIOPSY_MICRO_FAT,num,8,,% Micro vesicular fat:
+DON_LI_CREAT_POSTOP,num,8,,Serum Creatinine:
+DON_LI_CREAT_PREOP,num,8,,Serum Creatinine:
+DON_LI_OTHER_COMPL,char,1,,Liver Other Complications Requiring Intervention//Other Complications Requiring Intervention:
+DON_LI_OTHER_COMPL_INTERVENTION,num,8,COMPOTHR,"Liver Other Complications//If Yes, Specify:"
+DON_LI_OTHER_INTERVENTION,char,1,,Liver Other Interventional Procedures//Other Interventional Procedures:
+DON_LI_OTHER_INTERVENTION_DT,num,8,MMDDYY,Liver Other Interventional Procedures Date//Date of Procedure:
+DON_LI_PROCEDURE_TY,num,8,LIPROCLD,Type of Transplant Graft:
+DON_LI_READMIT,char,1,,Liver Readmission//Any Readmission After Initial Discharge:
+DON_LI_READMIT_DT,num,8,MMDDYY,"Liver Readmission Date//If Yes, Date of First Readmission:"
+DON_LI_READMIT_REASON,num,8,READMTLI,"Liver Readmission Reason//If yes, specify reason for readmission (during first six weeks):"
+DON_LI_REOP,char,1,,Liver Reoperation//Reoperation:
+DON_LI_REOP_BILIARY,num,3,,Liver Reoperation Biliary//Biliary
+DON_LI_REOP_BILIARY_DT,num,8,MMDDYY,Liver Reoperation Biliary Date//Date:
+DON_LI_REOP_BLEED,num,3,,Liver Reoperation Bleeding Complications//Bleeding Complications
+DON_LI_REOP_BLEED_DT,num,8,MMDDYY,Liver Reoperation Bleeding Date//Date:
+DON_LI_REOP_BOWEL,num,3,,Liver Reoperation Bowel Obstruction//Bowel Obstruction
+DON_LI_REOP_BOWEL_DT,num,8,MMDDYY,Liver Reoperation Bowel Obstruction Date//Date:
+DON_LI_REOP_FAIL,num,3,,Liver Reoperation Liver Failure///Liver Failure Requiring Transplant
+DON_LI_REOP_FAIL_DT,num,8,MMDDYY,Liver Reoperation Liver Failure Date//Date:
+DON_LI_REOP_HERNIA,num,3,,Liver Reoperation Hernia Repair//Hernia Repair
+DON_LI_REOP_HERNIA_DT,num,8,MMDDYY,Liver Reoperation Hernia Repair Date//Date:
+DON_LI_REOP_OTHER,num,3,,Liver Reoperation Other//Other Specify
+DON_LI_REOP_OTHER_DT,num,8,MMDDYY,Liver Reoperation Other Date//Date:
+DON_LI_REOP_VASC,num,3,,Liver Reoperation Vascular Complications//Vascular Complications
+DON_LI_REOP_VASC_DT,num,8,MMDDYY,Liver Reoperation Vascular Date//Date:
+DON_LI_VASC_COMPL,char,1,,Liver Vascular Complications Requiring Intervention//Vascular Complications Requiring Intervention:
+DON_LI_VASC_COMPL_INTERVENTION,num,8,VSCOMPLI,"Liver Vascular Complications//If Yes, Specify:"
+DON_LU_ARRHYTHM,num,8,ARYTHMPO,Arrhythmia requiring therapy:
+DON_LU_CAPACITY_PREOP,num,8,,Diffusing lung capacity corrected for alveolar volume % predicted:
+DON_LU_COMPL,char,1,,Post-operative complications during the initial hospitalization:
+DON_LU_COMPL_REASON,num,8,COMPLU,"Post-operative Complications//If Yes, Specify:"
+DON_LU_PROCEDURE_CONVERT,char,1,,Conversion from Thoracoscopic to Open:
+DON_LU_PROCEDURE_TY,num,8,LUPROCLD,Lung//Procedure Type:
+DON_LU_READMIT,char,1,,Lung Readmission//Any Readmission After Initial Discharge:
+DON_LU_READMIT_DT,num,8,MMDDYY,"Lung Readmission Date//If Yes, Date of First Readmission:"
+DON_LU_READMIT_REASON,num,8,READMT,"Lung Readmission Reason//If yes, specify reason for readmission (during first six weeks):"
+DON_LU_THORAC_TUBES,num,8,THORTUBE,"Placement of Additional Thoracostomy Tube(s), Indication:"
+DON_MARITAL_STAT,num,8,MRTLSTAT,Marital Status at Time of Donation:
+DON_MEDICAID,char,1,,Secondary source of payment: Medicaid
+DON_MEDICARE,char,1,,Secondary source of payment: Medicare
+DON_NON_AUTO_BLOOD,char,1,,Non-Autologous Blood Administration:
+DON_OPO_RUN_MATCH,num,3,,"For Living Donors, can OPO run a match on this donor?"
+DON_ORG1,char,4,$DNORGLV,Organ Recovered(1)
+DON_ORG2,char,4,$DNORGLV,Organ Recovered(2)
+DON_OTHER_GOVT,char,1,,Secondary source of payment: US/State Government Agency
+DON_OTHER_TOBACCO_USE,char,1,,Other Tobacco Used:
+DON_PACK_YEARS,num,8,CGPKYRS,"History of Cigarette Use Pack Years//If Yes, Check # pack years:"
+DON_PAO2_PREOP,num,8,,PaO2 on room air:
+DON_PHYSC_CAPACITY,num,8,PHYSCPLD,Physical Capacity: (check one)
+DON_PLT_UNITS,num,8,,"Platelets Units//If Yes, Number of Units:"
+DON_POSTOP_TEST_DT,num,8,MMDDYY,Most Recent Date of Tests:
+DON_PRBC_UNITS,num,8,,"PRBC Units//If Yes, Number of Units:"
+DON_PRIMARY_PAY,num,8,PRMSRCPY,Primary Source of Payment
+DON_PRIV_INSUR,char,1,,Secondary source of payment: Private Insurance
+DON_RACE,num,8,RACE,Donor/s race
+DON_RACE_SRTR,char,10,$RACEBSR,SRTR Donor Race
+DON_RECOV_DT,num,8,MMDDYY,Recovery Date (donor to OR)
+DON_RECOV_TX_SAME_CTR,char,1,,Did organ recovery and transplant occur at the same center
+DON_RELATIONSHIP_TY,num,8,LVDNRL,Living Donor/s Relationship to Recipient
+DON_SACRIFICE_LOBE,num,8,SACRFLOB,"Sacrifice of Second Lobe, Specify:"
+DON_SELF,char,1,,Secondary source of payment: Self
+DON_SGOT_POSTOP,num,8,,SGOT/AST:
+DON_SGOT_PREOP,num,8,,SGOT/AST:
+DON_SGPT_POSTOP,num,8,,SGPT/ALT:
+DON_SGPT_PREOP,num,8,,SGPT/ALT:
+DON_STAT,char,1,$PXSTTDN,Donor Status
+DON_STAT_DT,num,8,MMDDYY,Donor Status Date
+DON_TARGET_SOURCE1,num,8,TGTCLSRM,Target Source for Class I:
+DON_TARGET_SOURCE2,num,8,TGTCLSRM,Target Source for Class II:
+DON_TLC_AFTER_PREOP,num,8,,TLC % predicted after//TLC % predicted:
+DON_TLC_BEFORE_PREOP,num,8,,TLC % predicted before//TLC % predicted:
+DON_TY,char,3,,"Donor Type (C-deceased, L-living)"
+DON_TYP_METHCLASS1,num,8,HLATYMTM,Donor/s HLA - Typing Method Class I
+DON_TYP_METHCLASS1_DT,num,8,MMDDYY,Date Typing Complete Class I:
+DON_TYP_METHCLASS2,num,8,HLATYMTM,Donor/s HLA - Typing Method Class II
+DON_TYP_METHCLASS2_DT,num,8,MMDDYY,Date Typing Complete Class II:
+DON_URINE_POSTOP_PROTEIN,num,8,,Post-Operative Urinalysis//Urine Protein:
+DON_URINE_POSTOP_RATIO,num,8,,Post-Operative Urinalysis//Protein-Creatinine Ratio:
+DON_URINE_PREOP_PROTEIN,num,8,,Preoperative Urinalysis//Urine Protein:
+DON_URINE_PREOP_RATIO,num,8,,Preoperative Urinalysis//Protein-Creatinine Ratio:
+DON_VIRUSES_TESTED,char,1,,"Viral Detection://Have any of the following viruses ever been tested for: HIV, CMV, HBV, HCV, EBV"
+DON_WGT_KG,num,8,,Weight:
+DON_WORK_INCOME,char,1,,Working for Income:
+DON_WORK_NO_STAT,num,8,NOTWRKLD,"Working for Income//If No, Not Working Due To: (check one)"
+DON_WORK_YES_STAT,num,8,WRKNCMLD,Working for Income//If Yes:
+DON_YEAR_ENTRY_US,num,8,MMDDYY,Year of Entry into U.S.:
+PERS_ID,num,8,,Unique person ID to replace SSN
+PERS_SSA_DEATH_DT,num,8,MMDDYY,Death date determined from SSA database

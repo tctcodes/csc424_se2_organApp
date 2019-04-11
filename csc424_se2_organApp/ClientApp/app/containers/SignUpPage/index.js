@@ -71,6 +71,7 @@ export class SignUpPage extends React.Component {
           <title>Sign Up Page</title>
           <meta name="description" content="Description of SignUpPage" />
         </Helmet>
+        <h1 style={{textAlign: 'center'}}>Sign Up Page</h1>
         <Form style={{ margin: "3rem" }}>
           <Form.Group controlId="formBasicEmail">
             <Form.Label style={{ fontFamily: "sans-serif" }}>

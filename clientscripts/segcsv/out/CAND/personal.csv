@@ -1,0 +1,18 @@
+CAN_ACADEMIC_LEVEL,num,8,ACDMACTV,Academic Activity Level:,personal
+CAN_ACADEMIC_PROGRESS,num,8,ACDMPRG,Academic Progress:,personal
+CAN_CITIZENSHIP,num,8,CTZNLDTC,Patient/s Citizenship,personal
+CAN_EDUCATION,num,8,EDLEVEL,Patient/s Educational Status,personal
+CAN_EMPL_STAT,num,8,EMPLSTAT,Patient/s Employment Status - Pre-6/30/2004,personal
+CAN_ETHNICITY_SRTR,char,10,$ETHSR,SRTR Patient Ethnicity,personal
+CAN_GENDER,char,1,,Patient/s Gender,personal
+CAN_PERM_STATE,char,2,$STATE,Patient/s Permanent State,personal
+CAN_PRIMARY_PAY,num,8,PRMSRCPY,Source of Payment//Primary:,personal
+CAN_RACE,num,8,RACE,Patient/s Race,personal
+CAN_RACE_SRTR,char,10,$RACEBSR,SRTR Patient Race,personal
+CAN_SECONDARY_PAY,num,8,SNDSRCPY,Source of Payment//Secondary:,personal
+CAN_WORK_INCOME,char,1,,Working for income:,personal
+CAN_WORK_NO_STAT,num,8,NOTWRK,Working for income//If No, Not Working Due To:,personal
+CAN_WORK_YES_STAT,num,8,WRKNCM,Working for income//If Yes:,personal
+CAN_YEAR_ENTRY_US,num,8,,Year of Entry to the U.S.,personal
+PERS_ID,num,8,,Unique Person ID for Recipient,personal
+PX_ID,num,8,,Patient Identifier,personal

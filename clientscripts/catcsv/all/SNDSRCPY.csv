@@ -1,0 +1,12 @@
+1,1: Private insurance
+2,2: Public insurance - Medicaid
+3,3: Public insurance - Medicare FFS (Fee for Service)
+4,4: Public insurance - Medicare & Choice
+5,5: Public insurance - CHIP (Children's Health Insurance Program)
+6,6: Public insurance - Other government
+7,7: Self
+8,8: Donation
+9,9: Free Care
+10,10: None
+11,11: Public insurance - Medicare Unspecified
+12,12: US/State Govt Agency
