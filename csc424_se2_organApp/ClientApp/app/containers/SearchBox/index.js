@@ -16,8 +16,8 @@ import {
   Dropdown,
   Navbar,
 } from "react-bootstrap";
-import { setPID, submitSearch } from './actions';
-import { makeSelectPID } from './selectors';
+import { setPXID, submitSearch } from './actions';
+import { makeSelectPXID } from './selectors';
 
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
@@ -60,7 +60,7 @@ export class SearchBox extends React.Component {
                 <Form.Control
                   type="text"
                   placeholder="Patient ID"
-                  onChange={this.props.onSetPID}
+                  onChange={this.props.onSetPXID}
                 />
               </Form.Group>
             </Form>
@@ -119,18 +119,18 @@ export class SearchBox extends React.Component {
 }
 
 SearchBox.propTypes = {
-  pid: PropTypes.string,
-  onSetPID: PropTypes.func,
+  pxid: PropTypes.string,
+  onSetPXID: PropTypes.func,
   onSearchSubmit: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
-  pid: makeSelectPID(),
+  pid: makeSelectPXID(),
 });
 
 function mapDispatchToProps(dispatch) {
   return {
-    onSetPID: evt => dispatch(setPID(evt.target.value)),
+    onSetPXID: evt => dispatch(setPXID(evt.target.value)),
     onSearchSubmit: () => dispatch(submitSearch()),
   };
 }

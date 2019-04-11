@@ -6,7 +6,7 @@
 
 import {
   SET_TOKEN,
-  SET_PID,
+  SET_PXID,
   SET_US_STATE,
   SET_BLOOD_GROUP,
   SET_DONOR_OR_CANDIDATE,
@@ -21,10 +21,10 @@ export function setToken(token) {
   };
 }
 
-export function setPID(pid) {
+export function setPXID(pxid) {
   return {
-    type: SET_PID,
-    pid,
+    type: SET_PXID,
+    pxid,
   };
 }
 

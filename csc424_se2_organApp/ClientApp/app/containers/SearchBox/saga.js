@@ -1,13 +1,13 @@
 const axios = require('axios');
 import { takeLatest, call, put, select } from 'redux-saga/effects';
-import { makeSelectPID } from './selectors';
+import { makeSelectPXID } from './selectors';
 import { setSearchResults } from './actions';
 import { SUBMIT_SEARCH } from './constants';
 
-export function* searchPID() {
-  console.log('inside searchPID saga');
+export function* searchPXID() {
+  console.log('inside searchPXID saga');
   const url = 'http://localhost:5000/api/Cand/SearchRecordPxIdFirstX'
-  const PxId = yield select(makeSelectPID());
+  const PxId = yield select(makeSelectPXID());
 
   const body = {
     PxId,
@@ -34,6 +34,6 @@ export function* searchPID() {
 
 // Individual exports for testing
 export default function* searchBoxSaga() {
-  yield takeLatest(SUBMIT_SEARCH, searchPID);
+  yield takeLatest(SUBMIT_SEARCH, searchPXID);
   // See example in containers/HomePage/saga.js
 }

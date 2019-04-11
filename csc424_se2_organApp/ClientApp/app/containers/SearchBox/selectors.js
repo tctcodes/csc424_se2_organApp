@@ -19,8 +19,8 @@ const selectSearchBoxDomain = state => state.get("searchBox", initialState);
 const makeSelectToken = () =>
   createSelector(selectSearchBoxDomain, substate => substate.get('token'));
 
-const makeSelectPID = () =>
-  createSelector(selectSearchBoxDomain, substate => substate.get('pid'));
+const makeSelectPXID = () =>
+  createSelector(selectSearchBoxDomain, substate => substate.get('pxid'));
 
 const makeSelectUSState = () =>
   createSelector(selectSearchBoxDomain, substate => substate.get('usState'));
@@ -35,7 +35,7 @@ const makeSelectSearchResults = () =>
 export {
   selectSearchBoxDomain,
   makeSelectToken,
-  makeSelectPID,
+  makeSelectPXID,
   makeSelectUSState,
   makeSelectDonorOrCandidate,
   makeSelectSearchResults,
