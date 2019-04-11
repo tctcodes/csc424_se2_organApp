@@ -10,14 +10,14 @@ namespace csc424_se2_organApp.Controllers
     [ApiController]
     public class CandController : Controller{
 
-       
+
         private readonly organ_appContext context;
-    
-        public CandController(organ_appContext _context)         
-        {             
-            context = _context;       
+
+        public CandController(organ_appContext _context)
+        {
+            context = _context;
         }
-        
+
         [HttpPost]
         public JsonResult GetRecordPersId([FromBody]dynamic record){
             Console.WriteLine(record);
@@ -30,7 +30,7 @@ namespace csc424_se2_organApp.Controllers
             }
             Response.StatusCode = 201;
             return Json(data: isInDb);
-        
+
         }
         [HttpPost]
         public JsonResult GetRecordPxId([FromBody]dynamic record){
@@ -44,7 +44,7 @@ namespace csc424_se2_organApp.Controllers
             }
             Response.StatusCode = 201;
             return Json(data: isInDb);
-        
+
         }
         [HttpPost]
         public JsonResult GetRecordByState([FromBody]dynamic record){
@@ -60,12 +60,12 @@ namespace csc424_se2_organApp.Controllers
             Console.WriteLine(query.Count);
             Response.StatusCode = 201;
             return Json(query);
-            
+
         }
         [HttpPost]
         public JsonResult GetRecordByBloodType([FromBody]dynamic record){
             string type = record.bloodType;
-            var query = (from c in context.CandLiin 
+            var query = (from c in context.CandLiin
                         where c.CanAbo == type
                         select c).ToList();
             if(query.Count == 0){
@@ -75,7 +75,7 @@ namespace csc424_se2_organApp.Controllers
             Console.WriteLine(query.Count);
             Response.StatusCode = 201;
             return Json(query);
-            
+
         }
         [HttpPost]
         public JsonResult SearchRecordPersIdFirstX([FromBody]dynamic record){
@@ -84,10 +84,10 @@ namespace csc424_se2_organApp.Controllers
             int num = record.number;
             var isInDb = (from c in context.CandLiin
                         where c.PersId.ToString().Contains(id)
-                        select c.PersId).Take(num); 
+                        select c.PersId).Take(num);
             Response.StatusCode = 201;
             return Json(data: isInDb);
-        
+
         }
         [HttpPost]
         public JsonResult SearchRecordPxIdFirstX([FromBody]dynamic record){
@@ -96,10 +96,10 @@ namespace csc424_se2_organApp.Controllers
             int num = record.number;
             var isInDb = (from c in context.CandLiin
                         where c.PxId.ToString().Contains(id)
-                        select c.PxId).Take(num); 
+                        select c.PxId).Take(num);
             Response.StatusCode = 201;
             return Json(data: isInDb);
-        
+
         }
         [HttpPost]
         public JsonResult SearchRecordPersId([FromBody]dynamic record){
@@ -107,10 +107,10 @@ namespace csc424_se2_organApp.Controllers
             string id = record.PersId;
             var isInDb = (from c in context.CandLiin
                         where c.PersId.ToString().Contains(id)
-                        select c.PersId); 
+                        select c.PersId);
             Response.StatusCode = 201;
             return Json(data: isInDb);
-        
+
         }
         [HttpPost]
         public JsonResult SearchRecordPxId([FromBody]dynamic record){
@@ -118,12 +118,10 @@ namespace csc424_se2_organApp.Controllers
             string id = record.PxId;
             var isInDb = (from c in context.CandLiin
                         where c.PxId.ToString().Contains(id)
-                        select c.PxId); 
+                        select c.PxId);
             Response.StatusCode = 201;
             return Json(data: isInDb);
-        
+
         }
     }
-    
-
 }

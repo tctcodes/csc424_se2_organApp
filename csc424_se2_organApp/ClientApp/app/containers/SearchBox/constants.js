@@ -10,3 +10,5 @@ export const SET_PID = 'SET_PID';
 export const SET_US_STATE = 'SET_US_STATE';
 export const SET_BLOOD_GROUP = 'SET_BLOOD_GROUP';
 export const SET_DONOR_OR_CANDIDATE = 'SET_DONOR_OR_CANDIDATE';
+export const SET_SEARCH_RESULTS = 'SET_SEARCH_RESULTS';
+export const SUBMIT_SEARCH = 'SUBMIT_SEARCH';

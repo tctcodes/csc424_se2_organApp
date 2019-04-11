@@ -11,6 +11,7 @@ import {
   SET_US_STATE,
   SET_BLOOD_GROUP,
   SET_DONOR_OR_CANDIDATE,
+  SET_SEARCH_RESULTS,
 } from "./constants";
 
 export const initialState = fromJS({
@@ -19,6 +20,7 @@ export const initialState = fromJS({
   bloodGroup: '',
   usState: '',
   donorOrCandidate: '',
+  searchResults: '',
 });
 
 function searchBoxReducer(state = initialState, action) {
@@ -28,13 +30,13 @@ function searchBoxReducer(state = initialState, action) {
     case SET_PID:
       return state.set('pid', action.pid);
     case SET_US_STATE:
-      return state.set('usState');
+      return state.set('usState', action.usState);
     case SET_BLOOD_GROUP:
-      return state.set('bloodGroup');
+      return state.set('bloodGroup', action.bloodGroup);
     case SET_DONOR_OR_CANDIDATE:
-      return state.set('donorOrCandidate', () => {
-        console.log(state);
-      });
+      return state.set('donorOrCandidate', action.donorOrCandidate);
+    case SET_SEARCH_RESULTS:
+      return state.set('searchResults', action.searchResults);
     default:
       return state;
   }

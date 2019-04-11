@@ -10,6 +10,8 @@ import {
   SET_US_STATE,
   SET_BLOOD_GROUP,
   SET_DONOR_OR_CANDIDATE,
+  SET_SEARCH_RESULTS,
+  SUBMIT_SEARCH,
 } from "./constants";
 
 export function setToken(token) {
@@ -44,5 +46,19 @@ export function setDonorOrCandidate(donorOrCandidate) {
   return {
     type: SET_DONOR_OR_CANDIDATE,
     donorOrCandidate,
+  };
+}
+
+export function setSearchResults(searchResults) {
+  return {
+    type: SET_SEARCH_RESULTS,
+    searchResults,
+  };
+}
+
+export function submitSearch() {
+  console.log('SUBMITTING SEARCH!');
+  return {
+    type: SUBMIT_SEARCH,
   };
 }

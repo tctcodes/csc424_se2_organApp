@@ -14,13 +14,9 @@ import {
   Form,
   Button,
   Dropdown,
-  ButtonGroup,
-  ToggleButton,
-  FormGroup,
-  DropdownMenu,
   Navbar,
 } from "react-bootstrap";
-import { setPID } from './actions';
+import { setPID, submitSearch } from './actions';
 import { makeSelectPID } from './selectors';
 
 import injectSaga from "utils/injectSaga";
@@ -48,23 +44,6 @@ const US_STATE = [
 
 /* eslint-disable react/prefer-stateless-function */
 export class SearchBox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
-    this.handlePIDChange = this.handlePIDChange.bind(this);
-  }
-
-  handleSearchSubmit() {
-    console.log('Clicked Search button!');
-    console.log(this.props.pid);
-  }
-
-  handlePIDChange(e) {
-    e.preventDefault();
-    console.log('Something Changed!');
-    console.log(e.target.value);
-    this.props.setPID(e.target.value);
-  }
 
   render() {
     return (
@@ -124,7 +103,7 @@ export class SearchBox extends React.Component {
             <Button
               variant="primary"
               type="button"
-              onClick = {this.handleSearchSubmit}
+              onClick = {this.props.onSearchSubmit}
             >
               Search
             </Button>
@@ -142,6 +121,7 @@ export class SearchBox extends React.Component {
 SearchBox.propTypes = {
   pid: PropTypes.string,
   onSetPID: PropTypes.func,
+  onSearchSubmit: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
@@ -151,6 +131,7 @@ const mapStateToProps = createStructuredSelector({
 function mapDispatchToProps(dispatch) {
   return {
     onSetPID: evt => dispatch(setPID(evt.target.value)),
+    onSearchSubmit: () => dispatch(submitSearch()),
   };
 }
 

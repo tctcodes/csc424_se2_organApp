@@ -61,7 +61,7 @@ const AdminMessage = () => <h1 style={{ textAlign: 'center' }}>If you are seeing
 const Nurse = () => (
   <Route render= { () => (
     checkAuth().role == "Nurse" || checkAuth().role == "Admin"
-      ? <NurseMessage></NurseMessage> 
+      ? <NurseMessage></NurseMessage>
       : <Unauthorized></Unauthorized>
   )} />
 )
@@ -83,15 +83,6 @@ const Admin = () => (
 
 export default function App() {
   return <div>
-<<<<<<< HEAD
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/signup" component={SignUpPage} />
-        <Route path="/login" component={LoginPage} />
-        <Route path="/searchbox" component={SearchBox} />
-        <Route component={NotFoundPage} />
-      </Switch>
-=======
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={HomePage} />
@@ -101,12 +92,11 @@ export default function App() {
           <PrivateRoute path="/nurse" component={Nurse} />
           <PrivateRoute path="/physician" component={Physician} />
           <PrivateRoute path="/admin" component={Admin} />
-         <Route path="/canform" component={CanForm}/>
-
+          <Route path="/canform" component={CanForm}/>
+          <Route path="/searchbox" component={SearchBox} />
           <Route component={NotFoundPage} />
         </Switch>
       </BrowserRouter>
->>>>>>> master
       <GlobalStyle />
     </div>;
 }
