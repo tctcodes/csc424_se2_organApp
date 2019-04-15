@@ -17,7 +17,7 @@ import {
   Navbar,
 } from "react-bootstrap";
 import { setPXID, submitSearch } from './actions';
-import { makeSelectPXID } from './selectors';
+import { makeSelectPXID, makeSelectSearchResults } from './selectors';
 
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
@@ -41,6 +41,15 @@ const US_STATE = [
   'AZ',
   'AR',
 ];
+
+function PrintPxRecord(props) {
+  const recordList = Object.keys(props.pxidRecord).map(key =>
+    <p>{key}: {props.pxidRecord[key]} </p>
+  )
+  return (
+    <div>{recordList}</div>
+  );
+}
 
 /* eslint-disable react/prefer-stateless-function */
 export class SearchBox extends React.Component {
@@ -109,9 +118,9 @@ export class SearchBox extends React.Component {
             </Button>
           </Navbar>
         </div>
-        {/* Display patient informatio */}
+        {/* Display patient information */}
         <div>
-          <h2>Search for a patient to display information</h2>
+          <PrintPxRecord pxidRecord={this.props.pxidRecord}/>
         </div>
       </div>
     );
@@ -126,6 +135,7 @@ SearchBox.propTypes = {
 
 const mapStateToProps = createStructuredSelector({
   pid: makeSelectPXID(),
+  pxidRecord: makeSelectSearchResults(),
 });
 
 function mapDispatchToProps(dispatch) {
