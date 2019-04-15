@@ -1,24 +1,22 @@
 const axios = require('axios');
-import { call, put, select, takeLatest } from 'redux-saga/effects';
-import { GET_RECORD_PERS_ID } from './constants';
-import { makeSelectPersId } from './selectors';
-import {setState} from './actions';
+import { put, takeLatest } from 'redux-saga/effects';
+import { GET_RECORD_PX_ID } from './constants';
+import { setRecord } from './actions';
 /**
  * Github repos request/response handler
  */
-export function* getRecordPersId() {
+export function* getRecordPxId(action) {
   //const PersID = yield select(makeSelectPersId());
-  const PersId = yield "5320821"
-  const PxId = yield "1242923"
+
+  //const PxId = yield "1232752"
   const body = {
-    PersId,
-    PxId
+    PxId:action.id
   }
   let headers = {'Content-Type': 'application/json'}
   try{
-    const response = yield axios.post("http://localhost:5000/api/Cand/GetRecordPersId",body,headers);
+    const response = yield axios.post("http://localhost:5000/api/Cand/GetRecordPxId",body,headers);
     
-    yield put(setState(response.data))
+    yield put(setRecord(response.data))
     console.log(response.data);
   }
   catch(err){
@@ -33,5 +31,5 @@ export default function* loginPageSaga() {
   // By using `takeLatest` only the result of the latest API call is applied.
   // It returns task descriptor (just like fork) so we can continue execution
   // It will be cancelled automatically on component unmount
- yield takeLatest(GET_RECORD_PERS_ID,getRecordPersId)
+ yield takeLatest(GET_RECORD_PX_ID,getRecordPxId)
 }
