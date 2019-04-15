@@ -4,7 +4,7 @@
  *
  */
 
-import { SET_EMAIL, SET_PASSWORD, ADD_USER_TO_DB } from './constants';
+import { SET_EMAIL, SET_PASSWORD, SET_ROLE, ADD_USER_TO_DB } from './constants';
 
 export function setEmail(email) {
   return {
@@ -16,6 +16,13 @@ export function setPassword(password) {
   return {
     type: SET_PASSWORD,
     password,
+  };
+}
+
+export function setRole(role) {
+  return {
+    type: SET_ROLE,
+    role,
   };
 }
 

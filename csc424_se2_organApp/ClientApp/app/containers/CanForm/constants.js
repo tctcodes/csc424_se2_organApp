@@ -1,5 +1,5 @@
-export const GET_RECORD_PERS_ID = "app/CanForm/GET_RECORD_PERS_IDE";
-export const SET_STATE = "app/CanForm/SET_STATE";
+export const GET_RECORD_PX_ID = "app/CanForm/GET_RECORD_PX_IDE";
+export const SET_RECORD = "app/CanForm/SET_RECORD";
 export const CHANGE_CANABO = "app/CanForm/CHANGE_CANABO";
 export const CHANGE_CANACADEMICLEVEL = "app/CanForm/CHANGE_CANACADEMICLEVEL";
 export const CHANGE_CANACADEMICPROGRESS = "app/CanForm/CHANGE_CANACADEMICPROGRESS";
