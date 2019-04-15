@@ -4,9 +4,9 @@ import { makeSelectPXID } from './selectors';
 import { setSearchResults } from './actions';
 import { SUBMIT_SEARCH } from './constants';
 
-export function* searchPXID() {
-  console.log('inside searchPXID saga');
-  const url = 'http://localhost:5000/api/Cand/SearchRecordPxIdFirstX'
+export function* searchPXIDList() {
+  console.log('inside searchPXIDList saga');
+  const url = 'http://localhost:5000/api/Cand/SearchRecordPxIdFirstX';
   const PxId = yield select(makeSelectPXID());
 
   const body = {
@@ -32,8 +32,32 @@ export function* searchPXID() {
   }
 }
 
+export function* getPXIDRecord() {
+  console.log('inside searchPXIDInfo saga');
+  const url = 'http://localhost:5000/api/Cand/GetRecordPxId';
+  const PxId = yield select(makeSelectPXID());
+  const body = {
+    PxId,
+  };
+
+  let headers = {
+    'Content-Type': 'applications/json'
+  };
+
+  try {
+    const response = yield axios.post(url, body, headers);
+    if (response.status === 201) {
+      console.log(response.data);
+      yield put(setSearchResults(response.data));
+    }
+  } catch(err) {
+    console.log(err);
+  }
+}
+
 // Individual exports for testing
-export default function* searchBoxSaga() {
-  yield takeLatest(SUBMIT_SEARCH, searchPXID);
+export default function* searchBoxSagaList() {
+  // yield takeLatest(SUBMIT_SEARCH, searchPXID);
+  yield takeLatest(SUBMIT_SEARCH, getPXIDRecord);
   // See example in containers/HomePage/saga.js
 }

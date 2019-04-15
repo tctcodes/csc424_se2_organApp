@@ -20,7 +20,7 @@ export const initialState = fromJS({
   bloodGroup: '',
   usState: '',
   donorOrCandidate: '',
-  searchResults: '',
+  searchResults: {},
 });
 
 function searchBoxReducer(state = initialState, action) {
@@ -28,7 +28,7 @@ function searchBoxReducer(state = initialState, action) {
     case SET_TOKEN:
       return state.set('token', action.token);
     case SET_PXID:
-      return state.set('pid', action.pxid);
+      return state.set('pxid', action.pxid);
     case SET_US_STATE:
       return state.set('usState', action.usState);
     case SET_BLOOD_GROUP:
