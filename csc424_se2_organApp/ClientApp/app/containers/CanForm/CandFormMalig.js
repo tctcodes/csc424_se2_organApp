@@ -7,63 +7,71 @@ import * as select from './selectors';
 import * as action from './actions';
 
 export class CandFormMalig extends React.Component {
-	state = {
-		maligTy: []
-	}
-
-	componentWillMount(){
-		this.setState({maligTy:this.valToChoice(this.props.canMaligTy)})
-	}
 
 	valToChoice = (value = 0) => {
-		let v = value;
-		let choice = [];
+		//convert database value to string array.
+
+		let v = value; //copy value
+		let choiceArray = [];
 		let power = 0;
+		
+		//bitwise opperations
 		while (v > 0){
 			if (v & 1){
-				choice.push(2<<power)
+				choiceArray.push((1<<power).toString())
 			}
 			power++;
 			v = v >> 1;
+			//console.log("v: ",v)
 		}
-		return choice;
+		return choiceArray;
 	}
-
+	
 	modifyChoice = (e) => {
-		var options = e.target.options;
-		var value = [];
-		for (var i = 0, l = options.length; i < l; i++) {
-			if (options[i].selected) {
-				value.push(options[i].value);
-			}
-		}
-		console.log("value",value);
-		this.setState({maligTy:value})
-		this.choiceToVal(e, value)
-	}
+		//prevent default <select> behavior 
+		//this gives expected selecting behavior
+		e.preventDefault();
 
-	choiceToVal = (e) => {
-		let options = e.target.options;
-		let { name } = e.target;
-		let value = [];
-		for (var i = 0, l = options.length; i < l; i++) {
-			if (options[i].selected) {
-				value.push(options[i].value);
-			}
+		let option = e.target
+		let array = this.valToChoice(this.props.canMaligTy)
+		
+		//toggle selected option
+		option.selected = !option.selected;
+		
+		//add
+		//if option is selected but not in array
+		if ( option.selected && array.find( v => v == option.value ) == undefined ){
+			array.push(option.value);
 		}
+
+		//remove
+		//if option is not selected but is in array
+		if( !option.selected && array.find( v => v == option.value != undefined )){
+			array = array.filter( v => v != option.value )
+		}
+
+		//convert value and dispatch
+		this.choiceToValDispatch(e,array)
+	}
+	
+
+	choiceToValDispatch = (e, choiceArray) => {
+		//convert array into a summed int
+		//get name prop from parent ("e",<option>, is a child of <select>)
+		let { name } = e.target.parentNode;
+		
+		//sum a
 		let v = 0
-		for (let i = 0, l = value.length; i < l; i++){
-			v=v+parseInt(value[i]);
+		for (let i = 0, l = choiceArray.length; i < l; i++){
+			v=v+parseInt(choiceArray[i]);
 		}
 		
-		
+		//dummy object to hold choiceArray
 		let z={target:{value:v}}
-		console.log(z.target)
 		
+		//call dispatch with parent name, and set new redux value
 		this.props[name](z)
 	}
-
-	onMultiChange(){}
 
 	render(){ 
 		return(
@@ -76,9 +84,7 @@ export class CandFormMalig extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN MALIG TY</label>
 					<label className="text-secondary" >Previous Malignancy Type(s):</label>
-					<select name="onChangeCanMaligTy" multiple className="form-control" defaultValue={this.valToChoice(this.props.canMaligTy)} value={this.state.maligTy} onChange={this.modifyChoice}>
-						<option value="" hidden disabled selected/>
-						<option value="">Missing</option>
+					<select name="onChangeCanMaligTy" value={this.valToChoice(this.props.canMaligTy)} multiple className="form-control" onMouseDown={this.modifyChoice} onChange={e=>null}>
 						<option value="1">1: Skin Melanoma</option>
 						<option value="2">2: Skin Non-Melanoma</option>
 						<option value="4">4: CNS Tumor</option>

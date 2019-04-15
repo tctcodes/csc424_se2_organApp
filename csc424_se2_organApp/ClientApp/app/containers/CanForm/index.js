@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
-import { Tabs, Tab, Form } from 'react-bootstrap';
+import { Tabs, Tab, Form, Button } from 'react-bootstrap';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import * as selects from './selectors';
@@ -31,12 +31,12 @@ export class CanForm extends React.Component {
 	constructor(props, context) {
 		super(props, context);
 		this.state = {
-		  key: 'phys',
+		  key: 'malig',
 		};
 	  }
 	
-	componentDidMount(){
-        this.props.onGetRecordPersId();
+	componentDidMount(){		
+  	this.props.onGetRecordPxId(this.props.selectedPxId);
 	}
 	
 	
@@ -47,8 +47,18 @@ export class CanForm extends React.Component {
                 <meta name="description" content="Description of CanForm" />
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossOrigin="anonymous" />
             </Helmet>
-			<Tabs defaultActiveKey="phys"  activeKey={this.state.key}
+						<div className="sticky-top float-right bg-light border-bottom">
+						<Button variant="primary" type="button" className="mr-1" onClick={e=>this.props.onGetRecordPxId(this.props.selectedPxId)} value={"\tRevert\t"}>
+              Revert
+            </Button>
+						<Button variant="primary" type="button" >
+              Save
+            </Button>
+					</div>
+					
+			<Tabs  className="sticky-top bg-light" activeKey={this.state.key}
         		onSelect={key => this.setState({ key })} >
+						
 				<Tab eventKey="meld" title="meld">
 					{ this.state.key == "meld" && <CandFormMeld/>}
 				</Tab>
@@ -75,7 +85,7 @@ export class CanForm extends React.Component {
 				{ this.state.key == "personal" &&<CandFormPersonal/>}
 				</Tab>
 			</Tabs>
-
+			
         </div>)
     }
 }
@@ -86,7 +96,7 @@ const mapStateToProps = createStructuredSelector({
   
 function mapDispatchToProps(dispatch) {
     return {
-        onGetRecordPersId: evt => dispatch(actions.getRecordPersId()),
+        onGetRecordPxId: evt => dispatch(actions.getRecordPxId(evt)),
     };    
 }
   

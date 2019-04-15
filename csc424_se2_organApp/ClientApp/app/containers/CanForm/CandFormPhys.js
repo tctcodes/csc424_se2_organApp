@@ -30,7 +30,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN AGE AT LISTING</label>
 					<label className="text-secondary" >Calculated Candidate Age at Listing:</label>
 					<select className="form-control" value={this.props.canAgeAtListing} onChange={this.props.onChangeCanAgeAtListing}>
-						<option value="" hidden disabled selected/>
+						<option >{this.props.canAgeAtListing}</option>
 						<option value="0">{"<"}1</option>
 						<option value="1">5-Jan</option>
 						<option value="6">11-Jun</option>

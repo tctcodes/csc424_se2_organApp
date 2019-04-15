@@ -91,7 +91,7 @@ export default function App() {
           <PrivateRoute path="/nurse" component={Nurse} />
           <PrivateRoute path="/physician" component={Physician} />
           <PrivateRoute path="/admin" component={Admin} />
-         <Route path="/canform" component={CanForm}/>
+         <Route path="/canform" render={props=><CanForm selectedPxId="1232752"/>}/>
 
           <Route component={NotFoundPage} />
         </Switch>
