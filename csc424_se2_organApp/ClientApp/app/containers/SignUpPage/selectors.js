@@ -14,9 +14,11 @@ const makeSelectEmail = () =>
   createSelector(selectSignUpPage, pageState => pageState.get('email'));
 const makeSelectPassword = () =>
   createSelector(selectSignUpPage, pageState => pageState.get('password'));
+const makeSelectRole = () =>
+  createSelector(selectSignUpPage, pageState => pageState.get('role'));
 
 /**
  * Default selector used by SignUpPage
  */
 
-export { selectSignUpPage, makeSelectEmail, makeSelectPassword };
+export { selectSignUpPage, makeSelectEmail, makeSelectPassword, makeSelectRole };
