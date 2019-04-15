@@ -43,12 +43,22 @@ const US_STATE = [
 ];
 
 function PrintPxRecord(props) {
-  const recordList = Object.keys(props.pxidRecord).map(key =>
-    <p>{key}: {props.pxidRecord[key]} </p>
-  )
-  return (
-    <div>{recordList}</div>
-  );
+  console.log('hello!');
+  console.log(props.pxidRecord.size);
+  if(props.pxidRecord.size === 0) {
+    console.log('True');
+    return (
+      <h1>Input search request for Patient Record</h1>
+    );
+  } else {
+    console.log('False');
+    const recordList = Object.keys(props.pxidRecord).map(key =>
+      <p key={key}>{key}: {props.pxidRecord[key]} </p>
+    )
+    return (
+      <div>{recordList}</div>
+    );
+  }
 }
 
 /* eslint-disable react/prefer-stateless-function */
