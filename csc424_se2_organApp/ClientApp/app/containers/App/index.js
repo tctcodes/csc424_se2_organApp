@@ -15,11 +15,8 @@ import HomePage from 'containers/HomePage/Loadable';
 import SignUpPage from "containers/SignUpPage/Loadable";
 import CanForm from "containers/CanForm/Loadable";
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
-<<<<<<< HEAD
 import RegForm from 'containers/RegForm/Loadable';
 
-=======
->>>>>>> demo
 import GlobalStyle from '../../global-styles';
 import LoginPage from 'containers/LoginPage/Loadable';
 import decode from "jwt-decode";
