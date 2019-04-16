@@ -99,10 +99,10 @@ const SpecialNav = () => {
             <Nav.Link href="/admin">Admin</Nav.Link>
             <Nav.Link href="/protected">Protected</Nav.Link>
           </Nav>
-          <Form inline>
+          {/* <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
             <Button variant="outline-light">Search</Button>
-          </Form>
+          </Form> */}
           <Button variant="primary" type="button" href="/" onClick={signOut}><i className="fas fa-sign-out-alt"></i></Button>
         </Navbar >
       )
@@ -122,10 +122,10 @@ const SpecialNav = () => {
               <Nav.Link href="/physician">Physician</Nav.Link>
             </Nav.Item>
           </Nav>
-          <Form inline>
+          {/* <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
             <Button variant="outline-light">Search</Button>
-          </Form>
+          </Form> */}
           <Button variant="primary" type="button" href="/" onClick={signOut}><i className="fas fa-sign-out-alt"></i></Button>
         </Navbar >
       )

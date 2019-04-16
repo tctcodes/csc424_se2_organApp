@@ -11,9 +11,18 @@
 
 import React from 'react';
 import {Helmet} from 'react-helmet';
+import { connect } from "react-redux";
+import { compose } from "redux";
 import { FormattedMessage } from 'react-intl';
 import { Button,Form, DropdownButton,FormControl,InputGroup,Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import injectSaga from "utils/injectSaga";
+import injectReducer from "utils/injectReducer";
+import reducer from "./reducer";
+import saga from "./saga";
+import { dumpFormToState, uploadForm } from './actions';
+import makeSelectRegForm from './selectors';
+import { createStructuredSelector } from 'reselect';
 
 function validateSSN (elementValue){
   var  ssnPattern = /^[0-9]{3}\-?[0-9]{2}\-?[0-9]{4}$/;
@@ -22,6 +31,8 @@ function validateSSN (elementValue){
 
 function isState(string){
   let pattern = /^(?:(A[KLRZ]|C[AOT]|D[CE]|FL|GA|HI|I[ADLN]|K[SY]|LA|M[ADEINOST]|N[CDEHJMVY]|O[HKR]|P[AR]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY]))$/gm
+  if(string === undefined)
+    return;
   let state = string.search(pattern);
   if(state === -1)
     return false
@@ -30,24 +41,24 @@ function isState(string){
 let zipcode = 0;
 let city = ""
 /* eslint-disable react/prefer-stateless-function */
-export default class RegForm extends React.PureComponent {
+export class RegForm extends React.PureComponent {
   constructor(){
     super()
     this.state ={
-      email: "",
-      name: "",
-      address: '',
-      ssn: '',
-      CAN_GENDER:'',
-      CAN_CITIZENSHIP: '',
-      CAN_YEAR_ENTRY_US: '',
-      CAN_EMPL_STAT: '',
-      CAN_EDUCATION: '',
-      CAN_ACADEMIC_LEVEL: '',
-      CAN_ACADEMIC_PROGRESS: '',
-      CAN_PRIMARY_PAY: '',
-      CAN_SECONDARY_PAY: '',
-      CAN_RACE: 0,
+      Email: "",
+      Fullname: "",
+      Address: '',
+      Ssn: '',
+      CanGender:'',
+      CanCitizenship: '',
+      CanYearEntryUs: '',
+      CanEmplStat: '',
+      CanEducation: '',
+      CanAcademicLevel: '',
+      CanAcademicProgress: '',
+      CanPrimaryPay: '',
+      CanSecondaryPay: '',
+      CanRace: 0,
     }
     this.raceArray =[]
     for (let i = 0; i< 8; i++){
@@ -59,18 +70,18 @@ export default class RegForm extends React.PureComponent {
   
   onChangeEmail = (e) =>{
     this.setState({
-      email: e.target.value
+      Email: e.target.value
     });
   };
   
   onChangeName = (e) =>{
     this.setState({
-      name: e.target.value
+      Fullname: e.target.value
     });
   };
   onChangeAddress = (e) =>{
     this.setState({
-      address: e.target.value
+      Address: e.target.value
     });
   };
   onChangeCity = (e) =>{
@@ -81,63 +92,63 @@ export default class RegForm extends React.PureComponent {
   };
   onChangeSt = (e) =>{
     this.setState({
-      CAN_PERM_STATE: e.target.value.toUpperCase()
+      CanPermState: e.target.value.toUpperCase()
     });
   };
   onChangeSSN = (e) =>{
     this.setState({
-      ssn: e.target.value
+      Ssn: e.target.value
     });
   };
   
   onChangeGender = (e) =>{
     this.setState({
-      CAN_GENDER: e.target.value
+      CanGender: e.target.value
     });
   };
 
   onChangeCitizen = e =>{
     this.setState({
-      CAN_CITIZENSHIP: parseInt(e.target.value)
+      CanCitizenship: parseInt(e.target.value)
     });
   };
   onChangeYear = e =>{
     this.setState({
-      CAN_YEAR_ENTRY_US: e.target.value
+      CanYearEntryUs: e.target.value
     });
   };
   onChangeEmpl = e =>{
     this.setState({
-      CAN_EMPL_STAT: parseInt(e.target.value)
+      CanEmplStat: parseInt(e.target.value)
     });
   };
   onChangeEdu = e =>{
     this.setState({
-      CAN_EDUCATION: parseInt(e.target.value)
+      CanEducation: parseInt(e.target.value)
     });
   };
 
   onChangeAcademicProg = e =>{
     this.setState({
-      CAN_ACADEMIC_PROGRESS: parseInt(e.target.value)
+      CanAcademicProgress: parseInt(e.target.value)
     });
   };
 
   onChangeAcademicLev = e =>{
     this.setState({
-      CAN_ACADEMIC_LEVEL: parseInt(e.target.value)
+      CanAcademicLevel: parseInt(e.target.value)
     });
   };
   
   onChangePrimaryPay = e =>{
     this.setState({
-      CAN_PRIMARY_PAY: parseInt(e.target.value)
+      CanPrimaryPay: parseInt(e.target.value)
     });
   };
 
   onChangeSecondaryPay = e =>{
     this.setState({
-      CAN_SECONDARY_PAY: parseInt(e.target.value)
+      CanSecondaryPay: parseInt(e.target.value)
     });
   };
 
@@ -189,34 +200,50 @@ export default class RegForm extends React.PureComponent {
         break;
       
     }
-    if(this.state.CAN_EMPL_STAT >=1 && this.state.CAN_EMPL_STAT <=4)
+    if(this.state.CanEmplStat >=1 && this.state.CanEmplStat <=4)
       workForIncome = "Y"
     else 
       workForIncome ="N"
+    
     this.setState({
-      address: `${this.state.address},${city}, ${this.state.CAN_PERM_STATE}, ${zipcode}`,
-      CAN_RACE_SRTR: srtrRace,
-      CAN_RACE: raceValue,
-      CAN_ETHNICITY_SRTR:isLatin,
-      CAN_WORK_INCOME: workForIncome,
+      Address: `${this.state.Address},${city}, ${this.state.CanPermState}, ${zipcode}`,
+      CanRaceSrtr: srtrRace,
+      CanRace: raceValue,
+      CanEthnicitySrtr:isLatin,
+      CanWorkIncome: workForIncome,
 
-    }/* ,()=>{
+    },()=>{
       Object.keys(this.state).map(e=>{
         if(this.state[e]==='' || this.state[e]===0)
           complete = false
       })
       if(complete === false){
-        alert("All fields must be filled")
+        alert("All fields must be filled");
+        return;
       }
-    } */)
-    if(!isState(this.state.CAN_PERM_STATE)){
-      alert("Not Valid State")
-    }
-    if(!validateSSN(this.state.ssn)){
-      alert("Not Valid SSN")
-    }
-    
-    setTimeout(()=>console.log(this.state),1);
+      if(!isState(this.state.CanPermState)){
+        alert("Not Valid State")
+        return;
+      }
+      if(!validateSSN(this.state.Ssn)){
+        alert("Not Valid SSN")
+        return;
+      }
+      if(this.state.CanYearEntryUs.toUpperCase() !="N/A"){
+        if(isNaN(this.state.CanYearEntryUs)){
+          alert("Year must be a number");
+          return;
+        }
+        let num = parseInt(this.state.CanYearEntryUs)
+        if(num > (new Date().getFullYear) || num < 1895 || num === NaN){
+          alert("Year must be between 1895 to present");
+          return
+        }
+      }
+      this.props.onStateDump(this.state);
+      this.props.onUpload();
+      
+    });
   }
   
   render() {
@@ -367,8 +394,6 @@ export default class RegForm extends React.PureComponent {
               <option value="12">US/State Govt Agency</option>
             </select>
           </Form.Group>
-
-          
       </Form>;
       <Button variant="primary" type="button" onClick={this.onSubmit}>
               Submit
@@ -379,3 +404,27 @@ export default class RegForm extends React.PureComponent {
 
 
 }
+
+const mapStateToProps = createStructuredSelector({
+  state: makeSelectRegForm()
+});
+function mapDispatchToProps(dispatch) {
+  return {
+    onStateDump: (state) => dispatch(dumpFormToState(state)),
+    onUpload: () => dispatch(uploadForm())
+  };
+}
+
+const withConnect = connect(
+  mapStateToProps,
+  mapDispatchToProps
+);
+
+const withReducer = injectReducer({ key: "regForm", reducer });
+const withSaga = injectSaga({ key: "regForm", saga });
+
+export default compose(
+  withReducer,
+  withSaga,
+  withConnect
+)(RegForm);

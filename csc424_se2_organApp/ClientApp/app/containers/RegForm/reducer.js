@@ -5,14 +5,14 @@
  */
 
 import { fromJS } from "immutable";
-import { DEFAULT_ACTION } from "./constants";
+import { DUMP_FORM_TO_STATE } from "./constants";
 
 export const initialState = fromJS({});
 
 function regFormReducer(state = initialState, action) {
   switch (action.type) {
-    case DEFAULT_ACTION:
-      return state;
+    case DUMP_FORM_TO_STATE:
+      return state.merge(action.state);
     default:
       return state;
   }
