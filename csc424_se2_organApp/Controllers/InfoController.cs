@@ -41,7 +41,18 @@ namespace csc424_se2_organApp.Controllers
 
         return Json(record);
 
-
+    }
+    [HttpPost]
+    public JsonResult HasInfo([FromBody]dynamic record){
+        var email =record.email;
+        var isInDb = context.Info.Find(email);
+        if(isInDb == null){
+            Response.StatusCode = 404;
+            return Json(new {error = "User Must Fill Out information"});
+        }
+        else{
+            return Json(new {success="success"});
+        }
     }
 
 

@@ -28,7 +28,7 @@ export class LoginPage extends React.Component {
     if (this.props.token) {
       return <Redirect to={from} />
     }
-    return <div>
+    return( <div>
         <Helmet>
           <title>LoginPage</title>
           <meta name="description" content="Description of LoginPage" />
@@ -47,15 +47,6 @@ export class LoginPage extends React.Component {
             </Form.Label>
             <Form.Control required value={this.props.password} type="password" placeholder="Password..." onChange={this.props.onChangePassword} />
           </Form.Group>
-          <Form.Group controlId="formGridState">
-            <Form.Label>Role</Form.Label>
-            <Form.Control value={this.props.role} onChange={this.props.onChangeRole} as="select">
-              <option>Choose...</option>
-              <option>Nurse</option>
-              <option>Physician</option>
-              <option>Admin</option>
-            </Form.Control>
-          </Form.Group>
           <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
             <Button variant="primary" type="button" onClick={this.props.onLogin}>
               Login
@@ -70,7 +61,7 @@ export class LoginPage extends React.Component {
             </Button>
           </div>
         </Form>
-      </div>;
+    </div>);
   }
 }
 

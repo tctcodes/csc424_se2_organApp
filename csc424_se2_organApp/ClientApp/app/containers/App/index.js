@@ -17,87 +17,28 @@ import SignUpPage from "containers/SignUpPage/Loadable";
 import CanForm from "containers/CanForm/Loadable";
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import RegForm from 'containers/RegForm/Loadable';
+import ClientHome from 'containers/ClientHome/Loadable';
 
 import GlobalStyle from '../../global-styles';
 import LoginPage from 'containers/LoginPage/Loadable';
-import decode from "jwt-decode";
+
 import { Form, Navbar, Nav, FormControl, Button } from "react-bootstrap";
-
-const signOut = () => {
-  localStorage.removeItem("token");
-}
-
-const checkAuth = () => {
-  const token = localStorage.getItem("token");
-  const ext = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role";
-  let decoded;
-  if (token != null){
-    decoded = decode(token);
-    try {
-      if (decoded.exp < new Date().getTime() / 1000) {
-        return { success: false};
-      }
-    } catch (e) {
-      console.log(e);
-      return { success: false};
-    }
-  } else {
-    return { success: false };
-  }
-  return { success: true, role: decoded[ext] };
-};
-
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={(props) => (
-    checkAuth().success == true
-      ? <Component {...props} />
-      : <Redirect to={{
-        pathname: '/login',
-        state: { from: props.location }
-      }} />
-  )} />
-)
-const Protected = () => <h3>Protected</h3>;
-const Unauthorized = () => <h1 style={{textAlign: 'center'}}>You role is not authorized to view this page.</h1>;
-const NurseMessage = () => <h1 style={{ textAlign: 'center' }}>If you are seeing this your role is Nurse or Admin</h1>;
-const PhysicianMessage = () => <h1 style={{ textAlign: 'center' }}>If you are seeing this your role is Physician or Admin</h1>;
-const AdminMessage = () => <h1 style={{ textAlign: 'center' }}>If you are seeing this your role is Admin</h1>;
-
-const Nurse = () => (
-  <Route render= { () => (
-    checkAuth().role == "Nurse" || checkAuth().role == "Admin"
-      ? <NurseMessage /> 
-      : <Unauthorized />
-  )} />
-)
-const Physician = () => (
-  <Route render={() => (
-    checkAuth().role == "Physician" || checkAuth().role == "Admin"
-      ? <PhysicianMessage />
-      : <Unauthorized />
-  )} />
-)
-const Admin = () => (
-  <Route render={() => (
-    checkAuth().role == "Admin"
-      ? <AdminMessage />
-      : <Unauthorized />
-  )} />
-)
+import {checkAuth,signOut} from "./auth";
+import PrivateRoute from "./auth"
 
 const SpecialNav = () => {
-  if (checkAuth().success) {
-    if (checkAuth().role == "Admin") {
+  let {success,role} = checkAuth();
+  console.log(success,role)
+
+  if (success) {
+    if (role == "staff") {
       return (
         < Navbar bg = "primary" variant = "dark" >
           {/* <i className="fab fa-accessible-icon fa-2x"></i> */}
           <Navbar.Brand href="/">OrganApp</Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/nurse">Nurse</Nav.Link>
-            <Nav.Link href="/physician">Physician</Nav.Link>
-            <Nav.Link href="/admin">Admin</Nav.Link>
-            <Nav.Link href="/protected">Protected</Nav.Link>
+            <Nav.Link href="/staff/searchbox">Search</Nav.Link>
           </Nav>
           {/* <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -106,20 +47,17 @@ const SpecialNav = () => {
           <Button variant="primary" type="button" href="/" onClick={signOut}><i className="fas fa-sign-out-alt"></i></Button>
         </Navbar >
       )
-    } else if (checkAuth().role == "Nurse" || checkAuth().role == "Physician"){
+    } else if (role == "candidate" || role == "donor"){
       return (
         < Navbar bg="primary" variant="dark" >
           {/* <i className="fab fa-accessible-icon fa-2x"></i> */}
-          <Navbar.Brand href="/">OrganApp</Navbar.Brand>
+          <Navbar.Brand href="/client/home">OrganApp</Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Item>
-              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/client/home">Home</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/nurse">Nurse</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/physician">Physician</Nav.Link>
+              <Nav.Link href="/client/information">My Information</Nav.Link>
             </Nav.Item>
           </Nav>
           {/* <Form inline>
@@ -155,14 +93,12 @@ export default function App() {
         <Route exact path="/" component={HomePage} />
         <Route path="/signup" component={SignUpPage} />
         <Route path="/login" component={LoginPage} />
-        <PrivateRoute path='/protected' component={Protected} />
-        <PrivateRoute path="/nurse" component={Nurse} />
-        <PrivateRoute path="/physician" component={Physician} />
-        <PrivateRoute path="/admin" component={Admin} />
+        
         {/* <Route path="/canform" component={CanForm}/> */}
-        <Route path="/register" component={RegForm} />
-        <Route path="/searchbox" component={SearchBox} />
-        <Route path="/canform" render={props => <CanForm selectedPxId="1232752" />} />
+        <PrivateRoute path="/client/home" component={ClientHome}/>
+        <PrivateRoute path="/client/information" component={RegForm} />
+        <PrivateRoute path="/staff/searchbox" component={SearchBox} />
+        <PrivateRoute path="/staff/canform" render={props => <CanForm selectedPxId="1232752" />} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
