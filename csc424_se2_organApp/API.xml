@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>csc424_se2_organApp</name>
+    </assembly>
+    <members>
+        <member name="T:csc424_se2_organApp.Controllers.CandController">
+            <summary>The Candidate Controller.</summary>
+            <remarks>api/Cand/[action]</remarks>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.CandController.#ctor(csc424_se2_organApp.Models.organ_appContext)">
+            <summary>Reference database context</summary>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.CandController.GetRecordPersId(System.Object)">
+            <summary>Get a record by PERS ID</summary>
+            <remarks>api/Cand/GetRecordPersId</remarks>
+            <param name="input">Requires in the body: PersId</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.CandController.GetRecordPxId(System.Object)">
+            <summary>Get a record by PX ID</summary>
+            <remarks>api/Cand/GetRecordPxId</remarks>
+            <param name="input">Requires in the body: PxID</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.CandController.GetRecordByState(System.Object)">
+            <summary>Get a record by State</summary>
+            <remarks>api/Cand/GetRecordByState</remarks>
+            <param name="input">Requires in the body: state</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.CandController.GetRecordByBloodType(System.Object)">
+            <summary>Get a record by Blood Type</summary>
+            <remarks>api/Cand/GetRecordByBloodType</remarks>
+            <param name="input">Requires in the body: bloodType</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.CandController.SearchRecordPersIdFirstX(System.Object)">
+            <summary>Search for a limited number of records by PERS ID</summary>
+            <remarks>api/Cand/SearchRecordPersIdFirstX</remarks>
+            <param name="input">Requires in the body: PersId, number</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.CandController.SearchRecordPxIdFirstX(System.Object)">
+            <summary>Search for a limited number of records by PX ID</summary>
+            <remarks>api/Cand/SearchRecordPxIdFirstX</remarks>
+            <param name="input">Requires in the body: PxId, number</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.CandController.SearchRecordPersId(System.Object)">
+            <summary>Search for all records by partial PERS ID</summary>
+            <remarks>api/Cand/SearchRecordPersId</remarks>
+            <param name="input">Requires in the body: PersId</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.CandController.SearchRecordPxId(System.Object)">
+            <summary>Search for a all records by partial PX ID</summary>
+            <remarks>api/Cand/SearchRecordPxId</remarks>
+            <param name="input">Requires in the body: PersId, number</param>
+        </member>
+    </members>
+</doc>

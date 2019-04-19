@@ -1,3 +1,6 @@
+#this file creates all redux boiler plate
+#constants selectors reducers and actions
+
 import os
 import csv
 import sys
