@@ -34,7 +34,7 @@ export function* searchPXIDList() {
 
 export function* getPXIDRecord() {
   console.log('inside searchPXIDInfo saga');
-  const url = 'http://localhost:5000/api/Cand/GetRecordPxId';
+  const url = '/api/Cand/GetRecordPxId';
   const PxId = yield select(makeSelectPXID());
   const body = {
     PxId,

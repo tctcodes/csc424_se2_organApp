@@ -16,7 +16,7 @@ export function* addUser() {
     let headers = {
       'Content-Type': 'application/json',
     }
-    let res = yield axios.post("http://localhost:5000/api/User/NewUser",body,headers);
+    let res = yield axios.post("/api/User/NewUser",body,headers);
     console.log(res);
     yield put(push('/login'));
   } catch (err) {

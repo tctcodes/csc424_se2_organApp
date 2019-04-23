@@ -14,7 +14,7 @@ export function* getRecordPxId(action) {
   }
   let headers = {'Content-Type': 'application/json'}
   try{
-    const response = yield axios.post("http://localhost:5000/api/Cand/GetRecordPxId",body,headers);
+    const response = yield axios.post("/api/Cand/GetRecordPxId",body,headers);
     
     yield put(setRecord(response.data))
     console.log(response.data);

@@ -13,7 +13,7 @@ export function* checkInfo(){
     'Content-Type': 'application/json',
   }
   try{
-    let response = axios.post("http://localhost:5000/api/Info/HasInfo",body,headers);
+    let response = axios.post("/api/Info/HasInfo",body,headers);
 
   }
   catch(err){

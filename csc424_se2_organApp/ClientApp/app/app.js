@@ -32,11 +32,14 @@ import configureStore from './configureStore';
 
 // Import i18n messages
 import { translationMessages } from './i18n';
-
+const axios = require('axios');
 // Create redux store with history
+
 const initialState = {};
 const store = configureStore(initialState, history);
 const MOUNT_NODE = document.getElementById('app');
+axios.defaults.baseURL = 'http://localhost:5000';
+
 
 const render = messages => {
   ReactDOM.render(

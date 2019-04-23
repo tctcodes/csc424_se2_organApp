@@ -20,7 +20,7 @@ export function* login() {
     'Content-Type': 'application/json',
   }
   try{
-    const response = yield axios.post("http://localhost:5000/api/User/AuthUser",body,headers);
+    const response = yield axios.post("/api/User/AuthUser",body,headers);
     if (response.data.token) {
       localStorage.setItem('token', response.data.token);
       yield put(setToken(response.data.token));
