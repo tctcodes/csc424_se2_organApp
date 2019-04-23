@@ -10,11 +10,10 @@ import {setToken} from './actions';
 export function* login() {
   const email = yield select(makeSelectEmail());
   const password = yield select(makeSelectPassword());
-  const role = yield select(makeSelectRole());
+  
   const body = {
     email,
     password,
-    role
   }
   let headers = {
     'Content-Type': 'application/json',

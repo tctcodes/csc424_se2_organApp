@@ -28,7 +28,6 @@ import PrivateRoute from "./auth"
 
 const SpecialNav = () => {
   let {success,role} = checkAuth();
-  console.log(success,role)
 
   if (success) {
     if (role == "staff") {

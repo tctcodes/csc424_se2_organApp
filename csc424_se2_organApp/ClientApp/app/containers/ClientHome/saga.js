@@ -3,6 +3,7 @@ import decode from 'jwt-decode';
 import {makeSelectEmail} from '../LoginPage/selectors';
 import { push } from 'connected-react-router';
 import {CHECK_INFO} from './constants';
+const axios = require('axios');
 
 
 export function* checkInfo(){

@@ -24,7 +24,7 @@ import { changeEmail, changePassword, changeRole, login } from "./actions";
 /* eslint-disable react/prefer-stateless-function */
 export class LoginPage extends React.Component {
   render() {
-    const { from } = this.props.location.state || { from: { pathname: '/' } }
+    const { from } = this.props.location.state || { from: { pathname: `/` } }
     if (this.props.token) {
       return <Redirect to={from} />
     }

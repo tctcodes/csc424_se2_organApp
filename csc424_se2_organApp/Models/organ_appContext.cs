@@ -2292,18 +2292,15 @@ namespace csc424_se2_organApp.Models
 
             modelBuilder.Entity<Info>(entity =>
             {
-                entity.HasKey(e => new { e.PersId, e.Email })
+                entity.HasKey(e => e.Email)
                     .HasName("info_pk");
 
                 entity.ToTable("info", "users");
 
-                entity.Property(e => e.PersId)
-                    .HasColumnName("pers_id")
-                    .HasDefaultValueSql("nextval('users.pers_id_gen'::regclass)");
-
                 entity.Property(e => e.Email)
                     .HasColumnName("email")
-                    .HasColumnType("character varying(32)");
+                    .HasColumnType("character varying(32)")
+                    .ValueGeneratedNever();
 
                 entity.Property(e => e.Address).HasColumnName("address");
 
@@ -2371,14 +2368,17 @@ namespace csc424_se2_organApp.Models
                     .HasColumnName("fullname")
                     .HasColumnType("character varying");
 
+                entity.Property(e => e.PersId)
+                    .HasColumnName("pers_id")
+                    .HasDefaultValueSql("nextval('users.pers_id_gen'::regclass)");
+
                 entity.Property(e => e.Ssn)
                     .HasColumnName("ssn")
                     .HasColumnType("character(9)");
 
                 entity.HasOne(d => d.EmailNavigation)
-                    .WithMany(p => p.Info)
-                    .HasForeignKey(d => d.Email)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .WithOne(p => p.Info)
+                    .HasForeignKey<Info>(d => d.Email)
                     .HasConstraintName("info_users_fk");
             });
 

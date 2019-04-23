@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using csc424_se2_organApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace csc424_se2_organApp.Controllers
 {
@@ -17,7 +18,7 @@ namespace csc424_se2_organApp.Controllers
         {
             context = _context;
         }
-
+        
         [HttpPost]
         public JsonResult GetRecordPersId([FromBody]dynamic record){
             Console.WriteLine(record);
@@ -32,6 +33,7 @@ namespace csc424_se2_organApp.Controllers
             return Json(data: isInDb);
 
         }
+        [Authorize(Roles = "staff")]
         [HttpPost]
         public JsonResult GetRecordPxId([FromBody]dynamic record){
             Console.WriteLine(record);

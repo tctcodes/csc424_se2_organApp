@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
-using Newtonsoft.Json;
 
 namespace csc424_se2_organApp.Models
 {
@@ -29,8 +27,6 @@ namespace csc424_se2_organApp.Models
         public decimal? CanWorkNoStat { get; set; }
         public decimal? CanWorkYesStat { get; set; }
 
-        [JsonIgnore] 
-        [IgnoreDataMember] 
         public virtual Users EmailNavigation { get; set; }
     }
 }

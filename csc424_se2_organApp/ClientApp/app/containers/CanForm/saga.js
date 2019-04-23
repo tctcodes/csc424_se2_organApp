@@ -9,6 +9,7 @@ export function* getRecordPxId(action) {
   //const PersID = yield select(makeSelectPersId());
 
   //const PxId = yield "1232752"
+  console.log(axios.defaults.headers.common);
   const body = {
     PxId:action.id
   }
@@ -17,7 +18,7 @@ export function* getRecordPxId(action) {
     const response = yield axios.post("/api/Cand/GetRecordPxId",body,headers);
     
     yield put(setRecord(response.data))
-    console.log(response.data);
+   
   }
   catch(err){
     console.log(err)
