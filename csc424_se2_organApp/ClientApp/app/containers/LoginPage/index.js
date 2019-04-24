@@ -12,6 +12,7 @@ import { createStructuredSelector } from "reselect";
 import { Button, Form } from 'react-bootstrap';
 import { compose } from "redux";
 import { Redirect, Link } from "react-router-dom";
+import {decodeToken} from '../App/auth';
 
 
 import injectSaga from "utils/injectSaga";
@@ -26,7 +27,8 @@ export class LoginPage extends React.Component {
   render() {
     const { from } = this.props.location.state || { from: { pathname: `/` } }
     if (this.props.token) {
-      return <Redirect to={from} />
+      const {role} = decodeToken(this.props.token);
+      return <Redirect to={`/${role}/home`} />
     }
     return( <div>
         <Helmet>

@@ -45,6 +45,7 @@ namespace csc424_se2_organApp.Controllers
     [HttpPost]
     public JsonResult HasInfo([FromBody]dynamic record){
         string email =record.email;
+        Console.WriteLine(email);
         var isInDb = context.Info.Find(email);
         if(isInDb == null){
             Response.StatusCode = 404;

@@ -13,7 +13,19 @@ export const setAuthToken = token =>{
   }
 }
 
-
+export const decodeToken =(token)=>{
+  const decoded = decode(token);
+  const {exp} = decoded; 
+  let role = decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
+  const name = decoded['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'];
+  if(role !== 'staff')
+    role='client';
+  return {
+    exp,
+    role,
+    name
+  };
+}
 
 export const signOut = () => {
     localStorage.removeItem("token");
@@ -21,10 +33,9 @@ export const signOut = () => {
   
 export const checkAuth = () => {
     const token = localStorage.getItem("token");
-    const ext = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role";
     let decoded;
     if (token != null){
-      decoded = decode(token);
+      decoded = decodeToken(token);
       try {
         if (decoded.exp < new Date().getTime() / 1000) {
           return { success: false};
@@ -37,7 +48,7 @@ export const checkAuth = () => {
       return { success: false };
     }
     setAuthToken(token);
-    return { success: true, role: decoded[ext] };
+    return { success: true, role: decoded.role };
   };
 
 const PrivateRoute = ({ component: Component, ...rest }) => (

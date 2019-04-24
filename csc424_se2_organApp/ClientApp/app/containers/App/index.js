@@ -28,7 +28,7 @@ import PrivateRoute from "./auth"
 
 const SpecialNav = () => {
   let {success,role} = checkAuth();
-
+  console.log(role);
   if (success) {
     if (role == "staff") {
       return (
@@ -46,7 +46,7 @@ const SpecialNav = () => {
           <Button variant="primary" type="button" href="/" onClick={signOut}><i className="fas fa-sign-out-alt"></i></Button>
         </Navbar >
       )
-    } else if (role == "candidate" || role == "donor"){
+    } else if (role == "client"){
       return (
         < Navbar bg="primary" variant="dark" >
           {/* <i className="fab fa-accessible-icon fa-2x"></i> */}
