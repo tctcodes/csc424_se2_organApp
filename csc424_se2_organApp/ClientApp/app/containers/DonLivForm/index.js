@@ -16,7 +16,7 @@ import injectReducer from 'utils/injectReducer';
 import * as selects from './selectors';
 import * as actions from './actions';
 import reducer from './reducer';
-import saga from './saga';
+//import saga from './saga';
 import DonLivForm1 from './DonLivForm1';
 import DonLivForm2 from './DonLivForm2';
 import DonLivForm3 from './DonLivForm3';
@@ -113,10 +113,10 @@ function mapDispatchToProps(dispatch) {
   );
   
   const withReducer = injectReducer({ key: 'DonLivForm', reducer });
-  const withSaga = injectSaga({ key: 'DonLivForm', saga });
+  //const withSaga = injectSaga({ key: 'DonLivForm', saga });
   
   export default compose(
     withReducer,
-    withSaga,
+    //withSaga,
     withConnect,
   )(DonLivForm);

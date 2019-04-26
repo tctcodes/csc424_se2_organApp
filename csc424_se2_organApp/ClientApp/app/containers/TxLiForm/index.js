@@ -16,7 +16,7 @@ import injectReducer from 'utils/injectReducer';
 import * as selects from './selectors';
 import * as actions from './actions';
 import reducer from './reducer';
-import saga from './saga';
+//import saga from './saga';
 import TxLiForm1 from './TxLiForm1';
 import TxLiForm2 from './TxLiForm2';
 import TxLiForm3 from './TxLiForm3';
@@ -127,10 +127,10 @@ function mapDispatchToProps(dispatch) {
   );
   
   const withReducer = injectReducer({ key: 'TxLiForm', reducer });
-  const withSaga = injectSaga({ key: 'TxLiForm', saga });
+  //const withSaga = injectSaga({ key: 'TxLiForm', saga });
   
   export default compose(
     withReducer,
-    withSaga,
+    //withSaga,
     withConnect,
   )(TxLiForm);

@@ -16,7 +16,7 @@ import injectReducer from 'utils/injectReducer';
 import * as selects from './selectors';
 import * as actions from './actions';
 import reducer from './reducer';
-import saga from './saga';
+//import saga from './saga';
 import DonDecForm1 from './DonDecForm1';
 import DonDecForm2 from './DonDecForm2';
 import DonDecForm3 from './DonDecForm3';
@@ -115,10 +115,10 @@ function mapDispatchToProps(dispatch) {
   );
   
   const withReducer = injectReducer({ key: 'DonDecForm', reducer });
-  const withSaga = injectSaga({ key: 'DonDecForm', saga });
+  //const withSaga = injectSaga({ key: 'DonDecForm', saga });
   
   export default compose(
     withReducer,
-    withSaga,
+    //withSaga,
     withConnect,
   )(DonDecForm);

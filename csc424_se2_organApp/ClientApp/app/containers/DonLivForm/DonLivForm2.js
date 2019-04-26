@@ -93,12 +93,12 @@ export class DonLivForm2 extends React.Component {
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CMV</label>
-					<label className="text-secondary" >{CMV pre-UNet data}//CMV::</label>
+					<label className="text-secondary" >CMV pre-UNet data</label>
 					<input className="form-control" type="text" value={this.props.donCmv} onChange={this.props.onChangeDonCmv} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CMV CLINICAL</label>
-					<label className="text-secondary" >CMV//Was there clinical disease::</label>
+					<label className="text-secondary" >Was there clinical disease?</label>
 					<input className="form-control" type="text" value={this.props.donCmvClinical} onChange={this.props.onChangeDonCmvClinical} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
