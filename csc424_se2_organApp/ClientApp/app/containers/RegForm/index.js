@@ -62,7 +62,6 @@ export class RegForm extends React.PureComponent {
     }
     this.raceArray =[]
     for (let i = 0; i< 8; i++){
-      console.log("creating ref")
       this.raceArray[i] = React.createRef();
     }
   }

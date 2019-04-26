@@ -35,8 +35,10 @@ export class CanForm extends React.Component {
 		};
 	  }
 	
-	componentDidMount(){		
-  	this.props.onGetRecordPxId(this.props.selectedPxId);
+	componentDidMount(){
+		//console.log(this.props.selectedPxId);		
+		//this.props.selectedPxId = "1232752"
+  	this.props.onGetRecordPxId(/* this.props.selectedPxId */"1232752");
 	}
 	
 	
@@ -91,7 +93,7 @@ export class CanForm extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-	
+	//selectedPxId = MakeSelect...()
 });
   
 function mapDispatchToProps(dispatch) {

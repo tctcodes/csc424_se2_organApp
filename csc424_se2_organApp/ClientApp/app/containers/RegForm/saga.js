@@ -14,7 +14,7 @@ export function* upload(){
     'Content-Type': 'application/json',
   }
   try{
-   let res = yield axios.post("http://localhost:5000/api/Info/UploadInfo",data,headers)
+   let res = yield axios.post("/api/Info/UploadInfo",data,headers)
     console.log(res);
   }
   catch(err){

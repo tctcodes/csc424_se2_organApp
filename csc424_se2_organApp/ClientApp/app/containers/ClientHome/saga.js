@@ -3,6 +3,7 @@ import decode from 'jwt-decode';
 import {makeSelectEmail} from '../LoginPage/selectors';
 import { push } from 'connected-react-router';
 import {CHECK_INFO} from './constants';
+const axios = require('axios');
 
 
 export function* checkInfo(){
@@ -13,7 +14,7 @@ export function* checkInfo(){
     'Content-Type': 'application/json',
   }
   try{
-    let response = axios.post("http://localhost:5000/api/Info/HasInfo",body,headers);
+    let response = axios.post("/api/Info/HasInfo",body,headers);
 
   }
   catch(err){

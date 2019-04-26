@@ -14,19 +14,21 @@ import { compose } from "redux";
 import { Redirect, Link } from "react-router-dom";
 
 
+
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
 import { makeSelectPassword, makeSelectEmail, makeSelectRole, makeSelectToken } from "./selectors";
 import reducer from "./reducer";
 import saga from "./saga";
 import { changeEmail, changePassword, changeRole, login } from "./actions";
+import makeSelectAuth from "../../authSelector";
 
 /* eslint-disable react/prefer-stateless-function */
 export class LoginPage extends React.Component {
   render() {
-    const { from } = this.props.location.state || { from: { pathname: '/' } }
-    if (this.props.token) {
-      return <Redirect to={from} />
+      if (this.props.auth.isAuthenticated) {
+        const {role} = this.props.auth.user;
+        return <Redirect to={`/${role}/home`} />
     }
     return( <div>
         <Helmet>
@@ -79,6 +81,7 @@ const mapStateToProps = createStructuredSelector({
   password: makeSelectPassword(),
   role: makeSelectRole(),
   token: makeSelectToken(),
+  auth:makeSelectAuth()
 });
 
 function mapDispatchToProps(dispatch) {
