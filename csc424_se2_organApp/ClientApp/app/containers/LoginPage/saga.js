@@ -30,7 +30,6 @@ export function* login() {
   catch(err){
     console.log(err)
   }
-  
 }
 
 /**

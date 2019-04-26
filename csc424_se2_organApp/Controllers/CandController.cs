@@ -4,24 +4,32 @@ using System.Threading;
 using csc424_se2_organApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
+
+
 namespace csc424_se2_organApp.Controllers
 {
+
+    /// <summary>The Candidate Controller.</summary>
+    /// <remarks>api/Cand/[action]</remarks>
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class CandController : Controller{
 
-       
+
         private readonly organ_appContext context;
-    
-        public CandController(organ_appContext _context)         
-        {             
-            context = _context;       
+        /// <summary>Reference database context</summary>
+        public CandController(organ_appContext _context)
+        {
+            context = _context;
         }
-        
+
+        /// <summary>Get a record by PERS ID</summary>
+        /// <remarks>api/Cand/GetRecordPersId</remarks>
+        /// <param name="input">Requires in the body: PersId</param>
         [HttpPost]
-        public JsonResult GetRecordPersId([FromBody]dynamic record){
-            Console.WriteLine(record);
-            int num = record.PersId;
+        public JsonResult GetRecordPersId([FromBody]dynamic input){
+            Console.WriteLine(input);
+            int num = input.PersId;
             var isInDb = context.CandLiin.Where(r => r.PersId == num)
                                         .FirstOrDefault<CandLiin>();
             if(isInDb == null){
@@ -30,12 +38,16 @@ namespace csc424_se2_organApp.Controllers
             }
             Response.StatusCode = 201;
             return Json(data: isInDb);
-        
+
         }
+
+        /// <summary>Get a record by PX ID</summary>
+        /// <remarks>api/Cand/GetRecordPxId</remarks>
+        /// <param name="input">Requires in the body: PxID</param>
         [HttpPost]
-        public JsonResult GetRecordPxId([FromBody]dynamic record){
-            Console.WriteLine(record);
-            int num = record.PxId;
+        public JsonResult GetRecordPxId([FromBody]dynamic input){
+            Console.WriteLine(input);
+            int num = input.PxId;
             var isInDb = context.CandLiin.Where(r => r.PxId == num)
                                         .FirstOrDefault<CandLiin>();
             if(isInDb == null){
@@ -44,12 +56,16 @@ namespace csc424_se2_organApp.Controllers
             }
             Response.StatusCode = 201;
             return Json(data: isInDb);
-        
+
         }
+
+        /// <summary>Get a record by State</summary>
+        /// <remarks>api/Cand/GetRecordByState</remarks>
+        /// <param name="input">Requires in the body: state</param>
         [HttpPost]
-        public JsonResult GetRecordByState([FromBody]dynamic record){
-            Console.WriteLine(record.state);
-            string state = record.state;
+        public JsonResult GetRecordByState([FromBody]dynamic input){
+            //Console.WriteLine(input.state);
+            string state = input.state;
             var query = (from c in context.CandLiin 
                         where c.CanPermState == state
                         select c).ToList();
@@ -60,12 +76,16 @@ namespace csc424_se2_organApp.Controllers
             Console.WriteLine(query.Count);
             Response.StatusCode = 201;
             return Json(query);
-            
+
         }
+
+        /// <summary>Get a record by Blood Type</summary>
+        /// <remarks>api/Cand/GetRecordByBloodType</remarks>
+        /// <param name="input">Requires in the body: bloodType</param>
         [HttpPost]
-        public JsonResult GetRecordByBloodType([FromBody]dynamic record){
-            string type = record.bloodType;
-            var query = (from c in context.CandLiin 
+        public JsonResult GetRecordByBloodType([FromBody]dynamic input){
+            string type = input.bloodType;
+            var query = (from c in context.CandLiin
                         where c.CanAbo == type
                         select c).ToList();
             if(query.Count == 0){
@@ -75,55 +95,69 @@ namespace csc424_se2_organApp.Controllers
             Console.WriteLine(query.Count);
             Response.StatusCode = 201;
             return Json(query);
-            
+
         }
+
+        /// <summary>Search for a limited number of records by PERS ID</summary>
+        /// <remarks>api/Cand/SearchRecordPersIdFirstX</remarks>
+        /// <param name="input">Requires in the body: PersId, number</param>
         [HttpPost]
-        public JsonResult SearchRecordPersIdFirstX([FromBody]dynamic record){
-            //Console.WriteLine(record);
-            string id = record.PersId;
-            int num = record.number;
+        public JsonResult SearchRecordPersIdFirstX([FromBody]dynamic input){
+            //Console.WriteLine(input);
+            string id = input.PersId;
+            int num = input.number;
             var isInDb = (from c in context.CandLiin
                         where c.PersId.ToString().Contains(id)
-                        select c.PersId).Take(num); 
+                        select c.PersId).Take(num);
             Response.StatusCode = 201;
             return Json(data: isInDb);
-        
+
         }
+
+        /// <summary>Search for a limited number of records by PX ID</summary>
+        /// <remarks>api/Cand/SearchRecordPxIdFirstX</remarks>
+        /// <param name="input">Requires in the body: PxId, number</param>
         [HttpPost]
-        public JsonResult SearchRecordPxIdFirstX([FromBody]dynamic record){
-            //Console.WriteLine(record);
-            string id = record.PxId;
-            int num = record.number;
+        public JsonResult SearchRecordPxIdFirstX([FromBody]dynamic input){
+            //Console.WriteLine(input);
+            string id = input.PxId;
+            int num = input.number;
             var isInDb = (from c in context.CandLiin
                         where c.PxId.ToString().Contains(id)
-                        select c.PxId).Take(num); 
+                        select c.PxId).Take(num);
             Response.StatusCode = 201;
             return Json(data: isInDb);
-        
+
         }
+
+        /// <summary>Search for all records by partial PERS ID</summary>
+        /// <remarks>api/Cand/SearchRecordPersId</remarks>
+        /// <param name="input">Requires in the body: PersId</param>
         [HttpPost]
-        public JsonResult SearchRecordPersId([FromBody]dynamic record){
-            //Console.WriteLine(record);
-            string id = record.PersId;
+        public JsonResult SearchRecordPersId([FromBody]dynamic input){
+            //Console.WriteLine(input);
+            string id = input.PersId;
             var isInDb = (from c in context.CandLiin
                         where c.PersId.ToString().Contains(id)
-                        select c.PersId); 
+                        select c.PersId);
             Response.StatusCode = 201;
             return Json(data: isInDb);
-        
+
         }
+
+        /// <summary>Search for a all records by partial PX ID</summary>
+        /// <remarks>api/Cand/SearchRecordPxId</remarks>
+        /// <param name="input">Requires in the body: PersId, number</param>
         [HttpPost]
-        public JsonResult SearchRecordPxId([FromBody]dynamic record){
-            //Console.WriteLine(record);
-            string id = record.PxId;
+        public JsonResult SearchRecordPxId([FromBody]dynamic input){
+            //Console.WriteLine(input);
+            string id = input.PxId;
             var isInDb = (from c in context.CandLiin
                         where c.PxId.ToString().Contains(id)
-                        select c.PxId); 
+                        select c.PxId);
             Response.StatusCode = 201;
             return Json(data: isInDb);
-        
+
         }
     }
-    
-
 }

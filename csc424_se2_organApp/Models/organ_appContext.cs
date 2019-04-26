@@ -34,7 +34,7 @@ namespace csc424_se2_organApp.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("ProductVersion", "2.2.2-servicing-10034");
+            modelBuilder.HasAnnotation("ProductVersion", "2.2.4-servicing-10062");
 
             modelBuilder.Entity<CandLiin>(entity =>
             {
@@ -2299,7 +2299,7 @@ namespace csc424_se2_organApp.Models
 
                 entity.Property(e => e.PersId)
                     .HasColumnName("pers_id")
-                    .HasColumnType("numeric");
+                    .HasDefaultValueSql("nextval('users.pers_id_gen'::regclass)");
 
                 entity.Property(e => e.Email)
                     .HasColumnName("email")
@@ -2347,7 +2347,7 @@ namespace csc424_se2_organApp.Models
 
                 entity.Property(e => e.CanRaceSrtr)
                     .HasColumnName("can_race_srtr")
-                    .HasColumnType("numeric");
+                    .HasColumnType("character varying(10)");
 
                 entity.Property(e => e.CanSecondaryPay)
                     .HasColumnName("can_secondary_pay")
@@ -2373,7 +2373,7 @@ namespace csc424_se2_organApp.Models
 
                 entity.Property(e => e.Ssn)
                     .HasColumnName("ssn")
-                    .HasColumnType("numeric");
+                    .HasColumnType("character(9)");
 
                 entity.HasOne(d => d.EmailNavigation)
                     .WithMany(p => p.Info)
@@ -3884,6 +3884,8 @@ namespace csc424_se2_organApp.Models
                     .HasColumnName("role")
                     .HasColumnType("character varying(16)");
             });
+
+            modelBuilder.HasSequence("pers_id_gen");
         }
     }
 }
