@@ -24,6 +24,22 @@ namespace csc424_se2_organApp.Controllers
             context = _context;
         }
 
+        [HttpPost]
+        public JsonResult UpdateRecord([FromBody]CandLiin input){
+            
+            try{
+                context.CandLiin.Update(input);
+                context.SaveChanges();
+                Response.StatusCode = 201;
+                return Json(new {success=true});
+            }
+            catch{
+                Response.StatusCode = 400;
+                return Json(new {error="error has occured"});
+            }
+            
+        }
+
         /// <summary>Get a record by PERS ID</summary>
         /// <remarks>api/Cand/GetRecordPersId</remarks>
         /// <param name="input">Requires in the body: PersId</param>
