@@ -24,6 +24,7 @@ import makeSelectAuth from '../../authSelector';
 import LoginPage from 'containers/LoginPage/Loadable';
 import SpecialNav from "../../components/SpecialNav";
 import PrivateRoute from "./PrivateRoute"
+import AboutPage from 'components/About/index.js';
 
 
 
@@ -41,6 +42,7 @@ function App(props) {
         <Route exact path="/" component={HomePage} />
         <Route path="/signup" component={SignUpPage} />
         <Route path="/login" component={LoginPage} />
+        <Route path="/about" component={AboutPage} />
         <PrivateRoute path="/client/home" component={ClientHome}/>
         <PrivateRoute path="/client/information" component={RegForm} />
         <PrivateRoute path="/staff/searchbox" component={SearchBox} />
