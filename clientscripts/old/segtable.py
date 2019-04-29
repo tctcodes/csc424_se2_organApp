@@ -1,3 +1,6 @@
+#this file takes a labed csv and breaks it into smaller segments
+#not used
+
 import os
 import csv
 import sys

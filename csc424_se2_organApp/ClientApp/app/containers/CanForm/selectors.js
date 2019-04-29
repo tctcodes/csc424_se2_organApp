@@ -2,6 +2,9 @@ import { createSelector } from "reselect";
 import { initialState } from "./reducer";
 export const selectCanFormDomain = state => state.get("CanForm", initialState);
 
+export const makeSelectState = () =>
+createSelector(selectCanFormDomain, substate => substate.toJS());
+
 export const makeSelectCanAbo = () =>
 createSelector(selectCanFormDomain, substate => substate.get("canAbo"));
 

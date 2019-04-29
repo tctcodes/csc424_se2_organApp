@@ -1,0 +1,10 @@
+,Missing 
+1,1: Renal insufficiency requiring dialysis 
+2,2: Ascites 
+4,4: Line or IV complication 
+8,8: Pneumothorax 
+16,16: Pneumonia 
+32,32: Wound Complication 
+64,64: Brachial Nerve Injury 
+128,"128: Other, specify "
+**OTHER**,Multiple Choices 

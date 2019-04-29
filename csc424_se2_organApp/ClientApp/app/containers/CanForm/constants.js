@@ -1,3 +1,4 @@
+export const SAVE_RECORD = "app/CanForm/SAVE_RECORD";
 export const GET_RECORD_PX_ID = "app/CanForm/GET_RECORD_PX_IDE";
 export const SET_RECORD = "app/CanForm/SET_RECORD";
 export const CHANGE_CANABO = "app/CanForm/CHANGE_CANABO";

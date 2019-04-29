@@ -1,0 +1,7 @@
+A,A: Alive 
+D,D: Dead 
+F,F: Graft Failure: fol_cd = 801 
+G,G: Graft Failure: fol_cd = 800 
+L,L: Lost 
+R,R: Retransplanted 
+S,S: Graft Failure: fol_cd = 802 

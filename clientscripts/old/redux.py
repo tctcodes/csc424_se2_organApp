@@ -1,3 +1,8 @@
+# creates partial redux boilerplate
+# state, constants, actions, reducers
+
+#user redux_streamed !!!!
+
 import os
 import csv
 import sys
