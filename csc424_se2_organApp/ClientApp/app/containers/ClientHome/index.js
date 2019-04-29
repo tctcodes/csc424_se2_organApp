@@ -17,6 +17,7 @@ import makeSelectClientHome from "./selectors";
 import reducer from "./reducer";
 import saga from "./saga";
 import {checkInfo} from "./actions"
+import makeSelectAuth from "../../authSelector";
 
 /* eslint-disable react/prefer-stateless-function */
 export class ClientHome extends React.PureComponent {
@@ -41,7 +42,8 @@ ClientHome.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
-  clientHome: makeSelectClientHome()
+  clientHome: makeSelectClientHome(),
+  auth: makeSelectAuth()
 });
 
 function mapDispatchToProps(dispatch) {

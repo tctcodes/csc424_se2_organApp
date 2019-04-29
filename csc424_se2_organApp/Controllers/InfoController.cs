@@ -23,9 +23,7 @@ namespace csc424_se2_organApp.Controllers
     [HttpPost]
     public JsonResult UploadInfo([FromBody]Info record){
         var Email = record.Email;
-        if(record.CanYearEntryUs is string){
-            record.CanYearEntryUs = null;
-        }
+        Console.WriteLine("insert");
         Console.WriteLine($"*******************************{Email}");
         // var findUser = (from c in context.Users 
         //                 where c.Email == Email
@@ -39,7 +37,7 @@ namespace csc424_se2_organApp.Controllers
         context.SaveChanges();
         
 
-        return Json(record);
+        return Json(new {success = "success"});
 
     }
     [HttpPost]
@@ -52,7 +50,7 @@ namespace csc424_se2_organApp.Controllers
             return Json(new {error = "User Must Fill Out information"});
         }
         else{
-            return Json(new {success="success"});
+            return Json(isInDb);
         }
     }
 
