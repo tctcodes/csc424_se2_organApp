@@ -2364,13 +2364,17 @@ namespace csc424_se2_organApp.Models
                     .HasColumnName("can_year_entry_us")
                     .HasColumnType("numeric");
 
-                entity.Property(e => e.Fullname)
-                    .HasColumnName("fullname")
+                entity.Property(e => e.FullName)
+                    .HasColumnName("fullName")
                     .HasColumnType("character varying");
 
                 entity.Property(e => e.PersId)
                     .HasColumnName("pers_id")
                     .HasDefaultValueSql("nextval('users.pers_id_gen'::regclass)");
+
+                entity.Property(e => e.RacesSelected)
+                    .HasColumnName("racesSelected")
+                    .HasColumnType("json");
 
                 entity.Property(e => e.Ssn)
                     .HasColumnName("ssn")

@@ -20,10 +20,19 @@ import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
 import reducer from "./reducer";
 import saga from "./saga";
-import { dumpFormToState, uploadForm } from './actions';
+import { dumpFormToState, uploadForm,retrieveData } from './actions';
 import makeSelectRegForm from './selectors';
 import { createStructuredSelector } from 'reselect';
+import makeSelectAuth from '../../authSelector';
+import { checkInfo } from '../ClientHome/actions';
 
+function checkProperties(obj) {
+  for (var key in obj) {
+      if (obj[key] == null || obj[key] == "")
+          return false;
+  }
+  return true;
+}
 function validateSSN (elementValue){
   var  ssnPattern = /^[0-9]{3}\-?[0-9]{2}\-?[0-9]{4}$/;
   return ssnPattern.test(elementValue);
@@ -38,116 +47,165 @@ function isState(string){
     return false
   return true;
 }
-let zipcode = 0;
-let city = ""
+
 /* eslint-disable react/prefer-stateless-function */
 export class RegForm extends React.PureComponent {
   constructor(){
     super()
     this.state ={
-      Email: "",
-      Fullname: "",
-      Address: '',
-      Ssn: '',
-      CanGender:'',
-      CanCitizenship: '',
-      CanYearEntryUs: '',
-      CanEmplStat: '',
-      CanEducation: '',
-      CanAcademicLevel: '',
-      CanAcademicProgress: '',
-      CanPrimaryPay: '',
-      CanSecondaryPay: '',
-      CanRace: 0,
+      email: '',
+      fullName: "",
+      address: {
+        streetAddress: '',
+        city:'',
+        state: '',
+        zipCode:''
+
+      },
+      racesSelected:{
+        white:false,
+        black:false,
+        native:false,
+        asian:false,
+        hawaii:false,
+        arab:false,
+        indian:false,
+        latino:false
+      },
+      ssn: '',
+      canGender:'',
+      canCitizenship: '',
+      canYearEntryUs: '',
+      canEmplStat: '',
+      canEducation: '',
+      canAcademicLevel: '',
+      canAcademicProgress: '',
+      canPrimaryPay: '',
+      canSecondaryPay: '',
+      canRace: 0,
     }
     this.raceArray =[]
     for (let i = 0; i< 8; i++){
       this.raceArray[i] = React.createRef();
     }
   }
-  
+  componentDidMount(){
+    this.setState({email:this.props.auth.user.name});
+    this.props.onRetrieveData();
+    
+  }
+  static getDerivedStateFromProps(props,state){
+  if (state !== props.state){
+    return{
+      ...props.state
+    }
+  }
+ }
   
   onChangeEmail = (e) =>{
     this.setState({
-      Email: e.target.value
+      email: e.target.value
     });
   };
   
   onChangeName = (e) =>{
     this.setState({
-      Fullname: e.target.value
+      fullName: e.target.value
     });
   };
   onChangeAddress = (e) =>{
-    this.setState({
-      Address: e.target.value
-    });
+    e.persist()
+    this.setState(prevState => ({
+      address: {
+          ...prevState.address,
+          streetAddress: e.target.value
+      }
+  }))
   };
   onChangeCity = (e) =>{
-    city = e.target.value
+    e.persist()
+    this.setState(prevState => ({
+      address: {
+          ...prevState.address,
+          city: e.target.value
+      }
+  }))
   };
   onChangeZip = (e) =>{
-    zipcode = e.target.value
+    e.persist()
+    this.setState(prevState => ({
+      address: {
+          ...prevState.address,
+          zipCode: e.target.value
+      }
+  }))
   };
   onChangeSt = (e) =>{
+    e.persist()
     this.setState({
-      CanPermState: e.target.value.toUpperCase()
+      canPermState: e.target.value.toUpperCase()
     });
+    this.setState(prevState => ({
+      address: {
+          ...prevState.address,
+          state: e.target.value.toUpperCase()
+      }
+  }))
   };
   onChangeSSN = (e) =>{
     this.setState({
-      Ssn: e.target.value
+      ssn: e.target.value
     });
   };
   
   onChangeGender = (e) =>{
     this.setState({
-      CanGender: e.target.value
+      canGender: e.target.value
     });
   };
 
   onChangeCitizen = e =>{
     this.setState({
-      CanCitizenship: parseInt(e.target.value)
+      canCitizenship: parseInt(e.target.value)
     });
   };
   onChangeYear = e =>{
     this.setState({
-      CanYearEntryUs: e.target.value
+      canYearEntryUs: e.target.value
     });
   };
   onChangeEmpl = e =>{
     this.setState({
-      CanEmplStat: parseInt(e.target.value)
+      canEmplStat: parseInt(e.target.value)
     });
   };
   onChangeEdu = e =>{
     this.setState({
-      CanEducation: parseInt(e.target.value)
+      canEducation: parseInt(e.target.value)
     });
   };
 
   onChangeAcademicProg = e =>{
     this.setState({
-      CanAcademicProgress: parseInt(e.target.value)
+      canAcademicProgress: parseInt(e.target.value)
     });
   };
 
   onChangeAcademicLev = e =>{
     this.setState({
-      CanAcademicLevel: parseInt(e.target.value)
+      canAcademicLevel: parseInt(e.target.value)
     });
   };
   
   onChangePrimaryPay = e =>{
     this.setState({
-      CanPrimaryPay: parseInt(e.target.value)
+      canPrimaryPay: parseInt(e.target.value)
     });
   };
 
   onChangeSecondaryPay = e =>{
     this.setState({
-      CanSecondaryPay: parseInt(e.target.value)
+      canSecondaryPay: parseInt(e.target.value)
     });
   };
 
@@ -157,8 +215,20 @@ export class RegForm extends React.PureComponent {
       if(this.raceArray[i].current.checked == true){
         value += parseInt(this.raceArray[i].current.value)
       }
+      
     }
+    
     return value;
+  }
+  checkbox = (e) =>{
+    e.persist();
+    this.setState(prevState =>({
+      racesSelected:{
+        ...prevState.racesSelected,
+        [e.target.name]:e.target.checked
+      }
+    }))
+    
   }
 
   onSubmit = () =>{
@@ -199,45 +269,51 @@ export class RegForm extends React.PureComponent {
         break;
       
     }
-    if(this.state.CanEmplStat >=1 && this.state.CanEmplStat <=4)
+    if(this.state.canEmplStat >=1 && this.state.canEmplStat <=4)
       workForIncome = "Y"
     else 
       workForIncome ="N"
     
     this.setState({
-      Address: `${this.state.Address},${city}, ${this.state.CanPermState}, ${zipcode}`,
-      CanRaceSrtr: srtrRace,
-      CanRace: raceValue,
-      CanEthnicitySrtr:isLatin,
-      CanWorkIncome: workForIncome,
+      //address: `${this.state.Address},${city}, ${this.state.CanPermState}, ${zipcode}`,
+      canRaceSrtr: srtrRace,
+      canRace: raceValue,
+      canEthnicitySrtr:isLatin,
+      canWorkIncome: workForIncome,
 
     },()=>{
       Object.keys(this.state).map(e=>{
-        if(this.state[e]==='' || this.state[e]===0)
+        if(this.state[e]==='' || this.state[e]===0||!checkProperties(this.state.Address))
           complete = false
       })
+      
       if(complete === false){
         alert("All fields must be filled");
         return;
       }
-      if(!isState(this.state.CanPermState)){
+      if(isNaN(parseInt(this.state.address.zipCode)) || this.state.address.zipCode.length != 5){
+        alert("Invalid Zip Code");
+        return
+      }
+      if(!isState(this.state.canPermState)){
         alert("Not Valid State")
         return;
       }
-      if(!validateSSN(this.state.Ssn)){
+      if(!validateSSN(this.state.ssn)){
         alert("Not Valid SSN")
         return;
       }
-      if(this.state.CanYearEntryUs.toUpperCase() !="N/A"){
+      if(this.state.canYearEntryUs.toUpperCase() !="N/A"){
         if(isNaN(this.state.CanYearEntryUs)){
           alert("Year must be a number");
           return;
         }
-        let num = parseInt(this.state.CanYearEntryUs)
+        let num = parseInt(this.state.canYearEntryUs)
         if(num > (new Date().getFullYear) || num < 1895 || num === NaN){
           alert("Year must be between 1895 to present");
           return
         }
+        
       }
       this.props.onStateDump(this.state);
       this.props.onUpload();
@@ -258,28 +334,28 @@ export class RegForm extends React.PureComponent {
         </Helmet>
         <Form className="container mt-5" >
           <Form.Group controlId="formBasicEmail">
-            <Form.Control type="email" placeholder="Email" onChange = {this.onChangeEmail}/>
+            <Form.Control type="email" placeholder="Email" onChange = {this.onChangeEmail} value ={this.props.auth.user.name} readOnly/>
           </Form.Group>
           <Form.Group>
-            <Form.Control type="text" placeholder="Name" onChange ={this.onChangeName}/>
+            <Form.Control type="text" placeholder="Name" onChange ={this.onChangeName} value={this.state.fullName}/>
           </Form.Group>
           <Form.Group>
-            <Form.Control type="text" placeholder="Street Address" onChange = {this.onChangeAddress}/>
+            <Form.Control type="text" placeholder="Street Address" onChange = {this.onChangeAddress} value={this.state.address.streetAddress}/>
           </Form.Group>
           <Form.Group>
-            <Form.Control type="text" placeholder="City" onChange = {this.onChangeCity}/>
+            <Form.Control type="text" placeholder="City" onChange = {this.onChangeCity}value={this.state.address.city}/>
           </Form.Group>
           <Form.Group>
-            <Form.Control type="text" placeholder="Zip Code" maxLength="5" onChange = {this.onChangeZip}/>
+            <Form.Control type="text" placeholder="Zip Code" maxLength="5" onChange = {this.onChangeZip}value={this.state.address.zipCode}/>
           </Form.Group>
           <Form.Group>
-            <Form.Control type="text" placeholder="State (MS,LA etc)" maxLength="2" onChange = {this.onChangeSt}/>
+            <Form.Control type="text" placeholder="State (MS,LA etc)" maxLength="2" onChange = {this.onChangeSt}value={this.state.address.state}/>
           </Form.Group>
           <Form.Group>
-            <Form.Control type="text" maxLength ="11" placeholder="Social Security Number(format xxx-xx-xxxx)" onChange = {this.onChangeSSN}/>
+            <Form.Control type="text" maxLength ="11" placeholder="Social Security Number(format xxx-xx-xxxx)" onChange = {this.onChangeSSN} value={this.state.ssn}/>
           </Form.Group>
           <Form.Group>
-            <select className="form-control" onChange = {this.onChangeGender}>
+            <select className="form-control" onChange = {this.onChangeGender}value={this.state.canGender}>
               <option value="0">Gender</option>
               <option value="M">Male</option>
               <option value="F">Female</option>
@@ -287,17 +363,17 @@ export class RegForm extends React.PureComponent {
           </Form.Group>
           <label style={{fontFamily:"sans-serif"}}>Race</label>
           <ul style={{listStyleType: "none"}}>
-            <li><input type="checkbox" value="8" ref = {this.raceArray[0]}></input> White</li>
-            <li><input type="checkbox" value="16" ref = {this.raceArray[1]}></input> Black or African American</li>
-            <li><input type="checkbox" value="32" ref = {this.raceArray[2]}></input> American Indian or Alaska Native</li>
-            <li><input type="checkbox" value="64" ref = {this.raceArray[3]}></input> Asian</li>
-            <li><input type="checkbox" value="128"ref = {this.raceArray[4]}></input> Native Hawaiian or Other Pacific Islander</li>
-            <li><input type="checkbox" value="256"ref = {this.raceArray[5]}></input> Arab or Middle Eastern</li>
-            <li><input type="checkbox" value="512"ref = {this.raceArray[6]}></input> Indian Sub-continent</li>
-            <li><input type="checkbox" value="2000"ref = {this.raceArray[7]}></input> Hispanic/Latino</li>
+            <li><input type="checkbox" value="8" ref = {this.raceArray[0]} defaultChecked ={this.state.racesSelected["white"]}onChange ={this.checkbox} name ="white"></input> White</li>
+            <li><input type="checkbox" value="16" ref = {this.raceArray[1]}defaultChecked ={this.state.racesSelected["black"]}onChange ={this.checkbox}name ="black"></input> Black or African American</li>
+            <li><input type="checkbox" value="32" ref = {this.raceArray[2]}defaultChecked ={this.state.racesSelected["native"]}onChange ={this.checkbox}name ="native"></input> American Indian or Alaska Native</li>
+            <li><input type="checkbox" value="64" ref = {this.raceArray[3]}defaultChecked ={this.state.racesSelected["asian"]}onChange ={this.checkbox}name ="asian"></input> Asian</li>
+            <li><input type="checkbox" value="128"ref = {this.raceArray[4]}defaultChecked ={this.state.racesSelected["hawaii"]}onChange ={this.checkbox}name ="hawaii"></input> Native Hawaiian or Other Pacific Islander</li>
+            <li><input type="checkbox" value="256"ref = {this.raceArray[5]}defaultChecked ={this.state.racesSelected["arab"]}onChange ={this.checkbox}name ="arab"></input> Arab or Middle Eastern</li>
+            <li><input type="checkbox" value="512"ref = {this.raceArray[6]}defaultChecked ={this.state.racesSelected["indian"]}onChange ={this.checkbox}name ="indian"></input> Indian Sub-continent</li>
+            <li><input type="checkbox" value="2000"ref = {this.raceArray[7]}defaultChecked ={this.state.racesSelected["latino"]}onChange ={this.checkbox}name ="latino"></input> Hispanic/Latino</li>
           </ul>
           <Form.Group>
-            <select className="form-control" onChange = {this.onChangeCitizen}>
+            <select className="form-control" onChange = {this.onChangeCitizen} value={this.state.canCitizenship}>
               <option value="0">Select Citizenship Status</option>
               <option value="1">US Citizen</option>
               <option value="2">RESIDENT ALIEN</option>
@@ -307,10 +383,10 @@ export class RegForm extends React.PureComponent {
             </select>
           </Form.Group>
           <Form.Group>
-            <Form.Control type ="text" placeholder="Year entered US, Type N/A if US-born citizen"onChange ={this.onChangeYear}></Form.Control>
+            <Form.Control type ="text" placeholder="Year entered US, Type N/A if US-born citizen"onChange ={this.onChangeYear} value={this.state.canYearEntryUs}></Form.Control>
           </Form.Group>
           <Form.Group>
-            <select className="form-control"onChange ={this.onChangeEmpl}>
+            <select className="form-control"onChange ={this.onChangeEmpl}value={this.state.canEmplStat}>
               <option value="0">Select Employment Status</option>
               <option value="1">WORKING FULL TIME</option>
               <option value="2">WORKING PART TIME BY CHOICE</option>
@@ -326,7 +402,7 @@ export class RegForm extends React.PureComponent {
           </Form.Group>
           <label style={{fontFamily:"sans-serif"}}>Education</label>
           <Form.Group>
-            <select className="form-control" onChange ={this.onChangeEdu}>
+            <select className="form-control" onChange ={this.onChangeEdu}value={this.state.canEducation}>
               <option value="0">Select Education</option>
               <option value="1">None</option>
               <option value="2">GRADE SCHOOL (0-8)</option>
@@ -338,7 +414,7 @@ export class RegForm extends React.PureComponent {
             </select>
           </Form.Group>
           <Form.Group>
-            <select className="form-control" onChange ={this.onChangeAcademicProg}>
+            <select className="form-control" onChange ={this.onChangeAcademicProg} value={this.state.canAcademicProgress}>
               <option value="0">Select Academic Progress</option>
               <option value="1">Within One Grade Level of Peers</option>
               <option value="2">Delayed Grade Level</option>
@@ -347,7 +423,7 @@ export class RegForm extends React.PureComponent {
             </select>
           </Form.Group>
           <Form.Group>
-            <select className="form-control" onChange ={this.onChangeAcademicLev}>
+            <select className="form-control" onChange ={this.onChangeAcademicLev} value={this.state.canAcademicLevel}>
               <option value="0">Select Academic Activity</option>
               <option value="1">Full academic load</option>
               <option value="2">Reduced academic load</option>
@@ -358,7 +434,7 @@ export class RegForm extends React.PureComponent {
           </Form.Group>
           <label style={{fontFamily:"sans-serif"}}>Payment</label>
           <Form.Group>
-            <select className="form-control" onChange ={this.onChangePrimaryPay}>
+            <select className="form-control" onChange ={this.onChangePrimaryPay} value={this.state.canPrimaryPay}>
               <option value="0">Select Primary Payment</option>
               <option value="1">Private insurance</option>
               <option value="2">Public insurance - Medicaid</option>
@@ -377,7 +453,7 @@ export class RegForm extends React.PureComponent {
             </select>
           </Form.Group>
           <Form.Group>
-            <select className="form-control" onChange={this.onChangeSecondaryPay}>
+            <select className="form-control" onChange={this.onChangeSecondaryPay} value={this.state.canSecondaryPay}>
               <option value="0">Select Secondary Payment</option>
               <option value="1">Private insurance</option>
               <option value="2">Public insurance - Medicaid</option>
@@ -405,12 +481,14 @@ export class RegForm extends React.PureComponent {
 }
 
 const mapStateToProps = createStructuredSelector({
-  state: makeSelectRegForm()
+  state: makeSelectRegForm(),
+  auth: makeSelectAuth()
 });
 function mapDispatchToProps(dispatch) {
   return {
     onStateDump: (state) => dispatch(dumpFormToState(state)),
-    onUpload: () => dispatch(uploadForm())
+    onUpload: () => dispatch(uploadForm()),
+    onRetrieveData: ()=>dispatch(retrieveData())
   };
 }
 

@@ -79,8 +79,6 @@ LoginPage.propTypes = {
 const mapStateToProps = createStructuredSelector({
   email: makeSelectEmail(),
   password: makeSelectPassword(),
-  role: makeSelectRole(),
-  token: makeSelectToken(),
   auth:makeSelectAuth()
 });
 
