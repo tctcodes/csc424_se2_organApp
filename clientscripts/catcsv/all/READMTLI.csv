@@ -1,0 +1,9 @@
+,Missing 
+1,1: Wound Infection 
+2,2: Fever 
+4,4: Bowel Obstruction 
+8,8: Pleural Effusion 
+16,16: Biliary Complications 
+32,32: Vascular Complications 
+64,"64: Other, specify "
+**OTHER**,Multiple Choices 

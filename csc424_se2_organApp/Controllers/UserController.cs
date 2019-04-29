@@ -20,38 +20,37 @@ namespace csc424_se2_organApp.Controllers
     [ApiController]
     public class UserController : Controller{
 
-       
         private readonly organ_appContext context;
-    
-        public UserController(organ_appContext _context)         
-        {             
-            context = _context;       
+
+        public UserController(organ_appContext _context)
+        {
+            context = _context;
         }
-        
+
         [HttpPost]
         public JsonResult NewUser([FromBody]Users user){
-            
+
             var isInDb = context.Users.Find(user.Email);
             if(isInDb != null){
                 Response.StatusCode = 422;
-                return Json(new {error="User Already Exists"}); 
+                return Json(new {error="User Already Exists"});
             }
             user.Password = BCrypt.HashPassword(user.Password);
             context.Users.Add(user);
-            context.SaveChanges(); 
+            context.SaveChanges();
             Response.StatusCode = 201;
             return Json(new {message = $"{user.Email} created"});
-        
+
         }
 
         [HttpPost]
         public JsonResult AuthUser([FromBody]Users user){
-            
+
             //Console.Write(user.Email);
             Users foundUser = context.Users.Find(user.Email);
             if(foundUser == null){
                 Response.StatusCode = 404;
-                return Json(new {error="User Not Found"}); 
+                return Json(new {error="User Not Found"});
             }
             var validPw=BCrypt.Verify(user.Password,foundUser.Password);
             if(!validPw){
@@ -59,14 +58,14 @@ namespace csc424_se2_organApp.Controllers
                 return Json(new {error ="Invalid Password"});
             }
             else{
-                
+
                 Response.StatusCode = 200;
                 var tokenHandler = new JwtSecurityTokenHandler();
                 var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("THIS IS MY RIFLE THIS IS MY GUN, THIS ONE'S FOR FIGHTING THIS ONE'S FOR FUN"));
                 var claims = new[]
                 {
-                    new Claim(ClaimTypes.Name, user.Email),
-                    new Claim(ClaimTypes.Role, user.Role)
+                    new Claim(ClaimTypes.Name, foundUser.Email),
+                    new Claim(ClaimTypes.Role, foundUser.Role)
                 };
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
                 var token = new JwtSecurityToken(

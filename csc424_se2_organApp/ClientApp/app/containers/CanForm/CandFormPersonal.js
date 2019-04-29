@@ -7,6 +7,70 @@ import * as select from './selectors';
 import * as action from './actions';
 
 export class CandFormPersonal extends React.Component {
+
+	valToChoice = (value = 0) => {
+		//convert database value to string array.
+
+		let v = value; //copy value
+		let choiceArray = [];
+		let power = 0;
+		
+		//bitwise opperations
+		while (v > 0){
+			if (v & 1){
+				choiceArray.push((1<<power).toString())
+			}
+			power++;
+			v = v >> 1;
+			//console.log("v: ",v)
+		}
+		return choiceArray;
+	}
+	
+	modifyChoice = (e) => {
+		//prevent default <select> behavoir 
+		//this gives expected selecting behavoir
+		e.preventDefault();
+
+		let option = e.target
+		let array = this.valToChoice(this.props.canMaligTy)
+		
+		//toggle selected option
+		option.selected = !option.selected;
+		
+		//if new value is selected
+		if (option.selected && array.find(v=>v==option.value) == undefined){
+			array.push(option.value);
+		}
+
+		//if old value is removed
+		if(!option.selected && array.find(v=>v==option.value != undefined)){
+			array = array.filter(v=>v!=option.value)
+		}
+
+		//convert value and dispatch
+		this.choiceToValDispatch(e,array)
+	}
+	
+
+	choiceToValDispatch = (e, choiceArray) => {
+		//convert array into a summed int
+		//get name prop from parent ("e",<option>, is a child of <select>)
+		let { name } = e.target.parentNode;
+		
+		//sum a
+		let v = 0
+		for (let i = 0, l = choiceArray.length; i < l; i++){
+			v=v+parseInt(choiceArray[i]);
+		}
+		
+		//dummy object to hold choiceArray
+		let z={target:{value:v}}
+		
+		//call dispatch with parent name, and set new redux value
+		this.props[name](z)
+	}
+
 	render(){ 
 		return(
 			<div className="d-flex flex-wrap bg-light">

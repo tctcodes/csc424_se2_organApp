@@ -1,0 +1,309 @@
+CANHX_MPXCPT_HCC_APPLY_IND,num,8,,Ever Applied for an HCC exception,1
+CANHX_MPXCPT_HCC_APPROVE_IND,num,8,,Ever Approved for an HCC exception,1
+CAN_ABO,char,3,$ABO,Patient/s Blood Type,1
+CAN_AGE_AT_LISTING,num,8,AGE9A,Calculated Candidate Age at Listing,1
+CAN_AGE_IN_MONTHS_AT_LISTING,num,8,,Calculated Candidate Age in Months at Listing,1
+CAN_ANGINA,num,8,ANGINA,Angina/Coronary Artery Disease,1
+CAN_ANGINA_CAD,num,8,ANGNACAD,Angina:,1
+CAN_BACTERIA_PERIT,char,1,,Spontaneous Bacterial Peritonitis,1
+CAN_CEREB_VASC,char,1,,Symptomatic Cerebrovascular Disease,1
+CAN_CITIZENSHIP,num,8,CTZNLDTC,Patient/s Citizenship,1
+CAN_DGN,num,8,DGN,Primary Diagnosis,1
+CAN_DGN2,num,8,DGN,Secondary Diagnosis,1
+CAN_DIAB,num,8,DBINSLDP,Diabetes,1
+CAN_DIAB_TY,num,8,DIABTY,Diabetes,1
+CAN_DRUG_TREAT_COPD,char,1,,Drug Treated COPD,1
+CAN_DRUG_TREAT_HYPERTEN,char,1,,Drug Treated Systemic Hypertension,1
+CAN_EDUCATION,num,8,EDLEVEL,Patient/s Educational Status,1
+CAN_ETHNICITY_SRTR,char,10,$ETHSR,SRTR Patient Ethnicity,1
+CAN_GENDER,char,1,,Patient/s Gender,1
+CAN_HGT_CM,num,8,,Candidate/s Height (stored in cm),1
+CAN_INIT_ACT_STAT_CD,num,8,CANDSTAT,First Active Status,1
+CAN_INIT_ACT_STAT_DT,num,8,MMDDYY,Date of First Active Status,1
+CAN_INIT_INACT_STAT_DT,num,8,MMDDYY,Date of First Inactive Status,1
+CAN_INIT_SRTR_LAB_MELD,num,8,CANDSTAT,First SRTR MELD/PELD given,1
+CAN_INIT_SRTR_LAB_MELD_TY,char,1,,First SRTR MELD/PELD type given,2
+CAN_INIT_STAT,num,8,CANDSTAT,Initial Status of Patient,2
+CAN_LAST_ACT_STAT_DT,num,8,MMDDYY,Last Date of Active Status,2
+CAN_LAST_ALBUMIN,num,8,,Candidate Last Albumin (used for MELD),2
+CAN_LAST_ASCITES,num,8,ASCITES,Candidate Last Ascites (used for MELD),2
+CAN_LAST_BILI,num,8,,Candidate Last Bilirubin (used for MELD),2
+CAN_LAST_DIAL_PRIOR_WEEK,char,1,,Last non-blank val. of dialysis within prior week,2
+CAN_LAST_ENCEPH,num,8,ENCEPH,Candidate Last Encephalopathy (used for MELD),2
+CAN_LAST_INACT_STAT_DT,num,8,MMDDYY,Last Date of Inactive Status,2
+CAN_LAST_INR,num,8,,Candidate Last INR (used for MELD),2
+CAN_LAST_SERUM_CREAT,num,8,,Candidate Last Serum Creatinine mg/dl (used for MELD),2
+CAN_LAST_SERUM_SODIUM,num,8,,Candidate Last Serum Sodium (used for MELD),2
+CAN_LAST_SRTR_LAB_MELD,num,8,CANDSTAT,Last SRTR MELD/PELD given,2
+CAN_LAST_SRTR_LAB_MELD_TY,char,1,,Last SRTR MELD/PELD type given,2
+CAN_LAST_STAT,num,8,CANDSTAT,Last Status of Patient (with 2 day rule),2
+CAN_LISTING_DT,num,8,MMDDYY,Listing Date - date/time candidate was physically added to the waiting list - this date/time does not change for transfers,2
+CAN_MALIG,char,1,,Any previous Malignancy,2
+CAN_PEPTIC_ULCER,num,8,PEPULCER,Peptic Ulcer Disease,2
+CAN_PERIPH_VASC,char,1,,Symptomatic Peripheral Vascular Disease,2
+CAN_PORTAL_VEIN,char,1,,History of Portal Vein Thrombosis,2
+CAN_PREV_ABDOM_SURG,char,1,,Previous Upper Abdominal Surgery,2
+CAN_PREV_HL,num,8,,Prev Heart-Lung Tx,2
+CAN_PREV_HR,num,8,,Prev Heart Tx,2
+CAN_PREV_IN,num,8,,Prev Intestine Tx,2
+CAN_PREV_KI,num,8,,Prev Kidney Tx,3
+CAN_PREV_KP,num,8,,Prev Kidney-Pancreas Tx,3
+CAN_PREV_LI,num,8,,Prev Liver Tx,3
+CAN_PREV_LU,num,8,,Prev Lung Tx,3
+CAN_PREV_PA,num,8,,Prev Pancreas Tx,3
+CAN_PREV_TX,num,8,,Previous Transplants,3
+CAN_PREV_TXFUS,char,1,,Any Previous Transfusions,3
+CAN_PULM_EMBOL,char,1,,Pulmonary Embolism,3
+CAN_RACE,num,8,RACE,Patient/s Race,3
+CAN_RACE_SRTR,char,10,$RACEBSR,SRTR Patient Race,3
+CAN_REM_CD,num,8,REMCD,Reason why candidate was removed,3
+CAN_SOURCE,char,1,,"Source of Candidate Data A =Active WL,R= Removed,L=Living Don",3
+CAN_TIPSS,char,1,,History of TIPSS,3
+CAN_TOT_ALBUMIN,num,8,,Total Serum Albumin,3
+CAN_WGT_KG,num,8,,Candidate/s Weight in kilograms,3
+DONOR_ID,num,8,,Encrypted Unique Donor ID (all donors) - foreign key,3
+DONOR_ID_VESSEL,num,8,,Encrypted Vessel Donor ID,3
+DON_A1,num,8,ALOCUS,Donor/s HLA - A (1) antigen,3
+DON_A2,num,8,ALOCUS,Donor/s HLA - A (2) antigen,3
+DON_ABO,char,3,$ABO,Donor/s Blood Type,3
+DON_AGE,num,8,,Calculated Donor Age in Years at Organ Recovery or Referral Date,3
+DON_AGE_IN_MONTHS,num,8,,Donor/s Age in Months,3
+DON_ANTI_CMV,char,2,$SRLSTT,Anti-CMV,3
+DON_ANTI_HCV,char,2,$SRLSTT,Anti-HCV,3
+DON_B1,num,8,BLOCUS,Donor/s HLA - B (1) antigen,4
+DON_B2,num,8,BLOCUS,Donor/s HLA - B (2) antigen,4
+DON_CAD_DON_COD,num,8,DONCOD,Donor/s Cause of Death,4
+DON_CARDIAC_ARREST_AFTER_DEATH,char,1,,Cardiac Arr. Since Event that led to Decl of Death,4
+DON_CITIZENSHIP,num,8,CITIZEN,Donor/s Citizenship,4
+DON_CMV_IGG,char,2,$SRLSTT,CMV IgG,4
+DON_COD_DON_STROKE,num,3,,"Donor cause of death is stroke (1= yes, 0= no)",4
+DON_CONT_CIGARETTE,char,1,,Donor/s Continued Use in Last 6 Months,4
+DON_CONT_COCAINE,char,1,,Cocaine Use Last 6 Months,4
+DON_CONT_IV_DRUG,char,1,,IV Drug Last 6 Months,4
+DON_CONT_OTHER_DRUG,char,1,,Other Drug Abuse Last 6 Months,4
+DON_CREAT,num,8,,Serum Creatinine,4
+DON_DDAVP,char,1,,Meds given Donor: DDAVP,4
+DON_DEATH_CIRCUM,num,8,DTHCRCM,Cirumstances of Death,4
+DON_DEATH_MECH,num,8,DTHMCH,Mechanism of Death,4
+DON_DOBUTAMINE,char,1,,Meds given Donor: Dobutamine,4
+DON_DOPAMINE,char,1,,Meds given Donor: Dopamine,4
+DON_DR1,num,8,DRLOCUS,Donor/s HLA - DR (1) antigen,4
+DON_DR2,num,8,DRLOCUS,Donor/s HLA - DR (2) antigen,4
+DON_ETHNICITY_SRTR,char,10,$ETHSR,SRTR Donor Ethnicity,4
+DON_EXPAND_DON_KI,num,3,,"Meets expanded donor criteria for kidney (1= yes , 0= no)",4
+DON_GENDER,char,1,,Donor/s Gender,4
+DON_HAPLO_TY_MATCH,num,8,HAPLOTY,Haplotype Match Between Live Donor & Recipient,4
+DON_HGT_CM,num,8,,Donor/s Height in centimeters,4
+DON_HIGH_CREAT,num,3,,"Donor serum creatinine > 1.5 (1= yes, 0= no)",5
+DON_HIST_CANCER,num,8,HSTSTST,History of Cancer,5
+DON_HIST_CIGARETTE_GT20_PKYR,char,1,,Cigarette Use > 20 Pack Years - Ever,5
+DON_HIST_COCAINE,char,1,,Cocaine Use,5
+DON_HIST_DIAB,num,8,HSTDBDR,History of Diabetes,5
+DON_HIST_HYPERTEN,num,8,HSTHYPDR,History of Hypertension,5
+DON_HIST_IV_DRUG,char,1,,IV Drug Use - Pre-6/30/2004,5
+DON_HIST_OTHER_DRUG,char,1,,Other Drug Abuse,5
+DON_HTN,num,3,,"Donor history of hypertension (1= yes, 0= no)",5
+DON_INOTROP_AGENT_GE3,char,1,,Three or More Inotropic Agents at Time of Incision,5
+DON_INOTROP_SUPPORT,char,1,,Inotropic Support,5
+DON_INSULIN,char,1,,Insulin:,5
+DON_LIVING_DON_COD,num,8,LVDNCD,Donor/s Cause of Death,5
+DON_LI_BIOPSY,char,1,,Liver Biopsy,5
+DON_MEET_CDC_HIGH_RISK,char,1,,Does the Donor meet CDC guidelines for High Risk for an organ donor:,5
+DON_NON_HR_BEAT,char,1,,Non-Heart Beating Donor,5
+DON_OPO_CTR_ID,num,4,,DON_OPO_ Center ID,5
+DON_ORG_SHARED,num,8,,Organ was used in a shared 1 (vs local 0) TX,5
+DON_PH,num,8,,Blood PH:,5
+DON_PRERECOV_DIURETICS,char,1,,Pre-Recov Meds given Donor: Diuretics,5
+DON_RACE,num,8,RACE,Donor/s race,5
+DON_RACE_SRTR,char,10,$RACEBSR,SRTR Donor Race,5
+DON_RECOV_DT,num,8,MMDDYY,Recovery Date (donor to OR),5
+DON_RELATIONSHIP_TY,num,8,LVDNRL,Living Donor/s Relationship to Recipient,5
+DON_SGOT,num,8,,SGOT/AST,6
+DON_SGOT_PREOP,num,8,,SGOT/AST:,6
+DON_SGPT_PREOP,num,8,,SGPT/ALT:,6
+DON_TY,char,3,,"Donor Type (C-deceased, L-living)",6
+DON_WARM_ISCH_TM_MINS,num,8,,Estimated Warm Ischemic Time in minutes,6
+DON_WGT_KG,num,8,,Donor/s Weight in kilograms,6
+ORG_AR,char,3,,Organ type with pancreas expanded to PTA and PAK,6
+ORG_TY,char,4,$WLORG,Organ Type,6
+PERS_ID,num,8,,Unique person ID to replace SSN,6
+PERS_OPTN_COD,num,8,COD,Person Cause of Death,6
+PERS_OPTN_DEATH_DT,num,8,MMDDYY,OPTN Death date by unique person,6
+PERS_RELIST,num,8,MMDDYY,Re-list date after current tx,6
+PERS_RESTRICT_DEATH_DT,num,8,MMDDYY,Restricted death date,6
+PERS_RESTRICT_DEATH_VRFY,char,1,$DTHVRFY,Restricted death verification level,6
+PERS_RETX,num,8,MMDDYY,ReTx date after current tx,6
+PERS_RETX_TRR_ID,num,8,,TRR_ID of ReTx after current tx,6
+PERS_SSA_DEATH_DT,num,8,MMDDYY,Death date determined from SSA database,6
+PX_ID,num,8,,Patient Identifier,6
+REC_A1,num,8,ALOCUS,Recipient/s HLA - A (1) antigen,6
+REC_A2,num,8,ALOCUS,Recipient/s HLA - A (2) antigen,6
+REC_ACADEMIC_LEVEL,num,8,ACDMACTV,Academic Activity Level:,6
+REC_ACADEMIC_PROGRESS,num,8,ACDMPRG,Academic Progress:,6
+REC_ACUTE_REJ_BIOPSY_CONFIRMED,num,8,BPSCNFM,Was biopsy done to confirm acute rejection:,6
+REC_ACUTE_REJ_EPISODE,num,8,ACREJEP,Did patient have any acute rejection episodes between transplant and discharge:,6
+REC_ADMISSION_DT,num,8,MMDDYY,Date of Admission to Tx Center,7
+REC_AGE_AT_TX,num,8,AGE9A,Age at TX,7
+REC_AGE_IN_MONTHS_AT_TX,num,8,,Calculated Recipient Age in Months at TX,7
+REC_ANTIVRL_THERAPY,char,1,,Biological or Anti-viral Therapy:,7
+REC_ANTIVRL_THERAPY_TY,num,8,ANTLVIRL,"If Anti-viral Therapies, check all that apply",7
+REC_ANTIVRL_THERAPY_TY_ACYCLOVIR,num,3,,Anti-viral Therapy - Acyclovir (Zovirax) (11),7
+REC_ANTIVRL_THERAPY_TY_CYTOGAM,num,3,,Anti-viral Therapy - Cytogam (CMV) (11),7
+REC_ANTIVRL_THERAPY_TY_CYTOVENE,num,3,,Anti-viral Therapy - Ganciclovir (Cytovene) (11),7
+REC_ANTIVRL_THERAPY_TY_EPIVIR,num,3,,Anti-viral Therapy - Lamivudine (Epivir) (for treatment of Hepatitis B) (11),7
+REC_ANTIVRL_THERAPY_TY_FLU_VAC,num,3,,Anti-viral Therapy - Flu Vaccine (Influenza Virus) (11),7
+REC_ANTIVRL_THERAPY_TY_GAMIMUNE,num,3,,Anti-viral Therapy - Gamimune (11),7
+REC_ANTIVRL_THERAPY_TY_GAMMAGARD,num,3,,Anti-viral Therapy - Gammagard (11),7
+REC_ANTIVRL_THERAPY_TY_HBIG,num,3,,Anti-viral Therapy - HBIG (Hepatitis B Immune Globulin) (11),7
+REC_ANTIVRL_THERAPY_TY_OTHER,num,3,,"Anti-viral Therapy - Other, Specify (11)",7
+REC_ANTIVRL_THERAPY_TY_VALCYTE,num,3,,Anti-viral Therapy - Valgancyclovir (Valcyte) (11),7
+REC_ANTIVRL_THERAPY_TY_VALTREX,num,3,,Anti-viral Therapy - Valacyclovir (Valtrex) (11),7
+REC_ARTIFICIAL_LI,num,3,,Artificial Liver,7
+REC_ASCITES,char,1,,Risk Factors: Ascites,7
+REC_A_MM_EQUIV_CUR,num,8,,Num of A mismatches - current equivalent match,7
+REC_A_MM_EQUIV_TX,num,8,,Num of A mismatches - equivalent match @ tx,7
+REC_B1,num,8,BLOCUS,Recipient/s HLA - B (1) antigen,7
+REC_B2,num,8,BLOCUS,Recipient/s HLA - B (2) antigen,7
+REC_BACTERIA_PERIT,char,1,,Risk Factors: Spontaneous Bacterial Peritonitis,7
+REC_BMI,num,8,,BMI:,7
+REC_B_MM_EQUIV_CUR,num,8,,Num of B mismatches - current equivalent match,8
+REC_B_MM_EQUIV_TX,num,8,,Num of B mismatches - current match @ tx,8
+REC_CMV_IGG,char,2,,CMV IgG,8
+REC_CMV_IGM,char,2,,CMV IgM,8
+REC_CMV_STAT,char,2,,Pre-Tx Serology Test Results: Cytomegalovirus,8
+REC_COD,num,8,THCOD,Recipient/s Cause of Death,8
+REC_COD2,num,8,COD,Contributory Cause of Death:,8
+REC_COD3,num,8,COD,Contributory Cause of Death:,8
+REC_COGNITIVE_DEVELOP,num,8,COGDEV,Cognitive Development (Ped Only),8
+REC_COLD_ISCH_TM,num,8,,Preserv: Total Cold Ischemic Time,8
+REC_CTR_ID,num,4,,REC_ Center ID,8
+REC_CUR_CTR_ID,num,4,,REC_CUR_ Center ID,8
+REC_CUR_PX_STAT,char,1,$CRPXSTT,System field based on latest Follow-Up px_stat used to determine creation of next Follow-Up Form,8
+REC_DGN,num,8,DGN,Primary Diagnosis,8
+REC_DGN2,num,8,DGN,Secondary Diagnosis/path. confirmed LI dgn at discharge,8
+REC_DGN_OSTXT,char,50,,Primary Diagnosis/Specify,8
+REC_DISCHRG_ALBUMIN,num,8,,Serum Albumin at Discharge,8
+REC_DISCHRG_ALKPHOS,num,8,,Alkaline Phosphate at Discharge,8
+REC_DISCHRG_CREAT,num,8,,Serum Creatinine at Discharge,8
+REC_DISCHRG_DT,num,8,MMDDYY,Transplant Discharge Date,8
+REC_DISCHRG_INR,num,8,,INR:,8
+REC_DISCHRG_LAB_DT,num,8,MMDDYY,Discharge Lab Date,8
+REC_DISCHRG_SGOT,num,8,,SGOT/AST at Discharge,8
+REC_DISCHRG_SGPT,num,8,,SGPT/ALT at Discharge,8
+REC_DR1,num,8,DRLOCUS,Recipient/s HLA - DR (1) antigen,9
+REC_DR2,num,8,DRLOCUS,Recipient/s HLA - DR (2) antigen,9
+REC_DR_MM_EQUIV_CUR,num,8,,Num of DR mismatches - current equivalent match,9
+REC_DR_MM_EQUIV_TX,num,8,,Num of DR mismatches - current match @ tx,9
+REC_EBV_STAT,char,2,,EBV serology status,9
+REC_EMPL_STAT_PRE04,num,8,EMPLSTAT,Recipient/s Employment Status - Pre-6/30/2004,9
+REC_FAIL_BILIARY,char,1,,Cause of Graft Failure: Biliary Tract Complication,9
+REC_FAIL_DT,num,8,MMDDYY,Date of Graft Failure,9
+REC_FAIL_HEP_DENOVO,char,1,,Cause of Graft Failure: Hepatitis: DeNovo,9
+REC_FAIL_HEP_RECUR,char,1,,Cause of Graft Failure: Hepatitis: Recurrent,9
+REC_FAIL_INFECT,char,1,,Cause of Graft Failure: Infection,9
+REC_FAIL_PRIME_GRAFT_FAIL,char,1,,Cause of Graft Failure: Primary Graft Failure,9
+REC_FAIL_RECUR_DISEASE,char,1,,Cause of Graft Failure: Recurrent Disease,9
+REC_FAIL_REJ_ACUTE,char,1,,Cause of Graft Failure: Acute Rejection,9
+REC_FAIL_VASC_THROMB,char,1,,Cause of Graft Failure: Vascular Thrombosis,9
+REC_FUNCTN_STAT,num,8,FUNCSTAT,Functional Status,9
+REC_GRAFT_STAT,char,1,,Graft Status,9
+REC_HBV_ANTIBODY,char,2,,HBV: Core Antibody//Core Antibody:,9
+REC_HBV_SURF_ANTIGEN,char,2,,HBV: Surface Antigen//Surface Antigen:,9
+REC_HCV_STAT,char,2,,HCV serology status,9
+REC_HEPATIC_ARTER_THROMB,char,1,,"If Vascular Thrombosis, Hepatic arterial thrombosis (Ped. Only)",9
+REC_HEPATIC_OUTFLOW_OBSTRUCT,char,1,,"If Vascular Thrombosis, Hepatic outflow obstruction (Ped. Only)",9
+REC_HGT_CM,num,8,,Recipient/s Height in Centimeters,9
+REC_HGT_WGT_DT,num,8,MMDDYY,Date of Height & Weight Measurement (Ped Only),9
+REC_HISTO_TX_ID,num,8,,Unique identifier for Transplant - foreign key to rec_histo,10
+REC_HIV_STAT,char,2,,HIV serology status,10
+REC_HOSP_90_DAYS,char,1,,Was patient hospitalizied during the last 90 days prior to the transplant admission:,10
+REC_IMMUNO_MAINT_MEDS,char,1,,Are Any Meds Given Currently for Maint. Or Anti-Rej?,10
+REC_INOTROP_BP_SUPPORT,char,1,,Risk Factors: Inotropes for Blood Pressure Support,10
+REC_LIFE_SUPPORT,char,1,,Patient on Life Support:,10
+REC_LIFE_SUPPORT_OTHER,num,3,,Life Support: Other Mechanism,10
+REC_LI_TY,num,8,SPLITTY,Split Type:,10
+REC_MALIG,char,1,,Pretransplant Malignancy,10
+REC_MALIG_TY,num,8,MALIG,"Malignancies//If yes, specify type:",10
+REC_MALIG_TY_BREAST,num,3,,Previous Malignancy - Breast (14),10
+REC_MALIG_TY_CNS_TUMOR,num,3,,Previous Malignancy - CNS Tumor (14),10
+REC_MALIG_TY_GENITOURINARY,num,3,,Previous Malignancy - Genitourinary (14),10
+REC_MALIG_TY_HEPBLAST,num,3,,Previous Malignancy - Hepatoblastoma (14),10
+REC_MALIG_TY_HEPCARCINOMA,num,3,,Previous Malignancy - Hepatocellular Carcinoma (14),10
+REC_MALIG_TY_LEUK_LYMPH,num,3,,Previous Malignancy - Leukemia/Lymphoma (14),10
+REC_MALIG_TY_LIVER,num,3,,Previous Malignancy - Liver (14),10
+REC_MALIG_TY_LU,num,3,,Previous Malignancy - Lung (14),10
+REC_MALIG_TY_OTHER,num,3,,"Previous Malignancy - Other, specify (14)",10
+REC_MALIG_TY_SKIN_MEL,num,3,,Previous Malignancy - Skin Melanoma (14),10
+REC_MALIG_TY_SKIN_NON_MEL,num,3,,Previous Malignancy - Skin Non-Melanoma (14),10
+REC_MALIG_TY_THROAT,num,3,,Previous Malignancy - Tongue/Throat/Larynx (14),10
+REC_MALIG_TY_THYROID,num,3,,Previous Malignancy - Thyroid (14),10
+REC_MALIG_TY_UNK,num,3,,Previous Malignancy - Type Unknown (14),10
+REC_MED_COND,num,8,MEDCOND,Medical Condition,11
+REC_MM_EQUIV_CUR,num,8,,Num of hla mismatches - current equivalent match,11
+REC_MM_EQUIV_TX,num,8,,Num of hla mismatches - current match @ tx,11
+REC_MOTOR_DEVELOP,num,8,MOTDEV,Motor Development (Ped Only),11
+REC_ON_VENTILATOR,char,1,,Risk Factors: On Ventilator,11
+REC_OPO_ID,num,4,,OPO Serving Transplant Center,11
+REC_OTHER_THERAPY,char,1,,Other Therapies:,11
+REC_OTHER_THERAPY_TY,num,8,THRPYOTH,"If Other Therapies, check all that apply",11
+REC_OTHER_THERAPY_TY_PHOTOPH,num,3,,Other Therapy - Photopheresis (3),11
+REC_OTHER_THERAPY_TY_PLASMAPH,num,3,,Other Therapy - Plasmapheresis (3),11
+REC_OTHER_THERAPY_TY_TLI,num,3,,Other Therapy - Total Lymphoid Irradiation (3),11
+REC_PB_CREDIT,char,1,,Payback credit issued to sending OPO,11
+REC_PB_DEBT,char,1,,Payback debt issued to recipient OPO,11
+REC_PB_SHARE_TY,num,8,PBSHRTYA,Payback share type,11
+REC_PERM_STATE,char,2,$STATE,State of Permanent Residence:,11
+REC_PHYSC_CAPACITY,num,8,PHYSCP,Physical Capacity:,11
+REC_PORTAL_HYPERTEN_BLEED,char,1,,Did Patient receive 5 or more units of packed red blood cells within 48 hours prior to transplantation due to spontaneous portal hypertensive bleeding:,11
+REC_PORTAL_VEIN,char,1,,Risk Factors: Portal Vein Thrombosis,11
+REC_PORTAL_VEIN_THROMB,char,1,,"If Vascular Thrombosis, Portal vein thrombosis (Ped. Only)",11
+REC_POSTX_LOS,num,8,,"Time after first Tx, same stay",11
+REC_PRETX_ALBUMIN,num,8,,PreTx : Serum Albumin,11
+REC_PRETX_CREAT,num,8,,PreTx : Serum Creatinine,11
+REC_PRETX_INR,num,8,,PreTx : Prothrombin INR,11
+REC_PRETX_LAB_DT,num,8,MMDDYY,Pretransplant Lab Date,11
+REC_PRETX_TOT_BILI,num,8,,PreTx : Total Bilirubin,12
+REC_PREV_ABDOM_SURG,char,1,,Risk Factors: Previous Abdominal Surgery,12
+REC_PREV_HL,num,8,,Prev Heart-Lung Tx,12
+REC_PREV_HR,num,8,,Prev Heart Tx,12
+REC_PREV_IN,num,8,,Prev Intestine Tx,12
+REC_PREV_KI,num,8,,Prev Kidney Tx,12
+REC_PREV_KP,num,8,,Prev Kidney-Pancreas Tx,12
+REC_PREV_LI,num,8,,Prev Liver Tx,12
+REC_PREV_LU,num,8,,Prev Lung Tx,12
+REC_PREV_NONFUNCTN_TX,char,1,,Risk Factors: Previous Primary Non-function Post-Tx,12
+REC_PREV_PA,num,8,,Prev Pancreas Tx,12
+REC_PRIMARY_PAY,num,8,PRMSRCPY,Primary Source of Payment//Primary:,12
+REC_PROCEDURE_TY_LI,char,1,$LIPROC,Surgical Procedure Type,12
+REC_PX_RESEARCH,char,1,,Px Part. in Research Protocol for Immuno. Meds,12
+REC_PX_STAT,char,1,$PXSTATA,Patient Status,12
+REC_PX_STAT_DT,num,8,MMDDYY,Patient Status/Date,12
+REC_SECONDARY_PAY,num,8,SNDSRCPY,Secondary Source of Payment//Secondary:,12
+REC_SGPT,num,8,,PreTx : SGPT/ALT,12
+REC_TIPSS,char,1,,Risk Factors: Transjugular Intrahepatic Portacaval Stent Shunt (TIPSS),12
+REC_TOLERANCE_INDUCTION_TECH,char,1,,Any tolerance induction technique used:,12
+REC_TUMOR,char,1,,Incidental Tumor found at time of Transplant,12
+REC_TUMOR_TY,num,8,TUMORTH,"If yes, specify tumor type",12
+REC_TXFER_CTR_ID,num,4,,REC_TXFER_ Center ID,12
+REC_TXFER_DT,num,8,MMDDYY,Transfer Date,12
+REC_TX_DT,num,8,MMDDYY,Transplant Date,13
+REC_TX_EXTRA_VESSEL,char,1,,Were extra vessels used in the transplant procedure,13
+REC_TX_ORG_TY,char,15,$TXORGTY,"Transplant Organ Type(s), text contains list of organ types involved in TX",13
+REC_TX_PROCEDURE_TY,num,8,TXPROC,Transplant Procedure Type,13
+REC_TX_TY,num,8,TXTYPE,"Transplant Type, number of donors & organ types involved in TX",13
+REC_VALCYTE,char,1,,Valcyte (valganciclovir),13
+REC_VARICEAL_BLEEDING,char,1,,Risk Factors: Uncontrollable Variceal Bleeding,13
+REC_VENTILATOR,num,3,,Life Support: Ventilator,13
+REC_WARM_ISCH_TM,num,8,,Preserv: Warm Ishcemic Time,13
+REC_WGT_KG,num,8,,Recipient/s Weight in kilograms,13
+REC_WORK_INCOME,char,1,,Working for income:,13
+REC_WORK_NO_STAT,num,8,NOTWRK,"Working for Income//If No, Not Working Due To:",13
+REC_WORK_YES_STAT,num,8,WRKNCM,Working for Income//If Yes:,13
+TFL_COD,num,8,COD,Recipient/s Follow-up Cause of Death,13
+TFL_DEATH_DT,num,8,MMDDYY,Date Patient died,13
+TFL_ENDTXFU,num,8,MMDDYY,Cohort date,13
+TFL_GRAFT_DT,num,8,MMDDYY,Graft Failure date,13
+TFL_LAFUDATE,num,8,MMDDYY,Last Graft Follow up Date,13
+TFL_LASTATUS,char,1,$PXSTATB,Last Status,13
+TRR_ID,num,8,,Unique identifier for TRR - unique key,13
+TX_ID,num,8,,Unique identifier for Transplant - foreign key to rec_transplant,13

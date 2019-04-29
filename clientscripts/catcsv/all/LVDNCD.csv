@@ -1,0 +1,15 @@
+1,1: Donation Related 
+2,2: Other Cause 
+3,3: Infection: Donation/Surgery Related 
+4,4: Infection: Not Donation/Surgery Related 
+5,5: Pulmonary Embolism 
+6,6: Malignancy 
+7,7: Domino Liver Donor-Transplant Related Death (Liver donors only) 
+8,8: Cardiovascular 
+9,9: CVA 
+10,10: Hemorrhage: Donation/Surgery Related 
+11,11: Hemorrhage: Not Donation/Surgery Related 
+12,12: Homicide 
+13,13: Suicide 
+14,14: Accidental 
+15,"15: Other, specify "

@@ -1,0 +1,7 @@
+1,1: No chest x-ray 
+2,2: Normal 
+3,3: Abnormal-left 
+4,4: Abnormal-right 
+5,5: Abnormal-both 
+998,998: Results Unknown 
+999,999: Unknown if chest x-ray performed 

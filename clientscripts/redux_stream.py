@@ -1,3 +1,6 @@
+#this file creates all redux boiler plate
+#constants selectors reducers and actions
+
 import os
 import csv
 import sys
@@ -40,7 +43,7 @@ def createState(reader,outFile):
         line[0] = camelCase(line[0])
         #print(line[0]+":\t\t\t '',")
         #print("\t{0:30}{1:},".format(line[0]+":","''"))
-        outFile.append("\t{0:30}{1:},\n".format(line[0]+":","null"))
+        outFile.append("\t{0:30}{1:},\n".format(line[0]+":",'""'))
    
     outFile.append("});\n\n")
 ###
@@ -105,9 +108,23 @@ def createSelectors(reader, outFile, domain):
 
 ###
 ###############################################
+
+
+if (len(sys.argv) < 3):
+    sys.exit("please input a source path, and domain name (folder name & react component name)")
+
 # 1 file IN
-inFilePath = "./tablecsv/CAND_LIIN.csv"
-outPath = "./outRedux/CAND"
+
+inFilePath = sys.argv[1]
+domain = sys.argv[2] 
+outPath = "./outRedux/"+domain
+
+try:  
+    os.makedirs(outPath)
+except OSError as err:  
+    print (err)
+else:  
+    print ("Successfully created the directory %s " % outPath)
 
 #warn user and get input
 warn = ''
@@ -131,7 +148,6 @@ for p in outFileNames:
 
 #read CSV
 reader = csv.reader(inFile)
-domain = 'CanForm'
 createState(reader,outArray['reducer'])
 inFile.seek(0)
 createReducer(reader,outArray['reducer'],domain)

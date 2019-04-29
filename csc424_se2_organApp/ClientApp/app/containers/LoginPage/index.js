@@ -14,25 +14,26 @@ import { compose } from "redux";
 import { Redirect, Link } from "react-router-dom";
 
 
+
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
 import { makeSelectPassword, makeSelectEmail, makeSelectRole, makeSelectToken } from "./selectors";
 import reducer from "./reducer";
 import saga from "./saga";
 import { changeEmail, changePassword, changeRole, login } from "./actions";
+import makeSelectAuth from "../../authSelector";
 
 /* eslint-disable react/prefer-stateless-function */
 export class LoginPage extends React.Component {
   render() {
-    const { from } = this.props.location.state || { from: { pathname: '/' } }
-    if (this.props.token) {
-      return <Redirect to={from} />
+      if (this.props.auth.isAuthenticated) {
+        const {role} = this.props.auth.user;
+        return <Redirect to={`/${role}/home`} />
     }
-    return <div>
+    return( <div>
         <Helmet>
           <title>LoginPage</title>
           <meta name="description" content="Description of LoginPage" />
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossOrigin="anonymous" />
         </Helmet>
         <h1 style={{ textAlign: "center" }}>Login Page</h1>
         <Form style={{ margin: "3rem" }}>
@@ -48,15 +49,6 @@ export class LoginPage extends React.Component {
             </Form.Label>
             <Form.Control required value={this.props.password} type="password" placeholder="Password..." onChange={this.props.onChangePassword} />
           </Form.Group>
-          <Form.Group controlId="formGridState">
-            <Form.Label>Role</Form.Label>
-            <Form.Control value={this.props.role} onChange={this.props.onChangeRole} as="select">
-              <option>Choose...</option>
-              <option>Nurse</option>
-              <option>Physician</option>
-              <option>Admin</option>
-            </Form.Control>
-          </Form.Group>
           <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
             <Button variant="primary" type="button" onClick={this.props.onLogin}>
               Login
@@ -71,7 +63,7 @@ export class LoginPage extends React.Component {
             </Button>
           </div>
         </Form>
-      </div>;
+    </div>);
   }
 }
 
@@ -89,6 +81,7 @@ const mapStateToProps = createStructuredSelector({
   password: makeSelectPassword(),
   role: makeSelectRole(),
   token: makeSelectToken(),
+  auth:makeSelectAuth()
 });
 
 function mapDispatchToProps(dispatch) {

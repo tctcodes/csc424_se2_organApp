@@ -8,94 +8,50 @@
  */
 
 import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { Helmet } from "react-helmet";
+import { Switch, Route,withRouter } from 'react-router-dom';
+import {connect} from 'react-redux';
 
 import HomePage from 'containers/HomePage/Loadable';
+import SearchBox from 'containers/SearchBox/Loadable';
 import SignUpPage from "containers/SignUpPage/Loadable";
 import CanForm from "containers/CanForm/Loadable";
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
-
-import GlobalStyle from '../../global-styles';
+import RegForm from 'containers/RegForm/Loadable';
+import ClientHome from 'containers/ClientHome/Loadable';
+import {createStructuredSelector} from 'reselect';
+import makeSelectAuth from '../../authSelector';
 import LoginPage from 'containers/LoginPage/Loadable';
-import decode from "jwt-decode";
-
-const checkAuth = () => {
-  console.log('im here');
-  const token = localStorage.getItem("token");
-  console.log(token);
-  const ext = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role";
-  let decoded;
-  if (token != null){
-    decoded = decode(token);
-  }
-  try {
-    if (decoded.exp < new Date().getTime() / 1000) {
-      return { success: false};
-    }
-  } catch (e) {
-    console.log(e);
-    return { success: false};
-  }
-  console.log(decoded[ext]);
-  // return true;
-  return { success: true, role: decoded[ext] };
-};
-
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={(props) => (
-    checkAuth().success == true
-      ? <Component {...props} />
-      : <Redirect to={{
-        pathname: '/login',
-        state: { from: props.location }
-      }} />
-  )} />
-)
-const Protected = () => <h3>Protected</h3>;
-const Unauthorized = () => <h1 style={{textAlign: 'center'}}>You role is not authorized to view this page.</h1>;
-const NurseMessage = () => <h1 style={{ textAlign: 'center' }}>If you are seeing this your role is Nurse or Admin</h1>;
-const PhysicianMessage = () => <h1 style={{ textAlign: 'center' }}>If you are seeing this your role is Physician or Admin</h1>;
-const AdminMessage = () => <h1 style={{ textAlign: 'center' }}>If you are seeing this your role is Admin</h1>;
-
-const Nurse = () => (
-  <Route render= { () => (
-    checkAuth().role == "Nurse" || checkAuth().role == "Admin"
-      ? <NurseMessage></NurseMessage> 
-      : <Unauthorized></Unauthorized>
-  )} />
-)
-const Physician = () => (
-  <Route render={() => (
-    checkAuth().role == "Physician" || checkAuth().role == "Admin"
-      ? <PhysicianMessage></PhysicianMessage>
-      : <Unauthorized></Unauthorized>
-  )} />
-)
-const Admin = () => (
-  <Route render={() => (
-    checkAuth().role == "Admin"
-      ? <AdminMessage></AdminMessage>
-      : <Unauthorized></Unauthorized>
-  )} />
-)
+import SpecialNav from "../../components/SpecialNav";
+import PrivateRoute from "./PrivateRoute"
 
 
-export default function App() {
-  return <div>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/signup" component={SignUpPage} />
-          <Route path="/login" component={LoginPage} />
-          <PrivateRoute path='/protected' component={Protected} />
-          <PrivateRoute path="/nurse" component={Nurse} />
-          <PrivateRoute path="/physician" component={Physician} />
-          <PrivateRoute path="/admin" component={Admin} />
-         <Route path="/canform" component={CanForm}/>
 
-          <Route component={NotFoundPage} />
-        </Switch>
-      </BrowserRouter>
-      <GlobalStyle />
-    </div>;
+
+function App(props) {
+  const {isAuthenticated} = props.auth;
+  const {role}=props.auth.user;
+  return (<div>
+      <Helmet>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossOrigin="anonymous" />
+      </Helmet>
+      <SpecialNav success={isAuthenticated} role ={role} dispatch = {props.dispatch}/>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/signup" component={SignUpPage} />
+        <Route path="/login" component={LoginPage} />
+        <PrivateRoute path="/client/home" component={ClientHome}/>
+        <PrivateRoute path="/client/information" component={RegForm} />
+        <PrivateRoute path="/staff/searchbox" component={SearchBox} />
+        <PrivateRoute path="/staff/canform" component={CanForm} />
+        <Route component={NotFoundPage} />
+      </Switch>
+  </div>);
 }
+
+const mapStateToProps = createStructuredSelector({
+  auth: makeSelectAuth()
+});
+
+export default withRouter(connect(mapStateToProps)(App));

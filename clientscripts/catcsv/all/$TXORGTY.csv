@@ -1,0 +1,32 @@
+HL,HL: Heart-Lung 
+HR,HR: Heart 
+IN,IN: Intestine 
+KI,KI: Kidney 
+KI HL,KI HL: Kidney-Heart-Lung 
+KI HR,KI HR: Kidney-Heart 
+KI IN,KI IN: Kidney-Intestine 
+KI LI,KI LI: Kidney-Liver 
+KI LI 2LD,"KI LI 2LD: Two Living Donors, Kidney-Liver TX "
+KI LI HR,KI LI HR: Kidney-Liver-Heart 
+KI LI IN,KI LI IN: Kidney-Liver-Intestine 
+KI LU,KI LU: Kidney-Lung 
+KI PA LD/DD,"KI PA LD/DD: Living Donor Kidney, Deceased Donor Pancreas TX "
+KP,KP: Kidney-Pancreas 
+KP HR,KP HR: Kidney-Pancreas-Heart 
+KP IN,KP IN: Kidney-Pancreas-Intestine 
+KP LI,KP LI: Kidney-Pancreas-Liver 
+KP LI IN,KP LI IN: Kidney-Pancreas-Liver-Intestine 
+LI,LI: Liver 
+LI HL,LI HL: Liver-Heart-Lung 
+LI HR,LI HR: Liver-Heart 
+LI IN,LI IN: Liver-Intestine 
+LI LU,LI LU: Liver-Lung 
+LU,LU: Lung 
+LU LU 2LD,"LU LU 2LD: Two Living Donors, Double Lung Lobe TX "
+PA,PA: Pancreas 
+PA HR,PA HR: Pancreas-Heart 
+PA IN,PA IN: Pancreas-Intestine 
+PA LI,PA LI: Pancreas-Liver 
+PA LI IN,PA LI IN: Pancreas-Liver-Intestine 
+PA LI LU,PA LI LU: Pancreas-Liver-Lung 
+PA LU,PA LU: Pancreas-Lung 

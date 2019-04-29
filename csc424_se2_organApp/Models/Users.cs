@@ -8,6 +8,7 @@ namespace csc424_se2_organApp.Models
         public string Email { get; set; }
         public string Password { get; set; }
         public string Role { get; set; }
-        public int? Id { get; set; }
+
+        public virtual Info Info { get; set; }
     }
 }

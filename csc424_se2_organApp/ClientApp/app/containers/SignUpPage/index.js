@@ -14,8 +14,8 @@ import { compose } from 'redux';
 import { Button, Form } from 'react-bootstrap';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
-import { makeSelectEmail, makeSelectPassword } from './selectors';
-import { setEmail, setPassword, addUserToDB } from './actions';
+import { makeSelectEmail, makeSelectPassword, makeSelectRole } from './selectors';
+import { setEmail, setPassword, setRole, addUserToDB } from './actions';
 import reducer from './reducer';
 import saga from './saga';
 
@@ -25,9 +25,11 @@ export class SignUpPage extends React.Component {
     super();
     this.email = null;
     this.pass = null;
+    this.role = null;
     this.handleClick = this.handleClick.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePwChange = this.handlePwChange.bind(this);
+    this.handleRoleChange = this.handleRoleChange.bind(this);
   }
 
   handleEmailChange(e){
@@ -36,6 +38,10 @@ export class SignUpPage extends React.Component {
 
   handlePwChange(e){
     this.pass = e.target.value;
+  }
+
+  handleRoleChange(e){
+    this.role = e.target.value;
   }
 
   handleClick() {
@@ -51,10 +57,15 @@ export class SignUpPage extends React.Component {
       alert("Password field cannot be blank");
       return;
     }
+    if(this.role == "" || this.pass == null || this.pass == 'Choose...'){
+      alert("Must select a role");
+      return;
+    }
     
     this.email = normalizeEmail(this.email);
     this.props.onSetEmail(this.email);
     this.props.onSetPass(this.pass);
+    this.props.onSetRole(this.role);
     this.props.onAddUserToDB();
   }
 
@@ -85,6 +96,17 @@ export class SignUpPage extends React.Component {
             </Form.Label>
           <Form.Control  type="password" placeholder="Password..." onChange={this.handlePwChange} />
           </Form.Group>
+          <Form.Group controlId="formGridState">
+            <Form.Label>Role</Form.Label>
+            <Form.Control 
+              onChange={this.handleRoleChange}
+              as="select">
+              <option value="">Choose...</option>
+              <option value="candidate">Candidate</option>
+              <option value="donor">Donor</option>
+              <option value="staff">Staff</option>
+            </Form.Control>
+          </Form.Group>
           <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
             <Button variant="primary" type="button" onClick={this.handleClick}>
               Sign Up
@@ -105,14 +127,15 @@ export class SignUpPage extends React.Component {
 const mapStateToProps = createStructuredSelector({
   email: makeSelectEmail(),
   password: makeSelectPassword(),
+  role: makeSelectRole(),
 });
 
 function mapDispatchToProps(dispatch) {
   return {
     onSetEmail: email => dispatch(setEmail(email)),
     onSetPass: pass => dispatch(setPassword(pass)),
+    onSetRole: role => dispatch(setRole(role)),
     onAddUserToDB: () => dispatch(addUserToDB()),
-
   };
 }
 
