@@ -9,19 +9,20 @@
  * the linting exception.
  */
 
-import React from 'react';
+import React,{Fragment} from 'react';
 import {Helmet} from 'react-helmet';
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { FormattedMessage } from 'react-intl';
-import { Button,Form, DropdownButton,FormControl,InputGroup,Dropdown } from "react-bootstrap";
+import { Button,Form,Container,Row} from "react-bootstrap";
+//import {Spinner} from 'react-bootstrap/Spinner';
 import { Link } from "react-router-dom";
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
 import reducer from "./reducer";
 import saga from "./saga";
-import { dumpFormToState, uploadForm,retrieveData } from './actions';
-import makeSelectRegForm from './selectors';
+import { dumpFormToState, uploadForm,retrieveData, setLoading } from './actions';
+import makeSelectRegForm, { makeSelectLoading } from './selectors';
 import { createStructuredSelector } from 'reselect';
 import makeSelectAuth from '../../authSelector';
 import { checkInfo } from '../ClientHome/actions';
@@ -322,16 +323,11 @@ export class RegForm extends React.PureComponent {
   }
   
   render() {
+    if(this.props.loading)
+      return(<div className="d-flex justify-content-center" style ={{height:"100vh"}}><div className ="spinner-border" style={{margin: 'auto'}}/></div>)
+  
     return (
       <div>
-        <Helmet>
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous"
-        />
-        </Helmet>
         <Form className="container mt-5" >
           <Form.Group controlId="formBasicEmail">
             <Form.Control type="email" placeholder="Email" onChange = {this.onChangeEmail} value ={this.props.auth.user.name} readOnly/>
@@ -469,7 +465,7 @@ export class RegForm extends React.PureComponent {
               <option value="12">US/State Govt Agency</option>
             </select>
           </Form.Group>
-      </Form>;
+      </Form>
       <Button variant="primary" type="button" onClick={this.onSubmit}>
               Submit
       </Button>
@@ -482,13 +478,15 @@ export class RegForm extends React.PureComponent {
 
 const mapStateToProps = createStructuredSelector({
   state: makeSelectRegForm(),
-  auth: makeSelectAuth()
+  auth: makeSelectAuth(),
+  loading: makeSelectLoading(),
 });
 function mapDispatchToProps(dispatch) {
   return {
     onStateDump: (state) => dispatch(dumpFormToState(state)),
     onUpload: () => dispatch(uploadForm()),
-    onRetrieveData: ()=>dispatch(retrieveData())
+    onRetrieveData: ()=>dispatch(retrieveData()),
+    onLoading: bool => dispatch(setLoading(bool))
   };
 }
 
