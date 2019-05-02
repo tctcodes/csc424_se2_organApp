@@ -10,31 +10,34 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import messages from './messages';
+import { Button, Jumbotron } from "react-bootstrap";
+import { Helmet } from 'react-helmet';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
   render() {
     return (
       <div>
-        <h1 style={{textAlign: 'center'}}>
-          <FormattedMessage {...messages.header} />
-        </h1>
-        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-around" }}>
-          <Link to='/login'>
-            <Button variant="primary" type="button">
-              Log In
-            </Button>
-          </Link>
-          <Link to='/signup'>
-            <Button variant="primary" type="button">
-              Sign Up
-            </Button>
-          </Link>
-        </div>
+        <Helmet>
+          <title>Home Page</title>
+          <meta name="description" content="Description of HomePage" />
+        </Helmet>
+        <Jumbotron style={{
+          height: 'calc(100vh - 56px', margin: '0', backgroundColor: 'white', textAlign: 'center'}}>
+          <h1>Welcome to OrganApp!</h1>
+          <p>
+            OrganApp is a collaborative effort between The University of Southern Mississippi and Hattiesburg Clinic.
+            The purpose of this project is to automate the process of matching liver donors to candidates. This would
+            greatly reduce the burden of manual selection on healtcare proffesionals.
+            <Button variant="link" href="/about" style={{ paddingTop: '0' }}>Learn more</Button>
+          </p>
+          <h5>
+            Want to participate in our project as a donor or candidate?
+          </h5>
+          <p>
+            <Button variant="primary" href="/signup">Sign Up!</Button>
+          </p>
+        </Jumbotron>
       </div>
     );
   }
