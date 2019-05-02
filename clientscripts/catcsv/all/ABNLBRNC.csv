@@ -1,0 +1,8 @@
+1,1: No Bronchoscopy 
+2,2: Bronchoscopy Results normal 
+3,"3: Bronchoscopy Results, Abnormal-purulent secretions "
+4,"4: Bronchoscopy Results, Abnormal-aspiration of foreign body "
+5,"5: Bronchoscopy Results, Abnormal-blood "
+6,"6: Bronchoscopy Results, Abnormal-anatomy/other lesion "
+7,"7: Bronchoscopy Results, Unknown "
+998,998: Unknown if bronchoscopy performed 

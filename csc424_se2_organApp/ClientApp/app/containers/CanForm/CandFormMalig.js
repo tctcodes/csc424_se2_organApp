@@ -79,7 +79,7 @@ export class CandFormMalig extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN MALIG</label>
 					<label className="text-secondary" >Any previous Malignancy:</label>
-					<input className="form-control" type="text" value={this.props.canMalig} onChange={this.props.onChangeCanMalig} />
+					<input className="form-control" type="text" value={this.props.canMalig} onChange={this.props.onChangeCanMalig} maxLength="1" />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN MALIG TY</label>

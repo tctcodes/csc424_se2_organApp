@@ -1,0 +1,25 @@
+1,1: Arrhythmia requiring therapy 
+2,2: Bleeding requiring surgical or therapeutic bronchoscopic intervention 
+4,4: Bowel obstruction or ileus not requiring surgical intervention 
+8,8: Bowel obstruction or ileus requiring surgical intervention 
+16,16: Bronchial Stenosis/Stricture not requiring surgical or therapeutic bronchoscopic intervention 
+32,32: Bronchial Stenosis/Stricture requiring surgical or therapeutic bronchoscopic intervention 
+64,64: Bronchopleural Fistula requiring surgical or therapeutic bronchoscopic intervention 
+128,128: Cerebrovascular Accident 
+256,256: Deep Vein Thrombosis 
+512,512: Empyema requiring therapeutic surgical intervention 
+1024,1024: Epidural-Related Complication 
+2048,2048: Line or IV Complication 
+4096,4096: Loculated pleural effusion requiring surgical intervention 
+8192,8192: Pericardial tamponade or pericarditis requiring surgical intervention 
+16384,16384: Pericarditis not requiring surgical intervention 
+32768,32768: Peripheral Nerve Injury 
+65536,65536: Phrenic Nerve Injury 
+131072,"131072: Placement of Additional Thoracostomy Tube(s), Specify Indication "
+262144,262144: Pneumonia/Atelectasis 
+524288,524288: Prolonged (>14days) Thoracostomy Tube Requirement 
+1048576,1048576: Pulmonary Artery Embolus or Thrombosis 
+2097152,2097152: Pulmonary Vein or Left Atrial Thrombosis 
+4194304,4194304: Wound Complication 
+8388608,8388608: Wound infection requiring surgical intervention 
+16777216,16777216: Other Specify 
