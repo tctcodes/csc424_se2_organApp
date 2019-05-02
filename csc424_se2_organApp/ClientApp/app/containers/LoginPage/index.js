@@ -17,19 +17,27 @@ import { Redirect, Link } from "react-router-dom";
 
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
-import { makeSelectPassword, makeSelectEmail, makeSelectRole, makeSelectToken } from "./selectors";
+import { makeSelectPassword, makeSelectEmail,makeSelectLoading } from "./selectors";
 import reducer from "./reducer";
 import saga from "./saga";
-import { changeEmail, changePassword, changeRole, login } from "./actions";
+import { changeEmail, changePassword, login, clearCredentials } from "./actions";
 import makeSelectAuth from "../../authSelector";
 
 /* eslint-disable react/prefer-stateless-function */
 export class LoginPage extends React.Component {
+
+  componentWillUnmount(){
+    this.props.clearCredentials();
+  }
   render() {
-      if (this.props.auth.isAuthenticated) {
+    if(this.props.loading)
+      return(<div className="d-flex justify-content-center" style ={{height:"100vh"}}><div className ="spinner-border" style={{margin: 'auto'}}/></div>)
+
+    if (this.props.auth.isAuthenticated) {
         const {role} = this.props.auth.user;
         return <Redirect to={`/${role}/home`} />
     }
+    
     return( <div>
         <Helmet>
           <title>LoginPage</title>
@@ -79,15 +87,16 @@ LoginPage.propTypes = {
 const mapStateToProps = createStructuredSelector({
   email: makeSelectEmail(),
   password: makeSelectPassword(),
-  auth:makeSelectAuth()
+  auth:makeSelectAuth(),
+  loading:makeSelectLoading()
 });
 
 function mapDispatchToProps(dispatch) {
   return {
     onChangeEmail: evt => dispatch(changeEmail(evt.target.value)),
     onChangePassword: evt => dispatch(changePassword(evt.target.value)),
-    onChangeRole: evt => dispatch(changeRole(evt.target.value)),
     onLogin: () => dispatch(login()),
+    clearCredentials: () => dispatch(clearCredentials())
   };
 }
 

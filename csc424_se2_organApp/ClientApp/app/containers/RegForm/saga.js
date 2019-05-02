@@ -3,7 +3,7 @@ import { takeLatest, call, put, select } from 'redux-saga/effects';
 import makeSelectRegForm from './selectors';
 import makeSelectAuth from '../../authSelector';
 import { UPLOAD_FORM,RETRIEVE_DATA } from './constants';
-import { dumpFormToState } from '../RegForm/actions';
+import { dumpFormToState, setLoading } from '../RegForm/actions';
 
 // Individual exports for testing
 export function* upload(){
@@ -27,11 +27,11 @@ export function* upload(){
 }
 
 export function* retrieveData(){
+  yield put(setLoading(true));
   let auth = yield select(makeSelectAuth());
   let email = auth.user.name
   let body ={email};
   let data;
-  console.log("fired");
   let headers = {
     'Content-Type': 'application/json',
   }
@@ -53,6 +53,8 @@ export function* retrieveData(){
 
   }catch(err){
 
+  }finally{
+    yield put(setLoading(false));
   }
 }
 

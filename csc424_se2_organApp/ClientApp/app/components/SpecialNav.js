@@ -19,10 +19,6 @@ const SpecialNav = (props) => {
               <Nav.Link as={NavLink} to='/'>Home</Nav.Link>
               <Nav.Link as={NavLink} to="/staff/searchbox">Search</Nav.Link>
             </Nav>
-            {/* <Form inline>
-              <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-              <Button variant="outline-light">Search</Button>
-            </Form> */}
             <LinkContainer to='/'>
                 <Button variant="primary" type="button" onClick={()=>props.dispatch(clearUser())}><i className="fas fa-sign-out-alt"></i></Button>
             </LinkContainer>
@@ -41,10 +37,6 @@ const SpecialNav = (props) => {
                 <Nav.Link as={NavLink} to="/client/information">My Information</Nav.Link>
               </Nav.Item>
             </Nav>
-            {/* <Form inline>
-              <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-              <Button variant="outline-light">Search</Button>
-            </Form> */}
             <Button as={NavItem}variant="primary" type="button" to="/" onClick={()=>props.dispatch(clearUser())}><i className="fas fa-sign-out-alt"></i></Button>
           </Navbar >
         )
