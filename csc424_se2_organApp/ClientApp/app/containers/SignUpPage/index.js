@@ -102,9 +102,9 @@ export class SignUpPage extends React.Component {
               onChange={this.handleRoleChange}
               as="select">
               <option value="">Choose...</option>
-              <option value="Nurse">Nurse</option>
-              <option value="Physician">Physician</option>
-              <option value="Admin">Admin</option>
+              <option value="candidate">Candidate</option>
+              <option value="donor">Donor</option>
+              <option value="staff">Staff</option>
             </Form.Control>
           </Form.Group>
           <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>

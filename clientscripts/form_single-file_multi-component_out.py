@@ -15,7 +15,7 @@ def createSelect(line,catFiles,catPath):
     cam = camelCase(line[0])
     for filename in catFiles:
         if (filename[:-4]==line[3]):
-            
+            #open catagory file
             cat = csv.reader(open(catPath + "/" + filename,"r"))
             retString = '\t\t\t\t\t<select className="form-control" value={{this.props.{0:}}} onChange={{this.props.onChange{1:}}}>\n'.format(cam,cap)
             retString = retString +'\t\t\t\t\t\t<option value="" hidden disabled selected/>\n'
@@ -60,15 +60,24 @@ def closeFiles(filesArray):
 
 
 if (len(sys.argv) < 3):
-    sys.exit("please input a source path, and folder name (folder must exist in outComp)")
+    sys.exit("please input a source path, and domain name (folder name & react component name)")
 
 print(len(sys.argv), sys.argv[1])
 ###############################################################
 # set path directories
-domain = sys.argv[2]
-catPath  ="./catcsv/CAND"           # in
+#   domian is the folder/react-component
+domain = sys.argv[2]                
+catPath  ="./catcsv/all"           # in
 inPath = sys.argv[1]                # in
 outPath ="./outComp/"+domain   # out
+#make directory path
+try:  
+    os.makedirs(outPath)
+except OSError as err:  
+    print (err)
+else:  
+    print ("Successfully created the directory %s " % outPath)
+
 
 # _id regular expression
 idre= r'_ID\b'

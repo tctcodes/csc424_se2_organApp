@@ -12,7 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
-
+using Newtonsoft.Json;
 namespace csc424_se2_organApp
 {
     public class Startup
@@ -56,7 +56,9 @@ namespace csc424_se2_organApp
                         )
                 };
             });
-
+                services.AddMvc().AddJsonOptions(options => {
+                            options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                });
                 services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
                 // In production, the React files will be served from this directory

@@ -1,3 +1,7 @@
+#old component generator
+#user for_single-file_multi-component for all relevent forms
+#may repurpose for custom editing.
+
 import os
 import csv
 import sys

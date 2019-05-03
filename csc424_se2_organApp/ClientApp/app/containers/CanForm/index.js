@@ -35,68 +35,71 @@ export class CanForm extends React.Component {
 		};
 	  }
 	
-	componentDidMount(){		
-  	this.props.onGetRecordPxId(this.props.selectedPxId);
+	componentDidMount(){
+		//console.log(this.props.selectedPxId);		
+		//this.props.selectedPxId = "1232752"
+  	this.props.onGetRecordPxId(/* this.props.selectedPxId */"1232752");
 	}
 	
-	
-    render(){
-        return (<div>
-             <Helmet>
-                <title>CanForm</title>
-                <meta name="description" content="Description of CanForm" />
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossOrigin="anonymous" />
-            </Helmet>
-						<div className="sticky-top float-right bg-light border-bottom">
-						<Button variant="primary" type="button" className="mr-1" onClick={e=>this.props.onGetRecordPxId(this.props.selectedPxId)} value={"\tRevert\t"}>
-              Revert
-            </Button>
-						<Button variant="primary" type="button" >
-              Save
-            </Button>
-					</div>
-					
-			<Tabs  className="sticky-top bg-light" activeKey={this.state.key}
-        		onSelect={key => this.setState({ key })} >
-						
-				<Tab eventKey="meld" title="meld">
-					{ this.state.key == "meld" && <CandFormMeld/>}
+
+  render(){
+		return (<div>
+			<Helmet>
+				<title>CanForm</title>
+				<meta name="description" content="Description of CanForm" />
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossOrigin="anonymous" />
+			</Helmet>
+			<div className="sticky-top float-right bg-light border-bottom">
+				<Button variant="primary" type="button" className="mr-1" onClick={e => this.props.onGetRecordPxId(this.props.selectedPxId)} value={"\tRevert\t"}>
+					Revert
+        </Button>
+				<Button variant="primary" type="button" onClick={e => this.props.onSaveRecord(this.props.record)}>
+					Save
+        </Button>
+			</div>
+
+			<Tabs 
+				className="sticky-top bg-light" 
+				activeKey={this.state.key}
+				onSelect={key => this.setState({ key })} 
+			>
+				<Tab eventKey="meld" title="MELD">
+					{this.state.key == "meld" && <CandFormMeld />}
 				</Tab>
-				<Tab eventKey="malig" title="malig">
-					{ this.state.key == "malig" &&<CandFormMalig/> } 
-				
+				<Tab eventKey="malig" title="Malig">
+					{this.state.key == "malig" && <CandFormMalig />}
 				</Tab>
-				<Tab eventKey="match" title="match">
-					{ this.state.key == "match" &&<CandFormMatch/> }
+				<Tab eventKey="match" title="Match">
+					{this.state.key == "match" && <CandFormMatch />}
 				</Tab>
-				<Tab eventKey="stat" title="stat">
-					{ this.state.key == "stat" &&<CandFormStat/> }
+				<Tab eventKey="stat" title="Status">
+					{this.state.key == "stat" && <CandFormStat />}
 				</Tab>
-				<Tab eventKey="tx" title="tx">
-					{ this.state.key == "tx" && <CandFormTx/> }
+				<Tab eventKey="tx" title="Transplant">
+					{this.state.key == "tx" && <CandFormTx />}
 				</Tab>
-				<Tab eventKey="phys" title="phys">
-					{ this.state.key == "phys" &&<CandFormPhys/> }
+				<Tab eventKey="phys" title="Physiology">
+					{this.state.key == "phys" && <CandFormPhys />}
 				</Tab>
-				<Tab eventKey="hist" title="hist">
-				{ this.state.key == "hist" &&<CandFormHist/>}
+				<Tab eventKey="hist" title="History">
+					{this.state.key == "hist" && <CandFormHist />}
 				</Tab>
-				<Tab eventKey="personal" title="personal">
-				{ this.state.key == "personal" &&<CandFormPersonal/>}
+				<Tab eventKey="personal" title="Personal">
+					{this.state.key == "personal" && <CandFormPersonal />}
 				</Tab>
 			</Tabs>
-			
-        </div>)
-    }
+		</div>)
+	}
 }
 
 const mapStateToProps = createStructuredSelector({
-	
+	record: selects.makeSelectState(),
 });
   
 function mapDispatchToProps(dispatch) {
     return {
-        onGetRecordPxId: evt => dispatch(actions.getRecordPxId(evt)),
+				onGetRecordPxId: evt => dispatch(actions.getRecordPxId(evt)),
+				onSaveRecord: evt => dispatch(actions.saveRecord(evt)),
     };    
 }
   

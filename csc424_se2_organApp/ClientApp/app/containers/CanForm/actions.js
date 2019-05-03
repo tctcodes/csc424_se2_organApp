@@ -1,5 +1,12 @@
 import * as constant from "./constants";
 
+export function saveRecord(state) { 
+	return{
+		type: constant.SAVE_RECORD,
+		state
+	};
+}
+
 export function setRecord(state) { 
 	return{
 		type: constant.SET_RECORD,

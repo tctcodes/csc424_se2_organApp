@@ -64,8 +64,8 @@ namespace csc424_se2_organApp.Controllers
                 var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("THIS IS MY RIFLE THIS IS MY GUN, THIS ONE'S FOR FIGHTING THIS ONE'S FOR FUN"));
                 var claims = new[]
                 {
-                    new Claim(ClaimTypes.Name, user.Email),
-                    new Claim(ClaimTypes.Role, user.Role)
+                    new Claim(ClaimTypes.Name, foundUser.Email),
+                    new Claim(ClaimTypes.Role, foundUser.Role)
                 };
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
                 var token = new JwtSecurityToken(

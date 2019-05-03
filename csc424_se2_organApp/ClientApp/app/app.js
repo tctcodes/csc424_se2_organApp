@@ -32,18 +32,46 @@ import configureStore from './configureStore';
 
 // Import i18n messages
 import { translationMessages } from './i18n';
-
+import { decodeToken} from 'utils/decodeToken';
+import {setAuthToken} from 'utils/setAuthToken';
+import {setCurrentUser} from './authActions';
+const axios = require('axios');
+//set default url for API calls
+axios.defaults.baseURL = 'http://localhost:5000';
 // Create redux store with history
+
 const initialState = {};
 const store = configureStore(initialState, history);
 const MOUNT_NODE = document.getElementById('app');
+
+//check for token
+if(localStorage.token){
+  setAuthToken(localStorage.token);
+  //decode token and get userinfo and expiration
+  const decoded = decodeToken(localStorage.token);
+
+  //set user
+  store.dispatch(setCurrentUser(decoded));
+  
+  //check if expired
+  const currentTime = Date.now() /1000;
+  if(decoded.exp < currentTime){
+    
+    localStorage.removeItem("token");
+    setAuthToken(false);
+    
+    //redirect to login
+    window.location.href ='/login';
+  }
+
+}
 
 const render = messages => {
   ReactDOM.render(
     <Provider store={store}>
       <LanguageProvider messages={messages}>
         <ConnectedRouter history={history}>
-          <App/>
+          <App dispatch={store.dispatch}/>
         </ConnectedRouter>
       </LanguageProvider>
     </Provider>,

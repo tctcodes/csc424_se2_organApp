@@ -16,7 +16,11 @@ const selectRegFormDomain = state => state.get("regForm", initialState);
  */
 
 const makeSelectRegForm = () =>
-  createSelector(selectRegFormDomain, substate => substate.toJS());
+  createSelector(selectRegFormDomain, substate => substate.get('record'));
+
+  const makeSelectLoading = () =>
+  createSelector(selectRegFormDomain, substate => substate.get('loading'));
+
 
 export default makeSelectRegForm;
-export { selectRegFormDomain };
+export { selectRegFormDomain,makeSelectLoading };

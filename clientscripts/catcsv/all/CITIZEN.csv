@@ -1,0 +1,6 @@
+1,1: US Citizen 
+2,2: Resident Alien 
+3,"3: Non-Resident Alien, Specify Country "
+4,4: Non-US Citizen/US Resident 
+5,5: Non-US Citizen/Non-US Resident 
+998,998: Unknown 
