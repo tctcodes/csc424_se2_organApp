@@ -16,86 +16,13 @@ import {
   Dropdown,
   Navbar,
 } from "react-bootstrap";
-import { setPXID, submitSearch } from './actions';
-import { makeSelectPXID, makeSelectSearchResults } from './selectors';
+import { setPXID, submitSearch, setBloodGroup, setDonorOrCandidate, setPXState } from './actions';
+import { makeSelectPXID, makeSelectSearchResults, makeSelectPXState, makeSelectBloodGroup, makeSelectDonorOrCandidate } from './selectors';
 
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
 import reducer from "./reducer";
 import saga from "./saga";
-
-const BLOOD_GROUPS = [
-  'A+',
-  'A-',
-  'B+',
-  'B-',
-  'AB+',
-  'AB-',
-  'O+',
-  'O-',
-];
-
-const US_STATE = [
-  'AL',
-  'AK',
-  'AS',
-  'AZ',
-  'AR',
-  'CA',
-  'CO',
-  'CT',
-  'DE',
-  'DC',
-  'FM',
-  'FL',
-  'GA',
-  'GU',
-  'HI',
-  'ID',
-  'IL',
-  'IN',
-  'IA',
-  'KS',
-  'KY',
-  'LA',
-  'ME',
-  'MH',
-  'MD',
-  'MA',
-  'MI',
-  'MN',
-  'MS',
-  'MO',
-  'MT',
-  'NE',
-  'NV',
-  'NH',
-  'NJ',
-  'NM',
-  'NY',
-  'NC',
-  'ND',
-  'MP',
-  'OH',
-  'OK',
-  'OR',
-  'PW',
-  'PA',
-  'PR',
-  'RI',
-  'SC',
-  'SD',
-  'TN',
-  'TX',
-  'UT',
-  'VT',
-  'VI',
-  'VA',
-  'WA',
-  'WV',
-  'WI',
-  'WY',
-];
 
 function PrintPxRecord(props) {
   console.log('hello!');
@@ -140,7 +67,11 @@ export class SearchBox extends React.Component {
             </Form>
             {/* Donor/Candidate Selection */}
             <Form.Group className="mt-3">
-              <Form.Control as="select">
+              <Form.Control
+                as="select"
+                onChange={this.props.onSetDonorOrCandidate}
+                >
+                <option>Select Status</option>
                 <option>Donor</option>
                 <option>Candidate</option>
               </Form.Control>
@@ -153,22 +84,81 @@ export class SearchBox extends React.Component {
               <Dropdown.Menu>
                 <Form.Group>
                   <Form.Label>Blood Group</Form.Label>
-                  <Form.Control as="select">
-                    <option>A+</option>
-                    <option>A-</option>
-                    <option>B+</option>
-                    <option>B-</option>
-                    <option>AB+</option>
-                    <option>AB-</option>
-                    <option>O+</option>
-                    <option>O-</option>
+                  <Form.Control
+                    as="select"
+                    onChange={this.props.onSetBloodGroup}
+                    >
+                    <option>Select Blood Group</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>AB</option>
+                    <option>O</option>
                   </Form.Control>
                   <Form.Label>State</Form.Label>
-                  <Form.Control as="select">
-                    <option>Alabama</option>
-                    <option>Alaska</option>
-                    <option>Arizona</option>
-                    <option>Arkansas</option>
+                  <Form.Control
+                    as="select"
+                    onChange={this.props.onSetPxState}
+                    >
+                    <option>Select State</option>
+                    <option>AL</option>
+                    <option>AK</option>
+                    <option>AS</option>
+                    <option>AZ</option>
+                    <option>AR</option>
+                    <option>CA</option>
+                    <option>CO</option>
+                    <option>CT</option>
+                    <option>DE</option>
+                    <option>DC</option>
+                    <option>FM</option>
+                    <option>FL</option>
+                    <option>GA</option>
+                    <option>GU</option>
+                    <option>HI</option>
+                    <option>ID</option>
+                    <option>IL</option>
+                    <option>IN</option>
+                    <option>IA</option>
+                    <option>KS</option>
+                    <option>KY</option>
+                    <option>LA</option>
+                    <option>ME</option>
+                    <option>MH</option>
+                    <option>MD</option>
+                    <option>MA</option>
+                    <option>MI</option>
+                    <option>MN</option>
+                    <option>MS</option>
+                    <option>MO</option>
+                    <option>MT</option>
+                    <option>NE</option>
+                    <option>NV</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                    <option>NM</option>
+                    <option>NY</option>
+                    <option>NC</option>
+                    <option>ND</option>
+                    <option>MP</option>
+                    <option>OH</option>
+                    <option>OK</option>
+                    <option>OR</option>
+                    <option>PW</option>
+                    <option>PA</option>
+                    <option>PR</option>
+                    <option>RI</option>
+                    <option>SC</option>
+                    <option>SD</option>
+                    <option>TN</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                    <option>VT</option>
+                    <option>VI</option>
+                    <option>VA</option>
+                    <option>WA</option>
+                    <option>WV</option>
+                    <option>WI</option>
+                    <option>WY</option>
                   </Form.Control>
                 </Form.Group>
               </Dropdown.Menu>
@@ -196,16 +186,25 @@ SearchBox.propTypes = {
   pxid: PropTypes.string,
   onSetPXID: PropTypes.func,
   onSearchSubmit: PropTypes.func,
+  onSetBloodGroup: PropTypes.func,
+  onSetDonorOrCandidate: PropTypes.func,
+  onSetPxState: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
   pid: makeSelectPXID(),
   pxidRecord: makeSelectSearchResults(),
+  pxState: makeSelectPXState(),
+  bloodGroup: makeSelectBloodGroup(),
+  donorOrCandidate: makeSelectDonorOrCandidate(),
 });
 
 function mapDispatchToProps(dispatch) {
   return {
     onSetPXID: evt => dispatch(setPXID(evt.target.value)),
+    onSetBloodGroup: evt => dispatch(setBloodGroup(evt.target.value)),
+    onSetDonorOrCandidate: evt => dispatch(setDonorOrCandidate(evt.target.value)),
+    onSetPxState: evt => dispatch(setPXState(evt.target.value)),
     onSearchSubmit: () => dispatch(submitSearch()),
   };
 }

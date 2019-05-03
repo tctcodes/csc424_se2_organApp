@@ -22,8 +22,8 @@ const makeSelectToken = () =>
 const makeSelectPXID = () =>
   createSelector(selectSearchBoxDomain, substate => substate.get('pxid'));
 
-const makeSelectUSState = () =>
-  createSelector(selectSearchBoxDomain, substate => substate.get('usState'));
+const makeSelectPXState = () =>
+  createSelector(selectSearchBoxDomain, substate => substate.get('pxState'));
 
 const makeSelectDonorOrCandidate = () =>
   createSelector(selectSearchBoxDomain, substate => substate.get('donorOrCandidate'));
@@ -31,12 +31,15 @@ const makeSelectDonorOrCandidate = () =>
 const makeSelectSearchResults = () =>
   createSelector(selectSearchBoxDomain, substate => substate.get('searchResults'));
 
+const makeSelectBloodGroup = () =>
+  createSelector(selectSearchBoxDomain, substate => substate.get('bloodGroup'));
 
 export {
   selectSearchBoxDomain,
   makeSelectToken,
   makeSelectPXID,
-  makeSelectUSState,
+  makeSelectPXState,
   makeSelectDonorOrCandidate,
   makeSelectSearchResults,
+  makeSelectBloodGroup,
 };

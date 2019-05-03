@@ -7,7 +7,7 @@
 import {
   SET_TOKEN,
   SET_PXID,
-  SET_US_STATE,
+  SET_PX_STATE,
   SET_BLOOD_GROUP,
   SET_DONOR_OR_CANDIDATE,
   SET_SEARCH_RESULTS,
@@ -28,10 +28,10 @@ export function setPXID(pxid) {
   };
 }
 
-export function setUSState(usState) {
+export function setPXState(pxState) {
   return {
-    type: SET_US_STATE,
-    usState,
+    type: SET_PX_STATE,
+    pxState,
   };
 }
 
@@ -57,7 +57,6 @@ export function setSearchResults(searchResults) {
 }
 
 export function submitSearch() {
-  console.log('SUBMITTING SEARCH!');
   return {
     type: SUBMIT_SEARCH,
   };

@@ -8,7 +8,7 @@ import { fromJS } from "immutable";
 import {
   SET_TOKEN,
   SET_PXID,
-  SET_US_STATE,
+  SET_PX_STATE,
   SET_BLOOD_GROUP,
   SET_DONOR_OR_CANDIDATE,
   SET_SEARCH_RESULTS,
@@ -18,7 +18,7 @@ export const initialState = fromJS({
   token: '',
   pxid: '',
   bloodGroup: '',
-  usState: '',
+  pxState: '',
   donorOrCandidate: '',
   searchResults: {},
 });
@@ -29,8 +29,8 @@ function searchBoxReducer(state = initialState, action) {
       return state.set('token', action.token);
     case SET_PXID:
       return state.set('pxid', action.pxid);
-    case SET_US_STATE:
-      return state.set('usState', action.usState);
+    case SET_PX_STATE:
+      return state.set('pxState', action.pxState);
     case SET_BLOOD_GROUP:
       return state.set('bloodGroup', action.bloodGroup);
     case SET_DONOR_OR_CANDIDATE:

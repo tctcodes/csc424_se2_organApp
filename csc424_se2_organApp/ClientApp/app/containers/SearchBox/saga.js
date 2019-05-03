@@ -32,6 +32,36 @@ export function* searchPXIDList() {
   }
 }
 
+export function* refinedSearch() {
+  console.log('inside refined search');
+  const url = 'http://localhost:5000/api/Cand';
+  const PxId = yield select(makeSelectPXID());
+  const BloodGroup = '';
+  const PxState = '';
+
+  const body = {
+    PxId,
+    BloodGroup,
+    PxState,
+  };
+
+  let headers = {
+    'Content-Type': 'applications/json',
+  };
+
+  try {
+    console.log('inside try');
+    const response = yield axios.post(url, body, headers);
+    console.log(response);
+    if (response.status == 201) {
+      console.log('request success');
+      console.log(response.data);
+    }
+  } catch(err) {
+    console.log(err)
+  }
+}
+
 export function* getPXIDRecord() {
   console.log('inside searchPXIDInfo saga');
   const url = '/api/Cand/GetRecordPxId';
