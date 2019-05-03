@@ -14,6 +14,13 @@ import {
   SUBMIT_SEARCH,
 } from "./constants";
 
+/**
+ * This action gives the token to the SearchBox state.
+ *
+ * @param   {String}  token  The authentication token for hitting the api.
+ *
+ * @return  {[type]}         Gives the token to the setToken reducer.
+ */
 export function setToken(token) {
   return {
     type: SET_TOKEN,
