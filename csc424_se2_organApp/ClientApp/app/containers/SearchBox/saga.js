@@ -1,5 +1,6 @@
 const axios = require('axios');
 import { takeLatest, call, put, select } from 'redux-saga/effects';
+import {push} from 'connected-react-router'
 import { makeSelectPXID } from './selectors';
 import { setSearchResults } from './actions';
 import { SUBMIT_SEARCH } from './constants';
@@ -48,7 +49,8 @@ export function* getPXIDRecord() {
     const response = yield axios.post(url, body, headers);
     if (response.status === 201) {
       console.log(response.data);
-      yield put(setSearchResults(response.data));
+      yield put(push(`/staff/canform/:${PxId}`));
+      //yield put(setSearchResults(response.data));
     }
   } catch(err) {
     console.log(err);

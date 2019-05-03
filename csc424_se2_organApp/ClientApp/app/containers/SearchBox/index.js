@@ -18,6 +18,7 @@ import {
 } from "react-bootstrap";
 import { setPXID, submitSearch } from './actions';
 import { makeSelectPXID, makeSelectSearchResults } from './selectors';
+import CanForm from '../CanForm';
 
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
@@ -129,9 +130,7 @@ export class SearchBox extends React.Component {
           </Navbar>
         </div>
         {/* Display patient information */}
-        <div>
-          <PrintPxRecord pxidRecord={this.props.pxidRecord}/>
-        </div>
+        {/* <CanForm selectedPxId={this.props.pid}/> */}
       </div>
     );
   }

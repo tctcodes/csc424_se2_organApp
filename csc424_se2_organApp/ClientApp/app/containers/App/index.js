@@ -25,6 +25,7 @@ import LoginPage from 'containers/LoginPage/Loadable';
 import SpecialNav from "../../components/SpecialNav";
 import PrivateRoute from "./PrivateRoute"
 import AboutPage from 'components/About/index.js';
+import StaffHome from 'containers/StaffHome/Loadable';
 
 
 
@@ -45,8 +46,9 @@ function App(props) {
         <Route path="/about" component={AboutPage} />
         <PrivateRoute path="/client/home" component={ClientHome}/>
         <PrivateRoute path="/client/information" component={RegForm} />
+        <PrivateRoute path ="/staff/home" component={StaffHome}/>
         <PrivateRoute path="/staff/searchbox" component={SearchBox} />
-        <PrivateRoute path="/staff/canform" component={CanForm} />
+        <PrivateRoute path="/staff/canform/:pxid" component={CanForm} />
         <Route component={NotFoundPage} />
       </Switch>
   </div>);

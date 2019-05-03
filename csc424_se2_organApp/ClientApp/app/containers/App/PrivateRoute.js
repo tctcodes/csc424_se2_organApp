@@ -25,7 +25,12 @@ const PrivateRoute = ({ component: Component, auth, ...rest }) => {
             }} />
         )
       else {
-        props.history.goBack();
+  
+        return(
+        <Redirect to={{
+          pathname: '/',
+          state: { from: props.location }
+        }}/>);
 
       }
     }

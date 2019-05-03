@@ -31,15 +31,17 @@ export class CanForm extends React.Component {
 	constructor(props, context) {
 		super(props, context);
 		this.state = {
-		  key: 'malig',
+		  key: 'meld',
 		};
 	  }
 	
 	componentDidMount(){
 		//console.log(this.props.selectedPxId);		
 		//this.props.selectedPxId = "1232752"
-  	this.props.onGetRecordPxId(/* this.props.selectedPxId */"1232752");
+		
+  	this.props.onGetRecordPxId((this.props.match.params.pxid).slice(1)/* "1232752" */);
 	}
+	
 	
 
   render(){
