@@ -174,7 +174,7 @@ for  line in reader :
     
     
     if( line[1] =='num' and research.search(line[0]) != None):  # for all ID's with regx
-        varType = 'type="number" readOnly' 
+        varType = 'type="text" readOnly' 
     elif(line[1]=='num' and line[3] == 'MMDDYY'):
         varType = 'type="datetime-local"' 
     elif(line[1]=='num' and line[3] == 'TIME'):
@@ -183,7 +183,7 @@ for  line in reader :
         varType = 'type="text"' # add cat
         dropdown = True
     elif(line[1]=='num' and line[2] == '3'):                     #most likely true or false type NUMERIC(3)         
-        varType = 'type="text"' 
+        varType = 'type="number" min="0" max="999" ' 
     elif(line[1]=='num'):
         varType = 'type="number"'
     ####################### CHAR
@@ -191,11 +191,11 @@ for  line in reader :
         varType = 'type="text"'# add cat
         dropdown = True
     elif(line[1]=='char' and line[2] == '50'):
-        varType = 'as="textarea" rows="3"'
+        varType = 'as="textarea" rows="3" maxLength="50"'
     elif(line[1]=='char' and line[2] == '1'):                                      # end of nums
-        varType = 'type="text"'
+        varType = 'type="text" maxLength="1"'
     elif(line[1]=='char'): 
-        varType = 'type="text"'
+        varType = 'type="text" maxLength="'+line[2]+'"'
     else:
         #error of csv input (e.g. ',,,,')
         print("unknown type ", line[1])

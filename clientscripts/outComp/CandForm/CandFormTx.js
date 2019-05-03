@@ -13,12 +13,21 @@ export class CandFormTx extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN ANASTOMOSIS</label>
 					<label className="text-secondary" >Was anastomosis initiated?:</label>
-					<input className="form-control" type="text" value={this.props.canAnastomosis} onChange={this.props.onChangeCanAnastomosis} />
+					<select className="form-control" value={this.props.canAnastomosis} onChange={this.props.onChangeCanAnastomosis}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN SOURCE</label>
 					<label className="text-secondary" >Source of Candidate Data: A =Active Waitlist,R= Removed from Waitlist,L=Live Don Organ Recipient never on waitlist:</label>
-					<input className="form-control" type="text" value={this.props.canSource} onChange={this.props.onChangeCanSource} />
+					<select className="form-control" value={this.props.canSource} onChange={this.props.onChangeCanSource}>
+						<option value="" hidden disabled selected/>
+						<option value="A">Active</option>
+						<option value="R">Removed</option>
+						<option value="L">Live</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN TRR EXISTS</label>
@@ -279,17 +288,17 @@ export class CandFormTx extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DONOR ID</label>
 					<label className="text-secondary" >Encrypted Unique Donor ID (all donors) - foreign key:</label>
-					<input className="form-control" type="number" readOnly value={this.props.donorId} onChange={this.props.onChangeDonorId} />
+					<input className="form-control" type="text" readOnly value={this.props.donorId} onChange={this.props.onChangeDonorId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON TY</label>
 					<label className="text-secondary" >Donor Type (C-deceased, L-living):</label>
-					<input className="form-control" type="text" value={this.props.donTy} onChange={this.props.onChangeDonTy} />
+					<input className="form-control" type="text" maxLength="3" value={this.props.donTy} onChange={this.props.onChangeDonTy} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >ORG AR</label>
 					<label className="text-secondary" >Organ type with pancreas expanded to PTA and PAK:</label>
-					<input className="form-control" type="text" value={this.props.orgAr} onChange={this.props.onChangeOrgAr} />
+					<input className="form-control" type="text" maxLength="3" value={this.props.orgAr} onChange={this.props.onChangeOrgAr} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PERS NEXTTX</label>
@@ -299,7 +308,7 @@ export class CandFormTx extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PERS NEXTTX TRR ID</label>
 					<label className="text-secondary" >Unique identifier for TRR - unique key:</label>
-					<input className="form-control" type="number" readOnly value={this.props.persNexttxTrrId} onChange={this.props.onChangePersNexttxTrrId} />
+					<input className="form-control" type="text" readOnly value={this.props.persNexttxTrrId} onChange={this.props.onChangePersNexttxTrrId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PERS OPTN DEATH DT</label>
@@ -319,7 +328,6 @@ export class CandFormTx extends React.Component {
 						<option value="D">D: Death verified, but not date</option>
 						<option value="N">N: Not verified</option>
 						<option value="V">V: Death date verified</option>
-						<option value=""></option>
 					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">

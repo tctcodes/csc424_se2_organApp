@@ -13,7 +13,7 @@ export class DonLivForm1 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DONOR ID</label>
 					<label className="text-secondary" >Encrypted Unique Donor ID (all donors) - foreign key:</label>
-					<input className="form-control" type="number" readOnly value={this.props.donorId} onChange={this.props.onChangeDonorId} />
+					<input className="form-control" type="text" readOnly value={this.props.donorId} onChange={this.props.onChangeDonorId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON A1</label>
@@ -180,7 +180,7 @@ export class DonLivForm1 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON ANASTH COMPL</label>
 					<label className="text-secondary" >Anesthetic Complication Specify::</label>
-					<input className="form-control" as="textarea" rows="3" value={this.props.donAnasthCompl} onChange={this.props.onChangeDonAnasthCompl} />
+					<input className="form-control" as="textarea" rows="3" maxLength="50" value={this.props.donAnasthCompl} onChange={this.props.onChangeDonAnasthCompl} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON ARRHYTHM</label>

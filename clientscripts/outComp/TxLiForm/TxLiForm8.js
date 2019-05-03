@@ -23,17 +23,17 @@ export class TxLiForm8 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC CMV IGG</label>
 					<label className="text-secondary" >CMV IgG:</label>
-					<input className="form-control" type="text" value={this.props.recCmvIgg} onChange={this.props.onChangeRecCmvIgg} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.recCmvIgg} onChange={this.props.onChangeRecCmvIgg} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC CMV IGM</label>
 					<label className="text-secondary" >CMV IgM:</label>
-					<input className="form-control" type="text" value={this.props.recCmvIgm} onChange={this.props.onChangeRecCmvIgm} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.recCmvIgm} onChange={this.props.onChangeRecCmvIgm} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC CMV STAT</label>
 					<label className="text-secondary" >Pre-Tx Serology Test Results: Cytomegalovirus:</label>
-					<input className="form-control" type="text" value={this.props.recCmvStat} onChange={this.props.onChangeRecCmvStat} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.recCmvStat} onChange={this.props.onChangeRecCmvStat} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC COD</label>
@@ -817,12 +817,12 @@ export class TxLiForm8 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC CTR ID</label>
 					<label className="text-secondary" >REC_ Center ID:</label>
-					<input className="form-control" type="number" readOnly value={this.props.recCtrId} onChange={this.props.onChangeRecCtrId} />
+					<input className="form-control" type="text" readOnly value={this.props.recCtrId} onChange={this.props.onChangeRecCtrId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC CUR CTR ID</label>
 					<label className="text-secondary" >REC_CUR_ Center ID:</label>
-					<input className="form-control" type="number" readOnly value={this.props.recCurCtrId} onChange={this.props.onChangeRecCurCtrId} />
+					<input className="form-control" type="text" readOnly value={this.props.recCurCtrId} onChange={this.props.onChangeRecCurCtrId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC CUR PX STAT</label>
@@ -1525,7 +1525,7 @@ export class TxLiForm8 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC DGN OSTXT</label>
 					<label className="text-secondary" >Primary Diagnosis/Specify:</label>
-					<input className="form-control" as="textarea" rows="3" value={this.props.recDgnOstxt} onChange={this.props.onChangeRecDgnOstxt} />
+					<input className="form-control" as="textarea" rows="3" maxLength="50" value={this.props.recDgnOstxt} onChange={this.props.onChangeRecDgnOstxt} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC DISCHRG ALBUMIN</label>

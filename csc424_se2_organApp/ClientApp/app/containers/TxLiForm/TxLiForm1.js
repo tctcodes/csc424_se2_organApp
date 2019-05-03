@@ -88,12 +88,20 @@ export class TxLiForm1 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN BACTERIA PERIT</label>
 					<label className="text-secondary" >Spontaneous Bacterial Peritonitis:</label>
-					<input className="form-control" type="text" value={this.props.canBacteriaPerit} onChange={this.props.onChangeCanBacteriaPerit} />
+					<select className="form-control" value={this.props.canBacteriaPerit} onChange={this.props.onChangeCanBacteriaPerit}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN CEREB VASC</label>
 					<label className="text-secondary" >Symptomatic Cerebrovascular Disease:</label>
-					<input className="form-control" type="text" value={this.props.canCerebVasc} onChange={this.props.onChangeCanCerebVasc} />
+					<select className="form-control" value={this.props.canCerebVasc} onChange={this.props.onChangeCanCerebVasc}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN CITIZENSHIP</label>
@@ -819,12 +827,20 @@ export class TxLiForm1 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN DRUG TREAT COPD</label>
 					<label className="text-secondary" >Drug Treated COPD:</label>
-					<input className="form-control" type="text" value={this.props.canDrugTreatCopd} onChange={this.props.onChangeCanDrugTreatCopd} />
+					<select className="form-control" value={this.props.canDrugTreatCopd} onChange={this.props.onChangeCanDrugTreatCopd}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN DRUG TREAT HYPERTEN</label>
 					<label className="text-secondary" >Drug Treated Systemic Hypertension:</label>
-					<input className="form-control" type="text" value={this.props.canDrugTreatHyperten} onChange={this.props.onChangeCanDrugTreatHyperten} />
+					<select className="form-control" value={this.props.canDrugTreatHyperten} onChange={this.props.onChangeCanDrugTreatHyperten}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN EDUCATION</label>
@@ -853,7 +869,11 @@ export class TxLiForm1 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN GENDER</label>
 					<label className="text-secondary" >Patient/s Gender:</label>
-					<input className="form-control" type="text" value={this.props.canGender} onChange={this.props.onChangeCanGender} />
+					<select className="form-control" value={this.props.canGender} onChange={this.props.onChangeCanGender}>
+						<option value="" hidden disabled selected/>
+						<option value="M">Male</option>
+						<option value="F">Female</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN HGT CM</label>

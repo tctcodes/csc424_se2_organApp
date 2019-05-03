@@ -50,7 +50,11 @@ export class CandFormPhys extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN ARTIFICIAL LI</label>
 					<label className="text-secondary" >Life Support://Artifical Liver:</label>
-					<input className="form-control" type="text" value={this.props.canArtificialLi} onChange={this.props.onChangeCanArtificialLi} />
+					<select className="form-control" value={this.props.canArtificialLi} onChange={this.props.onChangeCanArtificialLi}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN BMI</label>
@@ -744,22 +748,34 @@ export class CandFormPhys extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN DGN OSTXT</label>
 					<label className="text-secondary" >Primary Diagnosis/Specify:</label>
-					<input className="form-control" as="textarea" rows="3" value={this.props.canDgnOstxt} onChange={this.props.onChangeCanDgnOstxt} />
+					<input className="form-control" as="textarea" rows="3" maxLength="50" value={this.props.canDgnOstxt} onChange={this.props.onChangeCanDgnOstxt} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN ECMO</label>
 					<label className="text-secondary" >Life Support: ECMO:</label>
-					<input className="form-control" type="text" value={this.props.canEcmo} onChange={this.props.onChangeCanEcmo} />
+					<select className="form-control" value={this.props.canEcmo} onChange={this.props.onChangeCanEcmo}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN ELECTROLYTE</label>
 					<label className="text-secondary" >Unmanageable fluid-electrolyte losses (IN Pediatric Only):</label>
-					<input className="form-control" type="text" value={this.props.canElectrolyte} onChange={this.props.onChangeCanElectrolyte} />
+					<select className="form-control" value={this.props.canElectrolyte} onChange={this.props.onChangeCanElectrolyte}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN EXHAUST VASC ACCESS</label>
 					<label className="text-secondary" >Exhausted Vascular Access:</label>
-					<input className="form-control" type="text" value={this.props.canExhaustVascAccess} onChange={this.props.onChangeCanExhaustVascAccess} />
+					<select className="form-control" value={this.props.canExhaustVascAccess} onChange={this.props.onChangeCanExhaustVascAccess}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN FUNCTN STAT</label>
@@ -806,27 +822,47 @@ export class CandFormPhys extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN IABP</label>
 					<label className="text-secondary" >Life Support: IABP:</label>
-					<input className="form-control" type="text" value={this.props.canIabp} onChange={this.props.onChangeCanIabp} />
+					<select className="form-control" value={this.props.canIabp} onChange={this.props.onChangeCanIabp}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN IV INOTROP</label>
 					<label className="text-secondary" >Life Support: IV Inotropes:</label>
-					<input className="form-control" type="text" value={this.props.canIvInotrop} onChange={this.props.onChangeCanIvInotrop} />
+					<select className="form-control" value={this.props.canIvInotrop} onChange={this.props.onChangeCanIvInotrop}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN LAST DIAL PRIOR WEEK</label>
 					<label className="text-secondary" >Last non-blank val. of dialysis within prior week:</label>
-					<input className="form-control" type="text" value={this.props.canLastDialPriorWeek} onChange={this.props.onChangeCanLastDialPriorWeek} />
+					<select className="form-control" value={this.props.canLastDialPriorWeek} onChange={this.props.onChangeCanLastDialPriorWeek}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN LIFE SUPPORT</label>
 					<label className="text-secondary" >Patient on Life Support:</label>
-					<input className="form-control" type="text" value={this.props.canLifeSupport} onChange={this.props.onChangeCanLifeSupport} />
+					<select className="form-control" value={this.props.canLifeSupport} onChange={this.props.onChangeCanLifeSupport}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN LIFE SUPPORT OTHER</label>
 					<label className="text-secondary" >Life Support: Other Mechanism:</label>
-					<input className="form-control" type="text" value={this.props.canLifeSupportOther} onChange={this.props.onChangeCanLifeSupportOther} />
+					<select className="form-control" value={this.props.canLifeSupportOther} onChange={this.props.onChangeCanLifeSupportOther}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN MOST RECENT CREAT</label>
@@ -858,17 +894,29 @@ export class CandFormPhys extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN MUSCLE WASTING</label>
 					<label className="text-secondary" >Marked Muscle Wasting:</label>
-					<input className="form-control" type="text" value={this.props.canMuscleWasting} onChange={this.props.onChangeCanMuscleWasting} />
+					<select className="form-control" value={this.props.canMuscleWasting} onChange={this.props.onChangeCanMuscleWasting}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN NEOPLASM</label>
 					<label className="text-secondary" >Neoplasm:</label>
-					<input className="form-control" type="text" value={this.props.canNeoplasm} onChange={this.props.onChangeCanNeoplasm} />
+					<select className="form-control" value={this.props.canNeoplasm} onChange={this.props.onChangeCanNeoplasm}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PGE</label>
 					<label className="text-secondary" >Life Support: PGE:</label>
-					<input className="form-control" type="text" value={this.props.canPge} onChange={this.props.onChangeCanPge} />
+					<select className="form-control" value={this.props.canPge} onChange={this.props.onChangeCanPge}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PHYSC CAPACITY</label>
@@ -912,12 +960,20 @@ export class CandFormPhys extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN VARICEAL BLEEDING</label>
 					<label className="text-secondary" >Variceal Bleeding within Last Two Weeks:</label>
-					<input className="form-control" type="text" value={this.props.canVaricealBleeding} onChange={this.props.onChangeCanVaricealBleeding} />
+					<select className="form-control" value={this.props.canVaricealBleeding} onChange={this.props.onChangeCanVaricealBleeding}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN VENTILATOR</label>
 					<label className="text-secondary" >Life Support: Ventilator:</label>
-					<input className="form-control" type="text" value={this.props.canVentilator} onChange={this.props.onChangeCanVentilator} />
+					<select className="form-control" value={this.props.canVentilator} onChange={this.props.onChangeCanVentilator}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN WGT KG</label>

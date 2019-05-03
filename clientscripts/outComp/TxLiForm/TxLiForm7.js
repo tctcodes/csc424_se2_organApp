@@ -39,7 +39,11 @@ export class TxLiForm7 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY</label>
 					<label className="text-secondary" >Biological or Anti-viral Therapy::</label>
-					<input className="form-control" type="text" value={this.props.recAntivrlTherapy} onChange={this.props.onChangeRecAntivrlTherapy} />
+					<select className="form-control" value={this.props.recAntivrlTherapy} onChange={this.props.onChangeRecAntivrlTherapy}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY</label>
@@ -64,67 +68,119 @@ export class TxLiForm7 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY ACYCLOVIR</label>
 					<label className="text-secondary" >Anti-viral Therapy - Acyclovir (Zovirax) (11):</label>
-					<input className="form-control" type="text" value={this.props.recAntivrlTherapyTyAcyclovir} onChange={this.props.onChangeRecAntivrlTherapyTyAcyclovir} />
+					<select className="form-control" value={this.props.recAntivrlTherapyTyAcyclovir} onChange={this.props.onChangeRecAntivrlTherapyTyAcyclovir}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY CYTOGAM</label>
 					<label className="text-secondary" >Anti-viral Therapy - Cytogam (CMV) (11):</label>
-					<input className="form-control" type="text" value={this.props.recAntivrlTherapyTyCytogam} onChange={this.props.onChangeRecAntivrlTherapyTyCytogam} />
+					<select className="form-control" value={this.props.recAntivrlTherapyTyCytogam} onChange={this.props.onChangeRecAntivrlTherapyTyCytogam}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY CYTOVENE</label>
 					<label className="text-secondary" >Anti-viral Therapy - Ganciclovir (Cytovene) (11):</label>
-					<input className="form-control" type="text" value={this.props.recAntivrlTherapyTyCytovene} onChange={this.props.onChangeRecAntivrlTherapyTyCytovene} />
+					<select className="form-control" value={this.props.recAntivrlTherapyTyCytovene} onChange={this.props.onChangeRecAntivrlTherapyTyCytovene}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY EPIVIR</label>
 					<label className="text-secondary" >Anti-viral Therapy - Lamivudine (Epivir) (for treatment of Hepatitis B) (11):</label>
-					<input className="form-control" type="text" value={this.props.recAntivrlTherapyTyEpivir} onChange={this.props.onChangeRecAntivrlTherapyTyEpivir} />
+					<select className="form-control" value={this.props.recAntivrlTherapyTyEpivir} onChange={this.props.onChangeRecAntivrlTherapyTyEpivir}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY FLU VAC</label>
 					<label className="text-secondary" >Anti-viral Therapy - Flu Vaccine (Influenza Virus) (11):</label>
-					<input className="form-control" type="text" value={this.props.recAntivrlTherapyTyFluVac} onChange={this.props.onChangeRecAntivrlTherapyTyFluVac} />
+					<select className="form-control" value={this.props.recAntivrlTherapyTyFluVac} onChange={this.props.onChangeRecAntivrlTherapyTyFluVac}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY GAMIMUNE</label>
 					<label className="text-secondary" >Anti-viral Therapy - Gamimune (11):</label>
-					<input className="form-control" type="text" value={this.props.recAntivrlTherapyTyGamimune} onChange={this.props.onChangeRecAntivrlTherapyTyGamimune} />
+					<select className="form-control" value={this.props.recAntivrlTherapyTyGamimune} onChange={this.props.onChangeRecAntivrlTherapyTyGamimune}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY GAMMAGARD</label>
 					<label className="text-secondary" >Anti-viral Therapy - Gammagard (11):</label>
-					<input className="form-control" type="text" value={this.props.recAntivrlTherapyTyGammagard} onChange={this.props.onChangeRecAntivrlTherapyTyGammagard} />
+					<select className="form-control" value={this.props.recAntivrlTherapyTyGammagard} onChange={this.props.onChangeRecAntivrlTherapyTyGammagard}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY HBIG</label>
 					<label className="text-secondary" >Anti-viral Therapy - HBIG (Hepatitis B Immune Globulin) (11):</label>
-					<input className="form-control" type="text" value={this.props.recAntivrlTherapyTyHbig} onChange={this.props.onChangeRecAntivrlTherapyTyHbig} />
+					<select className="form-control" value={this.props.recAntivrlTherapyTyHbig} onChange={this.props.onChangeRecAntivrlTherapyTyHbig}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY OTHER</label>
 					<label className="text-secondary" >Anti-viral Therapy - Other, Specify (11):</label>
-					<input className="form-control" type="text" value={this.props.recAntivrlTherapyTyOther} onChange={this.props.onChangeRecAntivrlTherapyTyOther} />
+					<select className="form-control" value={this.props.recAntivrlTherapyTyOther} onChange={this.props.onChangeRecAntivrlTherapyTyOther}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY VALCYTE</label>
 					<label className="text-secondary" >Anti-viral Therapy - Valgancyclovir (Valcyte) (11):</label>
-					<input className="form-control" type="text" value={this.props.recAntivrlTherapyTyValcyte} onChange={this.props.onChangeRecAntivrlTherapyTyValcyte} />
+					<select className="form-control" value={this.props.recAntivrlTherapyTyValcyte} onChange={this.props.onChangeRecAntivrlTherapyTyValcyte}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY VALTREX</label>
 					<label className="text-secondary" >Anti-viral Therapy - Valacyclovir (Valtrex) (11):</label>
-					<input className="form-control" type="text" value={this.props.recAntivrlTherapyTyValtrex} onChange={this.props.onChangeRecAntivrlTherapyTyValtrex} />
+					<select className="form-control" value={this.props.recAntivrlTherapyTyValtrex} onChange={this.props.onChangeRecAntivrlTherapyTyValtrex}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ARTIFICIAL LI</label>
 					<label className="text-secondary" >Artificial Liver:</label>
-					<input className="form-control" type="text" value={this.props.recArtificialLi} onChange={this.props.onChangeRecArtificialLi} />
+					<select className="form-control" value={this.props.recArtificialLi} onChange={this.props.onChangeRecArtificialLi}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ASCITES</label>
 					<label className="text-secondary" >Risk Factors: Ascites:</label>
-					<input className="form-control" type="text" value={this.props.recAscites} onChange={this.props.onChangeRecAscites} />
+					<select className="form-control" value={this.props.recAscites} onChange={this.props.onChangeRecAscites}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC A MM EQUIV CUR</label>
@@ -349,7 +405,11 @@ export class TxLiForm7 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC BACTERIA PERIT</label>
 					<label className="text-secondary" >Risk Factors: Spontaneous Bacterial Peritonitis:</label>
-					<input className="form-control" type="text" value={this.props.recBacteriaPerit} onChange={this.props.onChangeRecBacteriaPerit} />
+					<select className="form-control" value={this.props.recBacteriaPerit} onChange={this.props.onChangeRecBacteriaPerit}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC BMI</label>

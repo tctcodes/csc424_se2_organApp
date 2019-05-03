@@ -142,17 +142,21 @@ export class DonDecForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CANCER OTHER OSTXT</label>
 					<label className="text-secondary" >History of Cancer/Specify:</label>
-					<input className="form-control" as="textarea" rows="3" value={this.props.donCancerOtherOstxt} onChange={this.props.onChangeDonCancerOtherOstxt} />
+					<input className="form-control" as="textarea" rows="3" maxLength="50" value={this.props.donCancerOtherOstxt} onChange={this.props.onChangeDonCancerOtherOstxt} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CARDIAC ARREST AFTER DEATH</label>
 					<label className="text-secondary" >Cardiac Arr. Since Event that led to Decl of Death:</label>
-					<input className="form-control" type="text" value={this.props.donCardiacArrestAfterDeath} onChange={this.props.onChangeDonCardiacArrestAfterDeath} />
+					<select className="form-control" value={this.props.donCardiacArrestAfterDeath} onChange={this.props.onChangeDonCardiacArrestAfterDeath}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CHAGAS NAT</label>
 					<label className="text-secondary" >Donor RNA Nat serology value for Chagas test:</label>
-					<input className="form-control" type="text" value={this.props.donChagasNat} onChange={this.props.onChangeDonChagasNat} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donChagasNat} onChange={this.props.onChangeDonChagasNat} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CHEST XRAY</label>
@@ -218,12 +222,20 @@ export class DonDecForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CLINICAL INFECT</label>
 					<label className="text-secondary" >Clinical Infection:</label>
-					<input className="form-control" type="text" value={this.props.donClinicalInfect} onChange={this.props.onChangeDonClinicalInfect} />
+					<select className="form-control" value={this.props.donClinicalInfect} onChange={this.props.onChangeDonClinicalInfect}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON COD DON STROKE</label>
 					<label className="text-secondary" >Donor cause of death is stroke (1= yes, 0= no):</label>
-					<input className="form-control" type="text" value={this.props.donCodDonStroke} onChange={this.props.onChangeDonCodDonStroke} />
+					<select className="form-control" value={this.props.donCodDonStroke} onChange={this.props.onChangeDonCodDonStroke}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON COLD ISCH TM ARRIV KI</label>
@@ -233,12 +245,20 @@ export class DonDecForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONSENT ATTORNEY</label>
 					<label className="text-secondary" >Consent Mechanism - Attorney in Fact:</label>
-					<input className="form-control" type="text" value={this.props.donConsentAttorney} onChange={this.props.onChangeDonConsentAttorney} />
+					<select className="form-control" value={this.props.donConsentAttorney} onChange={this.props.onChangeDonConsentAttorney}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONSENT DON CARD</label>
 					<label className="text-secondary" >Consent Mechanism - Donor Card:</label>
-					<input className="form-control" type="text" value={this.props.donConsentDonCard} onChange={this.props.onChangeDonConsentDonCard} />
+					<select className="form-control" value={this.props.donConsentDonCard} onChange={this.props.onChangeDonConsentDonCard}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 			</div>
 		)

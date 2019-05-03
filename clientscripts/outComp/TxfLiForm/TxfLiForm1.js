@@ -13,7 +13,7 @@ export class TxfLiForm1 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >ORG AR</label>
 					<label className="text-secondary" >Organ type with pancreas expanded to PTA and PAK:</label>
-					<input className="form-control" type="text" value={this.props.orgAr} onChange={this.props.onChangeOrgAr} />
+					<input className="form-control" type="text" maxLength="3" value={this.props.orgAr} onChange={this.props.onChangeOrgAr} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >ORG TY</label>
@@ -34,22 +34,22 @@ export class TxfLiForm1 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PERS ID</label>
 					<label className="text-secondary" >Unique person ID to replace SSN:</label>
-					<input className="form-control" type="number" readOnly value={this.props.persId} onChange={this.props.onChangePersId} />
+					<input className="form-control" type="text" readOnly value={this.props.persId} onChange={this.props.onChangePersId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PX ID</label>
 					<label className="text-secondary" >Patient Identifier (includes WL patients and living don TX):</label>
-					<input className="form-control" type="number" readOnly value={this.props.pxId} onChange={this.props.onChangePxId} />
+					<input className="form-control" type="text" readOnly value={this.props.pxId} onChange={this.props.onChangePxId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC CTR ID</label>
 					<label className="text-secondary" >REC_ Center ID:</label>
-					<input className="form-control" type="number" readOnly value={this.props.recCtrId} onChange={this.props.onChangeRecCtrId} />
+					<input className="form-control" type="text" readOnly value={this.props.recCtrId} onChange={this.props.onChangeRecCtrId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC OPO ID</label>
 					<label className="text-secondary" >OPO Serving Transplant Center:</label>
-					<input className="form-control" type="number" readOnly value={this.props.recOpoId} onChange={this.props.onChangeRecOpoId} />
+					<input className="form-control" type="text" readOnly value={this.props.recOpoId} onChange={this.props.onChangeRecOpoId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC TX DT</label>
@@ -166,7 +166,11 @@ export class TxfLiForm1 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY</label>
 					<label className="text-secondary" >Biological or Anti-viral therapy::</label>
-					<input className="form-control" type="text" value={this.props.tflAntivrlTherapy} onChange={this.props.onChangeTflAntivrlTherapy} />
+					<select className="form-control" value={this.props.tflAntivrlTherapy} onChange={this.props.onChangeTflAntivrlTherapy}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY</label>
@@ -191,37 +195,65 @@ export class TxfLiForm1 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY ACYCLOVIR</label>
 					<label className="text-secondary" >Anti-viral Therapy - Acyclovir (Zovirax) (11):</label>
-					<input className="form-control" type="text" value={this.props.tflAntivrlTherapyTyAcyclovir} onChange={this.props.onChangeTflAntivrlTherapyTyAcyclovir} />
+					<select className="form-control" value={this.props.tflAntivrlTherapyTyAcyclovir} onChange={this.props.onChangeTflAntivrlTherapyTyAcyclovir}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY CYTOGAM</label>
 					<label className="text-secondary" >Anti-viral Therapy - Cytogam (CMV) (11):</label>
-					<input className="form-control" type="text" value={this.props.tflAntivrlTherapyTyCytogam} onChange={this.props.onChangeTflAntivrlTherapyTyCytogam} />
+					<select className="form-control" value={this.props.tflAntivrlTherapyTyCytogam} onChange={this.props.onChangeTflAntivrlTherapyTyCytogam}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY CYTOVENE</label>
 					<label className="text-secondary" >Anti-viral Therapy - Ganciclovir (Cytovene) (11):</label>
-					<input className="form-control" type="text" value={this.props.tflAntivrlTherapyTyCytovene} onChange={this.props.onChangeTflAntivrlTherapyTyCytovene} />
+					<select className="form-control" value={this.props.tflAntivrlTherapyTyCytovene} onChange={this.props.onChangeTflAntivrlTherapyTyCytovene}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY EPIVIR</label>
 					<label className="text-secondary" >Anti-viral Therapy - Lamivudine (Epivir) (for treatment of Hepatitis B) (11):</label>
-					<input className="form-control" type="text" value={this.props.tflAntivrlTherapyTyEpivir} onChange={this.props.onChangeTflAntivrlTherapyTyEpivir} />
+					<select className="form-control" value={this.props.tflAntivrlTherapyTyEpivir} onChange={this.props.onChangeTflAntivrlTherapyTyEpivir}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY FLU VAC</label>
 					<label className="text-secondary" >Anti-viral Therapy - Flu Vaccine (Influenza Virus) (11):</label>
-					<input className="form-control" type="text" value={this.props.tflAntivrlTherapyTyFluVac} onChange={this.props.onChangeTflAntivrlTherapyTyFluVac} />
+					<select className="form-control" value={this.props.tflAntivrlTherapyTyFluVac} onChange={this.props.onChangeTflAntivrlTherapyTyFluVac}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY GAMIMUNE</label>
 					<label className="text-secondary" >Anti-viral Therapy - Gamimune (11):</label>
-					<input className="form-control" type="text" value={this.props.tflAntivrlTherapyTyGamimune} onChange={this.props.onChangeTflAntivrlTherapyTyGamimune} />
+					<select className="form-control" value={this.props.tflAntivrlTherapyTyGamimune} onChange={this.props.onChangeTflAntivrlTherapyTyGamimune}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY GAMMAGARD</label>
 					<label className="text-secondary" >Anti-viral Therapy - Gammagard (11):</label>
-					<input className="form-control" type="text" value={this.props.tflAntivrlTherapyTyGammagard} onChange={this.props.onChangeTflAntivrlTherapyTyGammagard} />
+					<select className="form-control" value={this.props.tflAntivrlTherapyTyGammagard} onChange={this.props.onChangeTflAntivrlTherapyTyGammagard}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 			</div>
 		)

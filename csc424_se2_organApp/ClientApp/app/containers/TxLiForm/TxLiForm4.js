@@ -236,7 +236,11 @@ export class TxLiForm4 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CARDIAC ARREST AFTER DEATH</label>
 					<label className="text-secondary" >Cardiac Arr. Since Event that led to Decl of Death:</label>
-					<input className="form-control" type="text" value={this.props.donCardiacArrestAfterDeath} onChange={this.props.onChangeDonCardiacArrestAfterDeath} />
+					<select className="form-control" value={this.props.donCardiacArrestAfterDeath} onChange={this.props.onChangeDonCardiacArrestAfterDeath}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CITIZENSHIP</label>
@@ -268,27 +272,47 @@ export class TxLiForm4 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON COD DON STROKE</label>
 					<label className="text-secondary" >Donor cause of death is stroke (1= yes, 0= no):</label>
-					<input className="form-control" type="text" value={this.props.donCodDonStroke} onChange={this.props.onChangeDonCodDonStroke} />
+					<select className="form-control" value={this.props.donCodDonStroke} onChange={this.props.onChangeDonCodDonStroke}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONT CIGARETTE</label>
 					<label className="text-secondary" >Donor/s Continued Use in Last 6 Months:</label>
-					<input className="form-control" type="text" value={this.props.donContCigarette} onChange={this.props.onChangeDonContCigarette} />
+					<select className="form-control" value={this.props.donContCigarette} onChange={this.props.onChangeDonContCigarette}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONT COCAINE</label>
 					<label className="text-secondary" >Cocaine Use Last 6 Months:</label>
-					<input className="form-control" type="text" value={this.props.donContCocaine} onChange={this.props.onChangeDonContCocaine} />
+					<select className="form-control" value={this.props.donContCocaine} onChange={this.props.onChangeDonContCocaine}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONT IV DRUG</label>
 					<label className="text-secondary" >IV Drug Last 6 Months:</label>
-					<input className="form-control" type="text" value={this.props.donContIvDrug} onChange={this.props.onChangeDonContIvDrug} />
+					<select className="form-control" value={this.props.donContIvDrug} onChange={this.props.onChangeDonContIvDrug}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONT OTHER DRUG</label>
 					<label className="text-secondary" >Other Drug Abuse Last 6 Months:</label>
-					<input className="form-control" type="text" value={this.props.donContOtherDrug} onChange={this.props.onChangeDonContOtherDrug} />
+					<select className="form-control" value={this.props.donContOtherDrug} onChange={this.props.onChangeDonContOtherDrug}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CREAT</label>
@@ -298,7 +322,11 @@ export class TxLiForm4 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DDAVP</label>
 					<label className="text-secondary" >Meds given Donor: DDAVP:</label>
-					<input className="form-control" type="text" value={this.props.donDdavp} onChange={this.props.onChangeDonDdavp} />
+					<select className="form-control" value={this.props.donDdavp} onChange={this.props.onChangeDonDdavp}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DEATH CIRCUM</label>
@@ -340,12 +368,20 @@ export class TxLiForm4 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DOBUTAMINE</label>
 					<label className="text-secondary" >Meds given Donor: Dobutamine:</label>
-					<input className="form-control" type="text" value={this.props.donDobutamine} onChange={this.props.onChangeDonDobutamine} />
+					<select className="form-control" value={this.props.donDobutamine} onChange={this.props.onChangeDonDobutamine}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DOPAMINE</label>
 					<label className="text-secondary" >Meds given Donor: Dopamine:</label>
-					<input className="form-control" type="text" value={this.props.donDopamine} onChange={this.props.onChangeDonDopamine} />
+					<select className="form-control" value={this.props.donDopamine} onChange={this.props.onChangeDonDopamine}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DR1</label>
@@ -475,12 +511,20 @@ export class TxLiForm4 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON EXPAND DON KI</label>
 					<label className="text-secondary" >Meets expanded donor criteria for kidney (1= yes , 0= no):</label>
-					<input className="form-control" type="text" value={this.props.donExpandDonKi} onChange={this.props.onChangeDonExpandDonKi} />
+					<select className="form-control" value={this.props.donExpandDonKi} onChange={this.props.onChangeDonExpandDonKi}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON GENDER</label>
 					<label className="text-secondary" >Donor/s Gender:</label>
-					<input className="form-control" type="text" value={this.props.donGender} onChange={this.props.onChangeDonGender} />
+					<select className="form-control" value={this.props.donGender} onChange={this.props.onChangeDonGender}>
+						<option value="" hidden disabled selected/>
+						<option value="M">Male</option>
+						<option value="F">Female</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HAPLO TY MATCH</label>

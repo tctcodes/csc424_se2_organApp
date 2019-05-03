@@ -13,37 +13,57 @@ export class TxLiForm10 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC HISTO TX ID</label>
 					<label className="text-secondary" >Unique identifier for Transplant - foreign key to rec_histo:</label>
-					<input className="form-control" type="number" readOnly value={this.props.recHistoTxId} onChange={this.props.onChangeRecHistoTxId} />
+					<input className="form-control" type="text" readOnly value={this.props.recHistoTxId} onChange={this.props.onChangeRecHistoTxId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC HIV STAT</label>
 					<label className="text-secondary" >HIV serology status:</label>
-					<input className="form-control" type="text" value={this.props.recHivStat} onChange={this.props.onChangeRecHivStat} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.recHivStat} onChange={this.props.onChangeRecHivStat} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC HOSP 90 DAYS</label>
 					<label className="text-secondary" >Was patient hospitalizied during the last 90 days prior to the transplant admission::</label>
-					<input className="form-control" type="text" value={this.props.recHosp90Days} onChange={this.props.onChangeRecHosp90Days} />
+					<select className="form-control" value={this.props.recHosp90Days} onChange={this.props.onChangeRecHosp90Days}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC IMMUNO MAINT MEDS</label>
 					<label className="text-secondary" >Are Any Meds Given Currently for Maint. Or Anti-Rej?:</label>
-					<input className="form-control" type="text" value={this.props.recImmunoMaintMeds} onChange={this.props.onChangeRecImmunoMaintMeds} />
+					<select className="form-control" value={this.props.recImmunoMaintMeds} onChange={this.props.onChangeRecImmunoMaintMeds}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC INOTROP BP SUPPORT</label>
 					<label className="text-secondary" >Risk Factors: Inotropes for Blood Pressure Support:</label>
-					<input className="form-control" type="text" value={this.props.recInotropBpSupport} onChange={this.props.onChangeRecInotropBpSupport} />
+					<select className="form-control" value={this.props.recInotropBpSupport} onChange={this.props.onChangeRecInotropBpSupport}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC LIFE SUPPORT</label>
 					<label className="text-secondary" >Patient on Life Support::</label>
-					<input className="form-control" type="text" value={this.props.recLifeSupport} onChange={this.props.onChangeRecLifeSupport} />
+					<select className="form-control" value={this.props.recLifeSupport} onChange={this.props.onChangeRecLifeSupport}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC LIFE SUPPORT OTHER</label>
 					<label className="text-secondary" >Life Support: Other Mechanism:</label>
-					<input className="form-control" type="text" value={this.props.recLifeSupportOther} onChange={this.props.onChangeRecLifeSupportOther} />
+					<select className="form-control" value={this.props.recLifeSupportOther} onChange={this.props.onChangeRecLifeSupportOther}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC LI TY</label>
@@ -72,7 +92,11 @@ export class TxLiForm10 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG</label>
 					<label className="text-secondary" >Pretransplant Malignancy:</label>
-					<input className="form-control" type="text" value={this.props.recMalig} onChange={this.props.onChangeRecMalig} />
+					<select className="form-control" value={this.props.recMalig} onChange={this.props.onChangeRecMalig}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY</label>
@@ -100,72 +124,128 @@ export class TxLiForm10 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY BREAST</label>
 					<label className="text-secondary" >Previous Malignancy - Breast (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTyBreast} onChange={this.props.onChangeRecMaligTyBreast} />
+					<select className="form-control" value={this.props.recMaligTyBreast} onChange={this.props.onChangeRecMaligTyBreast}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY CNS TUMOR</label>
 					<label className="text-secondary" >Previous Malignancy - CNS Tumor (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTyCnsTumor} onChange={this.props.onChangeRecMaligTyCnsTumor} />
+					<select className="form-control" value={this.props.recMaligTyCnsTumor} onChange={this.props.onChangeRecMaligTyCnsTumor}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY GENITOURINARY</label>
 					<label className="text-secondary" >Previous Malignancy - Genitourinary (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTyGenitourinary} onChange={this.props.onChangeRecMaligTyGenitourinary} />
+					<select className="form-control" value={this.props.recMaligTyGenitourinary} onChange={this.props.onChangeRecMaligTyGenitourinary}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY HEPBLAST</label>
 					<label className="text-secondary" >Previous Malignancy - Hepatoblastoma (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTyHepblast} onChange={this.props.onChangeRecMaligTyHepblast} />
+					<select className="form-control" value={this.props.recMaligTyHepblast} onChange={this.props.onChangeRecMaligTyHepblast}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY HEPCARCINOMA</label>
 					<label className="text-secondary" >Previous Malignancy - Hepatocellular Carcinoma (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTyHepcarcinoma} onChange={this.props.onChangeRecMaligTyHepcarcinoma} />
+					<select className="form-control" value={this.props.recMaligTyHepcarcinoma} onChange={this.props.onChangeRecMaligTyHepcarcinoma}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY LEUK LYMPH</label>
 					<label className="text-secondary" >Previous Malignancy - Leukemia/Lymphoma (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTyLeukLymph} onChange={this.props.onChangeRecMaligTyLeukLymph} />
+					<select className="form-control" value={this.props.recMaligTyLeukLymph} onChange={this.props.onChangeRecMaligTyLeukLymph}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY LIVER</label>
 					<label className="text-secondary" >Previous Malignancy - Liver (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTyLiver} onChange={this.props.onChangeRecMaligTyLiver} />
+					<select className="form-control" value={this.props.recMaligTyLiver} onChange={this.props.onChangeRecMaligTyLiver}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY LU</label>
 					<label className="text-secondary" >Previous Malignancy - Lung (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTyLu} onChange={this.props.onChangeRecMaligTyLu} />
+					<select className="form-control" value={this.props.recMaligTyLu} onChange={this.props.onChangeRecMaligTyLu}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY OTHER</label>
 					<label className="text-secondary" >Previous Malignancy - Other, specify (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTyOther} onChange={this.props.onChangeRecMaligTyOther} />
+					<select className="form-control" value={this.props.recMaligTyOther} onChange={this.props.onChangeRecMaligTyOther}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY SKIN MEL</label>
 					<label className="text-secondary" >Previous Malignancy - Skin Melanoma (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTySkinMel} onChange={this.props.onChangeRecMaligTySkinMel} />
+					<select className="form-control" value={this.props.recMaligTySkinMel} onChange={this.props.onChangeRecMaligTySkinMel}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY SKIN NON MEL</label>
 					<label className="text-secondary" >Previous Malignancy - Skin Non-Melanoma (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTySkinNonMel} onChange={this.props.onChangeRecMaligTySkinNonMel} />
+					<select className="form-control" value={this.props.recMaligTySkinNonMel} onChange={this.props.onChangeRecMaligTySkinNonMel}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY THROAT</label>
 					<label className="text-secondary" >Previous Malignancy - Tongue/Throat/Larynx (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTyThroat} onChange={this.props.onChangeRecMaligTyThroat} />
+					<select className="form-control" value={this.props.recMaligTyThroat} onChange={this.props.onChangeRecMaligTyThroat}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY THYROID</label>
 					<label className="text-secondary" >Previous Malignancy - Thyroid (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTyThyroid} onChange={this.props.onChangeRecMaligTyThyroid} />
+					<select className="form-control" value={this.props.recMaligTyThyroid} onChange={this.props.onChangeRecMaligTyThyroid}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC MALIG TY UNK</label>
 					<label className="text-secondary" >Previous Malignancy - Type Unknown (14):</label>
-					<input className="form-control" type="text" value={this.props.recMaligTyUnk} onChange={this.props.onChangeRecMaligTyUnk} />
+					<select className="form-control" value={this.props.recMaligTyUnk} onChange={this.props.onChangeRecMaligTyUnk}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 			</div>
 		)

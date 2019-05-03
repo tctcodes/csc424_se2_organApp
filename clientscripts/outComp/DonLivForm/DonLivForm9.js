@@ -31,7 +31,11 @@ export class DonLivForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON RECOV TX SAME CTR</label>
 					<label className="text-secondary" >Did organ recovery and transplant occur at the same center:</label>
-					<input className="form-control" type="text" value={this.props.donRecovTxSameCtr} onChange={this.props.onChangeDonRecovTxSameCtr} />
+					<select className="form-control" value={this.props.donRecovTxSameCtr} onChange={this.props.onChangeDonRecovTxSameCtr}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON RELATIONSHIP TY</label>
@@ -70,7 +74,11 @@ export class DonLivForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON SELF</label>
 					<label className="text-secondary" >Secondary source of payment: Self:</label>
-					<input className="form-control" type="text" value={this.props.donSelf} onChange={this.props.onChangeDonSelf} />
+					<select className="form-control" value={this.props.donSelf} onChange={this.props.onChangeDonSelf}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON SGOT POSTOP</label>
@@ -155,7 +163,7 @@ export class DonLivForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON TY</label>
 					<label className="text-secondary" >Donor Type (C-deceased, L-living):</label>
-					<input className="form-control" type="text" value={this.props.donTy} onChange={this.props.onChangeDonTy} />
+					<input className="form-control" type="text" maxLength="3" value={this.props.donTy} onChange={this.props.onChangeDonTy} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON TYP METHCLASS1</label>

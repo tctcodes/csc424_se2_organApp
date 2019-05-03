@@ -25,17 +25,29 @@ export class TxfLiForm4 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL OTHER THERAPY TY PHOTOPH</label>
 					<label className="text-secondary" >Other Therapy - Photopheresis (3):</label>
-					<input className="form-control" type="text" value={this.props.tflOtherTherapyTyPhotoph} onChange={this.props.onChangeTflOtherTherapyTyPhotoph} />
+					<select className="form-control" value={this.props.tflOtherTherapyTyPhotoph} onChange={this.props.onChangeTflOtherTherapyTyPhotoph}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL OTHER THERAPY TY PLASMAPH</label>
 					<label className="text-secondary" >Other Therapy - Plasmapheresis (3):</label>
-					<input className="form-control" type="text" value={this.props.tflOtherTherapyTyPlasmaph} onChange={this.props.onChangeTflOtherTherapyTyPlasmaph} />
+					<select className="form-control" value={this.props.tflOtherTherapyTyPlasmaph} onChange={this.props.onChangeTflOtherTherapyTyPlasmaph}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL OTHER THERAPY TY TLI</label>
 					<label className="text-secondary" >Other Therapy - Total Lymphoid Irradiation (3):</label>
-					<input className="form-control" type="text" value={this.props.tflOtherTherapyTyTli} onChange={this.props.onChangeTflOtherTherapyTyTli} />
+					<select className="form-control" value={this.props.tflOtherTherapyTyTli} onChange={this.props.onChangeTflOtherTherapyTyTli}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL PERM STATE</label>
@@ -117,7 +129,11 @@ export class TxfLiForm4 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL PORTAL VEIN THROMB</label>
 					<label className="text-secondary" >If Vascular Thrombosis, Portal vein thrombosis (Ped. Only):</label>
-					<input className="form-control" type="text" value={this.props.tflPortalVeinThromb} onChange={this.props.onChangeTflPortalVeinThromb} />
+					<select className="form-control" value={this.props.tflPortalVeinThromb} onChange={this.props.onChangeTflPortalVeinThromb}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL PRIMARY PAY</label>
@@ -144,12 +160,20 @@ export class TxfLiForm4 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL PX NONCOMP</label>
 					<label className="text-secondary" >Patient Noncompliant During this Follow-Up Period:</label>
-					<input className="form-control" type="text" value={this.props.tflPxNoncomp} onChange={this.props.onChangeTflPxNoncomp} />
+					<select className="form-control" value={this.props.tflPxNoncomp} onChange={this.props.onChangeTflPxNoncomp}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL PX RESEARCH</label>
 					<label className="text-secondary" >Did Px Participate in Research for Immuno Meds:</label>
-					<input className="form-control" type="text" value={this.props.tflPxResearch} onChange={this.props.onChangeTflPxResearch} />
+					<select className="form-control" value={this.props.tflPxResearch} onChange={this.props.onChangeTflPxResearch}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL PX STAT</label>
@@ -176,7 +200,11 @@ export class TxfLiForm4 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL REJ TREAT</label>
 					<label className="text-secondary" >Patient Treated For Rejection:</label>
-					<input className="form-control" type="text" value={this.props.tflRejTreat} onChange={this.props.onChangeTflRejTreat} />
+					<select className="form-control" value={this.props.tflRejTreat} onChange={this.props.onChangeTflRejTreat}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL SGOT</label>
@@ -206,7 +234,11 @@ export class TxfLiForm4 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL WORK INCOME</label>
 					<label className="text-secondary" >Working for income::</label>
-					<input className="form-control" type="text" value={this.props.tflWorkIncome} onChange={this.props.onChangeTflWorkIncome} />
+					<select className="form-control" value={this.props.tflWorkIncome} onChange={this.props.onChangeTflWorkIncome}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL WORK NO STAT</label>
@@ -243,17 +275,17 @@ export class TxfLiForm4 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TRR FOL ID</label>
 					<label className="text-secondary" >Unique identifier for TRR Follow-up - unique key:</label>
-					<input className="form-control" type="number" readOnly value={this.props.trrFolId} onChange={this.props.onChangeTrrFolId} />
+					<input className="form-control" type="text" readOnly value={this.props.trrFolId} onChange={this.props.onChangeTrrFolId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TRR ID</label>
 					<label className="text-secondary" >Unique identifier for TRR - foreign key to TRR:</label>
-					<input className="form-control" type="number" readOnly value={this.props.trrId} onChange={this.props.onChangeTrrId} />
+					<input className="form-control" type="text" readOnly value={this.props.trrId} onChange={this.props.onChangeTrrId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TX ID</label>
 					<label className="text-secondary" >Unique identifier for Transplant - foreign key to rec_transplant:</label>
-					<input className="form-control" type="number" readOnly value={this.props.txId} onChange={this.props.onChangeTxId} />
+					<input className="form-control" type="text" readOnly value={this.props.txId} onChange={this.props.onChangeTxId} />
 				</div>
 			</div>
 		)

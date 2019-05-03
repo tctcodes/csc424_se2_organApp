@@ -13,17 +13,29 @@ export class DonDecForm3 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONSENT DON REGIS</label>
 					<label className="text-secondary" >Consent Mechanism - Donor Registry:</label>
-					<input className="form-control" type="text" value={this.props.donConsentDonRegis} onChange={this.props.onChangeDonConsentDonRegis} />
+					<select className="form-control" value={this.props.donConsentDonRegis} onChange={this.props.onChangeDonConsentDonRegis}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONSENT DRIVER LICENSE</label>
 					<label className="text-secondary" >Consent Mechanism - Driver/s License:</label>
-					<input className="form-control" type="text" value={this.props.donConsentDriverLicense} onChange={this.props.onChangeDonConsentDriverLicense} />
+					<select className="form-control" value={this.props.donConsentDriverLicense} onChange={this.props.onChangeDonConsentDriverLicense}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONSENT PX WRIT DOC</label>
 					<label className="text-secondary" >Patient Consented in Writing:</label>
-					<input className="form-control" type="text" value={this.props.donConsentPxWritDoc} onChange={this.props.onChangeDonConsentPxWritDoc} />
+					<select className="form-control" value={this.props.donConsentPxWritDoc} onChange={this.props.onChangeDonConsentPxWritDoc}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONSENT TM</label>
@@ -33,32 +45,56 @@ export class DonDecForm3 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONSENT WRIT DOC INTENT</label>
 					<label className="text-secondary" >Did the patient have written documentation of their intent to be a donor::</label>
-					<input className="form-control" type="text" value={this.props.donConsentWritDocIntent} onChange={this.props.onChangeDonConsentWritDocIntent} />
+					<select className="form-control" value={this.props.donConsentWritDocIntent} onChange={this.props.onChangeDonConsentWritDocIntent}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONT ALCOHOL</label>
 					<label className="text-secondary" >Alcohol Dependency Last 6 Months:</label>
-					<input className="form-control" type="text" value={this.props.donContAlcohol} onChange={this.props.onChangeDonContAlcohol} />
+					<select className="form-control" value={this.props.donContAlcohol} onChange={this.props.onChangeDonContAlcohol}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONT CIGARETTE</label>
 					<label className="text-secondary" >Donor/s Continued Use in Last 6 Months:</label>
-					<input className="form-control" type="text" value={this.props.donContCigarette} onChange={this.props.onChangeDonContCigarette} />
+					<select className="form-control" value={this.props.donContCigarette} onChange={this.props.onChangeDonContCigarette}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONT COCAINE</label>
 					<label className="text-secondary" >Cocaine Use Last 6 Months:</label>
-					<input className="form-control" type="text" value={this.props.donContCocaine} onChange={this.props.onChangeDonContCocaine} />
+					<select className="form-control" value={this.props.donContCocaine} onChange={this.props.onChangeDonContCocaine}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONT IV DRUG</label>
 					<label className="text-secondary" >IV Drug Last 6 Months:</label>
-					<input className="form-control" type="text" value={this.props.donContIvDrug} onChange={this.props.onChangeDonContIvDrug} />
+					<select className="form-control" value={this.props.donContIvDrug} onChange={this.props.onChangeDonContIvDrug}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CONT OTHER DRUG</label>
 					<label className="text-secondary" >Other Drug Abuse Last 6 Months:</label>
-					<input className="form-control" type="text" value={this.props.donContOtherDrug} onChange={this.props.onChangeDonContOtherDrug} />
+					<select className="form-control" value={this.props.donContOtherDrug} onChange={this.props.onChangeDonContOtherDrug}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CORONARY ANGIO</label>
@@ -88,7 +124,11 @@ export class DonDecForm3 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CREG DON FLG</label>
 					<label className="text-secondary" >Is this a CREG Donor?:</label>
-					<input className="form-control" type="text" value={this.props.donCregDonFlg} onChange={this.props.onChangeDonCregDonFlg} />
+					<select className="form-control" value={this.props.donCregDonFlg} onChange={this.props.onChangeDonCregDonFlg}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CVP FINAL</label>
@@ -133,7 +173,11 @@ export class DonDecForm3 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DCD PROGRESS TO BRAIN DEATH</label>
 					<label className="text-secondary" >If not DCD, Was this a consented DCD donor that progressed to brain death?:</label>
-					<input className="form-control" type="text" value={this.props.donDcdProgressToBrainDeath} onChange={this.props.onChangeDonDcdProgressToBrainDeath} />
+					<select className="form-control" value={this.props.donDcdProgressToBrainDeath} onChange={this.props.onChangeDonDcdProgressToBrainDeath}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 			</div>
 		)

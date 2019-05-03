@@ -13,21 +13,21 @@ TFL_ACUTE_REJ_BIOPSY_CONFIRMED,num,8,BPSCNFMF,Was biopsy done to confirm acute r
 TFL_ACUTE_REJ_EPISODE,num,8,ACREJEPF,Did patient have any acute rejection episodes during the follow-up period:,1
 TFL_ALBUMIN,num,8,,Serum Albumin,1
 TFL_ALKPHOS,num,8,,Alkaline Phosphate,1
-TFL_ANTIVRL_THERAPY,char,1,,Biological or Anti-viral therapy:,1
+TFL_ANTIVRL_THERAPY,char,1,YNCHAR,Biological or Anti-viral therapy:,1
 TFL_ANTIVRL_THERAPY_TY,num,8,ANTLVIRL,"If Anti-viral therapies, check all that apply",1
-TFL_ANTIVRL_THERAPY_TY_ACYCLOVIR,num,3,,Anti-viral Therapy - Acyclovir (Zovirax) (11),1
-TFL_ANTIVRL_THERAPY_TY_CYTOGAM,num,3,,Anti-viral Therapy - Cytogam (CMV) (11),1
-TFL_ANTIVRL_THERAPY_TY_CYTOVENE,num,3,,Anti-viral Therapy - Ganciclovir (Cytovene) (11),1
-TFL_ANTIVRL_THERAPY_TY_EPIVIR,num,3,,Anti-viral Therapy - Lamivudine (Epivir) (for treatment of Hepatitis B) (11),1
-TFL_ANTIVRL_THERAPY_TY_FLU_VAC,num,3,,Anti-viral Therapy - Flu Vaccine (Influenza Virus) (11),1
-TFL_ANTIVRL_THERAPY_TY_GAMIMUNE,num,3,,Anti-viral Therapy - Gamimune (11),1
-TFL_ANTIVRL_THERAPY_TY_GAMMAGARD,num,3,,Anti-viral Therapy - Gammagard (11),1
-TFL_ANTIVRL_THERAPY_TY_HBIG,num,3,,Anti-viral Therapy - HBIG (Hepatitis B Immune Globulin) (11),2
-TFL_ANTIVRL_THERAPY_TY_OTHER,num,3,,"Anti-viral Therapy - Other, Specify (11)",2
-TFL_ANTIVRL_THERAPY_TY_VALCYTE,num,3,,Anti-viral Therapy - Valgancyclovir (Valcyte) (11),2
-TFL_ANTIVRL_THERAPY_TY_VALTREX,num,3,,Anti-viral Therapy - Valacyclovir (Valtrex) (11),2
+TFL_ANTIVRL_THERAPY_TY_ACYCLOVIR,num,3,YNNUM,Anti-viral Therapy - Acyclovir (Zovirax) (11),1
+TFL_ANTIVRL_THERAPY_TY_CYTOGAM,num,3,YNNUM,Anti-viral Therapy - Cytogam (CMV) (11),1
+TFL_ANTIVRL_THERAPY_TY_CYTOVENE,num,3,YNNUM,Anti-viral Therapy - Ganciclovir (Cytovene) (11),1
+TFL_ANTIVRL_THERAPY_TY_EPIVIR,num,3,YNNUM,Anti-viral Therapy - Lamivudine (Epivir) (for treatment of Hepatitis B) (11),1
+TFL_ANTIVRL_THERAPY_TY_FLU_VAC,num,3,YNNUM,Anti-viral Therapy - Flu Vaccine (Influenza Virus) (11),1
+TFL_ANTIVRL_THERAPY_TY_GAMIMUNE,num,3,YNNUM,Anti-viral Therapy - Gamimune (11),1
+TFL_ANTIVRL_THERAPY_TY_GAMMAGARD,num,3,YNNUM,Anti-viral Therapy - Gammagard (11),1
+TFL_ANTIVRL_THERAPY_TY_HBIG,num,3,YNNUM,Anti-viral Therapy - HBIG (Hepatitis B Immune Globulin) (11),2
+TFL_ANTIVRL_THERAPY_TY_OTHER,num,3,YNNUM,"Anti-viral Therapy - Other, Specify (11)",2
+TFL_ANTIVRL_THERAPY_TY_VALCYTE,num,3,YNNUM,Anti-viral Therapy - Valgancyclovir (Valcyte) (11),2
+TFL_ANTIVRL_THERAPY_TY_VALTREX,num,3,YNNUM,Anti-viral Therapy - Valacyclovir (Valtrex) (11),2
 TFL_BMI,num,8,,BMI:,2
-TFL_CAD,char,1,,Coronary Artery Disease Since Last Follow Up (Ped. Only > 5yr Followup),2
+TFL_CAD,char,1,YNCHAR,Coronary Artery Disease Since Last Follow Up (Ped. Only > 5yr Followup),2
 TFL_CARE_PROV_BY,num,8,FLCRPRV,Follow-up Care Provided By,2
 TFL_CMV_IGG,char,2,$SRLSTT,CMV IgG,2
 TFL_CMV_IGM,char,2,$SRLSTT,CMV IgM,2
@@ -36,60 +36,60 @@ TFL_COD2,num,8,COD,Contributory Cause of Death:,2
 TFL_COD3,num,8,COD,Contributory Cause of Death:,2
 TFL_COGNITIVE_DEVELOP,num,8,COGDEV,Cognitive Development (Ped Only),2
 TFL_CREAT,num,8,,Most Recent Serum Creatinine,2
-TFL_DIAB_DURING_FOL,char,1,,Diabetes during the follow-up period:,2
+TFL_DIAB_DURING_FOL,char,1,YNCHAR,Diabetes during the follow-up period:,2
 TFL_EMPL_STAT_PRE04,num,8,EMPLSTAT,Patient/s Employment Status - Pre-6/30/2004,2
-TFL_FAIL_BILIARY,char,1,,Biliary Tract Complication,2
+TFL_FAIL_BILIARY,char,1,YNCHAR,Biliary Tract Complication,2
 TFL_FAIL_DT,num,8,MMDDYY,Date of Graft Failure,2
-TFL_FAIL_HEP_DENOVO,char,1,,Hepatitis: DeNovo,2
-TFL_FAIL_HEP_RECUR,char,1,,Hepatitis: Recurrent,2
-TFL_FAIL_INFECT,char,1,,Infection,2
-TFL_FAIL_PRIME_GRAFT_FAIL,char,1,,Primary Graft Failure,2
-TFL_FAIL_PX_NONCOMP,char,1,,Patient Noncompliance:,2
-TFL_FAIL_RECUR_DISEASE,char,1,,Recurrent Disease: non-Hepatitis,2
-TFL_FAIL_REJ_ACUTE,char,1,,Acute Rejection,3
-TFL_FAIL_REJ_CHRONIC,char,1,,Chronic Rejection,3
-TFL_FAIL_VASC_THROMB,char,1,,Vascular Thrombosis,3
+TFL_FAIL_HEP_DENOVO,char,1,YNCHAR,Hepatitis: DeNovo,2
+TFL_FAIL_HEP_RECUR,char,1,YNCHAR,Hepatitis: Recurrent,2
+TFL_FAIL_INFECT,char,1,YNCHAR,Infection,2
+TFL_FAIL_PRIME_GRAFT_FAIL,char,1,YNCHAR,Primary Graft Failure,2
+TFL_FAIL_PX_NONCOMP,char,1,YNCHAR,Patient Noncompliance:,2
+TFL_FAIL_RECUR_DISEASE,char,1,YNCHAR,Recurrent Disease: non-Hepatitis,2
+TFL_FAIL_REJ_ACUTE,char,1,YNCHAR,Acute Rejection,3
+TFL_FAIL_REJ_CHRONIC,char,1,YNCHAR,Chronic Rejection,3
+TFL_FAIL_VASC_THROMB,char,1,YNCHAR,Vascular Thrombosis,3
 TFL_FOL_CD,num,8,FOLCD,Follow Up code,3
 TFL_FUNCTN_STAT,num,8,FUNCSTAT,Functional Status,3
-TFL_GRAFT_STAT,char,1,,Graft Status,3
-TFL_HEPATIC_ARTER_THROMB,char,1,,"If Vascular Thrombosis, Hepatic arterial thrombosis (Ped. Only)",3
-TFL_HEPATIC_OUTFLOW_OBSTRUCT,char,1,,"If Vascular Thrombosis, Hepatic outflow obstruction (Ped. Only)",3
+TFL_GRAFT_STAT,char,1,YNCHAR,Graft Status,3
+TFL_HEPATIC_ARTER_THROMB,char,1,YNCHAR,"If Vascular Thrombosis, Hepatic arterial thrombosis (Ped. Only)",3
+TFL_HEPATIC_OUTFLOW_OBSTRUCT,char,1,YNCHAR,"If Vascular Thrombosis, Hepatic outflow obstruction (Ped. Only)",3
 TFL_HGT_CM,num,8,,Recipient/s Height in Centimeters,3
 TFL_HGT_WGT_DT,num,8,MMDDYY,Date of Height & Weight Measurement (Ped Only),3
-TFL_HOSP,char,1,,Hospitalizations during Follow-Up Period,3
+TFL_HOSP,char,1,YNCHAR,Hospitalizations during Follow-Up Period,3
 TFL_HOSP_NUM,num,8,,Number of Hospitalizations:,3
-TFL_IMMUNO_DISCONT,char,1,,"If No Maint Meds, Did Phys. Disc. All Immuno Meds",3
+TFL_IMMUNO_DISCONT,char,1,YNCHAR,"If No Maint Meds, Did Phys. Disc. All Immuno Meds",3
 TFL_IMMUNO_MAINT_MEDS,num,8,IMMNTRSP,Any Meds Given during follow-up for Maintenance or Anti-Rejection?,3
 TFL_INR,num,8,,INR:,3
-TFL_INSULIN_DEPND,char,1,,Insulin dependent:,3
+TFL_INSULIN_DEPND,char,1,YNCHAR,Insulin dependent:,3
 TFL_LAB_DT,num,8,MMDDYY,Most Recent Lab date,3
-TFL_MALIG,char,1,,Post transplant Malignancy,3
-TFL_MALIG_DON_RELATED,char,1,,Donor Related,3
-TFL_MALIG_LYMPH,char,1,,De Novo Lymphoproliferative,3
-TFL_MALIG_RECUR_TUMOR,char,1,,Recurrence of Pre-Tx Tumor,3
-TFL_MALIG_TUMOR,char,1,,De Novo Solid Tumor,3
+TFL_MALIG,char,1,YNCHAR,Post transplant Malignancy,3
+TFL_MALIG_DON_RELATED,char,1,YNCHAR,Donor Related,3
+TFL_MALIG_LYMPH,char,1,YNCHAR,De Novo Lymphoproliferative,3
+TFL_MALIG_RECUR_TUMOR,char,1,YNCHAR,Recurrence of Pre-Tx Tumor,3
+TFL_MALIG_TUMOR,char,1,YNCHAR,De Novo Solid Tumor,3
 TFL_MOTOR_DEVELOP,num,8,MOTDEV,Motor Development (Ped Only),3
-TFL_OTHER_THERAPY,char,1,,Other Therapies:,3
+TFL_OTHER_THERAPY,char,1,YNCHAR,Other Therapies:,3
 TFL_OTHER_THERAPY_TY,num,8,THRPYOTH,"If Other therapies, check all that apply:",4
-TFL_OTHER_THERAPY_TY_PHOTOPH,num,3,,Other Therapy - Photopheresis (3),4
-TFL_OTHER_THERAPY_TY_PLASMAPH,num,3,,Other Therapy - Plasmapheresis (3),4
-TFL_OTHER_THERAPY_TY_TLI,num,3,,Other Therapy - Total Lymphoid Irradiation (3),4
+TFL_OTHER_THERAPY_TY_PHOTOPH,num,3,YNNUM,Other Therapy - Photopheresis (3),4
+TFL_OTHER_THERAPY_TY_PLASMAPH,num,3,YNNUM,Other Therapy - Plasmapheresis (3),4
+TFL_OTHER_THERAPY_TY_TLI,num,3,YNNUM,Other Therapy - Total Lymphoid Irradiation (3),4
 TFL_PERM_STATE,char,2,$STATE,State of Permanent Residence,4
 TFL_PHYSC_CAPACITY,num,8,PHYSCP,Physical Capacity:,4
-TFL_PORTAL_VEIN_THROMB,char,1,,"If Vascular Thrombosis, Portal vein thrombosis (Ped. Only)",4
+TFL_PORTAL_VEIN_THROMB,char,1,YNCHAR,"If Vascular Thrombosis, Portal vein thrombosis (Ped. Only)",4
 TFL_PRIMARY_PAY,num,8,PRMSRCPY,Primary Insurance at Follow-up:,4
-TFL_PX_NONCOMP,char,1,,Patient Noncompliant During this Follow-Up Period,4
-TFL_PX_RESEARCH,char,1,,Did Px Participate in Research for Immuno Meds,4
+TFL_PX_NONCOMP,char,1,YNCHAR,Patient Noncompliant During this Follow-Up Period,4
+TFL_PX_RESEARCH,char,1,YNCHAR,Did Px Participate in Research for Immuno Meds,4
 TFL_PX_STAT,char,1,$PXSTATB,Patient Status,4
 TFL_PX_STAT_DT,num,8,MMDDYY,Patient Status/Date,4
 TFL_REJ_EVENT_NUM,num,8,,Number of Episodes,4
-TFL_REJ_TREAT,char,1,,Patient Treated For Rejection,4
+TFL_REJ_TREAT,char,1,YNCHAR,Patient Treated For Rejection,4
 TFL_SGOT,num,8,,SGOT/AST,4
 TFL_SGPT,num,8,,SGPT/ALT,4
 TFL_TOT_BILI,num,8,,Total Bilirubin,4
 TFL_TXFER_DT,num,8,MMDDYY,Transfer Date,4
 TFL_WGT_KG,num,8,,Recipient/s Weight in kilograms,4
-TFL_WORK_INCOME,char,1,,Working for income:,4
+TFL_WORK_INCOME,char,1,YNCHAR,Working for income:,4
 TFL_WORK_NO_STAT,num,8,NOTWRK,"If No, Working Due To",4
 TFL_WORK_YES_STAT,num,8,WRKNCM,If Yes:,4
 TRR_FOL_ID,num,8,,Unique identifier for TRR Follow-up - unique key,4

@@ -77,7 +77,11 @@ export class DonLivForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CANCER FREE INTERVAL</label>
 					<label className="text-secondary" >Cancer Free Interval::</label>
-					<input className="form-control" type="text" value={this.props.donCancerFreeInterval} onChange={this.props.onChangeDonCancerFreeInterval} />
+					<select className="form-control" value={this.props.donCancerFreeInterval} onChange={this.props.onChangeDonCancerFreeInterval}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CITIZENSHIP</label>
@@ -93,18 +97,18 @@ export class DonLivForm2 extends React.Component {
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CMV</label>
-					<label className="text-secondary" >CMV pre-UNet data</label>
-					<input className="form-control" type="text" value={this.props.donCmv} onChange={this.props.onChangeDonCmv} />
+					<label className="text-secondary" >{"{CMV pre-UNet data}"}//CMV::</label>
+					<input className="form-control" type="text" maxLength="2" value={this.props.donCmv} onChange={this.props.onChangeDonCmv} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CMV CLINICAL</label>
-					<label className="text-secondary" >Was there clinical disease?</label>
-					<input className="form-control" type="text" value={this.props.donCmvClinical} onChange={this.props.onChangeDonCmvClinical} />
+					<label className="text-secondary" >CMV//Was there clinical disease::</label>
+					<input className="form-control" type="text" maxLength="2" value={this.props.donCmvClinical} onChange={this.props.onChangeDonCmvClinical} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CMV CULT</label>
 					<label className="text-secondary" >CMV//Culture::</label>
-					<input className="form-control" type="text" value={this.props.donCmvCult} onChange={this.props.onChangeDonCmvCult} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donCmvCult} onChange={this.props.onChangeDonCmvCult} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CMV IGG</label>
@@ -137,17 +141,25 @@ export class DonLivForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CMV NUCLEIC</label>
 					<label className="text-secondary" >CMV//Nucleic Acid Testing::</label>
-					<input className="form-control" type="text" value={this.props.donCmvNucleic} onChange={this.props.onChangeDonCmvNucleic} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donCmvNucleic} onChange={this.props.onChangeDonCmvNucleic} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON CMV TESTED</label>
 					<label className="text-secondary" >( pre Unet CMV value ):</label>
-					<input className="form-control" type="text" value={this.props.donCmvTested} onChange={this.props.onChangeDonCmvTested} />
+					<select className="form-control" value={this.props.donCmvTested} onChange={this.props.onChangeDonCmvTested}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DIAB</label>
 					<label className="text-secondary" >Diabetes::</label>
-					<input className="form-control" type="text" value={this.props.donDiab} onChange={this.props.onChangeDonDiab} />
+					<select className="form-control" value={this.props.donDiab} onChange={this.props.onChangeDonDiab}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DIAB TREAT</label>
@@ -164,7 +176,11 @@ export class DonLivForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DONATION</label>
 					<label className="text-secondary" >Secondary source of payment: Donation:</label>
-					<input className="form-control" type="text" value={this.props.donDonation} onChange={this.props.onChangeDonDonation} />
+					<select className="form-control" value={this.props.donDonation} onChange={this.props.onChangeDonDonation}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DP1</label>

@@ -37,27 +37,47 @@ export class DonDecForm5 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON EXPAND DON FLG OPTN</label>
 					<label className="text-secondary" >Does donor meet criteria to be an Expanded Donor?:</label>
-					<input className="form-control" type="text" value={this.props.donExpandDonFlgOptn} onChange={this.props.onChangeDonExpandDonFlgOptn} />
+					<select className="form-control" value={this.props.donExpandDonFlgOptn} onChange={this.props.onChangeDonExpandDonFlgOptn}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON EXPAND DON KI</label>
 					<label className="text-secondary" >Meets expanded donor criteria for kidney (1= yes , 0= no):</label>
-					<input className="form-control" type="text" value={this.props.donExpandDonKi} onChange={this.props.onChangeDonExpandDonKi} />
+					<select className="form-control" value={this.props.donExpandDonKi} onChange={this.props.onChangeDonExpandDonKi}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON EXPRESS FAMILY</label>
 					<label className="text-secondary" >Did the patient express to family or others the intent to be a donor:</label>
-					<input className="form-control" type="text" value={this.props.donExpressFamily} onChange={this.props.onChangeDonExpressFamily} />
+					<select className="form-control" value={this.props.donExpressFamily} onChange={this.props.onChangeDonExpressFamily}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON EXTRACRANIAL CANCER</label>
 					<label className="text-secondary" >Extracranial:</label>
-					<input className="form-control" type="text" value={this.props.donExtracranialCancer} onChange={this.props.onChangeDonExtracranialCancer} />
+					<select className="form-control" value={this.props.donExtracranialCancer} onChange={this.props.onChangeDonExtracranialCancer}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON FEEDBACK DONE</label>
 					<label className="text-secondary" >Feedback Completed for Donor?:</label>
-					<input className="form-control" type="text" value={this.props.donFeedbackDone} onChange={this.props.onChangeDonFeedbackDone} />
+					<select className="form-control" value={this.props.donFeedbackDone} onChange={this.props.onChangeDonFeedbackDone}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON FINAL SERUM CREAT</label>
@@ -67,7 +87,11 @@ export class DonDecForm5 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON GENDER</label>
 					<label className="text-secondary" >Donor/s Gender:</label>
-					<input className="form-control" type="text" value={this.props.donGender} onChange={this.props.onChangeDonGender} />
+					<select className="form-control" value={this.props.donGender} onChange={this.props.onChangeDonGender}>
+						<option value="" hidden disabled selected/>
+						<option value="M">Male</option>
+						<option value="F">Female</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HBC STAT</label>
@@ -86,7 +110,7 @@ export class DonDecForm5 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HBV NAT</label>
 					<label className="text-secondary" >Donor RNA Nat serology value for hbv test:</label>
-					<input className="form-control" type="text" value={this.props.donHbvNat} onChange={this.props.onChangeDonHbvNat} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donHbvNat} onChange={this.props.onChangeDonHbvNat} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HBV SURF ANTIBODY</label>
@@ -119,7 +143,7 @@ export class DonDecForm5 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HCV NAT</label>
 					<label className="text-secondary" >Donor RNA Nat serology value for hcv test:</label>
-					<input className="form-control" type="text" value={this.props.donHcvNat} onChange={this.props.onChangeDonHcvNat} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donHcvNat} onChange={this.props.onChangeDonHcvNat} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HCV STAT</label>
@@ -138,7 +162,11 @@ export class DonDecForm5 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HEAVY ALCOHOL</label>
 					<label className="text-secondary" >Heavy Alcohol Use (heavy= 2+ drinks/day)::</label>
-					<input className="form-control" type="text" value={this.props.donHeavyAlcohol} onChange={this.props.onChangeDonHeavyAlcohol} />
+					<select className="form-control" value={this.props.donHeavyAlcohol} onChange={this.props.onChangeDonHeavyAlcohol}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HEMATOCRIT</label>
@@ -148,7 +176,11 @@ export class DonDecForm5 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HEPARIN</label>
 					<label className="text-secondary" >Heparin:</label>
-					<input className="form-control" type="text" value={this.props.donHeparin} onChange={this.props.onChangeDonHeparin} />
+					<select className="form-control" value={this.props.donHeparin} onChange={this.props.onChangeDonHeparin}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HGT CM</label>
@@ -158,12 +190,20 @@ export class DonDecForm5 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HIGH CREAT</label>
 					<label className="text-secondary" >Donor serum creatinine > 1.5 (1= yes, 0= no):</label>
-					<input className="form-control" type="text" value={this.props.donHighCreat} onChange={this.props.onChangeDonHighCreat} />
+					<select className="form-control" value={this.props.donHighCreat} onChange={this.props.onChangeDonHighCreat}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HIST ALCOHOL</label>
 					<label className="text-secondary" >Alcohol Dependency:</label>
-					<input className="form-control" type="text" value={this.props.donHistAlcohol} onChange={this.props.onChangeDonHistAlcohol} />
+					<select className="form-control" value={this.props.donHistAlcohol} onChange={this.props.onChangeDonHistAlcohol}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HIST CANCER</label>
@@ -209,7 +249,11 @@ export class DonDecForm5 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HIST CIGARETTE GT20 PKYR</label>
 					<label className="text-secondary" >Cigarette Use > 20 Pack Years - Ever:</label>
-					<input className="form-control" type="text" value={this.props.donHistCigaretteGt20Pkyr} onChange={this.props.onChangeDonHistCigaretteGt20Pkyr} />
+					<select className="form-control" value={this.props.donHistCigaretteGt20Pkyr} onChange={this.props.onChangeDonHistCigaretteGt20Pkyr}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 			</div>
 		)

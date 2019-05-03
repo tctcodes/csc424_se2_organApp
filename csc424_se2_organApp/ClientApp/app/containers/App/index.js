@@ -16,6 +16,10 @@ import HomePage from 'containers/HomePage/Loadable';
 import SearchBox from 'containers/SearchBox/Loadable';
 import SignUpPage from "containers/SignUpPage/Loadable";
 import CanForm from "containers/CanForm/Loadable";
+import DonDecForm from "containers/DonDecForm/Loadable";
+import DonLivForm from "containers/DonLivForm/Loadable";
+import TxLiForm from "containers/TxLiForm/Loadable";
+import TxfLiForm from "containers/TxfLiForm/Loadable";
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import RegForm from 'containers/RegForm/Loadable';
 import ClientHome from 'containers/ClientHome/Loadable';
@@ -45,6 +49,10 @@ function App(props) {
         <PrivateRoute path="/client/information" component={RegForm} />
         <PrivateRoute path="/staff/searchbox" component={SearchBox} />
         <PrivateRoute path="/staff/canform" component={CanForm} />
+        <PrivateRoute path="/staff/dondecform" component={DonDecForm} />
+        <PrivateRoute path="/staff/donlivform" component={DonLivForm} />
+        <PrivateRoute path="/staff/txliform" component={TxLiForm} />
+        <PrivateRoute path="/staff/txfliform" component={TxfLiForm} />
         <Route component={NotFoundPage} />
       </Switch>
   </div>);

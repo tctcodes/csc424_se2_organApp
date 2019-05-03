@@ -13,22 +13,38 @@ export class TxfLiForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY HBIG</label>
 					<label className="text-secondary" >Anti-viral Therapy - HBIG (Hepatitis B Immune Globulin) (11):</label>
-					<input className="form-control" type="text" value={this.props.tflAntivrlTherapyTyHbig} onChange={this.props.onChangeTflAntivrlTherapyTyHbig} />
+					<select className="form-control" value={this.props.tflAntivrlTherapyTyHbig} onChange={this.props.onChangeTflAntivrlTherapyTyHbig}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY OTHER</label>
 					<label className="text-secondary" >Anti-viral Therapy - Other, Specify (11):</label>
-					<input className="form-control" type="text" value={this.props.tflAntivrlTherapyTyOther} onChange={this.props.onChangeTflAntivrlTherapyTyOther} />
+					<select className="form-control" value={this.props.tflAntivrlTherapyTyOther} onChange={this.props.onChangeTflAntivrlTherapyTyOther}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY VALCYTE</label>
 					<label className="text-secondary" >Anti-viral Therapy - Valgancyclovir (Valcyte) (11):</label>
-					<input className="form-control" type="text" value={this.props.tflAntivrlTherapyTyValcyte} onChange={this.props.onChangeTflAntivrlTherapyTyValcyte} />
+					<select className="form-control" value={this.props.tflAntivrlTherapyTyValcyte} onChange={this.props.onChangeTflAntivrlTherapyTyValcyte}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY VALTREX</label>
 					<label className="text-secondary" >Anti-viral Therapy - Valacyclovir (Valtrex) (11):</label>
-					<input className="form-control" type="text" value={this.props.tflAntivrlTherapyTyValtrex} onChange={this.props.onChangeTflAntivrlTherapyTyValtrex} />
+					<select className="form-control" value={this.props.tflAntivrlTherapyTyValtrex} onChange={this.props.onChangeTflAntivrlTherapyTyValtrex}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL BMI</label>
@@ -38,7 +54,11 @@ export class TxfLiForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL CAD</label>
 					<label className="text-secondary" >Coronary Artery Disease Since Last Follow Up (Ped. Only > 5yr Followup):</label>
-					<input className="form-control" type="text" value={this.props.tflCad} onChange={this.props.onChangeTflCad} />
+					<select className="form-control" value={this.props.tflCad} onChange={this.props.onChangeTflCad}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL CARE PROV BY</label>
@@ -851,7 +871,11 @@ export class TxfLiForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL DIAB DURING FOL</label>
 					<label className="text-secondary" >Diabetes during the follow-up period::</label>
-					<input className="form-control" type="text" value={this.props.tflDiabDuringFol} onChange={this.props.onChangeTflDiabDuringFol} />
+					<select className="form-control" value={this.props.tflDiabDuringFol} onChange={this.props.onChangeTflDiabDuringFol}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL EMPL STAT PRE04</label>
@@ -874,7 +898,11 @@ export class TxfLiForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL FAIL BILIARY</label>
 					<label className="text-secondary" >Biliary Tract Complication:</label>
-					<input className="form-control" type="text" value={this.props.tflFailBiliary} onChange={this.props.onChangeTflFailBiliary} />
+					<select className="form-control" value={this.props.tflFailBiliary} onChange={this.props.onChangeTflFailBiliary}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL FAIL DT</label>
@@ -884,32 +912,56 @@ export class TxfLiForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL FAIL HEP DENOVO</label>
 					<label className="text-secondary" >Hepatitis: DeNovo:</label>
-					<input className="form-control" type="text" value={this.props.tflFailHepDenovo} onChange={this.props.onChangeTflFailHepDenovo} />
+					<select className="form-control" value={this.props.tflFailHepDenovo} onChange={this.props.onChangeTflFailHepDenovo}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL FAIL HEP RECUR</label>
 					<label className="text-secondary" >Hepatitis: Recurrent:</label>
-					<input className="form-control" type="text" value={this.props.tflFailHepRecur} onChange={this.props.onChangeTflFailHepRecur} />
+					<select className="form-control" value={this.props.tflFailHepRecur} onChange={this.props.onChangeTflFailHepRecur}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL FAIL INFECT</label>
 					<label className="text-secondary" >Infection:</label>
-					<input className="form-control" type="text" value={this.props.tflFailInfect} onChange={this.props.onChangeTflFailInfect} />
+					<select className="form-control" value={this.props.tflFailInfect} onChange={this.props.onChangeTflFailInfect}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL FAIL PRIME GRAFT FAIL</label>
 					<label className="text-secondary" >Primary Graft Failure:</label>
-					<input className="form-control" type="text" value={this.props.tflFailPrimeGraftFail} onChange={this.props.onChangeTflFailPrimeGraftFail} />
+					<select className="form-control" value={this.props.tflFailPrimeGraftFail} onChange={this.props.onChangeTflFailPrimeGraftFail}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL FAIL PX NONCOMP</label>
 					<label className="text-secondary" >Patient Noncompliance::</label>
-					<input className="form-control" type="text" value={this.props.tflFailPxNoncomp} onChange={this.props.onChangeTflFailPxNoncomp} />
+					<select className="form-control" value={this.props.tflFailPxNoncomp} onChange={this.props.onChangeTflFailPxNoncomp}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TFL FAIL RECUR DISEASE</label>
 					<label className="text-secondary" >Recurrent Disease: non-Hepatitis:</label>
-					<input className="form-control" type="text" value={this.props.tflFailRecurDisease} onChange={this.props.onChangeTflFailRecurDisease} />
+					<select className="form-control" value={this.props.tflFailRecurDisease} onChange={this.props.onChangeTflFailRecurDisease}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 			</div>
 		)

@@ -1,28 +1,28 @@
 CAN_ABO,char,3,$ABO,Patient/s Blood Type,phys
 CAN_ACADEMIC_LEVEL,num,8,ACDMACTV,Academic Activity Level:,personal
 CAN_ACADEMIC_PROGRESS,num,8,ACDMPRG,Academic Progress:,personal
-CAN_ACPT_A2_DON,char,1,,Accept A2 donor?,match
-CAN_ACPT_ABO_INCOMP,char,1,,Accept an incompatible blood type?,match
-CAN_ACPT_EXTRACORP_LI,char,1,,Accept an Extra-corporeal Liver?,match
-CAN_ACPT_HBC_POS,char,1,,Accept an Hepatitis B Core Antibody Positive Donor?,match
-CAN_ACPT_HCV_POS,char,1,,Accept an HCV Antibody Positive Donor?,match
-CAN_ACPT_LI_SEG,char,1,,Accept LI segment,match
-CAN_ACPT_ORG_OTHER_TEAM,char,1,,Accept Intestine if Intestine removed by another procurement team?,match
-CAN_ACPT_PROCUR_KI,char,1,,Accept Intestine if Kidney procured?,match
-CAN_ACPT_PROCUR_LI,char,1,,Accept Intestine if Liver procured?,match
-CAN_ACPT_PROCUR_PA,char,1,,Accept Intestine if Pancreas procured?,match
+CAN_ACPT_A2_DON,char,1,YNCHAR,Accept A2 donor?,match
+CAN_ACPT_ABO_INCOMP,char,1,YNCHAR,Accept an incompatible blood type?,match
+CAN_ACPT_EXTRACORP_LI,char,1,YNCHAR,Accept an Extra-corporeal Liver?,match
+CAN_ACPT_HBC_POS,char,1,YNCHAR,Accept an Hepatitis B Core Antibody Positive Donor?,match
+CAN_ACPT_HCV_POS,char,1,YNCHAR,Accept an HCV Antibody Positive Donor?,match
+CAN_ACPT_LI_SEG,char,1,YNCHAR,Accept LI segment,match
+CAN_ACPT_ORG_OTHER_TEAM,char,1,YNCHAR,Accept Intestine if Intestine removed by another procurement team?,match
+CAN_ACPT_PROCUR_KI,char,1,YNCHAR,Accept Intestine if Kidney procured?,match
+CAN_ACPT_PROCUR_LI,char,1,YNCHAR,Accept Intestine if Liver procured?,match
+CAN_ACPT_PROCUR_PA,char,1,YNCHAR,Accept Intestine if Pancreas procured?,match
 CAN_ACTIVATE_DT,num,8,MMDDYY,Activation Date - date/time waiting time clock started,stat
 CAN_AGE_AT_LISTING,num,8,AGE9A,Calculated Candidate Age at Listing,phys
 CAN_AGE_IN_MONTHS_AT_LISTING,num,8,,Calculated Candidate Age in Months at Listing,phys
-CAN_ANASTOMOSIS,num,3,,Was anastomosis initiated?,tx
-CAN_ANESTH_PRIOR_DEATH,num,3,,Did the patient go to the operating room and receive anesthesia for transplant prior to death?,stat
+CAN_ANASTOMOSIS,num,3,YNNUM,Was anastomosis initiated?,tx
+CAN_ANESTH_PRIOR_DEATH,num,3,YNNUM,Did the patient go to the operating room and receive anesthesia for transplant prior to death?,stat
 CAN_ANGINA,num,8,ANGINA,Angina/Coronary Artery Disease,hist
 CAN_ANGINA_CAD,num,8,ANGNACAD,Angina:,hist
-CAN_ARTIFICIAL_LI,num,3,,Life Support://Artifical Liver,phys
-CAN_ASCITES,char,1,,Ascites (from liver disease ),hist
-CAN_BACTERIA_PERIT,char,1,,Spontaneous Bacterial Peritonitis (ascitis infection),hist
+CAN_ARTIFICIAL_LI,num,3,YNNUM,Life Support://Artifical Liver,phys
+CAN_ASCITES,char,1,YNCHAR,Ascites (from liver disease ),hist
+CAN_BACTERIA_PERIT,char,1,YNCHAR,Spontaneous Bacterial Peritonitis (ascitis infection),hist
 CAN_BMI,num,8,,BMI:,phys
-CAN_CEREB_VASC,char,1,,Symptomatic Cerebrovascular Disease,hist
+CAN_CEREB_VASC,char,1,YNCHAR,Symptomatic Cerebrovascular Disease,hist
 CAN_CITIZENSHIP,num,8,CTZNLDTC,Patient/s Citizenship,personal
 CAN_COGNITIVE_DEVELOP,num,8,COGDEV,Cognitive Development (Ped Only),hist
 CAN_CTP_SCORE,num,8,,Candidate/s CTP score (used for MAOB Liver Variance,match
@@ -33,52 +33,52 @@ CAN_DGN_OSTXT,char,50,,Primary Diagnosis/Specify,phys
 CAN_DIAB,num,8,DBINSLDP,Diabetes,hist
 CAN_DIAB_TY,num,8,DIABTY,Diabetes,hist
 CAN_DIAL,num,8,DIALTYLI,Dialysis,hist
-CAN_DRUG_TREAT_COPD,char,1,,Drug Treated COPD,hist
-CAN_DRUG_TREAT_HYPERTEN,char,1,,Drug Treated Systemic Hypertension,hist
-CAN_ECMO,num,3,,Life Support: ECMO,phys
+CAN_DRUG_TREAT_COPD,char,1,YNCHAR,Drug Treated COPD,hist
+CAN_DRUG_TREAT_HYPERTEN,char,1,YNCHAR,Drug Treated Systemic Hypertension,hist
+CAN_ECMO,num,3,YNNUM,Life Support: ECMO,phys
 CAN_EDUCATION,num,8,EDLEVEL,Patient/s Educational Status,personal
-CAN_ELECTROLYTE,char,1,,Unmanageable fluid-electrolyte losses (IN Pediatric Only),phys
+CAN_ELECTROLYTE,char,1,YNCHAR,Unmanageable fluid-electrolyte losses (IN Pediatric Only),phys
 CAN_EMPL_STAT,num,8,EMPLSTAT,Patient/s Employment Status - Pre-6/30/2004,personal
-CAN_ENCEPH,char,1,,Encephalopathy,hist
+CAN_ENCEPH,char,1,YNCHAR,Encephalopathy,hist
 CAN_ENDWLFU,num,8,MMDDYY,Candidate cohort censoring date,stat
 CAN_ETHNICITY_SRTR,char,10,$ETHSR,SRTR Patient Ethnicity,personal
-CAN_EXHAUST_VASC_ACCESS,char,1,,Exhausted Vascular Access,phys
-CAN_FOLLOWS_OPO_ALLOC,num,3,,Does candidate follow the OPO/s current allocation,stat
+CAN_EXHAUST_VASC_ACCESS,char,1,YNCHAR,Exhausted Vascular Access,phys
+CAN_FOLLOWS_OPO_ALLOC,num,3,YNNUM,Does candidate follow the OPO/s current allocation,stat
 CAN_FUNCTN_STAT,num,8,FUNCSTAT,Patient/s Functional Status,phys
-CAN_FUNGAL_SEPSIS,char,1,,Fungal sepsis (IN Pediatric Only),hist
-CAN_GENDER,char,1,,Patient/s Gender,personal
+CAN_FUNGAL_SEPSIS,char,1,YNCHAR,Fungal sepsis (IN Pediatric Only),hist
+CAN_GENDER,char,1,GENDER,Patient/s Gender,personal
 CAN_HGT_CM,num,8,,Candidate/s Height (stored in cm),phys
 CAN_HGT_WGT_DT,num,8,MMDDYY,Date of Height & Weight Measurement (Ped Only),phys
-CAN_IABP,num,3,,Life Support: IABP,phys
+CAN_IABP,num,3,YNNUM,Life Support: IABP,phys
 CAN_INIT_ACT_STAT_CD,num,8,CANDSTAT,First Active Status,stat
 CAN_INIT_ACT_STAT_DT,num,8,MMDDYY,Date of First Active Status,stat
 CAN_INIT_INACT_STAT_DT,num,8,MMDDYY,Date of First Inactive Status,stat
 CAN_INIT_SRTR_LAB_MELD,num,8,CANDSTAT,First SRTR MELD/PELD given,meld
-CAN_INIT_SRTR_LAB_MELD_TY,char,1,,First SRTR MELD/PELD type given,meld
+CAN_INIT_SRTR_LAB_MELD_TY,char,1,MPCHAR,First SRTR MELD/PELD type given,meld
 CAN_INIT_STAT,num,8,CANDSTAT,Initial Status of Patient,stat
-CAN_IV_INOTROP,num,3,,Life Support: IV Inotropes,phys
+CAN_IV_INOTROP,num,3,YNNUM,Life Support: IV Inotropes,phys
 CAN_LAST_ACT_STAT_DT,num,8,MMDDYY,Last Date of Active Status,stat
 CAN_LAST_ALBUMIN,num,8,,Candidate Last Albumin (used for MELD),meld
 CAN_LAST_ASCITES,num,8,ASCITES,Candidate Last Ascites (used for MELD),meld
 CAN_LAST_BILI,num,8,,Candidate Last Bilirubin (used for MELD),meld
-CAN_LAST_DIAL_PRIOR_WEEK,char,1,,Last non-blank val. of dialysis within prior week,phys
+CAN_LAST_DIAL_PRIOR_WEEK,char,1,YNCHAR,Last non-blank val. of dialysis within prior week,phys
 CAN_LAST_ENCEPH,num,8,ENCEPH,Candidate Last Encephalopathy (used for MELD),meld
 CAN_LAST_INACT_STAT_DT,num,8,MMDDYY,Last Date of Inactive Status,stat
 CAN_LAST_INR,num,8,,Candidate Last INR (used for MELD),meld
 CAN_LAST_SERUM_CREAT,num,8,,Candidate Last Serum Creatinine mg/dl (used for MELD),meld
 CAN_LAST_SERUM_SODIUM,num,8,,Candidate Last Serum Sodium (used for MELD),meld
 CAN_LAST_SRTR_LAB_MELD,num,8,CANDSTAT,Last SRTR MELD/PELD given,meld
-CAN_LAST_SRTR_LAB_MELD_TY,char,1,,Last SRTR MELD/PELD type given,meld
+CAN_LAST_SRTR_LAB_MELD_TY,char,1,MPCHAR,Last SRTR MELD/PELD type given,meld
 CAN_LAST_STAT,num,8,CANDSTAT,Last Status of Patient (with 2 day rule),stat
-CAN_LIFE_SUPPORT,char,1,,Patient on Life Support,phys
-CAN_LIFE_SUPPORT_OTHER,num,3,,Life Support: Other Mechanism,phys
+CAN_LIFE_SUPPORT,char,1,YNCHAR,Patient on Life Support,phys
+CAN_LIFE_SUPPORT_OTHER,num,3,YNNUM,Life Support: Other Mechanism,phys
 CAN_LISTING_CTR_ID,num,4,,CAN_LISTING_ Center ID,stat
 CAN_LISTING_DT,num,8,MMDDYY,Listing Date - date/time candidate was physically added to the waiting list - this date/time does not change for transfers,stat
 CAN_LISTING_OPO_ID,num,4,,OPO Serving Listing Center,stat
-CAN_LIVING_DON_TX,num,3,,Has Candidate received a Living Donor transplant? (used for Liver Candidates),hist
-CAN_LI_DYSFUNCTN,char,1,,Liver Dysfunction,hist
-CAN_LOSS_VASC_ACCESS,char,1,,Loss of two or more vascular access sites (IN Pediatric Only),hist
-CAN_MALIG,char,1,,Any previous Malignancy,malig
+CAN_LIVING_DON_TX,num,3,YNNUM,Has Candidate received a Living Donor transplant? (used for Liver Candidates),hist
+CAN_LI_DYSFUNCTN,char,1,YNCHAR,Liver Dysfunction,hist
+CAN_LOSS_VASC_ACCESS,char,1,YNCHAR,Loss of two or more vascular access sites (IN Pediatric Only),hist
+CAN_MALIG,char,1,YNCHAR,Any previous Malignancy,malig
 CAN_MALIG_TY,num,8,MALIG,Previous Malignancy Type(s),malig
 CAN_MALIG_TY_BREAST,num,8,,Previous Malignancy - Breast (14),malig
 CAN_MALIG_TY_CNS_TUMOR,num,8,,Previous Malignancy - CNS Tumor (14),malig
@@ -104,18 +104,18 @@ CAN_MOST_RECENT_CREAT,num,8,,Most Recent Absolute Creatinine,phys
 CAN_MOST_RECENT_HGT_CM,num,8,,Candidate/s most recent Waitlist Height in centimeter,phys
 CAN_MOST_RECENT_WGT_KG,num,8,,Candidate/s most recent Waitlist Weight in kilograms,phys
 CAN_MOTOR_DEVELOP,num,8,MOTDEV,Motor Development (Ped Only),phys
-CAN_MUSCLE_WASTING,char,1,,Marked Muscle Wasting,phys
-CAN_NEOPLASM,char,1,,Neoplasm,phys
-CAN_NEW_PREV_PI_TX,char,1,,Previous Pancreas Islet Transplantation:,hist
-CAN_NON_RECON_GI,char,1,,Non-Reconstructible GI tract (IN Pediatric Only),hist
+CAN_MUSCLE_WASTING,char,1,YNCHAR,Marked Muscle Wasting,phys
+CAN_NEOPLASM,char,1,YNCHAR,Neoplasm,phys
+CAN_NEW_PREV_PI_TX,char,1,YNCHAR,Previous Pancreas Islet Transplantation:,hist
+CAN_NON_RECON_GI,char,1,YNCHAR,Non-Reconstructible GI tract (IN Pediatric Only),hist
 CAN_PEPTIC_ULCER,num,8,PEPULCER,Peptic Ulcer Disease,hist
-CAN_PERIPH_VASC,char,1,,Symptomatic Peripheral Vascular Disease,hist
+CAN_PERIPH_VASC,char,1,YNCHAR,Symptomatic Peripheral Vascular Disease,hist
 CAN_PERM_STATE,char,2,$STATE,Patient/s Permanent State,personal
-CAN_PGE,num,3,,Life Support: PGE,phys
+CAN_PGE,num,3,YNNUM,Life Support: PGE,phys
 CAN_PHYSC_CAPACITY,num,8,PHYSCP,Physical Capacity:,phys
-CAN_PORTAL_VEIN,char,1,,History of Portal Vein Thrombosis,hist
-CAN_PRELIM_XMATCH_REQUEST,char,1,,Preliminary Crossmatch Required,match
-CAN_PREV_ABDOM_SURG,char,1,,Previous Upper Abdominal Surgery,hist
+CAN_PORTAL_VEIN,char,1,YNCHAR,History of Portal Vein Thrombosis,hist
+CAN_PRELIM_XMATCH_REQUEST,char,1,YNCHAR,Preliminary Crossmatch Required,match
+CAN_PREV_ABDOM_SURG,char,1,YNCHAR,Previous Upper Abdominal Surgery,hist
 CAN_PREV_BONE_MARROW_DT,num,8,MMDDYY,Date of Latest Bone Marrow Transplant,hist
 CAN_PREV_BONE_MARROW_TX,num,8,,Number Bone Marrow Transplants,hist
 CAN_PREV_HL,num,8,,Prev Heart-Lung Tx,hist
@@ -127,29 +127,29 @@ CAN_PREV_LI,num,8,,Prev Liver Tx,hist
 CAN_PREV_LU,num,8,,Prev Lung Tx,hist
 CAN_PREV_PA,num,8,,Prev Pancreas Tx,hist
 CAN_PREV_TX,num,8,,Previous Transplants,hist
-CAN_PREV_TXFUS,char,1,,Any Previous Transfusions,hist
+CAN_PREV_TXFUS,char,1,YNCHAR,Any Previous Transfusions,hist
 CAN_PRIMARY_PAY,num,8,PRMSRCPY,Source of Payment//Primary:,personal
-CAN_PULM_EMBOL,char,1,,Pulmonary Embolism,hist
+CAN_PULM_EMBOL,char,1,YNCHAR,Pulmonary Embolism,hist
 CAN_RACE,num,8,RACE,Patient/s Race,personal
 CAN_RACE_SRTR,char,10,$RACEBSR,SRTR Patient Race,personal
-CAN_RECUR_SEPSIS,char,1,,Recurrent sepsis (IN Pediatric Only),hist
+CAN_RECUR_SEPSIS,char,1,YNCHAR,Recurrent sepsis (IN Pediatric Only),hist
 CAN_REM_CD,num,8,REMCD,Reason why candidate was removed (removal code),stat
 CAN_REM_COD,num,8,COD,Cause of Death,stat
 CAN_REM_DT,num,8,MMDDYY,"rem_dt /remreg, censored by CAN_DEATH_DT, tx_dt",stat
 CAN_SECONDARY_PAY,num,8,SNDSRCPY,Source of Payment//Secondary:,personal
-CAN_SOURCE,char,1,,"Source of Candidate Data: A =Active Waitlist,R= Removed from Waitlist,L=Live Don Organ Recipient never on waitlist",tx
-CAN_STAT_EXTEND_FLG,num,3,,Status Extension granted for Liver candidate,stat
+CAN_SOURCE,char,1,ARLCHAR,"Source of Candidate Data: A =Active Waitlist,R= Removed from Waitlist,L=Live Don Organ Recipient never on waitlist",tx
+CAN_STAT_EXTEND_FLG,num,3,YNNUM,Status Extension granted for Liver candidate,stat
 CAN_TIEBREAKER_DT,num,8,MMDDYY,Tiebreaker Date - used as the ultimate tiebreaker,match
-CAN_TIPSS,char,1,,History of TIPSS,hist
+CAN_TIPSS,char,1,YNCHAR,History of TIPSS,hist
 CAN_TOT_ALBUMIN,num,8,,Total Serum Albumin,phys
 CAN_TOT_BILI,num,8,,Total Bilirubin (IN Pediatric Only),phys
 CAN_TRR_EXISTS,num,8,,TRR found for this PX_ID-org_ty,tx
 CAN_TX_COUNTRY,num,8,CTRYID,"Country of transplant, if outside the US",tx
 CAN_VAD_TAH,num,8,VADTAH,Life Support: VAD/TAH,phys
-CAN_VARICEAL_BLEEDING,char,1,,Variceal Bleeding within Last Two Weeks,phys
-CAN_VENTILATOR,num,3,,Life Support: Ventilator,phys
+CAN_VARICEAL_BLEEDING,char,1,YNCHAR,Variceal Bleeding within Last Two Weeks,phys
+CAN_VENTILATOR,num,3,YNNUM,Life Support: Ventilator,phys
 CAN_WGT_KG,num,8,,Candidate/s Weight in kilograms,phys
-CAN_WORK_INCOME,char,1,,Working for income:,personal
+CAN_WORK_INCOME,char,1,YNCHAR,Working for income:,personal
 CAN_WORK_NO_STAT,num,8,NOTWRK,"Working for income//If No, Not Working Due To:",personal
 CAN_WORK_YES_STAT,num,8,WRKNCM,Working for income//If Yes:,personal
 CAN_YEAR_ENTRY_US,num,8,,Year of Entry to the U.S.,personal

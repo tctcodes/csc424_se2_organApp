@@ -28,7 +28,7 @@ export class TxLiForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON TY</label>
 					<label className="text-secondary" >Donor Type (C-deceased, L-living):</label>
-					<input className="form-control" type="text" value={this.props.donTy} onChange={this.props.onChangeDonTy} />
+					<input className="form-control" type="text" maxLength="3" value={this.props.donTy} onChange={this.props.onChangeDonTy} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON WARM ISCH TM MINS</label>
@@ -43,7 +43,7 @@ export class TxLiForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >ORG AR</label>
 					<label className="text-secondary" >Organ type with pancreas expanded to PTA and PAK:</label>
-					<input className="form-control" type="text" value={this.props.orgAr} onChange={this.props.onChangeOrgAr} />
+					<input className="form-control" type="text" maxLength="3" value={this.props.orgAr} onChange={this.props.onChangeOrgAr} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >ORG TY</label>
@@ -64,7 +64,7 @@ export class TxLiForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PERS ID</label>
 					<label className="text-secondary" >Unique person ID to replace SSN:</label>
-					<input className="form-control" type="number" readOnly value={this.props.persId} onChange={this.props.onChangePersId} />
+					<input className="form-control" type="text" readOnly value={this.props.persId} onChange={this.props.onChangePersId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PERS OPTN COD</label>
@@ -439,7 +439,7 @@ export class TxLiForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PERS RETX TRR ID</label>
 					<label className="text-secondary" >TRR_ID of ReTx after current tx:</label>
-					<input className="form-control" type="number" readOnly value={this.props.persRetxTrrId} onChange={this.props.onChangePersRetxTrrId} />
+					<input className="form-control" type="text" readOnly value={this.props.persRetxTrrId} onChange={this.props.onChangePersRetxTrrId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PERS SSA DEATH DT</label>
@@ -449,7 +449,7 @@ export class TxLiForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PX ID</label>
 					<label className="text-secondary" >Patient Identifier:</label>
-					<input className="form-control" type="number" readOnly value={this.props.pxId} onChange={this.props.onChangePxId} />
+					<input className="form-control" type="text" readOnly value={this.props.pxId} onChange={this.props.onChangePxId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC A1</label>

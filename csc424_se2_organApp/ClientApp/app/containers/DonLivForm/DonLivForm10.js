@@ -18,7 +18,11 @@ export class DonLivForm10 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON VIRUSES TESTED</label>
 					<label className="text-secondary" >Viral Detection://Have any of the following viruses ever been tested for: HIV, CMV, HBV, HCV, EBV:</label>
-					<input className="form-control" type="text" value={this.props.donVirusesTested} onChange={this.props.onChangeDonVirusesTested} />
+					<select className="form-control" value={this.props.donVirusesTested} onChange={this.props.onChangeDonVirusesTested}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON WGT KG</label>
@@ -28,7 +32,11 @@ export class DonLivForm10 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON WORK INCOME</label>
 					<label className="text-secondary" >Working for Income::</label>
-					<input className="form-control" type="text" value={this.props.donWorkIncome} onChange={this.props.onChangeDonWorkIncome} />
+					<select className="form-control" value={this.props.donWorkIncome} onChange={this.props.onChangeDonWorkIncome}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON WORK NO STAT</label>
@@ -67,7 +75,7 @@ export class DonLivForm10 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PERS ID</label>
 					<label className="text-secondary" >Unique person ID to replace SSN:</label>
-					<input className="form-control" type="number" readOnly value={this.props.persId} onChange={this.props.onChangePersId} />
+					<input className="form-control" type="text" readOnly value={this.props.persId} onChange={this.props.onChangePersId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PERS SSA DEATH DT</label>

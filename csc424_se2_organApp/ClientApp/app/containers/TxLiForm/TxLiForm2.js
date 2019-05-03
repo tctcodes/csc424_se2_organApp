@@ -13,7 +13,11 @@ export class TxLiForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN INIT SRTR LAB MELD TY</label>
 					<label className="text-secondary" >First SRTR MELD/PELD type given:</label>
-					<input className="form-control" type="text" value={this.props.canInitSrtrLabMeldTy} onChange={this.props.onChangeCanInitSrtrLabMeldTy} />
+					<select className="form-control" value={this.props.canInitSrtrLabMeldTy} onChange={this.props.onChangeCanInitSrtrLabMeldTy}>
+						<option value="" hidden disabled selected/>
+						<option value="M">MELD</option>
+						<option value="P">PELD</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN INIT STAT</label>
@@ -306,7 +310,11 @@ export class TxLiForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN LAST DIAL PRIOR WEEK</label>
 					<label className="text-secondary" >Last non-blank val. of dialysis within prior week:</label>
-					<input className="form-control" type="text" value={this.props.canLastDialPriorWeek} onChange={this.props.onChangeCanLastDialPriorWeek} />
+					<select className="form-control" value={this.props.canLastDialPriorWeek} onChange={this.props.onChangeCanLastDialPriorWeek}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN LAST ENCEPH</label>
@@ -604,7 +612,11 @@ export class TxLiForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN LAST SRTR LAB MELD TY</label>
 					<label className="text-secondary" >Last SRTR MELD/PELD type given:</label>
-					<input className="form-control" type="text" value={this.props.canLastSrtrLabMeldTy} onChange={this.props.onChangeCanLastSrtrLabMeldTy} />
+					<select className="form-control" value={this.props.canLastSrtrLabMeldTy} onChange={this.props.onChangeCanLastSrtrLabMeldTy}>
+						<option value="" hidden disabled selected/>
+						<option value="M">MELD</option>
+						<option value="P">PELD</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN LAST STAT</label>
@@ -876,7 +888,11 @@ export class TxLiForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN MALIG</label>
 					<label className="text-secondary" >Any previous Malignancy:</label>
-					<input className="form-control" type="text" value={this.props.canMalig} onChange={this.props.onChangeCanMalig} />
+					<select className="form-control" value={this.props.canMalig} onChange={this.props.onChangeCanMalig}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PEPTIC ULCER</label>
@@ -893,17 +909,29 @@ export class TxLiForm2 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PERIPH VASC</label>
 					<label className="text-secondary" >Symptomatic Peripheral Vascular Disease:</label>
-					<input className="form-control" type="text" value={this.props.canPeriphVasc} onChange={this.props.onChangeCanPeriphVasc} />
+					<select className="form-control" value={this.props.canPeriphVasc} onChange={this.props.onChangeCanPeriphVasc}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PORTAL VEIN</label>
 					<label className="text-secondary" >History of Portal Vein Thrombosis:</label>
-					<input className="form-control" type="text" value={this.props.canPortalVein} onChange={this.props.onChangeCanPortalVein} />
+					<select className="form-control" value={this.props.canPortalVein} onChange={this.props.onChangeCanPortalVein}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PREV ABDOM SURG</label>
 					<label className="text-secondary" >Previous Upper Abdominal Surgery:</label>
-					<input className="form-control" type="text" value={this.props.canPrevAbdomSurg} onChange={this.props.onChangeCanPrevAbdomSurg} />
+					<select className="form-control" value={this.props.canPrevAbdomSurg} onChange={this.props.onChangeCanPrevAbdomSurg}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PREV HL</label>

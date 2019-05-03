@@ -18,7 +18,11 @@ export class TxLiForm13 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC TX EXTRA VESSEL</label>
 					<label className="text-secondary" >Were extra vessels used in the transplant procedure:</label>
-					<input className="form-control" type="text" value={this.props.recTxExtraVessel} onChange={this.props.onChangeRecTxExtraVessel} />
+					<select className="form-control" value={this.props.recTxExtraVessel} onChange={this.props.onChangeRecTxExtraVessel}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC TX ORG TY</label>
@@ -124,17 +128,29 @@ export class TxLiForm13 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC VALCYTE</label>
 					<label className="text-secondary" >Valcyte (valganciclovir):</label>
-					<input className="form-control" type="text" value={this.props.recValcyte} onChange={this.props.onChangeRecValcyte} />
+					<select className="form-control" value={this.props.recValcyte} onChange={this.props.onChangeRecValcyte}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC VARICEAL BLEEDING</label>
 					<label className="text-secondary" >Risk Factors: Uncontrollable Variceal Bleeding:</label>
-					<input className="form-control" type="text" value={this.props.recVaricealBleeding} onChange={this.props.onChangeRecVaricealBleeding} />
+					<select className="form-control" value={this.props.recVaricealBleeding} onChange={this.props.onChangeRecVaricealBleeding}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC VENTILATOR</label>
 					<label className="text-secondary" >Life Support: Ventilator:</label>
-					<input className="form-control" type="text" value={this.props.recVentilator} onChange={this.props.onChangeRecVentilator} />
+					<select className="form-control" value={this.props.recVentilator} onChange={this.props.onChangeRecVentilator}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC WARM ISCH TM</label>
@@ -149,7 +165,11 @@ export class TxLiForm13 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC WORK INCOME</label>
 					<label className="text-secondary" >Working for income::</label>
-					<input className="form-control" type="text" value={this.props.recWorkIncome} onChange={this.props.onChangeRecWorkIncome} />
+					<select className="form-control" value={this.props.recWorkIncome} onChange={this.props.onChangeRecWorkIncome}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC WORK NO STAT</label>
@@ -558,12 +578,12 @@ export class TxLiForm13 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TRR ID</label>
 					<label className="text-secondary" >Unique identifier for TRR - unique key:</label>
-					<input className="form-control" type="number" readOnly value={this.props.trrId} onChange={this.props.onChangeTrrId} />
+					<input className="form-control" type="text" readOnly value={this.props.trrId} onChange={this.props.onChangeTrrId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >TX ID</label>
 					<label className="text-secondary" >Unique identifier for Transplant - foreign key to rec_transplant:</label>
-					<input className="form-control" type="number" readOnly value={this.props.txId} onChange={this.props.onChangeTxId} />
+					<input className="form-control" type="text" readOnly value={this.props.txId} onChange={this.props.onChangeTxId} />
 				</div>
 			</div>
 		)

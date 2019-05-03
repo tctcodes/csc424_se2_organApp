@@ -30,12 +30,20 @@ export class DonDecForm10 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON TATTOOS</label>
 					<label className="text-secondary" >Lifestyle Factors: Tattoos:</label>
-					<input className="form-control" type="text" value={this.props.donTattoos} onChange={this.props.onChangeDonTattoos} />
+					<select className="form-control" value={this.props.donTattoos} onChange={this.props.onChangeDonTattoos}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON TM FOR XMATCH</label>
 					<label className="text-secondary" >Is there time for crossmatch?:</label>
-					<input className="form-control" type="text" value={this.props.donTmForXmatch} onChange={this.props.onChangeDonTmForXmatch} />
+					<select className="form-control" value={this.props.donTmForXmatch} onChange={this.props.onChangeDonTmForXmatch}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON TOT BILI</label>
@@ -62,7 +70,7 @@ export class DonDecForm10 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON TY</label>
 					<label className="text-secondary" >Donor Type (C-deceased, L-living):</label>
-					<input className="form-control" type="text" value={this.props.donTy} onChange={this.props.onChangeDonTy} />
+					<input className="form-control" type="text" maxLength="3" value={this.props.donTy} onChange={this.props.onChangeDonTy} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON TYP METHCLASS1</label>
@@ -101,12 +109,20 @@ export class DonDecForm10 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON USE DOUBLE KI</label>
 					<label className="text-secondary" >Use Double KI allocation, not Expanded Donor:</label>
-					<input className="form-control" type="text" value={this.props.donUseDoubleKi} onChange={this.props.onChangeDonUseDoubleKi} />
+					<select className="form-control" value={this.props.donUseDoubleKi} onChange={this.props.onChangeDonUseDoubleKi}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON VASODIL</label>
 					<label className="text-secondary" >Vasodilators:</label>
-					<input className="form-control" type="text" value={this.props.donVasodil} onChange={this.props.onChangeDonVasodil} />
+					<select className="form-control" value={this.props.donVasodil} onChange={this.props.onChangeDonVasodil}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON VESSELS GT50 STENOSIS</label>
@@ -116,12 +132,20 @@ export class DonDecForm10 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON WALL ABNORM GLOB</label>
 					<label className="text-secondary" >Wall Abnormalities //Global::</label>
-					<input className="form-control" type="text" value={this.props.donWallAbnormGlob} onChange={this.props.onChangeDonWallAbnormGlob} />
+					<select className="form-control" value={this.props.donWallAbnormGlob} onChange={this.props.onChangeDonWallAbnormGlob}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON WALL ABNORM SEG</label>
 					<label className="text-secondary" >Wall Abnormalities //Segmental::</label>
-					<input className="form-control" type="text" value={this.props.donWallAbnormSeg} onChange={this.props.onChangeDonWallAbnormSeg} />
+					<select className="form-control" value={this.props.donWallAbnormSeg} onChange={this.props.onChangeDonWallAbnormSeg}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON WARM ISCH TM MINS</label>
@@ -131,7 +155,7 @@ export class DonDecForm10 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON WEST NILE NAT</label>
 					<label className="text-secondary" >Donor RNA Nat serology value for West Nile test:</label>
-					<input className="form-control" type="text" value={this.props.donWestNileNat} onChange={this.props.onChangeDonWestNileNat} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donWestNileNat} onChange={this.props.onChangeDonWestNileNat} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON WGT KG</label>
@@ -141,7 +165,7 @@ export class DonDecForm10 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PERS ID</label>
 					<label className="text-secondary" >Unique Person ID for patient. Based on matches in similarity of SSN, DOB, Names and Nicknames, Gender, etc.:</label>
-					<input className="form-control" type="number" readOnly value={this.props.persId} onChange={this.props.onChangePersId} />
+					<input className="form-control" type="text" readOnly value={this.props.persId} onChange={this.props.onChangePersId} />
 				</div>
 			</div>
 		)

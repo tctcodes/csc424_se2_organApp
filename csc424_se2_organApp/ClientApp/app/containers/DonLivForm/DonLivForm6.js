@@ -13,7 +13,11 @@ export class DonLivForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON KI REOP BOWEL</label>
 					<label className="text-secondary" >Kidney Reoperation Bowel Obstruction//Bowel Obstruction:</label>
-					<input className="form-control" type="text" value={this.props.donKiReopBowel} onChange={this.props.onChangeDonKiReopBowel} />
+					<select className="form-control" value={this.props.donKiReopBowel} onChange={this.props.onChangeDonKiReopBowel}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON KI REOP BOWEL DT</label>
@@ -23,7 +27,11 @@ export class DonLivForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON KI REOP HERNIA</label>
 					<label className="text-secondary" >Kidney Reoperation Hernia Repair//Hernia Repair:</label>
-					<input className="form-control" type="text" value={this.props.donKiReopHernia} onChange={this.props.onChangeDonKiReopHernia} />
+					<select className="form-control" value={this.props.donKiReopHernia} onChange={this.props.onChangeDonKiReopHernia}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON KI REOP HERNIA DT</label>
@@ -33,7 +41,11 @@ export class DonLivForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON KI REOP OTHER</label>
 					<label className="text-secondary" >Kidney Reoperation Other//Other Specify:</label>
-					<input className="form-control" type="text" value={this.props.donKiReopOther} onChange={this.props.onChangeDonKiReopOther} />
+					<select className="form-control" value={this.props.donKiReopOther} onChange={this.props.onChangeDonKiReopOther}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON KI REOP OTHER DT</label>
@@ -43,7 +55,11 @@ export class DonLivForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON KI REOP VASC</label>
 					<label className="text-secondary" >Kidney Reoperation Vascular//Vascular:</label>
-					<input className="form-control" type="text" value={this.props.donKiReopVasc} onChange={this.props.onChangeDonKiReopVasc} />
+					<select className="form-control" value={this.props.donKiReopVasc} onChange={this.props.onChangeDonKiReopVasc}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON KI REOP VASC DT</label>
@@ -53,7 +69,11 @@ export class DonLivForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON KI VASC COMPL</label>
 					<label className="text-secondary" >Kidney Vascular Complications Requiring Intervention//Vascular Complications Requiring Intervention::</label>
-					<input className="form-control" type="text" value={this.props.donKiVascCompl} onChange={this.props.onChangeDonKiVascCompl} />
+					<select className="form-control" value={this.props.donKiVascCompl} onChange={this.props.onChangeDonKiVascCompl}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON KI VASC COMPL INTERVENTION</label>
@@ -101,7 +121,11 @@ export class DonLivForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI BILIARY COMPL</label>
 					<label className="text-secondary" >Biliary Complications::</label>
-					<input className="form-control" type="text" value={this.props.donLiBiliaryCompl} onChange={this.props.onChangeDonLiBiliaryCompl} />
+					<select className="form-control" value={this.props.donLiBiliaryCompl} onChange={this.props.onChangeDonLiBiliaryCompl}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI BILIARY COMPL GRADE</label>
@@ -118,7 +142,11 @@ export class DonLivForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI BIOPSY</label>
 					<label className="text-secondary" >Liver Biopsy::</label>
-					<input className="form-control" type="text" value={this.props.donLiBiopsy} onChange={this.props.onChangeDonLiBiopsy} />
+					<select className="form-control" value={this.props.donLiBiopsy} onChange={this.props.onChangeDonLiBiopsy}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI BIOPSY MACRO FAT</label>
@@ -143,7 +171,11 @@ export class DonLivForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI OTHER COMPL</label>
 					<label className="text-secondary" >Liver Other Complications Requiring Intervention//Other Complications Requiring Intervention::</label>
-					<input className="form-control" type="text" value={this.props.donLiOtherCompl} onChange={this.props.onChangeDonLiOtherCompl} />
+					<select className="form-control" value={this.props.donLiOtherCompl} onChange={this.props.onChangeDonLiOtherCompl}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI OTHER COMPL INTERVENTION</label>
@@ -165,7 +197,11 @@ export class DonLivForm6 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI OTHER INTERVENTION</label>
 					<label className="text-secondary" >Liver Other Interventional Procedures//Other Interventional Procedures::</label>
-					<input className="form-control" type="text" value={this.props.donLiOtherIntervention} onChange={this.props.onChangeDonLiOtherIntervention} />
+					<select className="form-control" value={this.props.donLiOtherIntervention} onChange={this.props.onChangeDonLiOtherIntervention}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI OTHER INTERVENTION DT</label>

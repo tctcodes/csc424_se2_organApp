@@ -13,7 +13,11 @@ export class DonLivForm8 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LU PROCEDURE CONVERT</label>
 					<label className="text-secondary" >Conversion from Thoracoscopic to Open::</label>
-					<input className="form-control" type="text" value={this.props.donLuProcedureConvert} onChange={this.props.onChangeDonLuProcedureConvert} />
+					<select className="form-control" value={this.props.donLuProcedureConvert} onChange={this.props.onChangeDonLuProcedureConvert}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LU PROCEDURE TY</label>
@@ -27,7 +31,11 @@ export class DonLivForm8 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LU READMIT</label>
 					<label className="text-secondary" >Lung Readmission//Any Readmission After Initial Discharge::</label>
-					<input className="form-control" type="text" value={this.props.donLuReadmit} onChange={this.props.onChangeDonLuReadmit} />
+					<select className="form-control" value={this.props.donLuReadmit} onChange={this.props.onChangeDonLuReadmit}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LU READMIT DT</label>
@@ -76,22 +84,38 @@ export class DonLivForm8 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON MEDICAID</label>
 					<label className="text-secondary" >Secondary source of payment: Medicaid:</label>
-					<input className="form-control" type="text" value={this.props.donMedicaid} onChange={this.props.onChangeDonMedicaid} />
+					<select className="form-control" value={this.props.donMedicaid} onChange={this.props.onChangeDonMedicaid}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON MEDICARE</label>
 					<label className="text-secondary" >Secondary source of payment: Medicare:</label>
-					<input className="form-control" type="text" value={this.props.donMedicare} onChange={this.props.onChangeDonMedicare} />
+					<select className="form-control" value={this.props.donMedicare} onChange={this.props.onChangeDonMedicare}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON NON AUTO BLOOD</label>
 					<label className="text-secondary" >Non-Autologous Blood Administration::</label>
-					<input className="form-control" type="text" value={this.props.donNonAutoBlood} onChange={this.props.onChangeDonNonAutoBlood} />
+					<select className="form-control" value={this.props.donNonAutoBlood} onChange={this.props.onChangeDonNonAutoBlood}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON OPO RUN MATCH</label>
 					<label className="text-secondary" >For Living Donors, can OPO run a match on this donor?:</label>
-					<input className="form-control" type="text" value={this.props.donOpoRunMatch} onChange={this.props.onChangeDonOpoRunMatch} />
+					<select className="form-control" value={this.props.donOpoRunMatch} onChange={this.props.onChangeDonOpoRunMatch}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON ORG1</label>
@@ -132,12 +156,20 @@ export class DonLivForm8 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON OTHER GOVT</label>
 					<label className="text-secondary" >Secondary source of payment: US/State Government Agency:</label>
-					<input className="form-control" type="text" value={this.props.donOtherGovt} onChange={this.props.onChangeDonOtherGovt} />
+					<select className="form-control" value={this.props.donOtherGovt} onChange={this.props.onChangeDonOtherGovt}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON OTHER TOBACCO USE</label>
 					<label className="text-secondary" >Other Tobacco Used::</label>
-					<input className="form-control" type="text" value={this.props.donOtherTobaccoUse} onChange={this.props.onChangeDonOtherTobaccoUse} />
+					<select className="form-control" value={this.props.donOtherTobaccoUse} onChange={this.props.onChangeDonOtherTobaccoUse}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON PACK YEARS</label>
@@ -209,7 +241,11 @@ export class DonLivForm8 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON PRIV INSUR</label>
 					<label className="text-secondary" >Secondary source of payment: Private Insurance:</label>
-					<input className="form-control" type="text" value={this.props.donPrivInsur} onChange={this.props.onChangeDonPrivInsur} />
+					<select className="form-control" value={this.props.donPrivInsur} onChange={this.props.onChangeDonPrivInsur}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON RACE</label>

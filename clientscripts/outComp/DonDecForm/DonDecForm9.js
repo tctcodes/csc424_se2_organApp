@@ -13,12 +13,20 @@ export class DonDecForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON PROTEIN URINE</label>
 					<label className="text-secondary" >Protein in Urine:</label>
-					<input className="form-control" type="text" value={this.props.donProteinUrine} onChange={this.props.onChangeDonProteinUrine} />
+					<select className="form-control" value={this.props.donProteinUrine} onChange={this.props.onChangeDonProteinUrine}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON PULM CATH</label>
 					<label className="text-secondary" >Was a pulmonary artery catheter placed::</label>
-					<input className="form-control" type="text" value={this.props.donPulmCath} onChange={this.props.onChangeDonPulmCath} />
+					<select className="form-control" value={this.props.donPulmCath} onChange={this.props.onChangeDonPulmCath}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON RACE</label>
@@ -59,7 +67,11 @@ export class DonDecForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON RECOV OUT US</label>
 					<label className="text-secondary" >Recovered Outside the U.S.:</label>
-					<input className="form-control" type="text" value={this.props.donRecovOutUs} onChange={this.props.onChangeDonRecovOutUs} />
+					<select className="form-control" value={this.props.donRecovOutUs} onChange={this.props.onChangeDonRecovOutUs}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON REF DT</label>
@@ -69,7 +81,11 @@ export class DonDecForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON REF FLG</label>
 					<label className="text-secondary" >Referral Flag:</label>
-					<input className="form-control" type="text" value={this.props.donRefFlg} onChange={this.props.onChangeDonRefFlg} />
+					<select className="form-control" value={this.props.donRefFlg} onChange={this.props.onChangeDonRefFlg}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON RESUSCIT DURATION</label>
@@ -93,7 +109,11 @@ export class DonDecForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON RT KI BIOPSY</label>
 					<label className="text-secondary" >Kidney Biopsy (right):</label>
-					<input className="form-control" type="text" value={this.props.donRtKiBiopsy} onChange={this.props.onChangeDonRtKiBiopsy} />
+					<select className="form-control" value={this.props.donRtKiBiopsy} onChange={this.props.onChangeDonRtKiBiopsy}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON RT KI GLOMER SCLER PCT</label>
@@ -111,7 +131,11 @@ export class DonDecForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON RT KI PUMP</label>
 					<label className="text-secondary" >Pump (Right Kidney):</label>
-					<input className="form-control" type="text" value={this.props.donRtKiPump} onChange={this.props.onChangeDonRtKiPump} />
+					<select className="form-control" value={this.props.donRtKiPump} onChange={this.props.onChangeDonRtKiPump}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON RT KI RESIST PRIOR SHIP</label>
@@ -121,7 +145,11 @@ export class DonDecForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON RT KI TXFER PUMP</label>
 					<label className="text-secondary" >Transferred on pump (right)://Transferred on pump::</label>
-					<input className="form-control" type="text" value={this.props.donRtKiTxferPump} onChange={this.props.onChangeDonRtKiTxferPump} />
+					<select className="form-control" value={this.props.donRtKiTxferPump} onChange={this.props.onChangeDonRtKiTxferPump}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON RT LU BRONCHO</label>
@@ -156,7 +184,11 @@ export class DonDecForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON SKIN CANCER</label>
 					<label className="text-secondary" >Skin:</label>
-					<input className="form-control" type="text" value={this.props.donSkinCancer} onChange={this.props.onChangeDonSkinCancer} />
+					<select className="form-control" value={this.props.donSkinCancer} onChange={this.props.onChangeDonSkinCancer}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON SODIUM</label>

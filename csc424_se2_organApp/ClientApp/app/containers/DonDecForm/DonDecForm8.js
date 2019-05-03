@@ -13,32 +13,52 @@ export class DonDecForm8 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON MEET CDC HIGH RISK</label>
 					<label className="text-secondary" >Does the Donor meet CDC guidelines for High Risk for an organ donor::</label>
-					<input className="form-control" type="text" value={this.props.donMeetCdcHighRisk} onChange={this.props.onChangeDonMeetCdcHighRisk} />
+					<select className="form-control" value={this.props.donMeetCdcHighRisk} onChange={this.props.onChangeDonMeetCdcHighRisk}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON MEET DOUBLE KI CRIT</label>
 					<label className="text-secondary" >Donor meets double KI allocation criteria:</label>
-					<input className="form-control" type="text" value={this.props.donMeetDoubleKiCrit} onChange={this.props.onChangeDonMeetDoubleKiCrit} />
+					<select className="form-control" value={this.props.donMeetDoubleKiCrit} onChange={this.props.onChangeDonMeetDoubleKiCrit}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON NON HR BEAT</label>
 					<label className="text-secondary" >Non-Heart Beating Donor:</label>
-					<input className="form-control" type="text" value={this.props.donNonHrBeat} onChange={this.props.onChangeDonNonHrBeat} />
+					<select className="form-control" value={this.props.donNonHrBeat} onChange={this.props.onChangeDonNonHrBeat}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON NON HR BEAT CNTL</label>
 					<label className="text-secondary" >Controlled:</label>
-					<input className="form-control" type="text" value={this.props.donNonHrBeatCntl} onChange={this.props.onChangeDonNonHrBeatCntl} />
+					<select className="form-control" value={this.props.donNonHrBeatCntl} onChange={this.props.onChangeDonNonHrBeatCntl}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON NON HR BEAT CORE COOL</label>
 					<label className="text-secondary" >Core Cooling Used:</label>
-					<input className="form-control" type="text" value={this.props.donNonHrBeatCoreCool} onChange={this.props.onChangeDonNonHrBeatCoreCool} />
+					<select className="form-control" value={this.props.donNonHrBeatCoreCool} onChange={this.props.onChangeDonNonHrBeatCoreCool}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON OPO CTR ID</label>
 					<label className="text-secondary" >DON_OPO_ Center ID:</label>
-					<input className="form-control" type="number" readOnly value={this.props.donOpoCtrId} onChange={this.props.onChangeDonOpoCtrId} />
+					<input className="form-control" type="text" readOnly value={this.props.donOpoCtrId} onChange={this.props.onChangeDonOpoCtrId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON PA DIAST FINAL</label>
@@ -93,7 +113,11 @@ export class DonDecForm8 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON PO2 DONE</label>
 					<label className="text-secondary" >Lung - Was pO2 done::</label>
-					<input className="form-control" type="text" value={this.props.donPo2Done} onChange={this.props.onChangeDonPo2Done} />
+					<select className="form-control" value={this.props.donPo2Done} onChange={this.props.onChangeDonPo2Done}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON PO2 FIO2</label>
@@ -103,32 +127,56 @@ export class DonDecForm8 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON PRERECOV DIURETICS</label>
 					<label className="text-secondary" >Pre-Recov Meds given Donor: Diuretics:</label>
-					<input className="form-control" type="text" value={this.props.donPrerecovDiuretics} onChange={this.props.onChangeDonPrerecovDiuretics} />
+					<select className="form-control" value={this.props.donPrerecovDiuretics} onChange={this.props.onChangeDonPrerecovDiuretics}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON PRERECOV MEDS</label>
 					<label className="text-secondary" >Prerecovery Medication:</label>
-					<input className="form-control" type="text" value={this.props.donPrerecovMeds} onChange={this.props.onChangeDonPrerecovMeds} />
+					<select className="form-control" value={this.props.donPrerecovMeds} onChange={this.props.onChangeDonPrerecovMeds}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON PRERECOV STEROIDS</label>
 					<label className="text-secondary" >Pre-Recov Meds given Donor: Steroids:</label>
-					<input className="form-control" type="text" value={this.props.donPrerecovSteroids} onChange={this.props.onChangeDonPrerecovSteroids} />
+					<select className="form-control" value={this.props.donPrerecovSteroids} onChange={this.props.onChangeDonPrerecovSteroids}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON PRERECOV T3</label>
 					<label className="text-secondary" >Pre-Recov Meds given Donor: T3:</label>
-					<input className="form-control" type="text" value={this.props.donPrerecovT3} onChange={this.props.onChangeDonPrerecovT3} />
+					<select className="form-control" value={this.props.donPrerecovT3} onChange={this.props.onChangeDonPrerecovT3}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON PRERECOV T4</label>
 					<label className="text-secondary" >Pre-Recov Meds given Donor: T4:</label>
-					<input className="form-control" type="text" value={this.props.donPrerecovT4} onChange={this.props.onChangeDonPrerecovT4} />
+					<select className="form-control" value={this.props.donPrerecovT4} onChange={this.props.onChangeDonPrerecovT4}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON PREV GASTRO DISEASE</label>
 					<label className="text-secondary" >Previous Gastrointestinal Disease:</label>
-					<input className="form-control" type="text" value={this.props.donPrevGastroDisease} onChange={this.props.onChangeDonPrevGastroDisease} />
+					<select className="form-control" value={this.props.donPrevGastroDisease} onChange={this.props.onChangeDonPrevGastroDisease}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 			</div>
 		)

@@ -18,7 +18,11 @@ export class TxLiForm12 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC PREV ABDOM SURG</label>
 					<label className="text-secondary" >Risk Factors: Previous Abdominal Surgery:</label>
-					<input className="form-control" type="text" value={this.props.recPrevAbdomSurg} onChange={this.props.onChangeRecPrevAbdomSurg} />
+					<select className="form-control" value={this.props.recPrevAbdomSurg} onChange={this.props.onChangeRecPrevAbdomSurg}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC PREV HL</label>
@@ -58,7 +62,11 @@ export class TxLiForm12 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC PREV NONFUNCTN TX</label>
 					<label className="text-secondary" >Risk Factors: Previous Primary Non-function Post-Tx:</label>
-					<input className="form-control" type="text" value={this.props.recPrevNonfunctnTx} onChange={this.props.onChangeRecPrevNonfunctnTx} />
+					<select className="form-control" value={this.props.recPrevNonfunctnTx} onChange={this.props.onChangeRecPrevNonfunctnTx}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC PREV PA</label>
@@ -99,7 +107,11 @@ export class TxLiForm12 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC PX RESEARCH</label>
 					<label className="text-secondary" >Px Part. in Research Protocol for Immuno. Meds:</label>
-					<input className="form-control" type="text" value={this.props.recPxResearch} onChange={this.props.onChangeRecPxResearch} />
+					<select className="form-control" value={this.props.recPxResearch} onChange={this.props.onChangeRecPxResearch}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC PX STAT</label>
@@ -146,17 +158,29 @@ export class TxLiForm12 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC TIPSS</label>
 					<label className="text-secondary" >Risk Factors: Transjugular Intrahepatic Portacaval Stent Shunt (TIPSS):</label>
-					<input className="form-control" type="text" value={this.props.recTipss} onChange={this.props.onChangeRecTipss} />
+					<select className="form-control" value={this.props.recTipss} onChange={this.props.onChangeRecTipss}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC TOLERANCE INDUCTION TECH</label>
 					<label className="text-secondary" >Any tolerance induction technique used::</label>
-					<input className="form-control" type="text" value={this.props.recToleranceInductionTech} onChange={this.props.onChangeRecToleranceInductionTech} />
+					<select className="form-control" value={this.props.recToleranceInductionTech} onChange={this.props.onChangeRecToleranceInductionTech}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC TUMOR</label>
 					<label className="text-secondary" >Incidental Tumor found at time of Transplant:</label>
-					<input className="form-control" type="text" value={this.props.recTumor} onChange={this.props.onChangeRecTumor} />
+					<select className="form-control" value={this.props.recTumor} onChange={this.props.onChangeRecTumor}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC TUMOR TY</label>
@@ -174,7 +198,7 @@ export class TxLiForm12 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC TXFER CTR ID</label>
 					<label className="text-secondary" >REC_TXFER_ Center ID:</label>
-					<input className="form-control" type="number" readOnly value={this.props.recTxferCtrId} onChange={this.props.onChangeRecTxferCtrId} />
+					<input className="form-control" type="text" readOnly value={this.props.recTxferCtrId} onChange={this.props.onChangeRecTxferCtrId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC TXFER DT</label>

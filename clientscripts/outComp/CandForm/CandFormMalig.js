@@ -13,7 +13,11 @@ export class CandFormMalig extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN MALIG</label>
 					<label className="text-secondary" >Any previous Malignancy:</label>
-					<input className="form-control" type="text" value={this.props.canMalig} onChange={this.props.onChangeCanMalig} />
+					<select className="form-control" value={this.props.canMalig} onChange={this.props.onChangeCanMalig}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN MALIG TY</label>
@@ -35,6 +39,7 @@ export class CandFormMalig extends React.Component {
 						<option value="2048">2048: Liver</option>
 						<option value="4096">4096: Hepatocellular Carcinoma</option>
 						<option value="8192">8192: Hepatoblastoma</option>
+						<option value="**OTHER**">Multiple Choices </option>
 					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">

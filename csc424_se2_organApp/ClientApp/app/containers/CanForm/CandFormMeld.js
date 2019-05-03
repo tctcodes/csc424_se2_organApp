@@ -275,7 +275,11 @@ export class CandFormMeld extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN INIT SRTR LAB MELD TY</label>
 					<label className="text-secondary" >First SRTR MELD/PELD type given:</label>
-					<input className="form-control" type="text" value={this.props.canInitSrtrLabMeldTy} onChange={this.props.onChangeCanInitSrtrLabMeldTy} />
+					<select className="form-control" value={this.props.canInitSrtrLabMeldTy} onChange={this.props.onChangeCanInitSrtrLabMeldTy}>
+						<option value="" hidden disabled selected/>
+						<option value="M">MELD</option>
+						<option value="P">PELD</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN LAST ALBUMIN</label>
@@ -589,7 +593,11 @@ export class CandFormMeld extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN LAST SRTR LAB MELD TY</label>
 					<label className="text-secondary" >Last SRTR MELD/PELD type given:</label>
-					<input className="form-control" type="text" value={this.props.canLastSrtrLabMeldTy} onChange={this.props.onChangeCanLastSrtrLabMeldTy} />
+					<select className="form-control" value={this.props.canLastSrtrLabMeldTy} onChange={this.props.onChangeCanLastSrtrLabMeldTy}>
+						<option value="" hidden disabled selected/>
+						<option value="M">MELD</option>
+						<option value="P">PELD</option>
+					</select>
 				</div>
 			</div>
 		)

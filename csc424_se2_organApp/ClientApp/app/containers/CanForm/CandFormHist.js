@@ -41,17 +41,29 @@ export class CandFormHist extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN ASCITES</label>
 					<label className="text-secondary" >Ascites (from liver disease ):</label>
-					<input className="form-control" type="text" value={this.props.canAscites} onChange={this.props.onChangeCanAscites} />
+					<select className="form-control" value={this.props.canAscites} onChange={this.props.onChangeCanAscites}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN BACTERIA PERIT</label>
 					<label className="text-secondary" >Spontaneous Bacterial Peritonitis (ascitis infection):</label>
-					<input className="form-control" type="text" value={this.props.canBacteriaPerit} onChange={this.props.onChangeCanBacteriaPerit} />
+					<select className="form-control" value={this.props.canBacteriaPerit} onChange={this.props.onChangeCanBacteriaPerit}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN CEREB VASC</label>
 					<label className="text-secondary" >Symptomatic Cerebrovascular Disease:</label>
-					<input className="form-control" type="text" value={this.props.canCerebVasc} onChange={this.props.onChangeCanCerebVasc} />
+					<select className="form-control" value={this.props.canCerebVasc} onChange={this.props.onChangeCanCerebVasc}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN COGNITIVE DEVELOP</label>
@@ -107,47 +119,83 @@ export class CandFormHist extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN DRUG TREAT COPD</label>
 					<label className="text-secondary" >Drug Treated COPD:</label>
-					<input className="form-control" type="text" value={this.props.canDrugTreatCopd} onChange={this.props.onChangeCanDrugTreatCopd} />
+					<select className="form-control" value={this.props.canDrugTreatCopd} onChange={this.props.onChangeCanDrugTreatCopd}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN DRUG TREAT HYPERTEN</label>
 					<label className="text-secondary" >Drug Treated Systemic Hypertension:</label>
-					<input className="form-control" type="text" value={this.props.canDrugTreatHyperten} onChange={this.props.onChangeCanDrugTreatHyperten} />
+					<select className="form-control" value={this.props.canDrugTreatHyperten} onChange={this.props.onChangeCanDrugTreatHyperten}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN ENCEPH</label>
 					<label className="text-secondary" >Encephalopathy:</label>
-					<input className="form-control" type="text" value={this.props.canEnceph} onChange={this.props.onChangeCanEnceph} />
+					<select className="form-control" value={this.props.canEnceph} onChange={this.props.onChangeCanEnceph}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN FUNGAL SEPSIS</label>
 					<label className="text-secondary" >Fungal sepsis (IN Pediatric Only):</label>
-					<input className="form-control" type="text" value={this.props.canFungalSepsis} onChange={this.props.onChangeCanFungalSepsis} />
+					<select className="form-control" value={this.props.canFungalSepsis} onChange={this.props.onChangeCanFungalSepsis}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN LIVING DON TX</label>
 					<label className="text-secondary" >Has Candidate received a Living Donor transplant? (used for Liver Candidates):</label>
-					<input className="form-control" type="text" value={this.props.canLivingDonTx} onChange={this.props.onChangeCanLivingDonTx} />
+					<select className="form-control" value={this.props.canLivingDonTx} onChange={this.props.onChangeCanLivingDonTx}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN LI DYSFUNCTN</label>
 					<label className="text-secondary" >Liver Dysfunction:</label>
-					<input className="form-control" type="text" value={this.props.canLiDysfunctn} onChange={this.props.onChangeCanLiDysfunctn} />
+					<select className="form-control" value={this.props.canLiDysfunctn} onChange={this.props.onChangeCanLiDysfunctn}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN LOSS VASC ACCESS</label>
 					<label className="text-secondary" >Loss of two or more vascular access sites (IN Pediatric Only):</label>
-					<input className="form-control" type="text" value={this.props.canLossVascAccess} onChange={this.props.onChangeCanLossVascAccess} />
+					<select className="form-control" value={this.props.canLossVascAccess} onChange={this.props.onChangeCanLossVascAccess}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN NEW PREV PI TX</label>
 					<label className="text-secondary" >Previous Pancreas Islet Transplantation::</label>
-					<input className="form-control" type="text" value={this.props.canNewPrevPiTx} onChange={this.props.onChangeCanNewPrevPiTx} />
+					<select className="form-control" value={this.props.canNewPrevPiTx} onChange={this.props.onChangeCanNewPrevPiTx}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN NON RECON GI</label>
 					<label className="text-secondary" >Non-Reconstructible GI tract (IN Pediatric Only):</label>
-					<input className="form-control" type="text" value={this.props.canNonReconGi} onChange={this.props.onChangeCanNonReconGi} />
+					<select className="form-control" value={this.props.canNonReconGi} onChange={this.props.onChangeCanNonReconGi}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PEPTIC ULCER</label>
@@ -164,17 +212,29 @@ export class CandFormHist extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PERIPH VASC</label>
 					<label className="text-secondary" >Symptomatic Peripheral Vascular Disease:</label>
-					<input className="form-control" type="text" value={this.props.canPeriphVasc} onChange={this.props.onChangeCanPeriphVasc} />
+					<select className="form-control" value={this.props.canPeriphVasc} onChange={this.props.onChangeCanPeriphVasc}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PORTAL VEIN</label>
 					<label className="text-secondary" >History of Portal Vein Thrombosis:</label>
-					<input className="form-control" type="text" value={this.props.canPortalVein} onChange={this.props.onChangeCanPortalVein} />
+					<select className="form-control" value={this.props.canPortalVein} onChange={this.props.onChangeCanPortalVein}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PREV ABDOM SURG</label>
 					<label className="text-secondary" >Previous Upper Abdominal Surgery:</label>
-					<input className="form-control" type="text" value={this.props.canPrevAbdomSurg} onChange={this.props.onChangeCanPrevAbdomSurg} />
+					<select className="form-control" value={this.props.canPrevAbdomSurg} onChange={this.props.onChangeCanPrevAbdomSurg}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PREV BONE MARROW DT</label>
@@ -234,22 +294,38 @@ export class CandFormHist extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PREV TXFUS</label>
 					<label className="text-secondary" >Any Previous Transfusions:</label>
-					<input className="form-control" type="text" value={this.props.canPrevTxfus} onChange={this.props.onChangeCanPrevTxfus} />
+					<select className="form-control" value={this.props.canPrevTxfus} onChange={this.props.onChangeCanPrevTxfus}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PULM EMBOL</label>
 					<label className="text-secondary" >Pulmonary Embolism:</label>
-					<input className="form-control" type="text" value={this.props.canPulmEmbol} onChange={this.props.onChangeCanPulmEmbol} />
+					<select className="form-control" value={this.props.canPulmEmbol} onChange={this.props.onChangeCanPulmEmbol}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN RECUR SEPSIS</label>
 					<label className="text-secondary" >Recurrent sepsis (IN Pediatric Only):</label>
-					<input className="form-control" type="text" value={this.props.canRecurSepsis} onChange={this.props.onChangeCanRecurSepsis} />
+					<select className="form-control" value={this.props.canRecurSepsis} onChange={this.props.onChangeCanRecurSepsis}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN TIPSS</label>
 					<label className="text-secondary" >History of TIPSS:</label>
-					<input className="form-control" type="text" value={this.props.canTipss} onChange={this.props.onChangeCanTipss} />
+					<select className="form-control" value={this.props.canTipss} onChange={this.props.onChangeCanTipss}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 			</div>
 		)

@@ -7,70 +7,6 @@ import * as select from './selectors';
 import * as action from './actions';
 
 export class CandFormPersonal extends React.Component {
-
-	valToChoice = (value = 0) => {
-		//convert database value to string array.
-
-		let v = value; //copy value
-		let choiceArray = [];
-		let power = 0;
-		
-		//bitwise opperations
-		while (v > 0){
-			if (v & 1){
-				choiceArray.push((1<<power).toString())
-			}
-			power++;
-			v = v >> 1;
-			//console.log("v: ",v)
-		}
-		return choiceArray;
-	}
-	
-	modifyChoice = (e) => {
-		//prevent default <select> behavoir 
-		//this gives expected selecting behavoir
-		e.preventDefault();
-
-		let option = e.target
-		let array = this.valToChoice(this.props.canMaligTy)
-		
-		//toggle selected option
-		option.selected = !option.selected;
-		
-		//if new value is selected
-		if (option.selected && array.find(v=>v==option.value) == undefined){
-			array.push(option.value);
-		}
-
-		//if old value is removed
-		if(!option.selected && array.find(v=>v==option.value != undefined)){
-			array = array.filter(v=>v!=option.value)
-		}
-
-		//convert value and dispatch
-		this.choiceToValDispatch(e,array)
-	}
-	
-
-	choiceToValDispatch = (e, choiceArray) => {
-		//convert array into a summed int
-		//get name prop from parent ("e",<option>, is a child of <select>)
-		let { name } = e.target.parentNode;
-		
-		//sum a
-		let v = 0
-		for (let i = 0, l = choiceArray.length; i < l; i++){
-			v=v+parseInt(choiceArray[i]);
-		}
-		
-		//dummy object to hold choiceArray
-		let z={target:{value:v}}
-		
-		//call dispatch with parent name, and set new redux value
-		this.props[name](z)
-	}
-
 	render(){ 
 		return(
 			<div className="d-flex flex-wrap bg-light">
@@ -151,14 +87,16 @@ export class CandFormPersonal extends React.Component {
 						<option value="" hidden disabled selected/>
 						<option value="LATINO">LATINO: Latino</option>
 						<option value="NLATIN">NLATIN: Non-Latino or unknown</option>
-						<option value=""></option>
-						<option value=""></option>
 					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN GENDER</label>
 					<label className="text-secondary" >Patient/s Gender:</label>
-					<input className="form-control" type="text" value={this.props.canGender} onChange={this.props.onChangeCanGender} />
+					<select className="form-control" value={this.props.canGender} onChange={this.props.onChangeCanGender}>
+						<option value="" hidden disabled selected/>
+						<option value="M">Male</option>
+						<option value="F">Female</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PERM STATE</label>
@@ -252,7 +190,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="text-secondary" >Patient/s Race:</label>
 					<select className="form-control" value={this.props.canRace} onChange={this.props.onChangeCanRace}>
 						<option value="" hidden disabled selected/>
-						<option value=".">Missing</option>
+						<option value="">Missing</option>
 						<option value="8">8: White</option>
 						<option value="16">16: Black or African American</option>
 						<option value="32">32: American Indian or Alaska Native</option>
@@ -262,6 +200,7 @@ export class CandFormPersonal extends React.Component {
 						<option value="512">512: Indian Sub-continent</option>
 						<option value="1024">1024: Unknown (for Donor Referral only)</option>
 						<option value="2000">2000: Hispanic/Latino</option>
+						<option value="**OTHER**">Multiple Choices </option>
 					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
@@ -299,7 +238,11 @@ export class CandFormPersonal extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN WORK INCOME</label>
 					<label className="text-secondary" >Working for income::</label>
-					<input className="form-control" type="text" value={this.props.canWorkIncome} onChange={this.props.onChangeCanWorkIncome} />
+					<select className="form-control" value={this.props.canWorkIncome} onChange={this.props.onChangeCanWorkIncome}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN WORK NO STAT</label>
@@ -341,12 +284,12 @@ export class CandFormPersonal extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PERS ID</label>
 					<label className="text-secondary" >Unique Person ID for Recipient:</label>
-					<input className="form-control" type="number" readOnly value={this.props.persId} onChange={this.props.onChangePersId} />
+					<input className="form-control" type="text" readOnly value={this.props.persId} onChange={this.props.onChangePersId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >PX ID</label>
 					<label className="text-secondary" >Patient Identifier:</label>
-					<input className="form-control" type="number" readOnly value={this.props.pxId} onChange={this.props.onChangePxId} />
+					<input className="form-control" type="text" readOnly value={this.props.pxId} onChange={this.props.onChangePxId} />
 				</div>
 			</div>
 		)

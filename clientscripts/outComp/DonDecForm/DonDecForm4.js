@@ -48,7 +48,11 @@ export class DonDecForm4 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DDAVP</label>
 					<label className="text-secondary" >Meds given Donor: DDAVP:</label>
-					<input className="form-control" type="text" value={this.props.donDdavp} onChange={this.props.onChangeDonDdavp} />
+					<select className="form-control" value={this.props.donDdavp} onChange={this.props.onChangeDonDdavp}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DEATH CIRCUM</label>
@@ -90,12 +94,20 @@ export class DonDecForm4 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DOBUTAMINE</label>
 					<label className="text-secondary" >Meds given Donor: Dobutamine:</label>
-					<input className="form-control" type="text" value={this.props.donDobutamine} onChange={this.props.onChangeDonDobutamine} />
+					<select className="form-control" value={this.props.donDobutamine} onChange={this.props.onChangeDonDobutamine}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DOPAMINE</label>
 					<label className="text-secondary" >Meds given Donor: Dopamine:</label>
-					<input className="form-control" type="text" value={this.props.donDopamine} onChange={this.props.onChangeDonDopamine} />
+					<select className="form-control" value={this.props.donDopamine} onChange={this.props.onChangeDonDopamine}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON DP1</label>

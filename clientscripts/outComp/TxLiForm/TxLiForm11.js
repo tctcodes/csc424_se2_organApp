@@ -45,17 +45,25 @@ export class TxLiForm11 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC ON VENTILATOR</label>
 					<label className="text-secondary" >Risk Factors: On Ventilator:</label>
-					<input className="form-control" type="text" value={this.props.recOnVentilator} onChange={this.props.onChangeRecOnVentilator} />
+					<select className="form-control" value={this.props.recOnVentilator} onChange={this.props.onChangeRecOnVentilator}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC OPO ID</label>
 					<label className="text-secondary" >OPO Serving Transplant Center:</label>
-					<input className="form-control" type="number" readOnly value={this.props.recOpoId} onChange={this.props.onChangeRecOpoId} />
+					<input className="form-control" type="text" readOnly value={this.props.recOpoId} onChange={this.props.onChangeRecOpoId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC OTHER THERAPY</label>
 					<label className="text-secondary" >Other Therapies::</label>
-					<input className="form-control" type="text" value={this.props.recOtherTherapy} onChange={this.props.onChangeRecOtherTherapy} />
+					<select className="form-control" value={this.props.recOtherTherapy} onChange={this.props.onChangeRecOtherTherapy}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC OTHER THERAPY TY</label>
@@ -72,27 +80,47 @@ export class TxLiForm11 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC OTHER THERAPY TY PHOTOPH</label>
 					<label className="text-secondary" >Other Therapy - Photopheresis (3):</label>
-					<input className="form-control" type="text" value={this.props.recOtherTherapyTyPhotoph} onChange={this.props.onChangeRecOtherTherapyTyPhotoph} />
+					<select className="form-control" value={this.props.recOtherTherapyTyPhotoph} onChange={this.props.onChangeRecOtherTherapyTyPhotoph}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC OTHER THERAPY TY PLASMAPH</label>
 					<label className="text-secondary" >Other Therapy - Plasmapheresis (3):</label>
-					<input className="form-control" type="text" value={this.props.recOtherTherapyTyPlasmaph} onChange={this.props.onChangeRecOtherTherapyTyPlasmaph} />
+					<select className="form-control" value={this.props.recOtherTherapyTyPlasmaph} onChange={this.props.onChangeRecOtherTherapyTyPlasmaph}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC OTHER THERAPY TY TLI</label>
 					<label className="text-secondary" >Other Therapy - Total Lymphoid Irradiation (3):</label>
-					<input className="form-control" type="text" value={this.props.recOtherTherapyTyTli} onChange={this.props.onChangeRecOtherTherapyTyTli} />
+					<select className="form-control" value={this.props.recOtherTherapyTyTli} onChange={this.props.onChangeRecOtherTherapyTyTli}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC PB CREDIT</label>
 					<label className="text-secondary" >Payback credit issued to sending OPO:</label>
-					<input className="form-control" type="text" value={this.props.recPbCredit} onChange={this.props.onChangeRecPbCredit} />
+					<select className="form-control" value={this.props.recPbCredit} onChange={this.props.onChangeRecPbCredit}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC PB DEBT</label>
 					<label className="text-secondary" >Payback debt issued to recipient OPO:</label>
-					<input className="form-control" type="text" value={this.props.recPbDebt} onChange={this.props.onChangeRecPbDebt} />
+					<select className="form-control" value={this.props.recPbDebt} onChange={this.props.onChangeRecPbDebt}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC PB SHARE TY</label>
@@ -184,17 +212,29 @@ export class TxLiForm11 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC PORTAL HYPERTEN BLEED</label>
 					<label className="text-secondary" >Did Patient receive 5 or more units of packed red blood cells within 48 hours prior to transplantation due to spontaneous portal hypertensive bleeding::</label>
-					<input className="form-control" type="text" value={this.props.recPortalHypertenBleed} onChange={this.props.onChangeRecPortalHypertenBleed} />
+					<select className="form-control" value={this.props.recPortalHypertenBleed} onChange={this.props.onChangeRecPortalHypertenBleed}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC PORTAL VEIN</label>
 					<label className="text-secondary" >Risk Factors: Portal Vein Thrombosis:</label>
-					<input className="form-control" type="text" value={this.props.recPortalVein} onChange={this.props.onChangeRecPortalVein} />
+					<select className="form-control" value={this.props.recPortalVein} onChange={this.props.onChangeRecPortalVein}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC PORTAL VEIN THROMB</label>
 					<label className="text-secondary" >If Vascular Thrombosis, Portal vein thrombosis (Ped. Only):</label>
-					<input className="form-control" type="text" value={this.props.recPortalVeinThromb} onChange={this.props.onChangeRecPortalVeinThromb} />
+					<select className="form-control" value={this.props.recPortalVeinThromb} onChange={this.props.onChangeRecPortalVeinThromb}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC POSTX LOS</label>

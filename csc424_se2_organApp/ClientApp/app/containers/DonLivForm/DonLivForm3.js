@@ -13,27 +13,31 @@ export class DonLivForm3 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON EBV CLINICAL</label>
 					<label className="text-secondary" >EBV//Was there clinical disease::</label>
-					<input className="form-control" type="text" value={this.props.donEbvClinical} onChange={this.props.onChangeDonEbvClinical} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donEbvClinical} onChange={this.props.onChangeDonEbvClinical} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON EBV DNA</label>
 					<label className="text-secondary" >EBV//EBV DNA::</label>
-					<input className="form-control" type="text" value={this.props.donEbvDna} onChange={this.props.onChangeDonEbvDna} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donEbvDna} onChange={this.props.onChangeDonEbvDna} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON EBV IGG</label>
 					<label className="text-secondary" >EBV//IgG::</label>
-					<input className="form-control" type="text" value={this.props.donEbvIgg} onChange={this.props.onChangeDonEbvIgg} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donEbvIgg} onChange={this.props.onChangeDonEbvIgg} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON EBV IGM</label>
 					<label className="text-secondary" >EBV//IgM::</label>
-					<input className="form-control" type="text" value={this.props.donEbvIgm} onChange={this.props.onChangeDonEbvIgm} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donEbvIgm} onChange={this.props.onChangeDonEbvIgm} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON EBV TESTED</label>
 					<label className="text-secondary" >EBV:</label>
-					<input className="form-control" type="text" value={this.props.donEbvTested} onChange={this.props.onChangeDonEbvTested} />
+					<select className="form-control" value={this.props.donEbvTested} onChange={this.props.onChangeDonEbvTested}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON EDUCATION</label>
@@ -87,7 +91,11 @@ export class DonLivForm3 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON FREE</label>
 					<label className="text-secondary" >Secondary source of payment: Free:</label>
-					<input className="form-control" type="text" value={this.props.donFree} onChange={this.props.onChangeDonFree} />
+					<select className="form-control" value={this.props.donFree} onChange={this.props.onChangeDonFree}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON FUNCTN STAT</label>
@@ -134,7 +142,11 @@ export class DonLivForm3 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON GENDER</label>
 					<label className="text-secondary" >Donor/s Gender:</label>
-					<input className="form-control" type="text" value={this.props.donGender} onChange={this.props.onChangeDonGender} />
+					<select className="form-control" value={this.props.donGender} onChange={this.props.onChangeDonGender}>
+						<option value="" hidden disabled selected/>
+						<option value="M">Male</option>
+						<option value="F">Female</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HAPLO TY MATCH</label>
@@ -154,32 +166,32 @@ export class DonLivForm3 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HBV ANTIBODY</label>
 					<label className="text-secondary" >HBV//Core Antibody::</label>
-					<input className="form-control" type="text" value={this.props.donHbvAntibody} onChange={this.props.onChangeDonHbvAntibody} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donHbvAntibody} onChange={this.props.onChangeDonHbvAntibody} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HBV CLINICAL</label>
 					<label className="text-secondary" >HBV//Was there clinical disease::</label>
-					<input className="form-control" type="text" value={this.props.donHbvClinical} onChange={this.props.onChangeDonHbvClinical} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donHbvClinical} onChange={this.props.onChangeDonHbvClinical} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HBV DNA</label>
 					<label className="text-secondary" >HBV//HBV DNA::</label>
-					<input className="form-control" type="text" value={this.props.donHbvDna} onChange={this.props.onChangeDonHbvDna} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donHbvDna} onChange={this.props.onChangeDonHbvDna} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HBV HDV</label>
 					<label className="text-secondary" >HBV//HDV (Delta Virus)::</label>
-					<input className="form-control" type="text" value={this.props.donHbvHdv} onChange={this.props.onChangeDonHbvHdv} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donHbvHdv} onChange={this.props.onChangeDonHbvHdv} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HBV LI HISTOLOGY</label>
 					<label className="text-secondary" >HBV//Liver Histology::</label>
-					<input className="form-control" type="text" value={this.props.donHbvLiHistology} onChange={this.props.onChangeDonHbvLiHistology} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donHbvLiHistology} onChange={this.props.onChangeDonHbvLiHistology} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON HBV SURF ANTIGEN</label>
 					<label className="text-secondary" >HBV//Surface Antigen::</label>
-					<input className="form-control" type="text" value={this.props.donHbvSurfAntigen} onChange={this.props.onChangeDonHbvSurfAntigen} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.donHbvSurfAntigen} onChange={this.props.onChangeDonHbvSurfAntigen} />
 				</div>
 			</div>
 		)

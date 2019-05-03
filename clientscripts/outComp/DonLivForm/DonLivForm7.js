@@ -13,7 +13,11 @@ export class DonLivForm7 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI READMIT</label>
 					<label className="text-secondary" >Liver Readmission//Any Readmission After Initial Discharge::</label>
-					<input className="form-control" type="text" value={this.props.donLiReadmit} onChange={this.props.onChangeDonLiReadmit} />
+					<select className="form-control" value={this.props.donLiReadmit} onChange={this.props.onChangeDonLiReadmit}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI READMIT DT</label>
@@ -39,12 +43,20 @@ export class DonLivForm7 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP</label>
 					<label className="text-secondary" >Liver Reoperation//Reoperation::</label>
-					<input className="form-control" type="text" value={this.props.donLiReop} onChange={this.props.onChangeDonLiReop} />
+					<select className="form-control" value={this.props.donLiReop} onChange={this.props.onChangeDonLiReop}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP BILIARY</label>
 					<label className="text-secondary" >Liver Reoperation Biliary//Biliary:</label>
-					<input className="form-control" type="text" value={this.props.donLiReopBiliary} onChange={this.props.onChangeDonLiReopBiliary} />
+					<select className="form-control" value={this.props.donLiReopBiliary} onChange={this.props.onChangeDonLiReopBiliary}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP BILIARY DT</label>
@@ -54,7 +66,11 @@ export class DonLivForm7 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP BLEED</label>
 					<label className="text-secondary" >Liver Reoperation Bleeding Complications//Bleeding Complications:</label>
-					<input className="form-control" type="text" value={this.props.donLiReopBleed} onChange={this.props.onChangeDonLiReopBleed} />
+					<select className="form-control" value={this.props.donLiReopBleed} onChange={this.props.onChangeDonLiReopBleed}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP BLEED DT</label>
@@ -64,7 +80,11 @@ export class DonLivForm7 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP BOWEL</label>
 					<label className="text-secondary" >Liver Reoperation Bowel Obstruction//Bowel Obstruction:</label>
-					<input className="form-control" type="text" value={this.props.donLiReopBowel} onChange={this.props.onChangeDonLiReopBowel} />
+					<select className="form-control" value={this.props.donLiReopBowel} onChange={this.props.onChangeDonLiReopBowel}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP BOWEL DT</label>
@@ -74,7 +94,11 @@ export class DonLivForm7 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP FAIL</label>
 					<label className="text-secondary" >Liver Reoperation Liver Failure///Liver Failure Requiring Transplant:</label>
-					<input className="form-control" type="text" value={this.props.donLiReopFail} onChange={this.props.onChangeDonLiReopFail} />
+					<select className="form-control" value={this.props.donLiReopFail} onChange={this.props.onChangeDonLiReopFail}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP FAIL DT</label>
@@ -84,7 +108,11 @@ export class DonLivForm7 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP HERNIA</label>
 					<label className="text-secondary" >Liver Reoperation Hernia Repair//Hernia Repair:</label>
-					<input className="form-control" type="text" value={this.props.donLiReopHernia} onChange={this.props.onChangeDonLiReopHernia} />
+					<select className="form-control" value={this.props.donLiReopHernia} onChange={this.props.onChangeDonLiReopHernia}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP HERNIA DT</label>
@@ -94,7 +122,11 @@ export class DonLivForm7 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP OTHER</label>
 					<label className="text-secondary" >Liver Reoperation Other//Other Specify:</label>
-					<input className="form-control" type="text" value={this.props.donLiReopOther} onChange={this.props.onChangeDonLiReopOther} />
+					<select className="form-control" value={this.props.donLiReopOther} onChange={this.props.onChangeDonLiReopOther}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP OTHER DT</label>
@@ -104,7 +136,11 @@ export class DonLivForm7 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP VASC</label>
 					<label className="text-secondary" >Liver Reoperation Vascular Complications//Vascular Complications:</label>
-					<input className="form-control" type="text" value={this.props.donLiReopVasc} onChange={this.props.onChangeDonLiReopVasc} />
+					<select className="form-control" value={this.props.donLiReopVasc} onChange={this.props.onChangeDonLiReopVasc}>
+						<option value="" hidden disabled selected/>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI REOP VASC DT</label>
@@ -114,7 +150,11 @@ export class DonLivForm7 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI VASC COMPL</label>
 					<label className="text-secondary" >Liver Vascular Complications Requiring Intervention//Vascular Complications Requiring Intervention::</label>
-					<input className="form-control" type="text" value={this.props.donLiVascCompl} onChange={this.props.onChangeDonLiVascCompl} />
+					<select className="form-control" value={this.props.donLiVascCompl} onChange={this.props.onChangeDonLiVascCompl}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LI VASC COMPL INTERVENTION</label>
@@ -149,7 +189,11 @@ export class DonLivForm7 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LU COMPL</label>
 					<label className="text-secondary" >Post-operative complications during the initial hospitalization::</label>
-					<input className="form-control" type="text" value={this.props.donLuCompl} onChange={this.props.onChangeDonLuCompl} />
+					<select className="form-control" value={this.props.donLuCompl} onChange={this.props.onChangeDonLuCompl}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DON LU COMPL REASON</label>

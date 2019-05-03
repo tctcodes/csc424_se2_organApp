@@ -43,12 +43,20 @@ export class TxLiForm3 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PREV TXFUS</label>
 					<label className="text-secondary" >Any Previous Transfusions:</label>
-					<input className="form-control" type="text" value={this.props.canPrevTxfus} onChange={this.props.onChangeCanPrevTxfus} />
+					<select className="form-control" value={this.props.canPrevTxfus} onChange={this.props.onChangeCanPrevTxfus}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN PULM EMBOL</label>
 					<label className="text-secondary" >Pulmonary Embolism:</label>
-					<input className="form-control" type="text" value={this.props.canPulmEmbol} onChange={this.props.onChangeCanPulmEmbol} />
+					<select className="form-control" value={this.props.canPulmEmbol} onChange={this.props.onChangeCanPulmEmbol}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN RACE</label>
@@ -112,12 +120,21 @@ export class TxLiForm3 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN SOURCE</label>
 					<label className="text-secondary" >Source of Candidate Data A =Active WL,R= Removed,L=Living Don:</label>
-					<input className="form-control" type="text" value={this.props.canSource} onChange={this.props.onChangeCanSource} />
+					<select className="form-control" value={this.props.canSource} onChange={this.props.onChangeCanSource}>
+						<option value="" hidden disabled selected/>
+						<option value="A">Active</option>
+						<option value="R">Removed</option>
+						<option value="L">Live</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN TIPSS</label>
 					<label className="text-secondary" >History of TIPSS:</label>
-					<input className="form-control" type="text" value={this.props.canTipss} onChange={this.props.onChangeCanTipss} />
+					<select className="form-control" value={this.props.canTipss} onChange={this.props.onChangeCanTipss}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >CAN TOT ALBUMIN</label>
@@ -132,7 +149,7 @@ export class TxLiForm3 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DONOR ID</label>
 					<label className="text-secondary" >Encrypted Unique Donor ID (all donors) - foreign key:</label>
-					<input className="form-control" type="number" readOnly value={this.props.donorId} onChange={this.props.onChangeDonorId} />
+					<input className="form-control" type="text" readOnly value={this.props.donorId} onChange={this.props.onChangeDonorId} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >DONOR ID VESSEL</label>

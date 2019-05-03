@@ -139,7 +139,7 @@ export class TxLiForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC EBV STAT</label>
 					<label className="text-secondary" >EBV serology status:</label>
-					<input className="form-control" type="text" value={this.props.recEbvStat} onChange={this.props.onChangeRecEbvStat} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.recEbvStat} onChange={this.props.onChangeRecEbvStat} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC EMPL STAT PRE04</label>
@@ -162,7 +162,11 @@ export class TxLiForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC FAIL BILIARY</label>
 					<label className="text-secondary" >Cause of Graft Failure: Biliary Tract Complication:</label>
-					<input className="form-control" type="text" value={this.props.recFailBiliary} onChange={this.props.onChangeRecFailBiliary} />
+					<select className="form-control" value={this.props.recFailBiliary} onChange={this.props.onChangeRecFailBiliary}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC FAIL DT</label>
@@ -172,37 +176,65 @@ export class TxLiForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC FAIL HEP DENOVO</label>
 					<label className="text-secondary" >Cause of Graft Failure: Hepatitis: DeNovo:</label>
-					<input className="form-control" type="text" value={this.props.recFailHepDenovo} onChange={this.props.onChangeRecFailHepDenovo} />
+					<select className="form-control" value={this.props.recFailHepDenovo} onChange={this.props.onChangeRecFailHepDenovo}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC FAIL HEP RECUR</label>
 					<label className="text-secondary" >Cause of Graft Failure: Hepatitis: Recurrent:</label>
-					<input className="form-control" type="text" value={this.props.recFailHepRecur} onChange={this.props.onChangeRecFailHepRecur} />
+					<select className="form-control" value={this.props.recFailHepRecur} onChange={this.props.onChangeRecFailHepRecur}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC FAIL INFECT</label>
 					<label className="text-secondary" >Cause of Graft Failure: Infection:</label>
-					<input className="form-control" type="text" value={this.props.recFailInfect} onChange={this.props.onChangeRecFailInfect} />
+					<select className="form-control" value={this.props.recFailInfect} onChange={this.props.onChangeRecFailInfect}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC FAIL PRIME GRAFT FAIL</label>
 					<label className="text-secondary" >Cause of Graft Failure: Primary Graft Failure:</label>
-					<input className="form-control" type="text" value={this.props.recFailPrimeGraftFail} onChange={this.props.onChangeRecFailPrimeGraftFail} />
+					<select className="form-control" value={this.props.recFailPrimeGraftFail} onChange={this.props.onChangeRecFailPrimeGraftFail}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC FAIL RECUR DISEASE</label>
 					<label className="text-secondary" >Cause of Graft Failure: Recurrent Disease:</label>
-					<input className="form-control" type="text" value={this.props.recFailRecurDisease} onChange={this.props.onChangeRecFailRecurDisease} />
+					<select className="form-control" value={this.props.recFailRecurDisease} onChange={this.props.onChangeRecFailRecurDisease}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC FAIL REJ ACUTE</label>
 					<label className="text-secondary" >Cause of Graft Failure: Acute Rejection:</label>
-					<input className="form-control" type="text" value={this.props.recFailRejAcute} onChange={this.props.onChangeRecFailRejAcute} />
+					<select className="form-control" value={this.props.recFailRejAcute} onChange={this.props.onChangeRecFailRejAcute}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC FAIL VASC THROMB</label>
 					<label className="text-secondary" >Cause of Graft Failure: Vascular Thrombosis:</label>
-					<input className="form-control" type="text" value={this.props.recFailVascThromb} onChange={this.props.onChangeRecFailVascThromb} />
+					<select className="form-control" value={this.props.recFailVascThromb} onChange={this.props.onChangeRecFailVascThromb}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC FUNCTN STAT</label>
@@ -239,32 +271,44 @@ export class TxLiForm9 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC GRAFT STAT</label>
 					<label className="text-secondary" >Graft Status:</label>
-					<input className="form-control" type="text" value={this.props.recGraftStat} onChange={this.props.onChangeRecGraftStat} />
+					<select className="form-control" value={this.props.recGraftStat} onChange={this.props.onChangeRecGraftStat}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC HBV ANTIBODY</label>
 					<label className="text-secondary" >HBV: Core Antibody//Core Antibody::</label>
-					<input className="form-control" type="text" value={this.props.recHbvAntibody} onChange={this.props.onChangeRecHbvAntibody} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.recHbvAntibody} onChange={this.props.onChangeRecHbvAntibody} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC HBV SURF ANTIGEN</label>
 					<label className="text-secondary" >HBV: Surface Antigen//Surface Antigen::</label>
-					<input className="form-control" type="text" value={this.props.recHbvSurfAntigen} onChange={this.props.onChangeRecHbvSurfAntigen} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.recHbvSurfAntigen} onChange={this.props.onChangeRecHbvSurfAntigen} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC HCV STAT</label>
 					<label className="text-secondary" >HCV serology status:</label>
-					<input className="form-control" type="text" value={this.props.recHcvStat} onChange={this.props.onChangeRecHcvStat} />
+					<input className="form-control" type="text" maxLength="2" value={this.props.recHcvStat} onChange={this.props.onChangeRecHcvStat} />
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC HEPATIC ARTER THROMB</label>
 					<label className="text-secondary" >If Vascular Thrombosis, Hepatic arterial thrombosis (Ped. Only):</label>
-					<input className="form-control" type="text" value={this.props.recHepaticArterThromb} onChange={this.props.onChangeRecHepaticArterThromb} />
+					<select className="form-control" value={this.props.recHepaticArterThromb} onChange={this.props.onChangeRecHepaticArterThromb}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC HEPATIC OUTFLOW OBSTRUCT</label>
 					<label className="text-secondary" >If Vascular Thrombosis, Hepatic outflow obstruction (Ped. Only):</label>
-					<input className="form-control" type="text" value={this.props.recHepaticOutflowObstruct} onChange={this.props.onChangeRecHepaticOutflowObstruct} />
+					<select className="form-control" value={this.props.recHepaticOutflowObstruct} onChange={this.props.onChangeRecHepaticOutflowObstruct}>
+						<option value="" hidden disabled selected/>
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
 				</div>
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >REC HGT CM</label>
