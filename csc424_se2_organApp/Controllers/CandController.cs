@@ -4,7 +4,12 @@ using System.Threading;
 using csc424_se2_organApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-
+using System.Net.Http;
+using Newtonsoft.Json;
+using System.IO;
+using System.Net;
+using System.Text;
+using System.Collections.Generic;
 
 
 namespace csc424_se2_organApp.Controllers
@@ -57,7 +62,36 @@ namespace csc424_se2_organApp.Controllers
             return Json(data: isInDb);
 
         }
+        [HttpPost]
+        public IActionResult DownloadRecord([FromBody] dynamic input){
+            int num;
+            var arr = new List<dynamic>();
+            foreach(var a in input.PxId){
+                num = a;
+                var isInDb = context.CandLiin.Where(r => r.PxId == num)
+                                            .FirstOrDefault<CandLiin>();
+                if(isInDb == null){
+                    Response.StatusCode = 404;
+                    Console.WriteLine("fuck");
+                    return Json(new {error="Not Found"}); 
+                }
+                
+                var data = Json(isInDb);
+                arr.Add(data.Value);
+            }
+            //var returnVal = new {list = arr};
+            string ret = JsonConvert.SerializeObject(arr,Formatting.Indented);
+            byte[] byteArray = Encoding.ASCII.GetBytes(ret);
+            MemoryStream stream = new MemoryStream( byteArray ); 
+ 
+            // convert stream to string
+            StreamReader reader = new StreamReader( stream );
+            string text = reader.ReadToEnd();
+            string fileName =$"patient_data.json";
+            return File(byteArray, "application/octet-stream",fileName);
 
+            
+        }
         /// <summary>Get a record by PX ID</summary>
         /// <remarks>api/Cand/GetRecordPxId</remarks>
         /// <param name="input">Requires in the body: PxID</param>

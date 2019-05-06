@@ -15,8 +15,9 @@ import {
   Button,
   Dropdown,
   Navbar,
+  Nav
 } from "react-bootstrap";
-import { setPXID, submitSearch } from './actions';
+import { setPXID, submitSearch,downloadResult } from './actions';
 import { makeSelectPXID, makeSelectSearchResults } from './selectors';
 import CanForm from '../CanForm';
 
@@ -54,10 +55,10 @@ function PrintPxRecord(props) {
   } else {
     console.log('False');
     const recordList = Object.keys(props.pxidRecord).map(key =>
-      <p key={key}>{key}: {props.pxidRecord[key]} </p>
+      <li key={key}>{key}: {props.pxidRecord[key]} </li>
     )
     return (
-      <div>{recordList}</div>
+      <ul style={{listStyle:"none"}}>{recordList}</ul>
     );
   }
 }
@@ -127,10 +128,13 @@ export class SearchBox extends React.Component {
             >
               Search
             </Button>
+           
+            <Button style={{marginLeft:"auto"}} onClick={this.props.onDownload}>Download Result</Button>
+            
           </Navbar>
         </div>
         {/* Display patient information */}
-        {/* <CanForm selectedPxId={this.props.pid}/> */}
+        <PrintPxRecord pxidRecord={this.props.pxidRecord}/>
       </div>
     );
   }
@@ -151,6 +155,7 @@ function mapDispatchToProps(dispatch) {
   return {
     onSetPXID: evt => dispatch(setPXID(evt.target.value)),
     onSearchSubmit: () => dispatch(submitSearch()),
+    onDownload: () => dispatch(downloadResult())
   };
 }
 

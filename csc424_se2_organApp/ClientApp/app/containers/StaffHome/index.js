@@ -17,8 +17,16 @@ import makeSelectStaffHome from "./selectors";
 import reducer from "./reducer";
 import saga from "./saga";
 
+
 /* eslint-disable react/prefer-stateless-function */
 export class StaffHome extends React.PureComponent {
+  constructor(){
+    super();  
+    this.state ={
+    
+    };
+  }
+ 
   render() {
     return (
       <div>
