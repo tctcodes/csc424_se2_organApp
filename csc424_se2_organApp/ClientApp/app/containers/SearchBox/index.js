@@ -45,26 +45,45 @@ const US_STATE = [
 ];
 
 function PrintPxRecord(props) {
-  console.log('hello!');
-  console.log(props.pxidRecord.size);
-  if(props.pxidRecord.size === 0) {
-    console.log('True');
+  if(props.searchResults.size === 0) {
     return (
       <h1>Input search request for Patient Record</h1>
     );
   } else {
-    console.log('False');
-    const recordList = Object.keys(props.pxidRecord).map(key =>
-      <li key={key}>{key}: {props.pxidRecord[key]} </li>
+    
+    const recordList = props.searchResults.map(record =>
+      <tr id={record.pxId}>
+        <td>{record.pxId}</td>
+        <td>{record.persId}</td>
+        <td>{record.canPermState}</td>
+        <td>{record.canAbo}</td>
+        <td>{record.canAgeAtListing}</td>
+      </tr>
     )
     return (
-      <ul style={{listStyle:"none"}}>{recordList}</ul>
+      <table onClick={props.selectRecord} className="table table-hover">
+        <thead>
+          <tr>
+            <th>Patient ID</th>
+            <th>Personal ID</th>
+            <th>State</th>
+            <th>Blood Type</th>
+            <th>Age at Listing</th>
+          </tr>
+        </thead>
+        <tbody>{recordList}</tbody>
+      </table>
     );
   }
 }
 
 /* eslint-disable react/prefer-stateless-function */
 export class SearchBox extends React.Component {
+
+  selectRecord = (e)=>{
+    //pushes canform record
+    this.props.history.push(`/staff/canform/:${e.target.parentNode.id}`)
+  }
 
   render() {
     return (
@@ -133,8 +152,9 @@ export class SearchBox extends React.Component {
             
           </Navbar>
         </div>
-        {/* Display patient information */}
-        <PrintPxRecord pxidRecord={this.props.pxidRecord}/>
+        {/* Display patient information */}  
+        <PrintPxRecord selectRecord={this.selectRecord} searchResults={this.props.searchResults}/>
+      
       </div>
     );
   }
@@ -148,7 +168,7 @@ SearchBox.propTypes = {
 
 const mapStateToProps = createStructuredSelector({
   pid: makeSelectPXID(),
-  pxidRecord: makeSelectSearchResults(),
+  searchResults: makeSelectSearchResults(),
 });
 
 function mapDispatchToProps(dispatch) {
