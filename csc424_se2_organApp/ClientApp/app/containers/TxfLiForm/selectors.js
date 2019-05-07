@@ -2,6 +2,10 @@ import { createSelector } from "reselect";
 import { initialState } from "./reducer";
 export const selectTxfLiFormDomain = state => state.get("TxfLiForm", initialState);
 
+export const makeSelectRecord = () =>
+createSelector(selectTxfLiFormDomain, substate => substate.toJS());
+
+
 export const makeSelectOrgAr = () =>
 createSelector(selectTxfLiFormDomain, substate => substate.get("orgAr"));
 

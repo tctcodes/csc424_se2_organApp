@@ -1,3 +1,6 @@
+export const SAVE_RECORD_TXFLI = "app/TxfLiForm/SAVE_RECORD_TXFLI";
+export const GET_RECORD_TRR_FOL_ID = "app/TxfLiForm/GET_RECORD_TRR_FOL_ID"
+export const SET_RECORD_TXFLI = "app/TxfLiForm/SET_RECORD_TXFLI";
 export const CHANGE_ORGAR = "app/TxfLiForm/CHANGE_ORGAR";
 export const CHANGE_ORGTY = "app/TxfLiForm/CHANGE_ORGTY";
 export const CHANGE_PERSID = "app/TxfLiForm/CHANGE_PERSID";

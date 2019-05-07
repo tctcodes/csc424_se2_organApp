@@ -1,3 +1,6 @@
+export const SAVE_RECORD_DON_DEC = "app/DonDecForm/SAVE_RECORD_DON_DEC";
+export const GET_RECORD_DONOR_DEC_ID = "app/DonDecForm/GET_RECORD_DONOR_DEC_ID"
+export const SET_RECORD_DON_DEC = "app/DonDecForm/SET_RECORD_DON_DEC";
 export const CHANGE_DONORID = "app/DonDecForm/CHANGE_DONORID";
 export const CHANGE_DONA1 = "app/DonDecForm/CHANGE_DONA1";
 export const CHANGE_DONA2 = "app/DonDecForm/CHANGE_DONA2";

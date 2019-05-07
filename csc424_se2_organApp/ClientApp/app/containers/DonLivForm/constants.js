@@ -1,3 +1,6 @@
+export const SAVE_RECORD_DON_LIV = "app/DonLivForm/SAVE_RECORD_DON_LIV";
+export const GET_RECORD_DONOR_LIV_ID = "app/DonLivForm/GET_RECORD_DONOR_LIV_ID"
+export const SET_RECORD_DON_LIV = "app/DonLivForm/SET_RECORD_DON_LIV";
 export const CHANGE_DONORID = "app/DonLivForm/CHANGE_DONORID";
 export const CHANGE_DONA1 = "app/DonLivForm/CHANGE_DONA1";
 export const CHANGE_DONA2 = "app/DonLivForm/CHANGE_DONA2";

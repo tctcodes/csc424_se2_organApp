@@ -1,23 +1,23 @@
 import * as constant from "./constants";
 
-export function saveRecord(state) { 
+export function saveRecord(record) { 
 	return{
 		type: constant.SAVE_RECORD,
-		state
+		record
 	};
 }
 
-export function setRecord(state) { 
+export function setRecord(record) { 
 	return{
 		type: constant.SET_RECORD,
-		state,
+		record,
 	};
 }
 
-export function getRecordPxId(selectedPxId) { 
+export function getRecordPxId(id) { 
 	return{
 		type: constant.GET_RECORD_PX_ID,
-		id:selectedPxId
+		id
 	};
 }
 

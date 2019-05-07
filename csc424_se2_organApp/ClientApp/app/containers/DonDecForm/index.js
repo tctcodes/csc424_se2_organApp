@@ -16,7 +16,7 @@ import injectReducer from 'utils/injectReducer';
 import * as selects from './selectors';
 import * as actions from './actions';
 import reducer from './reducer';
-//import saga from './saga';
+import saga from './saga';
 import DonDecForm1 from './DonDecForm1';
 import DonDecForm2 from './DonDecForm2';
 import DonDecForm3 from './DonDecForm3';
@@ -40,8 +40,8 @@ export class DonDecForm extends React.Component {
 		};
 	  }
 	
-	componentDidMount(){		
-  	//this.props.onGetRecordPxId(this.props.selectedPxId);
+	componentDidMount(){	
+		this.props.onGetRecordDonorDecId((this.props.match.params.donordecid).slice(1));
 	}
 	
 	
@@ -53,10 +53,10 @@ export class DonDecForm extends React.Component {
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossOrigin="anonymous" />
             </Helmet>
 						<div className="sticky-top float-right bg-light border-bottom">
-						<Button variant="primary" type="button" className="mr-1" onClick={e=>null} value={"\tRevert\t"}>
+						<Button variant="primary" type="button" className="mr-1" onClick={e => this.props.onGetRecordDonorDecId(this.props.donorId)} >
               Revert
             </Button>
-						<Button variant="primary" type="button" >
+						<Button variant="primary" type="button" onClick={e => this.props.onSaveRecordDonDec(this.props.record)}>
               Save
             </Button>
 					</div>
@@ -95,17 +95,19 @@ export class DonDecForm extends React.Component {
 				    { this.state.key == "10" &&<DonDecForm10/>}
 				</Tab>
 			</Tabs>
-        </div>)
+      </div>)
     }
 }
 
 const mapStateToProps = createStructuredSelector({
-	
+	donorId: selects.makeSelectDonorId(),
+	record: selects.makeSelectRecord(),
 });
   
 function mapDispatchToProps(dispatch) {
     return {
-        //onGetRecordPxId: evt => dispatch(actions.getRecordPxId(evt)),
+				onGetRecordDonorDecId: evt => dispatch(actions.getRecordDonorDecId(evt)),
+				onSaveRecordDonDec: evt => dispatch(actions.saveRecordDonDec(evt)),
     };    
 }
   
@@ -115,10 +117,10 @@ function mapDispatchToProps(dispatch) {
   );
   
   const withReducer = injectReducer({ key: 'DonDecForm', reducer });
-  //const withSaga = injectSaga({ key: 'DonDecForm', saga });
+  const withSaga = injectSaga({ key: 'DonDecForm', saga });
   
   export default compose(
     withReducer,
-    //withSaga,
+    withSaga,
     withConnect,
   )(DonDecForm);

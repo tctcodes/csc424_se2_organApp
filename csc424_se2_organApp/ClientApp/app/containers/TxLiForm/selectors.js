@@ -2,6 +2,9 @@ import { createSelector } from "reselect";
 import { initialState } from "./reducer";
 export const selectTxLiFormDomain = state => state.get("TxLiForm", initialState);
 
+export const makeSelectRecord = () =>
+createSelector(selectTxLiFormDomain, substate => substate.toJS());
+
 export const makeSelectCanhxMpxcptHccApplyInd = () =>
 createSelector(selectTxLiFormDomain, substate => substate.get("canhxMpxcptHccApplyInd"));
 

@@ -1,5 +1,26 @@
 import * as constant from "./constants";
 
+export function setRecordTxLi(record) { 
+	return{
+		type: constant.SET_RECORD_TXLI,
+		record,
+	};
+}
+
+export function saveRecordTxLi(record) { 
+	return{
+		type: constant.SAVE_RECORD_TXLI,
+		record
+	};
+}
+
+export function getRecordTrrId(id) { 
+	return{
+		type: constant.GET_RECORD_TRR_ID,
+		id
+	};
+}
+
 export function changeCanhxMpxcptHccApplyInd(canhxMpxcptHccApplyInd) { 
 	return{
 		type: constant.CHANGE_CANHXMPXCPTHCCAPPLYIND,

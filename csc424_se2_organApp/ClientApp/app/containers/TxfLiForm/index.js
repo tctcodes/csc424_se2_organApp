@@ -16,7 +16,7 @@ import injectReducer from 'utils/injectReducer';
 import * as selects from './selectors';
 import * as actions from './actions';
 import reducer from './reducer';
-//import saga from './saga';
+import saga from './saga';
 import TxfLiForm1 from './TxfLiForm1';
 import TxfLiForm2 from './TxfLiForm2';
 import TxfLiForm3 from './TxfLiForm3';
@@ -32,7 +32,8 @@ export class TxfLiForm extends React.Component {
 	  }
 	
 	componentDidMount(){		
-  	//this.props.onGetRecordPxId(this.props.selectedPxId);
+		this.props.onGetRecordTxfLi((this.props.match.params.trrfolid).slice(1));
+  	
 	}
 	
 	
@@ -44,10 +45,10 @@ export class TxfLiForm extends React.Component {
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossOrigin="anonymous" />
             </Helmet>
 						<div className="sticky-top float-right bg-light border-bottom">
-						<Button variant="primary" type="button" className="mr-1" onClick={e=>null} value={"\tRevert\t"}>
+						<Button variant="primary" type="button" className="mr-1" onClick={e => this.props.onGetRecordTrrFolId(this.props.trrFolId)} >
               Revert
             </Button>
-						<Button variant="primary" type="button" >
+						<Button variant="primary" type="button" onClick={e => this.props.onSaveRecordTxfLi(this.props.record)}>
               Save
             </Button>
 					</div>
@@ -73,12 +74,14 @@ export class TxfLiForm extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-	
+	trrFolId: selects.makeSelectTrrFolId(),
+	record: selects.makeSelectRecord(),
 });
   
 function mapDispatchToProps(dispatch) {
     return {
-        //onGetRecordPxId: evt => dispatch(actions.getRecordPxId(evt)),
+			onGetRecordTrrFolId: evt => dispatch(actions.getRecordTrrFolId(evt)),
+			onSaveRecordTxfLi: evt => dispatch(actions.saveRecordTxfLi(evt)),
     };    
 }
   
@@ -88,10 +91,10 @@ function mapDispatchToProps(dispatch) {
   );
   
   const withReducer = injectReducer({ key: 'TxfLiForm', reducer });
-  //const withSaga = injectSaga({ key: 'TxfLiForm', saga });
+  const withSaga = injectSaga({ key: 'TxfLiForm', saga });
   
   export default compose(
     withReducer,
-    //withSaga,
+    withSaga,
     withConnect,
   )(TxfLiForm);

@@ -1,5 +1,27 @@
 import * as constant from "./constants";
 
+export function setRecordDonLiv(record) { 
+	return{
+		type: constant.SET_RECORD_DON_LIV,
+		record,
+	};
+}
+
+export function saveRecordDonLiv(record) { 
+	return{
+		type: constant.SAVE_RECORD_DON_LIV,
+		record
+	};
+}
+
+export function getRecordDonorLivId(id) { 
+	return{
+		type: constant.GET_RECORD_DONOR_LIV_ID,
+		id
+	};
+}
+
+
 export function changeDonorId(donorId) { 
 	return{
 		type: constant.CHANGE_DONORID,

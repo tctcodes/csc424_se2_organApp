@@ -52,10 +52,10 @@ export class CanForm extends React.Component {
 				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossOrigin="anonymous" />
 			</Helmet>
 			<div className="sticky-top float-right bg-light border-bottom">
-				<Button variant="primary" type="button" className="mr-1" onClick={e => this.props.onGetRecordPxId(this.props.pxId)} value={"\tRevert\t"}>
+				<Button variant="primary" type="button" className="mr-1" onClick={e => this.props.onGetRecordPxId(this.props.pxId)} >
 					Revert
         </Button>
-				<Button variant="primary" type="button" onClick={e => this.props.onSaveRecord(this.props.pxId)}>
+				<Button variant="primary" type="button" onClick={e => this.props.onSaveRecord(this.props.record)}>
 					Save
         </Button>
 			</div>

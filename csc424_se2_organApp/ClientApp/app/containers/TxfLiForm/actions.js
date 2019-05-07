@@ -1,5 +1,26 @@
 import * as constant from "./constants";
 
+export function setRecordTxfLi(record) { 
+	return{
+		type: constant.SET_RECORD_TXFLI,
+		record,
+	};
+}
+
+export function saveRecordTxfLi(record) { 
+	return{
+		type: constant.SAVE_RECORD_TXFLI,
+		record
+	};
+}
+
+export function getRecordTrrFolId(id) { 
+	return{
+		type: constant.GET_RECORD_TRR_FOL_ID,
+		id
+	};
+}
+
 export function changeOrgAr(orgAr) { 
 	return{
 		type: constant.CHANGE_ORGAR,

@@ -2,6 +2,9 @@ import { createSelector } from "reselect";
 import { initialState } from "./reducer";
 export const selectDonLivFormDomain = state => state.get("DonLivForm", initialState);
 
+export const makeSelectRecord = () =>
+createSelector(selectDonLivFormDomain, substate => substate.toJS());
+
 export const makeSelectDonorId = () =>
 createSelector(selectDonLivFormDomain, substate => substate.get("donorId"));
 

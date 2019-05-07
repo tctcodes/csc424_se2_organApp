@@ -16,7 +16,7 @@ import injectReducer from 'utils/injectReducer';
 import * as selects from './selectors';
 import * as actions from './actions';
 import reducer from './reducer';
-//import saga from './saga';
+import saga from './saga';
 import DonLivForm1 from './DonLivForm1';
 import DonLivForm2 from './DonLivForm2';
 import DonLivForm3 from './DonLivForm3';
@@ -39,7 +39,7 @@ export class DonLivForm extends React.Component {
 	  }
 	
 	componentDidMount(){		
-  	//this.props.onGetRecordPxId(this.props.selectedPxId);
+		this.props.onGetRecordDonorLivId((this.props.match.params.donorlivid).slice(1));
 	}
 	
 	
@@ -51,10 +51,10 @@ export class DonLivForm extends React.Component {
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossOrigin="anonymous" />
             </Helmet>
 						<div className="sticky-top float-right bg-light border-bottom">
-						<Button variant="primary" type="button" className="mr-1" onClick={e=>null} value={"\tRevert\t"}>
+						<Button variant="primary" type="button" className="mr-1" onClick={e => this.props.onGetRecordDonorLivId(this.props.donorId)}>
               Revert
             </Button>
-						<Button variant="primary" type="button" >
+						<Button variant="primary" type="button" onClick={e => this.props.onSaveRecordDonLiv(this.props.record)}>
               Save
             </Button>
 					</div>
@@ -98,12 +98,14 @@ export class DonLivForm extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-	
+	donorId: selects.makeSelectDonorId(),
+	record: selects.makeSelectRecord(),
 });
   
 function mapDispatchToProps(dispatch) {
     return {
-        //onGetRecordPxId: evt => dispatch(actions.getRecordPxId(evt)),
+			onGetRecordDonorLivId: evt => dispatch(actions.getRecordDonorLivId(evt)),
+			onSaveRecordDonLiv: evt => dispatch(actions.saveRecordDonLiv(evt)),
     };    
 }
   
@@ -113,10 +115,10 @@ function mapDispatchToProps(dispatch) {
   );
   
   const withReducer = injectReducer({ key: 'DonLivForm', reducer });
-  //const withSaga = injectSaga({ key: 'DonLivForm', saga });
+  const withSaga = injectSaga({ key: 'DonLivForm', saga });
   
   export default compose(
     withReducer,
-    //withSaga,
+    withSaga,
     withConnect,
   )(DonLivForm);

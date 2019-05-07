@@ -52,10 +52,10 @@ function App(props) {
         <PrivateRoute path="/client/information" component={RegForm} />
         <PrivateRoute path ="/staff/home" component={StaffHome}/>
         <PrivateRoute path="/staff/searchbox" component={SearchBox} />
-        <PrivateRoute path="/staff/dondecform" component={DonDecForm} />
-        <PrivateRoute path="/staff/donlivform" component={DonLivForm} />
-        <PrivateRoute path="/staff/txliform" component={TxLiForm} />
-        <PrivateRoute path="/staff/txfliform" component={TxfLiForm} />
+        <PrivateRoute path="/staff/dondecform/:donordecid" component={DonDecForm} />
+        <PrivateRoute path="/staff/donlivform/:donorlivid" component={DonLivForm} />
+        <PrivateRoute path="/staff/txliform/:trrid" component={TxLiForm} />
+        <PrivateRoute path="/staff/txfliform/:trrfolid" component={TxfLiForm} />
         <PrivateRoute path="/staff/canform/:pxid" component={CanForm} />
         <Route component={NotFoundPage} />
       </Switch>

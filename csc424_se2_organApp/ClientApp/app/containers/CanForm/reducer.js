@@ -176,7 +176,7 @@ export const initialState = fromJS({
 function CanFormReducer(state = initialState, action) {
 	switch (action.type) {
 		case constant.SET_RECORD:
-			return state.mergeWith((o, m, i) => {return m===null?'':m},action.state);
+			return state.mergeWith((o, m, i) => {return m===null?'':m},action.record);
 		case constant.CHANGE_CANABO:
 			return state.set('canAbo', action.canAbo);
 		case constant.CHANGE_CANACADEMICLEVEL:

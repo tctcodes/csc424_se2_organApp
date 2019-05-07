@@ -103,6 +103,8 @@ export const initialState = fromJS({
 
 function TxfLiFormReducer(state = initialState, action) {
 	switch (action.type) {
+		case constant.SET_RECORD_TXFLI:
+			return state.mergeWith((o, m, i) => {return m===null?'':m},action.record);
 		case constant.CHANGE_ORGAR:
 			return state.set('orgAr', action.orgAr);
 		case constant.CHANGE_ORGTY:

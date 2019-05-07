@@ -231,6 +231,8 @@ export const initialState = fromJS({
 
 function DonLivFormReducer(state = initialState, action) {
 	switch (action.type) {
+		case constant.SET_RECORD_DON_LIV:
+			return state.mergeWith((o, m, i) => {return m===null?'':m},action.record);
 		case constant.CHANGE_DONORID:
 			return state.set('donorId', action.donorId);
 		case constant.CHANGE_DONA1:

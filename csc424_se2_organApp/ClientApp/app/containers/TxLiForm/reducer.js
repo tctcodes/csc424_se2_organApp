@@ -315,6 +315,8 @@ export const initialState = fromJS({
 
 function TxLiFormReducer(state = initialState, action) {
 	switch (action.type) {
+		case constant.SET_RECORD_TXLI:
+			return state.mergeWith((o, m, i) => {return m===null?'':m},action.record);
 		case constant.CHANGE_CANHXMPXCPTHCCAPPLYIND:
 			return state.set('canhxMpxcptHccApplyInd', action.canhxMpxcptHccApplyInd);
 		case constant.CHANGE_CANHXMPXCPTHCCAPPROVEIND:
