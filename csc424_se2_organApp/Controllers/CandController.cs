@@ -99,8 +99,8 @@ namespace csc424_se2_organApp.Controllers
         public JsonResult GetRecordPxId([FromBody]dynamic input){
             Console.WriteLine(input);
             int num = input.PxId;
-            var isInDb = context.CandLiin.Where(r => r.PxId == num)
-                                        .FirstOrDefault<CandLiin>();
+            var isInDb = context.CandLiin.Where(r => r.PxId == num).FirstOrDefault<CandLiin>();
+            
             if(isInDb == null){
                 Response.StatusCode = 404;
                 return Json(new {error="Not Found"}); 

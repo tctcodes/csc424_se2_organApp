@@ -44,7 +44,7 @@ export class LoginPage extends React.Component {
           <meta name="description" content="Description of LoginPage" />
         </Helmet>
         <h1 style={{ textAlign: "center" }}>Login Page</h1>
-        <Form style={{ margin: "3rem" }}>
+        <Form onSubmit={this.props.onLogin} style={{ margin: "3rem" }}>
           <Form.Group controlId="formBasicEmail">
             <Form.Label style={{ fontFamily: "sans-serif" }}>
               Email Address
@@ -58,7 +58,7 @@ export class LoginPage extends React.Component {
             <Form.Control required value={this.props.password} type="password" placeholder="Password..." onChange={this.props.onChangePassword} />
           </Form.Group>
           <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
-            <Button variant="primary" type="button" onClick={this.props.onLogin}>
+            <Button variant="primary" type="submit">
               Login
             </Button>
             <Link to="/signup">
@@ -95,7 +95,7 @@ function mapDispatchToProps(dispatch) {
   return {
     onChangeEmail: evt => dispatch(changeEmail(evt.target.value)),
     onChangePassword: evt => dispatch(changePassword(evt.target.value)),
-    onLogin: () => dispatch(login()),
+    onLogin: (e) => {e.preventDefault(); dispatch(login())},
     clearCredentials: () => dispatch(clearCredentials())
   };
 }
