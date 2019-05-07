@@ -15,25 +15,25 @@ using System.Collections.Generic;
 namespace csc424_se2_organApp.Controllers
 {
 
-    /// <summary>The TxLi Controller.</summary>
-    /// <remarks>api/TxLi/[action]</remarks>
+    /// <summary>The TxfLi Controller.</summary>
+    /// <remarks>api/TxfLi/[action]</remarks>
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class TxLiController : Controller{
+    public class TxfLiController : Controller{
 
 
         private readonly organ_appContext context;
         /// <summary>Reference database context</summary>
-        public TxLiController(organ_appContext _context)
+        public TxfLiController(organ_appContext _context)
         {
             context = _context;
         }
 
         [HttpPost]
-        public JsonResult UpdateRecord([FromBody]TxLi input){
+        public JsonResult UpdateRecord([FromBody]TxfLi input){
             
             try{
-                context.TxLi.Update(input);
+                context.TxfLi.Update(input);
                 context.SaveChanges();
                 Response.StatusCode = 201;
                 return Json(new {success=true});
@@ -46,14 +46,14 @@ namespace csc424_se2_organApp.Controllers
         }
 
         /// <summary>Get a record by PERS ID</summary>
-        /// <remarks>api/TxLi/GetRecordTxli</remarks>
-        /// <param name="input">Requires in the body: TrrId</param>
+        /// <remarks>api/TxfLi/GetRecordTxli</remarks>
+        /// <param name="input">Requires in the body: TrrFolId</param>
         [HttpPost]
-        public JsonResult GetRecordTxLi([FromBody]dynamic input){
+        public JsonResult GetRecordTxfLi([FromBody]dynamic input){
             Console.WriteLine(input);
-            int num = input.TrrId;
-            var isInDb = context.TxLi.Where(r => r.TrrId == num)
-                                        .FirstOrDefault<TxLi>();
+            int num = input.TrrFolId;
+            var isInDb = context.TxfLi.Where(r => r.TrrFolId == num)
+                                        .FirstOrDefault<TxfLi>();
             if(isInDb == null){
                 Response.StatusCode = 404;
                 return Json(new {error="Not Found"}); 
@@ -67,10 +67,10 @@ namespace csc424_se2_organApp.Controllers
         public IActionResult DownloadRecord([FromBody] dynamic input){
             int num;
             var arr = new List<dynamic>();
-            foreach(var a in input.TxLi){
+            foreach(var a in input.TxfLi){
                 num = a;
-                var isInDb = context.TxLi.Where(r => r.TrrId == num)
-                                            .FirstOrDefault<TxLi>();
+                var isInDb = context.TxfLi.Where(r => r.TrrFolId == num)
+                                            .FirstOrDefault<TxfLi>();
                 if(isInDb == null){
                     Response.StatusCode = 404;
                     return Json(new {error="Not Found"}); 
@@ -93,18 +93,19 @@ namespace csc424_se2_organApp.Controllers
             
         }
 
+        
 
         /// <summary>Search for a limited number of records by PX ID</summary>
-        /// <remarks>api/TxLi/SearchRecordTrrIdFirstX</remarks>
-        /// <param name="input">Requires in the body: TrrId, number</param>
+        /// <remarks>api/TxfLi/SearchRecordTrrFolIdFirstX</remarks>
+        /// <param name="input">Requires in the body: TrrFolId, number</param>
         [HttpPost]
-        public JsonResult SearchRecordTrrIdFirstX([FromBody]dynamic input){
+        public JsonResult SearchRecordTrrFolIdFirstX([FromBody]dynamic input){
             //Console.WriteLine(input);
-            string id = input.TrrId;
+            string id = input.TrrFolId;
             int num = input.number;
-            var isInDb = (from c in context.TxLi
-                        where c.TrrId.ToString().Contains(id)
-                        select c.TrrId).Take(num);
+            var isInDb = (from c in context.TxfLi
+                        where c.TrrFolId.ToString().Contains(id)
+                        select c.TrrFolId).Take(num);
             Response.StatusCode = 201;
             return Json(data: isInDb);
 
@@ -112,15 +113,15 @@ namespace csc424_se2_organApp.Controllers
 
 
         /// <summary>Search for a all records by partial PX ID</summary>
-        /// <remarks>api/TxLi/SearchRecordTrrId</remarks>
+        /// <remarks>api/TxfLi/SearchRecordTrrFolId</remarks>
         /// <param name="input">Requires in the body: PersId, number</param>
         [HttpPost]
-        public JsonResult SearchRecordTrrId([FromBody]dynamic input){
+        public JsonResult SearchRecordTrrFolId([FromBody]dynamic input){
             //Console.WriteLine(input);
-            string id = input.TrrId;
-            var isInDb = (from c in context.TxLi
-                        where c.TrrId.ToString().Contains(id)
-                        select c.TrrId);
+            string id = input.TrrFolId;
+            var isInDb = (from c in context.TxfLi
+                        where c.TrrFolId.ToString().Contains(id)
+                        select c.TrrFolId);
             Response.StatusCode = 201;
             return Json(data: isInDb);
 

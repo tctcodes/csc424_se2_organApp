@@ -16,7 +16,7 @@ namespace csc424_se2_organApp.Controllers
 {
 
     /// <summary>The Donor Controller.</summary>
-    /// <remarks>api/DonLive/[action]</remarks>
+    /// <remarks>api/DonDec/[action]</remarks>
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class DonDecController : Controller{
@@ -46,7 +46,7 @@ namespace csc424_se2_organApp.Controllers
         }
 
         /// <summary>Get a record by PERS ID</summary>
-        /// <remarks>api/DonLive/GetRecordPersId</remarks>
+        /// <remarks>api/DonDec/GetRecordPersId</remarks>
         /// <param name="input">Requires in the body: PersId</param>
         [HttpPost]
         public JsonResult GetRecordPersId([FromBody]dynamic input){
@@ -93,7 +93,7 @@ namespace csc424_se2_organApp.Controllers
             
         }
         /// <summary>Get a record by Donor ID</summary>
-        /// <remarks>api/DonLive/GetRecordDonorId</remarks>
+        /// <remarks>api/DonDec/GetRecordDonorId</remarks>
         /// <param name="input">Requires in the body: DonorId</param>
         [HttpPost]
         public JsonResult GetRecordDonorId([FromBody]dynamic input){
@@ -111,7 +111,7 @@ namespace csc424_se2_organApp.Controllers
         }
 
         /// <summary>Get a record by State</summary>
-        /// <remarks>api/DonLive/GetRecordByState</remarks>
+        /// <remarks>api/DonDec/GetRecordByState</remarks>
         /// <param name="input">Requires in the body: state</param>
         [HttpPost]
         public JsonResult GetRecordByState([FromBody]dynamic input){
@@ -131,7 +131,7 @@ namespace csc424_se2_organApp.Controllers
         }
 
         /// <summary>Get a record by Blood Type</summary>
-        /// <remarks>api/DonLive/GetRecordByBloodType</remarks>
+        /// <remarks>api/DonDec/GetRecordByBloodType</remarks>
         /// <param name="input">Requires in the body: bloodType</param>
         [HttpPost]
         public JsonResult GetRecordByBloodType([FromBody]dynamic input){
@@ -150,7 +150,7 @@ namespace csc424_se2_organApp.Controllers
         }
 
         /// <summary>Search for a limited number of records by PERS ID</summary>
-        /// <remarks>api/DonLive/SearchRecordPersIdFirstX</remarks>
+        /// <remarks>api/DonDec/SearchRecordPersIdFirstX</remarks>
         /// <param name="input">Requires in the body: PersId, number</param>
         [HttpPost]
         public JsonResult SearchRecordPersIdFirstX([FromBody]dynamic input){
@@ -166,7 +166,7 @@ namespace csc424_se2_organApp.Controllers
         }
 
         /// <summary>Search for a limited number of records by Donor ID</summary>
-        /// <remarks>api/DonLive/SearchRecordDonorIdFirstX</remarks>
+        /// <remarks>api/DonDec/SearchRecordDonorIdFirstX</remarks>
         /// <param name="input">Requires in the body: DonorId, number</param>
         [HttpPost]
         public JsonResult SearchRecordDonorIdFirstX([FromBody]dynamic input){
@@ -182,7 +182,7 @@ namespace csc424_se2_organApp.Controllers
         }
 
         /// <summary>Search for all records by partial PERS ID</summary>
-        /// <remarks>api/DonLive/SearchRecordPersId</remarks>
+        /// <remarks>api/DonDec/SearchRecordPersId</remarks>
         /// <param name="input">Requires in the body: PersId</param>
         [HttpPost]
         public JsonResult SearchRecordPersId([FromBody]dynamic input){
@@ -197,7 +197,7 @@ namespace csc424_se2_organApp.Controllers
         }
 
         /// <summary>Search for a all records by partial Donor ID</summary>
-        /// <remarks>api/DonLive/SearchRecordDonorId</remarks>
+        /// <remarks>api/DonDec/SearchRecordDonorId</remarks>
         /// <param name="input">Requires in the body: PersId, number</param>
         [HttpPost]
         public JsonResult SearchRecordDonorId([FromBody]dynamic input){
