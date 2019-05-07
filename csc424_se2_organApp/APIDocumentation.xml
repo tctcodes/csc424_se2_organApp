@@ -51,5 +51,99 @@
             <remarks>api/Cand/SearchRecordPxId</remarks>
             <param name="input">Requires in the body: PersId, number</param>
         </member>
+        <member name="T:csc424_se2_organApp.Controllers.DonLiveController">
+            <summary>The Donor Controller.</summary>
+            <remarks>api/DonLive/[action]</remarks>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonLiveController.#ctor(csc424_se2_organApp.Models.organ_appContext)">
+            <summary>Reference database context</summary>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonLiveController.GetRecordPersId(System.Object)">
+            <summary>Get a record by PERS ID</summary>
+            <remarks>api/DonLive/GetRecordPersId</remarks>
+            <param name="input">Requires in the body: PersId</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonLiveController.GetRecordDonorId(System.Object)">
+            <summary>Get a record by Donor ID</summary>
+            <remarks>api/DonLive/GetRecordDonorId</remarks>
+            <param name="input">Requires in the body: DonorId</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonLiveController.GetRecordByState(System.Object)">
+            <summary>Get a record by State</summary>
+            <remarks>api/DonLive/GetRecordByState</remarks>
+            <param name="input">Requires in the body: state</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonLiveController.GetRecordByBloodType(System.Object)">
+            <summary>Get a record by Blood Type</summary>
+            <remarks>api/DonLive/GetRecordByBloodType</remarks>
+            <param name="input">Requires in the body: bloodType</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonLiveController.SearchRecordPersIdFirstX(System.Object)">
+            <summary>Search for a limited number of records by PERS ID</summary>
+            <remarks>api/DonLive/SearchRecordPersIdFirstX</remarks>
+            <param name="input">Requires in the body: PersId, number</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonLiveController.SearchRecordDonorIdFirstX(System.Object)">
+            <summary>Search for a limited number of records by Donor ID</summary>
+            <remarks>api/DonLive/SearchRecordDonorIdFirstX</remarks>
+            <param name="input">Requires in the body: DonorId, number</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonLiveController.SearchRecordPersId(System.Object)">
+            <summary>Search for all records by partial PERS ID</summary>
+            <remarks>api/DonLive/SearchRecordPersId</remarks>
+            <param name="input">Requires in the body: PersId</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonLiveController.SearchRecordDonorId(System.Object)">
+            <summary>Search for a all records by partial Donor ID</summary>
+            <remarks>api/DonLive/SearchRecordDonorId</remarks>
+            <param name="input">Requires in the body: PersId, number</param>
+        </member>
+        <member name="T:csc424_se2_organApp.Controllers.DonDecController">
+            <summary>The Donor Controller.</summary>
+            <remarks>api/DonLive/[action]</remarks>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonDecController.#ctor(csc424_se2_organApp.Models.organ_appContext)">
+            <summary>Reference database context</summary>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonDecController.GetRecordPersId(System.Object)">
+            <summary>Get a record by PERS ID</summary>
+            <remarks>api/DonLive/GetRecordPersId</remarks>
+            <param name="input">Requires in the body: PersId</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonDecController.GetRecordDonorId(System.Object)">
+            <summary>Get a record by Donor ID</summary>
+            <remarks>api/DonLive/GetRecordDonorId</remarks>
+            <param name="input">Requires in the body: DonorId</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonDecController.GetRecordByState(System.Object)">
+            <summary>Get a record by State</summary>
+            <remarks>api/DonLive/GetRecordByState</remarks>
+            <param name="input">Requires in the body: state</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonDecController.GetRecordByBloodType(System.Object)">
+            <summary>Get a record by Blood Type</summary>
+            <remarks>api/DonLive/GetRecordByBloodType</remarks>
+            <param name="input">Requires in the body: bloodType</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonDecController.SearchRecordPersIdFirstX(System.Object)">
+            <summary>Search for a limited number of records by PERS ID</summary>
+            <remarks>api/DonLive/SearchRecordPersIdFirstX</remarks>
+            <param name="input">Requires in the body: PersId, number</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonDecController.SearchRecordDonorIdFirstX(System.Object)">
+            <summary>Search for a limited number of records by Donor ID</summary>
+            <remarks>api/DonLive/SearchRecordDonorIdFirstX</remarks>
+            <param name="input">Requires in the body: DonorId, number</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonDecController.SearchRecordPersId(System.Object)">
+            <summary>Search for all records by partial PERS ID</summary>
+            <remarks>api/DonLive/SearchRecordPersId</remarks>
+            <param name="input">Requires in the body: PersId</param>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonDecController.SearchRecordDonorId(System.Object)">
+            <summary>Search for a all records by partial Donor ID</summary>
+            <remarks>api/DonLive/SearchRecordDonorId</remarks>
+            <param name="input">Requires in the body: PersId, number</param>
+        </member>
     </members>
 </doc>
