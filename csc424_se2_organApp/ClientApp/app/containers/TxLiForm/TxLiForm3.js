@@ -44,7 +44,7 @@ export class TxLiForm3 extends React.Component {
 					<label className="font-weight-bold" >CAN PREV TXFUS</label>
 					<label className="text-secondary" >Any Previous Transfusions:</label>
 					<select className="form-control" value={this.props.canPrevTxfus} onChange={this.props.onChangeCanPrevTxfus}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -53,7 +53,7 @@ export class TxLiForm3 extends React.Component {
 					<label className="font-weight-bold" >CAN PULM EMBOL</label>
 					<label className="text-secondary" >Pulmonary Embolism:</label>
 					<select className="form-control" value={this.props.canPulmEmbol} onChange={this.props.onChangeCanPulmEmbol}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -62,7 +62,7 @@ export class TxLiForm3 extends React.Component {
 					<label className="font-weight-bold" >CAN RACE</label>
 					<label className="text-secondary" >Patient/s Race:</label>
 					<select className="form-control" value={this.props.canRace} onChange={this.props.onChangeCanRace}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing</option>
 						<option value="8">8: White</option>
 						<option value="16">16: Black or African American</option>
@@ -80,7 +80,7 @@ export class TxLiForm3 extends React.Component {
 					<label className="font-weight-bold" >CAN RACE SRTR</label>
 					<label className="text-secondary" >SRTR Patient Race:</label>
 					<select className="form-control" value={this.props.canRaceSrtr} onChange={this.props.onChangeCanRaceSrtr}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="ASIAN">ASIAN: Asian</option>
 						<option value="BLACK">BLACK: Black</option>
 						<option value="MULTI">MULTI: Multiracial</option>
@@ -93,7 +93,7 @@ export class TxLiForm3 extends React.Component {
 					<label className="font-weight-bold" >CAN REM CD</label>
 					<label className="text-secondary" >Reason why candidate was removed:</label>
 					<select className="form-control" value={this.props.canRemCd} onChange={this.props.onChangeCanRemCd}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="4">4: Deceased Donor tx, removed by transplanting center</option>
 						<option value="5">5: Medically Unsuitable</option>
 						<option value="6">6: Refused transplant</option>
@@ -121,7 +121,7 @@ export class TxLiForm3 extends React.Component {
 					<label className="font-weight-bold" >CAN SOURCE</label>
 					<label className="text-secondary" >Source of Candidate Data A =Active WL,R= Removed,L=Living Don:</label>
 					<select className="form-control" value={this.props.canSource} onChange={this.props.onChangeCanSource}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="A">Active</option>
 						<option value="R">Removed</option>
 						<option value="L">Live</option>
@@ -131,7 +131,7 @@ export class TxLiForm3 extends React.Component {
 					<label className="font-weight-bold" >CAN TIPSS</label>
 					<label className="text-secondary" >History of TIPSS:</label>
 					<select className="form-control" value={this.props.canTipss} onChange={this.props.onChangeCanTipss}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -160,7 +160,7 @@ export class TxLiForm3 extends React.Component {
 					<label className="font-weight-bold" >DON A1</label>
 					<label className="text-secondary" >Donor/s HLA - A (1) antigen:</label>
 					<select className="form-control" value={this.props.donA1} onChange={this.props.onChangeDonA1}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="1">1: 1 </option>
 						<option value="2">2: 2 </option>
@@ -218,7 +218,7 @@ export class TxLiForm3 extends React.Component {
 					<label className="font-weight-bold" >DON A2</label>
 					<label className="text-secondary" >Donor/s HLA - A (2) antigen:</label>
 					<select className="form-control" value={this.props.donA2} onChange={this.props.onChangeDonA2}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="1">1: 1 </option>
 						<option value="2">2: 2 </option>
@@ -276,7 +276,7 @@ export class TxLiForm3 extends React.Component {
 					<label className="font-weight-bold" >DON ABO</label>
 					<label className="text-secondary" >Donor/s Blood Type:</label>
 					<select className="form-control" value={this.props.donAbo} onChange={this.props.onChangeDonAbo}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="A">A: A</option>
 						<option value="A1">A1: A1</option>
 						<option value="A1B">A1B: A1B</option>
@@ -302,7 +302,7 @@ export class TxLiForm3 extends React.Component {
 					<label className="font-weight-bold" >DON ANTI CMV</label>
 					<label className="text-secondary" >Anti-CMV:</label>
 					<select className="form-control" value={this.props.donAntiCmv} onChange={this.props.onChangeDonAntiCmv}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="C">C: Cannot Disclose </option>
 						<option value="I">I: Indeterminate </option>
 						<option value="N">N: Negative </option>
@@ -316,7 +316,7 @@ export class TxLiForm3 extends React.Component {
 					<label className="font-weight-bold" >DON ANTI HCV</label>
 					<label className="text-secondary" >Anti-HCV:</label>
 					<select className="form-control" value={this.props.donAntiHcv} onChange={this.props.onChangeDonAntiHcv}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="C">C: Cannot Disclose </option>
 						<option value="I">I: Indeterminate </option>
 						<option value="N">N: Negative </option>

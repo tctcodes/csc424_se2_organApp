@@ -18,7 +18,7 @@ def createSelect(line,catFiles,catPath):
             #open catagory file
             cat = csv.reader(open(catPath + "/" + filename,"r"))
             retString = '\t\t\t\t\t<select className="form-control" value={{this.props.{0:}}} onChange={{this.props.onChange{1:}}}>\n'.format(cam,cap)
-            retString = retString +'\t\t\t\t\t\t<option value="" hidden disabled selected/>\n'
+            retString = retString +'\t\t\t\t\t\t<option value="" hidden disabled />\n'
             for l in cat:
                 retString = retString + '\t\t\t\t\t\t<option value="{0:}">{1:}</option>\n'.format(l[0],re.sub(' & ',' {"&"} ',re.sub('<','{"<"}',l[1])))
             retString = retString + '\t\t\t\t\t</select>\n'

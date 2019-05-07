@@ -19,7 +19,7 @@ export class TxLiForm13 extends React.Component {
 					<label className="font-weight-bold" >REC TX EXTRA VESSEL</label>
 					<label className="text-secondary" >Were extra vessels used in the transplant procedure:</label>
 					<select className="form-control" value={this.props.recTxExtraVessel} onChange={this.props.onChangeRecTxExtraVessel}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -28,7 +28,7 @@ export class TxLiForm13 extends React.Component {
 					<label className="font-weight-bold" >REC TX ORG TY</label>
 					<label className="text-secondary" >Transplant Organ Type(s), text contains list of organ types involved in TX:</label>
 					<select className="form-control" value={this.props.recTxOrgTy} onChange={this.props.onChangeRecTxOrgTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="HL">HL: Heart-Lung </option>
 						<option value="HR">HR: Heart </option>
 						<option value="IN">IN: Intestine </option>
@@ -67,7 +67,7 @@ export class TxLiForm13 extends React.Component {
 					<label className="font-weight-bold" >REC TX PROCEDURE TY</label>
 					<label className="text-secondary" >Transplant Procedure Type:</label>
 					<select className="form-control" value={this.props.recTxProcedureTy} onChange={this.props.onChangeRecTxProcedureTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="101">101: LEFT KIDNEY</option>
 						<option value="102">102: RIGHT KIDNEY</option>
 						<option value="103">103: EN-BLOC</option>
@@ -118,7 +118,7 @@ export class TxLiForm13 extends React.Component {
 					<label className="font-weight-bold" >REC TX TY</label>
 					<label className="text-secondary" >Transplant Type, number of donors & organ types involved in TX:</label>
 					<select className="form-control" value={this.props.recTxTy} onChange={this.props.onChangeRecTxTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Single donor, single organ type TX </option>
 						<option value="2">2: Single donor, multiple organ types TX </option>
 						<option value="3">3: Multiple donors, single organ type TX </option>
@@ -129,7 +129,7 @@ export class TxLiForm13 extends React.Component {
 					<label className="font-weight-bold" >REC VALCYTE</label>
 					<label className="text-secondary" >Valcyte (valganciclovir):</label>
 					<select className="form-control" value={this.props.recValcyte} onChange={this.props.onChangeRecValcyte}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -138,7 +138,7 @@ export class TxLiForm13 extends React.Component {
 					<label className="font-weight-bold" >REC VARICEAL BLEEDING</label>
 					<label className="text-secondary" >Risk Factors: Uncontrollable Variceal Bleeding:</label>
 					<select className="form-control" value={this.props.recVaricealBleeding} onChange={this.props.onChangeRecVaricealBleeding}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -147,7 +147,7 @@ export class TxLiForm13 extends React.Component {
 					<label className="font-weight-bold" >REC VENTILATOR</label>
 					<label className="text-secondary" >Life Support: Ventilator:</label>
 					<select className="form-control" value={this.props.recVentilator} onChange={this.props.onChangeRecVentilator}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -166,7 +166,7 @@ export class TxLiForm13 extends React.Component {
 					<label className="font-weight-bold" >REC WORK INCOME</label>
 					<label className="text-secondary" >Working for income::</label>
 					<select className="form-control" value={this.props.recWorkIncome} onChange={this.props.onChangeRecWorkIncome}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -175,7 +175,7 @@ export class TxLiForm13 extends React.Component {
 					<label className="font-weight-bold" >REC WORK NO STAT</label>
 					<label className="text-secondary" >Working for Income//If No, Not Working Due To::</label>
 					<select className="form-control" value={this.props.recWorkNoStat} onChange={this.props.onChangeRecWorkNoStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Disability</option>
 						<option value="2">2: Demands of Treatment</option>
 						<option value="3">3: Insurance Conflict</option>
@@ -192,7 +192,7 @@ export class TxLiForm13 extends React.Component {
 					<label className="font-weight-bold" >REC WORK YES STAT</label>
 					<label className="text-secondary" >Working for Income//If Yes::</label>
 					<select className="form-control" value={this.props.recWorkYesStat} onChange={this.props.onChangeRecWorkYesStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Working Full Time</option>
 						<option value="2">2: Working Part Time due to Demands of Treatment</option>
 						<option value="3">3: Working Part Time due to Disability</option>
@@ -207,7 +207,7 @@ export class TxLiForm13 extends React.Component {
 					<label className="font-weight-bold" >TFL COD</label>
 					<label className="text-secondary" >Recipient/s Follow-up Cause of Death:</label>
 					<select className="form-control" value={this.props.tflCod} onChange={this.props.onChangeTflCod}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="998">998: UNKNOWN</option>
 						<option value="999">999: OTHER SPECIFY</option>
 						<option value="2000">2000: TH:GRAFT FAILURE: PRIMARY FAILURE</option>
@@ -567,7 +567,7 @@ export class TxLiForm13 extends React.Component {
 					<label className="font-weight-bold" >TFL LASTATUS</label>
 					<label className="text-secondary" >Last Status:</label>
 					<select className="form-control" value={this.props.tflLastatus} onChange={this.props.onChangeTflLastatus}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="A">A: LIVING </option>
 						<option value="D">D: DEAD </option>
 						<option value="L">L: LOST TO FOLLOW UP </option>

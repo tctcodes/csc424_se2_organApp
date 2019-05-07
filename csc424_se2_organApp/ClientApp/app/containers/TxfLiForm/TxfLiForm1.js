@@ -18,8 +18,8 @@ export class TxfLiForm1 extends React.Component {
 				<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-3 border d-flex flex-column justify-content-between">
 					<label className="font-weight-bold" >ORG TY</label>
 					<label className="text-secondary" >Organ Type:</label>
-					<select className="form-control" value={this.props.orgTy} onChange={this.props.onChangeOrgTy}>
-						<option value="" hidden disabled selected/>
+					<select  className="form-control" value={this.props.orgTy} onChange={this.props.onChangeOrgTy}>
+						<option value="" hidden disabled />
 						<option value="HL">HL: Heart/Lung</option>
 						<option value="HR">HR: Heart</option>
 						<option value="IN">IN: Intestine</option>
@@ -60,7 +60,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >REC TX ORG TY</label>
 					<label className="text-secondary" >Transplant Organ Type(s), text contains list of organ types involved in TX:</label>
 					<select className="form-control" value={this.props.recTxOrgTy} onChange={this.props.onChangeRecTxOrgTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="HL">HL: Heart-Lung </option>
 						<option value="HR">HR: Heart </option>
 						<option value="IN">IN: Intestine </option>
@@ -99,7 +99,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >REC TX TY</label>
 					<label className="text-secondary" >Transplant Type, number of donors & organ types involved in TX:</label>
 					<select className="form-control" value={this.props.recTxTy} onChange={this.props.onChangeRecTxTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Single donor, single organ type TX </option>
 						<option value="2">2: Single donor, multiple organ types TX </option>
 						<option value="3">3: Multiple donors, single organ type TX </option>
@@ -110,7 +110,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >TFL ACADEMIC LEVEL</label>
 					<label className="text-secondary" >Academic Activity Level::</label>
 					<select className="form-control" value={this.props.tflAcademicLevel} onChange={this.props.onChangeTflAcademicLevel}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Full academic load</option>
 						<option value="2">2: Reduced academic load</option>
 						<option value="3">3: Unable to participate in academics due to disease or condition</option>
@@ -123,7 +123,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >TFL ACADEMIC PROGRESS</label>
 					<label className="text-secondary" >Academic Progress::</label>
 					<select className="form-control" value={this.props.tflAcademicProgress} onChange={this.props.onChangeTflAcademicProgress}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Within One Grade Level of Peers</option>
 						<option value="2">2: Delayed Grade Level</option>
 						<option value="3">3: Special Education</option>
@@ -135,7 +135,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >TFL ACUTE REJ BIOPSY CONFIRMED</label>
 					<label className="text-secondary" >Was biopsy done to confirm acute rejection::</label>
 					<select className="form-control" value={this.props.tflAcuteRejBiopsyConfirmed} onChange={this.props.onChangeTflAcuteRejBiopsyConfirmed}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Biopsy not done </option>
 						<option value="2">2: Yes, rejection confirmed </option>
 						<option value="3">3: Yes, rejection not confirmed </option>
@@ -146,7 +146,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >TFL ACUTE REJ EPISODE</label>
 					<label className="text-secondary" >Did patient have any acute rejection episodes during the follow-up period::</label>
 					<select className="form-control" value={this.props.tflAcuteRejEpisode} onChange={this.props.onChangeTflAcuteRejEpisode}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Yes, at least one episode treated with anti-rejection agent </option>
 						<option value="2">2: Yes, none treated with additional anti-rejection agent </option>
 						<option value="3">3: No </option>
@@ -167,7 +167,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY</label>
 					<label className="text-secondary" >Biological or Anti-viral therapy::</label>
 					<select className="form-control" value={this.props.tflAntivrlTherapy} onChange={this.props.onChangeTflAntivrlTherapy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -176,8 +176,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY</label>
 					<label className="text-secondary" >If Anti-viral therapies, check all that apply:</label>
 					<select className="form-control" value={this.props.tflAntivrlTherapyTy} onChange={this.props.onChangeTflAntivrlTherapyTy}>
-						<option value="" hidden disabled selected/>
-						<option value="">Missing </option>
+						<option value="" hidden disabled />
 						<option value="1">1: Acyclovir (Zovirax) </option>
 						<option value="2">2: Cytogam (CMV) </option>
 						<option value="4">4: Gamimune </option>
@@ -196,7 +195,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY ACYCLOVIR</label>
 					<label className="text-secondary" >Anti-viral Therapy - Acyclovir (Zovirax) (11):</label>
 					<select className="form-control" value={this.props.tflAntivrlTherapyTyAcyclovir} onChange={this.props.onChangeTflAntivrlTherapyTyAcyclovir}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -205,7 +204,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY CYTOGAM</label>
 					<label className="text-secondary" >Anti-viral Therapy - Cytogam (CMV) (11):</label>
 					<select className="form-control" value={this.props.tflAntivrlTherapyTyCytogam} onChange={this.props.onChangeTflAntivrlTherapyTyCytogam}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -214,7 +213,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY CYTOVENE</label>
 					<label className="text-secondary" >Anti-viral Therapy - Ganciclovir (Cytovene) (11):</label>
 					<select className="form-control" value={this.props.tflAntivrlTherapyTyCytovene} onChange={this.props.onChangeTflAntivrlTherapyTyCytovene}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -223,7 +222,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY EPIVIR</label>
 					<label className="text-secondary" >Anti-viral Therapy - Lamivudine (Epivir) (for treatment of Hepatitis B) (11):</label>
 					<select className="form-control" value={this.props.tflAntivrlTherapyTyEpivir} onChange={this.props.onChangeTflAntivrlTherapyTyEpivir}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -232,7 +231,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY FLU VAC</label>
 					<label className="text-secondary" >Anti-viral Therapy - Flu Vaccine (Influenza Virus) (11):</label>
 					<select className="form-control" value={this.props.tflAntivrlTherapyTyFluVac} onChange={this.props.onChangeTflAntivrlTherapyTyFluVac}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -241,7 +240,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY GAMIMUNE</label>
 					<label className="text-secondary" >Anti-viral Therapy - Gamimune (11):</label>
 					<select className="form-control" value={this.props.tflAntivrlTherapyTyGamimune} onChange={this.props.onChangeTflAntivrlTherapyTyGamimune}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -250,7 +249,7 @@ export class TxfLiForm1 extends React.Component {
 					<label className="font-weight-bold" >TFL ANTIVRL THERAPY TY GAMMAGARD</label>
 					<label className="text-secondary" >Anti-viral Therapy - Gammagard (11):</label>
 					<select className="form-control" value={this.props.tflAntivrlTherapyTyGammagard} onChange={this.props.onChangeTflAntivrlTherapyTyGammagard}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>

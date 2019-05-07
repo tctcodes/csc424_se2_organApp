@@ -14,7 +14,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON BIOPSY DGN</label>
 					<label className="text-secondary" >Biopsy:</label>
 					<select className="form-control" value={this.props.donBiopsyDgn} onChange={this.props.onChangeDonBiopsyDgn}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: NO </option>
 						<option value="2">2: YES, MYOCARDITIS </option>
 						<option value="3">3: YES, NEGATIVE BIOPSY RESULT </option>
@@ -35,7 +35,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON BW4</label>
 					<label className="text-secondary" >Donor/s HLA - Bw4 locus:</label>
 					<select className="form-control" value={this.props.donBw4} onChange={this.props.onChangeDonBw4}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="95">95: Positive </option>
 						<option value="96">96: Negative </option>
@@ -48,7 +48,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON BW6</label>
 					<label className="text-secondary" >Donor/s HLA - Bw6 locus:</label>
 					<select className="form-control" value={this.props.donBw6} onChange={this.props.onChangeDonBw6}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="95">95: Positive </option>
 						<option value="96">96: Negative </option>
@@ -61,7 +61,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON C1</label>
 					<label className="text-secondary" >Donor/s HLA - Cw (1) locus:</label>
 					<select className="form-control" value={this.props.donC1} onChange={this.props.onChangeDonC1}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="1">1: 01 </option>
 						<option value="2">2: 02 </option>
@@ -93,7 +93,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON C2</label>
 					<label className="text-secondary" >Donor/s HLA - Cw (2) locus:</label>
 					<select className="form-control" value={this.props.donC2} onChange={this.props.onChangeDonC2}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="1">1: 01 </option>
 						<option value="2">2: 02 </option>
@@ -125,7 +125,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON CAD DON COD</label>
 					<label className="text-secondary" >Donor/s Cause of Death:</label>
 					<select className="form-control" value={this.props.donCadDonCod} onChange={this.props.onChangeDonCadDonCod}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: ANOXIA </option>
 						<option value="2">2: CEREBROVASCULAR/STROKE </option>
 						<option value="3">3: HEAD TRAUMA </option>
@@ -148,7 +148,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON CARDIAC ARREST AFTER DEATH</label>
 					<label className="text-secondary" >Cardiac Arr. Since Event that led to Decl of Death:</label>
 					<select className="form-control" value={this.props.donCardiacArrestAfterDeath} onChange={this.props.onChangeDonCardiacArrestAfterDeath}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -162,7 +162,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON CHEST XRAY</label>
 					<label className="text-secondary" >Chest X-ray::</label>
 					<select className="form-control" value={this.props.donChestXray} onChange={this.props.onChangeDonChestXray}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: No chest x-ray </option>
 						<option value="2">2: Normal </option>
 						<option value="3">3: Abnormal-left </option>
@@ -176,7 +176,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON CITIZENSHIP</label>
 					<label className="text-secondary" >Donor/s Citizenship:</label>
 					<select className="form-control" value={this.props.donCitizenship} onChange={this.props.onChangeDonCitizenship}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: US Citizen </option>
 						<option value="2">2: Resident Alien </option>
 						<option value="3">3: Non-Resident Alien, Specify Country </option>
@@ -209,7 +209,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON CLAMP TM ZONE</label>
 					<label className="text-secondary" >Clamp Time Zone:</label>
 					<select className="form-control" value={this.props.donClampTmZone} onChange={this.props.onChangeDonClampTmZone}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Eastern </option>
 						<option value="2">2: Central </option>
 						<option value="3">3: Mountain </option>
@@ -223,7 +223,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON CLINICAL INFECT</label>
 					<label className="text-secondary" >Clinical Infection:</label>
 					<select className="form-control" value={this.props.donClinicalInfect} onChange={this.props.onChangeDonClinicalInfect}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -232,7 +232,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON COD DON STROKE</label>
 					<label className="text-secondary" >Donor cause of death is stroke (1= yes, 0= no):</label>
 					<select className="form-control" value={this.props.donCodDonStroke} onChange={this.props.onChangeDonCodDonStroke}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -246,7 +246,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON CONSENT ATTORNEY</label>
 					<label className="text-secondary" >Consent Mechanism - Attorney in Fact:</label>
 					<select className="form-control" value={this.props.donConsentAttorney} onChange={this.props.onChangeDonConsentAttorney}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -255,7 +255,7 @@ export class DonDecForm2 extends React.Component {
 					<label className="font-weight-bold" >DON CONSENT DON CARD</label>
 					<label className="text-secondary" >Consent Mechanism - Donor Card:</label>
 					<select className="form-control" value={this.props.donConsentDonCard} onChange={this.props.onChangeDonConsentDonCard}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>

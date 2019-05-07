@@ -14,7 +14,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON KI REOP BOWEL</label>
 					<label className="text-secondary" >Kidney Reoperation Bowel Obstruction//Bowel Obstruction:</label>
 					<select className="form-control" value={this.props.donKiReopBowel} onChange={this.props.onChangeDonKiReopBowel}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -28,7 +28,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON KI REOP HERNIA</label>
 					<label className="text-secondary" >Kidney Reoperation Hernia Repair//Hernia Repair:</label>
 					<select className="form-control" value={this.props.donKiReopHernia} onChange={this.props.onChangeDonKiReopHernia}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -42,7 +42,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON KI REOP OTHER</label>
 					<label className="text-secondary" >Kidney Reoperation Other//Other Specify:</label>
 					<select className="form-control" value={this.props.donKiReopOther} onChange={this.props.onChangeDonKiReopOther}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -56,7 +56,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON KI REOP VASC</label>
 					<label className="text-secondary" >Kidney Reoperation Vascular//Vascular:</label>
 					<select className="form-control" value={this.props.donKiReopVasc} onChange={this.props.onChangeDonKiReopVasc}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -70,7 +70,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON KI VASC COMPL</label>
 					<label className="text-secondary" >Kidney Vascular Complications Requiring Intervention//Vascular Complications Requiring Intervention::</label>
 					<select className="form-control" value={this.props.donKiVascCompl} onChange={this.props.onChangeDonKiVascCompl}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -79,7 +79,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON KI VASC COMPL INTERVENTION</label>
 					<label className="text-secondary" >Kidney Vascular Complications//If Yes, Specify::</label>
 					<select className="form-control" value={this.props.donKiVascComplIntervention} onChange={this.props.onChangeDonKiVascComplIntervention}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing </option>
 						<option value="1">1: Renal Vein </option>
 						<option value="2">2: Renal Artery </option>
@@ -100,7 +100,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON LIVING DON COD</label>
 					<label className="text-secondary" >Donor/s Cause of Death:</label>
 					<select className="form-control" value={this.props.donLivingDonCod} onChange={this.props.onChangeDonLivingDonCod}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Donation Related </option>
 						<option value="2">2: Other Cause </option>
 						<option value="3">3: Infection: Donation/Surgery Related </option>
@@ -122,7 +122,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON LI BILIARY COMPL</label>
 					<label className="text-secondary" >Biliary Complications::</label>
 					<select className="form-control" value={this.props.donLiBiliaryCompl} onChange={this.props.onChangeDonLiBiliaryCompl}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -131,7 +131,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON LI BILIARY COMPL GRADE</label>
 					<label className="text-secondary" >Biliary Complications//If Yes, Specify::</label>
 					<select className="form-control" value={this.props.donLiBiliaryComplGrade} onChange={this.props.onChangeDonLiBiliaryComplGrade}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing </option>
 						<option value="1">1: Grade 1 - Bilious JP drainage more than 10 days </option>
 						<option value="2">2: Grade 2 - Interventional procedure (ERCP, PTC, percutaneous drainage, etc.) </option>
@@ -143,7 +143,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON LI BIOPSY</label>
 					<label className="text-secondary" >Liver Biopsy::</label>
 					<select className="form-control" value={this.props.donLiBiopsy} onChange={this.props.onChangeDonLiBiopsy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -172,7 +172,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON LI OTHER COMPL</label>
 					<label className="text-secondary" >Liver Other Complications Requiring Intervention//Other Complications Requiring Intervention::</label>
 					<select className="form-control" value={this.props.donLiOtherCompl} onChange={this.props.onChangeDonLiOtherCompl}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -181,7 +181,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON LI OTHER COMPL INTERVENTION</label>
 					<label className="text-secondary" >Liver Other Complications//If Yes, Specify::</label>
 					<select className="form-control" value={this.props.donLiOtherComplIntervention} onChange={this.props.onChangeDonLiOtherComplIntervention}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing </option>
 						<option value="1">1: Renal insufficiency requiring dialysis </option>
 						<option value="2">2: Ascites </option>
@@ -198,7 +198,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON LI OTHER INTERVENTION</label>
 					<label className="text-secondary" >Liver Other Interventional Procedures//Other Interventional Procedures::</label>
 					<select className="form-control" value={this.props.donLiOtherIntervention} onChange={this.props.onChangeDonLiOtherIntervention}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -212,7 +212,7 @@ export class DonLivForm6 extends React.Component {
 					<label className="font-weight-bold" >DON LI PROCEDURE TY</label>
 					<label className="text-secondary" >Type of Transplant Graft::</label>
 					<select className="form-control" value={this.props.donLiProcedureTy} onChange={this.props.onChangeDonLiProcedureTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Left Lateral Segment </option>
 						<option value="2">2: Left Lobe </option>
 						<option value="3">3: Right Lobe </option>

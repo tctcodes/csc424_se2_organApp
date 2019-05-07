@@ -32,7 +32,7 @@ export class TxfLiForm extends React.Component {
 	  }
 	
 	componentDidMount(){		
-		this.props.onGetRecordTxfLi((this.props.match.params.trrfolid).slice(1));
+		this.props.onGetRecordTrrFolId((this.props.match.params.trrfolid).slice(1));
   	
 	}
 	

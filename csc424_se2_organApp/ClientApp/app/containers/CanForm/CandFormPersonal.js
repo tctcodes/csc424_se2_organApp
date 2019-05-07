@@ -14,7 +14,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN ACADEMIC LEVEL</label>
 					<label className="text-secondary" >Academic Activity Level::</label>
 					<select className="form-control" value={this.props.canAcademicLevel} onChange={this.props.onChangeCanAcademicLevel}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Full academic load</option>
 						<option value="2">2: Reduced academic load</option>
 						<option value="3">3: Unable to participate in academics due to disease or condition</option>
@@ -27,7 +27,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN ACADEMIC PROGRESS</label>
 					<label className="text-secondary" >Academic Progress::</label>
 					<select className="form-control" value={this.props.canAcademicProgress} onChange={this.props.onChangeCanAcademicProgress}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Within One Grade Level of Peers</option>
 						<option value="2">2: Delayed Grade Level</option>
 						<option value="3">3: Special Education</option>
@@ -39,7 +39,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN CITIZENSHIP</label>
 					<label className="text-secondary" >Patient/s Citizenship:</label>
 					<select className="form-control" value={this.props.canCitizenship} onChange={this.props.onChangeCanCitizenship}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: US Citizen</option>
 						<option value="2">2: RESIDENT ALIEN</option>
 						<option value="3">3: NON-RESIDENT ALIEN, Year Entered US</option>
@@ -51,7 +51,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN EDUCATION</label>
 					<label className="text-secondary" >Patient/s Educational Status:</label>
 					<select className="form-control" value={this.props.canEducation} onChange={this.props.onChangeCanEducation}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: NONE</option>
 						<option value="2">2: GRADE SCHOOL (0-8)</option>
 						<option value="3">3: HIGH SCHOOL (9-12) or GED</option>
@@ -66,7 +66,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN EMPL STAT</label>
 					<label className="text-secondary" >Patient/s Employment Status - Pre-6/30/2004:</label>
 					<select className="form-control" value={this.props.canEmplStat} onChange={this.props.onChangeCanEmplStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: WORKING FULL TIME</option>
 						<option value="2">2: WORKING PART TIME BY CHOICE</option>
 						<option value="3">3: WORKING PART TIME DUE TO DISEASE</option>
@@ -84,7 +84,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN ETHNICITY SRTR</label>
 					<label className="text-secondary" >SRTR Patient Ethnicity:</label>
 					<select className="form-control" value={this.props.canEthnicitySrtr} onChange={this.props.onChangeCanEthnicitySrtr}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="LATINO">LATINO: Latino</option>
 						<option value="NLATIN">NLATIN: Non-Latino or unknown</option>
 					</select>
@@ -93,7 +93,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN GENDER</label>
 					<label className="text-secondary" >Patient/s Gender:</label>
 					<select className="form-control" value={this.props.canGender} onChange={this.props.onChangeCanGender}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="M">Male</option>
 						<option value="F">Female</option>
 					</select>
@@ -102,7 +102,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN PERM STATE</label>
 					<label className="text-secondary" >Patient/s Permanent State:</label>
 					<select className="form-control" value={this.props.canPermState} onChange={this.props.onChangeCanPermState}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="AK">AK: ALASKA</option>
 						<option value="AL">AL: ALABAMA</option>
 						<option value="AR">AR: ARKANSAS</option>
@@ -167,7 +167,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN PRIMARY PAY</label>
 					<label className="text-secondary" >Source of Payment//Primary::</label>
 					<select className="form-control" value={this.props.canPrimaryPay} onChange={this.props.onChangeCanPrimaryPay}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Private insurance</option>
 						<option value="2">2: Public insurance - Medicaid</option>
 						<option value="3">3: Public insurance - Medicare FFS (Fee for Service)</option>
@@ -189,7 +189,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN RACE</label>
 					<label className="text-secondary" >Patient/s Race:</label>
 					<select className="form-control" value={this.props.canRace} onChange={this.props.onChangeCanRace}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing</option>
 						<option value="8">8: White</option>
 						<option value="16">16: Black or African American</option>
@@ -207,7 +207,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN RACE SRTR</label>
 					<label className="text-secondary" >SRTR Patient Race:</label>
 					<select className="form-control" value={this.props.canRaceSrtr} onChange={this.props.onChangeCanRaceSrtr}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="ASIAN">ASIAN: Asian</option>
 						<option value="BLACK">BLACK: Black</option>
 						<option value="MULTI">MULTI: Multiracial</option>
@@ -220,7 +220,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN SECONDARY PAY</label>
 					<label className="text-secondary" >Source of Payment//Secondary::</label>
 					<select className="form-control" value={this.props.canSecondaryPay} onChange={this.props.onChangeCanSecondaryPay}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Private insurance</option>
 						<option value="2">2: Public insurance - Medicaid</option>
 						<option value="3">3: Public insurance - Medicare FFS (Fee for Service)</option>
@@ -239,7 +239,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN WORK INCOME</label>
 					<label className="text-secondary" >Working for income::</label>
 					<select className="form-control" value={this.props.canWorkIncome} onChange={this.props.onChangeCanWorkIncome}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -248,7 +248,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN WORK NO STAT</label>
 					<label className="text-secondary" >Working for income//If No, Not Working Due To::</label>
 					<select className="form-control" value={this.props.canWorkNoStat} onChange={this.props.onChangeCanWorkNoStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Disability</option>
 						<option value="2">2: Demands of Treatment</option>
 						<option value="3">3: Insurance Conflict</option>
@@ -265,7 +265,7 @@ export class CandFormPersonal extends React.Component {
 					<label className="font-weight-bold" >CAN WORK YES STAT</label>
 					<label className="text-secondary" >Working for income//If Yes::</label>
 					<select className="form-control" value={this.props.canWorkYesStat} onChange={this.props.onChangeCanWorkYesStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Working Full Time</option>
 						<option value="2">2: Working Part Time due to Demands of Treatment</option>
 						<option value="3">3: Working Part Time due to Disability</option>

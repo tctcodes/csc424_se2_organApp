@@ -14,7 +14,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC DR1</label>
 					<label className="text-secondary" >Recipient/s HLA - DR (1) antigen:</label>
 					<select className="form-control" value={this.props.recDr1} onChange={this.props.onChangeRecDr1}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="1">1: 1 </option>
 						<option value="2">2: 2 </option>
@@ -72,7 +72,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC DR2</label>
 					<label className="text-secondary" >Recipient/s HLA - DR (2) antigen:</label>
 					<select className="form-control" value={this.props.recDr2} onChange={this.props.onChangeRecDr2}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="1">1: 1 </option>
 						<option value="2">2: 2 </option>
@@ -145,7 +145,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC EMPL STAT PRE04</label>
 					<label className="text-secondary" >Recipient/s Employment Status - Pre-6/30/2004:</label>
 					<select className="form-control" value={this.props.recEmplStatPre04} onChange={this.props.onChangeRecEmplStatPre04}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: WORKING FULL TIME</option>
 						<option value="2">2: WORKING PART TIME BY CHOICE</option>
 						<option value="3">3: WORKING PART TIME DUE TO DISEASE</option>
@@ -163,7 +163,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC FAIL BILIARY</label>
 					<label className="text-secondary" >Cause of Graft Failure: Biliary Tract Complication:</label>
 					<select className="form-control" value={this.props.recFailBiliary} onChange={this.props.onChangeRecFailBiliary}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -177,7 +177,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC FAIL HEP DENOVO</label>
 					<label className="text-secondary" >Cause of Graft Failure: Hepatitis: DeNovo:</label>
 					<select className="form-control" value={this.props.recFailHepDenovo} onChange={this.props.onChangeRecFailHepDenovo}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -186,7 +186,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC FAIL HEP RECUR</label>
 					<label className="text-secondary" >Cause of Graft Failure: Hepatitis: Recurrent:</label>
 					<select className="form-control" value={this.props.recFailHepRecur} onChange={this.props.onChangeRecFailHepRecur}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -195,7 +195,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC FAIL INFECT</label>
 					<label className="text-secondary" >Cause of Graft Failure: Infection:</label>
 					<select className="form-control" value={this.props.recFailInfect} onChange={this.props.onChangeRecFailInfect}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -204,7 +204,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC FAIL PRIME GRAFT FAIL</label>
 					<label className="text-secondary" >Cause of Graft Failure: Primary Graft Failure:</label>
 					<select className="form-control" value={this.props.recFailPrimeGraftFail} onChange={this.props.onChangeRecFailPrimeGraftFail}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -213,7 +213,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC FAIL RECUR DISEASE</label>
 					<label className="text-secondary" >Cause of Graft Failure: Recurrent Disease:</label>
 					<select className="form-control" value={this.props.recFailRecurDisease} onChange={this.props.onChangeRecFailRecurDisease}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -222,7 +222,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC FAIL REJ ACUTE</label>
 					<label className="text-secondary" >Cause of Graft Failure: Acute Rejection:</label>
 					<select className="form-control" value={this.props.recFailRejAcute} onChange={this.props.onChangeRecFailRejAcute}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -231,7 +231,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC FAIL VASC THROMB</label>
 					<label className="text-secondary" >Cause of Graft Failure: Vascular Thrombosis:</label>
 					<select className="form-control" value={this.props.recFailVascThromb} onChange={this.props.onChangeRecFailVascThromb}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -240,7 +240,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC FUNCTN STAT</label>
 					<label className="text-secondary" >Functional Status:</label>
 					<select className="form-control" value={this.props.recFunctnStat} onChange={this.props.onChangeRecFunctnStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Performs activities of daily living with NO assistance.</option>
 						<option value="2">2: Performs activities of daily living with SOME assistance.</option>
 						<option value="3">3: Performs activities of daily living with TOTAL assistance.</option>
@@ -272,7 +272,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC GRAFT STAT</label>
 					<label className="text-secondary" >Graft Status:</label>
 					<select className="form-control" value={this.props.recGraftStat} onChange={this.props.onChangeRecGraftStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -296,7 +296,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC HEPATIC ARTER THROMB</label>
 					<label className="text-secondary" >If Vascular Thrombosis, Hepatic arterial thrombosis (Ped. Only):</label>
 					<select className="form-control" value={this.props.recHepaticArterThromb} onChange={this.props.onChangeRecHepaticArterThromb}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -305,7 +305,7 @@ export class TxLiForm9 extends React.Component {
 					<label className="font-weight-bold" >REC HEPATIC OUTFLOW OBSTRUCT</label>
 					<label className="text-secondary" >If Vascular Thrombosis, Hepatic outflow obstruction (Ped. Only):</label>
 					<select className="form-control" value={this.props.recHepaticOutflowObstruct} onChange={this.props.onChangeRecHepaticOutflowObstruct}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>

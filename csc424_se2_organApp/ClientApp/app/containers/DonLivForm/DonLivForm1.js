@@ -19,7 +19,7 @@ export class DonLivForm1 extends React.Component {
 					<label className="font-weight-bold" >DON A1</label>
 					<label className="text-secondary" >Donor/s HLA - A (1) antigen:</label>
 					<select className="form-control" value={this.props.donA1} onChange={this.props.onChangeDonA1}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="1">1: 1 </option>
 						<option value="2">2: 2 </option>
@@ -77,7 +77,7 @@ export class DonLivForm1 extends React.Component {
 					<label className="font-weight-bold" >DON A2</label>
 					<label className="text-secondary" >Donor/s HLA - A (2) antigen:</label>
 					<select className="form-control" value={this.props.donA2} onChange={this.props.onChangeDonA2}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="1">1: 1 </option>
 						<option value="2">2: 2 </option>
@@ -135,7 +135,7 @@ export class DonLivForm1 extends React.Component {
 					<label className="font-weight-bold" >DON ABO</label>
 					<label className="text-secondary" >Donor/s Blood Type:</label>
 					<select className="form-control" value={this.props.donAbo} onChange={this.props.onChangeDonAbo}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="A">A: A</option>
 						<option value="A1">A1: A1</option>
 						<option value="A1B">A1B: A1B</option>
@@ -186,7 +186,7 @@ export class DonLivForm1 extends React.Component {
 					<label className="font-weight-bold" >DON ARRHYTHM</label>
 					<label className="text-secondary" >Arrhythmia requiring therapy::</label>
 					<select className="form-control" value={this.props.donArrhythm} onChange={this.props.onChangeDonArrhythm}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Medical therapy </option>
 						<option value="2">2: Cardioversion </option>
 					</select>
@@ -195,7 +195,7 @@ export class DonLivForm1 extends React.Component {
 					<label className="font-weight-bold" >DON B1</label>
 					<label className="text-secondary" >Donor/s HLA - B (1) antigen:</label>
 					<select className="form-control" value={this.props.donB1} onChange={this.props.onChangeDonB1}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="5">5: 5 </option>
 						<option value="7">7: 7 </option>
@@ -300,7 +300,7 @@ export class DonLivForm1 extends React.Component {
 					<label className="font-weight-bold" >DON B2</label>
 					<label className="text-secondary" >Donor/s HLA - B (2) antigen:</label>
 					<select className="form-control" value={this.props.donB2} onChange={this.props.onChangeDonB2}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="5">5: 5 </option>
 						<option value="7">7: 7 </option>
@@ -445,7 +445,7 @@ export class DonLivForm1 extends React.Component {
 					<label className="font-weight-bold" >DON BW4</label>
 					<label className="text-secondary" >Donor/s HLA - Bw4 locus:</label>
 					<select className="form-control" value={this.props.donBw4} onChange={this.props.onChangeDonBw4}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="95">95: Positive </option>
 						<option value="96">96: Negative </option>
@@ -458,7 +458,7 @@ export class DonLivForm1 extends React.Component {
 					<label className="font-weight-bold" >DON BW6</label>
 					<label className="text-secondary" >Donor/s HLA - Bw6 locus:</label>
 					<select className="form-control" value={this.props.donBw6} onChange={this.props.onChangeDonBw6}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="95">95: Positive </option>
 						<option value="96">96: Negative </option>

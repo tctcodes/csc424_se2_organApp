@@ -19,7 +19,7 @@ export class DonLivForm10 extends React.Component {
 					<label className="font-weight-bold" >DON VIRUSES TESTED</label>
 					<label className="text-secondary" >Viral Detection://Have any of the following viruses ever been tested for: HIV, CMV, HBV, HCV, EBV:</label>
 					<select className="form-control" value={this.props.donVirusesTested} onChange={this.props.onChangeDonVirusesTested}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -33,7 +33,7 @@ export class DonLivForm10 extends React.Component {
 					<label className="font-weight-bold" >DON WORK INCOME</label>
 					<label className="text-secondary" >Working for Income::</label>
 					<select className="form-control" value={this.props.donWorkIncome} onChange={this.props.onChangeDonWorkIncome}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -42,7 +42,7 @@ export class DonLivForm10 extends React.Component {
 					<label className="font-weight-bold" >DON WORK NO STAT</label>
 					<label className="text-secondary" >Working for Income//If No, Not Working Due To: (check one):</label>
 					<select className="form-control" value={this.props.donWorkNoStat} onChange={this.props.onChangeDonWorkNoStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Disability </option>
 						<option value="3">3: Insurance Conflict </option>
 						<option value="4">4: Inability to Find Work </option>
@@ -57,7 +57,7 @@ export class DonLivForm10 extends React.Component {
 					<label className="font-weight-bold" >DON WORK YES STAT</label>
 					<label className="text-secondary" >Working for Income//If Yes::</label>
 					<select className="form-control" value={this.props.donWorkYesStat} onChange={this.props.onChangeDonWorkYesStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Working Full Time </option>
 						<option value="3">3: Working Part Time due to Disability </option>
 						<option value="4">4: Working Part Time due to Insurance Conflict </option>

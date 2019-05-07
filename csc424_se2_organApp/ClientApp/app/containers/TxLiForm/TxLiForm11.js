@@ -14,7 +14,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC MED COND</label>
 					<label className="text-secondary" >Medical Condition:</label>
 					<select className="form-control" value={this.props.recMedCond} onChange={this.props.onChangeRecMedCond}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: IN INTENSIVE CARE UNIT</option>
 						<option value="2">2: HOSPITALIZED NOT IN ICU</option>
 						<option value="3">3: NOT HOSPITALIZED</option>
@@ -34,7 +34,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC MOTOR DEVELOP</label>
 					<label className="text-secondary" >Motor Development (Ped Only):</label>
 					<select className="form-control" value={this.props.recMotorDevelop} onChange={this.props.onChangeRecMotorDevelop}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Definite Motor delay/impairment</option>
 						<option value="2">2: Probable Motor delay/impairment</option>
 						<option value="3">3: Questionable Motor delay/impairment</option>
@@ -46,7 +46,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC ON VENTILATOR</label>
 					<label className="text-secondary" >Risk Factors: On Ventilator:</label>
 					<select className="form-control" value={this.props.recOnVentilator} onChange={this.props.onChangeRecOnVentilator}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -60,7 +60,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC OTHER THERAPY</label>
 					<label className="text-secondary" >Other Therapies::</label>
 					<select className="form-control" value={this.props.recOtherTherapy} onChange={this.props.onChangeRecOtherTherapy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -69,7 +69,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC OTHER THERAPY TY</label>
 					<label className="text-secondary" >If Other Therapies, check all that apply:</label>
 					<select className="form-control" value={this.props.recOtherTherapyTy} onChange={this.props.onChangeRecOtherTherapyTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing </option>
 						<option value="1">1: Photopheresis </option>
 						<option value="2">2: Plasmapheresis </option>
@@ -81,7 +81,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC OTHER THERAPY TY PHOTOPH</label>
 					<label className="text-secondary" >Other Therapy - Photopheresis (3):</label>
 					<select className="form-control" value={this.props.recOtherTherapyTyPhotoph} onChange={this.props.onChangeRecOtherTherapyTyPhotoph}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -90,7 +90,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC OTHER THERAPY TY PLASMAPH</label>
 					<label className="text-secondary" >Other Therapy - Plasmapheresis (3):</label>
 					<select className="form-control" value={this.props.recOtherTherapyTyPlasmaph} onChange={this.props.onChangeRecOtherTherapyTyPlasmaph}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -99,7 +99,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC OTHER THERAPY TY TLI</label>
 					<label className="text-secondary" >Other Therapy - Total Lymphoid Irradiation (3):</label>
 					<select className="form-control" value={this.props.recOtherTherapyTyTli} onChange={this.props.onChangeRecOtherTherapyTyTli}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -108,7 +108,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC PB CREDIT</label>
 					<label className="text-secondary" >Payback credit issued to sending OPO:</label>
 					<select className="form-control" value={this.props.recPbCredit} onChange={this.props.onChangeRecPbCredit}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -117,7 +117,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC PB DEBT</label>
 					<label className="text-secondary" >Payback debt issued to recipient OPO:</label>
 					<select className="form-control" value={this.props.recPbDebt} onChange={this.props.onChangeRecPbDebt}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -126,7 +126,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC PB SHARE TY</label>
 					<label className="text-secondary" >Payback share type:</label>
 					<select className="form-control" value={this.props.recPbShareTy} onChange={this.props.onChangeRecPbShareTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Zero Mismatch </option>
 						<option value="2">2: Payback (UNOS) </option>
 						<option value="3">3: Other </option>
@@ -136,7 +136,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC PERM STATE</label>
 					<label className="text-secondary" >State of Permanent Residence::</label>
 					<select className="form-control" value={this.props.recPermState} onChange={this.props.onChangeRecPermState}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="AK">AK: ALASKA</option>
 						<option value="AL">AL: ALABAMA</option>
 						<option value="AR">AR: ARKANSAS</option>
@@ -201,7 +201,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC PHYSC CAPACITY</label>
 					<label className="text-secondary" >Physical Capacity::</label>
 					<select className="form-control" value={this.props.recPhyscCapacity} onChange={this.props.onChangeRecPhyscCapacity}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: No Limitations</option>
 						<option value="2">2: Limited Mobility</option>
 						<option value="3">3: Wheelchair bound or more limited</option>
@@ -213,7 +213,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC PORTAL HYPERTEN BLEED</label>
 					<label className="text-secondary" >Did Patient receive 5 or more units of packed red blood cells within 48 hours prior to transplantation due to spontaneous portal hypertensive bleeding::</label>
 					<select className="form-control" value={this.props.recPortalHypertenBleed} onChange={this.props.onChangeRecPortalHypertenBleed}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -222,7 +222,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC PORTAL VEIN</label>
 					<label className="text-secondary" >Risk Factors: Portal Vein Thrombosis:</label>
 					<select className="form-control" value={this.props.recPortalVein} onChange={this.props.onChangeRecPortalVein}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -231,7 +231,7 @@ export class TxLiForm11 extends React.Component {
 					<label className="font-weight-bold" >REC PORTAL VEIN THROMB</label>
 					<label className="text-secondary" >If Vascular Thrombosis, Portal vein thrombosis (Ped. Only):</label>
 					<select className="form-control" value={this.props.recPortalVeinThromb} onChange={this.props.onChangeRecPortalVeinThromb}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>

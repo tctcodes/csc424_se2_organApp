@@ -19,7 +19,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC AGE AT TX</label>
 					<label className="text-secondary" >Age at TX:</label>
 					<select className="form-control" value={this.props.recAgeAtTx} onChange={this.props.onChangeRecAgeAtTx}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">{"<"}1</option>
 						<option value="1">5-Jan</option>
 						<option value="6">11-Jun</option>
@@ -40,7 +40,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY</label>
 					<label className="text-secondary" >Biological or Anti-viral Therapy::</label>
 					<select className="form-control" value={this.props.recAntivrlTherapy} onChange={this.props.onChangeRecAntivrlTherapy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -49,7 +49,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY</label>
 					<label className="text-secondary" >If Anti-viral Therapies, check all that apply:</label>
 					<select className="form-control" value={this.props.recAntivrlTherapyTy} onChange={this.props.onChangeRecAntivrlTherapyTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing </option>
 						<option value="1">1: Acyclovir (Zovirax) </option>
 						<option value="2">2: Cytogam (CMV) </option>
@@ -69,7 +69,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY ACYCLOVIR</label>
 					<label className="text-secondary" >Anti-viral Therapy - Acyclovir (Zovirax) (11):</label>
 					<select className="form-control" value={this.props.recAntivrlTherapyTyAcyclovir} onChange={this.props.onChangeRecAntivrlTherapyTyAcyclovir}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -78,7 +78,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY CYTOGAM</label>
 					<label className="text-secondary" >Anti-viral Therapy - Cytogam (CMV) (11):</label>
 					<select className="form-control" value={this.props.recAntivrlTherapyTyCytogam} onChange={this.props.onChangeRecAntivrlTherapyTyCytogam}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -87,7 +87,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY CYTOVENE</label>
 					<label className="text-secondary" >Anti-viral Therapy - Ganciclovir (Cytovene) (11):</label>
 					<select className="form-control" value={this.props.recAntivrlTherapyTyCytovene} onChange={this.props.onChangeRecAntivrlTherapyTyCytovene}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -96,7 +96,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY EPIVIR</label>
 					<label className="text-secondary" >Anti-viral Therapy - Lamivudine (Epivir) (for treatment of Hepatitis B) (11):</label>
 					<select className="form-control" value={this.props.recAntivrlTherapyTyEpivir} onChange={this.props.onChangeRecAntivrlTherapyTyEpivir}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -105,7 +105,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY FLU VAC</label>
 					<label className="text-secondary" >Anti-viral Therapy - Flu Vaccine (Influenza Virus) (11):</label>
 					<select className="form-control" value={this.props.recAntivrlTherapyTyFluVac} onChange={this.props.onChangeRecAntivrlTherapyTyFluVac}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -114,7 +114,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY GAMIMUNE</label>
 					<label className="text-secondary" >Anti-viral Therapy - Gamimune (11):</label>
 					<select className="form-control" value={this.props.recAntivrlTherapyTyGamimune} onChange={this.props.onChangeRecAntivrlTherapyTyGamimune}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -123,7 +123,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY GAMMAGARD</label>
 					<label className="text-secondary" >Anti-viral Therapy - Gammagard (11):</label>
 					<select className="form-control" value={this.props.recAntivrlTherapyTyGammagard} onChange={this.props.onChangeRecAntivrlTherapyTyGammagard}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -132,7 +132,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY HBIG</label>
 					<label className="text-secondary" >Anti-viral Therapy - HBIG (Hepatitis B Immune Globulin) (11):</label>
 					<select className="form-control" value={this.props.recAntivrlTherapyTyHbig} onChange={this.props.onChangeRecAntivrlTherapyTyHbig}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -141,7 +141,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY OTHER</label>
 					<label className="text-secondary" >Anti-viral Therapy - Other, Specify (11):</label>
 					<select className="form-control" value={this.props.recAntivrlTherapyTyOther} onChange={this.props.onChangeRecAntivrlTherapyTyOther}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -150,7 +150,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY VALCYTE</label>
 					<label className="text-secondary" >Anti-viral Therapy - Valgancyclovir (Valcyte) (11):</label>
 					<select className="form-control" value={this.props.recAntivrlTherapyTyValcyte} onChange={this.props.onChangeRecAntivrlTherapyTyValcyte}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -159,7 +159,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ANTIVRL THERAPY TY VALTREX</label>
 					<label className="text-secondary" >Anti-viral Therapy - Valacyclovir (Valtrex) (11):</label>
 					<select className="form-control" value={this.props.recAntivrlTherapyTyValtrex} onChange={this.props.onChangeRecAntivrlTherapyTyValtrex}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -168,7 +168,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ARTIFICIAL LI</label>
 					<label className="text-secondary" >Artificial Liver:</label>
 					<select className="form-control" value={this.props.recArtificialLi} onChange={this.props.onChangeRecArtificialLi}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -177,7 +177,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC ASCITES</label>
 					<label className="text-secondary" >Risk Factors: Ascites:</label>
 					<select className="form-control" value={this.props.recAscites} onChange={this.props.onChangeRecAscites}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -196,7 +196,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC B1</label>
 					<label className="text-secondary" >Recipient/s HLA - B (1) antigen:</label>
 					<select className="form-control" value={this.props.recB1} onChange={this.props.onChangeRecB1}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="5">5: 5 </option>
 						<option value="7">7: 7 </option>
@@ -301,7 +301,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC B2</label>
 					<label className="text-secondary" >Recipient/s HLA - B (2) antigen:</label>
 					<select className="form-control" value={this.props.recB2} onChange={this.props.onChangeRecB2}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="5">5: 5 </option>
 						<option value="7">7: 7 </option>
@@ -406,7 +406,7 @@ export class TxLiForm7 extends React.Component {
 					<label className="font-weight-bold" >REC BACTERIA PERIT</label>
 					<label className="text-secondary" >Risk Factors: Spontaneous Bacterial Peritonitis:</label>
 					<select className="form-control" value={this.props.recBacteriaPerit} onChange={this.props.onChangeRecBacteriaPerit}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>

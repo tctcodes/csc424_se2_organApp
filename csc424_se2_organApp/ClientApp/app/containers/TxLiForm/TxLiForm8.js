@@ -39,7 +39,7 @@ export class TxLiForm8 extends React.Component {
 					<label className="font-weight-bold" >REC COD</label>
 					<label className="text-secondary" >Recipient/s Cause of Death:</label>
 					<select className="form-control" value={this.props.recCod} onChange={this.props.onChangeRecCod}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="998">998: UNKNOWN </option>
 						<option value="999">999: OTHER SPECIFY </option>
 						<option value="2000">2000: GRAFT FAILURE: PRIMARY FAILURE </option>
@@ -121,7 +121,7 @@ export class TxLiForm8 extends React.Component {
 					<label className="font-weight-bold" >REC COD2</label>
 					<label className="text-secondary" >Contributory Cause of Death::</label>
 					<select className="form-control" value={this.props.recCod2} onChange={this.props.onChangeRecCod2}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="998">998: UNKNOWN</option>
 						<option value="999">999: OTHER SPECIFY</option>
 						<option value="2000">2000: TH:GRAFT FAILURE: PRIMARY FAILURE</option>
@@ -461,7 +461,7 @@ export class TxLiForm8 extends React.Component {
 					<label className="font-weight-bold" >REC COD3</label>
 					<label className="text-secondary" >Contributory Cause of Death::</label>
 					<select className="form-control" value={this.props.recCod3} onChange={this.props.onChangeRecCod3}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="998">998: UNKNOWN</option>
 						<option value="999">999: OTHER SPECIFY</option>
 						<option value="2000">2000: TH:GRAFT FAILURE: PRIMARY FAILURE</option>
@@ -801,7 +801,7 @@ export class TxLiForm8 extends React.Component {
 					<label className="font-weight-bold" >REC COGNITIVE DEVELOP</label>
 					<label className="text-secondary" >Cognitive Development (Ped Only):</label>
 					<select className="form-control" value={this.props.recCognitiveDevelop} onChange={this.props.onChangeRecCognitiveDevelop}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Definite Cognitive delay/impairment</option>
 						<option value="2">2: Probable Cognitive delay/impairment</option>
 						<option value="3">3: Questionable Cognitive delay/impairment</option>
@@ -828,7 +828,7 @@ export class TxLiForm8 extends React.Component {
 					<label className="font-weight-bold" >REC CUR PX STAT</label>
 					<label className="text-secondary" >System field based on latest Follow-Up px_stat used to determine creation of next Follow-Up Form:</label>
 					<select className="form-control" value={this.props.recCurPxStat} onChange={this.props.onChangeRecCurPxStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="A">A: Alive </option>
 						<option value="D">D: Dead </option>
 						<option value="F">F: Graft Failure: fol_cd = 801 </option>
@@ -842,7 +842,7 @@ export class TxLiForm8 extends React.Component {
 					<label className="font-weight-bold" >REC DGN</label>
 					<label className="text-secondary" >Primary Diagnosis:</label>
 					<select className="form-control" value={this.props.recDgn} onChange={this.props.onChangeRecDgn}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="100">100: LU:ALLERGIC BRONCHOPULMONARY ASPERGILLOSIS</option>
 						<option value="103">103: LU:BRONCHOPULMONARY DYSPLASIA</option>
 						<option value="105">105: LU:CILIARY DYSKINESIS SYNDROME</option>
@@ -1184,7 +1184,7 @@ export class TxLiForm8 extends React.Component {
 					<label className="font-weight-bold" >REC DGN2</label>
 					<label className="text-secondary" >Secondary Diagnosis/path. confirmed LI dgn at discharge:</label>
 					<select className="form-control" value={this.props.recDgn2} onChange={this.props.onChangeRecDgn2}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="100">100: LU:ALLERGIC BRONCHOPULMONARY ASPERGILLOSIS</option>
 						<option value="103">103: LU:BRONCHOPULMONARY DYSPLASIA</option>
 						<option value="105">105: LU:CILIARY DYSKINESIS SYNDROME</option>

@@ -49,7 +49,7 @@ export class TxLiForm6 extends React.Component {
 					<label className="font-weight-bold" >ORG TY</label>
 					<label className="text-secondary" >Organ Type:</label>
 					<select className="form-control" value={this.props.orgTy} onChange={this.props.onChangeOrgTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="HL">HL: Heart/Lung</option>
 						<option value="HR">HR: Heart</option>
 						<option value="IN">IN: Intestine</option>
@@ -70,7 +70,7 @@ export class TxLiForm6 extends React.Component {
 					<label className="font-weight-bold" >PERS OPTN COD</label>
 					<label className="text-secondary" >Person Cause of Death:</label>
 					<select className="form-control" value={this.props.persOptnCod} onChange={this.props.onChangePersOptnCod}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="998">998: UNKNOWN</option>
 						<option value="999">999: OTHER SPECIFY</option>
 						<option value="2000">2000: TH:GRAFT FAILURE: PRIMARY FAILURE</option>
@@ -425,7 +425,7 @@ export class TxLiForm6 extends React.Component {
 					<label className="font-weight-bold" >PERS RESTRICT DEATH VRFY</label>
 					<label className="text-secondary" >Restricted death verification level:</label>
 					<select className="form-control" value={this.props.persRestrictDeathVrfy} onChange={this.props.onChangePersRestrictDeathVrfy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="D">D: Death verified, but not date</option>
 						<option value="N">N: Not verified</option>
 						<option value="V">V: Death date verified</option>
@@ -455,7 +455,7 @@ export class TxLiForm6 extends React.Component {
 					<label className="font-weight-bold" >REC A1</label>
 					<label className="text-secondary" >Recipient/s HLA - A (1) antigen:</label>
 					<select className="form-control" value={this.props.recA1} onChange={this.props.onChangeRecA1}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="1">1: 1 </option>
 						<option value="2">2: 2 </option>
@@ -513,7 +513,7 @@ export class TxLiForm6 extends React.Component {
 					<label className="font-weight-bold" >REC A2</label>
 					<label className="text-secondary" >Recipient/s HLA - A (2) antigen:</label>
 					<select className="form-control" value={this.props.recA2} onChange={this.props.onChangeRecA2}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">0: 0 </option>
 						<option value="1">1: 1 </option>
 						<option value="2">2: 2 </option>
@@ -571,7 +571,7 @@ export class TxLiForm6 extends React.Component {
 					<label className="font-weight-bold" >REC ACADEMIC LEVEL</label>
 					<label className="text-secondary" >Academic Activity Level::</label>
 					<select className="form-control" value={this.props.recAcademicLevel} onChange={this.props.onChangeRecAcademicLevel}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Full academic load</option>
 						<option value="2">2: Reduced academic load</option>
 						<option value="3">3: Unable to participate in academics due to disease or condition</option>
@@ -584,7 +584,7 @@ export class TxLiForm6 extends React.Component {
 					<label className="font-weight-bold" >REC ACADEMIC PROGRESS</label>
 					<label className="text-secondary" >Academic Progress::</label>
 					<select className="form-control" value={this.props.recAcademicProgress} onChange={this.props.onChangeRecAcademicProgress}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Within One Grade Level of Peers</option>
 						<option value="2">2: Delayed Grade Level</option>
 						<option value="3">3: Special Education</option>
@@ -600,7 +600,7 @@ export class TxLiForm6 extends React.Component {
 					<label className="font-weight-bold" >REC ACUTE REJ EPISODE</label>
 					<label className="text-secondary" >Did patient have any acute rejection episodes between transplant and discharge::</label>
 					<select className="form-control" value={this.props.recAcuteRejEpisode} onChange={this.props.onChangeRecAcuteRejEpisode}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Yes, at least one episode treated with anti-rejection agent </option>
 						<option value="2">2: Yes, none treated with additional anti-rejection agent </option>
 						<option value="3">3: No </option>

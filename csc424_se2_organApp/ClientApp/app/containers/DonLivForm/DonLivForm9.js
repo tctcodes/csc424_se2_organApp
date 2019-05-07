@@ -14,7 +14,7 @@ export class DonLivForm9 extends React.Component {
 					<label className="font-weight-bold" >DON RACE SRTR</label>
 					<label className="text-secondary" >SRTR Donor Race:</label>
 					<select className="form-control" value={this.props.donRaceSrtr} onChange={this.props.onChangeDonRaceSrtr}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="ASIAN">ASIAN: Asian</option>
 						<option value="BLACK">BLACK: Black</option>
 						<option value="MULTI">MULTI: Multiracial</option>
@@ -32,7 +32,7 @@ export class DonLivForm9 extends React.Component {
 					<label className="font-weight-bold" >DON RECOV TX SAME CTR</label>
 					<label className="text-secondary" >Did organ recovery and transplant occur at the same center:</label>
 					<select className="form-control" value={this.props.donRecovTxSameCtr} onChange={this.props.onChangeDonRecovTxSameCtr}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -41,7 +41,7 @@ export class DonLivForm9 extends React.Component {
 					<label className="font-weight-bold" >DON RELATIONSHIP TY</label>
 					<label className="text-secondary" >Living Donor/s Relationship to Recipient:</label>
 					<select className="form-control" value={this.props.donRelationshipTy} onChange={this.props.onChangeDonRelationshipTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Biological, blood related Parent </option>
 						<option value="2">2: Biological, blood related Child </option>
 						<option value="3">3: Biological, blood related Identical Twin </option>
@@ -64,7 +64,7 @@ export class DonLivForm9 extends React.Component {
 					<label className="font-weight-bold" >DON SACRIFICE LOBE</label>
 					<label className="text-secondary" >Sacrifice of Second Lobe, Specify::</label>
 					<select className="form-control" value={this.props.donSacrificeLobe} onChange={this.props.onChangeDonSacrificeLobe}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: RML </option>
 						<option value="2">2: RUL </option>
 						<option value="3">3: LUL </option>
@@ -75,7 +75,7 @@ export class DonLivForm9 extends React.Component {
 					<label className="font-weight-bold" >DON SELF</label>
 					<label className="text-secondary" >Secondary source of payment: Self:</label>
 					<select className="form-control" value={this.props.donSelf} onChange={this.props.onChangeDonSelf}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -104,7 +104,7 @@ export class DonLivForm9 extends React.Component {
 					<label className="font-weight-bold" >DON STAT</label>
 					<label className="text-secondary" >Donor Status:</label>
 					<select className="form-control" value={this.props.donStat} onChange={this.props.onChangeDonStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="A">A: Living </option>
 						<option value="D">D: Dead </option>
 						<option value="L">L: Lost </option>
@@ -120,7 +120,7 @@ export class DonLivForm9 extends React.Component {
 					<label className="font-weight-bold" >DON TARGET SOURCE1</label>
 					<label className="text-secondary" >Target Source for Class I::</label>
 					<select className="form-control" value={this.props.donTargetSource1} onChange={this.props.onChangeDonTargetSource1}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing </option>
 						<option value="1">1: Peripheral Blood </option>
 						<option value="2">2: Lymph Nodes </option>
@@ -137,7 +137,7 @@ export class DonLivForm9 extends React.Component {
 					<label className="font-weight-bold" >DON TARGET SOURCE2</label>
 					<label className="text-secondary" >Target Source for Class II::</label>
 					<select className="form-control" value={this.props.donTargetSource2} onChange={this.props.onChangeDonTargetSource2}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing </option>
 						<option value="1">1: Peripheral Blood </option>
 						<option value="2">2: Lymph Nodes </option>
@@ -169,7 +169,7 @@ export class DonLivForm9 extends React.Component {
 					<label className="font-weight-bold" >DON TYP METHCLASS1</label>
 					<label className="text-secondary" >Donor/s HLA - Typing Method Class I:</label>
 					<select className="form-control" value={this.props.donTypMethclass1} onChange={this.props.onChangeDonTypMethclass1}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing </option>
 						<option value="1">1: Serology </option>
 						<option value="2">2: DNA </option>
@@ -186,7 +186,7 @@ export class DonLivForm9 extends React.Component {
 					<label className="font-weight-bold" >DON TYP METHCLASS2</label>
 					<label className="text-secondary" >Donor/s HLA - Typing Method Class II:</label>
 					<select className="form-control" value={this.props.donTypMethclass2} onChange={this.props.onChangeDonTypMethclass2}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing </option>
 						<option value="1">1: Serology </option>
 						<option value="2">2: DNA </option>

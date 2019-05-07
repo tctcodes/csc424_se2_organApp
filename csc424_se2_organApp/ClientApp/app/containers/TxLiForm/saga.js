@@ -12,7 +12,7 @@ export function* getRecordTrrId(action) {
   }
   let headers = {'Content-Type': 'application/json'}
   try{
-    const response = yield axios.post("/api/TxLi/GetRecordDonorId",body,headers);
+    const response = yield axios.post("/api/TxLi/GetRecordTrrId",body,headers);
     
     yield put(setRecordTxLi(response.data))
    

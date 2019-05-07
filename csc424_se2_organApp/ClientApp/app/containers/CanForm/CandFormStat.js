@@ -19,7 +19,7 @@ export class CandFormStat extends React.Component {
 					<label className="font-weight-bold" >CAN ANESTH PRIOR DEATH</label>
 					<label className="text-secondary" >Did the patient go to the operating room and receive anesthesia for transplant prior to death?:</label>
 					<select className="form-control" value={this.props.canAnesthPriorDeath} onChange={this.props.onChangeCanAnesthPriorDeath}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -38,7 +38,7 @@ export class CandFormStat extends React.Component {
 					<label className="font-weight-bold" >CAN FOLLOWS OPO ALLOC</label>
 					<label className="text-secondary" >Does candidate follow the OPO/s current allocation:</label>
 					<select className="form-control" value={this.props.canFollowsOpoAlloc} onChange={this.props.onChangeCanFollowsOpoAlloc}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -47,7 +47,7 @@ export class CandFormStat extends React.Component {
 					<label className="font-weight-bold" >CAN INIT ACT STAT CD</label>
 					<label className="text-secondary" >First Active Status:</label>
 					<select className="form-control" value={this.props.canInitActStatCd} onChange={this.props.onChangeCanInitActStatCd}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1010">1010: Status 1A</option>
 						<option value="1020">1020: Status 1B</option>
 						<option value="1030">1030: Status 2</option>
@@ -319,7 +319,7 @@ export class CandFormStat extends React.Component {
 					<label className="font-weight-bold" >CAN INIT STAT</label>
 					<label className="text-secondary" >Initial Status of Patient:</label>
 					<select className="form-control" value={this.props.canInitStat} onChange={this.props.onChangeCanInitStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1010">1010: Status 1A</option>
 						<option value="1020">1020: Status 1B</option>
 						<option value="1030">1030: Status 2</option>
@@ -591,7 +591,7 @@ export class CandFormStat extends React.Component {
 					<label className="font-weight-bold" >CAN LAST STAT</label>
 					<label className="text-secondary" >Last Status of Patient (with 2 day rule):</label>
 					<select className="form-control" value={this.props.canLastStat} onChange={this.props.onChangeCanLastStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1010">1010: Status 1A</option>
 						<option value="1020">1020: Status 1B</option>
 						<option value="1030">1030: Status 2</option>
@@ -868,7 +868,7 @@ export class CandFormStat extends React.Component {
 					<label className="font-weight-bold" >CAN REM CD</label>
 					<label className="text-secondary" >Reason why candidate was removed (removal code):</label>
 					<select className="form-control" value={this.props.canRemCd} onChange={this.props.onChangeCanRemCd}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="4">4: Deceased Donor tx, removed by transplanting center</option>
 						<option value="5">5: Medically Unsuitable</option>
 						<option value="6">6: Refused transplant</option>
@@ -896,7 +896,7 @@ export class CandFormStat extends React.Component {
 					<label className="font-weight-bold" >CAN REM COD</label>
 					<label className="text-secondary" >Cause of Death:</label>
 					<select className="form-control" value={this.props.canRemCod} onChange={this.props.onChangeCanRemCod}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="998">998: UNKNOWN</option>
 						<option value="999">999: OTHER SPECIFY</option>
 						<option value="2000">2000: TH:GRAFT FAILURE: PRIMARY FAILURE</option>
@@ -1241,7 +1241,7 @@ export class CandFormStat extends React.Component {
 					<label className="font-weight-bold" >CAN STAT EXTEND FLG</label>
 					<label className="text-secondary" >Status Extension granted for Liver candidate:</label>
 					<select className="form-control" value={this.props.canStatExtendFlg} onChange={this.props.onChangeCanStatExtendFlg}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>

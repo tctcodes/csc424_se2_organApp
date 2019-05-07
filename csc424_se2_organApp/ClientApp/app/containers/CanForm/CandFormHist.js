@@ -14,7 +14,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN ANGINA</label>
 					<label className="text-secondary" >Angina/Coronary Artery Disease:</label>
 					<select className="form-control" value={this.props.canAngina} onChange={this.props.onChangeCanAngina}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: No angina</option>
 						<option value="2">2: Stable angina - strenuous activity results in angina</option>
 						<option value="3">3: Stable angina - ordinary physical activity results in angina</option>
@@ -30,7 +30,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN ANGINA CAD</label>
 					<label className="text-secondary" >Angina::</label>
 					<select className="form-control" value={this.props.canAnginaCad} onChange={this.props.onChangeCanAnginaCad}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: No</option>
 						<option value="2">2: Yes, and documented Coronary Artery Disease</option>
 						<option value="3">3: Yes, with no documented Coronary Artery Disease</option>
@@ -42,7 +42,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN ASCITES</label>
 					<label className="text-secondary" >Ascites (from liver disease ):</label>
 					<select className="form-control" value={this.props.canAscites} onChange={this.props.onChangeCanAscites}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -51,7 +51,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN BACTERIA PERIT</label>
 					<label className="text-secondary" >Spontaneous Bacterial Peritonitis (ascitis infection):</label>
 					<select className="form-control" value={this.props.canBacteriaPerit} onChange={this.props.onChangeCanBacteriaPerit}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -60,7 +60,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN CEREB VASC</label>
 					<label className="text-secondary" >Symptomatic Cerebrovascular Disease:</label>
 					<select className="form-control" value={this.props.canCerebVasc} onChange={this.props.onChangeCanCerebVasc}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -69,7 +69,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN COGNITIVE DEVELOP</label>
 					<label className="text-secondary" >Cognitive Development (Ped Only):</label>
 					<select className="form-control" value={this.props.canCognitiveDevelop} onChange={this.props.onChangeCanCognitiveDevelop}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Definite Cognitive delay/impairment</option>
 						<option value="2">2: Probable Cognitive delay/impairment</option>
 						<option value="3">3: Questionable Cognitive delay/impairment</option>
@@ -81,7 +81,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN DIAB</label>
 					<label className="text-secondary" >Diabetes:</label>
 					<select className="form-control" value={this.props.canDiab} onChange={this.props.onChangeCanDiab}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: NO</option>
 						<option value="2">2: INSULIN DEPENDENT DIABETES</option>
 						<option value="3">3: NON-INSULIN DEPENDENT DIABETES</option>
@@ -93,7 +93,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN DIAB TY</label>
 					<label className="text-secondary" >Diabetes:</label>
 					<select className="form-control" value={this.props.canDiabTy} onChange={this.props.onChangeCanDiabTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: No</option>
 						<option value="2">2: Type I</option>
 						<option value="3">3: Type II</option>
@@ -106,7 +106,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN DIAL</label>
 					<label className="text-secondary" >Dialysis:</label>
 					<select className="form-control" value={this.props.canDial} onChange={this.props.onChangeCanDial}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: No dialysis</option>
 						<option value="2">2: Hemodialysis</option>
 						<option value="3">3: Peritoneal Dialysis</option>
@@ -120,7 +120,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN DRUG TREAT COPD</label>
 					<label className="text-secondary" >Drug Treated COPD:</label>
 					<select className="form-control" value={this.props.canDrugTreatCopd} onChange={this.props.onChangeCanDrugTreatCopd}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -129,7 +129,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN DRUG TREAT HYPERTEN</label>
 					<label className="text-secondary" >Drug Treated Systemic Hypertension:</label>
 					<select className="form-control" value={this.props.canDrugTreatHyperten} onChange={this.props.onChangeCanDrugTreatHyperten}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -138,7 +138,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN ENCEPH</label>
 					<label className="text-secondary" >Encephalopathy:</label>
 					<select className="form-control" value={this.props.canEnceph} onChange={this.props.onChangeCanEnceph}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -147,7 +147,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN FUNGAL SEPSIS</label>
 					<label className="text-secondary" >Fungal sepsis (IN Pediatric Only):</label>
 					<select className="form-control" value={this.props.canFungalSepsis} onChange={this.props.onChangeCanFungalSepsis}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -156,7 +156,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN LIVING DON TX</label>
 					<label className="text-secondary" >Has Candidate received a Living Donor transplant? (used for Liver Candidates):</label>
 					<select className="form-control" value={this.props.canLivingDonTx} onChange={this.props.onChangeCanLivingDonTx}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -165,7 +165,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN LI DYSFUNCTN</label>
 					<label className="text-secondary" >Liver Dysfunction:</label>
 					<select className="form-control" value={this.props.canLiDysfunctn} onChange={this.props.onChangeCanLiDysfunctn}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -174,7 +174,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN LOSS VASC ACCESS</label>
 					<label className="text-secondary" >Loss of two or more vascular access sites (IN Pediatric Only):</label>
 					<select className="form-control" value={this.props.canLossVascAccess} onChange={this.props.onChangeCanLossVascAccess}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -183,7 +183,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN NEW PREV PI TX</label>
 					<label className="text-secondary" >Previous Pancreas Islet Transplantation::</label>
 					<select className="form-control" value={this.props.canNewPrevPiTx} onChange={this.props.onChangeCanNewPrevPiTx}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -192,7 +192,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN NON RECON GI</label>
 					<label className="text-secondary" >Non-Reconstructible GI tract (IN Pediatric Only):</label>
 					<select className="form-control" value={this.props.canNonReconGi} onChange={this.props.onChangeCanNonReconGi}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -201,7 +201,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN PEPTIC ULCER</label>
 					<label className="text-secondary" >Peptic Ulcer Disease:</label>
 					<select className="form-control" value={this.props.canPepticUlcer} onChange={this.props.onChangeCanPepticUlcer}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: No</option>
 						<option value="2">2: Yes, active within the last year</option>
 						<option value="3">3: Yes, not active within the last year</option>
@@ -213,7 +213,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN PERIPH VASC</label>
 					<label className="text-secondary" >Symptomatic Peripheral Vascular Disease:</label>
 					<select className="form-control" value={this.props.canPeriphVasc} onChange={this.props.onChangeCanPeriphVasc}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -222,7 +222,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN PORTAL VEIN</label>
 					<label className="text-secondary" >History of Portal Vein Thrombosis:</label>
 					<select className="form-control" value={this.props.canPortalVein} onChange={this.props.onChangeCanPortalVein}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -231,7 +231,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN PREV ABDOM SURG</label>
 					<label className="text-secondary" >Previous Upper Abdominal Surgery:</label>
 					<select className="form-control" value={this.props.canPrevAbdomSurg} onChange={this.props.onChangeCanPrevAbdomSurg}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -295,7 +295,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN PREV TXFUS</label>
 					<label className="text-secondary" >Any Previous Transfusions:</label>
 					<select className="form-control" value={this.props.canPrevTxfus} onChange={this.props.onChangeCanPrevTxfus}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -304,7 +304,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN PULM EMBOL</label>
 					<label className="text-secondary" >Pulmonary Embolism:</label>
 					<select className="form-control" value={this.props.canPulmEmbol} onChange={this.props.onChangeCanPulmEmbol}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -313,7 +313,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN RECUR SEPSIS</label>
 					<label className="text-secondary" >Recurrent sepsis (IN Pediatric Only):</label>
 					<select className="form-control" value={this.props.canRecurSepsis} onChange={this.props.onChangeCanRecurSepsis}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -322,7 +322,7 @@ export class CandFormHist extends React.Component {
 					<label className="font-weight-bold" >CAN TIPSS</label>
 					<label className="text-secondary" >History of TIPSS:</label>
 					<select className="form-control" value={this.props.canTipss} onChange={this.props.onChangeCanTipss}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>

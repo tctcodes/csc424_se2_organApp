@@ -14,7 +14,7 @@ export class CandFormTx extends React.Component {
 					<label className="font-weight-bold" >CAN ANASTOMOSIS</label>
 					<label className="text-secondary" >Was anastomosis initiated?:</label>
 					<select className="form-control" value={this.props.canAnastomosis} onChange={this.props.onChangeCanAnastomosis}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -23,7 +23,7 @@ export class CandFormTx extends React.Component {
 					<label className="font-weight-bold" >CAN SOURCE</label>
 					<label className="text-secondary" >Source of Candidate Data: A =Active Waitlist,R= Removed from Waitlist,L=Live Don Organ Recipient never on waitlist:</label>
 					<select className="form-control" value={this.props.canSource} onChange={this.props.onChangeCanSource}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="A">Active</option>
 						<option value="R">Removed</option>
 						<option value="L">Live</option>
@@ -38,7 +38,7 @@ export class CandFormTx extends React.Component {
 					<label className="font-weight-bold" >CAN TX COUNTRY</label>
 					<label className="text-secondary" >Country of transplant, if outside the US:</label>
 					<select className="form-control" value={this.props.canTxCountry} onChange={this.props.onChangeCanTxCountry}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: UNITED STATES</option>
 						<option value="2">2: AFGHANISTAN</option>
 						<option value="3">3: ALBANIA</option>
@@ -324,7 +324,7 @@ export class CandFormTx extends React.Component {
 					<label className="font-weight-bold" >PERS RESTRICT DEATH VRFY</label>
 					<label className="text-secondary" >Restricted death verification level:</label>
 					<select className="form-control" value={this.props.persRestrictDeathVrfy} onChange={this.props.onChangePersRestrictDeathVrfy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="D">D: Death verified, but not date</option>
 						<option value="N">N: Not verified</option>
 						<option value="V">V: Death date verified</option>
@@ -344,7 +344,7 @@ export class CandFormTx extends React.Component {
 					<label className="font-weight-bold" >REC TX PROCEDURE TY</label>
 					<label className="text-secondary" >Transplant Procedure Type:</label>
 					<select className="form-control" value={this.props.recTxProcedureTy} onChange={this.props.onChangeRecTxProcedureTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="101">101: LEFT KIDNEY</option>
 						<option value="102">102: RIGHT KIDNEY</option>
 						<option value="103">103: EN-BLOC</option>

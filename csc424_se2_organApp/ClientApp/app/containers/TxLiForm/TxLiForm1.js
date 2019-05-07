@@ -24,7 +24,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN ABO</label>
 					<label className="text-secondary" >Patient/s Blood Type:</label>
 					<select className="form-control" value={this.props.canAbo} onChange={this.props.onChangeCanAbo}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="A">A: A</option>
 						<option value="A1">A1: A1</option>
 						<option value="A1B">A1B: A1B</option>
@@ -40,7 +40,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN AGE AT LISTING</label>
 					<label className="text-secondary" >Calculated Candidate Age at Listing:</label>
 					<select className="form-control" value={this.props.canAgeAtListing} onChange={this.props.onChangeCanAgeAtListing}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">{"<"}1</option>
 						<option value="1">5-Jan</option>
 						<option value="6">11-Jun</option>
@@ -61,7 +61,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN ANGINA</label>
 					<label className="text-secondary" >Angina/Coronary Artery Disease:</label>
 					<select className="form-control" value={this.props.canAngina} onChange={this.props.onChangeCanAngina}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: No angina</option>
 						<option value="2">2: Stable angina - strenuous activity results in angina</option>
 						<option value="3">3: Stable angina - ordinary physical activity results in angina</option>
@@ -77,7 +77,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN ANGINA CAD</label>
 					<label className="text-secondary" >Angina::</label>
 					<select className="form-control" value={this.props.canAnginaCad} onChange={this.props.onChangeCanAnginaCad}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: No</option>
 						<option value="2">2: Yes, and documented Coronary Artery Disease</option>
 						<option value="3">3: Yes, with no documented Coronary Artery Disease</option>
@@ -89,7 +89,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN BACTERIA PERIT</label>
 					<label className="text-secondary" >Spontaneous Bacterial Peritonitis:</label>
 					<select className="form-control" value={this.props.canBacteriaPerit} onChange={this.props.onChangeCanBacteriaPerit}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -98,7 +98,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN CEREB VASC</label>
 					<label className="text-secondary" >Symptomatic Cerebrovascular Disease:</label>
 					<select className="form-control" value={this.props.canCerebVasc} onChange={this.props.onChangeCanCerebVasc}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -107,7 +107,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN CITIZENSHIP</label>
 					<label className="text-secondary" >Patient/s Citizenship:</label>
 					<select className="form-control" value={this.props.canCitizenship} onChange={this.props.onChangeCanCitizenship}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: US Citizen</option>
 						<option value="2">2: RESIDENT ALIEN</option>
 						<option value="3">3: NON-RESIDENT ALIEN, Year Entered US</option>
@@ -119,7 +119,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN DGN</label>
 					<label className="text-secondary" >Primary Diagnosis:</label>
 					<select className="form-control" value={this.props.canDgn} onChange={this.props.onChangeCanDgn}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="100">100: LU:ALLERGIC BRONCHOPULMONARY ASPERGILLOSIS</option>
 						<option value="103">103: LU:BRONCHOPULMONARY DYSPLASIA</option>
 						<option value="105">105: LU:CILIARY DYSKINESIS SYNDROME</option>
@@ -461,7 +461,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN DGN2</label>
 					<label className="text-secondary" >Secondary Diagnosis:</label>
 					<select className="form-control" value={this.props.canDgn2} onChange={this.props.onChangeCanDgn2}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="100">100: LU:ALLERGIC BRONCHOPULMONARY ASPERGILLOSIS</option>
 						<option value="103">103: LU:BRONCHOPULMONARY DYSPLASIA</option>
 						<option value="105">105: LU:CILIARY DYSKINESIS SYNDROME</option>
@@ -803,7 +803,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN DIAB</label>
 					<label className="text-secondary" >Diabetes:</label>
 					<select className="form-control" value={this.props.canDiab} onChange={this.props.onChangeCanDiab}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: NO</option>
 						<option value="2">2: INSULIN DEPENDENT DIABETES</option>
 						<option value="3">3: NON-INSULIN DEPENDENT DIABETES</option>
@@ -815,7 +815,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN DIAB TY</label>
 					<label className="text-secondary" >Diabetes:</label>
 					<select className="form-control" value={this.props.canDiabTy} onChange={this.props.onChangeCanDiabTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: No</option>
 						<option value="2">2: Type I</option>
 						<option value="3">3: Type II</option>
@@ -828,7 +828,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN DRUG TREAT COPD</label>
 					<label className="text-secondary" >Drug Treated COPD:</label>
 					<select className="form-control" value={this.props.canDrugTreatCopd} onChange={this.props.onChangeCanDrugTreatCopd}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -837,7 +837,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN DRUG TREAT HYPERTEN</label>
 					<label className="text-secondary" >Drug Treated Systemic Hypertension:</label>
 					<select className="form-control" value={this.props.canDrugTreatHyperten} onChange={this.props.onChangeCanDrugTreatHyperten}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -846,7 +846,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN EDUCATION</label>
 					<label className="text-secondary" >Patient/s Educational Status:</label>
 					<select className="form-control" value={this.props.canEducation} onChange={this.props.onChangeCanEducation}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: NONE</option>
 						<option value="2">2: GRADE SCHOOL (0-8)</option>
 						<option value="3">3: HIGH SCHOOL (9-12) or GED</option>
@@ -861,7 +861,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN ETHNICITY SRTR</label>
 					<label className="text-secondary" >SRTR Patient Ethnicity:</label>
 					<select className="form-control" value={this.props.canEthnicitySrtr} onChange={this.props.onChangeCanEthnicitySrtr}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="LATINO">LATINO: Latino</option>
 						<option value="NLATIN">NLATIN: Non-Latino or unknown</option>
 					</select>
@@ -870,7 +870,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN GENDER</label>
 					<label className="text-secondary" >Patient/s Gender:</label>
 					<select className="form-control" value={this.props.canGender} onChange={this.props.onChangeCanGender}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="M">Male</option>
 						<option value="F">Female</option>
 					</select>
@@ -884,7 +884,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN INIT ACT STAT CD</label>
 					<label className="text-secondary" >First Active Status:</label>
 					<select className="form-control" value={this.props.canInitActStatCd} onChange={this.props.onChangeCanInitActStatCd}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1010">1010: Status 1A</option>
 						<option value="1020">1020: Status 1B</option>
 						<option value="1030">1030: Status 2</option>
@@ -1156,7 +1156,7 @@ export class TxLiForm1 extends React.Component {
 					<label className="font-weight-bold" >CAN INIT SRTR LAB MELD</label>
 					<label className="text-secondary" >First SRTR MELD/PELD given:</label>
 					<select className="form-control" value={this.props.canInitSrtrLabMeld} onChange={this.props.onChangeCanInitSrtrLabMeld}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1010">1010: Status 1A</option>
 						<option value="1020">1020: Status 1B</option>
 						<option value="1030">1030: Status 2</option>

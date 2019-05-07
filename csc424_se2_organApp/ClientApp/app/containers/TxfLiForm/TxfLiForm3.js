@@ -14,7 +14,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL FAIL REJ ACUTE</label>
 					<label className="text-secondary" >Acute Rejection:</label>
 					<select className="form-control" value={this.props.tflFailRejAcute} onChange={this.props.onChangeTflFailRejAcute}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -23,7 +23,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL FAIL REJ CHRONIC</label>
 					<label className="text-secondary" >Chronic Rejection:</label>
 					<select className="form-control" value={this.props.tflFailRejChronic} onChange={this.props.onChangeTflFailRejChronic}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -32,7 +32,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL FAIL VASC THROMB</label>
 					<label className="text-secondary" >Vascular Thrombosis:</label>
 					<select className="form-control" value={this.props.tflFailVascThromb} onChange={this.props.onChangeTflFailVascThromb}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -41,7 +41,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL FOL CD</label>
 					<label className="text-secondary" >Follow Up code:</label>
 					<select className="form-control" value={this.props.tflFolCd} onChange={this.props.onChangeTflFolCd}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: HOSPITAL DISCHARGE </option>
 						<option value="3">3: 3 MONTH </option>
 						<option value="6">6: 6 MONTH </option>
@@ -184,7 +184,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL FUNCTN STAT</label>
 					<label className="text-secondary" >Functional Status:</label>
 					<select className="form-control" value={this.props.tflFunctnStat} onChange={this.props.onChangeTflFunctnStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Performs activities of daily living with NO assistance.</option>
 						<option value="2">2: Performs activities of daily living with SOME assistance.</option>
 						<option value="3">3: Performs activities of daily living with TOTAL assistance.</option>
@@ -216,7 +216,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL GRAFT STAT</label>
 					<label className="text-secondary" >Graft Status:</label>
 					<select className="form-control" value={this.props.tflGraftStat} onChange={this.props.onChangeTflGraftStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -225,7 +225,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL HEPATIC ARTER THROMB</label>
 					<label className="text-secondary" >If Vascular Thrombosis, Hepatic arterial thrombosis (Ped. Only):</label>
 					<select className="form-control" value={this.props.tflHepaticArterThromb} onChange={this.props.onChangeTflHepaticArterThromb}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -234,7 +234,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL HEPATIC OUTFLOW OBSTRUCT</label>
 					<label className="text-secondary" >If Vascular Thrombosis, Hepatic outflow obstruction (Ped. Only):</label>
 					<select className="form-control" value={this.props.tflHepaticOutflowObstruct} onChange={this.props.onChangeTflHepaticOutflowObstruct}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -253,7 +253,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL HOSP</label>
 					<label className="text-secondary" >Hospitalizations during Follow-Up Period:</label>
 					<select className="form-control" value={this.props.tflHosp} onChange={this.props.onChangeTflHosp}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -267,7 +267,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL IMMUNO DISCONT</label>
 					<label className="text-secondary" >If No Maint Meds, Did Phys. Disc. All Immuno Meds:</label>
 					<select className="form-control" value={this.props.tflImmunoDiscont} onChange={this.props.onChangeTflImmunoDiscont}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -276,7 +276,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL IMMUNO MAINT MEDS</label>
 					<label className="text-secondary" >Any Meds Given during follow-up for Maintenance or Anti-Rejection?:</label>
 					<select className="form-control" value={this.props.tflImmunoMaintMeds} onChange={this.props.onChangeTflImmunoMaintMeds}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Yes, same as previous validated report </option>
 						<option value="2">2: Yes, but different than previous validated report </option>
 						<option value="3">3: None given </option>
@@ -293,7 +293,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL INSULIN DEPND</label>
 					<label className="text-secondary" >Insulin dependent::</label>
 					<select className="form-control" value={this.props.tflInsulinDepnd} onChange={this.props.onChangeTflInsulinDepnd}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -307,7 +307,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL MALIG</label>
 					<label className="text-secondary" >Post transplant Malignancy:</label>
 					<select className="form-control" value={this.props.tflMalig} onChange={this.props.onChangeTflMalig}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -316,7 +316,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL MALIG DON RELATED</label>
 					<label className="text-secondary" >Donor Related:</label>
 					<select className="form-control" value={this.props.tflMaligDonRelated} onChange={this.props.onChangeTflMaligDonRelated}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -325,7 +325,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL MALIG LYMPH</label>
 					<label className="text-secondary" >De Novo Lymphoproliferative:</label>
 					<select className="form-control" value={this.props.tflMaligLymph} onChange={this.props.onChangeTflMaligLymph}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -334,7 +334,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL MALIG RECUR TUMOR</label>
 					<label className="text-secondary" >Recurrence of Pre-Tx Tumor:</label>
 					<select className="form-control" value={this.props.tflMaligRecurTumor} onChange={this.props.onChangeTflMaligRecurTumor}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -343,7 +343,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL MALIG TUMOR</label>
 					<label className="text-secondary" >De Novo Solid Tumor:</label>
 					<select className="form-control" value={this.props.tflMaligTumor} onChange={this.props.onChangeTflMaligTumor}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -352,7 +352,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL MOTOR DEVELOP</label>
 					<label className="text-secondary" >Motor Development (Ped Only):</label>
 					<select className="form-control" value={this.props.tflMotorDevelop} onChange={this.props.onChangeTflMotorDevelop}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Definite Motor delay/impairment</option>
 						<option value="2">2: Probable Motor delay/impairment</option>
 						<option value="3">3: Questionable Motor delay/impairment</option>
@@ -364,7 +364,7 @@ export class TxfLiForm3 extends React.Component {
 					<label className="font-weight-bold" >TFL OTHER THERAPY</label>
 					<label className="text-secondary" >Other Therapies::</label>
 					<select className="form-control" value={this.props.tflOtherTherapy} onChange={this.props.onChangeTflOtherTherapy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>

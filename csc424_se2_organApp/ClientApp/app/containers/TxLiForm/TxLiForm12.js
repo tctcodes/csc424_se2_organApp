@@ -19,7 +19,7 @@ export class TxLiForm12 extends React.Component {
 					<label className="font-weight-bold" >REC PREV ABDOM SURG</label>
 					<label className="text-secondary" >Risk Factors: Previous Abdominal Surgery:</label>
 					<select className="form-control" value={this.props.recPrevAbdomSurg} onChange={this.props.onChangeRecPrevAbdomSurg}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -63,7 +63,7 @@ export class TxLiForm12 extends React.Component {
 					<label className="font-weight-bold" >REC PREV NONFUNCTN TX</label>
 					<label className="text-secondary" >Risk Factors: Previous Primary Non-function Post-Tx:</label>
 					<select className="form-control" value={this.props.recPrevNonfunctnTx} onChange={this.props.onChangeRecPrevNonfunctnTx}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -77,7 +77,7 @@ export class TxLiForm12 extends React.Component {
 					<label className="font-weight-bold" >REC PRIMARY PAY</label>
 					<label className="text-secondary" >Primary Source of Payment//Primary::</label>
 					<select className="form-control" value={this.props.recPrimaryPay} onChange={this.props.onChangeRecPrimaryPay}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Private insurance</option>
 						<option value="2">2: Public insurance - Medicaid</option>
 						<option value="3">3: Public insurance - Medicare FFS (Fee for Service)</option>
@@ -99,7 +99,7 @@ export class TxLiForm12 extends React.Component {
 					<label className="font-weight-bold" >REC PROCEDURE TY LI</label>
 					<label className="text-secondary" >Surgical Procedure Type:</label>
 					<select className="form-control" value={this.props.recProcedureTyLi} onChange={this.props.onChangeRecProcedureTyLi}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: ORTHOTOPIC </option>
 						<option value="2">2: HETEROTOPIC </option>
 					</select>
@@ -108,7 +108,7 @@ export class TxLiForm12 extends React.Component {
 					<label className="font-weight-bold" >REC PX RESEARCH</label>
 					<label className="text-secondary" >Px Part. in Research Protocol for Immuno. Meds:</label>
 					<select className="form-control" value={this.props.recPxResearch} onChange={this.props.onChangeRecPxResearch}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -117,7 +117,7 @@ export class TxLiForm12 extends React.Component {
 					<label className="font-weight-bold" >REC PX STAT</label>
 					<label className="text-secondary" >Patient Status:</label>
 					<select className="form-control" value={this.props.recPxStat} onChange={this.props.onChangeRecPxStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="A">A: LIVING </option>
 						<option value="D">D: DEAD </option>
 						<option value="L">L: LOST </option>
@@ -135,7 +135,7 @@ export class TxLiForm12 extends React.Component {
 					<label className="font-weight-bold" >REC SECONDARY PAY</label>
 					<label className="text-secondary" >Secondary Source of Payment//Secondary::</label>
 					<select className="form-control" value={this.props.recSecondaryPay} onChange={this.props.onChangeRecSecondaryPay}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Private insurance</option>
 						<option value="2">2: Public insurance - Medicaid</option>
 						<option value="3">3: Public insurance - Medicare FFS (Fee for Service)</option>
@@ -159,7 +159,7 @@ export class TxLiForm12 extends React.Component {
 					<label className="font-weight-bold" >REC TIPSS</label>
 					<label className="text-secondary" >Risk Factors: Transjugular Intrahepatic Portacaval Stent Shunt (TIPSS):</label>
 					<select className="form-control" value={this.props.recTipss} onChange={this.props.onChangeRecTipss}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -168,7 +168,7 @@ export class TxLiForm12 extends React.Component {
 					<label className="font-weight-bold" >REC TOLERANCE INDUCTION TECH</label>
 					<label className="text-secondary" >Any tolerance induction technique used::</label>
 					<select className="form-control" value={this.props.recToleranceInductionTech} onChange={this.props.onChangeRecToleranceInductionTech}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -177,7 +177,7 @@ export class TxLiForm12 extends React.Component {
 					<label className="font-weight-bold" >REC TUMOR</label>
 					<label className="text-secondary" >Incidental Tumor found at time of Transplant:</label>
 					<select className="form-control" value={this.props.recTumor} onChange={this.props.onChangeRecTumor}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -186,7 +186,7 @@ export class TxLiForm12 extends React.Component {
 					<label className="font-weight-bold" >REC TUMOR TY</label>
 					<label className="text-secondary" >If yes, specify tumor type:</label>
 					<select className="form-control" value={this.props.recTumorTy} onChange={this.props.onChangeRecTumorTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Adenoma </option>
 						<option value="2">2: Carcinoma </option>
 						<option value="3">3: Carcinoid </option>

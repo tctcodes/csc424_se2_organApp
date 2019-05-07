@@ -14,7 +14,7 @@ export class CandFormMatch extends React.Component {
 					<label className="font-weight-bold" >CAN ACPT A2 DON</label>
 					<label className="text-secondary" >Accept A2 donor?:</label>
 					<select className="form-control" value={this.props.canAcptA2Don} onChange={this.props.onChangeCanAcptA2Don}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -23,7 +23,7 @@ export class CandFormMatch extends React.Component {
 					<label className="font-weight-bold" >CAN ACPT ABO INCOMP</label>
 					<label className="text-secondary" >Accept an incompatible blood type?:</label>
 					<select className="form-control" value={this.props.canAcptAboIncomp} onChange={this.props.onChangeCanAcptAboIncomp}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -32,7 +32,7 @@ export class CandFormMatch extends React.Component {
 					<label className="font-weight-bold" >CAN ACPT EXTRACORP LI</label>
 					<label className="text-secondary" >Accept an Extra-corporeal Liver?:</label>
 					<select className="form-control" value={this.props.canAcptExtracorpLi} onChange={this.props.onChangeCanAcptExtracorpLi}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -41,7 +41,7 @@ export class CandFormMatch extends React.Component {
 					<label className="font-weight-bold" >CAN ACPT HBC POS</label>
 					<label className="text-secondary" >Accept an Hepatitis B Core Antibody Positive Donor?:</label>
 					<select className="form-control" value={this.props.canAcptHbcPos} onChange={this.props.onChangeCanAcptHbcPos}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -50,7 +50,7 @@ export class CandFormMatch extends React.Component {
 					<label className="font-weight-bold" >CAN ACPT HCV POS</label>
 					<label className="text-secondary" >Accept an HCV Antibody Positive Donor?:</label>
 					<select className="form-control" value={this.props.canAcptHcvPos} onChange={this.props.onChangeCanAcptHcvPos}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -59,7 +59,7 @@ export class CandFormMatch extends React.Component {
 					<label className="font-weight-bold" >CAN ACPT LI SEG</label>
 					<label className="text-secondary" >Accept LI segment:</label>
 					<select className="form-control" value={this.props.canAcptLiSeg} onChange={this.props.onChangeCanAcptLiSeg}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -68,7 +68,7 @@ export class CandFormMatch extends React.Component {
 					<label className="font-weight-bold" >CAN ACPT ORG OTHER TEAM</label>
 					<label className="text-secondary" >Accept Intestine if Intestine removed by another procurement team?:</label>
 					<select className="form-control" value={this.props.canAcptOrgOtherTeam} onChange={this.props.onChangeCanAcptOrgOtherTeam}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -77,7 +77,7 @@ export class CandFormMatch extends React.Component {
 					<label className="font-weight-bold" >CAN ACPT PROCUR KI</label>
 					<label className="text-secondary" >Accept Intestine if Kidney procured?:</label>
 					<select className="form-control" value={this.props.canAcptProcurKi} onChange={this.props.onChangeCanAcptProcurKi}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -86,7 +86,7 @@ export class CandFormMatch extends React.Component {
 					<label className="font-weight-bold" >CAN ACPT PROCUR LI</label>
 					<label className="text-secondary" >Accept Intestine if Liver procured?:</label>
 					<select className="form-control" value={this.props.canAcptProcurLi} onChange={this.props.onChangeCanAcptProcurLi}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -95,7 +95,7 @@ export class CandFormMatch extends React.Component {
 					<label className="font-weight-bold" >CAN ACPT PROCUR PA</label>
 					<label className="text-secondary" >Accept Intestine if Pancreas procured?:</label>
 					<select className="form-control" value={this.props.canAcptProcurPa} onChange={this.props.onChangeCanAcptProcurPa}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -124,7 +124,7 @@ export class CandFormMatch extends React.Component {
 					<label className="font-weight-bold" >CAN MED COND</label>
 					<label className="text-secondary" >Medical Condition:</label>
 					<select className="form-control" value={this.props.canMedCond} onChange={this.props.onChangeCanMedCond}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: IN INTENSIVE CARE UNIT</option>
 						<option value="2">2: HOSPITALIZED NOT IN ICU</option>
 						<option value="3">3: NOT HOSPITALIZED</option>
@@ -144,7 +144,7 @@ export class CandFormMatch extends React.Component {
 					<label className="font-weight-bold" >CAN PRELIM XMATCH REQUEST</label>
 					<label className="text-secondary" >Preliminary Crossmatch Required:</label>
 					<select className="form-control" value={this.props.canPrelimXmatchRequest} onChange={this.props.onChangeCanPrelimXmatchRequest}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -158,7 +158,7 @@ export class CandFormMatch extends React.Component {
 					<label className="font-weight-bold" >WL ORG</label>
 					<label className="text-secondary" >Organ of this waitlisted record:</label>
 					<select className="form-control" value={this.props.wlOrg} onChange={this.props.onChangeWlOrg}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="HL">HL: Heart/Lung</option>
 						<option value="HR">HR: Heart</option>
 						<option value="IN">IN: Intestine</option>

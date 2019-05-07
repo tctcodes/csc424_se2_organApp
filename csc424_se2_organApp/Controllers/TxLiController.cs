@@ -49,7 +49,7 @@ namespace csc424_se2_organApp.Controllers
         /// <remarks>api/TxLi/GetRecordTxli</remarks>
         /// <param name="input">Requires in the body: TrrId</param>
         [HttpPost]
-        public JsonResult GetRecordTxLi([FromBody]dynamic input){
+        public JsonResult GetRecordTrrId([FromBody]dynamic input){
             Console.WriteLine(input);
             int num = input.TrrId;
             var isInDb = context.TxLi.Where(r => r.TrrId == num)

@@ -14,7 +14,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LI READMIT</label>
 					<label className="text-secondary" >Liver Readmission//Any Readmission After Initial Discharge::</label>
 					<select className="form-control" value={this.props.donLiReadmit} onChange={this.props.onChangeDonLiReadmit}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -28,7 +28,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LI READMIT REASON</label>
 					<label className="text-secondary" >Liver Readmission Reason//If yes, specify reason for readmission (during first six weeks)::</label>
 					<select className="form-control" value={this.props.donLiReadmitReason} onChange={this.props.onChangeDonLiReadmitReason}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing </option>
 						<option value="1">1: Wound Infection </option>
 						<option value="2">2: Fever </option>
@@ -44,7 +44,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LI REOP</label>
 					<label className="text-secondary" >Liver Reoperation//Reoperation::</label>
 					<select className="form-control" value={this.props.donLiReop} onChange={this.props.onChangeDonLiReop}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -53,7 +53,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LI REOP BILIARY</label>
 					<label className="text-secondary" >Liver Reoperation Biliary//Biliary:</label>
 					<select className="form-control" value={this.props.donLiReopBiliary} onChange={this.props.onChangeDonLiReopBiliary}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -67,7 +67,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LI REOP BLEED</label>
 					<label className="text-secondary" >Liver Reoperation Bleeding Complications//Bleeding Complications:</label>
 					<select className="form-control" value={this.props.donLiReopBleed} onChange={this.props.onChangeDonLiReopBleed}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -81,7 +81,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LI REOP BOWEL</label>
 					<label className="text-secondary" >Liver Reoperation Bowel Obstruction//Bowel Obstruction:</label>
 					<select className="form-control" value={this.props.donLiReopBowel} onChange={this.props.onChangeDonLiReopBowel}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -95,7 +95,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LI REOP FAIL</label>
 					<label className="text-secondary" >Liver Reoperation Liver Failure///Liver Failure Requiring Transplant:</label>
 					<select className="form-control" value={this.props.donLiReopFail} onChange={this.props.onChangeDonLiReopFail}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -109,7 +109,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LI REOP HERNIA</label>
 					<label className="text-secondary" >Liver Reoperation Hernia Repair//Hernia Repair:</label>
 					<select className="form-control" value={this.props.donLiReopHernia} onChange={this.props.onChangeDonLiReopHernia}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -123,7 +123,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LI REOP OTHER</label>
 					<label className="text-secondary" >Liver Reoperation Other//Other Specify:</label>
 					<select className="form-control" value={this.props.donLiReopOther} onChange={this.props.onChangeDonLiReopOther}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -137,7 +137,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LI REOP VASC</label>
 					<label className="text-secondary" >Liver Reoperation Vascular Complications//Vascular Complications:</label>
 					<select className="form-control" value={this.props.donLiReopVasc} onChange={this.props.onChangeDonLiReopVasc}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -151,7 +151,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LI VASC COMPL</label>
 					<label className="text-secondary" >Liver Vascular Complications Requiring Intervention//Vascular Complications Requiring Intervention::</label>
 					<select className="form-control" value={this.props.donLiVascCompl} onChange={this.props.onChangeDonLiVascCompl}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -160,7 +160,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LI VASC COMPL INTERVENTION</label>
 					<label className="text-secondary" >Liver Vascular Complications//If Yes, Specify::</label>
 					<select className="form-control" value={this.props.donLiVascComplIntervention} onChange={this.props.onChangeDonLiVascComplIntervention}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing </option>
 						<option value="1">1: Portal Vein </option>
 						<option value="2">2: Hepatic Vein </option>
@@ -175,7 +175,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LU ARRHYTHM</label>
 					<label className="text-secondary" >Arrhythmia requiring therapy::</label>
 					<select className="form-control" value={this.props.donLuArrhythm} onChange={this.props.onChangeDonLuArrhythm}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Medical therapy </option>
 						<option value="2">2: Cardioversion </option>
 						<option value="3">3: Electrophysiologic Ablation </option>
@@ -190,7 +190,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LU COMPL</label>
 					<label className="text-secondary" >Post-operative complications during the initial hospitalization::</label>
 					<select className="form-control" value={this.props.donLuCompl} onChange={this.props.onChangeDonLuCompl}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -199,7 +199,7 @@ export class DonLivForm7 extends React.Component {
 					<label className="font-weight-bold" >DON LU COMPL REASON</label>
 					<label className="text-secondary" >Post-operative Complications//If Yes, Specify::</label>
 					<select className="form-control" value={this.props.donLuComplReason} onChange={this.props.onChangeDonLuComplReason}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Arrhythmia requiring therapy </option>
 						<option value="2">2: Bleeding requiring surgical or therapeutic bronchoscopic intervention </option>
 						<option value="4">4: Bowel obstruction or ileus not requiring surgical intervention </option>

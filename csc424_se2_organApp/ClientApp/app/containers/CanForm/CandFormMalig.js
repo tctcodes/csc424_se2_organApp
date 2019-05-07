@@ -80,7 +80,7 @@ export class CandFormMalig extends React.Component {
 					<label className="font-weight-bold" >CAN MALIG</label>
 					<label className="text-secondary" >Any previous Malignancy:</label>
 					<select className="form-control" value={this.props.canMalig} onChange={this.props.onChangeCanMalig}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>

@@ -1,6 +1,6 @@
 const axios = require('axios');
 import { put, takeLatest } from 'redux-saga/effects';
-import { GET_RECORD_DONOR_ID, SAVE_RECORD_DON_DEC } from './constants';
+import { GET_RECORD_DONOR_DEC_ID, SAVE_RECORD_DON_DEC } from './constants';
 import { setRecordDonDec } from './actions';
 
 /**
@@ -44,6 +44,6 @@ export default function* DonDecFormSaga() {
   // By using `takeLatest` only the result of the latest API call is applied.
   // It returns task descriptor (just like fork) so we can continue execution
   // It will be cancelled automatically on component unmount
- yield takeLatest(GET_RECORD_DONOR_ID,getRecordDonorId);
+ yield takeLatest(GET_RECORD_DONOR_DEC_ID,getRecordDonorId);
  yield takeLatest(SAVE_RECORD_DON_DEC,updateRecord);
 }

@@ -14,7 +14,7 @@ export class DonDecForm8 extends React.Component {
 					<label className="font-weight-bold" >DON MEET CDC HIGH RISK</label>
 					<label className="text-secondary" >Does the Donor meet CDC guidelines for High Risk for an organ donor::</label>
 					<select className="form-control" value={this.props.donMeetCdcHighRisk} onChange={this.props.onChangeDonMeetCdcHighRisk}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -23,7 +23,7 @@ export class DonDecForm8 extends React.Component {
 					<label className="font-weight-bold" >DON MEET DOUBLE KI CRIT</label>
 					<label className="text-secondary" >Donor meets double KI allocation criteria:</label>
 					<select className="form-control" value={this.props.donMeetDoubleKiCrit} onChange={this.props.onChangeDonMeetDoubleKiCrit}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -32,7 +32,7 @@ export class DonDecForm8 extends React.Component {
 					<label className="font-weight-bold" >DON NON HR BEAT</label>
 					<label className="text-secondary" >Non-Heart Beating Donor:</label>
 					<select className="form-control" value={this.props.donNonHrBeat} onChange={this.props.onChangeDonNonHrBeat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -41,7 +41,7 @@ export class DonDecForm8 extends React.Component {
 					<label className="font-weight-bold" >DON NON HR BEAT CNTL</label>
 					<label className="text-secondary" >Controlled:</label>
 					<select className="form-control" value={this.props.donNonHrBeatCntl} onChange={this.props.onChangeDonNonHrBeatCntl}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -50,7 +50,7 @@ export class DonDecForm8 extends React.Component {
 					<label className="font-weight-bold" >DON NON HR BEAT CORE COOL</label>
 					<label className="text-secondary" >Core Cooling Used:</label>
 					<select className="form-control" value={this.props.donNonHrBeatCoreCool} onChange={this.props.onChangeDonNonHrBeatCoreCool}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -114,7 +114,7 @@ export class DonDecForm8 extends React.Component {
 					<label className="font-weight-bold" >DON PO2 DONE</label>
 					<label className="text-secondary" >Lung - Was pO2 done::</label>
 					<select className="form-control" value={this.props.donPo2Done} onChange={this.props.onChangeDonPo2Done}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -128,7 +128,7 @@ export class DonDecForm8 extends React.Component {
 					<label className="font-weight-bold" >DON PRERECOV DIURETICS</label>
 					<label className="text-secondary" >Pre-Recov Meds given Donor: Diuretics:</label>
 					<select className="form-control" value={this.props.donPrerecovDiuretics} onChange={this.props.onChangeDonPrerecovDiuretics}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -137,7 +137,7 @@ export class DonDecForm8 extends React.Component {
 					<label className="font-weight-bold" >DON PRERECOV MEDS</label>
 					<label className="text-secondary" >Prerecovery Medication:</label>
 					<select className="form-control" value={this.props.donPrerecovMeds} onChange={this.props.onChangeDonPrerecovMeds}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -146,7 +146,7 @@ export class DonDecForm8 extends React.Component {
 					<label className="font-weight-bold" >DON PRERECOV STEROIDS</label>
 					<label className="text-secondary" >Pre-Recov Meds given Donor: Steroids:</label>
 					<select className="form-control" value={this.props.donPrerecovSteroids} onChange={this.props.onChangeDonPrerecovSteroids}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -155,7 +155,7 @@ export class DonDecForm8 extends React.Component {
 					<label className="font-weight-bold" >DON PRERECOV T3</label>
 					<label className="text-secondary" >Pre-Recov Meds given Donor: T3:</label>
 					<select className="form-control" value={this.props.donPrerecovT3} onChange={this.props.onChangeDonPrerecovT3}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -164,7 +164,7 @@ export class DonDecForm8 extends React.Component {
 					<label className="font-weight-bold" >DON PRERECOV T4</label>
 					<label className="text-secondary" >Pre-Recov Meds given Donor: T4:</label>
 					<select className="form-control" value={this.props.donPrerecovT4} onChange={this.props.onChangeDonPrerecovT4}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -173,7 +173,7 @@ export class DonDecForm8 extends React.Component {
 					<label className="font-weight-bold" >DON PREV GASTRO DISEASE</label>
 					<label className="text-secondary" >Previous Gastrointestinal Disease:</label>
 					<select className="form-control" value={this.props.donPrevGastroDisease} onChange={this.props.onChangeDonPrevGastroDisease}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>

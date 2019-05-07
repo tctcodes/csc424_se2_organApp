@@ -14,7 +14,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN ABO</label>
 					<label className="text-secondary" >Patient/s Blood Type:</label>
 					<select className="form-control" value={this.props.canAbo} onChange={this.props.onChangeCanAbo}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="A">A: A</option>
 						<option value="A1">A1: A1</option>
 						<option value="A1B">A1B: A1B</option>
@@ -30,7 +30,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN AGE AT LISTING</label>
 					<label className="text-secondary" >Calculated Candidate Age at Listing:</label>
 					<select className="form-control" value={this.props.canAgeAtListing} onChange={this.props.onChangeCanAgeAtListing}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="0">{"<"}1</option>
 						<option value="1">5-Jan</option>
 						<option value="6">11-Jun</option>
@@ -51,7 +51,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN ARTIFICIAL LI</label>
 					<label className="text-secondary" >Life Support://Artifical Liver:</label>
 					<select className="form-control" value={this.props.canArtificialLi} onChange={this.props.onChangeCanArtificialLi}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -65,7 +65,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN DGN</label>
 					<label className="text-secondary" >Primary Diagnosis:</label>
 					<select className="form-control" value={this.props.canDgn} onChange={this.props.onChangeCanDgn}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="100">100: LU:ALLERGIC BRONCHOPULMONARY ASPERGILLOSIS</option>
 						<option value="103">103: LU:BRONCHOPULMONARY DYSPLASIA</option>
 						<option value="105">105: LU:CILIARY DYSKINESIS SYNDROME</option>
@@ -407,7 +407,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN DGN2</label>
 					<label className="text-secondary" >Secondary Diagnosis:</label>
 					<select className="form-control" value={this.props.canDgn2} onChange={this.props.onChangeCanDgn2}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="100">100: LU:ALLERGIC BRONCHOPULMONARY ASPERGILLOSIS</option>
 						<option value="103">103: LU:BRONCHOPULMONARY DYSPLASIA</option>
 						<option value="105">105: LU:CILIARY DYSKINESIS SYNDROME</option>
@@ -754,7 +754,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN ECMO</label>
 					<label className="text-secondary" >Life Support: ECMO:</label>
 					<select className="form-control" value={this.props.canEcmo} onChange={this.props.onChangeCanEcmo}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -763,7 +763,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN ELECTROLYTE</label>
 					<label className="text-secondary" >Unmanageable fluid-electrolyte losses (IN Pediatric Only):</label>
 					<select className="form-control" value={this.props.canElectrolyte} onChange={this.props.onChangeCanElectrolyte}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -772,7 +772,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN EXHAUST VASC ACCESS</label>
 					<label className="text-secondary" >Exhausted Vascular Access:</label>
 					<select className="form-control" value={this.props.canExhaustVascAccess} onChange={this.props.onChangeCanExhaustVascAccess}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -781,7 +781,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN FUNCTN STAT</label>
 					<label className="text-secondary" >Patient/s Functional Status:</label>
 					<select className="form-control" value={this.props.canFunctnStat} onChange={this.props.onChangeCanFunctnStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Performs activities of daily living with NO assistance.</option>
 						<option value="2">2: Performs activities of daily living with SOME assistance.</option>
 						<option value="3">3: Performs activities of daily living with TOTAL assistance.</option>
@@ -823,7 +823,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN IABP</label>
 					<label className="text-secondary" >Life Support: IABP:</label>
 					<select className="form-control" value={this.props.canIabp} onChange={this.props.onChangeCanIabp}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -832,7 +832,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN IV INOTROP</label>
 					<label className="text-secondary" >Life Support: IV Inotropes:</label>
 					<select className="form-control" value={this.props.canIvInotrop} onChange={this.props.onChangeCanIvInotrop}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -841,7 +841,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN LAST DIAL PRIOR WEEK</label>
 					<label className="text-secondary" >Last non-blank val. of dialysis within prior week:</label>
 					<select className="form-control" value={this.props.canLastDialPriorWeek} onChange={this.props.onChangeCanLastDialPriorWeek}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -850,7 +850,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN LIFE SUPPORT</label>
 					<label className="text-secondary" >Patient on Life Support:</label>
 					<select className="form-control" value={this.props.canLifeSupport} onChange={this.props.onChangeCanLifeSupport}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -859,7 +859,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN LIFE SUPPORT OTHER</label>
 					<label className="text-secondary" >Life Support: Other Mechanism:</label>
 					<select className="form-control" value={this.props.canLifeSupportOther} onChange={this.props.onChangeCanLifeSupportOther}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -883,7 +883,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN MOTOR DEVELOP</label>
 					<label className="text-secondary" >Motor Development (Ped Only):</label>
 					<select className="form-control" value={this.props.canMotorDevelop} onChange={this.props.onChangeCanMotorDevelop}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Definite Motor delay/impairment</option>
 						<option value="2">2: Probable Motor delay/impairment</option>
 						<option value="3">3: Questionable Motor delay/impairment</option>
@@ -895,7 +895,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN MUSCLE WASTING</label>
 					<label className="text-secondary" >Marked Muscle Wasting:</label>
 					<select className="form-control" value={this.props.canMuscleWasting} onChange={this.props.onChangeCanMuscleWasting}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -904,7 +904,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN NEOPLASM</label>
 					<label className="text-secondary" >Neoplasm:</label>
 					<select className="form-control" value={this.props.canNeoplasm} onChange={this.props.onChangeCanNeoplasm}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -913,7 +913,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN PGE</label>
 					<label className="text-secondary" >Life Support: PGE:</label>
 					<select className="form-control" value={this.props.canPge} onChange={this.props.onChangeCanPge}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -922,7 +922,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN PHYSC CAPACITY</label>
 					<label className="text-secondary" >Physical Capacity::</label>
 					<select className="form-control" value={this.props.canPhyscCapacity} onChange={this.props.onChangeCanPhyscCapacity}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: No Limitations</option>
 						<option value="2">2: Limited Mobility</option>
 						<option value="3">3: Wheelchair bound or more limited</option>
@@ -944,7 +944,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN VAD TAH</label>
 					<label className="text-secondary" >Life Support: VAD/TAH:</label>
 					<select className="form-control" value={this.props.canVadTah} onChange={this.props.onChangeCanVadTah}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Disability</option>
 						<option value="2">2: Demands of Treatment</option>
 						<option value="3">3: Insurance Conflict</option>
@@ -961,7 +961,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN VARICEAL BLEEDING</label>
 					<label className="text-secondary" >Variceal Bleeding within Last Two Weeks:</label>
 					<select className="form-control" value={this.props.canVaricealBleeding} onChange={this.props.onChangeCanVaricealBleeding}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -970,7 +970,7 @@ export class CandFormPhys extends React.Component {
 					<label className="font-weight-bold" >CAN VENTILATOR</label>
 					<label className="text-secondary" >Life Support: Ventilator:</label>
 					<select className="form-control" value={this.props.canVentilator} onChange={this.props.onChangeCanVentilator}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>

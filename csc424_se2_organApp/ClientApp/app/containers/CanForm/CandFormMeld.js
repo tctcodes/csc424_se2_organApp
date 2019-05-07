@@ -14,7 +14,7 @@ export class CandFormMeld extends React.Component {
 					<label className="font-weight-bold" >CAN INIT SRTR LAB MELD</label>
 					<label className="text-secondary" >First SRTR MELD/PELD given:</label>
 					<select className="form-control" value={this.props.canInitSrtrLabMeld} onChange={this.props.onChangeCanInitSrtrLabMeld}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1010">1010: Status 1A</option>
 						<option value="1020">1020: Status 1B</option>
 						<option value="1030">1030: Status 2</option>
@@ -276,7 +276,7 @@ export class CandFormMeld extends React.Component {
 					<label className="font-weight-bold" >CAN INIT SRTR LAB MELD TY</label>
 					<label className="text-secondary" >First SRTR MELD/PELD type given:</label>
 					<select className="form-control" value={this.props.canInitSrtrLabMeldTy} onChange={this.props.onChangeCanInitSrtrLabMeldTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="M">MELD</option>
 						<option value="P">PELD</option>
 					</select>
@@ -290,7 +290,7 @@ export class CandFormMeld extends React.Component {
 					<label className="font-weight-bold" >CAN LAST ASCITES</label>
 					<label className="text-secondary" >Candidate Last Ascites (used for MELD):</label>
 					<select className="form-control" value={this.props.canLastAscites} onChange={this.props.onChangeCanLastAscites}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Absent</option>
 						<option value="2">2: Slight</option>
 						<option value="3">3: Moderate</option>
@@ -306,7 +306,7 @@ export class CandFormMeld extends React.Component {
 					<label className="font-weight-bold" >CAN LAST ENCEPH</label>
 					<label className="text-secondary" >Candidate Last Encephalopathy (used for MELD):</label>
 					<select className="form-control" value={this.props.canLastEnceph} onChange={this.props.onChangeCanLastEnceph}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: None</option>
 						<option value="2">2: 1-2</option>
 						<option value="3">3: 3-4</option>
@@ -332,7 +332,7 @@ export class CandFormMeld extends React.Component {
 					<label className="font-weight-bold" >CAN LAST SRTR LAB MELD</label>
 					<label className="text-secondary" >Last SRTR MELD/PELD given:</label>
 					<select className="form-control" value={this.props.canLastSrtrLabMeld} onChange={this.props.onChangeCanLastSrtrLabMeld}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1010">1010: Status 1A</option>
 						<option value="1020">1020: Status 1B</option>
 						<option value="1030">1030: Status 2</option>
@@ -594,7 +594,7 @@ export class CandFormMeld extends React.Component {
 					<label className="font-weight-bold" >CAN LAST SRTR LAB MELD TY</label>
 					<label className="text-secondary" >Last SRTR MELD/PELD type given:</label>
 					<select className="form-control" value={this.props.canLastSrtrLabMeldTy} onChange={this.props.onChangeCanLastSrtrLabMeldTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="M">MELD</option>
 						<option value="P">PELD</option>
 					</select>

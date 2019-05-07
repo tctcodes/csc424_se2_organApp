@@ -34,7 +34,7 @@ export class DonLivForm3 extends React.Component {
 					<label className="font-weight-bold" >DON EBV TESTED</label>
 					<label className="text-secondary" >EBV:</label>
 					<select className="form-control" value={this.props.donEbvTested} onChange={this.props.onChangeDonEbvTested}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -43,7 +43,7 @@ export class DonLivForm3 extends React.Component {
 					<label className="font-weight-bold" >DON EDUCATION</label>
 					<label className="text-secondary" >Highest Education Level:</label>
 					<select className="form-control" value={this.props.donEducation} onChange={this.props.onChangeDonEducation}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: NONE</option>
 						<option value="2">2: GRADE SCHOOL (0-8)</option>
 						<option value="3">3: HIGH SCHOOL (9-12) or GED</option>
@@ -58,7 +58,7 @@ export class DonLivForm3 extends React.Component {
 					<label className="font-weight-bold" >DON ETHNICITY SRTR</label>
 					<label className="text-secondary" >SRTR Donor Ethnicity:</label>
 					<select className="form-control" value={this.props.donEthnicitySrtr} onChange={this.props.onChangeDonEthnicitySrtr}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="LATINO">LATINO: Latino</option>
 						<option value="NLATIN">NLATIN: Non-Latino or unknown</option>
 					</select>
@@ -92,7 +92,7 @@ export class DonLivForm3 extends React.Component {
 					<label className="font-weight-bold" >DON FREE</label>
 					<label className="text-secondary" >Secondary source of payment: Free:</label>
 					<select className="form-control" value={this.props.donFree} onChange={this.props.onChangeDonFree}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -101,7 +101,7 @@ export class DonLivForm3 extends React.Component {
 					<label className="font-weight-bold" >DON FUNCTN STAT</label>
 					<label className="text-secondary" >Functional Status::</label>
 					<select className="form-control" value={this.props.donFunctnStat} onChange={this.props.onChangeDonFunctnStat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Performs activities of daily living with NO assistance.</option>
 						<option value="2">2: Performs activities of daily living with SOME assistance.</option>
 						<option value="3">3: Performs activities of daily living with TOTAL assistance.</option>
@@ -143,7 +143,7 @@ export class DonLivForm3 extends React.Component {
 					<label className="font-weight-bold" >DON GENDER</label>
 					<label className="text-secondary" >Donor/s Gender:</label>
 					<select className="form-control" value={this.props.donGender} onChange={this.props.onChangeDonGender}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="M">Male</option>
 						<option value="F">Female</option>
 					</select>
@@ -152,7 +152,7 @@ export class DonLivForm3 extends React.Component {
 					<label className="font-weight-bold" >DON HAPLO TY MATCH</label>
 					<label className="text-secondary" >Haplotype Match Between Live Donor & Recipient:</label>
 					<select className="form-control" value={this.props.donHaploTyMatch} onChange={this.props.onChangeDonHaploTyMatch}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: 0 </option>
 						<option value="2">2: .5 </option>
 						<option value="3">3: 1 </option>

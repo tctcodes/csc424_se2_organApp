@@ -14,7 +14,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON HIGH CREAT</label>
 					<label className="text-secondary" >Donor serum creatinine > 1.5 (1= yes, 0= no):</label>
 					<select className="form-control" value={this.props.donHighCreat} onChange={this.props.onChangeDonHighCreat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -23,7 +23,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON HIST CANCER</label>
 					<label className="text-secondary" >History of Cancer:</label>
 					<select className="form-control" value={this.props.donHistCancer} onChange={this.props.onChangeDonHistCancer}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: NO </option>
 						<option value="2">2: SKIN - SQUAMOUS, BASAL CELL </option>
 						<option value="3">3: SKIN - MELANOMA </option>
@@ -64,7 +64,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON HIST CIGARETTE GT20 PKYR</label>
 					<label className="text-secondary" >Cigarette Use > 20 Pack Years - Ever:</label>
 					<select className="form-control" value={this.props.donHistCigaretteGt20Pkyr} onChange={this.props.onChangeDonHistCigaretteGt20Pkyr}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -73,7 +73,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON HIST COCAINE</label>
 					<label className="text-secondary" >Cocaine Use:</label>
 					<select className="form-control" value={this.props.donHistCocaine} onChange={this.props.onChangeDonHistCocaine}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -82,7 +82,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON HIST DIAB</label>
 					<label className="text-secondary" >History of Diabetes:</label>
 					<select className="form-control" value={this.props.donHistDiab} onChange={this.props.onChangeDonHistDiab}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: NO </option>
 						<option value="2">2: YES, 0-5 YEARS </option>
 						<option value="3">3: YES, 6-10 YEARS </option>
@@ -95,7 +95,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON HIST HYPERTEN</label>
 					<label className="text-secondary" >History of Hypertension:</label>
 					<select className="form-control" value={this.props.donHistHyperten} onChange={this.props.onChangeDonHistHyperten}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: NO </option>
 						<option value="2">2: YES, 0-5 YEARS </option>
 						<option value="3">3: YES, 6-10 YEARS </option>
@@ -108,7 +108,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON HIST IV DRUG</label>
 					<label className="text-secondary" >IV Drug Use - Pre-6/30/2004:</label>
 					<select className="form-control" value={this.props.donHistIvDrug} onChange={this.props.onChangeDonHistIvDrug}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -117,7 +117,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON HIST OTHER DRUG</label>
 					<label className="text-secondary" >Other Drug Abuse:</label>
 					<select className="form-control" value={this.props.donHistOtherDrug} onChange={this.props.onChangeDonHistOtherDrug}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -126,7 +126,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON HTN</label>
 					<label className="text-secondary" >Donor history of hypertension (1= yes, 0= no):</label>
 					<select className="form-control" value={this.props.donHtn} onChange={this.props.onChangeDonHtn}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -135,7 +135,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON INOTROP AGENT GE3</label>
 					<label className="text-secondary" >Three or More Inotropic Agents at Time of Incision:</label>
 					<select className="form-control" value={this.props.donInotropAgentGe3} onChange={this.props.onChangeDonInotropAgentGe3}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -144,7 +144,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON INOTROP SUPPORT</label>
 					<label className="text-secondary" >Inotropic Support:</label>
 					<select className="form-control" value={this.props.donInotropSupport} onChange={this.props.onChangeDonInotropSupport}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -153,7 +153,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON INSULIN</label>
 					<label className="text-secondary" >Insulin::</label>
 					<select className="form-control" value={this.props.donInsulin} onChange={this.props.onChangeDonInsulin}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -162,7 +162,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON LIVING DON COD</label>
 					<label className="text-secondary" >Donor/s Cause of Death:</label>
 					<select className="form-control" value={this.props.donLivingDonCod} onChange={this.props.onChangeDonLivingDonCod}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Donation Related </option>
 						<option value="2">2: Other Cause </option>
 						<option value="3">3: Infection: Donation/Surgery Related </option>
@@ -184,7 +184,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON LI BIOPSY</label>
 					<label className="text-secondary" >Liver Biopsy:</label>
 					<select className="form-control" value={this.props.donLiBiopsy} onChange={this.props.onChangeDonLiBiopsy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -193,7 +193,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON MEET CDC HIGH RISK</label>
 					<label className="text-secondary" >Does the Donor meet CDC guidelines for High Risk for an organ donor::</label>
 					<select className="form-control" value={this.props.donMeetCdcHighRisk} onChange={this.props.onChangeDonMeetCdcHighRisk}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -202,7 +202,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON NON HR BEAT</label>
 					<label className="text-secondary" >Non-Heart Beating Donor:</label>
 					<select className="form-control" value={this.props.donNonHrBeat} onChange={this.props.onChangeDonNonHrBeat}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -226,7 +226,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON PRERECOV DIURETICS</label>
 					<label className="text-secondary" >Pre-Recov Meds given Donor: Diuretics:</label>
 					<select className="form-control" value={this.props.donPrerecovDiuretics} onChange={this.props.onChangeDonPrerecovDiuretics}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
@@ -235,7 +235,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON RACE</label>
 					<label className="text-secondary" >Donor/s race:</label>
 					<select className="form-control" value={this.props.donRace} onChange={this.props.onChangeDonRace}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="">Missing</option>
 						<option value="8">8: White</option>
 						<option value="16">16: Black or African American</option>
@@ -253,7 +253,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON RACE SRTR</label>
 					<label className="text-secondary" >SRTR Donor Race:</label>
 					<select className="form-control" value={this.props.donRaceSrtr} onChange={this.props.onChangeDonRaceSrtr}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="ASIAN">ASIAN: Asian</option>
 						<option value="BLACK">BLACK: Black</option>
 						<option value="MULTI">MULTI: Multiracial</option>
@@ -271,7 +271,7 @@ export class TxLiForm5 extends React.Component {
 					<label className="font-weight-bold" >DON RELATIONSHIP TY</label>
 					<label className="text-secondary" >Living Donor/s Relationship to Recipient:</label>
 					<select className="form-control" value={this.props.donRelationshipTy} onChange={this.props.onChangeDonRelationshipTy}>
-						<option value="" hidden disabled selected/>
+						<option value="" hidden disabled />
 						<option value="1">1: Biological, blood related Parent </option>
 						<option value="2">2: Biological, blood related Child </option>
 						<option value="3">3: Biological, blood related Identical Twin </option>
