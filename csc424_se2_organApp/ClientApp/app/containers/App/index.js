@@ -28,6 +28,8 @@ import makeSelectAuth from '../../authSelector';
 import LoginPage from 'containers/LoginPage/Loadable';
 import SpecialNav from "../../components/SpecialNav";
 import PrivateRoute from "./PrivateRoute"
+import AboutPage from 'components/About/index.js';
+import StaffHome from 'containers/StaffHome/Loadable';
 
 
 
@@ -45,14 +47,16 @@ function App(props) {
         <Route exact path="/" component={HomePage} />
         <Route path="/signup" component={SignUpPage} />
         <Route path="/login" component={LoginPage} />
+        <Route path="/about" component={AboutPage} />
         <PrivateRoute path="/client/home" component={ClientHome}/>
         <PrivateRoute path="/client/information" component={RegForm} />
+        <PrivateRoute path ="/staff/home" component={StaffHome}/>
         <PrivateRoute path="/staff/searchbox" component={SearchBox} />
-        <PrivateRoute path="/staff/canform" component={CanForm} />
         <PrivateRoute path="/staff/dondecform" component={DonDecForm} />
         <PrivateRoute path="/staff/donlivform" component={DonLivForm} />
         <PrivateRoute path="/staff/txliform" component={TxLiForm} />
         <PrivateRoute path="/staff/txfliform" component={TxfLiForm} />
+        <PrivateRoute path="/staff/canform/:pxid" component={CanForm} />
         <Route component={NotFoundPage} />
       </Switch>
   </div>);

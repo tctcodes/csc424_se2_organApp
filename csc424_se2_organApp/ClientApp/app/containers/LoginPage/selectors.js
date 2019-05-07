@@ -18,13 +18,11 @@ const selectLoginPageDomain = state => state.get("loginPage", initialState);
 const makeSelectEmail = () =>
   createSelector(selectLoginPageDomain, substate => substate.get('email'));
 
-const makeSelectRole = () =>
-  createSelector(selectLoginPageDomain, substate => substate.get('role'));
 
 const makeSelectPassword = () =>
   createSelector(selectLoginPageDomain, substate => substate.get('password'));
 
-const makeSelectToken = () =>
-  createSelector(selectLoginPageDomain, substate => substate.get('token'));
+const makeSelectLoading = () =>
+  createSelector(selectLoginPageDomain, substate => substate.get('loading'));
 
-export { selectLoginPageDomain, makeSelectEmail, makeSelectPassword, makeSelectToken, makeSelectRole};
+export { selectLoginPageDomain, makeSelectEmail, makeSelectPassword, makeSelectLoading,};

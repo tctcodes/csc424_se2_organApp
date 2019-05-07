@@ -5,11 +5,11 @@ import { decodeToken} from 'utils/decodeToken';
 import {setCurrentUser} from '../../authActions';
 import { LOGIN } from './constants';
 import {setAuthToken} from 'utils/setAuthToken';
+import { setLoading } from '../LoginPage/actions';
 
-/**
- * Github repos request/response handler
- */
+
 export function* login() {
+  yield put(setLoading(true));
   const email = yield select(makeSelectEmail());
   const password = yield select(makeSelectPassword());
   
@@ -28,10 +28,12 @@ export function* login() {
       yield setAuthToken(response.data.token);
       yield put(setCurrentUser(decoded));
     }
-    console.log(localStorage.getItem('token'));
   }
   catch(err){
     console.log(err)
+  }
+  finally{
+    yield put(setLoading(false));
   }
 }
 

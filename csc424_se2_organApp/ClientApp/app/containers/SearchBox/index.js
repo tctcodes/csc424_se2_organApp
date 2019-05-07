@@ -15,54 +15,58 @@ import {
   Button,
   Dropdown,
   Navbar,
+  Nav
 } from "react-bootstrap";
-import { setPXID, submitSearch } from './actions';
-import { makeSelectPXID, makeSelectSearchResults } from './selectors';
+
+import { setPXID, submitSearch, setBloodGroup, setDonorOrCandidate, setPXState, downloadResult } from './actions';
+import { makeSelectPXID, makeSelectSearchResults, makeSelectPXState, makeSelectBloodGroup, makeSelectDonorOrCandidate } from './selectors';
+import CanForm from '../CanForm';
 
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
 import reducer from "./reducer";
 import saga from "./saga";
 
-const BLOOD_GROUPS = [
-  'A+',
-  'A-',
-  'B+',
-  'B-',
-  'AB+',
-  'AB-',
-  'O+',
-  'O-',
-];
-
-const US_STATE = [
-  'AL',
-  'AK',
-  'AZ',
-  'AR',
-];
-
 function PrintPxRecord(props) {
-  console.log('hello!');
-  console.log(props.pxidRecord.size);
-  if(props.pxidRecord.size === 0) {
-    console.log('True');
+  if(props.searchResults.size === 0) {
     return (
       <h1>Input search request for Patient Record</h1>
     );
   } else {
-    console.log('False');
-    const recordList = Object.keys(props.pxidRecord).map(key =>
-      <p key={key}>{key}: {props.pxidRecord[key]} </p>
+
+    const recordList = props.searchResults.map((record, index) =>
+      <tr id={record.pxId} key={index}>
+        <td>{record.pxId}</td>
+        <td>{record.persId}</td>
+        <td>{record.canPermState}</td>
+        <td>{record.canAbo}</td>
+        <td>{record.canAgeAtListing}</td>
+      </tr>
     )
     return (
-      <div>{recordList}</div>
+      <table onClick={props.selectRecord} className="table table-hover">
+        <thead>
+          <tr>
+            <th>Patient ID</th>
+            <th>Personal ID</th>
+            <th>State</th>
+            <th>Blood Type</th>
+            <th>Age at Listing</th>
+          </tr>
+        </thead>
+        <tbody>{recordList}</tbody>
+      </table>
     );
   }
 }
 
 /* eslint-disable react/prefer-stateless-function */
 export class SearchBox extends React.Component {
+
+  selectRecord = (e)=>{
+    //pushes canform record
+    this.props.history.push(`/staff/canform/:${e.target.parentNode.id}`)
+  }
 
   render() {
     return (
@@ -85,7 +89,11 @@ export class SearchBox extends React.Component {
             </Form>
             {/* Donor/Candidate Selection */}
             <Form.Group className="mt-3">
-              <Form.Control as="select">
+              <Form.Control
+                as="select"
+                onChange={this.props.onSetDonorOrCandidate}
+                >
+                <option>Select Status</option>
                 <option>Donor</option>
                 <option>Candidate</option>
               </Form.Control>
@@ -98,22 +106,81 @@ export class SearchBox extends React.Component {
               <Dropdown.Menu>
                 <Form.Group>
                   <Form.Label>Blood Group</Form.Label>
-                  <Form.Control as="select">
-                    <option>A+</option>
-                    <option>A-</option>
-                    <option>B+</option>
-                    <option>B-</option>
-                    <option>AB+</option>
-                    <option>AB-</option>
-                    <option>O+</option>
-                    <option>O-</option>
+                  <Form.Control
+                    as="select"
+                    onChange={this.props.onSetBloodGroup}
+                    >
+                    <option>Select Blood Group</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>AB</option>
+                    <option>O</option>
                   </Form.Control>
                   <Form.Label>State</Form.Label>
-                  <Form.Control as="select">
-                    <option>Alabama</option>
-                    <option>Alaska</option>
-                    <option>Arizona</option>
-                    <option>Arkansas</option>
+                  <Form.Control
+                    as="select"
+                    onChange={this.props.onSetPxState}
+                    >
+                    <option>Select State</option>
+                    <option>AL</option>
+                    <option>AK</option>
+                    <option>AS</option>
+                    <option>AZ</option>
+                    <option>AR</option>
+                    <option>CA</option>
+                    <option>CO</option>
+                    <option>CT</option>
+                    <option>DE</option>
+                    <option>DC</option>
+                    <option>FM</option>
+                    <option>FL</option>
+                    <option>GA</option>
+                    <option>GU</option>
+                    <option>HI</option>
+                    <option>ID</option>
+                    <option>IL</option>
+                    <option>IN</option>
+                    <option>IA</option>
+                    <option>KS</option>
+                    <option>KY</option>
+                    <option>LA</option>
+                    <option>ME</option>
+                    <option>MH</option>
+                    <option>MD</option>
+                    <option>MA</option>
+                    <option>MI</option>
+                    <option>MN</option>
+                    <option>MS</option>
+                    <option>MO</option>
+                    <option>MT</option>
+                    <option>NE</option>
+                    <option>NV</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                    <option>NM</option>
+                    <option>NY</option>
+                    <option>NC</option>
+                    <option>ND</option>
+                    <option>MP</option>
+                    <option>OH</option>
+                    <option>OK</option>
+                    <option>OR</option>
+                    <option>PW</option>
+                    <option>PA</option>
+                    <option>PR</option>
+                    <option>RI</option>
+                    <option>SC</option>
+                    <option>SD</option>
+                    <option>TN</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                    <option>VT</option>
+                    <option>VI</option>
+                    <option>VA</option>
+                    <option>WA</option>
+                    <option>WV</option>
+                    <option>WI</option>
+                    <option>WY</option>
                   </Form.Control>
                 </Form.Group>
               </Dropdown.Menu>
@@ -126,12 +193,11 @@ export class SearchBox extends React.Component {
             >
               Search
             </Button>
+            <Button style={{marginLeft:"auto"}} onClick={this.props.onDownload}>Download Result</Button>
           </Navbar>
         </div>
         {/* Display patient information */}
-        <div>
-          <PrintPxRecord pxidRecord={this.props.pxidRecord}/>
-        </div>
+        <PrintPxRecord selectRecord={this.selectRecord} searchResults={this.props.searchResults}/>
       </div>
     );
   }
@@ -141,17 +207,28 @@ SearchBox.propTypes = {
   pxid: PropTypes.string,
   onSetPXID: PropTypes.func,
   onSearchSubmit: PropTypes.func,
+  onSetBloodGroup: PropTypes.func,
+  onSetDonorOrCandidate: PropTypes.func,
+  onSetPxState: PropTypes.func,
+  onDownload: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
   pid: makeSelectPXID(),
-  pxidRecord: makeSelectSearchResults(),
+  pxState: makeSelectPXState(),
+  bloodGroup: makeSelectBloodGroup(),
+  donorOrCandidate: makeSelectDonorOrCandidate(),
+  searchResults: makeSelectSearchResults(),
 });
 
 function mapDispatchToProps(dispatch) {
   return {
     onSetPXID: evt => dispatch(setPXID(evt.target.value)),
+    onSetBloodGroup: evt => dispatch(setBloodGroup(evt.target.value)),
+    onSetDonorOrCandidate: evt => dispatch(setDonorOrCandidate(evt.target.value)),
+    onSetPxState: evt => dispatch(setPXState(evt.target.value)),
     onSearchSubmit: () => dispatch(submitSearch()),
+    onDownload: () => dispatch(downloadResult())
   };
 }
 

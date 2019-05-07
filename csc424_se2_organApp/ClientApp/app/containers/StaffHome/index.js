@@ -1,6 +1,6 @@
 /**
  *
- * ClientHome
+ * StaffHome
  *
  */
 
@@ -13,43 +13,43 @@ import { compose } from "redux";
 
 import injectSaga from "utils/injectSaga";
 import injectReducer from "utils/injectReducer";
-import makeSelectClientHome from "./selectors";
+import makeSelectStaffHome from "./selectors";
 import reducer from "./reducer";
 import saga from "./saga";
-import {checkInfo} from "./actions"
-import makeSelectAuth from "../../authSelector";
+
 
 /* eslint-disable react/prefer-stateless-function */
-export class ClientHome extends React.PureComponent {
-  componentDidMount(){
-    this.props.checkInfo();
+export class StaffHome extends React.PureComponent {
+  constructor(){
+    super();  
+    this.state ={
+    
+    };
   }
+ 
   render() {
     return (
       <div>
         <Helmet>
-          <title>ClientHome</title>
-          <meta name="description" content="Description of ClientHome" />
+          <title>StaffHome</title>
+          <meta name="description" content="Description of StaffHome" />
         </Helmet>
-        WELCOME!
       </div>
     );
   }
 }
 
-ClientHome.propTypes = {
+StaffHome.propTypes = {
   dispatch: PropTypes.func.isRequired
 };
 
 const mapStateToProps = createStructuredSelector({
-  clientHome: makeSelectClientHome(),
-  auth: makeSelectAuth()
+  staffHome: makeSelectStaffHome()
 });
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch,
-    checkInfo: ()=>dispatch(checkInfo())
+    dispatch
   };
 }
 
@@ -58,11 +58,11 @@ const withConnect = connect(
   mapDispatchToProps
 );
 
-const withReducer = injectReducer({ key: "clientHome", reducer });
-const withSaga = injectSaga({ key: "clientHome", saga });
+const withReducer = injectReducer({ key: "staffHome", reducer });
+const withSaga = injectSaga({ key: "staffHome", saga });
 
 export default compose(
   withReducer,
   withSaga,
   withConnect
-)(ClientHome);
+)(StaffHome);

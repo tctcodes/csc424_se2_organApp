@@ -1,6 +1,5 @@
 import React from 'react';
-import {Route, Redirect, withRouter } from 'react-router-dom';
-import axios from 'axios';
+import {Route, Redirect } from 'react-router-dom';
 import {connect} from 'react-redux';
 import { createStructuredSelector } from "reselect";
 import makeSelectAuth from "../../authSelector";
@@ -9,26 +8,6 @@ import makeSelectAuth from "../../authSelector";
 
 
 
-  
-// export const checkAuth = () => {
-//     const token = localStorage.getItem("token");
-//     let decoded;
-//     if (token != null){
-//       decoded = decodeToken(token);
-//       try {
-//         if (decoded.exp < new Date().getTime() / 1000) {
-//           return { success: false};
-//         }
-//       } catch (e) {
-//         console.log(e);
-//         return { success: false};
-//       }
-//     } else {
-//       return { success: false };
-//     }
-//     setAuthToken(token);
-//     return { success: true, role: decoded.role };
-//   };
 
 const PrivateRoute = ({ component: Component, auth, ...rest }) => {
   return (
@@ -46,7 +25,12 @@ const PrivateRoute = ({ component: Component, auth, ...rest }) => {
             }} />
         )
       else {
-        props.history.goBack();
+  
+        return(
+        <Redirect to={{
+          pathname: '/',
+          state: { from: props.location }
+        }}/>);
 
       }
     }

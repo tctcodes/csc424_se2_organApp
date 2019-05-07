@@ -8,7 +8,7 @@ namespace csc424_se2_organApp.Models
         public int PersId { get; set; }
         public string Ssn { get; set; }
         public string Address { get; set; }
-        public string Fullname { get; set; }
+        public string FullName { get; set; }
         public decimal? CanAcademicLevel { get; set; }
         public decimal? CanAcademicProgress { get; set; }
         public decimal? CanCitizenship { get; set; }
@@ -26,6 +26,7 @@ namespace csc424_se2_organApp.Models
         public decimal? CanYearEntryUs { get; set; }
         public decimal? CanWorkNoStat { get; set; }
         public decimal? CanWorkYesStat { get; set; }
+        public string RacesSelected { get; set; }
 
         public virtual Users EmailNavigation { get; set; }
     }
