@@ -18,7 +18,7 @@ import {
   Nav
 } from "react-bootstrap";
 
-import { setPXID, submitSearch, setBloodGroup, setDonorOrCandidate, setPXState } from './actions';
+import { setPXID, submitSearch, setBloodGroup, setDonorOrCandidate, setPXState, downloadResult } from './actions';
 import { makeSelectPXID, makeSelectSearchResults, makeSelectPXState, makeSelectBloodGroup, makeSelectDonorOrCandidate } from './selectors';
 import CanForm from '../CanForm';
 
@@ -210,6 +210,7 @@ SearchBox.propTypes = {
   onSetBloodGroup: PropTypes.func,
   onSetDonorOrCandidate: PropTypes.func,
   onSetPxState: PropTypes.func,
+  onDownload: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({

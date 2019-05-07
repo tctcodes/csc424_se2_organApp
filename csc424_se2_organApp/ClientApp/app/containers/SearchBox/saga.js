@@ -1,6 +1,6 @@
 const axios = require('axios');
 import { takeLatest, call, put, select } from 'redux-saga/effects';
-import { makeSelectPXID, makeSelectBloodGroup, makeSelectDonorOrCandidate, makeSelectPXState } from './selectors';
+import { makeSelectPXID, makeSelectBloodGroup, makeSelectDonorOrCandidate, makeSelectPXState, makeSelectSearchResults } from './selectors';
 import {push} from 'connected-react-router'
 import { setSearchResults } from './actions';
 import { SUBMIT_SEARCH, DOWNLOAD_RESULTS } from './constants';
@@ -70,19 +70,14 @@ export function* getPXIDRecord() {
 
 export function* download(){
 
-  const PxId=yield select(makeSelectPXID());
-  let arr = []
-  arr.push(PxId);
+  const searchResults = yield select(makeSelectSearchResults());
   let body = {
-    PxId: [...arr]
-  }
-  try {
-    const response = yield axios.post('/api/Cand/DownloadRecord',body)
-    downloadJson(response,`${PxId}`);
-  }
-  catch(err){
-    console.log(err);
-  }
+    PxId: searchResults,
+  };
+
+  console.log(body.PxId);
+
+  downloadJson(searchResults, 'search_results');
 }
 // Individual exports for testing
 export default function* searchBoxSagaList() {
