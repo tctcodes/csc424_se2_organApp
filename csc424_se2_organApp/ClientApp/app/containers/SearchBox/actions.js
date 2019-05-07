@@ -12,6 +12,7 @@ import {
   SET_DONOR_OR_CANDIDATE,
   SET_SEARCH_RESULTS,
   SUBMIT_SEARCH,
+  DOWNLOAD_RESULTS,
 } from "./constants";
 
 export function setToken(token) {
@@ -60,4 +61,10 @@ export function submitSearch() {
   return {
     type: SUBMIT_SEARCH,
   };
+}
+
+export function downloadResult(){
+  return{
+    type: DOWNLOAD_RESULTS
+  }
 }

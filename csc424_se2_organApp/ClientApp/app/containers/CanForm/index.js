@@ -31,15 +31,17 @@ export class CanForm extends React.Component {
 	constructor(props, context) {
 		super(props, context);
 		this.state = {
-		  key: 'malig',
+		  key: 'meld',
 		};
 	  }
 	
 	componentDidMount(){
 		//console.log(this.props.selectedPxId);		
 		//this.props.selectedPxId = "1232752"
-  	this.props.onGetRecordPxId(/* this.props.selectedPxId */"1232752");
+		console.log("prop",this.props.match.params.pxid.slice(1))
+  	this.props.onGetRecordPxId((this.props.match.params.pxid).slice(1)/* "1232752" */);
 	}
+	
 	
 
   render(){
@@ -50,10 +52,10 @@ export class CanForm extends React.Component {
 				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossOrigin="anonymous" />
 			</Helmet>
 			<div className="sticky-top float-right bg-light border-bottom">
-				<Button variant="primary" type="button" className="mr-1" onClick={e => this.props.onGetRecordPxId(this.props.selectedPxId)} value={"\tRevert\t"}>
+				<Button variant="primary" type="button" className="mr-1" onClick={e => this.props.onGetRecordPxId(this.props.pxId)} value={"\tRevert\t"}>
 					Revert
         </Button>
-				<Button variant="primary" type="button" onClick={e => this.props.onSaveRecord(this.props.record)}>
+				<Button variant="primary" type="button" onClick={e => this.props.onSaveRecord(this.props.pxId)}>
 					Save
         </Button>
 			</div>
@@ -94,6 +96,7 @@ export class CanForm extends React.Component {
 
 const mapStateToProps = createStructuredSelector({
 	record: selects.makeSelectState(),
+	pxId: selects.makeSelectPxId(),
 });
   
 function mapDispatchToProps(dispatch) {

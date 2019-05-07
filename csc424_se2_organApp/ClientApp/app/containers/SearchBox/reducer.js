@@ -20,7 +20,7 @@ export const initialState = fromJS({
   bloodGroup: '',
   pxState: '',
   donorOrCandidate: '',
-  searchResults: {},
+  searchResults: [],
 });
 
 function searchBoxReducer(state = initialState, action) {
