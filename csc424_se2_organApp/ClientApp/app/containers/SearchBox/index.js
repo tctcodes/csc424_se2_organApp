@@ -34,8 +34,8 @@ function PrintPxRecord(props) {
     );
   } else {
 
-    const recordList = props.searchResults.map(record =>
-      <tr id={record.pxId}>
+    const recordList = props.searchResults.map((record, index) =>
+      <tr id={record.pxId} key={index}>
         <td>{record.pxId}</td>
         <td>{record.persId}</td>
         <td>{record.canPermState}</td>
