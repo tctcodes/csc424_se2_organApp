@@ -96,11 +96,12 @@ export class RegForm extends React.PureComponent {
     
   }
   static getDerivedStateFromProps(props,state){
-  if (state !== props.state){
+  if (state !== props.state && !props.state.hasOwnProperty('size')){
     return{
       ...props.state
     }
   }
+  return null;
  }
   
   onChangeEmail = (e) =>{
@@ -283,9 +284,13 @@ export class RegForm extends React.PureComponent {
       canWorkIncome: workForIncome,
 
     },()=>{
+      console.log(this.state);
+      console.log(checkProperties(this.state.address));
       Object.keys(this.state).map(e=>{
-        if(this.state[e]==='' || this.state[e]===0||!checkProperties(this.state.Address))
+        if(this.state[e]==='' || this.state[e]===0||!checkProperties(this.state.address)){
           complete = false
+          console.log(e);
+        }
       })
       
       if(complete === false){
