@@ -29,6 +29,7 @@
 <!-- Loop through member types and display their properties and methods -->
 <xsl:template match="//member[contains(@name,'T:')]">
   <style>
+    *       {margin: 5px;}
     .tab   {margin-left:40px;}
     h5, p    {margin-left: 80px;}
   </style>
