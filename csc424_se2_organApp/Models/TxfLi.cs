@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace csc424_se2_organApp.Models
 {
+    /// <summary>TxfLi Model.</summary>
+    /// <remarks>96 attributes for liver transplant follow up records.</remarks>
     public partial class TxfLi
     {
         public string OrgAr { get; set; }

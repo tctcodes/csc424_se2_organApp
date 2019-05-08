@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace csc424_se2_organApp.Models
 {
+    /// <summary>TxLi Model.</summary>
+    /// <remarks>308 attributes for liver transplant records.</remarks>
     public partial class TxLi
     {
         public double? CanhxMpxcptHccApplyInd { get; set; }

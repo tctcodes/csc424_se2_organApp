@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?> 
-<!-- <?xml-stylesheet type="text/xsl" href="documentation.xsl"?> --> <!-- for importing this file -->
+<!-- <?xml-stylesheet type="text/xsl" href="document-style.xsl"?> --> <!-- for importing this file -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <!-- ================================================================================ -->
 <!-- Amend, distribute, spindle and mutilate as desired, but don't remove this header -->
@@ -28,7 +28,10 @@
 <!-- TYPE TEMPLATE -->
 <!-- Loop through member types and display their properties and methods -->
 <xsl:template match="//member[contains(@name,'T:')]">
-
+  <style>
+    .tab   {margin-left:40px;}
+    h5, p    {margin-left: 80px;}
+  </style>
   <!-- Two variables to make code easier to read -->
   <!-- A variable for the name of this type -->
   <xsl:variable name="MemberName"
@@ -70,7 +73,7 @@
         
         <!-- If this is a constructor, display the type name 
             (instead of "#ctor"), or display the method name -->
-        <H4>
+        <H4 class="tab">
         <xsl:choose>
           <xsl:when test="contains(@name, '#ctor')">
             Constructor: 

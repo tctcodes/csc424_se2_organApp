@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace csc424_se2_organApp.Models
 {
+    /// <summary>Info Model</summary>
+    /// <remarks>Basic data for clients.</remarks>
     public partial class Info
     {
         public int PersId { get; set; }

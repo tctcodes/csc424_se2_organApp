@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace csc424_se2_organApp.Models
 {
+    /// <summary>CandLiin Model</summary>
+    /// <remarks>168 attributes for organ candidates.</remarks>
     public partial class CandLiin
     {
         public string CanAbo { get; set; }

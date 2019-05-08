@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace csc424_se2_organApp.Models
 {
+    /// <summary>DonorLive Model</summary>
+    /// <remarks>224 attributes for living organ donors.</remarks>
     public partial class DonorLive
     {
         public decimal DonorId { get; set; }

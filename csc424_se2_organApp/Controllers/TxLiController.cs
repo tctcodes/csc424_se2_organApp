@@ -29,6 +29,10 @@ namespace csc424_se2_organApp.Controllers
             context = _context;
         }
 
+        /// <summary>Update entire record</summary>
+        /// <remarks>api/TxLi/UpdateRecord</remarks>
+        /// <param name="input">Requires an entire TxLi record</param>
+        /// <returns>Success?</returns>
         [HttpPost]
         public JsonResult UpdateRecord([FromBody]TxLi input){
             
@@ -45,9 +49,10 @@ namespace csc424_se2_organApp.Controllers
             
         }
 
-        /// <summary>Get a record by PERS ID</summary>
+        /// <summary>Get a record by TrrId</summary>
         /// <remarks>api/TxLi/GetRecordTxli</remarks>
         /// <param name="input">Requires in the body: TrrId</param>
+        /// <returns>Single TxLi record if found</returns>        
         [HttpPost]
         public JsonResult GetRecordTrrId([FromBody]dynamic input){
             Console.WriteLine(input);
@@ -63,6 +68,10 @@ namespace csc424_se2_organApp.Controllers
 
         }
         
+        /// <summary>Retreive a file of records</summary>
+        /// <remarks>api/TxLi/DownloadRecord</remarks>
+        /// <param name="input">Requires an array of TrrId's in body</param>
+        /// <returns>Array of TxLi records in a file</returns>
         [HttpPost]
         public IActionResult DownloadRecord([FromBody] dynamic input){
             int num;
@@ -94,9 +103,10 @@ namespace csc424_se2_organApp.Controllers
         }
 
 
-        /// <summary>Search for a limited number of records by PX ID</summary>
+        /// <summary>Search for a limited number of records by TrrId</summary>
         /// <remarks>api/TxLi/SearchRecordTrrIdFirstX</remarks>
         /// <param name="input">Requires in the body: TrrId, number</param>
+        /// <returns>A number of TrrId's in an array</returns>
         [HttpPost]
         public JsonResult SearchRecordTrrIdFirstX([FromBody]dynamic input){
             //Console.WriteLine(input);
@@ -111,9 +121,10 @@ namespace csc424_se2_organApp.Controllers
         }
 
 
-        /// <summary>Search for a all records by partial PX ID</summary>
+        /// <summary>Search for a all records by partial TrrId</summary>
         /// <remarks>api/TxLi/SearchRecordTrrId</remarks>
-        /// <param name="input">Requires in the body: PersId, number</param>
+        /// <param name="input">Requires in the body: TrrId, number</param>
+        /// <returns>A number of matching TrrId's in an array</returns>        
         [HttpPost]
         public JsonResult SearchRecordTrrId([FromBody]dynamic input){
             //Console.WriteLine(input);

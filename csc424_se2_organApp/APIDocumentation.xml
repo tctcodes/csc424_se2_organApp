@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="document-style.xsl"?> 
 <doc>
     <assembly>
         <name>csc424_se2_organApp</name>
@@ -11,45 +12,71 @@
         <member name="M:csc424_se2_organApp.Controllers.CandController.#ctor(csc424_se2_organApp.Models.organ_appContext)">
             <summary>Reference database context</summary>
         </member>
+        <member name="M:csc424_se2_organApp.Controllers.CandController.UpdateRecord(csc424_se2_organApp.Models.CandLiin)">
+            <summary>Update entire record</summary>
+            <remarks>api/Cand/UpdateRecord</remarks>
+            <param name="input">Requires an entire CandLiin record</param>
+            <returns>Success?</returns>
+        </member>
         <member name="M:csc424_se2_organApp.Controllers.CandController.GetRecordPersId(System.Object)">
             <summary>Get a record by PERS ID</summary>
             <remarks>api/Cand/GetRecordPersId</remarks>
             <param name="input">Requires in the body: PersId</param>
+            <returns>Single CandLiin record if found</returns>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.CandController.DownloadRecord(System.Object)">
+            <summary>Retreive a file of records</summary>
+            <remarks>api/Cand/DownloadRecord</remarks>
+            <param name="input">Requires an array of PxId's in body</param>
+            <returns>Array of CandLiin records in a file</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.CandController.GetRecordPxId(System.Object)">
             <summary>Get a record by PX ID</summary>
             <remarks>api/Cand/GetRecordPxId</remarks>
             <param name="input">Requires in the body: PxID</param>
+            <returns>Single CandLiin record if found</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.CandController.GetRecordByState(System.Object)">
             <summary>Get a record by State</summary>
             <remarks>api/Cand/GetRecordByState</remarks>
             <param name="input">Requires in the body: state</param>
+            <returns>Array of CandLiin records</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.CandController.GetRecordByBloodType(System.Object)">
             <summary>Get a record by Blood Type</summary>
             <remarks>api/Cand/GetRecordByBloodType</remarks>
             <param name="input">Requires in the body: bloodType</param>
+            <returns>Array of CandLiin records</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.CandController.SearchRecordPersIdFirstX(System.Object)">
             <summary>Search for a limited number of records by PERS ID</summary>
             <remarks>api/Cand/SearchRecordPersIdFirstX</remarks>
             <param name="input">Requires in the body: PersId, number</param>
+            <returns>A number of PersId's in an array</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.CandController.SearchRecordPxIdFirstX(System.Object)">
             <summary>Search for a limited number of records by PX ID</summary>
             <remarks>api/Cand/SearchRecordPxIdFirstX</remarks>
             <param name="input">Requires in the body: PxId, number</param>
+            <returns>A number of matching PxId's in an array</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.CandController.SearchRecordPersId(System.Object)">
             <summary>Search for all records by partial PERS ID</summary>
             <remarks>api/Cand/SearchRecordPersId</remarks>
             <param name="input">Requires in the body: PersId</param>
+            <returns>An array of CandLiin records</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.CandController.SearchRecordPxId(System.Object)">
-            <summary>Search for a all records by partial PX ID</summary>
+            <summary>Search for a all records by partial PxId</summary>
             <remarks>api/Cand/SearchRecordPxId</remarks>
-            <param name="input">Requires in the body: PersId, number</param>
+            <param name="input">Requires in the body: PxId</param>
+            <returns>All matching PxId's in an array</returns>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.CandController.RefinedSearch(System.Object)">
+            <summary>Composed search</summary>
+            <remarks>api/Cand/RefinedSearch</remarks>
+            <param name="input">Requires in the body: PxId, BloodGroup, PxState, num</param>
+            <returns>An array of matching CandLiin records</returns>
         </member>
         <member name="T:csc424_se2_organApp.Controllers.DonDecController">
             <summary>The Donor Controller.</summary>
@@ -58,45 +85,65 @@
         <member name="M:csc424_se2_organApp.Controllers.DonDecController.#ctor(csc424_se2_organApp.Models.organ_appContext)">
             <summary>Reference database context</summary>
         </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonDecController.UpdateRecord(csc424_se2_organApp.Models.DonorDeceased)">
+            <summary>Update entire record</summary>
+            <remarks>api/DonDec/UpdateRecord</remarks>
+            <param name="input">Requires an entire DonorDeceased record</param>
+            <returns>Success?</returns>
+        </member>
         <member name="M:csc424_se2_organApp.Controllers.DonDecController.GetRecordPersId(System.Object)">
             <summary>Get a record by PERS ID</summary>
             <remarks>api/DonDec/GetRecordPersId</remarks>
             <param name="input">Requires in the body: PersId</param>
+            <returns>Single DonorDeceased record if found</returns>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonDecController.DownloadRecord(System.Object)">
+            <summary>Retreive a file of records</summary>
+            <remarks>api/DonDec/DownloadRecord</remarks>
+            <param name="input">Requires an array of DonorId's in body</param>
+            <returns>Array of DonorDeceased records in a file</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonDecController.GetRecordDonorId(System.Object)">
             <summary>Get a record by Donor ID</summary>
             <remarks>api/DonDec/GetRecordDonorId</remarks>
             <param name="input">Requires in the body: DonorId</param>
+            <returns>Single DonorDeceased record if found</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonDecController.GetRecordByState(System.Object)">
             <summary>Get a record by State</summary>
             <remarks>api/DonDec/GetRecordByState</remarks>
             <param name="input">Requires in the body: state</param>
+            <returns>Array of DonorDeceased records</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonDecController.GetRecordByBloodType(System.Object)">
             <summary>Get a record by Blood Type</summary>
             <remarks>api/DonDec/GetRecordByBloodType</remarks>
             <param name="input">Requires in the body: bloodType</param>
+            <returns>Array of DonorDeceased records</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonDecController.SearchRecordPersIdFirstX(System.Object)">
             <summary>Search for a limited number of records by PERS ID</summary>
             <remarks>api/DonDec/SearchRecordPersIdFirstX</remarks>
             <param name="input">Requires in the body: PersId, number</param>
+            <returns>A number of PersId's in an array</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonDecController.SearchRecordDonorIdFirstX(System.Object)">
             <summary>Search for a limited number of records by Donor ID</summary>
             <remarks>api/DonDec/SearchRecordDonorIdFirstX</remarks>
             <param name="input">Requires in the body: DonorId, number</param>
+            <returns>A number of matching DonorId's in an array</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonDecController.SearchRecordPersId(System.Object)">
             <summary>Search for all records by partial PERS ID</summary>
             <remarks>api/DonDec/SearchRecordPersId</remarks>
             <param name="input">Requires in the body: PersId</param>
+            <returns>An array of DonorDeceased records</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonDecController.SearchRecordDonorId(System.Object)">
             <summary>Search for a all records by partial Donor ID</summary>
             <remarks>api/DonDec/SearchRecordDonorId</remarks>
-            <param name="input">Requires in the body: PersId, number</param>
+            <param name="input">Requires in the body: DonorId, number</param>
+            <returns>All matching DonorId's in an array</returns>
         </member>
         <member name="T:csc424_se2_organApp.Controllers.DonLivController">
             <summary>The Donor Controller.</summary>
@@ -105,45 +152,84 @@
         <member name="M:csc424_se2_organApp.Controllers.DonLivController.#ctor(csc424_se2_organApp.Models.organ_appContext)">
             <summary>Reference database context</summary>
         </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonLivController.UpdateRecord(csc424_se2_organApp.Models.DonorLive)">
+            <summary>Update entire record</summary>
+            <remarks>api/DonLiv/UpdateRecord</remarks>
+            <param name="input">Requires an entire DonorLive record</param>
+            <returns>Success?</returns>
+        </member>
         <member name="M:csc424_se2_organApp.Controllers.DonLivController.GetRecordPersId(System.Object)">
             <summary>Get a record by PERS ID</summary>
             <remarks>api/DonLiv/GetRecordPersId</remarks>
             <param name="input">Requires in the body: PersId</param>
+            <returns>Single DonorLive record if found</returns>        
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.DonLivController.DownloadRecord(System.Object)">
+            <summary>Retreive a file of records</summary>
+            <remarks>api/DonLiv/DownloadRecord</remarks>
+            <param name="input">Requires an array of DonorId's in body</param>
+            <returns>Array of DonorLive records in a file</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonLivController.GetRecordDonorId(System.Object)">
             <summary>Get a record by Donor ID</summary>
             <remarks>api/DonLiv/GetRecordDonorId</remarks>
             <param name="input">Requires in the body: DonorId</param>
+            <returns>Single DonorLive record if found</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonLivController.GetRecordByState(System.Object)">
             <summary>Get a record by State</summary>
             <remarks>api/DonLiv/GetRecordByState</remarks>
             <param name="input">Requires in the body: state</param>
+            <returns>Array of DonorLive records</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonLivController.GetRecordByBloodType(System.Object)">
             <summary>Get a record by Blood Type</summary>
             <remarks>api/DonLiv/GetRecordByBloodType</remarks>
             <param name="input">Requires in the body: bloodType</param>
+            <returns>Array of DonorLive records</returns>        
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonLivController.SearchRecordPersIdFirstX(System.Object)">
             <summary>Search for a limited number of records by PERS ID</summary>
             <remarks>api/DonLiv/SearchRecordPersIdFirstX</remarks>
             <param name="input">Requires in the body: PersId, number</param>
+            <returns>A number of PersId's in an array</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonLivController.SearchRecordDonorIdFirstX(System.Object)">
             <summary>Search for a limited number of records by Donor ID</summary>
             <remarks>api/DonLiv/SearchRecordDonorIdFirstX</remarks>
             <param name="input">Requires in the body: DonorId, number</param>
+            <returns>A number of matching DonorId's in an array</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonLivController.SearchRecordPersId(System.Object)">
             <summary>Search for all records by partial PERS ID</summary>
             <remarks>api/DonLiv/SearchRecordPersId</remarks>
             <param name="input">Requires in the body: PersId</param>
+            <returns>An array of DonorLive records</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.DonLivController.SearchRecordDonorId(System.Object)">
             <summary>Search for a all records by partial Donor ID</summary>
             <remarks>api/DonLiv/SearchRecordDonorId</remarks>
             <param name="input">Requires in the body: PersId, number</param>
+            <returns>All matching DonorId's in an array</returns>
+        </member>
+        <member name="T:csc424_se2_organApp.Controllers.InfoController">
+            <summary>The User Info Controller.</summary>
+            <remarks>api/Info/[action]</remarks>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.InfoController.#ctor(csc424_se2_organApp.Models.organ_appContext)">
+            <summary>Reference database context</summary>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.InfoController.UploadInfo(csc424_se2_organApp.Models.Info)">
+            <summary>Upload new info</summary>
+            <remarks>api/Info/UploadInfo</remarks>
+            <param name="record">Requires an entire Info record</param>
+            <returns>Success if user exists</returns>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.InfoController.HasInfo(System.Object)">
+            <summary>Check if Info exists</summary>
+            <remarks>api/Info/HasInfo</remarks>
+            <param name="record">Requires in body: email</param>
+            <returns>Info record if found</returns>
         </member>
         <member name="T:csc424_se2_organApp.Controllers.TxfLiController">
             <summary>The TxfLi Controller.</summary>
@@ -152,20 +238,35 @@
         <member name="M:csc424_se2_organApp.Controllers.TxfLiController.#ctor(csc424_se2_organApp.Models.organ_appContext)">
             <summary>Reference database context</summary>
         </member>
+        <member name="M:csc424_se2_organApp.Controllers.TxfLiController.UpdateRecord(csc424_se2_organApp.Models.TxfLi)">
+            <summary>Update entire record</summary>
+            <remarks>api/TxfLi/UpdateRecord</remarks>
+            <param name="input">Requires an entire TxfLi record</param>
+            <returns>Success?</returns>
+        </member>
         <member name="M:csc424_se2_organApp.Controllers.TxfLiController.GetRecordTrrFolId(System.Object)">
-            <summary>Get a record by PERS ID</summary>
-            <remarks>api/TxfLi/GetRecordTxli</remarks>
+            <summary>Get a record by TrrFolId</summary>
+            <remarks>api/TxfLi/GetRecordTrrFolId</remarks>
             <param name="input">Requires in the body: TrrFolId</param>
+            <returns>Single TxfLi record if found</returns>        
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.TxfLiController.DownloadRecord(System.Object)">
+            <summary>Retreive a file of records</summary>
+            <remarks>api/TxfLi/DownloadRecord</remarks>
+            <param name="input">Requires an array of TrrFolId's in body</param>
+            <returns>Array of TxfLi records in a file</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.TxfLiController.SearchRecordTrrFolIdFirstX(System.Object)">
-            <summary>Search for a limited number of records by PX ID</summary>
+            <summary>Search for a limited number of records by TrrFolId</summary>
             <remarks>api/TxfLi/SearchRecordTrrFolIdFirstX</remarks>
             <param name="input">Requires in the body: TrrFolId, number</param>
+            <returns>A number of TrrFolId's in an array</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.TxfLiController.SearchRecordTrrFolId(System.Object)">
-            <summary>Search for a all records by partial PX ID</summary>
+            <summary>Search for a all records by partial TrrFolId</summary>
             <remarks>api/TxfLi/SearchRecordTrrFolId</remarks>
-            <param name="input">Requires in the body: PersId, number</param>
+            <param name="input">Requires in the body: TrrFolId, number</param>
+            <returns>A number of matching TrrFolId's in an array</returns>        
         </member>
         <member name="T:csc424_se2_organApp.Controllers.TxLiController">
             <summary>The TxLi Controller.</summary>
@@ -174,20 +275,126 @@
         <member name="M:csc424_se2_organApp.Controllers.TxLiController.#ctor(csc424_se2_organApp.Models.organ_appContext)">
             <summary>Reference database context</summary>
         </member>
+        <member name="M:csc424_se2_organApp.Controllers.TxLiController.UpdateRecord(csc424_se2_organApp.Models.TxLi)">
+            <summary>Update entire record</summary>
+            <remarks>api/TxLi/UpdateRecord</remarks>
+            <param name="input">Requires an entire TxLi record</param>
+            <returns>Success?</returns>
+        </member>
         <member name="M:csc424_se2_organApp.Controllers.TxLiController.GetRecordTrrId(System.Object)">
-            <summary>Get a record by PERS ID</summary>
+            <summary>Get a record by TrrId</summary>
             <remarks>api/TxLi/GetRecordTxli</remarks>
             <param name="input">Requires in the body: TrrId</param>
+            <returns>Single TxLi record if found</returns>        
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.TxLiController.DownloadRecord(System.Object)">
+            <summary>Retreive a file of records</summary>
+            <remarks>api/TxLi/DownloadRecord</remarks>
+            <param name="input">Requires an array of TrrId's in body</param>
+            <returns>Array of TxLi records in a file</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.TxLiController.SearchRecordTrrIdFirstX(System.Object)">
-            <summary>Search for a limited number of records by PX ID</summary>
+            <summary>Search for a limited number of records by TrrId</summary>
             <remarks>api/TxLi/SearchRecordTrrIdFirstX</remarks>
             <param name="input">Requires in the body: TrrId, number</param>
+            <returns>A number of TrrId's in an array</returns>
         </member>
         <member name="M:csc424_se2_organApp.Controllers.TxLiController.SearchRecordTrrId(System.Object)">
-            <summary>Search for a all records by partial PX ID</summary>
+            <summary>Search for a all records by partial TrrId</summary>
             <remarks>api/TxLi/SearchRecordTrrId</remarks>
-            <param name="input">Requires in the body: PersId, number</param>
+            <param name="input">Requires in the body: TrrId, number</param>
+            <returns>A number of matching TrrId's in an array</returns>        
+        </member>
+        <member name="T:csc424_se2_organApp.Controllers.UserController">
+            <summary>The User Controller.</summary>
+            <remarks>api/User/[action]</remarks>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.UserController.#ctor(csc424_se2_organApp.Models.organ_appContext)">
+            <summary>Reference database context</summary>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.UserController.NewUser(csc424_se2_organApp.Models.Users)">
+            <summary>Create a New User</summary>
+            <remarks>api/User/NewUser</remarks>
+            <remarks>The password is stored hashed</remarks>
+            <param name="user">In body: Users record</param>
+            <returns>Success/fail message</returns>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.UserController.AuthUser(csc424_se2_organApp.Models.Users)">
+            <summary>Login a User</summary>
+            <remarks>api/User/AuthUser</remarks>
+            <remarks>JWT stores email and role, with 30 min expiration</remarks>
+            <param name="user">In Body: Email, Password</param>
+            <returns>JWT</returns>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.UserController.AuthToken">
+            <summary>Another test route</summary>
+            <remarks>api/User/AuthToken</remarks>
+            <param>Requires JWT in auth header</param>
+            <returns>Auth Success/fail</returns>
+        </member>
+        <member name="M:csc424_se2_organApp.Controllers.UserController.test">
+            <summary>Test</summary>
+            <remarks>api/User/test</remarks>
+            <param>Requires JWT in auth header</param>
+            <returns>Auth Success/fail</returns>
+        </member>
+        <member name="T:csc424_se2_organApp.Models.CandLiin">
+            <summary>CandLiin Model</summary>
+            <remarks>168 attributes for organ candidates.</remarks>
+        </member>
+        <member name="T:csc424_se2_organApp.Models.DonorDeceased">
+            <summary>DonorDeceased Model</summary>
+            <remarks>235 attributes for deceased organ donors.</remarks>
+        </member>
+        <member name="T:csc424_se2_organApp.Models.DonorLive">
+            <summary>DonorLive Model</summary>
+            <remarks>224 attributes for living organ donors.</remarks>
+        </member>
+        <member name="T:csc424_se2_organApp.Models.Info">
+            <summary>Info Model</summary>
+            <remarks>Basic data for clients.</remarks>
+        </member>
+        <member name="T:csc424_se2_organApp.Models.organ_appContext">
+            <summary>Database Context</summary>
+            <remarks>This represents the database within this server</remarks>
+        </member>
+        <member name="T:csc424_se2_organApp.Models.TxfLi">
+            <summary>TxfLi Model.</summary>
+            <remarks>96 attributes for liver transplant follow up records.</remarks>
+        </member>
+        <member name="T:csc424_se2_organApp.Models.TxLi">
+            <summary>TxLi Model.</summary>
+            <remarks>308 attributes for liver transplant records.</remarks>
+        </member>
+        <member name="T:csc424_se2_organApp.Models.Users">
+            <summary>User Model</summary>
+            <remarks>3 attributes for User records, and one reference to Info Model</remarks>
+        </member>
+        <member name="T:csc424_se2_organApp.Program">
+            <summary>Main Progarm</summary>
+        </member>
+        <member name="M:csc424_se2_organApp.Program.Main(System.String[])">
+            <summary>Run server</summary>
+        </member>
+        <member name="M:csc424_se2_organApp.Program.CreateWebHostBuilder(System.String[])">
+            <summary>Call Startup.js and initialize server</summary>
+        </member>
+        <member name="T:csc424_se2_organApp.Startup">
+            <summary>Startup options</summary>
+            <remarks>Used to connect the database, add Cross-origin support, and other middleware and settings.</remarks>
+        </member>
+        <member name="M:csc424_se2_organApp.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>Configuration Initilization</summary>
+        </member>
+        <member name="P:csc424_se2_organApp.Startup.Configuration">
+            <summary>Configuration object</summary>
+        </member>
+        <member name="M:csc424_se2_organApp.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>Configuration Services</summary>
+            <remarks>Database connection, Cross-Origin, JWT, and others.</remarks>
+        </member>
+        <member name="M:csc424_se2_organApp.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>Runtime configuration</summary>
         </member>
     </members>
 </doc>

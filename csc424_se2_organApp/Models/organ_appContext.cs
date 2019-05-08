@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace csc424_se2_organApp.Models
 {
+    /// <summary>Database Context</summary>
+    /// <remarks>This represents the database within this server</remarks>
     public partial class organ_appContext : DbContext
     {
         public organ_appContext()

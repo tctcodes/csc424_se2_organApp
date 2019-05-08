@@ -29,6 +29,10 @@ namespace csc424_se2_organApp.Controllers
             context = _context;
         }
 
+        /// <summary>Update entire record</summary>
+        /// <remarks>api/DonDec/UpdateRecord</remarks>
+        /// <param name="input">Requires an entire DonorDeceased record</param>
+        /// <returns>Success?</returns>
         [HttpPost]
         public JsonResult UpdateRecord([FromBody]DonorDeceased input){
             
@@ -48,6 +52,8 @@ namespace csc424_se2_organApp.Controllers
         /// <summary>Get a record by PERS ID</summary>
         /// <remarks>api/DonDec/GetRecordPersId</remarks>
         /// <param name="input">Requires in the body: PersId</param>
+        /// <returns>Single DonorDeceased record if found</returns>
+
         [HttpPost]
         public JsonResult GetRecordPersId([FromBody]dynamic input){
             Console.WriteLine(input);
@@ -62,6 +68,11 @@ namespace csc424_se2_organApp.Controllers
             return Json(data: isInDb);
 
         }
+
+        /// <summary>Retreive a file of records</summary>
+        /// <remarks>api/DonDec/DownloadRecord</remarks>
+        /// <param name="input">Requires an array of DonorId's in body</param>
+        /// <returns>Array of DonorDeceased records in a file</returns>
         [HttpPost]
         public IActionResult DownloadRecord([FromBody] dynamic input){
             int num;
@@ -92,9 +103,11 @@ namespace csc424_se2_organApp.Controllers
 
             
         }
+        
         /// <summary>Get a record by Donor ID</summary>
         /// <remarks>api/DonDec/GetRecordDonorId</remarks>
         /// <param name="input">Requires in the body: DonorId</param>
+        /// <returns>Single DonorDeceased record if found</returns>
         [HttpPost]
         public JsonResult GetRecordDonorId([FromBody]dynamic input){
             Console.WriteLine(input);
@@ -113,6 +126,7 @@ namespace csc424_se2_organApp.Controllers
         /// <summary>Get a record by State</summary>
         /// <remarks>api/DonDec/GetRecordByState</remarks>
         /// <param name="input">Requires in the body: state</param>
+        /// <returns>Array of DonorDeceased records</returns>
         [HttpPost]
         public JsonResult GetRecordByState([FromBody]dynamic input){
             //Console.WriteLine(input.state);
@@ -133,6 +147,7 @@ namespace csc424_se2_organApp.Controllers
         /// <summary>Get a record by Blood Type</summary>
         /// <remarks>api/DonDec/GetRecordByBloodType</remarks>
         /// <param name="input">Requires in the body: bloodType</param>
+        /// <returns>Array of DonorDeceased records</returns>
         [HttpPost]
         public JsonResult GetRecordByBloodType([FromBody]dynamic input){
             string type = input.bloodType;
@@ -152,6 +167,7 @@ namespace csc424_se2_organApp.Controllers
         /// <summary>Search for a limited number of records by PERS ID</summary>
         /// <remarks>api/DonDec/SearchRecordPersIdFirstX</remarks>
         /// <param name="input">Requires in the body: PersId, number</param>
+        /// <returns>A number of PersId's in an array</returns>
         [HttpPost]
         public JsonResult SearchRecordPersIdFirstX([FromBody]dynamic input){
             //Console.WriteLine(input);
@@ -168,6 +184,7 @@ namespace csc424_se2_organApp.Controllers
         /// <summary>Search for a limited number of records by Donor ID</summary>
         /// <remarks>api/DonDec/SearchRecordDonorIdFirstX</remarks>
         /// <param name="input">Requires in the body: DonorId, number</param>
+        /// <returns>A number of matching DonorId's in an array</returns>
         [HttpPost]
         public JsonResult SearchRecordDonorIdFirstX([FromBody]dynamic input){
             //Console.WriteLine(input);
@@ -184,6 +201,7 @@ namespace csc424_se2_organApp.Controllers
         /// <summary>Search for all records by partial PERS ID</summary>
         /// <remarks>api/DonDec/SearchRecordPersId</remarks>
         /// <param name="input">Requires in the body: PersId</param>
+        /// <returns>An array of DonorDeceased records</returns>
         [HttpPost]
         public JsonResult SearchRecordPersId([FromBody]dynamic input){
             //Console.WriteLine(input);
@@ -198,7 +216,8 @@ namespace csc424_se2_organApp.Controllers
 
         /// <summary>Search for a all records by partial Donor ID</summary>
         /// <remarks>api/DonDec/SearchRecordDonorId</remarks>
-        /// <param name="input">Requires in the body: PersId, number</param>
+        /// <param name="input">Requires in the body: DonorId, number</param>
+        /// <returns>All matching DonorId's in an array</returns>
         [HttpPost]
         public JsonResult SearchRecordDonorId([FromBody]dynamic input){
             //Console.WriteLine(input);

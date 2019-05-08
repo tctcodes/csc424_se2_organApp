@@ -29,6 +29,10 @@ namespace csc424_se2_organApp.Controllers
             context = _context;
         }
 
+        /// <summary>Update entire record</summary>
+        /// <remarks>api/Cand/UpdateRecord</remarks>
+        /// <param name="input">Requires an entire CandLiin record</param>
+        /// <returns>Success?</returns>
         [HttpPost]
         public JsonResult UpdateRecord([FromBody]CandLiin input){
             
@@ -48,6 +52,7 @@ namespace csc424_se2_organApp.Controllers
         /// <summary>Get a record by PERS ID</summary>
         /// <remarks>api/Cand/GetRecordPersId</remarks>
         /// <param name="input">Requires in the body: PersId</param>
+        /// <returns>Single CandLiin record if found</returns>
         [HttpPost]
         public JsonResult GetRecordPersId([FromBody]dynamic input){
             Console.WriteLine(input);
@@ -62,6 +67,11 @@ namespace csc424_se2_organApp.Controllers
             return Json(data: isInDb);
 
         }
+
+        /// <summary>Retreive a file of records</summary>
+        /// <remarks>api/Cand/DownloadRecord</remarks>
+        /// <param name="input">Requires an array of PxId's in body</param>
+        /// <returns>Array of CandLiin records in a file</returns>
         [HttpPost]
         public IActionResult DownloadRecord([FromBody] dynamic input){
             int num;
@@ -92,9 +102,11 @@ namespace csc424_se2_organApp.Controllers
 
             
         }
+
         /// <summary>Get a record by PX ID</summary>
         /// <remarks>api/Cand/GetRecordPxId</remarks>
         /// <param name="input">Requires in the body: PxID</param>
+        /// <returns>Single CandLiin record if found</returns>
         [HttpPost]
         public JsonResult GetRecordPxId([FromBody]dynamic input){
             Console.WriteLine(input);
@@ -113,6 +125,7 @@ namespace csc424_se2_organApp.Controllers
         /// <summary>Get a record by State</summary>
         /// <remarks>api/Cand/GetRecordByState</remarks>
         /// <param name="input">Requires in the body: state</param>
+        /// <returns>Array of CandLiin records</returns>
         [HttpPost]
         public JsonResult GetRecordByState([FromBody]dynamic input){
             //Console.WriteLine(input.state);
@@ -133,6 +146,7 @@ namespace csc424_se2_organApp.Controllers
         /// <summary>Get a record by Blood Type</summary>
         /// <remarks>api/Cand/GetRecordByBloodType</remarks>
         /// <param name="input">Requires in the body: bloodType</param>
+        /// <returns>Array of CandLiin records</returns>
         [HttpPost]
         public JsonResult GetRecordByBloodType([FromBody]dynamic input){
             string type = input.bloodType;
@@ -152,6 +166,7 @@ namespace csc424_se2_organApp.Controllers
         /// <summary>Search for a limited number of records by PERS ID</summary>
         /// <remarks>api/Cand/SearchRecordPersIdFirstX</remarks>
         /// <param name="input">Requires in the body: PersId, number</param>
+        /// <returns>A number of PersId's in an array</returns>
         [HttpPost]
         public JsonResult SearchRecordPersIdFirstX([FromBody]dynamic input){
             //Console.WriteLine(input);
@@ -168,9 +183,9 @@ namespace csc424_se2_organApp.Controllers
         /// <summary>Search for a limited number of records by PX ID</summary>
         /// <remarks>api/Cand/SearchRecordPxIdFirstX</remarks>
         /// <param name="input">Requires in the body: PxId, number</param>
+        /// <returns>A number of matching PxId's in an array</returns>
         [HttpPost]
         public JsonResult SearchRecordPxIdFirstX([FromBody]dynamic input){
-            //Console.WriteLine(input);
             string id = input.PxId;
             int num = input.number;
             var isInDb = (from c in context.CandLiin
@@ -184,6 +199,7 @@ namespace csc424_se2_organApp.Controllers
         /// <summary>Search for all records by partial PERS ID</summary>
         /// <remarks>api/Cand/SearchRecordPersId</remarks>
         /// <param name="input">Requires in the body: PersId</param>
+        /// <returns>An array of CandLiin records</returns>
         [HttpPost]
         public JsonResult SearchRecordPersId([FromBody]dynamic input){
             //Console.WriteLine(input);
@@ -196,9 +212,10 @@ namespace csc424_se2_organApp.Controllers
 
         }
 
-        /// <summary>Search for a all records by partial PX ID</summary>
+        /// <summary>Search for a all records by partial PxId</summary>
         /// <remarks>api/Cand/SearchRecordPxId</remarks>
-        /// <param name="input">Requires in the body: PersId, number</param>
+        /// <param name="input">Requires in the body: PxId</param>
+        /// <returns>All matching PxId's in an array</returns>
         [HttpPost]
         public JsonResult SearchRecordPxId([FromBody]dynamic input){
             //Console.WriteLine(input);
@@ -211,6 +228,10 @@ namespace csc424_se2_organApp.Controllers
 
         }
 
+        /// <summary>Composed search</summary>
+        /// <remarks>api/Cand/RefinedSearch</remarks>
+        /// <param name="input">Requires in the body: PxId, BloodGroup, PxState, num</param>
+        /// <returns>An array of matching CandLiin records</returns>
         [HttpPost]
         public JsonResult RefinedSearch([FromBody]dynamic input){
             Console.WriteLine(input);

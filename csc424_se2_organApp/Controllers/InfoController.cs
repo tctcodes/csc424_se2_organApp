@@ -7,19 +7,25 @@ using System.Text.RegularExpressions;
 
 namespace csc424_se2_organApp.Controllers
 {
+    /// <summary>The User Info Controller.</summary>
+    /// <remarks>api/Info/[action]</remarks>
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class InfoController : Controller{
 
        
         private readonly organ_appContext context;
-    
+        /// <summary>Reference database context</summary>
+
         public InfoController(organ_appContext _context)         
         {             
             context = _context;       
         }
     
-    
+    /// <summary>Upload new info</summary>
+    /// <remarks>api/Info/UploadInfo</remarks>
+    /// <param name="record">Requires an entire Info record</param>
+    /// <returns>Success if user exists</returns>
     [HttpPost]
     public JsonResult UploadInfo([FromBody]Info record){
         var Email = record.Email;
@@ -40,6 +46,11 @@ namespace csc424_se2_organApp.Controllers
         return Json(new {success = "success"});
 
     }
+
+    /// <summary>Check if Info exists</summary>
+    /// <remarks>api/Info/HasInfo</remarks>
+    /// <param name="record">Requires in body: email</param>
+    /// <returns>Info record if found</returns>
     [HttpPost]
     public JsonResult HasInfo([FromBody]dynamic record){
         string email =record.email;

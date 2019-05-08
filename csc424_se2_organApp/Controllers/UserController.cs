@@ -16,17 +16,26 @@ using Microsoft.AspNetCore.Authorization;
 namespace csc424_se2_organApp.Controllers
 {
     using BCrypt = BCrypt.Net.BCrypt;
+
+
+    /// <summary>The User Controller.</summary>
+    /// <remarks>api/User/[action]</remarks>
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : Controller{
 
         private readonly organ_appContext context;
-
+        /// <summary>Reference database context</summary>
         public UserController(organ_appContext _context)
         {
             context = _context;
         }
 
+        /// <summary>Create a New User</summary>
+        /// <remarks>api/User/NewUser</remarks>
+        /// <remarks>The password is stored hashed</remarks>
+        /// <param name="user">In body: Users record</param>
+        /// <returns>Success/fail message</returns>
         [HttpPost]
         public JsonResult NewUser([FromBody]Users user){
 
@@ -43,6 +52,11 @@ namespace csc424_se2_organApp.Controllers
 
         }
 
+        /// <summary>Login a User</summary>
+        /// <remarks>api/User/AuthUser</remarks>
+        /// <remarks>JWT stores email and role, with 30 min expiration</remarks>
+        /// <param name="user">In Body: Email, Password</param>
+        /// <returns>JWT</returns>
         [HttpPost]
         public JsonResult AuthUser([FromBody]Users user){
 
@@ -77,6 +91,10 @@ namespace csc424_se2_organApp.Controllers
             }
         }
 
+        /// <summary>Another test route</summary>
+        /// <remarks>api/User/AuthToken</remarks>
+        /// <param>Requires JWT in auth header</param>
+        /// <returns>Auth Success/fail</returns>
         // [Authorize]
         [HttpGet]
         public JsonResult AuthToken(){
@@ -86,7 +104,11 @@ namespace csc424_se2_organApp.Controllers
                 new {message="Authorized", name=$"{User.Identity.Name}", role=$"{User.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).SingleOrDefault()}"}
             );
         }
-
+        
+        /// <summary>Test</summary>
+        /// <remarks>api/User/test</remarks>
+        /// <param>Requires JWT in auth header</param>
+        /// <returns>Auth Success/fail</returns>
         [Authorize(Roles = "staff")]
         [HttpGet]
         public JsonResult test(){

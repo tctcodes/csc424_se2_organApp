@@ -15,8 +15,11 @@ using Microsoft.AspNetCore.Authorization;
 using Newtonsoft.Json;
 namespace csc424_se2_organApp
 {
+    /// <summary>Startup options</summary>
+    /// <remarks>Used to connect the database, add Cross-origin support, and other middleware and settings.</remarks>
     public class Startup
     {
+        /// <summary>Configuration Initilization</summary>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -24,9 +27,12 @@ namespace csc424_se2_organApp
 
         readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         
+        /// <summary>Configuration object</summary>
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>Configuration Services</summary>
+        /// <remarks>Database connection, Cross-Origin, JWT, and others.</remarks>
         public void ConfigureServices(IServiceCollection services)
         {
             
@@ -69,6 +75,7 @@ namespace csc424_se2_organApp
             }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary>Runtime configuration</summary>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())

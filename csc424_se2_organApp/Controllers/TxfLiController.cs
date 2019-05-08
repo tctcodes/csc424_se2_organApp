@@ -29,6 +29,10 @@ namespace csc424_se2_organApp.Controllers
             context = _context;
         }
 
+        /// <summary>Update entire record</summary>
+        /// <remarks>api/TxfLi/UpdateRecord</remarks>
+        /// <param name="input">Requires an entire TxfLi record</param>
+        /// <returns>Success?</returns>
         [HttpPost]
         public JsonResult UpdateRecord([FromBody]TxfLi input){
             
@@ -45,9 +49,10 @@ namespace csc424_se2_organApp.Controllers
             
         }
 
-        /// <summary>Get a record by PERS ID</summary>
-        /// <remarks>api/TxfLi/GetRecordTxli</remarks>
+        /// <summary>Get a record by TrrFolId</summary>
+        /// <remarks>api/TxfLi/GetRecordTrrFolId</remarks>
         /// <param name="input">Requires in the body: TrrFolId</param>
+        /// <returns>Single TxfLi record if found</returns>        
         [HttpPost]
         public JsonResult GetRecordTrrFolId([FromBody]dynamic input){
             Console.WriteLine(input);
@@ -63,6 +68,10 @@ namespace csc424_se2_organApp.Controllers
 
         }
         
+        /// <summary>Retreive a file of records</summary>
+        /// <remarks>api/TxfLi/DownloadRecord</remarks>
+        /// <param name="input">Requires an array of TrrFolId's in body</param>
+        /// <returns>Array of TxfLi records in a file</returns>
         [HttpPost]
         public IActionResult DownloadRecord([FromBody] dynamic input){
             int num;
@@ -95,9 +104,10 @@ namespace csc424_se2_organApp.Controllers
 
         
 
-        /// <summary>Search for a limited number of records by PX ID</summary>
+        /// <summary>Search for a limited number of records by TrrFolId</summary>
         /// <remarks>api/TxfLi/SearchRecordTrrFolIdFirstX</remarks>
         /// <param name="input">Requires in the body: TrrFolId, number</param>
+        /// <returns>A number of TrrFolId's in an array</returns>
         [HttpPost]
         public JsonResult SearchRecordTrrFolIdFirstX([FromBody]dynamic input){
             //Console.WriteLine(input);
@@ -112,9 +122,10 @@ namespace csc424_se2_organApp.Controllers
         }
 
 
-        /// <summary>Search for a all records by partial PX ID</summary>
+        /// <summary>Search for a all records by partial TrrFolId</summary>
         /// <remarks>api/TxfLi/SearchRecordTrrFolId</remarks>
-        /// <param name="input">Requires in the body: PersId, number</param>
+        /// <param name="input">Requires in the body: TrrFolId, number</param>
+        /// <returns>A number of matching TrrFolId's in an array</returns>        
         [HttpPost]
         public JsonResult SearchRecordTrrFolId([FromBody]dynamic input){
             //Console.WriteLine(input);
