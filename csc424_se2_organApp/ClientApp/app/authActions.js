@@ -13,6 +13,7 @@ export const setCurrentUser = decoded => {
 export const clearUser = () =>{
     localStorage.removeItem('token');
     history.push('/')
+    location.reload(true);
     setAuthToken(false);
     return{
         type: CLEAR_USER

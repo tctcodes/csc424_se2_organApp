@@ -15,8 +15,9 @@ import {
   Button,
   Dropdown,
   Navbar,
+  Nav
 } from "react-bootstrap";
-import { setPXID, submitSearch } from './actions';
+import { setPXID, submitSearch,downloadResult } from './actions';
 import { makeSelectPXID, makeSelectSearchResults } from './selectors';
 import CanForm from '../CanForm';
 
@@ -44,26 +45,45 @@ const US_STATE = [
 ];
 
 function PrintPxRecord(props) {
-  console.log('hello!');
-  console.log(props.pxidRecord.size);
-  if(props.pxidRecord.size === 0) {
-    console.log('True');
+  if(props.searchResults.size === 0) {
     return (
       <h1>Input search request for Patient Record</h1>
     );
   } else {
-    console.log('False');
-    const recordList = Object.keys(props.pxidRecord).map(key =>
-      <p key={key}>{key}: {props.pxidRecord[key]} </p>
+    
+    const recordList = props.searchResults.map(record =>
+      <tr id={record.pxId}>
+        <td>{record.pxId}</td>
+        <td>{record.persId}</td>
+        <td>{record.canPermState}</td>
+        <td>{record.canAbo}</td>
+        <td>{record.canAgeAtListing}</td>
+      </tr>
     )
     return (
-      <div>{recordList}</div>
+      <table onClick={props.selectRecord} className="table table-hover">
+        <thead>
+          <tr>
+            <th>Patient ID</th>
+            <th>Personal ID</th>
+            <th>State</th>
+            <th>Blood Type</th>
+            <th>Age at Listing</th>
+          </tr>
+        </thead>
+        <tbody>{recordList}</tbody>
+      </table>
     );
   }
 }
 
 /* eslint-disable react/prefer-stateless-function */
 export class SearchBox extends React.Component {
+
+  selectRecord = (e)=>{
+    //pushes canform record
+    this.props.history.push(`/staff/canform/:${e.target.parentNode.id}`)
+  }
 
   render() {
     return (
@@ -127,10 +147,14 @@ export class SearchBox extends React.Component {
             >
               Search
             </Button>
+           
+            <Button style={{marginLeft:"auto"}} onClick={this.props.onDownload}>Download Result</Button>
+            
           </Navbar>
         </div>
-        {/* Display patient information */}
-        {/* <CanForm selectedPxId={this.props.pid}/> */}
+        {/* Display patient information */}  
+        <PrintPxRecord selectRecord={this.selectRecord} searchResults={this.props.searchResults}/>
+      
       </div>
     );
   }
@@ -144,13 +168,14 @@ SearchBox.propTypes = {
 
 const mapStateToProps = createStructuredSelector({
   pid: makeSelectPXID(),
-  pxidRecord: makeSelectSearchResults(),
+  searchResults: makeSelectSearchResults(),
 });
 
 function mapDispatchToProps(dispatch) {
   return {
     onSetPXID: evt => dispatch(setPXID(evt.target.value)),
     onSearchSubmit: () => dispatch(submitSearch()),
+    onDownload: () => dispatch(downloadResult())
   };
 }
 

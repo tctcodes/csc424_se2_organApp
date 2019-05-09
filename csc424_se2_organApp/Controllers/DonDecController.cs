@@ -15,25 +15,25 @@ using System.Collections.Generic;
 namespace csc424_se2_organApp.Controllers
 {
 
-    /// <summary>The Candidate Controller.</summary>
-    /// <remarks>api/Cand/[action]</remarks>
+    /// <summary>The Donor Controller.</summary>
+    /// <remarks>api/DonLive/[action]</remarks>
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class CandController : Controller{
+    public class DonDecController : Controller{
 
 
         private readonly organ_appContext context;
         /// <summary>Reference database context</summary>
-        public CandController(organ_appContext _context)
+        public DonDecController(organ_appContext _context)
         {
             context = _context;
         }
 
         [HttpPost]
-        public JsonResult UpdateRecord([FromBody]CandLiin input){
+        public JsonResult UpdateRecord([FromBody]DonorDeceased input){
             
             try{
-                context.CandLiin.Update(input);
+                context.DonorDeceased.Update(input);
                 context.SaveChanges();
                 Response.StatusCode = 201;
                 return Json(new {success=true});
@@ -46,14 +46,14 @@ namespace csc424_se2_organApp.Controllers
         }
 
         /// <summary>Get a record by PERS ID</summary>
-        /// <remarks>api/Cand/GetRecordPersId</remarks>
+        /// <remarks>api/DonLive/GetRecordPersId</remarks>
         /// <param name="input">Requires in the body: PersId</param>
         [HttpPost]
         public JsonResult GetRecordPersId([FromBody]dynamic input){
             Console.WriteLine(input);
             int num = input.PersId;
-            var isInDb = context.CandLiin.Where(r => r.PersId == num)
-                                        .FirstOrDefault<CandLiin>();
+            var isInDb = context.DonorDeceased.Where(r => r.PersId == num)
+                                        .FirstOrDefault<DonorDeceased>();
             if(isInDb == null){
                 Response.StatusCode = 404;
                 return Json(new {error="Not Found"}); 
@@ -66,10 +66,10 @@ namespace csc424_se2_organApp.Controllers
         public IActionResult DownloadRecord([FromBody] dynamic input){
             int num;
             var arr = new List<dynamic>();
-            foreach(var a in input.PxId){
+            foreach(var a in input.DonorId){
                 num = a;
-                var isInDb = context.CandLiin.Where(r => r.PxId == num)
-                                            .FirstOrDefault<CandLiin>();
+                var isInDb = context.DonorDeceased.Where(r => r.DonorId == num)
+                                            .FirstOrDefault<DonorDeceased>();
                 if(isInDb == null){
                     Response.StatusCode = 404;
                     Console.WriteLine("fuck");
@@ -92,15 +92,15 @@ namespace csc424_se2_organApp.Controllers
 
             
         }
-        /// <summary>Get a record by PX ID</summary>
-        /// <remarks>api/Cand/GetRecordPxId</remarks>
-        /// <param name="input">Requires in the body: PxID</param>
+        /// <summary>Get a record by Donor ID</summary>
+        /// <remarks>api/DonLive/GetRecordDonorId</remarks>
+        /// <param name="input">Requires in the body: DonorId</param>
         [HttpPost]
-        public JsonResult GetRecordPxId([FromBody]dynamic input){
+        public JsonResult GetRecordDonorId([FromBody]dynamic input){
             Console.WriteLine(input);
-            int num = input.PxId;
-            var isInDb = context.CandLiin.Where(r => r.PxId == num).FirstOrDefault<CandLiin>();
-            
+            int num = input.DonorId;
+            var isInDb = context.DonorDeceased.Where(r => r.DonorId == num)
+                                        .FirstOrDefault<DonorDeceased>();
             if(isInDb == null){
                 Response.StatusCode = 404;
                 return Json(new {error="Not Found"}); 
@@ -111,14 +111,14 @@ namespace csc424_se2_organApp.Controllers
         }
 
         /// <summary>Get a record by State</summary>
-        /// <remarks>api/Cand/GetRecordByState</remarks>
+        /// <remarks>api/DonLive/GetRecordByState</remarks>
         /// <param name="input">Requires in the body: state</param>
         [HttpPost]
         public JsonResult GetRecordByState([FromBody]dynamic input){
             //Console.WriteLine(input.state);
             string state = input.state;
-            var query = (from c in context.CandLiin 
-                        where c.CanPermState == state
+            var query = (from c in context.DonorDeceased 
+                        where c.DonHomeState == state
                         select c).ToList();
             if(query.Count == 0){
                 Response.StatusCode = 404;
@@ -131,13 +131,13 @@ namespace csc424_se2_organApp.Controllers
         }
 
         /// <summary>Get a record by Blood Type</summary>
-        /// <remarks>api/Cand/GetRecordByBloodType</remarks>
+        /// <remarks>api/DonLive/GetRecordByBloodType</remarks>
         /// <param name="input">Requires in the body: bloodType</param>
         [HttpPost]
         public JsonResult GetRecordByBloodType([FromBody]dynamic input){
             string type = input.bloodType;
-            var query = (from c in context.CandLiin
-                        where c.CanAbo == type
+            var query = (from c in context.DonorDeceased
+                        where c.DonAbo == type
                         select c).ToList();
             if(query.Count == 0){
                 Response.StatusCode = 404;
@@ -150,14 +150,14 @@ namespace csc424_se2_organApp.Controllers
         }
 
         /// <summary>Search for a limited number of records by PERS ID</summary>
-        /// <remarks>api/Cand/SearchRecordPersIdFirstX</remarks>
+        /// <remarks>api/DonLive/SearchRecordPersIdFirstX</remarks>
         /// <param name="input">Requires in the body: PersId, number</param>
         [HttpPost]
         public JsonResult SearchRecordPersIdFirstX([FromBody]dynamic input){
             //Console.WriteLine(input);
             string id = input.PersId;
             int num = input.number;
-            var isInDb = (from c in context.CandLiin
+            var isInDb = (from c in context.DonorDeceased
                         where c.PersId.ToString().Contains(id)
                         select c.PersId).Take(num);
             Response.StatusCode = 201;
@@ -165,30 +165,30 @@ namespace csc424_se2_organApp.Controllers
 
         }
 
-        /// <summary>Search for a limited number of records by PX ID</summary>
-        /// <remarks>api/Cand/SearchRecordPxIdFirstX</remarks>
-        /// <param name="input">Requires in the body: PxId, number</param>
+        /// <summary>Search for a limited number of records by Donor ID</summary>
+        /// <remarks>api/DonLive/SearchRecordDonorIdFirstX</remarks>
+        /// <param name="input">Requires in the body: DonorId, number</param>
         [HttpPost]
-        public JsonResult SearchRecordPxIdFirstX([FromBody]dynamic input){
+        public JsonResult SearchRecordDonorIdFirstX([FromBody]dynamic input){
             //Console.WriteLine(input);
-            string id = input.PxId;
+            string id = input.DonorId;
             int num = input.number;
-            var isInDb = (from c in context.CandLiin
-                        where c.PxId.ToString().Contains(id)
-                        select c.PxId).Take(num);
+            var isInDb = (from c in context.DonorDeceased
+                        where c.DonorId.ToString().Contains(id)
+                        select c.DonorId).Take(num);
             Response.StatusCode = 201;
             return Json(data: isInDb);
 
         }
 
         /// <summary>Search for all records by partial PERS ID</summary>
-        /// <remarks>api/Cand/SearchRecordPersId</remarks>
+        /// <remarks>api/DonLive/SearchRecordPersId</remarks>
         /// <param name="input">Requires in the body: PersId</param>
         [HttpPost]
         public JsonResult SearchRecordPersId([FromBody]dynamic input){
             //Console.WriteLine(input);
             string id = input.PersId;
-            var isInDb = (from c in context.CandLiin
+            var isInDb = (from c in context.DonorDeceased
                         where c.PersId.ToString().Contains(id)
                         select c.PersId);
             Response.StatusCode = 201;
@@ -196,16 +196,16 @@ namespace csc424_se2_organApp.Controllers
 
         }
 
-        /// <summary>Search for a all records by partial PX ID</summary>
-        /// <remarks>api/Cand/SearchRecordPxId</remarks>
+        /// <summary>Search for a all records by partial Donor ID</summary>
+        /// <remarks>api/DonLive/SearchRecordDonorId</remarks>
         /// <param name="input">Requires in the body: PersId, number</param>
         [HttpPost]
-        public JsonResult SearchRecordPxId([FromBody]dynamic input){
+        public JsonResult SearchRecordDonorId([FromBody]dynamic input){
             //Console.WriteLine(input);
-            string id = input.PxId;
-            var isInDb = (from c in context.CandLiin
-                        where c.PxId.ToString().Contains(id)
-                        select c.PxId);
+            string id = input.DonorId;
+            var isInDb = (from c in context.DonorDeceased
+                        where c.DonorId.ToString().Contains(id)
+                        select c.DonorId);
             Response.StatusCode = 201;
             return Json(data: isInDb);
 
