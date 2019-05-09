@@ -18,6 +18,7 @@ import reducer from "./reducer";
 import saga from "./saga";
 import {checkInfo} from "./actions"
 import makeSelectAuth from "../../authSelector";
+import { Button, Jumbotron } from "react-bootstrap";
 
 /* eslint-disable react/prefer-stateless-function */
 export class ClientHome extends React.PureComponent {
@@ -28,10 +29,20 @@ export class ClientHome extends React.PureComponent {
     return (
       <div>
         <Helmet>
-          <title>ClientHome</title>
-          <meta name="description" content="Description of ClientHome" />
+          <title>Client Home</title>
+          <meta name="description" content="Description of Client Home Page" />
         </Helmet>
-        WELCOME!
+        <Jumbotron style={{
+          height: 'calc(100vh - 56px', margin: '0', backgroundColor: 'white', textAlign: 'center'
+        }}>
+          <h1>Thank you for participating!</h1>
+          <p>
+            OrganApp is a collaborative effort between The University of Southern Mississippi and Hattiesburg Clinic.
+            The purpose of this project is to automate the process of matching liver donors to candidates. This would
+            greatly reduce the burden of manual selection on healtcare proffesionals.
+            <Button variant="link" href="/about" style={{ paddingTop: '0' }}>Learn more</Button>
+          </p>
+        </Jumbotron>
       </div>
     );
   }

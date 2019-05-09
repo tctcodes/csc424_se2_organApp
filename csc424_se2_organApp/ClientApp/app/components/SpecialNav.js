@@ -17,7 +17,7 @@ const SpecialNav = (props) => {
             <Navbar.Brand as={NavLink} to="/staff/home">OrganApp</Navbar.Brand>
             <Nav className="mr-auto">
               <Nav.Link as={NavLink} to='/staff/home'>Home</Nav.Link>
-              <Nav.Link as={NavLink} to="/staff/searchbox">Search</Nav.Link>
+              {/* <Nav.Link as={NavLink} to="/staff/searchbox">Search</Nav.Link> */}
             </Nav>
             <LinkContainer to='/'>
                 <Button variant="primary" type="button" onClick={()=>props.dispatch(clearUser())}><i className="fas fa-sign-out-alt"></i></Button>
