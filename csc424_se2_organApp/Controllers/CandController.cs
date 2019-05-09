@@ -210,5 +210,27 @@ namespace csc424_se2_organApp.Controllers
             return Json(data: isInDb);
 
         }
+
+        [HttpPost]
+        public JsonResult RefinedSearch([FromBody]dynamic input){
+            Console.WriteLine(input);
+            int id = input.PxId;
+            string bloodType = input.BloodGroup;
+            string pxState = input.PxState;
+            int num = input.num;
+
+            var isInDb = (from c in context.CandLiin
+                    where c.PxId.ToString().Contains(id.ToString()) &&
+                    c.CanAbo.ToString() == bloodType.ToString() &&
+                    c.CanPermState.ToString() == pxState.ToString()
+                    select c).ToList();
+
+            if(isInDb == null){
+                Response.StatusCode = 404;
+                return Json(new {error="Not Found"});
+            }
+            Response.StatusCode = 201;
+            return Json(data: isInDb);
+        }
     }
 }
