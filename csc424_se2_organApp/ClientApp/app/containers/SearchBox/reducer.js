@@ -15,7 +15,6 @@ import {
 } from "./constants";
 
 export const initialState = fromJS({
-  token: '',
   pxid: '',
   bloodGroup: '',
   pxState: '',
@@ -25,8 +24,6 @@ export const initialState = fromJS({
 
 function searchBoxReducer(state = initialState, action) {
   switch (action.type) {
-    case SET_TOKEN:
-      return state.set('token', action.token);
     case SET_PXID:
       return state.set('pxid', action.pxid);
     case SET_PX_STATE:
@@ -37,6 +34,14 @@ function searchBoxReducer(state = initialState, action) {
       return state.set('donorOrCandidate', action.donorOrCandidate);
     case SET_SEARCH_RESULTS:
       return state.set('searchResults', action.searchResults);
+    case "CLEAR_STATE":{
+      return state.merge({
+        pxid: '',
+        bloodGroup: '',
+        pxState: '',
+        donorOrCandidate: '',
+      }); 
+    }   
     default:
       return state;
   }

@@ -63,8 +63,10 @@ export function submitSearch() {
   };
 }
 
-export function downloadResult(){
+export function downloadResult(filetype){
   return{
-    type: DOWNLOAD_RESULTS
+    type: DOWNLOAD_RESULTS,
+    filetype
+
   }
 }

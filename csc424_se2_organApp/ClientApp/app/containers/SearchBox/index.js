@@ -65,9 +65,17 @@ export class SearchBox extends React.Component {
 
   selectRecord = (e)=>{
     //pushes canform record
-    this.props.history.push(`/staff/canform/:${e.target.parentNode.id}`)
+    if(e.target.parentNode.id)
+      this.props.history.push(`/staff/canform/:${e.target.parentNode.id}`)
   }
-
+  componentDidMount(){
+    document.getElementById('formBasicSearch').addEventListener('submit', function(e) {
+      e.preventDefault();
+    }, false);
+  }
+  componentWillUnmount(){
+    this.props.clearState();
+  }
   render() {
     return (
       <div>
@@ -78,17 +86,17 @@ export class SearchBox extends React.Component {
         <div>
           <Navbar className="bg-dark" sticky="top">
             {/* Text entry for patient-id */}
-            <Form inline>
-              <Form.Group controlId="formBasicSearch">
+            <Form inline onSubmit={(e)=>{e.preventDefault();this.props.onSearchSubmit()}}>
+              <Form.Group style ={{marginRight:"5px"}}controlId="formBasicSearch">
                 <Form.Control
                   type="text"
                   placeholder="Patient ID"
                   onChange={this.props.onSetPXID}
                 />
               </Form.Group>
-            </Form>
+            </Form > 
             {/* Donor/Candidate Selection */}
-            <Form.Group className="mt-3">
+            <Form.Group style ={{marginRight:"5px"}} className="mt-3">
               <Form.Control
                 as="select"
                 onChange={this.props.onSetDonorOrCandidate}
@@ -99,7 +107,7 @@ export class SearchBox extends React.Component {
               </Form.Control>
             </Form.Group>
             {/* Dropdown filter for broad filter options */}
-            <Dropdown>
+            <Dropdown style ={{marginRight:"5px"}}>
               <Dropdown.Toggle>
                 Filter
               </Dropdown.Toggle>
@@ -189,11 +197,13 @@ export class SearchBox extends React.Component {
             <Button
               variant="primary"
               type="button"
-              onClick = {this.props.onSearchSubmit}
+              onClick={this.props.onSearchSubmit}
             >
               Search
             </Button>
-            <Button style={{marginLeft:"auto"}} onClick={this.props.onDownload}>Download Result</Button>
+            <Button style={{marginLeft:"auto", marginRight:"5px"}} onClick={()=>this.props.onDownload("csv")}>Export Search as (.csv)</Button>
+            <Button style ={{marginRight:"5px"}} onClick={()=>this.props.onDownload("json")}>Export Search as (.json)</Button>
+            
           </Navbar>
         </div>
         {/* Display patient information */}
@@ -223,12 +233,25 @@ const mapStateToProps = createStructuredSelector({
 
 function mapDispatchToProps(dispatch) {
   return {
-    onSetPXID: evt => dispatch(setPXID(evt.target.value)),
-    onSetBloodGroup: evt => dispatch(setBloodGroup(evt.target.value)),
-    onSetDonorOrCandidate: evt => dispatch(setDonorOrCandidate(evt.target.value)),
-    onSetPxState: evt => dispatch(setPXState(evt.target.value)),
+    onSetPXID: evt => {dispatch(setPXID(evt.target.value))},
+    onSetBloodGroup: evt => {
+      if(evt.target.value == "Select Blood Group"){
+        dispatch(setBloodGroup(""));
+        return;
+      }
+      dispatch(setBloodGroup(evt.target.value))
+    },
+    onSetDonorOrCandidate: evt => {dispatch(setDonorOrCandidate(evt.target.value))},
+    onSetPxState: evt => {
+      if(evt.target.value == "Select State"){
+        dispatch(setPXState(""));
+        return;
+      }
+      dispatch(setPXState(evt.target.value))
+    },
     onSearchSubmit: () => dispatch(submitSearch()),
-    onDownload: () => dispatch(downloadResult())
+    onDownload: (type) => dispatch(downloadResult(type)),
+    clearState: () => dispatch((()=> ({type: 'CLEAR_STATE'}))())
   };
 }
 
