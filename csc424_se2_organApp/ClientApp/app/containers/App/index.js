@@ -50,8 +50,8 @@ function App(props) {
         <Route path="/about" component={AboutPage} />
         <PrivateRoute path="/client/home" component={ClientHome}/>
         <PrivateRoute path="/client/information" component={RegForm} />
-        <PrivateRoute path ="/staff/home" component={StaffHome}/>
-        <PrivateRoute path="/staff/searchbox" component={SearchBox} />
+        {/* <PrivateRoute path ="/staff/home" component={StaffHome}/> */}
+        <PrivateRoute path="/staff/home" component={SearchBox} />
         <PrivateRoute path="/staff/dondecform/:donordecid" component={DonDecForm} />
         <PrivateRoute path="/staff/donlivform/:donorlivid" component={DonLivForm} />
         <PrivateRoute path="/staff/txliform/:trrid" component={TxLiForm} />
