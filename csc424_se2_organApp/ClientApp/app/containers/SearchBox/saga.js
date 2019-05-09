@@ -5,6 +5,7 @@ import {push} from 'connected-react-router'
 import { setSearchResults } from './actions';
 import { SUBMIT_SEARCH, DOWNLOAD_RESULTS } from './constants';
 import downloadJson from '../../utils/downloadJson';
+import toCSV from '../../utils/toCSV';
 
 export function* refinedSearch() {
   console.log('inside refined search saga');
@@ -21,6 +22,10 @@ export function* refinedSearch() {
     DonorOrCandidate,
     num: 20,
   };
+  if(body.BloodGroup ==='Select Blood Group')
+    body.BloodGroup=""
+  if(body.PxState === 'Select State')
+    body.PxState ==""
 
   console.log(body);
 
@@ -68,16 +73,18 @@ export function* getPXIDRecord() {
   }
 }
 
-export function* download(){
+export function* download(action){
 
   const searchResults = yield select(makeSelectSearchResults());
   let body = {
     PxId: searchResults,
   };
 
-  console.log(body.PxId);
-
-  downloadJson(searchResults, 'search_results');
+  
+  if(action.filetype === 'json')
+    downloadJson(searchResults, 'search_results');
+  else if(action.filetype === 'csv')
+    toCSV(searchResults);
 }
 // Individual exports for testing
 export default function* searchBoxSagaList() {

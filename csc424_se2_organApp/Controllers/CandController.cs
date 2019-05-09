@@ -214,16 +214,44 @@ namespace csc424_se2_organApp.Controllers
         [HttpPost]
         public JsonResult RefinedSearch([FromBody]dynamic input){
             Console.WriteLine(input);
-            int id = input.PxId;
+            string id = input.PxId;
             string bloodType = input.BloodGroup;
             string pxState = input.PxState;
             int num = input.num;
-
-            var isInDb = (from c in context.CandLiin
-                    where c.PxId.ToString().Contains(id.ToString()) &&
-                    c.CanAbo.ToString() == bloodType.ToString() &&
-                    c.CanPermState.ToString() == pxState.ToString()
+            List<csc424_se2_organApp.Models.CandLiin> isInDb;
+            if(!String.IsNullOrEmpty(id) && String.IsNullOrEmpty(bloodType) && String.IsNullOrEmpty(pxState)){
+                isInDb = (from c in context.CandLiin
+                    where c.PxId.ToString().Contains(id)
                     select c).ToList();
+            }
+            else if(!String.IsNullOrEmpty(id) && !String.IsNullOrEmpty(bloodType) && String.IsNullOrEmpty(pxState)){
+                Console.WriteLine("true");
+                isInDb = (from c in context.CandLiin
+                    where c.PxId.ToString().Contains(id) &&
+                    c.CanAbo == bloodType
+                    select c).ToList();
+            }
+            else if(!String.IsNullOrEmpty(id) && String.IsNullOrEmpty(bloodType) && !String.IsNullOrEmpty(pxState)){
+                Console.WriteLine("true");
+                isInDb = (from c in context.CandLiin
+                    where c.PxId.ToString().Contains(id) &&
+                    c.CanPermState == pxState
+                    select c).ToList();
+            }
+            else if(String.IsNullOrEmpty(id) && !String.IsNullOrEmpty(bloodType) && !String.IsNullOrEmpty(pxState)){
+                Console.WriteLine("true");
+                isInDb = (from c in context.CandLiin
+                    where c.CanAbo == bloodType &&
+                    c.CanPermState == pxState
+                    select c).ToList();
+            }
+            else{
+                isInDb = (from c in context.CandLiin
+                    where c.PxId.ToString().Contains(id) &&
+                    c.CanAbo == bloodType &&
+                    c.CanPermState == pxState
+                    select c).ToList();
+            }
 
             if(isInDb == null){
                 Response.StatusCode = 404;
